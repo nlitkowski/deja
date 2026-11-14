@@ -14,7 +14,7 @@ Zasady nadrzędne:
 ## Stack
 
 - Vite + React + TypeScript (strict), zależności w najnowszych stabilnych wersjach
-- Bez backendu (na razie), ale bez blokowania drogi do kont i synchronizacji: **local-first, log zdarzeń**.
+- Backend w budowie (etap 8 w `PLAN.md`): Cloudflare Worker (Hono) + D1 w `worker/`, na tej samej domenie co aplikacja (`deja.litkowski.com`, API pod `/api/*`, `wrangler.jsonc`). Konto jest opcjonalne, a aplikacja pozostaje **local-first z logiem zdarzeń**. O użytkowniku zapisujemy tylko e-mail. Testy Workera działają w zwykłym Vitest na zamienniku D1 z `node:sqlite` (`worker/test/d1.ts`); zmiany schematu tylko jako nowa migracja w `worker/migrations/`.
   - Ustawienia: `localStorage` (`deja:state`, wersjonowanie schematu i migracje w `src/lib/storage.ts`), bo skrypt w `index.html` czyta je synchronicznie.
   - Postęp: **append-only log zdarzeń** w IndexedDB (`src/lib/progress/`): każda odpowiedź to `ReviewEvent` z UUID, `deviceId`, `at`, `day`. Karty SRS, nowe na dziś, a później XP, streak i statystyki to czyste funkcje liczone z logu (`foldEvents`), niezależne od kolejności zdarzeń. Store trzyma log w pamięci w `Projection` (`projection.ts`): nowsze zdarzenia nakłada przyrostowo, a starsze (z innego urządzenia) wymuszają pełne przeliczenie. Kilka zdarzeń `baseline` scala się kartami (nowsza karta wygrywa). Zdarzeń nie edytujemy ani nie usuwamy.
   - Dostęp do logu tylko przez interfejs `ProgressStore`; przyszły sync z backendem to nowa implementacja tego interfejsu (wysyłka niewysłanych zdarzeń, pobranie cudzych od kursora), bez zmian w UI.
@@ -33,7 +33,10 @@ Zasady nadrzędne:
 npm run dev       # serwer deweloperski
 npm run build     # build produkcyjny
 npm run test      # vitest
-npm run lint      # eslint + tsc --noEmit
+npm run lint      # eslint + tsc --noEmit (aplikacja i worker)
+npm run dev:worker  # build + lokalne D1 + wrangler dev na :8787 (aplikacja i /api razem)
+npm run dev:api     # sam Worker na :8787 dla `npm run dev` (Vite proxuje /api); sekrety i PUBLIC_ORIGIN w .dev.vars (wzór: .dev.vars.example)
+npm run db:migrate  # migracje na produkcyjnym D1
 ```
 
 Po każdej zmianie w `src/lib/` uruchom `npm run test`.
@@ -41,6 +44,7 @@ Po każdej zmianie w `src/lib/` uruchom `npm run test`.
 ## Struktura
 
 ```
+worker/                     # backend: Cloudflare Worker (Hono), migracje D1, testy
 content/                    # pakiety treści: same dane, zero kodu
   a1-connecteurs/           # pierwszy pakiet (seed z sekcji TREŚĆ KURSU)
     pack.json               # manifest
@@ -242,7 +246,7 @@ Nawiązanie do kompendium: granat `#1a1f3a`, krem `#faf7f2`, złoto `#c9a84c`, a
 - UI po francusku (napisy w `src/i18n/ui.ts`), treść ćwiczeń po francusku.
 - **Język pomocy** do wyboru: polski albo francuski. Dotyczy znaczeń wpisów (`pl` / `def`), wskazówek i podpowiedzi (`{pl, fr}`), tłumaczeń przykładów oraz pomocy pod zdaniem w gap-fill (`pl` = tłumaczenie, `clue` = francuska wskazówka kontekstu, która rozstrzyga lukę bez zdradzania odpowiedzi). Każdy nowy tekst pomocniczy dostaje obie wersje. Typ ćwiczenia, który ma sens tylko w jednym języku, deklaruje `helpLangs`.
 - Spacja przed `?` i `!` we francuskich zdaniach (`Tu veux du café ou du thé ?`). Zachowaj ją w danych.
-- Żadnych zewnętrznych API, żadnego trackingu.
+- Żadnych zewnętrznych API, żadnego trackingu. Jedyny wyjątek to logowanie Google, i to tylko przez przekierowanie obsługiwane przez Workera: aplikacja nie ładuje skryptów Google.
 - Nowe treści dodawaj tylko w `content/`, jako pakiet zgodny ze schematem. Każdy nowy wpis potrzebuje co najmniej jednego ręcznie napisanego ćwiczenia produkcyjnego (gap-fill albo translate). Ćwiczenia generowane automatycznie są tylko dodatkiem.
 - Logika gry (`src/game/`) i SRS to czyste funkcje bez Reacta, z czasem przekazywanym jako argument, pokryte testami.
 - Stan zapisany na urządzeniu ma pole `schemaVersion`, a każda zmiana jego kształtu wymaga migracji w `storage.ts`. Nowe dane o postępie zapisuj jako nowy typ zdarzenia w logu (z obsługą w `applyEvent`), nigdy jako osobny zapis stanu.

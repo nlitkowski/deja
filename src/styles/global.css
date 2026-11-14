@@ -268,6 +268,35 @@ button {
   margin: 0;
 }
 
+.account-card h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.account-card .button {
+  justify-self: start;
+  text-decoration: none;
+}
+
+.account-result {
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.account-result.connected {
+  background: var(--ok-bg);
+  color: var(--success);
+}
+
+.account-result.cancelled {
+  background: var(--near-bg);
+}
+
+.account-result.error {
+  background: var(--bad-bg);
+  color: var(--danger);
+}
+
 .toggle {
   display: flex;
   align-items: center;

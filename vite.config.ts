@@ -35,15 +35,21 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png}', '**/*-latin-*.woff2'],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         navigateFallback: `${base}index.html`,
+        // Sign-in is a page navigation to /api/auth/…; answering it with the cached app would swallow the redirect.
+        navigateFallbackDenylist: [new RegExp(`^${base}api/`)],
       },
     }),
   ],
+  server: {
+    // The API runs in `wrangler dev` (npm run dev:worker); without it /api answers 502 and the account card stays hidden.
+    proxy: { '/api': 'http://127.0.0.1:8787' },
+  },
   build: {
     // Never inline fonts: a style's fonts should only download when that style is in use.
     assetsInlineLimit: (file) => (/\.woff2?$/.test(file) ? false : undefined),
   },
   test: {
     environment: 'node',
-    include: ['src/**/*.test.ts'],
+    include: ['src/**/*.test.ts', 'worker/**/*.test.ts'],
   },
 });

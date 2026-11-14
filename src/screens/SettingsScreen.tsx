@@ -1,3 +1,4 @@
+import { AccountCard } from '../components/AccountCard';
 import { Icon } from '../components/Icon';
 import { PalettePicker } from '../components/PalettePicker';
 import { Segmented } from '../components/Segmented';
@@ -19,6 +20,8 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
         </button>
       </header>
       <h1>{ui.settings}</h1>
+
+      <AccountCard />
 
       <section className="settings-card">
         <PalettePicker value={settings.palette} onChange={(palette) => set({ palette })} />

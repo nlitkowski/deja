@@ -15,6 +15,7 @@ import { SheetList } from './screens/SheetList';
 import { SheetView } from './screens/SheetView';
 import { Stats } from './screens/Stats';
 import { buildEntriesSession, buildUnitSession } from './sessions';
+import { useAccountStore } from './state/accountStore';
 import { useAppStore } from './state/appStore';
 import { useTheme } from './theme';
 
@@ -34,7 +35,8 @@ export function App() {
   const settings = useAppStore((s) => s.settings);
   const status = useAppStore((s) => s.status);
   const updateSettings = useAppStore((s) => s.updateSettings);
-  const [screen, setScreen] = useState<Screen>({ name: 'home' });
+  // Coming back from Google sign-in lands on Réglages, where the account card shows how it went.
+  const [screen, setScreen] = useState<Screen>(() => (useAccountStore.getState().signInResult ? { name: 'settings' } : { name: 'home' }));
   useTheme(settings.colorMode, settings.palette);
 
   useEffect(() => {

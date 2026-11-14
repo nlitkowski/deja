@@ -190,9 +190,37 @@ Zrobione. Uwagi: tabela ma 10 miejsc (ty, 4 duchy, 5 botów). Duchy liczą XP z 
 - Rób to porcjami po jednej unité na commit, żeby łatwo było przejrzeć zmiany.
 - Zrobione: +259 ćwiczeń (ręczne gap-fill i translate-pl-fr), 1069 ćwiczeń w Édito A1/A2; test w `content.test.ts` jest już błędem, nie ostrzeżeniem.
 
+## Etap 8 — Konto i synchronizacja między urządzeniami
+
+Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne małe API w Hono, logowanie Google. Aplikacja i API na jednej domenie `deja.litkowski.com` (aplikacja pod `/`, API pod `/api/*`), więc ciasteczko sesji jest first-party i działa też w Safari. DNS `litkowski.com` przenosimy do Cloudflare. Konto jest **opcjonalne**: bez niego aplikacja działa lokalnie jak dotąd. Zapisujemy tylko e-mail (bez imienia, nazwiska, daty urodzenia, avatara).
+
+**8.1 Szkielet backendu** ✅ (bez deployu: czeka na konto Cloudflare, przeniesienie DNS i id baz D1)
+- Worker w `worker/` (Hono), konfiguracja `wrangler.jsonc`: statyczny build z `dist/` (SPA), Worker tylko dla `/api/*`.
+- Schemat D1 w `worker/migrations/`: `users` (id, email, created_at), `identities` (provider, subject → user_id), `sessions` (hash tokenu, wygasanie), `events` (id UUID, user_id, device_id, at, day, type, payload, `seq` jako kursor sync), `settings` (JSON, znacznik czasu per pole), `entitlements` (na później, puste).
+- `GET /api/health` sprawdza bazę. Testy Workera w Vitest na zamienniku D1 z `node:sqlite`.
+- Środowiska staging i prod, deploy z GitHub Actions (`wrangler deploy`) zamiast GitHub Pages, gdy domena będzie gotowa.
+
+**8.2 Logowanie** ✅ (kod gotowy; działa po wpisaniu client ID i sekretu Google)
+- Karta „Compte” w Réglages z przyciskiem „Se connecter avec Google”. Karta jest ukryta, gdy za aplikacją nie ma API (GitHub Pages, offline).
+- Zamiast skryptu Google Identity Services: przekierowanie OAuth (authorization code + PKCE) obsługiwane w całości przez Workera (`GET /api/auth/google` → Google → `/api/auth/google/callback`). Aplikacja nie ładuje żadnego skryptu Google. Scope `openid email`; weryfikacja ID tokena (podpis z JWKS Google, `aud`, `iss`, `nonce`, `email_verified`), zapis tylko `sub` i e-maila.
+- Sesja: losowy token w ciasteczku `HttpOnly; Secure; SameSite=Strict; Path=/api`, w bazie tylko jego SHA-256, ważność 180 dni. `POST /api/auth/logout`, `GET /api/me`. Żądania zmieniające stan z obcego `Origin` dostają 403.
+- Po powrocie z Google aplikacja otwiera Réglages z komunikatem (`?account=connected|cancelled|error`, usuwany z adresu).
+- Service worker nie przechwytuje nawigacji do `/api/` (inaczej połknąłby przekierowania logowania).
+
+**8.3 Synchronizacja postępu**
+- `SyncingProgressStore` (nowa implementacja `ProgressStore`): outbox niewysłanych zdarzeń w IndexedDB, wysyłka po odpowiedzi (z opóźnieniem), przy powrocie do aplikacji i po odzyskaniu sieci.
+- `POST /api/sync`: przyjmuje zdarzenia (idempotentnie po UUID), zwraca cudze od kursora `seq`.
+- Pierwsze logowanie wysyła cały lokalny log. Wylogowanie czyści lokalny log (dane są na serwerze), żeby dwa konta się nie mieszały.
+
+**8.4 Ustawienia, eksport, usunięcie konta**
+- Synchronizacja wybranych ustawień (last write wins per pole).
+- `GET /api/me/export` (RODO), `DELETE /api/me`, krótka strona prywatności (wymaga jej też Google).
+
+**Później:** `entitlements`, płatności (merchant of record, np. Paddle), płatne pakiety serwowane z API.
+
 ---
 
 ## Poza zakresem tego planu
-- Konta dla wielu użytkowników i funkcje dla lektorów.
+- Funkcje dla lektorów.
 - Treści audio i wymowa.
 - Monetyzacja.
