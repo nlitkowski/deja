@@ -211,7 +211,7 @@ Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne ma
 
 **Poprawki przed synchronizacją**
 - A1 ✅ Punktowanie XP przyrostowo i z cache: `scoreEvents` (src/game/xp.ts) trzyma jeden `Scorer` na kontekst XP. Log, który tylko dopisuje nowsze zdarzenia, jest punktowany od ostatniego stanu; starsze zdarzenie (z innego urządzenia) wymusza pełne przeliczenie. Wynik w `WeakMap` per tablica logu, `xpByDay` per wynik. Questy biorą stan kart „przed” z punktacji zamiast drugiego replayu. Test: 20 000 zdarzeń × 500 wpisów, dopisanie odpowiedzi i przeliczenie Home < 50 ms (lokalnie ok. 12 ms), wyniki identyczne z pełnym przeliczeniem.
-- A2 Nagrody jednorazowe po synchronizacji.
+- A2 ✅ Nagrody jednorazowe po synchronizacji: XP za quest płaci tylko pierwsze (wg `compareEvents`) zdarzenie `quest` dla `questId@period`, bonus sesji (w tym za bossa) tylko raz na `sessionId`. Deduplikacja po kluczu biznesowym, nie po id zdarzenia. Odznaki nie dają XP i są liczone ze statystyk, więc nie da się ich zdublować. Dwie prawdziwe wygrane z bossem na dwóch urządzeniach to dwie sesje i dalej dają dwa bonusy.
 
 **8.3 Synchronizacja postępu**
 - `SyncingProgressStore` (nowa implementacja `ProgressStore`): outbox niewysłanych zdarzeń w IndexedDB, wysyłka po odpowiedzi (z opóźnieniem), przy powrocie do aplikacji i po odzyskaniu sieci.

@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import type { QuestEvent } from '../lib/progress/events';
 import { answer, ctx, session } from './testEvents';
 import { answerXp, comboMultiplier, scoreEvents, sessionXp, totalXp, xpByDay } from './xp';
 
@@ -77,5 +78,34 @@ describe('xpByDay', () => {
     const byDay = xpByDay(events, ctx);
     expect(Object.fromEntries(byDay)).toEqual({ '2026-11-13': 12, '2026-11-14': 12 });
     expect(xpByDay([...events].reverse(), ctx)).toEqual(byDay);
+  });
+});
+
+describe('one-time rewards after sync', () => {
+  const claim = (id: string, deviceId: string, at: string): QuestEvent => ({ type: 'quest', id, deviceId, at, day: '2026-11-14', questId: 'daily/x', period: '2026-11-14', xp: 20 });
+  const phone = claim('q-phone', 'phone', '2026-11-14T10:00:00.000Z');
+  const laptop = claim('q-laptop', 'laptop', '2026-11-14T11:00:00.000Z');
+  const xpOf = (log: QuestEvent[]) => new Map(scoreEvents(log, { isProduction: () => true }).map((s) => [s.event.id, s.xp]));
+
+  it('pays a quest claimed on two devices once, to the earlier claim, whatever the log order', () => {
+    expect(xpOf([phone, laptop])).toEqual(new Map([['q-phone', 20], ['q-laptop', 0]]));
+    expect(xpOf([laptop, phone])).toEqual(new Map([['q-phone', 20], ['q-laptop', 0]]));
+  });
+
+  it('pays once whether the second claim arrives later or earlier than the first', () => {
+    const own = { isProduction: () => true };
+    expect(totalXp([phone], own)).toBe(20);
+    expect(totalXp([phone, laptop], own)).toBe(20); // newer: scored incrementally
+    expect(totalXp([laptop], own)).toBe(20);
+    const merged = [laptop, phone]; // older: rescored from scratch
+    expect(totalXp(merged, own)).toBe(20);
+    expect(scoreEvents(merged, own).find((s) => s.event.id === 'q-phone')?.xp).toBe(20);
+  });
+
+  it('pays a session bonus once per session, even if the session arrives twice', () => {
+    const first = session({ id: 'a', sessionId: 'same' });
+    const copy = session({ id: 'b', sessionId: 'same' });
+    expect(totalXp([first, copy], ctx)).toBe(totalXp([first], ctx));
+    expect(totalXp([session({ sessionId: 'one' }), session({ sessionId: 'two' })], ctx)).toBe(2 * totalXp([first], ctx));
   });
 });

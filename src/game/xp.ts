@@ -60,6 +60,8 @@ class Scorer {
   private scored: ScoredEvent[] = [];
   private state: ProgressState = emptyProgress();
   private newest: ProgressEvent | undefined;
+  /** Business keys of rewards already paid: a quest per period, a session's bonus. */
+  private paid = new Set<string>();
   private readonly cache = new WeakMap<readonly ProgressEvent[], ScoredEvent[]>();
 
   constructor(private readonly ctx: XpContext) {}
@@ -73,11 +75,18 @@ class Scorer {
     } else {
       this.state = emptyProgress();
       this.newest = undefined;
+      this.paid = new Set();
       this.scored = this.replay([...log].sort(compareEvents));
     }
     this.log = log;
     this.cache.set(log, this.scored);
     return this.scored;
+  }
+
+  private firstPayment(key: string): boolean {
+    if (this.paid.has(key)) return false;
+    this.paid.add(key);
+    return true;
   }
 
   private isPrefixOf(log: readonly ProgressEvent[]): boolean {
@@ -93,9 +102,10 @@ class Scorer {
         const { total, combo } = answerXp(event, this.ctx, allMastered(event.entryIds, before.cards));
         out.push({ event, xp: total, combo, before: event.entryIds.flatMap((id) => before.cards[id] ?? []) });
       } else if (event.type === 'session') {
-        out.push({ event, xp: sessionBonus(event), combo: 0 });
+        out.push({ event, xp: this.firstPayment(`session:${event.sessionId}`) ? sessionBonus(event) : 0, combo: 0 });
       } else if (event.type === 'quest') {
-        out.push({ event, xp: event.xp, combo: 0 });
+        // Two devices offline can both claim a quest; only the first claim in the shared order pays.
+        out.push({ event, xp: this.firstPayment(`quest:${event.questId}@${event.period}`) ? event.xp : 0, combo: 0 });
       }
     });
     if (sorted.length) this.newest = sorted[sorted.length - 1];
