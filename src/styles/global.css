@@ -1695,3 +1695,133 @@ html,
 [data-palette='pixel'] .goal-ring-fill {
   stroke-linecap: butt;
 }
+
+/* Recognition exercises: choices, duel, pairs */
+
+.choice-card,
+.pairs-card {
+  display: grid;
+  gap: 12px;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.choice,
+.pair-card {
+  min-height: 52px;
+  padding: 10px 12px;
+  border: var(--border-w) solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+  font-size: 1.05rem;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s, opacity 0.2s;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-head);
+}
+
+.choice:disabled,
+.pair-card:disabled {
+  cursor: default;
+}
+
+.choice-key {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.choice.right,
+.pair-card.matched {
+  border-color: var(--success);
+  background: var(--ok-bg);
+}
+
+.choice.wrong,
+.pair-card.wrong {
+  border-color: var(--danger);
+  background: var(--bad-bg);
+  animation: shake 0.35s ease;
+}
+
+.pair-card.selected {
+  border-color: var(--accent);
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.pair-card.matched {
+  opacity: 0.55;
+}
+
+.duel-head {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.duel-timer {
+  display: block;
+  height: 4px;
+  border-radius: var(--pill-radius);
+  background: var(--border);
+  overflow: hidden;
+}
+
+.duel-timer > span {
+  display: block;
+  height: 100%;
+  background: var(--highlight);
+  transform-origin: left;
+  animation: duel-timer linear forwards;
+}
+
+.duel-timer > span.paused {
+  animation-play-state: paused;
+}
+
+@keyframes duel-timer {
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.duel-timeout {
+  margin: 0;
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.pairs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.pairs-column {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.pair-card {
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.pair-card:lang(fr) {
+  font-family: var(--font-head);
+}

@@ -140,7 +140,7 @@ interface ExerciseType<D> {
 }
 ```
 
-Nowy typ ćwiczenia to nowy katalog w `src/exercises/` i jedna linia w `registry.ts`. Session, SRS i XP nie znają konkretnych typów, operują wyłącznie na `AnswerResult { correct, nearMiss, timeMs, hintUsed }`.
+Nowy typ ćwiczenia to nowy katalog w `src/exercises/` i jedna linia w `registry.ts`. Ćwiczenia z `generate` buduje loader przy starcie (`generated: true`, id `<wpis>~<typ>-<n>`, deterministycznie, bo zdarzenia się do nich odwołują) z ręcznie pisanych gap-filli. Ćwiczenie o kilku wpisach (confusable-duel, match-pairs) zwraca w `AnswerResult.parts` wynik dla każdego wpisu, a Session zapisuje każdą część jako osobne zdarzenie. Sesja daje recognition tylko wpisom już opanowanym (`reps > 0`), a recognition nigdy nie daje oceny Easy. Session, SRS i XP nie znają konkretnych typów, operują wyłącznie na `AnswerResult { correct, nearMiss, timeMs, hintUsed }`.
 
 Typy na start:
 1. **gap-fill**, domyślny: zdanie z luką `___`, użytkownik wpisuje odpowiedź. `data: { sentence, answers[], hint?: {pl, fr?}, pl?, clue? }`

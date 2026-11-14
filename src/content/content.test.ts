@@ -23,6 +23,8 @@ function loadFromDisk() {
 }
 
 const disk = loadFromDisk();
+/** Content checks look at what authors wrote; generated exercises are tested on their own below. */
+const written = [...disk.exercises.values()].filter((ex) => !ex.generated);
 const isVocabulary = (entryId: string) => disk.entries.get(entryId)?.tags?.includes('vocabulaire') ?? false;
 
 describe('content packs', () => {
@@ -45,14 +47,14 @@ describe('content packs', () => {
 
   it('every grammar entry has at least 3 exercises, every vocabulary entry at least 2', () => {
     const counts = new Map<string, number>();
-    for (const ex of disk.exercises.values()) ex.entryIds.forEach((id) => counts.set(id, (counts.get(id) ?? 0) + 1));
+    for (const ex of written) ex.entryIds.forEach((id) => counts.set(id, (counts.get(id) ?? 0) + 1));
     const thin = [...disk.entries.keys()].filter((id) => (counts.get(id) ?? 0) < (isVocabulary(id) ? 2 : 3));
     expect(thin).toEqual([]);
   });
 
   it('French sentences keep the space before ? and !', () => {
     const bad: string[] = [];
-    for (const ex of disk.exercises.values()) {
+    for (const ex of written) {
       const sentence = (ex.data as { sentence?: string }).sentence;
       if (sentence && /\S[?!]/.test(sentence)) bad.push(ex.id);
     }
@@ -65,7 +67,7 @@ describe('content packs', () => {
       if (!e.def) missing.push(`${e.id}: def`);
       if (e.tip && !e.tip.fr) missing.push(`${e.id}: tip.fr`);
     }
-    for (const ex of disk.exercises.values()) {
+    for (const ex of written) {
       const data = ex.data as { hint?: { fr?: string } };
       if (data.hint && !data.hint.fr) missing.push(`${ex.id}: hint.fr`);
     }
@@ -74,7 +76,7 @@ describe('content packs', () => {
 
   it('answers are not repeated next to the gap', () => {
     const bad: string[] = [];
-    for (const ex of disk.exercises.values()) {
+    for (const ex of written) {
       const data = ex.data as { sentence?: string; answers: string[] };
       if (!data.sentence) continue;
       const [before = '', after = ''] = data.sentence.toLowerCase().split('___');
@@ -101,7 +103,7 @@ describe('content packs', () => {
 
   it('every entry can be practised with French help', () => {
     const covered = new Set(
-      [...disk.exercises.values()].filter((ex) => supportsHelpLang(ex.type, 'fr')).flatMap((ex) => ex.entryIds),
+      written.filter((ex) => supportsHelpLang(ex.type, 'fr')).flatMap((ex) => ex.entryIds),
     );
     expect([...disk.entries.keys()].filter((id) => !covered.has(id))).toEqual([]);
   });
@@ -152,5 +154,63 @@ describe('loadPacks', () => {
     const loaded = load({ id: 'u', title: 'U', icon: 'x', entries: [entry], exercises: [exercise] });
     expect(loaded.issues).toEqual([]);
     expect(loaded.exercises.get('p/x')?.entryIds).toEqual(['p/e']);
+  });
+});
+
+describe('generated exercises', () => {
+  const pack = { id: 'p', version: 1, title: 'P', level: 'A1', icon: 'x', units: ['u'] };
+  const entry = (id: string, confusables: string[] = []) => ({ id, fr: `fr-${id}`, pl: `pl-${id}`, examples: [{ fr: 'f', pl: 'p' }], confusables });
+  const gap = (id: string, entryId: string, sentence: string, answers: string[]) => ({ id, type: 'gap-fill', entryIds: [entryId], data: { sentence, answers } });
+  const unit = {
+    id: 'u',
+    title: 'U',
+    icon: 'x',
+    entries: [entry('dans', ['en', 'pendant']), entry('en', ['dans']), entry('pendant'), entry('depuis'), entry('sur')],
+    exercises: [
+      gap('dans-1', 'dans', 'Il part ___ cinq minutes.', ['dans']),
+      gap('dans-2', 'dans', '___ la boîte, il y a un chat.', ['Dans']),
+      gap('en-1', 'en', 'Je voyage ___ train.', ['en']),
+      gap('en-2', 'en', "J'habite ___ France.", ['en']),
+      gap('pendant-1', 'pendant', "J'ai dormi ___ deux heures.", ['pendant']),
+      gap('depuis-1', 'depuis', "J'habite ici ___ 2020.", ['depuis', 'dès']),
+      gap('sur-1', 'sur', 'Le livre est ___ la table.', ['sur']),
+    ],
+  };
+  const loaded = loadPacks({ packs: { '/content/p/pack.json': pack }, units: { '/content/p/units/u.json': unit } }, exerciseTypeInfo);
+  const generated = (type: string, entryId: string) =>
+    [...loaded.exercises.values()].filter((ex) => ex.generated && ex.type === type && ex.id.startsWith(`p/${entryId}~`));
+
+  it('multiple choice: confusables first, capitals follow the gap, accepted answers never offered as wrong', () => {
+    expect(loaded.issues).toEqual([]);
+    const [first, second] = generated('multiple-choice', 'dans');
+    expect(first?.data).toMatchObject({ answer: 'dans', options: ['dans', 'en', 'pendant', 'depuis'] });
+    expect(second?.data).toMatchObject({ answer: 'Dans', options: ['Dans', 'En', 'Pendant', 'Depuis'] });
+    const depuis = generated('multiple-choice', 'depuis')[0]?.data as { options: string[] };
+    expect(depuis.options).not.toContain('dès');
+  });
+
+  it('confusable duel: the entry against its confusables, sentences taken in turn', () => {
+    const [duel] = generated('confusable-duel', 'dans');
+    expect(duel?.entryIds).toEqual(['p/dans', 'p/en', 'p/pendant']);
+    const data = duel?.data as { sentences: { entryId: string; options: string[] }[] };
+    expect(data.sentences.map((s) => s.entryId)).toEqual(['p/dans', 'p/en', 'p/pendant', 'p/dans', 'p/en']);
+    expect(data.sentences[0]?.options).toEqual(['dans', 'en', 'pendant']);
+    expect(generated('confusable-duel', 'depuis')).toEqual([]);
+  });
+
+  it('match pairs: five entries of the unit, wrapping round', () => {
+    const [pairs] = generated('match-pairs', 'depuis');
+    expect(pairs?.entryIds).toEqual(['p/depuis', 'p/sur', 'p/dans', 'p/en', 'p/pendant']);
+  });
+
+  it('real content: every generated exercise is valid and recognition never stands alone', () => {
+    const all = [...disk.exercises.values()].filter((ex) => ex.generated);
+    const byType = (type: string) => all.filter((ex) => ex.type === type).length;
+    expect(byType('multiple-choice')).toBeGreaterThan(100);
+    expect(byType('confusable-duel')).toBeGreaterThan(10);
+    expect(byType('match-pairs')).toBeGreaterThan(50);
+    const invalid = all.filter((ex) => !exerciseTypeInfo[ex.type]!.schema.safeParse(ex.data).success).map((ex) => ex.id);
+    expect(invalid).toEqual([]);
+    expect([...loadFromDisk().exercises.keys()]).toEqual([...disk.exercises.keys()]);
   });
 });

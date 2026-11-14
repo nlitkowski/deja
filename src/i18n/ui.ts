@@ -75,6 +75,12 @@ export const ui = {
   check: 'Vérifier',
   accentBarLabel: 'Caractères accentués',
   translateToFrench: 'Traduis en français',
+  chooseAnswer: 'Choisis la bonne réponse',
+  duel: 'Duel',
+  duelStep: (i: number, n: number) => `${i}/${n}`,
+  timeUp: 'Temps écoulé !',
+  matchPairs: 'Associe les paires',
+  elapsed: (s: number) => `${s} secondes`,
   combo: (n: number) => `Combo ${n}`,
   xpGain: (n: number) => `+${n} XP`,
 

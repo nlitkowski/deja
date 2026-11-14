@@ -10,6 +10,7 @@ import {
   type Unit,
 } from './schema';
 import { SheetSchema, type Sheet } from './sheet';
+import type { GenCtx, Generated } from '../exercises/types';
 
 export interface LoadIssue {
   file: string;
@@ -20,6 +21,7 @@ export interface LoadIssue {
 export interface ExerciseTypeInfo {
   schema: ZodType<unknown>;
   production: boolean;
+  generate?: (entry: Entry, ctx: GenCtx) => Generated<unknown>[];
 }
 
 /** Parsed JSON keyed by path: `/content/<pack>/pack.json`, `/content/<pack>/units/<unit>.json`, `/content/<pack>/sheets/<sheet>.json`. */
@@ -202,5 +204,29 @@ export function loadPacks(files: ContentFiles, exerciseTypes: Record<string, Exe
     }
   }
 
+  generateExercises(entries, exercises, exerciseTypes);
   return { packs, entries, exercises, units, sheets, issues };
+}
+
+/**
+ * Adds exercises that types build from hand-written content (ids `<entry>~<type>-<n>`). Generation is
+ * deterministic, so the same content always yields the same ids — review events refer to them.
+ */
+function generateExercises(entries: Map<string, Entry>, exercises: Map<string, Exercise>, exerciseTypes: Record<string, ExerciseTypeInfo>) {
+  const written = [...exercises.values()];
+  const byEntry = new Map<string, Exercise[]>();
+  for (const ex of written) for (const id of ex.entryIds) byEntry.set(id, [...(byEntry.get(id) ?? []), ex]);
+  const byUnit = new Map<string, Entry[]>();
+  for (const entry of entries.values()) if (!entry.deprecated) byUnit.set(entry.unitId, [...(byUnit.get(entry.unitId) ?? []), entry]);
+
+  for (const entry of entries.values()) {
+    if (entry.deprecated) continue;
+    const ctx: GenCtx = { unitEntries: byUnit.get(entry.unitId) ?? [], allEntries: entries, exercisesOf: (id) => byEntry.get(id) ?? [] };
+    for (const [type, info] of Object.entries(exerciseTypes)) {
+      info.generate?.(entry, ctx).forEach(({ data, entryIds }, i) => {
+        const id = `${entry.id}~${type}-${i}`;
+        exercises.set(id, { id, type, data, entryIds, packId: entry.packId, unitId: entry.unitId, generated: true });
+      });
+    }
+  }
 }

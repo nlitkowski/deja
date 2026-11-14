@@ -9,7 +9,8 @@ import { answerXp } from '../game/xp';
 import { ui } from '../i18n/ui';
 import { indexExercisesByEntry, requeue, type SessionItem } from '../lib/session';
 import { newEventId } from '../lib/progress/events';
-import type { AnswerResult } from '../lib/srs';
+import { dayKey } from '../lib/date';
+import { isDue, type AnswerResult } from '../lib/srs';
 import { sfx } from '../sfx';
 import { useAppStore } from '../state/appStore';
 import { xpContext } from '../xpContext';
@@ -115,31 +116,45 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
   function handleAnswer(r: AnswerResult) {
     if (!item || !exercise) return;
     setResult(r);
-    const s = stats.current;
-    s.answered += 1;
-    if (r.correct) s.correct += 1;
-    if (r.nearMiss) s.nearMiss += 1;
-    exercise.entryIds.forEach((id) => s.entries.add(id));
     if (vibration) vibrate(r.correct ? 15 : [30, 40, 30]);
-
     if (!r.correct) setQueue((q) => requeue(q, index, item, byEntry.get(item.entryId) ?? [], isProduction));
-    const event = recordAnswer({
-      exerciseId: exercise.id,
-      entryIds: exercise.entryIds,
-      result: r,
-      early: item.early,
-      sessionId: session.id,
-      comboBefore: combo,
-    });
 
-    const nextCombo = r.correct ? combo + 1 : 0;
-    s.maxCombo = Math.max(s.maxCombo, nextCombo);
-    if (!r.correct && combo >= GAME.comboVisibleFrom) setComboBreak({ combo, key: s.answered });
-    setCombo(nextCombo);
-    const xp = answerXp(event, xpContext).total;
+    const recognition = !isProduction(exercise.type);
+    const today = dayKey(new Date());
+    const cards = useAppStore.getState().progress.cards;
+    // Other entries of a duel or pairs count as early practice when they are not due yet, like the session's own entries.
+    const isEarly = (ids: string[]) => ids.every((id) => (id === item.entryId ? item.early : !!cards[id] && !isDue(cards[id]!, today)));
+    const parts = r.parts ?? [{ entryIds: exercise.entryIds, correct: r.correct, timeMs: r.timeMs }];
+
+    const s = stats.current;
+    let streak = combo;
+    let xp = 0;
+    let broken = 0;
+    const answeredAt = Date.now();
+    for (const [i, part] of parts.entries()) {
+      const partResult: AnswerResult = r.parts ? { ...r, correct: part.correct, timeMs: part.timeMs, parts: undefined } : r;
+      // Picking an answer is easier than typing it: recognition never schedules a card as "easy".
+      const graded = recognition ? { ...partResult, grade: partResult.grade ?? (part.correct ? 'good' : 'again') } : partResult;
+      const event = recordAnswer(
+        { exerciseId: exercise.id, entryIds: part.entryIds, result: graded, early: isEarly(part.entryIds), sessionId: session.id, comboBefore: streak },
+        // One millisecond apart, so the log keeps the parts in the order they were answered.
+        new Date(answeredAt + i),
+      );
+      xp += answerXp(event, xpContext).total;
+      if (!part.correct && streak >= GAME.comboVisibleFrom) broken = streak;
+      streak = part.correct ? streak + 1 : 0;
+      s.maxCombo = Math.max(s.maxCombo, streak);
+      s.answered += 1;
+      if (part.correct) s.correct += 1;
+      part.entryIds.forEach((id) => s.entries.add(id));
+    }
+    if (r.nearMiss) s.nearMiss += 1;
+
+    if (broken) setComboBreak({ combo: broken, key: s.answered });
+    setCombo(streak);
     setGain(xp ? { xp, key: s.answered } : undefined);
     if (sound) {
-      if (r.correct) sfx.correct(nextCombo);
+      if (r.correct) sfx.correct(streak);
       else sfx.wrong();
     }
   }

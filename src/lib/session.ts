@@ -97,7 +97,10 @@ export function buildSession(input: BuildSessionInput): SessionItem[] {
     rng = Math.random,
   } = input;
 
-  const byEntry = indexExercisesByEntry(exercises);
+  // Recognition only revisits what the learner already produced correctly: never for new entries
+  // or after a mistake, so choosing an answer never displaces typing it.
+  const known = (id: string) => (srs[id]?.reps ?? 0) > 0;
+  const byEntry = indexExercisesByEntry(exercises.filter((ex) => isProduction(ex.type) || ex.entryIds.every(known)));
   const usable = entries.filter((e) => !e.deprecated && byEntry.has(e.id));
 
   const due = shuffle(

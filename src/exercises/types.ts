@@ -1,7 +1,7 @@
 import type { ComponentType } from 'react';
 import type { ZodType } from 'zod';
 import type { HelpLang } from '../content/localized';
-import type { Entry } from '../content/schema';
+import type { Entry, Exercise } from '../content/schema';
 import type { AnswerResult } from '../lib/srs';
 
 export type { AnswerResult };
@@ -22,6 +22,13 @@ export interface ViewProps<D> {
 export interface GenCtx {
   unitEntries: Entry[];
   allEntries: ReadonlyMap<string, Entry>;
+  /** Hand-written exercises practising the entry. */
+  exercisesOf: (entryId: string) => readonly Exercise[];
+}
+
+export interface Generated<D> {
+  data: D;
+  entryIds: string[];
 }
 
 export interface ExerciseLogic<D> {
@@ -31,7 +38,8 @@ export interface ExerciseLogic<D> {
   production: boolean;
   /** Help languages the exercise works in; omitted = all. */
   helpLangs?: readonly HelpLang[];
-  generate?: (entry: Entry, ctx: GenCtx) => D[];
+  /** Builds exercises from hand-written content; each may ask about several entries. */
+  generate?: (entry: Entry, ctx: GenCtx) => Generated<D>[];
 }
 
 export interface ExerciseType<D> extends ExerciseLogic<D> {

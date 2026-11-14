@@ -22,6 +22,17 @@ export interface AnswerResult {
   grade?: Grade;
   given?: string;
   expected?: string;
+  /**
+   * Exercises that ask about several entries (duel, pairs) report each answer separately;
+   * every part becomes its own review event, for its own entries.
+   */
+  parts?: AnswerPart[];
+}
+
+export interface AnswerPart {
+  entryIds: string[];
+  correct: boolean;
+  timeMs: number;
 }
 
 export const SRS = {

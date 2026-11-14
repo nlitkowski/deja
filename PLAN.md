@@ -93,7 +93,9 @@ Odstępstwa: dźwięki syntezowane w locie przez Web Audio (`src/sfx.ts`) zamias
 
 **Testy:** XP dla każdej kombinacji mnożników, krzywa poziomów, streak z lukami i zamrożeniami, zmiana celu w trakcie historii, determinizm (ten sam log w innej kolejności daje ten sam wynik).
 
-## Etap 3 — Nowe typy ćwiczeń (generowane z danych)
+## Etap 3 — Nowe typy ćwiczeń (generowane z danych) ✅
+
+Ćwiczenia generuje loader (`generate` w typie ćwiczenia, id `<wpis>~<typ>-<n>`) z ręcznie pisanych gap-filli: multiple-choice bierze zdanie z luką z gap-filla zamiast przykładu wpisu (przykłady nie mają luki). Recognition tylko dla wpisów już znanych (ostatnia odpowiedź poprawna, `reps > 0`) i nigdy jako „easy” w SRS. Ćwiczenia o kilku wpisach (pojedynek, pary) zwracają `parts`, a Session zapisuje każdą część jako osobne zdarzenie `review`.
 
 Rejestr w `src/exercises/registry.ts` już istnieje. Dodaj typy, które **generują się z wpisów** i nie wymagają zmian w pakietach:
 

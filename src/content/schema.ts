@@ -92,6 +92,8 @@ export type Exercise = Omit<RawExercise, 'id' | 'entryIds'> & {
   packId: string;
   unitId: string;
   entryIds: string[];
+  /** Built by an exercise type's `generate` from hand-written content, not read from a file. */
+  generated?: boolean;
 };
 
 export type Unit = Omit<RawUnit, 'entries' | 'exercises' | 'boss'> & {

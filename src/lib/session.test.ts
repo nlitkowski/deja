@@ -72,6 +72,41 @@ describe('buildSession', () => {
     });
     expect(items[0]?.exerciseId).toBe('x-prod');
   });
+
+  it('uses recognition at about recognitionShare, only for entries last answered correctly', () => {
+    const known = ids.slice(0, 10);
+    const failed = ids.slice(10, 20);
+    const srs = {
+      ...Object.fromEntries(known.map((id) => [id, cardDue('2026-11-10')])),
+      ...Object.fromEntries(failed.map((id) => [id, review(cardDue('2026-11-10'), 'again', '2026-11-12')])),
+    };
+    const withRecognition: SessionExercise[] = [...exercises, ...ids.map((id) => ({ id: `${id}-mc`, type: 'multiple-choice', entryIds: [id] }))];
+    const isProd = (t: string) => t === 'gap-fill';
+    const run = (recognitionShare: number, seed: number) =>
+      buildSession({ entries, exercises: withRecognition, srs, today, newAllowed: 5, isProduction: isProd, mode: 'review', recognitionShare, rng: seeded(seed), maxItems: 30 });
+
+    const picks = Array.from({ length: 40 }, (_, seed) => run(0.2, seed + 1)).flat();
+    const recognition = picks.filter((i) => i.exerciseId.endsWith('-mc'));
+    expect(recognition.every((i) => known.includes(i.entryId))).toBe(true);
+    const share = recognition.length / picks.filter((i) => known.includes(i.entryId)).length;
+    expect(share).toBeGreaterThan(0.1);
+    expect(share).toBeLessThan(0.3);
+    expect(run(0, 1).some((i) => i.exerciseId.endsWith('-mc'))).toBe(false);
+  });
+
+  it('keeps a recognition exercise about several entries out until all of them are known', () => {
+    const pairs: SessionExercise = { id: 'pairs', type: 'match-pairs', entryIds: ['p/e0', 'p/e1'] };
+    const only = buildSession({
+      entries: [{ id: 'p/e0' }],
+      exercises: [pairs],
+      srs: { 'p/e0': cardDue('2026-11-10') },
+      today,
+      newAllowed: 0,
+      isProduction: () => false,
+      mode: 'review',
+    });
+    expect(only).toEqual([]);
+  });
 });
 
 describe('requeue', () => {
