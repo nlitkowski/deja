@@ -1412,3 +1412,27 @@ html,
     display: inline-block;
   }
 }
+
+.update-toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100vw - 32px);
+  padding: 8px 8px 8px 16px;
+  background: var(--surface);
+  color: var(--text);
+  border: var(--border-w) solid var(--border);
+  border-radius: var(--pill-radius);
+  box-shadow: var(--shadow);
+  font-size: 0.95rem;
+}
+
+.update-toast .link-button {
+  padding: 0.3em 0.8em;
+  font-weight: 600;
+}

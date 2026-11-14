@@ -20,7 +20,7 @@ Zasady nadrzędne:
   - Dostęp do logu tylko przez interfejs `ProgressStore`; przyszły sync z backendem to nowa implementacja tego interfejsu (wysyłka niewysłanych zdarzeń, pobranie cudzych od kursora), bez zmian w UI.
   - Stan aplikacji w Zustand (`src/state/appStore.ts`): `settings`, `progress`, `recordAnswer`, `updateSettings`. Ekrany czytają store przez selektory zamiast przekazywać stan w propsach.
 - Stylowanie: CSS Modules albo zwykły CSS ze zmiennymi. Bez Tailwinda i bez bibliotek UI
-- PWA (vite-plugin-pwa), żeby dało się zainstalować na telefonie i używać offline
+- PWA (vite-plugin-pwa, konfiguracja w `vite.config.ts`): precache całego buildu (pakiety treści są w JS) i fontów latin/latin-ext wszystkich stylów, więc po pierwszym wejściu działa offline. Nowa wersja czeka na toast „Nouvelle version · Recharger” (`UpdateToast`), nigdy nie przeładowuje sama. Ikony PNG w `public/` generuje `npm run icons` z plików SVG
 - Walidacja pakietów treści: Zod (schemat jest źródłem typów, przez `z.infer`)
 - Animacje: Framer Motion. Konfetti: canvas-confetti. Dźwięki: krótkie pliki w `public/sfx/` odtwarzane przez Web Audio, z wyciszeniem w ustawieniach
 - Haptyka: `navigator.vibrate` tam, gdzie jest dostępne

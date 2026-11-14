@@ -31,7 +31,9 @@ Jeśli synchronizacja z backendem istnieje już lokalnie, a nie ma jej w `main`:
 - Gdy w logu jest kilka zdarzeń `baseline` z różnych urządzeń, scal je kartami: dla każdej karty wybierz tę z późniejszym `lastReviewed`, a przy remisie tę z większym `reps`. Kolejność zdarzeń nie może mieć wpływu na wynik.
 - Test: dwa baseline'y w obu kolejnościach dają ten sam stan.
 
-## Etap 1 — PWA
+## Etap 1 — PWA ✅
+
+Zrobione z jednym odstępstwem: `registerType: 'prompt'` zamiast `autoUpdate`, bo tylko ten tryb czeka na „Recharger” i nie przeładowuje strony w trakcie sesji. Do sprawdzenia ręcznie: Lighthouse oraz instalacja na Androidzie i iOS.
 
 - Dodaj `vite-plugin-pwa` (`registerType: 'autoUpdate'`), z `base` i `scope` zgodnymi z `BASE_PATH` (`/deja/` na Pages, `/` w dev).
 - Manifest:
