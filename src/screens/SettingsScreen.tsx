@@ -1,7 +1,8 @@
+import { PalettePicker } from '../components/PalettePicker';
 import { Segmented } from '../components/Segmented';
 import { HELP_LANGS } from '../content/localized';
 import { ui } from '../i18n/ui';
-import { THEMES, type SavedState, type Settings } from '../lib/storage';
+import { COLOR_MODES, type SavedState, type Settings } from '../lib/storage';
 
 interface Props {
   settings: Settings;
@@ -22,11 +23,12 @@ export function SettingsScreen({ settings, update, onBack }: Props) {
       <h1>{ui.settings}</h1>
 
       <section className="settings-card">
+        <PalettePicker value={settings.palette} onChange={(palette) => set({ palette })} />
         <Segmented
           label={ui.themeLabel}
-          value={settings.theme}
-          options={THEMES.map((t) => ({ value: t, label: ui.themeNames[t] }))}
-          onChange={(theme) => set({ theme })}
+          value={settings.colorMode}
+          options={COLOR_MODES.map((m) => ({ value: m, label: ui.themeNames[m] }))}
+          onChange={(colorMode) => set({ colorMode })}
         />
         <p className="muted small">{ui.themeHint}</p>
       </section>

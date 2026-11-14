@@ -2,7 +2,7 @@ import type { HelpLang } from '../content/localized';
 import type { DayKey } from './date';
 import type { SrsCard } from './srs';
 
-export const SCHEMA_VERSION = 3;
+export const SCHEMA_VERSION = 4;
 const KEY = 'revision-francaise:state';
 
 export interface Settings {
@@ -11,11 +11,14 @@ export interface Settings {
   vibration: boolean;
   helpLang: HelpLang;
   /** `system` follows prefers-color-scheme. */
-  theme: Theme;
+  colorMode: ColorMode;
+  palette: Palette;
 }
 
-export type Theme = 'system' | 'light' | 'dark';
-export const THEMES: readonly Theme[] = ['system', 'light', 'dark'];
+export type ColorMode = 'system' | 'light' | 'dark';
+export const COLOR_MODES: readonly ColorMode[] = ['system', 'light', 'dark'];
+export type Palette = 'classic' | 'provence' | 'pixel';
+export const PALETTES: readonly Palette[] = ['classic', 'provence', 'pixel'];
 
 export interface SavedState {
   schemaVersion: typeof SCHEMA_VERSION;
@@ -29,7 +32,7 @@ export function defaultState(): SavedState {
     schemaVersion: SCHEMA_VERSION,
     srs: {},
     daily: { day: '', newIntroduced: 0 },
-    settings: { dailyGoal: 50, sound: true, vibration: true, helpLang: 'pl', theme: 'system' },
+    settings: { dailyGoal: 50, sound: true, vibration: true, helpLang: 'pl', colorMode: 'system', palette: 'classic' },
   };
 }
 
@@ -37,6 +40,10 @@ export function defaultState(): SavedState {
 const MIGRATIONS: Record<number, (s: Record<string, unknown>) => Record<string, unknown>> = {
   1: (s) => ({ ...s, schemaVersion: 2, settings: { ...(s.settings as object), helpLang: 'pl' } }),
   2: (s) => ({ ...s, schemaVersion: 3, settings: { ...(s.settings as object), theme: 'system' } }),
+  3: (s) => {
+    const { theme, ...settings } = s.settings as { theme?: ColorMode };
+    return { ...s, schemaVersion: 4, settings: { ...settings, colorMode: theme ?? 'system', palette: 'classic' } };
+  },
 };
 
 export function migrate(raw: unknown): SavedState {

@@ -217,11 +217,11 @@ Sesja: najpierw zaległe (due ≤ dziś), potem maksymalnie 5 nowych dziennie, �
 - **Fiches de révision**: lista fiszek per pakiet i widok fiszki (sekcje, tabele, przykłady, słówka, przycisk „S'entraîner”).
 - **Browse**: przeglądanie treści pakietów (jak zakładki oryginalnego kompendium), z wyszukiwarką.
 - **Stats**: najsłabsze wpisy, heatmapa aktywności (jak na GitHubie), postęp per pakiet.
-- **Settings** (ekran „Réglages”): motyw (Système / Clair / Sombre, domyślnie systemowy), język pomocy (polski / francuski), cel dzienny, dźwięk, wibracje, import pakietu JSON, eksport i import całego postępu (backup do pliku).
+- **Settings** (ekran „Réglages”): styl (Classique / Provence / 8-bit) i tryb (Système / Clair / Sombre, domyślnie systemowy), język pomocy (polski / francuski), cel dzienny, dźwięk, wibracje, import pakietu JSON, eksport i import całego postępu (backup do pliku).
 
 ## Styl wizualny
 
-Nawiązanie do kompendium: granat `#1a1f3a`, krem `#faf7f2`, złoto `#c9a84c`, akcenty niebieski `#2d4a7a`, czerwony `#c0392b`, zielony `#27795b`. Nagłówki w Playfair Display, tekst w Source Sans 3. Tryb ciemny przez `prefers-color-scheme` albo wybór w Réglages (`data-theme` na `<html>`, skrypt w index.html ustawia go przed pierwszym renderem).
+Nawiązanie do kompendium: granat `#1a1f3a`, krem `#faf7f2`, złoto `#c9a84c`, akcenty niebieski `#2d4a7a`, czerwony `#c0392b`, zielony `#27795b`. Nagłówki w Playfair Display, tekst w Source Sans 3. To jest styl „Classique”. Motyw = styl (`data-palette`: classic / provence / pixel) × tryb (`data-theme`: light / dark, brak = systemowy). Kolory w tokenach semantycznych (`--bg`, `--accent`, `--highlight`, `--success`, `--danger`…) definiowanych przez `light-dark()`, więc każdy styl opisuje oba tryby w jednym miejscu; styl ustawia też fonty, promienie, grubość ramek i cienie. Komponenty używają tylko tokenów, nigdy surowych kolorów. Styl „8-bit”: Press Start 2P (tytuły, przyciski) i VT323 (tekst), paleta Game Boy (jasny) i NES (ciemny). Skrypt w index.html ustawia styl i tryb przed pierwszym renderem.
 
 ## Konwencje
 

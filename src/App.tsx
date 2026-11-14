@@ -24,7 +24,7 @@ type Screen =
 export function App() {
   const [state, update] = useAppState();
   const [screen, setScreen] = useState<Screen>({ name: 'home' });
-  useTheme(state.settings.theme);
+  useTheme(state.settings.colorMode, state.settings.palette);
 
   if (import.meta.env.DEV && content.issues.length) return <ContentErrors issues={content.issues} />;
 

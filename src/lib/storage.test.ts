@@ -41,7 +41,14 @@ describe('storage', () => {
     const s = migrate(v1);
     expect(s.schemaVersion).toBe(SCHEMA_VERSION);
     expect(s.srs['p/e']).toEqual(card);
-    expect(s.settings).toEqual({ dailyGoal: 100, sound: false, vibration: true, helpLang: 'pl', theme: 'system' });
+    expect(s.settings).toEqual({ dailyGoal: 100, sound: false, vibration: true, helpLang: 'pl', colorMode: 'system', palette: 'classic' });
+  });
+
+  it('keeps the chosen colour mode when adding palettes (v3 → v4)', () => {
+    const v3 = { schemaVersion: 3, srs: {}, daily: { day: '', newIntroduced: 0 }, settings: { ...defaultState().settings, theme: 'dark' } };
+    const s = migrate(v3);
+    expect(s.settings).toMatchObject({ colorMode: 'dark', palette: 'classic' });
+    expect(s.settings).not.toHaveProperty('theme');
   });
 
   it('resets daily counters on a new day', () => {

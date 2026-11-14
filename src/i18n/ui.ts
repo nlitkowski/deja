@@ -22,7 +22,10 @@ export const ui = {
   practiceThis: 'S’entraîner',
 
   settings: 'Réglages',
-  themeLabel: 'Thème',
+  paletteLabel: 'Style',
+  paletteNames: { classic: 'Classique', provence: 'Provence', pixel: '8-bit' },
+  paletteHints: { classic: 'Bleu nuit et or', provence: 'Lavande et olive', pixel: 'Pixels rétro' },
+  themeLabel: 'Mode',
   themeNames: { system: 'Système', light: 'Clair', dark: 'Sombre' },
   themeHint: '« Système » suit le mode clair ou sombre de ton appareil.',
   helpLangHint: 'Langue des traductions, explications et indices.',
