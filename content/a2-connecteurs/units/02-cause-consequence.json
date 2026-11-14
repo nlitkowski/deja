@@ -113,11 +113,10 @@
     }
   ],
   "boss": {
-    "entryIds": ["u02-puisque", "u02-grace-a", "u02-a-cause-de", "u02-en-effet", "u02-alors"],
-    "exerciseTypes": ["gap-fill"],
+    "groups": [["u02-puisque", "u02-en-effet", "u02-alors"], ["u02-grace-a", "u02-a-cause-de"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   },
   "exercises": [
     { "id": "puisque-1", "type": "gap-fill", "entryIds": ["u02-puisque"], "data": { "sentence": "___ tu es là, aide-moi à porter les sacs !", "answers": ["puisque", "comme"], "pl": "Skoro tu jesteś, pomóż mi nieść torby!", "clue": "(tu es là, on le voit bien)" } },

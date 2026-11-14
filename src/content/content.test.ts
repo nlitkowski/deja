@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { buildBoss } from '../bosses';
 import { exerciseTypeInfo, supportsHelpLang } from '../exercises/registry';
 import { loadPacks } from './loader';
 import { content, contentFiles } from './registry';
@@ -108,6 +109,18 @@ describe('content packs', () => {
     expect([...disk.entries.keys()].filter((id) => !covered.has(id))).toEqual([]);
   });
 
+  it('every unit has a playable boss: full length, and choices wherever a group has two entries', () => {
+    const problems: string[] = [];
+    for (const unit of content.units.values()) {
+      const boss = buildBoss(unit.key, () => 0.25);
+      const expected = unit.boss?.questions ?? 10;
+      if (boss?.questions.length !== expected) problems.push(`${unit.key}: ${boss?.questions.length ?? 0}/${expected} pytań`);
+      const pairs = unit.boss?.groups.some((g) => g.length > 1);
+      if (pairs && !boss?.questions.some((q) => q.kind === 'choice')) problems.push(`${unit.key}: brak pytań z wyborem`);
+    }
+    expect(problems).toEqual([]);
+  });
+
   it('the template pack is valid', () => {
     const template = loadPacks(
       {
@@ -143,6 +156,11 @@ describe('loadPacks', () => {
     });
     expect(issues.map((i) => i.message).join('\n')).toMatch(/other\/missing/);
     expect(issues.map((i) => i.message).join('\n')).toMatch(/nieznany typ/);
+  });
+
+  it('reports boss groups that name unknown entries', () => {
+    const { issues } = load({ id: 'u', title: 'U', icon: 'x', entries: [entry], exercises: [exercise], boss: { groups: [['e', 'nope']] } });
+    expect(issues).toContainEqual(expect.objectContaining({ path: 'boss.groups.0.1' }));
   });
 
   it('requires a production exercise per entry', () => {

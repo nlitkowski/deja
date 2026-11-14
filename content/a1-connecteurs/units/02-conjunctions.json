@@ -261,19 +261,10 @@
     }
   ],
   "boss": {
-    "entryIds": [
-      "conj-car",
-      "conj-parce-que",
-      "conj-comme",
-      "conj-si",
-      "conj-quand"
-    ],
-    "exerciseTypes": [
-      "gap-fill"
-    ],
+    "groups": [["conj-car", "conj-parce-que", "conj-comme"], ["conj-si", "conj-quand"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   },
   "exercises": [
     { "id": "et-1", "type": "gap-fill", "entryIds": ["conj-et"], "data": { "sentence": "J'aime le café ___ le thé.", "answers": ["et"], "pl": "Lubię kawę i herbatę.", "clue": "(les deux)" } },

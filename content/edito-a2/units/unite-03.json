@@ -225,10 +225,9 @@
     { "id": "u03-espace-vert-2", "type": "translate-pl-fr", "entryIds": ["u03-espace-vert"], "data": { "pl": "teren zielony", "answers": ["un espace vert", "l'espace vert", "des espaces verts", "les espaces verts"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
   ],
   "boss": {
-    "entryIds": ["u03-relatif-qui", "u03-relatif-que", "u03-relatif-ou", "u03-comp-nom", "u03-si-futur"],
-    "exerciseTypes": ["gap-fill"],
+    "groups": [["u03-relatif-que", "u03-relatif-qui", "u03-relatif-ou"], ["u03-comp-nom"], ["u03-si-futur"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   }
 }

@@ -71,6 +71,8 @@ src/
     conjugation-grid/       # do przyszłych pakietów z czasownikami
   game/                     # gamifikacja, czysta logika bez Reacta, liczona z logu zdarzeń (XP z ReviewEvent/SessionEvent, cel dzienny z SettingEvent)
     config.ts               # wszystkie liczby do strojenia
+    mastery.ts, map.ts      # mastery 0–5 z karty SRS, blokady jednostek, pakietów i bossów
+    boss.ts                 # pytania bossa z grup mylonych wpisów, życia
     xp.ts
     levels.ts
     streak.ts
@@ -85,7 +87,7 @@ src/
     progress/               # log zdarzeń: events.ts, fold.ts (czyste), projection.ts, store.ts (IndexedDB / pamięć), baseline.ts
   state/
     appStore.ts             # Zustand: settings, progress, log, recordAnswer, recordSession
-    useGame.ts              # XP, poziom i streak na dziś z logu
+    useGame.ts              # XP, poziom, streak i stan mapy z logu
   components/
   screens/
 ```
@@ -112,6 +114,7 @@ src/
 ```ts
 // schemat (Zod -> typy)
 Unit     { id, title, icon, entries: Entry[], exercises: Exercise[], boss?: BossConfig }
+BossConfig { groups: string[][], questions, lives, secondsPerQuestion }  // brak = z confusables jednostki
 Entry    { id, fr, pl, def?, examples: {fr, pl}[], tip?: {pl, fr?}, confusables?: string[], tags?: string[] }
 Exercise { id, type: string, entryIds: string[], data: unknown }  // `data` walidowane przez schemat danego typu ćwiczenia
 ```

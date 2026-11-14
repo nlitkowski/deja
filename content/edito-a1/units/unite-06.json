@@ -251,10 +251,9 @@
     { "id": "u06-barbe-2", "type": "translate-pl-fr", "entryIds": ["u06-barbe"], "data": { "pl": "broda (zarost)", "answers": ["une barbe", "la barbe"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
   ],
   "boss": {
-    "entryIds": ["u06-pronominaux", "u06-passe-recent", "u06-partir-sortir-dormir", "u06-pouvoir", "u06-vouloir"],
-    "exerciseTypes": ["gap-fill"],
+    "groups": [["u06-pronominaux"], ["u06-passe-recent"], ["u06-partir-sortir-dormir"], ["u06-pouvoir", "u06-vouloir"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   }
 }

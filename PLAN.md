@@ -114,7 +114,9 @@ Rejestr w `src/exercises/registry.ts` już istnieje. Dodaj typy, które **generu
 
 Session używa tych typów zgodnie z `recognitionShare` (0.2). Dopiero teraz to ustawienie zaczyna działać. Zadbaj, żeby recognition nigdy nie wypierało production dla wpisów z ostatnim błędem.
 
-## Etap 4 — Mastery, mapa jednostek, bossowie
+## Etap 4 — Mastery, mapa jednostek, bossowie ✅
+
+Zrobione. Uwagi: malejące XP liczone przez odtworzenie logu w kolejności (`replay` w `fold.ts`), bo zależy od mastery w chwili odpowiedzi. Wszystkie jednostki (także Édito) miały już stary blok `boss` (`entryIds`, `exerciseTypes`, `timeLimitSec`); przepisałem go na nowy kształt z grupami z `confusables`, a w a2 „Chronologie” i „Cause et conséquence”, gdzie wpisy nie mają mylonych w jednostce, grupy ułożyłem ręcznie. Pytania z wyborem są zapisywane z `production: false` w zdarzeniu. Blokady obowiązują też w drzewie nawigacji (▶ zablokowanej jednostki jest nieaktywne). Pakiet jest „ukończony”, gdy każda jednostka ma mastery ≥ 1.
 
 **4.1 `src/game/mastery.ts`**
 - Mastery wpisu 0–5 z karty SRS:

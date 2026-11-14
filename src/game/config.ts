@@ -13,6 +13,17 @@ export const GAME = {
     sessionComplete: 10,
     perfectSession: 20,
     perfectSessionMinItems: 10,
+    bossDefeated: 100,
+    /** Answers about entries that are already at mastery 5 (all of them) are worth less: no farming. */
+    masteredMultiplier: 0.5,
+  },
+  mastery: {
+    /** Minimum interval in days for mastery 2, 3, 4 and 5. */
+    intervals: [3, 7, 21, 60],
+    goldReps: 4,
+    /** A unit's next unit opens at this unit mastery; its boss at `bossFrom`. */
+    unlockNext: 1,
+    bossFrom: 2,
   },
   level: {
     base: 50,
@@ -26,6 +37,8 @@ export const GAME = {
     freezeEvery: 7,
     maxFreezes: 2,
   },
+  /** A boss without its own config in the unit file. */
+  boss: { questions: 10, lives: 3, secondsPerQuestion: 12 },
   /** The combo counter shows from this many correct answers in a row. */
   comboVisibleFrom: 3,
 } as const;

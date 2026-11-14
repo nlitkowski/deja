@@ -22,6 +22,7 @@ export interface SessionOutcome {
   correct: number;
   nearMiss: number;
   entriesReviewed: number;
+  boss?: { defeated: boolean };
 }
 
 interface Props {

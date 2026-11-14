@@ -99,11 +99,10 @@
     }
   ],
   "boss": {
-    "entryIds": ["u04-il-y-a", "u04-jusqua", "u04-a-partir-de", "u04-deja-pas-encore", "u04-ca-fait-que"],
-    "exerciseTypes": ["gap-fill"],
+    "groups": [["u04-il-y-a", "u04-ca-fait-que"], ["u04-jusqua", "u04-a-partir-de"], ["u04-deja-pas-encore"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   },
   "exercises": [
     { "id": "il-y-a-1", "type": "gap-fill", "entryIds": ["u04-il-y-a"], "data": { "sentence": "Je suis arrivé en France ___ deux ans.", "answers": ["il y a"], "pl": "Przyjechałem do Francji dwa lata temu.", "clue": "(dans le passé)" } },

@@ -33,11 +33,12 @@ export function SessionSummary({ outcome, onDone }: { outcome: SessionOutcome; o
     return () => cancelAnimationFrame(frame);
   }, []);
 
+  const bossWon = !!outcome.boss?.defeated;
   useEffect(() => {
-    if (!levelledUp) return;
+    if (!levelledUp && !bossWon) return;
     celebrate();
     if (sound) sfx.levelUp();
-  }, [levelledUp, sound]);
+  }, [levelledUp, bossWon, sound]);
 
   const pct = outcome.answered ? Math.round((outcome.correct / outcome.answered) * 100) : 0;
   const tiles = [
@@ -60,8 +61,9 @@ export function SessionSummary({ outcome, onDone }: { outcome: SessionOutcome; o
 
   return (
     <main className="screen summary">
-      <h1>{ui.sessionDone}</h1>
-      <p className="muted">{outcome.title}</p>
+      <h1>{outcome.boss ? (bossWon ? ui.bossWon : ui.bossLost) : ui.sessionDone}</h1>
+      <p className="muted">{outcome.boss ? ui.bossOf(outcome.title) : outcome.title}</p>
+      {outcome.boss && !bossWon && <p>{ui.bossRetry}</p>}
 
       <section className="xp-card">
         <p className="big-number">{ui.xpGain(view.xp.total)}</p>

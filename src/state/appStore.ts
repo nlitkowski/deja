@@ -15,6 +15,7 @@ export interface AnswerInput {
   early: boolean;
   sessionId?: string;
   comboBefore?: number;
+  production?: boolean;
 }
 
 export type SessionInput = Omit<SessionEvent, 'type' | 'id' | 'deviceId' | 'at' | 'day'>;
@@ -91,7 +92,7 @@ export function createAppStore({ progressStore, kv }: Deps) {
         }
       },
 
-      recordAnswer({ exerciseId, entryIds, result, early, sessionId, comboBefore }, now = new Date()) {
+      recordAnswer({ exerciseId, entryIds, result, early, sessionId, comboBefore, production }, now = new Date()) {
         const event: ReviewEvent = {
           type: 'review',
           ...base(now),
@@ -104,6 +105,7 @@ export function createAppStore({ progressStore, kv }: Deps) {
           timeMs: Math.round(result.timeMs),
           early,
           ...(sessionId ? { sessionId, comboBefore } : {}),
+          ...(production !== undefined ? { production } : {}),
         };
         return record(event, 'answer');
       },

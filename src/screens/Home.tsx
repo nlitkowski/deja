@@ -1,6 +1,7 @@
 import { AppLayout, MenuButton } from '../components/AppLayout';
 import { Emoji } from '../components/Emoji';
 import { GameBar } from '../components/GameBar';
+import { UnitMap } from '../components/UnitMap';
 import { Icon } from '../components/Icon';
 import { LangSwitch } from '../components/LangSwitch';
 import { content } from '../content/registry';
@@ -11,18 +12,21 @@ import type { SessionItem } from '../lib/session';
 import { isDue } from '../lib/srs';
 import { buildReviewSession, buildUnitSession, NEW_PER_DAY } from '../sessions';
 import { useAppStore } from '../state/appStore';
+import { useMapState } from '../state/useGame';
 
 interface Props {
   onStart: (title: string, items: SessionItem[], unitKey?: string) => void;
   onOpenSheets: () => void;
   onOpenSheet: (key: string) => void;
   onOpenSettings: () => void;
+  onBoss: (unitKey: string) => void;
 }
 
-export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings }: Props) {
+export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBoss }: Props) {
   const progress = useAppStore((s) => s.progress);
   const settings = useAppStore((s) => s.settings);
   const updateSettings = useAppStore((s) => s.updateSettings);
+  const map = useMapState();
   const cards = progress.cards;
   const today = dayKey(new Date());
   const dueCount = [...content.entries.values()].filter((e) => !e.deprecated && cards[e.id] && isDue(cards[e.id]!, today)).length;
@@ -84,35 +88,7 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings }: Pro
             <h2>
               <Emoji char={pack.icon} /> {pack.title} <span className="level">{pack.level}</span>
             </h2>
-            <ol className="unit-list">
-              {pack.unitList.map((unit) => {
-                const total = unit.entryIds.length;
-                const seen = unit.entryIds.filter((id) => cards[id]).length;
-                const due = unit.entryIds.filter((id) => cards[id] && isDue(cards[id]!, today)).length;
-                return (
-                  <li key={unit.key}>
-                    <button className="unit" onClick={() => practice(unit.key)}>
-                      <span className="unit-icon">
-                        <Emoji char={unit.icon} />
-                      </span>
-                      <span className="unit-body">
-                        <span className="unit-title">{unit.title}</span>
-                        <span className="progress" aria-label={ui.unitProgressLabel(seen, total)}>
-                          <span style={{ width: `${(seen / total) * 100}%` }} />
-                        </span>
-                        <span className="muted small">
-                          {ui.unitSeen(seen, total)}
-                          {due ? ` · ${ui.unitDue(due)}` : ''}
-                        </span>
-                      </span>
-                      <span className="chevron" aria-hidden>
-                        <Icon name="next" />
-                      </span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ol>
+            <UnitMap pack={pack} state={map.get(pack.id)!} onPractice={practice} onBoss={onBoss} />
           </section>
         ))}
 

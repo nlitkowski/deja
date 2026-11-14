@@ -1825,3 +1825,240 @@ html,
 .pair-card:lang(fr) {
   font-family: var(--font-head);
 }
+
+/* Unit map: a path of units and bosses */
+
+.unit-map {
+  margin-top: 8px;
+}
+
+.unit-map.locked .map-path {
+  opacity: 0.55;
+}
+
+.map-lock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.map-path {
+  position: relative;
+  margin: 0 auto;
+  max-width: 420px;
+}
+
+.map-line {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.map-line polyline {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 6;
+  stroke-dasharray: 2 12;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.map-path ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.map-step {
+  position: absolute;
+  transform: translateX(-50%);
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  width: 168px;
+  text-align: center;
+}
+
+.map-node {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-top: 4px;
+  border-radius: 50%;
+  border: max(3px, var(--border-w)) solid var(--accent);
+  background: var(--surface);
+  box-shadow: var(--shadow), 0 4px 0 var(--accent);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.map-node:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: var(--shadow), 0 1px 0 var(--accent);
+}
+
+.map-node:focus-visible {
+  outline: 3px solid var(--highlight);
+  outline-offset: 3px;
+}
+
+.map-node.locked {
+  border-color: var(--border);
+  box-shadow: 0 4px 0 var(--border);
+  cursor: default;
+}
+
+.map-node.locked .emoji,
+.map-node.locked > :first-child {
+  filter: grayscale(1);
+  opacity: 0.45;
+}
+
+.map-node.golden {
+  border-color: var(--highlight);
+  box-shadow: var(--shadow), 0 4px 0 var(--highlight);
+  background: var(--near-bg);
+}
+
+.node-lock {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: var(--border-w) solid var(--border);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.boss-step .map-node {
+  width: 52px;
+  height: 52px;
+  border-color: var(--danger);
+  box-shadow: var(--shadow), 0 4px 0 var(--danger);
+  background: var(--bad-bg);
+  font-size: 1.5rem;
+}
+
+.boss-step .map-node.defeated {
+  border-color: var(--success);
+  box-shadow: var(--shadow), 0 4px 0 var(--success);
+  background: var(--ok-bg);
+}
+
+.boss-step .map-node.locked {
+  border-color: var(--border);
+  box-shadow: 0 4px 0 var(--border);
+  background: var(--surface);
+}
+
+.crowns {
+  display: flex;
+  gap: 1px;
+  font-size: 0.75rem;
+}
+
+.crown {
+  color: var(--muted);
+  opacity: 0.3;
+}
+
+.crown.on {
+  color: var(--highlight);
+  opacity: 1;
+}
+
+.map-caption,
+.crowns {
+  /* Masks the dotted path where it passes behind the text. */
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+}
+
+.map-caption {
+  display: grid;
+  line-height: 1.25;
+  padding: 0 6px;
+}
+
+.map-title {
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mastered-badge {
+  justify-self: center;
+  margin-top: 2px;
+  padding: 0 0.6em;
+  border-radius: var(--pill-radius);
+  background: var(--highlight);
+  color: var(--on-highlight);
+  font-weight: 700;
+}
+
+[data-palette='pixel'] .map-node,
+[data-palette='pixel'] .node-lock {
+  border-radius: 0;
+}
+
+[data-palette='pixel'] .map-line polyline {
+  stroke-linecap: butt;
+  stroke-dasharray: 6 6;
+}
+
+/* Boss */
+
+.boss .session-header {
+  justify-content: space-between;
+}
+
+.boss-title {
+  flex: 1;
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lives {
+  display: flex;
+  gap: 2px;
+}
+
+.life.lost {
+  opacity: 0.4;
+}
+
+.boss-meta {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.boss .card {
+  border-color: var(--danger);
+}
+
+.boss .card.ok {
+  border-color: var(--success);
+}
+
+.tree-action:disabled,
+button.tree-sheet:disabled {
+  opacity: 0.45;
+  cursor: default;
+}

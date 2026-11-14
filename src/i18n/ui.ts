@@ -27,6 +27,18 @@ export const ui = {
   streakLabel: (n: number) => `Flamme : ${n} ${n <= 1 ? 'jour' : 'jours'} de suite`,
   freezesLabel: (n: number) => `${n} ${n <= 1 ? 'gel' : 'gels'} en réserve`,
 
+  bossOf: (title: string) => `Boss : ${title}`,
+  bossLabel: (title: string) => `Affronter le boss de « ${title} »`,
+  bossLocked: (title: string) => `Boss de « ${title} » : atteins le niveau de maîtrise 2 dans cette unité`,
+  bossDefeated: 'Boss vaincu',
+  livesLabel: (n: number) => `${n} ${n <= 1 ? 'vie' : 'vies'} restante${n <= 1 ? '' : 's'}`,
+  question: (i: number, n: number) => `Question ${i}/${n}`,
+  unitLocked: (title: string, previous: string) => `${title} : verrouillé. Découvre d’abord tous les mots de « ${previous} ».`,
+  packLocked: (packs: string) => `Termine d’abord : ${packs}`,
+  masteryLabel: (n: number) => `Maîtrise ${n} sur 5`,
+  mastered: 'Maîtrisé',
+  locked: 'Verrouillé',
+
   sheets: 'Fiches de révision',
   sheetsTeaser: (n: number) => `${n} fiche${n > 1 ? 's' : ''} : grammaire, vocabulaire, expressions`,
   treeHeading: 'Sommaire',
@@ -97,5 +109,8 @@ export const ui = {
   dayStreak: (n: number) => `Jour ${n} !`,
   goalReached: 'Objectif du jour atteint',
   levelUp: 'Niveau supérieur !',
+  bossWon: 'Boss vaincu !',
+  bossLost: 'Le boss a gagné… cette fois.',
+  bossRetry: 'Rien n’est perdu : réessaie quand tu veux.',
   continue: 'Continuer',
 } as const;

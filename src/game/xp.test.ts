@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { answer, ctx, session } from './testEvents';
-import { answerXp, comboMultiplier, sessionXp, totalXp, xpByDay } from './xp';
+import { answerXp, comboMultiplier, scoreEvents, sessionXp, totalXp, xpByDay } from './xp';
 
 describe('answerXp', () => {
   it('gives nothing for a wrong answer', () => {
@@ -29,11 +29,35 @@ describe('answerXp', () => {
   });
 });
 
+describe('mastered entries', () => {
+  it('halve the XP once every entry of the answer was at mastery 5 before it', () => {
+    expect(answerXp(answer(), ctx, true).total).toBe(6);
+    // Good answers spaced along the growing interval until the card reaches mastery 5.
+    const days = ['2026-01-01', '2026-01-02', '2026-01-05', '2026-01-13', '2026-02-03', '2026-04-01', '2026-09-01'];
+    const scored = scoreEvents(
+      days.map((day) => answer({ day, at: `${day}T10:00:00Z` })),
+      ctx,
+    ).map((s) => s.xp);
+    expect(scored.slice(0, 5)).toEqual([12, 12, 12, 12, 12]);
+    expect(scored.at(-1)).toBe(6);
+  });
+
+  it('takes the stored production flag over the exercise type', () => {
+    expect(answerXp(answer({ exerciseId: 'p/chosen', production: true }), ctx).total).toBe(12);
+    expect(answerXp(answer({ production: false }), ctx).total).toBe(5);
+  });
+});
+
 describe('session XP', () => {
   it('adds the completion bonus, and the perfect bonus from 10 items without mistakes', () => {
     expect(totalXp([session({ items: 9 })], ctx)).toBe(10);
     expect(totalXp([session({ items: 10 })], ctx)).toBe(30);
     expect(totalXp([session({ items: 12, mistakes: 1 })], ctx)).toBe(10);
+  });
+
+  it('adds 100 for a defeated boss, nothing extra for a lost one', () => {
+    expect(totalXp([session({ kind: 'boss', items: 4, mistakes: 3, defeated: false })], ctx)).toBe(10);
+    expect(totalXp([session({ kind: 'boss', items: 10, mistakes: 2, defeated: true })], ctx)).toBe(110);
   });
 
   it('splits one session into answers, combo and bonuses', () => {

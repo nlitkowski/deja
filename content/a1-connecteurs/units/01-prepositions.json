@@ -302,18 +302,10 @@
     }
   ],
   "boss": {
-    "entryIds": [
-      "prep-dans",
-      "prep-en",
-      "prep-pendant-depuis",
-      "prep-pour"
-    ],
-    "exerciseTypes": [
-      "gap-fill"
-    ],
+    "groups": [["prep-dans", "prep-en", "prep-pendant-depuis"], ["prep-pour", "prep-pendant-depuis"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   },
   "exercises": [
     { "id": "dans-1", "type": "gap-fill", "entryIds": ["prep-dans"], "data": { "sentence": "Le chat est ___ la boîte.", "answers": ["dans"], "pl": "Kot jest w pudełku.", "clue": "(à l'intérieur)" } },

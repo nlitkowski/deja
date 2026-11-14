@@ -29,6 +29,8 @@ export interface ReviewEvent extends EventBase {
   sessionId?: string;
   /** Correct answers in a row just before this one. Depends on the order within a session, so it is stored, not derived. */
   comboBefore?: number;
+  /** Typed or chosen, when the exercise id alone does not tell (a boss asks both kinds about one exercise). */
+  production?: boolean;
 }
 
 export type SessionKind = 'review' | 'unit' | 'boss';
@@ -44,6 +46,8 @@ export interface SessionEvent extends EventBase {
   correct: number;
   mistakes: number;
   maxCombo: number;
+  /** Boss sessions only: won with lives left. */
+  defeated?: boolean;
 }
 
 /** A setting whose history matters for derived state (the daily goal decides past streak days). */

@@ -159,10 +159,9 @@
     { "id": "u04-ticket-2", "type": "translate-pl-fr", "entryIds": ["u04-ticket"], "data": { "pl": "bilet (komunikacji miejskiej)", "answers": ["un ticket", "le ticket", "un ticket de métro", "un ticket de bus"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
   ],
   "boss": {
-    "entryIds": ["u04-cest-ilest", "u04-imperatif", "u04-imperatif-etre-avoir", "u04-prendre"],
-    "exerciseTypes": ["gap-fill"],
+    "groups": [["u04-cest-ilest"], ["u04-imperatif", "u04-imperatif-etre-avoir"], ["u04-prendre"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   }
 }

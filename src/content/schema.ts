@@ -30,11 +30,11 @@ export const ExerciseSchema = z.object({
 });
 
 export const BossConfigSchema = z.object({
-  entryIds: z.array(entryRef).min(1),
-  exerciseTypes: z.array(z.string()).min(1).default(['gap-fill']),
+  /** Entries the boss mixes up; a group of one entry only gets typed questions. */
+  groups: z.array(z.array(entryRef).min(1)).min(1),
   questions: z.number().int().positive().default(10),
   lives: z.number().int().positive().default(3),
-  timeLimitSec: z.number().positive().default(20),
+  secondsPerQuestion: z.number().positive().default(12),
 });
 
 export const UnitSchema = z.object({

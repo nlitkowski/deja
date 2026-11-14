@@ -3,6 +3,7 @@ import { content } from '../content/registry';
 import type { Pack, Unit } from '../content/schema';
 import type { Sheet, SheetSection } from '../content/sheet';
 import { ui } from '../i18n/ui';
+import { useLockedUnits } from '../state/useGame';
 import { Emoji } from './Emoji';
 import { Icon } from './Icon';
 
@@ -39,6 +40,7 @@ export interface NavTreeProps {
 /** Packs → lessons → sections of the open sheet. Shared by the home screen and the sheet screens. */
 export function NavTree({ currentSheetKey, activeSection, onOpenSheet, onPractice, onJump }: NavTreeProps) {
   const current = currentSheetKey ? content.sheets.get(currentSheetKey) : undefined;
+  const locked = useLockedUnits();
 
   const follow = (e: MouseEvent, go: () => void) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
@@ -82,13 +84,19 @@ export function NavTree({ currentSheetKey, activeSection, onOpenSheet, onPractic
                         {body}
                       </a>
                     ) : (
-                      <button className="tree-sheet" onClick={() => onPractice(unit!.key)}>
+                      <button className="tree-sheet" disabled={locked.has(unit!.key)} onClick={() => onPractice(unit!.key)}>
                         {body}
                       </button>
                     )}
                     {sheet && unit && (
-                      <button className="tree-action" onClick={() => onPractice(unit.key)} aria-label={ui.practiceUnit(title)} title={ui.practiceThis}>
-                        <Icon name="play" />
+                      <button
+                        className="tree-action"
+                        disabled={locked.has(unit.key)}
+                        onClick={() => onPractice(unit.key)}
+                        aria-label={locked.has(unit.key) ? `${ui.locked} : ${title}` : ui.practiceUnit(title)}
+                        title={locked.has(unit.key) ? ui.locked : ui.practiceThis}
+                      >
+                        <Icon name={locked.has(unit.key) ? 'lock' : 'play'} />
                       </button>
                     )}
                   </div>

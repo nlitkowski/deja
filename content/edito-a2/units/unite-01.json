@@ -226,10 +226,9 @@
     { "id": "u01-balade-2", "type": "translate-pl-fr", "entryIds": ["u01-balade"], "data": { "pl": "spacer, przechadzka", "answers": ["une balade", "la balade", "une promenade", "la promenade"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
   ],
   "boss": {
-    "entryIds": ["u01-pc-avoir", "u01-pc-irreguliers", "u01-pc-etre", "u01-pc-pronominaux", "u01-ne-personne"],
-    "exerciseTypes": ["gap-fill"],
+    "groups": [["u01-pc-avoir", "u01-pc-etre"], ["u01-pc-irreguliers"], ["u01-pc-pronominaux", "u01-pc-etre"], ["u01-ne-personne"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   }
 }

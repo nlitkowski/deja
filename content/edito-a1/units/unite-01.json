@@ -187,10 +187,9 @@
     { "id": "u01-voyage-2", "type": "translate-pl-fr", "entryIds": ["u01-voyage"], "data": { "pl": "podróż", "answers": ["un voyage", "le voyage"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
   ],
   "boss": {
-    "entryIds": ["u01-etre", "u01-avoir", "u01-sappeler", "u01-nationalites", "u01-quel"],
-    "exerciseTypes": ["gap-fill"],
+    "groups": [["u01-etre", "u01-avoir"], ["u01-sappeler"], ["u01-nationalites"], ["u01-quel"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   }
 }

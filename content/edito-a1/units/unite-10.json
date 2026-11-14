@@ -224,10 +224,9 @@
     { "id": "u10-diplome-2", "type": "translate-pl-fr", "entryIds": ["u10-diplome"], "data": { "pl": "dyplom", "answers": ["un diplôme", "le diplôme"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
   ],
   "boss": {
-    "entryIds": ["u10-cod-me-te", "u10-cod-le-la-les", "u10-qui-que", "u10-il-y-a-duree", "u10-tres-trop-assez"],
-    "exerciseTypes": ["gap-fill"],
+    "groups": [["u10-cod-me-te", "u10-cod-le-la-les"], ["u10-qui-que"], ["u10-il-y-a-duree"], ["u10-tres-trop-assez"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   }
 }

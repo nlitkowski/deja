@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import type { HelpLang } from './content/localized';
 import { content } from './content/registry';
 import type { SessionItem } from './lib/session';
+import { Boss } from './screens/Boss';
 import { ContentErrors } from './screens/ContentErrors';
 import { Home } from './screens/Home';
 import { Session, type SessionOutcome } from './screens/Session';
@@ -16,6 +17,7 @@ import { useTheme } from './theme';
 type Screen =
   | { name: 'home' }
   | { name: 'session'; title: string; items: SessionItem[]; unitKey?: string }
+  | { name: 'boss'; unitKey: string }
   | { name: 'summary'; outcome: SessionOutcome }
   | { name: 'sheets' }
   | { name: 'sheet'; key: string }
@@ -49,6 +51,7 @@ export function App() {
           onOpenSheets={() => setScreen({ name: 'sheets' })}
           onOpenSheet={(key) => setScreen({ name: 'sheet', key })}
           onOpenSettings={() => setScreen({ name: 'settings' })}
+          onBoss={(unitKey) => setScreen({ name: 'boss', unitKey })}
         />
       );
     case 'session':
@@ -57,6 +60,15 @@ export function App() {
           title={screen.title}
           initialItems={screen.items}
           unitKey={screen.unitKey}
+          onExit={home}
+          onFinish={(outcome) => setScreen({ name: 'summary', outcome })}
+        />
+      );
+    case 'boss':
+      return (
+        <Boss
+          unitKey={screen.unitKey}
+          title={content.units.get(screen.unitKey)?.title ?? ''}
           onExit={home}
           onFinish={(outcome) => setScreen({ name: 'summary', outcome })}
         />

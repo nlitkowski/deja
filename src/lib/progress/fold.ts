@@ -73,6 +73,19 @@ export function foldEvents(events: readonly ProgressEvent[]): ProgressState {
   return applyEvents(emptyProgress(), [...events].sort(compareEvents));
 }
 
+/**
+ * Folds the log in order and shows each event the state just before it, for projections that depend
+ * on it (XP that drops for mastered entries). `before` is only valid during the call.
+ */
+export function replay(events: readonly ProgressEvent[], visit: (event: ProgressEvent, before: ProgressState) => void): ProgressState {
+  const state = emptyProgress();
+  for (const event of [...events].sort(compareEvents)) {
+    visit(event, state);
+    applyInPlace(state, event);
+  }
+  return state;
+}
+
 export function newIntroducedOn(state: ProgressState, day: DayKey): number {
   let count = state.introducedExtra[day] ?? 0;
   for (const seen of Object.values(state.firstSeen)) if (seen === day) count += 1;

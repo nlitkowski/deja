@@ -233,10 +233,9 @@
     { "id": "u07-plombier-2", "type": "translate-pl-fr", "entryIds": ["u07-plombier"], "data": { "pl": "hydraulik", "answers": ["un plombier", "le plombier"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
   ],
   "boss": {
-    "entryIds": ["u07-pc-avoir", "u07-participes", "u07-pc-negation", "u07-cod", "u07-connaitre"],
-    "exerciseTypes": ["gap-fill"],
+    "groups": [["u07-pc-avoir", "u07-participes"], ["u07-pc-negation"], ["u07-cod"], ["u07-connaitre"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   }
 }

@@ -125,11 +125,10 @@
     }
   ],
   "boss": {
-    "entryIds": ["u01-dabord", "u01-ensuite-puis", "u01-enfin-finalement", "u01-avant-de", "u01-pendant-que"],
-    "exerciseTypes": ["gap-fill"],
+    "groups": [["u01-dabord", "u01-ensuite-puis", "u01-enfin-finalement"], ["u01-avant-de"], ["u01-pendant-que"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   },
   "exercises": [
     { "id": "dabord-1", "type": "gap-fill", "entryIds": ["u01-dabord"], "data": { "sentence": "___, je prends une douche, ensuite je m'habille.", "answers": ["d'abord", "premièrement"], "pl": "Najpierw biorę prysznic, potem się ubieram.", "clue": "(la première étape)" } },

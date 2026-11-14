@@ -3,8 +3,8 @@ import { addDays } from '../lib/date';
 import { goalResolver, streakInfo } from './streak';
 import { answer, ctx, goalChange } from './testEvents';
 
-/** `n` correct typed answers (12 XP each) on one day. */
-const day = (d: string, n: number) => Array.from({ length: n }, () => answer({ day: d }));
+/** `n` correct typed answers (12 XP each) on one day, each about a fresh entry so mastery never lowers the XP. */
+const day = (d: string, n: number) => Array.from({ length: n }, (_, i) => answer({ day: d, entryIds: [`p/${d}-${i}`] }));
 const days = (from: string, count: number, perDay: number) => Array.from({ length: count }, (_, i) => day(addDays(from, i), perDay)).flat();
 
 describe('streakInfo', () => {

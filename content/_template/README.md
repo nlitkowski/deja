@@ -22,7 +22,7 @@ Skopiuj ten katalog do `content/<id-pakietu>/` (bez podkreślnika na początku: 
 - `exercises`: `{ id, type, entryIds, data }`. Każdy wpis potrzebuje co najmniej jednego ćwiczenia produkcyjnego:
   - `gap-fill`: `{ sentence: "… ___ …", answers: [...], hint?, pl?, clue? }` (dokładnie jedna luka `___`)
   - `translate-pl-fr`: `{ pl, answers: [...], hint? }` (tylko w trybie pomocy po polsku)
-- `boss` (opcjonalnie): `{ entryIds, exerciseTypes, questions, lives, timeLimitSec }`.
+- `boss` (opcjonalnie): `{ groups, questions, lives, secondsPerQuestion }`. `groups` to listy id mylonych wpisów (np. `[["prep-dans", "prep-en"]]`); grupa z jednym wpisem daje tylko pytania z wpisywaniem. Bez pola boss powstaje automatycznie z `confusables` jednostki.
 
 ## `sheets/<id>.json` (fiszki do czytania, opcjonalnie)
 

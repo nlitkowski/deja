@@ -3,6 +3,7 @@ import type { GenCtx } from './types';
 
 /** A hand-written gap-fill sentence for one entry: the raw material of generated recognition exercises. */
 export interface GapSentence {
+  exerciseId: string;
   entryId: string;
   sentence: string;
   answers: string[];
@@ -16,7 +17,7 @@ export function gapSentences(entryId: string, ctx: GenCtx): GapSentence[] {
     .filter((ex) => ex.type === 'gap-fill' && ex.entryIds.length === 1)
     .map((ex) => {
       const { sentence, answers, pl, clue } = ex.data as GapFillData;
-      return { entryId, sentence, answers, pl, clue };
+      return { exerciseId: ex.id, entryId, sentence, answers, pl, clue };
     });
 }
 

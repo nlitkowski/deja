@@ -92,17 +92,10 @@
     }
   ],
   "boss": {
-    "entryIds": [
-      "contr-au-aux",
-      "contr-du-des",
-      "contr-pays"
-    ],
-    "exerciseTypes": [
-      "gap-fill"
-    ],
+    "groups": [["contr-pays", "contr-au-aux", "contr-du-des"]],
     "questions": 10,
     "lives": 3,
-    "timeLimitSec": 20
+    "secondsPerQuestion": 12
   },
   "exercises": [
     { "id": "table-a-le", "type": "gap-fill", "entryIds": ["contr-au-aux"], "data": { "sentence": "à + le = ___", "answers": ["au"] } },

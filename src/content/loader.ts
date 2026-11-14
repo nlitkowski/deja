@@ -158,8 +158,8 @@ export function loadPacks(files: ContentFiles, exerciseTypes: Record<string, Exe
       exercises.set(id, { ...ex, id, data: data.data, packId: pack.id, unitId: key, entryIds });
     });
 
-    const boss = raw.boss && { ...raw.boss, entryIds: raw.boss.entryIds.map((r) => globalId(pack.id, r)) };
-    boss?.entryIds.forEach((r, j) => refsToCheck.push({ file, path: `boss.entryIds.${j}`, id: r }));
+    const boss = raw.boss && { ...raw.boss, groups: raw.boss.groups.map((g) => g.map((r) => globalId(pack.id, r))) };
+    boss?.groups.forEach((g, i) => g.forEach((r, j) => refsToCheck.push({ file, path: `boss.groups.${i}.${j}`, id: r })));
 
     const unit: Unit = {
       id: raw.id,
