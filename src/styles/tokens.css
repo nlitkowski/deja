@@ -18,8 +18,8 @@
 :root,
 [data-palette='classic'] {
   --bg: light-dark(#faf7f2, #12152a);
-  --surface: light-dark(#ffffff, #1a1f3a);
-  --text: light-dark(#2c2c2c, #f2ede4);
+  --surface: light-dark(#fdfaf4, #1a1f3a);
+  --text: light-dark(#2c2c2c, #e2ddd2);
   --muted: light-dark(#6b6b6b, #a3a8c3);
   --border: light-dark(#e6e0d4, #2c3358);
   --accent: light-dark(#2d4a7a, #7d9cd6);
@@ -57,8 +57,8 @@
 [data-palette='provence'] {
   --brand: var(--text);
   --bg: light-dark(#f6f3f8, #1c1824);
-  --surface: light-dark(#ffffff, #262031);
-  --text: light-dark(#2e2a3a, #f1ecf6);
+  --surface: light-dark(#fdfbfe, #262031);
+  --text: light-dark(#2e2a3a, #e0d9e8);
   --muted: light-dark(#6b6478, #b1a8c0);
   --border: light-dark(#e4dcea, #3a3148);
   --accent: light-dark(#6b4fa0, #b9a2e6);
@@ -91,29 +91,32 @@
   --scroll-width: thin;
 }
 
-/* Light: Game Boy greens. Dark: NES night. */
+/*
+ * Light: Game Boy greens. Dark: NES night, toned down so it is easy on the eyes:
+ * off-white text instead of pure white, muted indigo borders and shadows, and a dusky blue hero.
+ */
 [data-palette='pixel'] {
   --brand: var(--text);
-  --bg: light-dark(#c4cfa1, #0b0b1e);
-  --surface: light-dark(#e3ebc3, #16163a);
-  --text: light-dark(#0f380f, #fcfcfc);
-  --muted: light-dark(#3d6b3d, #a4a4d0);
-  --border: light-dark(#0f380f, #fcfcfc);
-  --accent: light-dark(#306230, #3cbcfc);
-  --on-accent: light-dark(#e3ebc3, #0b0b1e);
-  --highlight: light-dark(#8bac0f, #f8b800);
-  --on-highlight: light-dark(#0f380f, #0b0b1e);
-  --info: light-dark(#306230, #3cbcfc);
-  --success: light-dark(#306230, #58d854);
-  --danger: light-dark(#b8341b, #f83800);
-  --ok-bg: light-dark(#b3c77a, #0e3b12);
-  --bad-bg: light-dark(#e8b8a8, #4a1208);
-  --near-bg: light-dark(#d9d68a, #4a3a00);
-  --selected-bg: light-dark(#0f380f, #f8b800);
-  --selected-fg: light-dark(#e3ebc3, #0b0b1e);
-  --hero-bg: light-dark(#0f380f, #2038ec);
-  --hero-fg: light-dark(#e3ebc3, #fcfcfc);
-  --hero-muted: light-dark(#9bbc0f, #bcd0fc);
+  --bg: light-dark(#c4cfa1, #14142e);
+  --surface: light-dark(#e3ebc3, #1d1d40);
+  --text: light-dark(#0f380f, #d6d6e6);
+  --muted: light-dark(#2f5a2f, #9a9ac2);
+  --border: light-dark(#3d6b3d, #6464a4);
+  --accent: light-dark(#2a582a, #6cb4e0);
+  --on-accent: light-dark(#e3ebc3, #14142e);
+  --highlight: light-dark(#8bac0f, #e0aa3a);
+  --on-highlight: light-dark(#0f380f, #14142e);
+  --info: light-dark(#2a582a, #6cb4e0);
+  --success: light-dark(#2a582a, #6cc46a);
+  --danger: light-dark(#962a14, #ee7a5e);
+  --ok-bg: light-dark(#b3c77a, #173a24);
+  --bad-bg: light-dark(#e8b8a8, #45201c);
+  --near-bg: light-dark(#d9d68a, #3f3418);
+  --selected-bg: light-dark(#0f380f, #e0aa3a);
+  --selected-fg: light-dark(#e3ebc3, #14142e);
+  --hero-bg: light-dark(#2a582a, #2a3474);
+  --hero-fg: light-dark(#e3ebc3, #e2e2ee);
+  --hero-muted: light-dark(#c4cfa1, #b0bce4);
 
   --font-head: 'Press Start 2P', ui-monospace, monospace;
   --font-body: 'VT323', ui-monospace, monospace;

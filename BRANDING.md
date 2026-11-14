@@ -37,7 +37,7 @@ Instrukcje dla Claude'a dotyczące identyfikacji wizualnej i języka aplikacji. 
 - Główny przycisk akcji (CTA) jest granatowy z kremowym tekstem.
 - Wszystkie kolory definiuj jako zmienne CSS w jednym pliku (`src/styles/tokens.css`) i nie wpisuj hexów w komponentach.
 - **Tryb ciemny** (`prefers-color-scheme` plus przełącznik w ustawieniach):
-  - tło `#12152a`, karty `#1a1f3a`, tekst `#f2ede4`;
+  - tło `#12152a`, karty `#1a1f3a`, tekst `#e2ddd2` (przygaszony krem, żeby nie męczył oczu);
   - złoto bez zmian;
   - zieleń i czerwień rozjaśnione tak, żeby kontrast wynosił co najmniej 4.5:1.
 
@@ -95,3 +95,4 @@ Te decyzje zapadły przed wprowadzeniem tego dokumentu i mają pierwszeństwo pr
 - **Emoji jako ikony treści** (pakiety, jednostki, fiszki, rodzaje sekcji) zostają, bo pochodzą z pakietów treści i w stylu 8-bit zamieniają się w pikselowe ikony. W tekstach UI emoji nie używamy.
 - **Główny przycisk na granatowej karcie powtórki** jest złoty (inaczej zniknąłby na granatowym tle). Gdzie indziej obowiązuje granatowy CTA, a złoto oznacza nagrody i postęp.
 - Tokeny kolorów są semantyczne (`--accent`, `--highlight`, `--success`…) i definiowane przez `light-dark()` w `src/styles/tokens.css`.
+- **Mniej męczące kolory** we wszystkich stylach: karty w trybie jasnym są w odcieniu tła (`#fdfaf4` w Classique), a nie czysto białe; tekst w trybach ciemnych to przygaszona biel (kontrast ok. 12–13:1 zamiast 15–19:1); w 8-bit ramki i cienie pikselowe mają kolor stonowany, a nie czarny lub biały. Każdy tekst spełnia WCAG AA (4.5:1), a ramki i paski postępu 3:1.
