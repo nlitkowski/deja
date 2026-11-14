@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { buildBoss } from '../bosses';
-import { exerciseTypeInfo, supportsHelpLang } from '../exercises/registry';
+import { exerciseTypeInfo, isProduction, supportsHelpLang } from '../exercises/registry';
 import { loadPacks } from './loader';
 import { content, contentFiles } from './registry';
 
@@ -50,6 +50,22 @@ describe('content packs', () => {
     const counts = new Map<string, number>();
     for (const ex of written) ex.entryIds.forEach((id) => counts.set(id, (counts.get(id) ?? 0) + 1));
     const thin = [...disk.entries.keys()].filter((id) => (counts.get(id) ?? 0) < (isVocabulary(id) ? 2 : 3));
+    expect(thin).toEqual([]);
+  });
+
+  it('every Édito entry has 3 production exercises, one of them a translation', () => {
+    const production = new Map<string, number>();
+    const translated = new Set<string>();
+    for (const ex of written) {
+      if (!isProduction(ex.type)) continue;
+      for (const id of ex.entryIds) {
+        production.set(id, (production.get(id) ?? 0) + 1);
+        if (ex.type === 'translate-pl-fr') translated.add(id);
+      }
+    }
+    const thin = [...disk.entries.keys()]
+      .filter((id) => id.startsWith('edito-'))
+      .filter((id) => (production.get(id) ?? 0) < 3 || !translated.has(id));
     expect(thin).toEqual([]);
   });
 

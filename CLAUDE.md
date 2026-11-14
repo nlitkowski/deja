@@ -130,7 +130,7 @@ Exercise { id, type: string, entryIds: string[], data: unknown }  // `data` wali
 
 Oprócz ćwiczeń pakiet może mieć `sheets` w `pack.json`: pliki `sheets/<id>.json` ze zwięzłym materiałem do przeczytania (schemat w `src/content/sheet.ts`). Fiszka ma sekcje `grammar` / `vocabulary` / `phrases`, a te składają się z bloków `rule`, `text`, `warning`, `table`, `examples` i `words`. Teksty objaśnień są `{pl, fr}` (język pomocy), przykłady `{fr, pl}`, słówka `{fr, pl, def?}`. Pole `practice` linkuje do jednostek ćwiczeń (`<pakiet>/<jednostka>`). Pakiet może mieć same fiszki, bez jednostek ćwiczeń.
 
-Pakiet `edito-a1` odwzorowuje spis treści podręcznika Édito A1 (Didier): jedna fiszka na unité, z gramatyką, słownictwem i zwrotami. Teksty są autorskie, a z podręcznika pochodzi tylko zakres tematów. Ćwiczenia do tych tematów dojdą później.
+Pakiet `edito-a1` odwzorowuje spis treści podręcznika Édito A1 (Didier): jedna fiszka na unité, z gramatyką, słownictwem i zwrotami. Teksty są autorskie, a z podręcznika pochodzi tylko zakres tematów. Pakiety `edito-a1` i `edito-a2` mają też jednostki ćwiczeń (`units/unite-NN.json`): każdy wpis ma co najmniej 3 ręcznie pisane ćwiczenia production, w tym co najmniej jedno translate-pl-fr (pilnuje tego test w `content.test.ts`). Zdania są w całości autorskie, nie z podręcznika.
 
 ### Typy ćwiczeń jako wtyczki
 

@@ -181,13 +181,14 @@ Zrobione. Uwagi: tabela ma 10 miejsc (ty, 4 duchy, 5 botów). Duchy liczą XP z 
   - najsłabsze wpisy (najwięcej błędów, najniższy ease) z przyciskiem „Réviser” uruchamiającym sesję tylko z nich;
   - postęp mastery dla każdego pakietu.
 
-## Etap 7 — Uzupełnienie treści Édito
+## Etap 7 — Uzupełnienie treści Édito ✅
 
 - Cel: każdy wpis w `edito-a1` i `edito-a2` ma **co najmniej 3 ćwiczenia production**, w tym co najmniej jedno `translate-pl-fr`. Obecnie 103 wpisy w A1 i 40 w A2 mają mniej.
 - Dodaj do `content.test.ts` test minimalnej liczby ćwiczeń na wpis, najpierw jako ostrzeżenie (`console.warn` z listą), a po uzupełnieniu jako błąd.
 - **Prawa autorskie (repo jest publiczne):** zdania mają być w całości autorskie, w zakresie gramatyki i słownictwa danej unité. Nie przepisuj ćwiczeń, dialogów, tekstów ani przykładów z podręcznika Édito.
 - Słownictwo A1/A2. Każde zdanie dostaje tłumaczenie `pl`. Jeśli zdanie dopuszcza dwie poprawne odpowiedzi, wpisz obie do `answers` albo przeredaguj zdanie.
 - Rób to porcjami po jednej unité na commit, żeby łatwo było przejrzeć zmiany.
+- Zrobione: +259 ćwiczeń (ręczne gap-fill i translate-pl-fr), 1069 ćwiczeń w Édito A1/A2; test w `content.test.ts` jest już błędem, nie ostrzeżeniem.
 
 ---
 
