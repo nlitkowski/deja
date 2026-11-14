@@ -5,6 +5,8 @@ export const ui = {
   disclaimer:
     'Projet personnel d’apprentissage, sans lien avec les Éditions Didier. Édito est une marque des Éditions Didier ; les fiches et exercices sont des textes originaux qui suivent seulement le programme du manuel.',
 
+  madeBy: 'Un projet de',
+
   dueCount: (n: number) => (n <= 1 ? 'entrée à réviser' : 'entrées à réviser'),
   newToday: (n: number, max: number) => `Nouvelles aujourd’hui : ${n} / ${max}`,
   review: 'Révision',

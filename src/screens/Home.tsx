@@ -113,7 +113,15 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings }: Pro
           </section>
         ))}
 
-        <footer className="disclaimer muted small">{ui.disclaimer}</footer>
+        <footer className="disclaimer muted small">
+          <p>{ui.disclaimer}</p>
+          <p>
+            {ui.madeBy}{' '}
+            <a href="https://litkowski.com" target="_blank" rel="noopener noreferrer">
+              litkowski.com
+            </a>
+          </p>
+        </footer>
       </div>
     </AppLayout>
   );
