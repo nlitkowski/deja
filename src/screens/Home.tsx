@@ -116,12 +116,12 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBos
           </button>
         )}
 
-        {exercisePacks.map((pack) => (
+        {exercisePacks.map((pack, i) => (
           <section key={pack.id} className="pack">
             <h2>
               <Emoji char={pack.icon} /> {pack.title} <span className="level">{pack.level}</span>
             </h2>
-            <UnitMap pack={pack} state={map.get(pack.id)!} onPractice={practice} onBoss={onBoss} />
+            <UnitMap pack={pack} state={map.get(pack.id)!} onPractice={practice} onBoss={onBoss} more={i === exercisePacks.length - 1} />
           </section>
         ))}
 

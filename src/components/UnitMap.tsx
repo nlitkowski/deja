@@ -12,6 +12,7 @@ import { Icon } from './Icon';
 const ZIGZAG = [50, 78, 50, 22];
 const UNIT_STEP = 150;
 const BOSS_STEP = 96;
+const MORE_STEP = 110;
 const NODE_CENTER = 36;
 
 function layout<S extends { height: number }>(steps: S[]) {
@@ -29,10 +30,12 @@ interface Props {
   state: PackState;
   onPractice: (unitKey: string) => void;
   onBoss: (unitKey: string) => void;
+  /** Continue the path to a "more modules coming" marker; set on the last pack. */
+  more?: boolean;
 }
 
 /** The pack as a path: each unit, then its boss. Locks and crowns come from the learner's mastery. */
-export function UnitMap({ pack, state, onPractice, onBoss }: Props) {
+export function UnitMap({ pack, state, onPractice, onBoss, more }: Props) {
   const cards = useAppStore((s) => s.progress.cards);
   const today = dayKey(new Date());
 
@@ -43,8 +46,10 @@ export function UnitMap({ pack, state, onPractice, onBoss }: Props) {
       { kind: 'boss' as const, unit, unitState, height: BOSS_STEP },
     ];
   });
-  const { placed, height } = layout(steps);
-  const points = placed.map((s) => `${s.x},${s.top + NODE_CENTER}`).join(' ');
+  const { placed, height: pathHeight } = layout(steps);
+  const end = { top: pathHeight, x: ZIGZAG[placed.length % ZIGZAG.length]! };
+  const height = more ? pathHeight + MORE_STEP : pathHeight;
+  const points = [...placed, ...(more ? [end] : [])].map((s) => `${s.x},${s.top + NODE_CENTER}`).join(' ');
   const missing = state.missing.map((id) => content.packs.find((p) => p.id === id)?.title ?? id).join(', ');
 
   return (
@@ -122,6 +127,14 @@ export function UnitMap({ pack, state, onPractice, onBoss }: Props) {
               </li>
             );
           })}
+          {more && (
+            <li className="map-step more-step" style={{ top: end.top, left: `${end.x}%` }}>
+              <span className="map-node more-node" aria-hidden>
+                <Icon name="more" />
+              </span>
+              <span className="map-caption muted small">{ui.moreSoon}</span>
+            </li>
+          )}
         </ol>
       </div>
     </div>

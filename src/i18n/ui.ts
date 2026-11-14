@@ -76,6 +76,7 @@ export const ui = {
   sheetsTeaser: (n: number) => `${n} fiche${n > 1 ? 's' : ''} : grammaire, vocabulaire, expressions`,
   treeHeading: 'Sommaire',
   treeLabel: 'Sommaire : unités et fiches',
+  moreSoon: 'D’autres modules arrivent bientôt',
   practiceUnit: (title: string) => `S’entraîner : ${title}`,
   openMenu: 'Ouvrir le sommaire',
   collapseTree: 'Masquer le sommaire',

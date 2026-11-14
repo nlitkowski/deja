@@ -122,6 +122,9 @@ export function NavTree({ currentSheetKey, activeSection, onOpenSheet, onPractic
           </ul>
         </details>
       ))}
+      <p className="tree-more">
+        <Icon name="more" /> {ui.moreSoon}
+      </p>
     </nav>
   );
 }
