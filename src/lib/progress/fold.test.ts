@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { review } from '../srs';
-import type { BaselineEvent, ReviewEvent } from './events';
-import { applyEvent, emptyProgress, foldEvents, newIntroducedOn } from './fold';
+import { review, type Grade, type SrsCard } from '../srs';
+import type { BaselineEvent, ProgressEvent, ReviewEvent } from './events';
+import { applyEvent, compareEvents, emptyProgress, foldEvents, newIntroducedOn } from './fold';
 
 let seq = 0;
 function answer(overrides: Partial<ReviewEvent> & Pick<ReviewEvent, 'at' | 'day'>): ReviewEvent {
@@ -70,6 +70,77 @@ describe('foldEvents', () => {
     const state = foldEvents([baseline, answer({ at: '2026-11-14T08:00:00Z', day: '2026-11-14' })]);
     expect(state.cards['p/a']).toEqual(review(card, 'good', '2026-11-14'));
     expect(state.firstSeen['p/a']).toBe('');
+  });
+});
+
+function baseline(id: string, cards: Record<string, SrsCard>, introduced?: BaselineEvent['introduced']): BaselineEvent {
+  return { type: 'baseline', id, deviceId: id, at: '2026-11-14T07:00:00Z', day: '2026-11-14', cards, introduced };
+}
+
+describe('several baselines', () => {
+  it('keep the more recent copy of each card, whatever their order', () => {
+    const older = review(undefined, 'good', '2026-11-01');
+    const newer = review(older, 'good', '2026-11-05');
+    const sameDayMoreReps = { ...newer, reps: newer.reps + 1 };
+    const phone = baseline('phone', { 'p/a': newer, 'p/b': newer }, { day: '2026-11-14', count: 2 });
+    const laptop = baseline('laptop', { 'p/a': older, 'p/b': sameDayMoreReps, 'p/c': older }, { day: '2026-11-14', count: 3 });
+
+    const state = foldEvents([phone, laptop]);
+    expect(state.cards).toEqual({ 'p/a': newer, 'p/b': sameDayMoreReps, 'p/c': older });
+    expect(state.introducedExtra).toEqual({ '2026-11-14': 3 });
+    expect(foldEvents([laptop, phone])).toEqual(state);
+
+    // Same result even if the merge sees them the other way round (different timestamps).
+    const swapped = foldEvents([{ ...phone, at: '2026-11-14T06:00:00Z' }, laptop]);
+    expect(swapped.cards).toEqual(state.cards);
+  });
+});
+
+function reference(events: readonly ProgressEvent[]) {
+  return [...events].sort(compareEvents).reduce(applyEvent, emptyProgress());
+}
+
+function randomLog(count: number, entries: number, random: () => number): ProgressEvent[] {
+  const grades: Grade[] = ['again', 'hard', 'good', 'easy'];
+  const start = Date.parse('2026-01-01T08:00:00Z');
+  return Array.from({ length: count }, (_, i) => {
+    const at = new Date(start + Math.floor(random() * 300) * 86_400_000 + i * 1000);
+    const grade = grades[Math.floor(random() * 4)]!;
+    return {
+      type: 'review',
+      id: `r${i}`,
+      deviceId: random() < 0.5 ? 'phone' : 'laptop',
+      at: at.toISOString(),
+      day: at.toISOString().slice(0, 10),
+      exerciseId: 'p/x',
+      entryIds: [`p/e${Math.floor(random() * entries)}`],
+      grade,
+      correct: grade !== 'again',
+      nearMiss: false,
+      hintUsed: false,
+      timeMs: 5000,
+      early: random() < 0.1,
+    } satisfies ReviewEvent;
+  });
+}
+
+function seeded(seed: number) {
+  return () => ((seed = (seed * 1_103_515_245 + 12_345) % 2 ** 31) / 2 ** 31);
+}
+
+describe('fold performance', () => {
+  it('matches the event-by-event fold on random logs', () => {
+    for (let seed = 1; seed <= 5; seed++) {
+      const log = randomLog(400, 30, seeded(seed));
+      expect(foldEvents(log)).toEqual(reference(log));
+    }
+  });
+
+  it('folds 20 000 events over 500 entries quickly', () => {
+    const log = randomLog(20_000, 500, seeded(42));
+    const started = performance.now();
+    foldEvents(log);
+    expect(performance.now() - started).toBeLessThan(200);
   });
 });
 

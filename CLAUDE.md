@@ -16,7 +16,7 @@ Zasady nadrzędne:
 - Vite + React + TypeScript (strict), zależności w najnowszych stabilnych wersjach
 - Bez backendu (na razie), ale bez blokowania drogi do kont i synchronizacji: **local-first, log zdarzeń**.
   - Ustawienia: `localStorage` (`deja:state`, wersjonowanie schematu i migracje w `src/lib/storage.ts`), bo skrypt w `index.html` czyta je synchronicznie.
-  - Postęp: **append-only log zdarzeń** w IndexedDB (`src/lib/progress/`): każda odpowiedź to `ReviewEvent` z UUID, `deviceId`, `at`, `day`. Karty SRS, nowe na dziś, a później XP, streak i statystyki to czyste funkcje liczone z logu (`foldEvents`), niezależne od kolejności zdarzeń. Zdarzeń nie edytujemy ani nie usuwamy.
+  - Postęp: **append-only log zdarzeń** w IndexedDB (`src/lib/progress/`): każda odpowiedź to `ReviewEvent` z UUID, `deviceId`, `at`, `day`. Karty SRS, nowe na dziś, a później XP, streak i statystyki to czyste funkcje liczone z logu (`foldEvents`), niezależne od kolejności zdarzeń. Store trzyma log w pamięci w `Projection` (`projection.ts`): nowsze zdarzenia nakłada przyrostowo, a starsze (z innego urządzenia) wymuszają pełne przeliczenie. Kilka zdarzeń `baseline` scala się kartami (nowsza karta wygrywa). Zdarzeń nie edytujemy ani nie usuwamy.
   - Dostęp do logu tylko przez interfejs `ProgressStore`; przyszły sync z backendem to nowa implementacja tego interfejsu (wysyłka niewysłanych zdarzeń, pobranie cudzych od kursora), bez zmian w UI.
   - Stan aplikacji w Zustand (`src/state/appStore.ts`): `settings`, `progress`, `recordAnswer`, `updateSettings`. Ekrany czytają store przez selektory zamiast przekazywać stan w propsach.
 - Stylowanie: CSS Modules albo zwykły CSS ze zmiennymi. Bez Tailwinda i bez bibliotek UI
@@ -82,7 +82,7 @@ src/
     answer.ts               # normalizacja i porównywanie odpowiedzi
     session.ts              # budowanie sesji z kolejki
     storage.ts              # ustawienia w localStorage + migracje schematu
-    progress/               # log zdarzeń: events.ts, fold.ts (czyste), store.ts (IndexedDB / pamięć), baseline.ts
+    progress/               # log zdarzeń: events.ts, fold.ts (czyste), projection.ts, store.ts (IndexedDB / pamięć), baseline.ts
   state/
     appStore.ts             # Zustand: settings, progress, recordAnswer
   components/

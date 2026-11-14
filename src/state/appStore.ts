@@ -2,7 +2,8 @@ import { create } from 'zustand';
 import { dayKey } from '../lib/date';
 import { baselineFromLegacy } from '../lib/progress/baseline';
 import { newEventId, type ReviewEvent } from '../lib/progress/events';
-import { applyEvent, emptyProgress, foldEvents, type ProgressState } from '../lib/progress/fold';
+import { emptyProgress, type ProgressState } from '../lib/progress/fold';
+import { Projection } from '../lib/progress/projection';
 import { indexedDbStore, type ProgressStore } from '../lib/progress/store';
 import { gradeFromResult, type AnswerResult } from '../lib/srs';
 import { browserStore, deviceId, loadState, saveState, SCHEMA_VERSION, type KeyValueStore, type Settings } from '../lib/storage';
@@ -35,6 +36,7 @@ export function createAppStore({ progressStore, kv }: Deps) {
   const persistSettings = (settings: Settings) => saveState({ schemaVersion: SCHEMA_VERSION, settings }, kv);
   // init() may be called more than once (React StrictMode runs effects twice); the migration must run once.
   let initializing: Promise<void> | undefined;
+  const projection = new Projection();
 
   return create<AppState>()((set, get) => {
     async function load() {
@@ -47,7 +49,8 @@ export function createAppStore({ progressStore, kv }: Deps) {
         }
         // Only now is the old progress safe in the log, so the pre-v5 blob can be rewritten without it.
         if (loaded.legacy) persistSettings(get().settings);
-        set({ progress: foldEvents(events), status: 'ready' });
+        projection.add(events);
+        set({ progress: projection.state, status: 'ready' });
       } catch (error) {
         console.error('Déjà: event log unavailable', error);
         set({ status: 'failed' });
@@ -83,8 +86,8 @@ export function createAppStore({ progressStore, kv }: Deps) {
           timeMs: Math.round(result.timeMs),
           early,
         };
-        // Newest event, so applying it to the folded state equals refolding the whole log.
-        set((s) => ({ progress: applyEvent(s.progress, event) }));
+        projection.add([event]);
+        set({ progress: projection.state });
         progressStore.append([event]).catch((error) => console.error('Déjà: answer not saved', error));
         return event;
       },

@@ -12,6 +12,13 @@ describe('gradeFromResult', () => {
     expect(gradeFromResult({ ...base, timeMs: 2000 })).toBe('easy');
     expect(gradeFromResult({ ...base, correct: false, grade: 'easy' })).toBe('easy');
   });
+
+  it('gives longer answers more time to count as easy', () => {
+    expect(gradeFromResult({ ...base, timeMs: 4000, expected: 'en' })).toBe('easy');
+    expect(gradeFromResult({ ...base, timeMs: 8000, expected: 'Je travaille ici depuis deux ans déjà...' })).toBe('easy');
+    expect(gradeFromResult({ ...base, timeMs: 6000, expected: 'en' })).toBe('good');
+    expect(gradeFromResult({ ...base, timeMs: 15000, expected: 'x'.repeat(200) })).toBe('good');
+  });
 });
 
 describe('review', () => {

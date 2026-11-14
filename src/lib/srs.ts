@@ -27,14 +27,21 @@ export interface AnswerResult {
 export const SRS = {
   startEase: 2.5,
   minEase: 1.3,
-  fastAnswerMs: 5000,
+  // An answer is "easy" when typed faster than this; longer answers get more time.
+  fastAnswerBaseMs: 4000,
+  fastAnswerPerCharMs: 250,
+  fastAnswerMaxMs: 15000,
 } as const;
+
+export function fastAnswerMs(expected = ''): number {
+  return Math.min(SRS.fastAnswerMaxMs, SRS.fastAnswerBaseMs + SRS.fastAnswerPerCharMs * expected.length);
+}
 
 export function gradeFromResult(r: AnswerResult): Grade {
   if (r.grade) return r.grade;
   if (!r.correct) return 'again';
   if (r.nearMiss || r.hintUsed) return 'hard';
-  return r.timeMs < SRS.fastAnswerMs ? 'easy' : 'good';
+  return r.timeMs < fastAnswerMs(r.expected) ? 'easy' : 'good';
 }
 
 export function review(card: SrsCard | undefined, grade: Grade, today: DayKey): SrsCard {

@@ -18,30 +18,57 @@ export function compareEvents(a: ProgressEvent, b: ProgressEvent): number {
   return a.at < b.at ? -1 : a.at > b.at ? 1 : a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
 }
 
-export function applyEvent(state: ProgressState, event: ProgressEvent): ProgressState {
-  const eventCount = state.eventCount + 1;
-
-  if (event.type === 'baseline') {
-    const firstSeen = { ...state.firstSeen };
-    for (const id of Object.keys(event.cards)) firstSeen[id] ??= '';
-    const introducedExtra = { ...state.introducedExtra };
-    if (event.introduced) {
-      introducedExtra[event.introduced.day] = (introducedExtra[event.introduced.day] ?? 0) + event.introduced.count;
-    }
-    return { cards: { ...state.cards, ...event.cards }, firstSeen, introducedExtra, eventCount };
-  }
-
-  const firstSeen = { ...state.firstSeen };
-  for (const id of event.entryIds) firstSeen[id] ??= event.day;
-  if (event.early && event.correct) return { ...state, firstSeen, eventCount };
-
-  const cards = { ...state.cards };
-  for (const id of event.entryIds) cards[id] = review(cards[id], event.grade, event.day);
-  return { ...state, cards, firstSeen, eventCount };
+/**
+ * Which of two copies of a card a baseline merge keeps. A total order on the card's fields,
+ * so several baselines (one per device) merge to the same result in any order.
+ */
+function newerCard(a: SrsCard, b: SrsCard): SrsCard {
+  const keys = ['lastReviewed', 'reps', 'correctTotal', 'interval', 'due', 'ease', 'lapses'] as const;
+  for (const key of keys) if (a[key] !== b[key]) return a[key] > b[key] ? a : b;
+  return a;
 }
 
+/** Applies an event in place. Only for states owned by the caller. */
+function applyInPlace(state: ProgressState, event: ProgressEvent): void {
+  state.eventCount += 1;
+
+  if (event.type === 'baseline') {
+    for (const [id, card] of Object.entries(event.cards)) {
+      const current = state.cards[id];
+      state.cards[id] = current ? newerCard(current, card) : card;
+      state.firstSeen[id] ??= '';
+    }
+    if (event.introduced) {
+      const { day, count } = event.introduced;
+      // Baselines from different devices may count the same entries, so take the larger count.
+      state.introducedExtra[day] = Math.max(state.introducedExtra[day] ?? 0, count);
+    }
+    return;
+  }
+
+  for (const id of event.entryIds) state.firstSeen[id] ??= event.day;
+  if (event.early && event.correct) return;
+  for (const id of event.entryIds) state.cards[id] = review(state.cards[id], event.grade, event.day);
+}
+
+const copy = (state: ProgressState): ProgressState => ({
+  cards: { ...state.cards },
+  firstSeen: { ...state.firstSeen },
+  introducedExtra: { ...state.introducedExtra },
+  eventCount: state.eventCount,
+});
+
+/** Applies events that are already in `compareEvents` order and all newer than those in `state`. */
+export function applyEvents(state: ProgressState, sorted: readonly ProgressEvent[]): ProgressState {
+  const next = copy(state);
+  for (const event of sorted) applyInPlace(next, event);
+  return next;
+}
+
+export const applyEvent = (state: ProgressState, event: ProgressEvent): ProgressState => applyEvents(state, [event]);
+
 export function foldEvents(events: readonly ProgressEvent[]): ProgressState {
-  return [...events].sort(compareEvents).reduce(applyEvent, emptyProgress());
+  return applyEvents(emptyProgress(), [...events].sort(compareEvents));
 }
 
 export function newIntroducedOn(state: ProgressState, day: DayKey): number {
