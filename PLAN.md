@@ -207,7 +207,7 @@ Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne ma
 - Po powrocie z Google aplikacja otwiera Réglages z komunikatem (`?account=connected|cancelled|error`, usuwany z adresu).
 
 **Przeniesienie postępu na nowy adres** ✅
-- Karta „Sauvegarde” w Réglages: eksport całego logu i ustawień do pliku JSON, import scalający zdarzenia po id (idempotentny) i przywracający ustawienia. Służy do przeniesienia postępu z `nlitkowski.github.io/deja` na `deja.litkowski.com` (dane w przeglądarce są osobne dla każdego adresu). Test: import do pustej aplikacji, w dowolnej kolejności zdarzeń, daje identyczną projekcję. Przy sync (8.3) dojdzie analogiczny test dla pobrania całej historii z serwera.
+- Karta „Sauvegarde” w Réglages: eksport całego logu i ustawień do pliku JSON, import scalający zdarzenia po id (idempotentny) i przywracający ustawienia. Służy do przeniesienia postępu z `nlitkowski.github.io/deja` na `deja.litkowski.com` (dane w przeglądarce są osobne dla każdego adresu). Test: import do pustej aplikacji, w dowolnej kolejności zdarzeń, daje identyczną projekcję. Analogiczny test dla sync: nowe urządzenie pobierające całą historię z serwera odtwarza projekcję identyczną z eksportem (`worker/test/devices.test.ts`).
 
 **Poprawki przed synchronizacją**
 - A1 ✅ Punktowanie XP przyrostowo i z cache: `scoreEvents` (src/game/xp.ts) trzyma jeden `Scorer` na kontekst XP. Log, który tylko dopisuje nowsze zdarzenia, jest punktowany od ostatniego stanu; starsze zdarzenie (z innego urządzenia) wymusza pełne przeliczenie. Wynik w `WeakMap` per tablica logu, `xpByDay` per wynik. Questy biorą stan kart „przed” z punktacji zamiast drugiego replayu. Test: 20 000 zdarzeń × 500 wpisów, dopisanie odpowiedzi i przeliczenie Home < 50 ms (lokalnie ok. 12 ms), wyniki identyczne z pełnym przeliczeniem.
@@ -228,6 +228,10 @@ Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne ma
 - `GET /me/export`: plik `deja-compte-RRRR-MM-DD.json` z e-mailem, datą założenia, ustawieniami i całym logiem, w formacie kopii zapasowej (da się go zaimportować w „Sauvegarde”).
 - `DELETE /me`: usuwa użytkownika; kaskada usuwa tożsamości, sesje, zdarzenia, ustawienia i uprawnienia. W UI potwierdzenie „Supprimer définitivement”. Postęp na urządzeniu zostaje, odłączony od konta.
 - Strona prywatności `public/privacy.html` (FR + PL), link w karcie „Compte”. Wyłączona z `navigateFallback` service workera, więc otwiera się też w zainstalowanej aplikacji. Jej adres trzeba wpisać na ekranie zgody OAuth w Google Cloud.
+
+**Porządki**
+- D1 ✅ `https://nlitkowski.github.io` usunięty z `ALLOWED_ORIGINS`: stary adres przekierowuje na `deja.litkowski.com`, więc aplikacja nie działa już na tamtym originie.
+- D2 Przygotowanie pod audio: `cardKey(entryId, skill)`.
 
 **Później:** `entitlements`, płatności (merchant of record, np. Paddle), płatne pakiety serwowane z API.
 

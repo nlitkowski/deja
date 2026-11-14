@@ -13,8 +13,7 @@
 	// GOOGLE_CLIENT_SECRET is a secret: `wrangler secret put GOOGLE_CLIENT_SECRET`, locally in .dev.vars.
 	"vars": {
 		"GOOGLE_CLIENT_ID": "97369815483-mda24ub122rknlfvsrnc3hvh842jiarn.apps.googleusercontent.com",
-		// TODO: remove https://nlitkowski.github.io once progress has moved to deja.litkowski.com.
-		"ALLOWED_ORIGINS": "https://deja.litkowski.com,http://localhost:5173,https://nlitkowski.github.io"
+		"ALLOWED_ORIGINS": "https://deja.litkowski.com,http://localhost:5173"
 	},
 	"d1_databases": [
 		{
