@@ -221,7 +221,28 @@
     { "id": "u10-examen-1", "type": "gap-fill", "entryIds": ["u10-examen"], "data": { "sentence": "Demain, j'ai un ___ de maths à l'université.", "answers": ["examen"], "pl": "Jutro mam egzamin z matematyki na uniwersytecie.", "clue": "(un test à l'université)" } },
     { "id": "u10-examen-2", "type": "translate-pl-fr", "entryIds": ["u10-examen"], "data": { "pl": "egzamin", "answers": ["un examen", "l'examen"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u10-diplome-1", "type": "gap-fill", "entryIds": ["u10-diplome"], "data": { "sentence": "Il a eu son ___ de master l'année dernière.", "answers": ["diplôme"], "pl": "W zeszłym roku zdobył dyplom magistra.", "clue": "(le papier officiel à la fin des études)" } },
-    { "id": "u10-diplome-2", "type": "translate-pl-fr", "entryIds": ["u10-diplome"], "data": { "pl": "dyplom", "answers": ["un diplôme", "le diplôme"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
+    { "id": "u10-diplome-2", "type": "translate-pl-fr", "entryIds": ["u10-diplome"], "data": { "pl": "dyplom", "answers": ["un diplôme", "le diplôme"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+
+    { "id": "u10-cod-me-6", "type": "translate-pl-fr", "entryIds": ["u10-cod-me-te"], "data": { "pl": "czekam na ciebie", "answers": ["je t'attends"], "hint": { "pl": "zaimek COD przed czasownikiem", "fr": "pronom COD avant le verbe" } } },
+    { "id": "u10-cod-le-5", "type": "translate-pl-fr", "entryIds": ["u10-cod-le-la-les"], "data": { "pl": "znam go", "answers": ["je le connais"], "hint": { "pl": "go = tego klienta", "fr": "le = ce client" } } },
+    { "id": "u10-cod-place-6", "type": "translate-pl-fr", "entryIds": ["u10-cod-place"], "data": { "pl": "pomóż mi", "answers": ["aide-moi"], "hint": { "pl": "tryb rozkazujący, forma ty", "fr": "impératif, forme tu" } } },
+    { "id": "u10-il-y-a-5", "type": "translate-pl-fr", "entryIds": ["u10-il-y-a-duree"], "data": { "pl": "dwa lata temu", "answers": ["il y a deux ans", "il y a 2 ans"] } },
+    { "id": "u10-encore-4", "type": "translate-pl-fr", "entryIds": ["u10-encore-toujours"], "data": { "pl": "nadal pracuję", "answers": ["je travaille encore", "je travaille toujours"] } },
+    { "id": "u10-ne-plus-4", "type": "translate-pl-fr", "entryIds": ["u10-ne-plus"], "data": { "pl": "już nie palę", "answers": ["je ne fume plus"] } },
+    { "id": "u10-qui-que-6", "type": "translate-pl-fr", "entryIds": ["u10-qui-que"], "data": { "pl": "książka, którą czytam", "answers": ["le livre que je lis"], "hint": { "pl": "zaimek względny", "fr": "pronom relatif" } } },
+    { "id": "u10-tres-5", "type": "translate-pl-fr", "entryIds": ["u10-tres-trop-assez"], "data": { "pl": "to jest za drogie", "answers": ["c'est trop cher"] } },
+    { "id": "u10-beaucoup-4", "type": "translate-pl-fr", "entryIds": ["u10-beaucoup"], "data": { "pl": "mam dużo pracy", "answers": ["j'ai beaucoup de travail"] } },
+
+    { "id": "u10-entreprise-3", "type": "gap-fill", "entryIds": ["u10-entreprise"], "data": { "sentence": "Cette ___ a cinquante employés.", "answers": ["entreprise", "société"], "pl": "Ta firma ma pięćdziesięciu pracowników.", "clue": "(une société où des personnes travaillent)" } },
+    { "id": "u10-bureau-3", "type": "gap-fill", "entryIds": ["u10-bureau"], "data": { "sentence": "Dans notre ___, il y a dix ordinateurs.", "answers": ["bureau"], "pl": "W naszym biurze jest dziesięć komputerów.", "clue": "(une pièce où on travaille)" } },
+    { "id": "u10-usine-3", "type": "gap-fill", "entryIds": ["u10-usine"], "data": { "sentence": "Les ouvriers de l'___ commencent à 6 heures du matin.", "answers": ["usine"], "pl": "Robotnicy z fabryki zaczynają o 6 rano.", "clue": "(un lieu où on fabrique des produits)" } },
+    { "id": "u10-salaire-3", "type": "gap-fill", "entryIds": ["u10-salaire"], "data": { "sentence": "Elle a un bon ___ : 3 000 euros par mois.", "answers": ["salaire"], "pl": "Ma dobrą pensję: 3000 euro miesięcznie.", "clue": "(l'argent qu'on gagne en travaillant)" } },
+    { "id": "u10-stage-3", "type": "gap-fill", "entryIds": ["u10-stage"], "data": { "sentence": "Pendant mes études, j'ai fait un ___ dans une banque.", "answers": ["stage"], "pl": "W czasie studiów odbyłem praktyki w banku.", "clue": "(une période de travail pour apprendre)" } },
+    { "id": "u10-reunion-3", "type": "gap-fill", "entryIds": ["u10-reunion"], "data": { "sentence": "Le chef est en ___, il ne peut pas répondre au téléphone.", "answers": ["réunion"], "pl": "Szef jest na zebraniu, nie może odebrać telefonu.", "clue": "(on se rencontre pour parler du travail)" } },
+    { "id": "u10-ordinateur-3", "type": "gap-fill", "entryIds": ["u10-ordinateur"], "data": { "sentence": "Mon ___ ne marche plus, je ne peux pas envoyer de mails.", "answers": ["ordinateur"], "pl": "Mój komputer już nie działa, nie mogę wysyłać maili.", "clue": "(une machine avec un écran et un clavier)" } },
+    { "id": "u10-collegue-3", "type": "gap-fill", "entryIds": ["u10-collegue"], "data": { "sentence": "À midi, je déjeune avec mes ___ à la cantine.", "answers": ["collègues"], "pl": "W południe jem obiad z kolegami z pracy w stołówce.", "clue": "(les personnes qui travaillent avec moi)" } },
+    { "id": "u10-examen-3", "type": "gap-fill", "entryIds": ["u10-examen"], "data": { "sentence": "J'étudie beaucoup parce que j'ai un ___ lundi.", "answers": ["examen"], "pl": "Dużo się uczę, bo w poniedziałek mam egzamin.", "clue": "(une épreuve à l'école ou à l'université)" } },
+    { "id": "u10-diplome-3", "type": "gap-fill", "entryIds": ["u10-diplome"], "data": { "sentence": "Après trois ans d'études, elle a reçu son ___.", "answers": ["diplôme"], "pl": "Po trzech latach studiów otrzymała dyplom.", "clue": "(le papier officiel à la fin des études)" } }
   ],
   "boss": {
     "groups": [["u10-cod-me-te", "u10-cod-le-la-les"], ["u10-qui-que"], ["u10-il-y-a-duree"], ["u10-tres-trop-assez"]],
