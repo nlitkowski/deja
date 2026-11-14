@@ -35,6 +35,8 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png}', '**/*-latin-*.woff2'],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         navigateFallback: `${base}index.html`,
+        // Standalone pages: the app shell must not answer for them.
+        navigateFallbackDenylist: [/\/privacy\.html$/],
       },
     }),
   ],

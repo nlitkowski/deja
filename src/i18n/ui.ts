@@ -111,6 +111,14 @@ export const ui = {
   signOutAnyway: 'Se déconnecter quand même',
   signOutOffline: 'La déconnexion demande une connexion à Internet. Rien n’a été effacé ; réessaie une fois en ligne.',
   cancel: 'Annuler',
+  exportData: 'Télécharger mes données',
+  privacy: 'Confidentialité',
+  deleteAccount: 'Supprimer mon compte',
+  deleteConfirm:
+    'Ton compte et toute la progression enregistrée sur le serveur seront supprimés définitivement. La progression de cet appareil reste ici.',
+  deleteForever: 'Supprimer définitivement',
+  deleteFailed: 'La suppression a échoué. Vérifie ta connexion et réessaie.',
+  accountDeleted: 'Compte supprimé. Ta progression reste sur cet appareil.',
   signOut: 'Se déconnecter',
   backup: 'Sauvegarde',
   backupHint:

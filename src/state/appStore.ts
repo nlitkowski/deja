@@ -8,6 +8,8 @@ import { Projection } from '../lib/progress/projection';
 import type { ProgressStore } from '../lib/progress/store';
 import { appendingStore } from './localStore';
 import { gradeFromResult, type AnswerResult } from '../lib/srs';
+import { compareEvents } from '../lib/progress/fold';
+import { NEVER, parseStamped, stampSettings, SYNCED_SETTINGS, type StampedSettings, type SyncedKey } from '../lib/settingsSync';
 import { browserStore, deviceId, loadState, saveState, SCHEMA_VERSION, type KeyValueStore, type Settings } from '../lib/storage';
 
 export interface AnswerInput {
@@ -40,6 +42,10 @@ export interface AppState {
   receive: (events: readonly ProgressEvent[]) => void;
   /** Empties the in-memory log after the local store was cleared (signing out). */
   resetLog: () => void;
+  /** The synced settings, each stamped with when it last changed on this device. */
+  stampedSettings: () => StampedSettings;
+  /** Takes the account's merged settings (from sync): a field newer than this device's change wins. */
+  applyRemoteSettings: (merged: unknown) => void;
 }
 
 interface Deps {
@@ -51,6 +57,16 @@ export function createAppStore({ progressStore, kv }: Deps) {
   const loaded = loadState(kv);
   const device = deviceId(kv);
   const persistSettings = (settings: Settings) => saveState({ schemaVersion: SCHEMA_VERSION, settings }, kv);
+  // When each synced setting last changed here; kept apart from `deja:state`, whose shape needs migrations.
+  const STAMPS_KEY = 'deja:settings-at';
+  let stamps: Partial<Record<SyncedKey, string>> = readStamps(kv, STAMPS_KEY);
+  const persistStamps = () => {
+    try {
+      kv?.setItem(STAMPS_KEY, JSON.stringify(stamps));
+    } catch {
+      // Storage blocked: the next sync treats these settings as older than the account's.
+    }
+  };
   // init() may be called more than once (React StrictMode runs effects twice); the migration must run once.
   let initializing: Promise<void> | undefined;
   let projection = new Projection();
@@ -96,6 +112,11 @@ export function createAppStore({ progressStore, kv }: Deps) {
         const settings = { ...previous, ...patch };
         set({ settings });
         persistSettings(settings);
+        const changed = SYNCED_SETTINGS.filter((key) => key in patch && patch[key] !== previous[key]);
+        if (changed.length) {
+          stamps = { ...stamps, ...Object.fromEntries(changed.map((key) => [key, now.toISOString()])) };
+          persistStamps();
+        }
         if (patch.dailyGoal !== undefined && patch.dailyGoal !== previous.dailyGoal) {
           record<SettingEvent>({ type: 'setting', ...base(now), key: 'dailyGoal', value: patch.dailyGoal }, 'goal change');
         }
@@ -143,15 +164,52 @@ export function createAppStore({ progressStore, kv }: Deps) {
       },
 
       receive(events) {
-        if (projection.add(events)) set({ progress: projection.state, log: projection.events });
+        if (!projection.add(events)) return;
+        set({ progress: projection.state, log: projection.events });
+        // A goal changed on another device: the setting follows the latest change in the log.
+        if (events.some((e) => e.type === 'setting')) {
+          const latest = projection.events.filter((e) => e.type === 'setting' && e.key === 'dailyGoal').sort(compareEvents).at(-1);
+          if (latest?.type === 'setting' && latest.value !== get().settings.dailyGoal) {
+            const settings = { ...get().settings, dailyGoal: latest.value as Settings['dailyGoal'] };
+            persistSettings(settings);
+            set({ settings });
+          }
+        }
       },
 
       resetLog() {
         projection = new Projection();
         set({ progress: projection.state, log: projection.events });
       },
+
+      stampedSettings: () => stampSettings(get().settings, stamps),
+
+      applyRemoteSettings(merged) {
+        const remote = parseStamped(merged);
+        const patch: Partial<Settings> = {};
+        for (const key of SYNCED_SETTINGS) {
+          const field = remote[key];
+          if (!field || field.at <= (stamps[key] ?? NEVER)) continue;
+          Object.assign(patch, { [key]: field.value });
+          stamps = { ...stamps, [key]: field.at };
+        }
+        if (!Object.keys(patch).length) return;
+        persistStamps();
+        const settings = { ...get().settings, ...patch };
+        persistSettings(settings);
+        set({ settings });
+      },
     };
   });
 }
 
 export const useAppStore = createAppStore({ progressStore: appendingStore, kv: browserStore() });
+
+function readStamps(kv: KeyValueStore | undefined, key: string): Partial<Record<SyncedKey, string>> {
+  try {
+    const raw = JSON.parse(kv?.getItem(key) ?? '{}') as Record<string, unknown>;
+    return Object.fromEntries(SYNCED_SETTINGS.flatMap((k) => (typeof raw[k] === 'string' ? [[k, raw[k]]] : [])));
+  } catch {
+    return {};
+  }
+}

@@ -2,7 +2,8 @@ import { Hono, type Context } from 'hono';
 import { cors } from 'hono/cors';
 import type { JWTVerifyGetKey } from 'jose';
 import { google } from './google';
-import { currentUser, endSession } from './sessions';
+import { me } from './me';
+import { endSession } from './sessions';
 import { sync } from './sync';
 
 export interface Env {
@@ -72,12 +73,7 @@ export function createApp(deps: Deps) {
     return c.body(null, 204);
   });
 
-  app.get('/me', async (c) => {
-    const user = await currentUser(c, c.env.DB, deps.now());
-    if (!user) return c.json({ error: 'unauthenticated' }, 401);
-    c.header('cache-control', 'no-store');
-    return c.json({ id: user.userId, email: user.email });
-  });
+  app.route('/me', me);
 
   app.route('/sync', sync);
 

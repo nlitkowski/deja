@@ -345,6 +345,21 @@ button {
   background: var(--muted);
 }
 
+.account-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.account-links a,
+.account-links .link-button {
+  color: var(--info);
+}
+
+.account-links .link-button.danger {
+  color: var(--danger);
+}
+
 .account-result {
   padding: 8px 12px;
   border-radius: var(--radius-sm);

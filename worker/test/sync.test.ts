@@ -80,4 +80,15 @@ describe('POST /sync', () => {
 
     expect((await post(t, cookie, { events: [...many, review('one-too-many')], cursor: 0 })).status).toBe(413);
   });
+
+  it('merges settings from two devices, the later change per field winning', async () => {
+    const t = testApp();
+    const cookie = await signedIn(t.env, 'u1');
+    await post(t, cookie, { events: [], cursor: 0, settings: { palette: { value: 'pixel', at: '2026-11-14T11:00:00.000Z' }, helpLang: { value: 'pl', at: '2026-11-14T09:00:00.000Z' } } });
+    const res = await (
+      await post(t, cookie, { events: [], cursor: 0, settings: { palette: { value: 'provence', at: '2026-11-14T10:00:00.000Z' }, helpLang: { value: 'fr', at: '2026-11-14T10:00:00.000Z' }, sound: { value: 'loud', at: '2026-11-14T10:00:00.000Z' } } })
+    ).json<{ settings: Record<string, { value: unknown }> }>();
+    expect(res.settings).toEqual({ palette: { value: 'pixel', at: '2026-11-14T11:00:00.000Z' }, helpLang: { value: 'fr', at: '2026-11-14T10:00:00.000Z' } });
+  });
 });
+

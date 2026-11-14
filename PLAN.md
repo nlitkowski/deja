@@ -223,9 +223,11 @@ Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne ma
 - Wskaźnik: chmurka w nagłówku Home (kropka: zsynchronizowane / w toku / oczekuje / offline) i linia stanu w karcie „Compte”.
 - Testy: dwa urządzenia offline z przeplatanymi sesjami → po sync identyczne SRS, XP, streak i questy (quest odebrany na obu płaci raz); push idempotentny; nowe urządzenie od zera odtwarza projekcję identyczną z eksportem; nieudany sync zostawia wszystko w outboxie. Sprawdzone też w aplikacji z lokalnym API: wysłanie 36 zdarzeń, wylogowanie, ponowne zalogowanie przywraca identyczny log, ostrzeżenie offline i samoczynna wysyłka po powrocie sieci.
 
-**8.4 Ustawienia, eksport, usunięcie konta**
-- Synchronizacja wybranych ustawień (last write wins per pole).
-- `GET /me/export` (RODO), `DELETE /me`, krótka strona prywatności (wymaga jej też Google).
+**8.4 Ustawienia, eksport, usunięcie konta** ✅
+- Sync ustawień (`src/lib/settingsSync.ts`, wspólny dla aplikacji i API): styl, tryb, język pomocy, dźwięk, wibracje; last write wins per pole, znacznik czasu per pole w `deja:settings-at` (osobny klucz, kształt `deja:state` bez zmian). Pola nigdy niezmienione na urządzeniu mają znacznik z 1970, więc wybór z innego urządzenia wygrywa. Zwinięte drzewo nawigacji zostaje lokalne. Ustawienia jadą w pierwszym żądaniu `/sync`; serwer scala i zwraca wynik. `dailyGoal` zostaje zdarzeniem `setting` w logu: po pobraniu zmiany z innego urządzenia ustawienie podąża za najnowszą zmianą w logu.
+- `GET /me/export`: plik `deja-compte-RRRR-MM-DD.json` z e-mailem, datą założenia, ustawieniami i całym logiem, w formacie kopii zapasowej (da się go zaimportować w „Sauvegarde”).
+- `DELETE /me`: usuwa użytkownika; kaskada usuwa tożsamości, sesje, zdarzenia, ustawienia i uprawnienia. W UI potwierdzenie „Supprimer définitivement”. Postęp na urządzeniu zostaje, odłączony od konta.
+- Strona prywatności `public/privacy.html` (FR + PL), link w karcie „Compte”. Wyłączona z `navigateFallback` service workera, więc otwiera się też w zainstalowanej aplikacji. Jej adres trzeba wpisać na ekranie zgody OAuth w Google Cloud.
 
 **Później:** `entitlements`, płatności (merchant of record, np. Paddle), płatne pakiety serwowane z API.
 

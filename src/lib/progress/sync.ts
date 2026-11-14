@@ -1,5 +1,6 @@
 import type { ProgressEvent } from './events';
 import { parseEvent } from './schema';
+import type { StampedSettings } from '../settingsSync';
 import type { LocalStore } from './store';
 
 /** Most events per request; the API refuses more. */
@@ -14,10 +15,11 @@ export interface SyncResponse {
   events: unknown[];
   cursor: number;
   more: boolean;
+  settings?: unknown;
 }
 
 export interface SyncApi {
-  sync(request: { events: ProgressEvent[]; cursor: number }): Promise<SyncResponse>;
+  sync(request: { events: ProgressEvent[]; cursor: number; settings?: StampedSettings }): Promise<SyncResponse>;
 }
 
 /** The session ended on the server (expired, signed out elsewhere). */
@@ -48,6 +50,8 @@ export interface SyncCallbacks {
   onPulled: (events: ProgressEvent[]) => void;
   onStatus: (status: SyncStatus, pending: number) => void;
   onSignedOut?: () => void;
+  /** The device's synced settings, and what to do with the account's merged ones (untrusted input). */
+  settings?: { get: () => StampedSettings; apply: (merged: unknown) => void };
 }
 
 /**
@@ -119,9 +123,12 @@ export class SyncEngine {
     this.callbacks.onStatus('syncing', await this.store.outboxSize());
     try {
       let { cursor } = await this.store.meta();
-      for (;;) {
+      for (let round = 0; ; round++) {
         const outgoing = await this.store.outbox(SYNC_BATCH);
-        const res = await this.api.sync({ events: outgoing, cursor });
+        // Settings are small; they ride along with the first request of a run.
+        const settings = round === 0 ? this.callbacks.settings?.get() : undefined;
+        const res = await this.api.sync({ events: outgoing, cursor, ...(settings ? { settings } : {}) });
+        if (res.settings) this.callbacks.settings?.apply(res.settings);
         // Rejected events stay in the local log but leave the outbox, so one bad event cannot block the rest.
         const rejected = res.rejected.flatMap((r) => outgoing[r.index]?.id ?? []);
         if (rejected.length) console.warn('Déjà: events refused by the server', rejected);

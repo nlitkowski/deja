@@ -145,5 +145,29 @@ describe('app store', () => {
     expect(target.getState().log).toEqual(origin.getState().log);
     expect(target.getState().settings).toEqual(origin.getState().settings);
   });
+
+  it('stamps synced settings when they change and takes only newer ones from the account', async () => {
+    const store = createAppStore({ progressStore: memoryStore(), kv: memoryKv() });
+    await store.getState().init();
+    store.getState().updateSettings({ palette: 'pixel', navCollapsed: true }, new Date('2026-11-14T10:00:00Z'));
+    const stamped = store.getState().stampedSettings();
+    expect(stamped.palette).toEqual({ value: 'pixel', at: '2026-11-14T10:00:00.000Z' });
+    expect(stamped.helpLang?.at).toBe('1970-01-01T00:00:00.000Z');
+
+    store.getState().applyRemoteSettings({
+      palette: { value: 'provence', at: '2026-11-14T09:00:00.000Z' },
+      helpLang: { value: 'fr', at: '2026-11-13T09:00:00.000Z' },
+    });
+    expect(store.getState().settings.palette).toBe('pixel');
+    expect(store.getState().settings.helpLang).toBe('fr');
+    expect(store.getState().settings.navCollapsed).toBe(true);
+  });
+
+  it('follows a daily goal changed on another device', async () => {
+    const store = createAppStore({ progressStore: memoryStore(), kv: memoryKv() });
+    await store.getState().init();
+    store.getState().receive([{ type: 'setting', id: 'g', deviceId: 'other', at: '2026-11-14T10:00:00.000Z', day: '2026-11-14', key: 'dailyGoal', value: 100 }]);
+    expect(store.getState().settings.dailyGoal).toBe(100);
+  });
 });
 

@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
 import { parseEvent } from '../../src/lib/progress/schema';
+import { mergeStamped, parseStamped, type StampedSettings } from '../../src/lib/settingsSync';
 import type { AppEnv } from './app';
 import { currentUser } from './sessions';
 
@@ -9,9 +10,10 @@ export const SYNC_BATCH = 500;
 export const sync = new Hono<AppEnv>();
 
 /**
- * Push and pull in one request: `{ events, cursor }` stores the device's new events (a re-sent id is
- * ignored) and answers with the user's events after `cursor`, a page at a time. Events are checked one
- * by one against the app's own schema, so one bad event never blocks the rest.
+ * Push and pull in one request: `{ events, cursor, settings }` stores the device's new events (a re-sent id
+ * is ignored), merges its settings, and answers with the user's events after `cursor`, a page at a time,
+ * plus the merged settings. Events are checked one by one against the app's own schema, so one bad event
+ * never blocks the rest.
  */
 sync.post('/', async (c) => {
   const db = c.env.DB;
@@ -19,7 +21,7 @@ sync.post('/', async (c) => {
   const user = await currentUser(c, db, now);
   if (!user) return c.json({ error: 'unauthenticated' }, 401);
 
-  let body: { events?: unknown; cursor?: unknown };
+  let body: { events?: unknown; cursor?: unknown; settings?: unknown };
   try {
     body = await c.req.json();
   } catch {
@@ -47,6 +49,8 @@ sync.post('/', async (c) => {
   });
   if (inserts.length) await db.batch(inserts);
 
+  const settings = await syncSettings(db, user.userId, parseStamped(body.settings), now);
+
   const { results } = await db
     .prepare('SELECT seq, payload FROM events WHERE user_id = ? AND seq > ? ORDER BY seq LIMIT ?')
     .bind(user.userId, cursor, SYNC_BATCH + 1)
@@ -59,5 +63,20 @@ sync.post('/', async (c) => {
     events: page.map((r) => JSON.parse(r.payload)),
     cursor: page.at(-1)?.seq ?? cursor,
     more: results.length > SYNC_BATCH,
+    settings,
   });
 });
+
+/** Merges the device's settings into the stored ones (last write wins per field) and returns the result. */
+async function syncSettings(db: D1Database, userId: string, incoming: StampedSettings, now: Date): Promise<StampedSettings> {
+  const row = await db.prepare('SELECT data FROM settings WHERE user_id = ?').bind(userId).first<string>('data');
+  const stored = parseStamped(row ? JSON.parse(row) : {});
+  const merged = mergeStamped(stored, incoming);
+  if (JSON.stringify(merged) !== JSON.stringify(stored)) {
+    await db
+      .prepare('INSERT INTO settings (user_id, data, updated_at) VALUES (?, ?, ?) ON CONFLICT (user_id) DO UPDATE SET data = excluded.data, updated_at = excluded.updated_at')
+      .bind(userId, JSON.stringify(merged), now.toISOString())
+      .run();
+  }
+  return merged;
+}

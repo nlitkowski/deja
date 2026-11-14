@@ -25,6 +25,15 @@ export async function fetchAccount(fetcher: typeof fetch = fetch, apiUrl = API_U
   }
 }
 
+/** A page navigation: the server answers with the file to save. */
+export const exportUrl = () => api('/me/export');
+
+/** Deletes the account and everything the server holds for it; throws when that did not happen. */
+export async function deleteAccount(fetcher: typeof fetch = fetch): Promise<void> {
+  const res = await fetcher(api('/me'), { method: 'DELETE', credentials: 'include' });
+  if (!res.ok) throw new Error(`account deletion failed: ${res.status}`);
+}
+
 /** Throws when the API cannot be reached: the session cookie can only be cleared by the server. */
 export async function signOut(fetcher: typeof fetch = fetch): Promise<void> {
   const res = await fetcher(api('/auth/logout'), { method: 'POST', credentials: 'include' });

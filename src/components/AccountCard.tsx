@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 import { ui } from '../i18n/ui';
-import { signInUrl } from '../lib/account';
+import { exportUrl, signInUrl } from '../lib/account';
 import { useAccountStore } from '../state/accountStore';
-import { flushBeforeSignOut, signOutAndClear, useSyncStore } from '../state/sync';
+import { deleteAccountKeepLocal, flushBeforeSignOut, signOutAndClear, useSyncStore } from '../state/sync';
 import { downloadBackup } from './BackupCard';
 
 type Leaving = { step: 'idle' } | { step: 'busy' } | { step: 'unsent'; pending: number } | { step: 'offline' };
+type Deleting = 'idle' | 'confirm' | 'busy' | 'failed' | 'done';
+
+const privacyUrl = `${import.meta.env.BASE_URL}privacy.html`;
 
 /** Hidden when the build has no API or the API is unreachable: the app then just stays local. */
 export function AccountCard() {
@@ -13,12 +16,18 @@ export function AccountCard() {
   const result = useAccountStore((s) => s.signInResult);
   const sync = useSyncStore();
   const [leaving, setLeaving] = useState<Leaving>({ step: 'idle' });
+  const [deleting, setDeleting] = useState<Deleting>('idle');
 
   useEffect(() => {
     void useAccountStore.getState().refresh();
   }, []);
 
   if (!account || account.status === 'unavailable') return null;
+
+  const remove = async () => {
+    setDeleting('busy');
+    setDeleting((await deleteAccountKeepLocal()) ? 'done' : 'failed');
+  };
 
   const signedIn = account.status === 'signedIn';
   // A stale result (e.g. "connected" after signing out in another tab) would contradict what the card shows.
@@ -80,13 +89,43 @@ export function AccountCard() {
               {ui.signOutOffline}
             </p>
           )}
+          <p className="account-links small">
+            <a href={exportUrl()}>{ui.exportData}</a>
+            <a href={privacyUrl}>{ui.privacy}</a>
+            {deleting === 'idle' && (
+              <button className="link-button danger" onClick={() => setDeleting('confirm')}>
+                {ui.deleteAccount}
+              </button>
+            )}
+          </p>
+          {(deleting === 'confirm' || deleting === 'busy' || deleting === 'failed') && (
+            <div className="account-result error" role="alert">
+              <p>{deleting === 'failed' ? ui.deleteFailed : ui.deleteConfirm}</p>
+              <div className="backup-actions">
+                <button className="button secondary" onClick={remove} disabled={deleting === 'busy'}>
+                  {ui.deleteForever}
+                </button>
+                <button className="button secondary" onClick={() => setDeleting('idle')}>
+                  {ui.cancel}
+                </button>
+              </div>
+            </div>
+          )}
         </>
       ) : (
         <>
+          {deleting === 'done' && (
+            <p className="account-result connected" role="status">
+              {ui.accountDeleted}
+            </p>
+          )}
           <p className="muted small">{ui.accountHint}</p>
           <a className="button primary" href={signInUrl(`${window.location.origin}${import.meta.env.BASE_URL}`)}>
             {ui.signInGoogle}
           </a>
+          <p className="account-links small">
+            <a href={privacyUrl}>{ui.privacy}</a>
+          </p>
         </>
       )}
     </section>
