@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { HELP_LANGS } from '../content/localized';
 import type { ProgressEvent } from './progress/events';
+import { EventSchema } from './progress/schema';
 import { COLOR_MODES, PALETTES, type Settings } from './storage';
 
 /**
@@ -17,57 +18,6 @@ export interface Backup {
   settings: Settings;
   events: ProgressEvent[];
 }
-
-const day = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
-const base = { id: z.string().min(1), deviceId: z.string().min(1), at: z.iso.datetime(), day };
-const card = z.object({
-  ease: z.number(),
-  interval: z.number(),
-  due: day,
-  reps: z.number(),
-  lapses: z.number(),
-  correctTotal: z.number(),
-  lastReviewed: day,
-});
-
-const EventSchema = z.discriminatedUnion('type', [
-  z.object({
-    ...base,
-    type: z.literal('review'),
-    exerciseId: z.string(),
-    entryIds: z.array(z.string()),
-    grade: z.enum(['again', 'hard', 'good', 'easy']),
-    correct: z.boolean(),
-    nearMiss: z.boolean(),
-    hintUsed: z.boolean(),
-    timeMs: z.number(),
-    early: z.boolean(),
-    sessionId: z.string().optional(),
-    comboBefore: z.number().optional(),
-    production: z.boolean().optional(),
-  }),
-  z.object({
-    ...base,
-    type: z.literal('baseline'),
-    cards: z.record(z.string(), card),
-    introduced: z.object({ day, count: z.number() }).optional(),
-  }),
-  z.object({
-    ...base,
-    type: z.literal('session'),
-    sessionId: z.string(),
-    kind: z.enum(['review', 'unit', 'boss']),
-    unitKey: z.string().optional(),
-    startedAt: z.string(),
-    items: z.number(),
-    correct: z.number(),
-    mistakes: z.number(),
-    maxCombo: z.number(),
-    defeated: z.boolean().optional(),
-  }),
-  z.object({ ...base, type: z.literal('setting'), key: z.literal('dailyGoal'), value: z.number() }),
-  z.object({ ...base, type: z.literal('quest'), questId: z.string(), period: day, xp: z.number() }),
-]);
 
 // Each setting falls back on its own, so a backup from an older or newer version still restores what it can.
 const SettingsSchema = z.object({

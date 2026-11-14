@@ -1,10 +1,10 @@
 /** Unavailable: no API configured for this build, or offline; the app then simply stays local. */
-export type Account = { status: 'unavailable' } | { status: 'signedOut' } | { status: 'signedIn'; email: string };
+export type Account = { status: 'unavailable' } | { status: 'signedOut' } | { status: 'signedIn'; id: string; email: string };
 
 export type SignInResult = 'connected' | 'cancelled' | 'error';
 
 /** The API's origin (VITE_API_URL at build time), e.g. https://deja-api.litkowski.com; empty = no account features. */
-const API_URL: string = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
+export const API_URL: string = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
 const api = (path: string) => `${API_URL}${path}`;
 
@@ -18,15 +18,17 @@ export async function fetchAccount(fetcher: typeof fetch = fetch, apiUrl = API_U
     const res = await fetcher(`${apiUrl}/me`, { credentials: 'include' });
     if (res.status === 401) return { status: 'signedOut' };
     if (!res.ok || !res.headers.get('content-type')?.includes('application/json')) return { status: 'unavailable' };
-    const body = (await res.json()) as { email?: unknown };
-    return typeof body.email === 'string' ? { status: 'signedIn', email: body.email } : { status: 'unavailable' };
+    const body = (await res.json()) as { id?: unknown; email?: unknown };
+    return typeof body.email === 'string' && typeof body.id === 'string' ? { status: 'signedIn', id: body.id, email: body.email } : { status: 'unavailable' };
   } catch {
     return { status: 'unavailable' };
   }
 }
 
+/** Throws when the API cannot be reached: the session cookie can only be cleared by the server. */
 export async function signOut(fetcher: typeof fetch = fetch): Promise<void> {
-  await fetcher(api('/auth/logout'), { method: 'POST', credentials: 'include' });
+  const res = await fetcher(api('/auth/logout'), { method: 'POST', credentials: 'include' });
+  if (!res.ok) throw new Error(`sign-out failed: ${res.status}`);
 }
 
 /** Reads and strips the `?account=` result the Worker appends after sign-in, so a reload doesn't show it again. */

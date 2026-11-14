@@ -20,7 +20,7 @@ describe('fetchAccount', () => {
   });
 
   it('reads the signed-in email', async () => {
-    expect(await fetchAccount(reply(200, { email: 'a@example.com' }), API)).toEqual({ status: 'signedIn', email: 'a@example.com' });
+    expect(await fetchAccount(reply(200, { id: 'u1', email: 'a@example.com' }), API)).toEqual({ status: 'signedIn', id: 'u1', email: 'a@example.com' });
   });
 
   it('is signed out on 401', async () => {

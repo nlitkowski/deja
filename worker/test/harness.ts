@@ -1,5 +1,6 @@
 import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT, type JWTPayload } from 'jose';
 import { createApp, type Env } from '../src/app';
+import { sha256Hex } from '../src/crypto';
 import { TOKEN_URL } from '../src/google';
 import { testDb } from './d1';
 
@@ -49,3 +50,14 @@ export const cookieHeader = (cookies: Record<string, string>) =>
   Object.entries(cookies)
     .map(([k, v]) => `${k}=${v}`)
     .join('; ');
+
+/** A user with a live session, created directly in the database; returns the Cookie header for it. */
+export async function signedIn(env: Env, userId: string, email = `${userId}@example.com`): Promise<string> {
+  const token = `token-${userId}`;
+  await env.DB.batch([
+    env.DB.prepare('INSERT INTO users (id, email, created_at) VALUES (?, ?, ?)').bind(userId, email, '2026-01-01T00:00:00Z'),
+    env.DB.prepare('INSERT INTO sessions (token_hash, user_id, created_at, expires_at) VALUES (?, ?, ?, ?)').bind(await sha256Hex(token), userId, '2026-01-01T00:00:00Z', '2999-01-01T00:00:00Z'),
+  ]);
+  return `deja_session=${token}`;
+}
+

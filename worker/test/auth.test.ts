@@ -44,7 +44,7 @@ describe('Google sign-in', () => {
 
     const res = await me(t, session);
     expect(res.status).toBe(200);
-    expect(await res.json()).toEqual({ email: 'anna@example.com' });
+    expect(await res.json()).toMatchObject({ email: 'anna@example.com', id: expect.any(String) });
     expect(await t.env.DB.prepare('SELECT * FROM users').all().then((r) => Object.keys(r.results[0]!))).toEqual(['id', 'email', 'created_at']);
   });
 
@@ -61,7 +61,7 @@ describe('Google sign-in', () => {
     await signIn(t);
     const { session } = await signIn(t, { email: 'anna.new@example.com' });
     expect(await count(t, 'users')).toBe(1);
-    expect(await (await me(t, session)).json()).toEqual({ email: 'anna.new@example.com' });
+    expect(await (await me(t, session)).json()).toMatchObject({ email: 'anna.new@example.com' });
   });
 
   it('refuses a wrong state, a wrong nonce, another audience or an unverified email', async () => {

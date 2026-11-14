@@ -2,6 +2,7 @@ import { AppLayout, MenuButton } from '../components/AppLayout';
 import { Emoji } from '../components/Emoji';
 import { GameBar } from '../components/GameBar';
 import { QuestList } from '../components/QuestList';
+import { SyncBadge } from '../components/SyncBadge';
 import { UnitMap } from '../components/UnitMap';
 import { Icon } from '../components/Icon';
 import { LangSwitch } from '../components/LangSwitch';
@@ -55,6 +56,7 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBos
             <p className="subtitle">{ui.appSubtitle}</p>
           </div>
           <div className="header-actions">
+            <SyncBadge />
             <LangSwitch value={settings.helpLang} onChange={(helpLang) => updateSettings({ helpLang })} />
             <button className="icon-button" onClick={onOpenAchievements} aria-label={ui.achievements} title={ui.achievements}>
               <Icon name="trophy" />

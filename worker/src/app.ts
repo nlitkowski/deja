@@ -3,6 +3,7 @@ import { cors } from 'hono/cors';
 import type { JWTVerifyGetKey } from 'jose';
 import { google } from './google';
 import { currentUser, endSession } from './sessions';
+import { sync } from './sync';
 
 export interface Env {
   DB: D1Database;
@@ -75,8 +76,10 @@ export function createApp(deps: Deps) {
     const user = await currentUser(c, c.env.DB, deps.now());
     if (!user) return c.json({ error: 'unauthenticated' }, 401);
     c.header('cache-control', 'no-store');
-    return c.json({ email: user.email });
+    return c.json({ id: user.userId, email: user.email });
   });
+
+  app.route('/sync', sync);
 
   app.notFound((c) => c.json({ error: 'not found' }, 404));
 

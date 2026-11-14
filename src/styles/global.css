@@ -289,6 +289,62 @@ button {
   gap: 8px;
 }
 
+.sync-line {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.sync-line.synced {
+  color: var(--success);
+}
+
+.sync-line.offline,
+.sync-line.pending {
+  color: var(--text);
+}
+
+.account-result .backup-actions {
+  margin-top: 8px;
+}
+
+.account-result .button {
+  color: var(--text);
+}
+
+/* The cloud stays muted; only its dot carries the state, so it never competes with the header actions. */
+.sync-badge {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.sync-badge::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--pill-radius);
+  border: 2px solid var(--bg);
+  background: var(--success);
+}
+
+.sync-badge.syncing::after {
+  background: var(--info);
+}
+
+.sync-badge.pending::after {
+  background: var(--highlight);
+}
+
+.sync-badge.offline::after {
+  background: var(--muted);
+}
+
 .account-result {
   padding: 8px 12px;
   border-radius: var(--radius-sm);

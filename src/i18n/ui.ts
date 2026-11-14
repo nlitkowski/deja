@@ -98,7 +98,19 @@ export const ui = {
   accountHint: 'Connecte-toi pour retrouver ta progression sur tous tes appareils. Seule ton adresse e-mail est enregistrée. Sans compte, tout reste sur cet appareil.',
   signInGoogle: 'Se connecter avec Google',
   signedInAs: (email: string) => `Compte : ${email}`,
-  syncSoon: 'La synchronisation de ta progression entre appareils arrive bientôt.',
+  syncState: (status: 'syncing' | 'synced' | 'pending' | 'offline', pending: number) => {
+    const items = `${pending} élément${pending > 1 ? 's' : ''} de progression`;
+    if (status === 'syncing') return 'Synchronisation…';
+    if (status === 'synced') return 'Progression synchronisée.';
+    if (status === 'offline') return `Hors ligne : ${items} en attente d’envoi. Tout reste sur cet appareil.`;
+    return `${items} en attente d’envoi.`;
+  },
+  signOutHint: 'Ta progression reste sur ton compte. En te déconnectant, elle est retirée de cet appareil.',
+  unsentWarning: (n: number) =>
+    `${n} élément${n > 1 ? 's' : ''} de progression n’${n > 1 ? 'ont' : 'a'} pas pu être envoyé${n > 1 ? 's' : ''}. Si tu te déconnectes maintenant, ${n > 1 ? 'ils seront perdus' : 'il sera perdu'}. Exporte d’abord ta progression pour la garder.`,
+  signOutAnyway: 'Se déconnecter quand même',
+  signOutOffline: 'La déconnexion demande une connexion à Internet. Rien n’a été effacé ; réessaie une fois en ligne.',
+  cancel: 'Annuler',
   signOut: 'Se déconnecter',
   backup: 'Sauvegarde',
   backupHint:

@@ -213,10 +213,15 @@ Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne ma
 - A1 ✅ Punktowanie XP przyrostowo i z cache: `scoreEvents` (src/game/xp.ts) trzyma jeden `Scorer` na kontekst XP. Log, który tylko dopisuje nowsze zdarzenia, jest punktowany od ostatniego stanu; starsze zdarzenie (z innego urządzenia) wymusza pełne przeliczenie. Wynik w `WeakMap` per tablica logu, `xpByDay` per wynik. Questy biorą stan kart „przed” z punktacji zamiast drugiego replayu. Test: 20 000 zdarzeń × 500 wpisów, dopisanie odpowiedzi i przeliczenie Home < 50 ms (lokalnie ok. 12 ms), wyniki identyczne z pełnym przeliczeniem.
 - A2 ✅ Nagrody jednorazowe po synchronizacji: XP za quest płaci tylko pierwsze (wg `compareEvents`) zdarzenie `quest` dla `questId@period`, bonus sesji (w tym za bossa) tylko raz na `sessionId`. Deduplikacja po kluczu biznesowym, nie po id zdarzenia. Odznaki nie dają XP i są liczone ze statystyk, więc nie da się ich zdublować. Dwie prawdziwe wygrane z bossem na dwóch urządzeniach to dwie sesje i dalej dają dwa bonusy.
 
-**8.3 Synchronizacja postępu**
-- `SyncingProgressStore` (nowa implementacja `ProgressStore`): outbox niewysłanych zdarzeń w IndexedDB, wysyłka po odpowiedzi (z opóźnieniem), przy powrocie do aplikacji i po odzyskaniu sieci.
-- `/sync` (push/pull): przyjmuje zdarzenia (idempotentnie po UUID), zwraca cudze od kursora `seq`.
-- Pierwsze logowanie wysyła cały lokalny log. Wylogowanie czyści lokalny log (dane są na serwerze), żeby dwa konta się nie mieszały.
+**8.3 Synchronizacja postępu** ✅
+- `LocalStore` (`src/lib/progress/store.ts`, IndexedDB v2): log, outbox niewysłanych zdarzeń i metadane sync (konto, kursor). Odpowiedź trafia do logu i outboxu w jednej transakcji; zdarzenia pobrane z serwera tylko do logu.
+- `SyncEngine` (`src/lib/progress/sync.ts`, bez Reacta): push outboxu i pull od kursora w paczkach ≤ 500, aż obie strony są puste; jeden sync naraz. Wyzwalacze (`src/state/sync.ts`): odpowiedź (debounce 2 s), `visibilitychange → visible`, `online`, zalogowanie. Błąd sieci zmienia tylko status (offline / oczekuje, ponowienie po 30 s przy błędzie serwera); nauka idzie dalej lokalnie.
+- `POST /sync` z `{ events, cursor }`: `INSERT … ON CONFLICT DO NOTHING` po `(user_id, id)`, odpowiedź `{ accepted, rejected, events, cursor, more }`. Walidacja wspólnym schematem (`src/lib/progress/schema.ts`, ten sam co w imporcie kopii); złe zdarzenie jest odrzucane pojedynczo i wypada z outboxu (zostaje w lokalnym logu).
+- Pierwsza synchronizacja z danym kontem (inne `userId` w metadanych) wysyła cały lokalny log i pobiera całą historię od zera.
+- Wylogowanie: najpierw próba wysłania outboxu; gdy się nie da, ostrzeżenie „N élément(s) … n’a/ont pas pu être envoyé(s)” z eksportem, „Se déconnecter quand même” i „Annuler”. Wylogowanie wymaga sieci (ciasteczko sesji czyści tylko serwer); dopiero po nim czyszczony jest lokalny log.
+- Konto jest zapamiętane na urządzeniu (`deja:account`), więc aplikacja otwarta offline wie, czyj postęp kolejkuje; „brak połączenia” nie oznacza wylogowania.
+- Wskaźnik: chmurka w nagłówku Home (kropka: zsynchronizowane / w toku / oczekuje / offline) i linia stanu w karcie „Compte”.
+- Testy: dwa urządzenia offline z przeplatanymi sesjami → po sync identyczne SRS, XP, streak i questy (quest odebrany na obu płaci raz); push idempotentny; nowe urządzenie od zera odtwarza projekcję identyczną z eksportem; nieudany sync zostawia wszystko w outboxie. Sprawdzone też w aplikacji z lokalnym API: wysłanie 36 zdarzeń, wylogowanie, ponowne zalogowanie przywraca identyczny log, ostrzeżenie offline i samoczynna wysyłka po powrocie sieci.
 
 **8.4 Ustawienia, eksport, usunięcie konta**
 - Synchronizacja wybranych ustawień (last write wins per pole).

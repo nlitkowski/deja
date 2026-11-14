@@ -13,6 +13,9 @@ import './styles/global.css';
 import { App } from './App';
 import { AchievementToast } from './components/AchievementToast';
 import { UpdateToast } from './components/UpdateToast';
+import { startSync } from './state/sync';
+
+startSync();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

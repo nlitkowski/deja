@@ -6,24 +6,27 @@ import { useAppStore } from '../state/appStore';
 
 type Status = { kind: 'ok' | 'error'; text: string } | null;
 
+/** Saves the whole log and the settings as a file; returns how many events it holds. */
+export function downloadBackup(): number {
+  const { log, settings } = useAppStore.getState();
+  const now = new Date();
+  const blob = new Blob([JSON.stringify(createBackup(log, settings, now))], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = backupFileName(dayKey(now));
+  link.click();
+  URL.revokeObjectURL(url);
+  return log.length;
+}
+
 export function BackupCard() {
   const ready = useAppStore((s) => s.status === 'ready');
   const [status, setStatus] = useState<Status>(null);
   const [busy, setBusy] = useState(false);
   const input = useRef<HTMLInputElement>(null);
 
-  const download = () => {
-    const { log, settings } = useAppStore.getState();
-    const now = new Date();
-    const blob = new Blob([JSON.stringify(createBackup(log, settings, now))], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = backupFileName(dayKey(now));
-    link.click();
-    URL.revokeObjectURL(url);
-    setStatus({ kind: 'ok', text: ui.backupExported(log.length) });
-  };
+  const download = () => setStatus({ kind: 'ok', text: ui.backupExported(downloadBackup()) });
 
   const restore = async (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];

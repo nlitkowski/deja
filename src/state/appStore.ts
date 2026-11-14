@@ -5,7 +5,8 @@ import { baselineFromLegacy } from '../lib/progress/baseline';
 import { newEventId, type ProgressEvent, type QuestEvent, type ReviewEvent, type SessionEvent, type SettingEvent } from '../lib/progress/events';
 import { emptyProgress, type ProgressState } from '../lib/progress/fold';
 import { Projection } from '../lib/progress/projection';
-import { indexedDbStore, type ProgressStore } from '../lib/progress/store';
+import type { ProgressStore } from '../lib/progress/store';
+import { appendingStore } from './localStore';
 import { gradeFromResult, type AnswerResult } from '../lib/srs';
 import { browserStore, deviceId, loadState, saveState, SCHEMA_VERSION, type KeyValueStore, type Settings } from '../lib/storage';
 
@@ -35,6 +36,10 @@ export interface AppState {
   claimQuest: (input: { questId: string; period: string; xp: number }, now?: Date) => QuestEvent | undefined;
   /** Merges a backup into the log and restores its settings; resolves to how many events were new. */
   importBackup: (events: readonly ProgressEvent[], settings: Partial<Settings>) => Promise<number>;
+  /** Events another device made, pulled by sync and already stored locally. */
+  receive: (events: readonly ProgressEvent[]) => void;
+  /** Empties the in-memory log after the local store was cleared (signing out). */
+  resetLog: () => void;
 }
 
 interface Deps {
@@ -48,7 +53,7 @@ export function createAppStore({ progressStore, kv }: Deps) {
   const persistSettings = (settings: Settings) => saveState({ schemaVersion: SCHEMA_VERSION, settings }, kv);
   // init() may be called more than once (React StrictMode runs effects twice); the migration must run once.
   let initializing: Promise<void> | undefined;
-  const projection = new Projection();
+  let projection = new Projection();
 
   return create<AppState>()((set, get) => {
     async function load() {
@@ -136,8 +141,17 @@ export function createAppStore({ progressStore, kv }: Deps) {
         set({ settings, progress: projection.state, log: projection.events });
         return added.length;
       },
+
+      receive(events) {
+        if (projection.add(events)) set({ progress: projection.state, log: projection.events });
+      },
+
+      resetLog() {
+        projection = new Projection();
+        set({ progress: projection.state, log: projection.events });
+      },
     };
   });
 }
 
-export const useAppStore = createAppStore({ progressStore: indexedDbStore(), kv: browserStore() });
+export const useAppStore = createAppStore({ progressStore: appendingStore, kv: browserStore() });
