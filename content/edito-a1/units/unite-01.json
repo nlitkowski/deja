@@ -184,7 +184,26 @@
     { "id": "u01-lecture-1", "type": "gap-fill", "entryIds": ["u01-lecture"], "data": { "sentence": "J'adore la ___ : je lis deux livres par mois.", "answers": ["lecture"], "pl": "Uwielbiam czytać: czytam dwie książki miesięcznie.", "clue": "(l'activité de lire)" } },
     { "id": "u01-lecture-2", "type": "translate-pl-fr", "entryIds": ["u01-lecture"], "data": { "pl": "czytanie", "answers": ["la lecture"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u01-voyage-1", "type": "gap-fill", "entryIds": ["u01-voyage"], "data": { "sentence": "Mes loisirs ? Le sport et les ___.", "answers": ["voyages"], "pl": "Moje zainteresowania? Sport i podróże.", "clue": "(on visite d'autres pays)" } },
-    { "id": "u01-voyage-2", "type": "translate-pl-fr", "entryIds": ["u01-voyage"], "data": { "pl": "podróż", "answers": ["un voyage", "le voyage"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
+    { "id": "u01-voyage-2", "type": "translate-pl-fr", "entryIds": ["u01-voyage"], "data": { "pl": "podróż", "answers": ["un voyage", "le voyage"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+
+    { "id": "u01-etre-6", "type": "translate-pl-fr", "entryIds": ["u01-etre"], "data": { "pl": "oni są z Paryża", "answers": ["ils sont de Paris"], "hint": { "pl": "ils + être, nie avoir", "fr": "ils + être, pas avoir" } } },
+    { "id": "u01-avoir-6", "type": "translate-pl-fr", "entryIds": ["u01-avoir"], "data": { "pl": "mam dwadzieścia lat", "answers": ["j'ai vingt ans", "j'ai 20 ans"], "hint": { "pl": "wiek: avoir + ans", "fr": "l'âge : avoir + ans" } } },
+    { "id": "u01-appeler-6", "type": "translate-pl-fr", "entryIds": ["u01-sappeler"], "data": { "pl": "nazywam się Marta", "answers": ["je m'appelle Marta"] } },
+    { "id": "u01-parler-5", "type": "translate-pl-fr", "entryIds": ["u01-parler"], "data": { "pl": "mówimy po francusku", "answers": ["nous parlons français", "on parle français", "nous parlons le français", "on parle le français"] } },
+    { "id": "u01-nat-6", "type": "translate-pl-fr", "entryIds": ["u01-nationalites"], "data": { "pl": "ona jest Włoszką", "answers": ["elle est italienne"], "hint": { "pl": "przymiotnik narodowości w r. żeńskim", "fr": "l'adjectif de nationalité au féminin" } } },
+    { "id": "u01-def-6", "type": "translate-pl-fr", "entryIds": ["u01-articles-definis"], "data": { "pl": "lubię muzykę", "answers": ["j'aime la musique"], "hint": { "pl": "z rodzajnikiem określonym", "fr": "avec l'article défini" } } },
+    { "id": "u01-quel-6", "type": "translate-pl-fr", "entryIds": ["u01-quel"], "data": { "pl": "ile masz lat?", "answers": ["tu as quel âge", "quel âge as-tu", "quel âge tu as", "quel âge est-ce que tu as"], "hint": { "pl": "quel + âge, do kolegi (tu)", "fr": "quel + âge, à un ami (tu)" } } },
+
+    { "id": "u01-prenom-3", "type": "gap-fill", "entryIds": ["u01-prenom"], "data": { "sentence": "Claire, c'est son ___ et Dupont, c'est son nom.", "answers": ["prénom"], "pl": "Claire to jej imię, a Dupont to jej nazwisko." } },
+    { "id": "u01-nom-3", "type": "gap-fill", "entryIds": ["u01-nom"], "data": { "sentence": "Paul est mon prénom et Martin est mon ___.", "answers": ["nom"], "pl": "Paul to moje imię, a Martin to moje nazwisko.", "clue": "(le nom de toute la famille)" } },
+    { "id": "u01-adresse-3", "type": "gap-fill", "entryIds": ["u01-adresse"], "data": { "sentence": "Écrivez votre ___ sur l'enveloppe, s'il vous plaît.", "answers": ["adresse"], "pl": "Proszę napisać swój adres na kopercie.", "clue": "(la rue, le numéro et la ville)" } },
+    { "id": "u01-nationalite-3", "type": "gap-fill", "entryIds": ["u01-nationalite"], "data": { "sentence": "Sur le formulaire : nom, prénom, ___ et adresse.", "answers": ["nationalité"], "pl": "Na formularzu: nazwisko, imię, narodowość i adres.", "clue": "(polonaise, française…)" } },
+    { "id": "u01-langue-3", "type": "gap-fill", "entryIds": ["u01-langue"], "data": { "sentence": "Tu parles quelles ___ ? – Polonais et anglais.", "answers": ["langues"], "pl": "Jakimi językami mówisz? – Polskim i angielskim." } },
+    { "id": "u01-profession-3", "type": "gap-fill", "entryIds": ["u01-profession"], "data": { "sentence": "Ma ___ ? Je suis professeur de français.", "answers": ["profession"], "pl": "Mój zawód? Jestem nauczycielem francuskiego.", "clue": "(médecin, professeur…)" } },
+    { "id": "u01-numero-3", "type": "gap-fill", "entryIds": ["u01-numero"], "data": { "sentence": "Tu me donnes ton ___ de téléphone ? Je t'appelle ce soir.", "answers": ["numéro"], "pl": "Dasz mi swój numer telefonu? Zadzwonię do ciebie wieczorem." } },
+    { "id": "u01-date-naissance-3", "type": "gap-fill", "entryIds": ["u01-date-naissance"], "data": { "sentence": "Votre ___ de naissance, s'il vous plaît ? – Le 12 juin 2001.", "answers": ["date"], "pl": "Pana data urodzenia, proszę? – 12 czerwca 2001." } },
+    { "id": "u01-lecture-3", "type": "gap-fill", "entryIds": ["u01-lecture"], "data": { "sentence": "Mes loisirs ? La ___ et le cinéma : j'aime beaucoup les livres.", "answers": ["lecture"], "pl": "Moje zainteresowania? Czytanie i kino: bardzo lubię książki." } },
+    { "id": "u01-voyage-3", "type": "gap-fill", "entryIds": ["u01-voyage"], "data": { "sentence": "En juillet, je fais un ___ en Italie.", "answers": ["voyage"], "pl": "W lipcu jadę w podróż do Włoch.", "clue": "(on part visiter un pays)" } }
   ],
   "boss": {
     "groups": [["u01-etre", "u01-avoir"], ["u01-sappeler"], ["u01-nationalites"], ["u01-quel"]],
