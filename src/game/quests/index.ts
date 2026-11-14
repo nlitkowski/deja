@@ -1,6 +1,5 @@
 import { addDays, diffDays, type DayKey } from '../../lib/date';
 import type { ProgressEvent, ReviewEvent, SessionEvent } from '../../lib/progress/events';
-import { replay } from '../../lib/progress/fold';
 import { shuffle } from '../../lib/session';
 import type { SrsCard } from '../../lib/srs';
 import { GAME } from '../config';
@@ -57,16 +56,13 @@ export function questDigest(events: readonly ProgressEvent[], from: DayKey, to: 
   const inPeriod = (day: DayKey) => day >= from && day <= to;
   const reviews: { event: ReviewEvent; before: SrsCard[] }[] = [];
   const sessions: SessionEvent[] = [];
-  replay(events, (event, before) => {
-    if (!inPeriod(event.day)) return;
-    if (event.type === 'review') reviews.push({ event, before: event.entryIds.flatMap((id) => before.cards[id] ?? []) });
-    if (event.type === 'session') sessions.push(event);
-  });
-
   const xpOn = new Map<DayKey, number>();
-  for (const { event, xp } of scoreEvents(events, ctx)) {
+  for (const { event, xp, before } of scoreEvents(events, ctx)) {
+    if (!inPeriod(event.day)) continue;
+    if (event.type === 'review') reviews.push({ event, before: before ?? [] });
+    if (event.type === 'session') sessions.push(event);
     // A quest's own reward does not count towards the quests.
-    if (event.type !== 'quest' && inPeriod(event.day)) xpOn.set(event.day, (xpOn.get(event.day) ?? 0) + xp);
+    if (event.type !== 'quest') xpOn.set(event.day, (xpOn.get(event.day) ?? 0) + xp);
   }
   const goalOn = goalResolver(events);
   const days = Array.from({ length: diffDays(from, to) + 1 }, (_, i) => addDays(from, i)).map((day) => ({ day, xp: xpOn.get(day) ?? 0, goal: goalOn(day) }));

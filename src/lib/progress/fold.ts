@@ -78,8 +78,15 @@ export function foldEvents(events: readonly ProgressEvent[]): ProgressState {
  * on it (XP that drops for mastered entries). `before` is only valid during the call.
  */
 export function replay(events: readonly ProgressEvent[], visit: (event: ProgressEvent, before: ProgressState) => void): ProgressState {
-  const state = emptyProgress();
-  for (const event of [...events].sort(compareEvents)) {
+  return replayOnto(emptyProgress(), [...events].sort(compareEvents), visit);
+}
+
+/**
+ * Continues a replay: applies `sorted` (in `compareEvents` order, all newer than what `state` holds) to `state`
+ * in place, showing each event the state before it. For incremental projections that own their state.
+ */
+export function replayOnto(state: ProgressState, sorted: readonly ProgressEvent[], visit: (event: ProgressEvent, before: ProgressState) => void): ProgressState {
+  for (const event of sorted) {
     visit(event, state);
     applyInPlace(state, event);
   }

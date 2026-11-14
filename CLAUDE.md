@@ -80,7 +80,7 @@ src/
     quests/daily|weekly/    # jeden plik na quest; wybór deterministyczny z seeda dnia / tygodnia
     league.ts               # liga tygodniowa: duchy z własnych tygodni i boty z seeda
     stats.ts                # heatmapa, najsłabsze wpisy, mastery per pakiet
-    xp.ts
+    xp.ts                   # scoreEvents: przyrostowo jak Projection (Scorer per kontekst, cache per tablica logu)
     levels.ts
     streak.ts
   lib/

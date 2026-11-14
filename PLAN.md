@@ -209,6 +209,10 @@ Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne ma
 **Przeniesienie postępu na nowy adres** ✅
 - Karta „Sauvegarde” w Réglages: eksport całego logu i ustawień do pliku JSON, import scalający zdarzenia po id (idempotentny) i przywracający ustawienia. Służy do przeniesienia postępu z `nlitkowski.github.io/deja` na `deja.litkowski.com` (dane w przeglądarce są osobne dla każdego adresu). Test: import do pustej aplikacji, w dowolnej kolejności zdarzeń, daje identyczną projekcję. Przy sync (8.3) dojdzie analogiczny test dla pobrania całej historii z serwera.
 
+**Poprawki przed synchronizacją**
+- A1 ✅ Punktowanie XP przyrostowo i z cache: `scoreEvents` (src/game/xp.ts) trzyma jeden `Scorer` na kontekst XP. Log, który tylko dopisuje nowsze zdarzenia, jest punktowany od ostatniego stanu; starsze zdarzenie (z innego urządzenia) wymusza pełne przeliczenie. Wynik w `WeakMap` per tablica logu, `xpByDay` per wynik. Questy biorą stan kart „przed” z punktacji zamiast drugiego replayu. Test: 20 000 zdarzeń × 500 wpisów, dopisanie odpowiedzi i przeliczenie Home < 50 ms (lokalnie ok. 12 ms), wyniki identyczne z pełnym przeliczeniem.
+- A2 Nagrody jednorazowe po synchronizacji.
+
 **8.3 Synchronizacja postępu**
 - `SyncingProgressStore` (nowa implementacja `ProgressStore`): outbox niewysłanych zdarzeń w IndexedDB, wysyłka po odpowiedzi (z opóźnieniem), przy powrocie do aplikacji i po odzyskaniu sieci.
 - `/sync` (push/pull): przyjmuje zdarzenia (idempotentnie po UUID), zwraca cudze od kursora `seq`.
