@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
     <meta name="theme-color" content="#faf7f2" />
-    <title>Français</title>
+    <title>Déjà</title>
+    <meta name="description" content="Déjà : révisions de français A1–A2, Édito et connecteurs." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <script>
       // Applies the saved theme before the first paint (no flash); `system` leaves the mode to prefers-color-scheme.
       // Keep in sync with src/theme.ts. `theme` is the pre-v4 name of `colorMode`.
       try {
-        var settings = JSON.parse(localStorage.getItem('revision-francaise:state')).settings;
+        var saved = localStorage.getItem('deja:state') || localStorage.getItem('revision-francaise:state');
+        var settings = JSON.parse(saved).settings;
         var mode = settings.colorMode || settings.theme;
         if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode;
         if (settings.palette) document.documentElement.dataset.palette = settings.palette;

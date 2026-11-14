@@ -74,6 +74,7 @@ export function App() {
           helpLang={state.settings.helpLang}
           onHelpLang={setHelpLang}
           onPractice={(unitKey) => startSession(content.units.get(unitKey)?.title ?? '', buildUnitSession(state, unitKey))}
+          onOpenSheet={(key) => setScreen({ name: 'sheet', key })}
           onBack={() => setScreen({ name: 'sheets' })}
         />
       );

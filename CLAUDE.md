@@ -1,6 +1,8 @@
-# CLAUDE.md — Français A1: aplikacja powtórkowa
+# CLAUDE.md — Déjà: aplikacja powtórkowa (A1–A2)
 
 ## Cel projektu
+
+**Déjà** (technicznie `deja`). Przy każdej zmianie UI, tekstów, ikon i zasobów przestrzegaj `BRANDING.md`, łącznie z jego sekcją o świadomych odstępstwach.
 
 Aplikacja do powtórek z francuskiego (A1) dla jednej osoby: polskojęzycznego ucznia w trakcie kursu. Źródłem treści jest kompendium „Français A1 — spójniki, przyimki i łączniki” (sekcje niżej). Kompendium służy do czytania, a ta aplikacja ma służyć do **aktywnego przypominania**: użytkownik sam wpisuje lub wybiera odpowiedź, a aplikacja planuje powtórki (spaced repetition).
 
@@ -221,7 +223,7 @@ Sesja: najpierw zaległe (due ≤ dziś), potem maksymalnie 5 nowych dziennie, �
 
 ## Styl wizualny
 
-Nawiązanie do kompendium: granat `#1a1f3a`, krem `#faf7f2`, złoto `#c9a84c`, akcenty niebieski `#2d4a7a`, czerwony `#c0392b`, zielony `#27795b`. Nagłówki w Playfair Display, tekst w Source Sans 3. To jest styl „Classique”. Motyw = styl (`data-palette`: classic / provence / pixel) × tryb (`data-theme`: light / dark, brak = systemowy). Kolory w tokenach semantycznych (`--bg`, `--accent`, `--highlight`, `--success`, `--danger`…) definiowanych przez `light-dark()`, więc każdy styl opisuje oba tryby w jednym miejscu; styl ustawia też fonty, promienie, grubość ramek i cienie. Komponenty używają tylko tokenów, nigdy surowych kolorów. Styl „8-bit”: Press Start 2P (tytuły, przyciski) i VT323 (tekst), paleta Game Boy (jasny) i NES (ciemny). Skrypt w index.html ustawia styl i tryb przed pierwszym renderem.
+Nawiązanie do kompendium: granat `#1a1f3a`, krem `#faf7f2`, złoto `#c9a84c`, akcenty niebieski `#2d4a7a`, czerwony `#c0392b`, zielony `#27795b`. Nagłówki w Playfair Display, tekst w Source Sans 3. To jest styl „Classique”. Motyw = styl (`data-palette`: classic / provence / pixel) × tryb (`data-theme`: light / dark, brak = systemowy). Kolory w tokenach semantycznych (`--bg`, `--accent`, `--highlight`, `--success`, `--danger`…) definiowanych przez `light-dark()`, więc każdy styl opisuje oba tryby w jednym miejscu; styl ustawia też fonty, promienie, grubość ramek i cienie. Komponenty używają tylko tokenów, nigdy surowych kolorów. Styl „8-bit”: Press Start 2P (tytuły, przyciski) i VT323 (tekst), paleta Game Boy (jasny) i NES (ciemny). Skrypt w index.html ustawia styl i tryb przed pierwszym renderem. Ikony interfejsu przez `<Icon>` (znak tekstowy, a w 8-bit rysunek pikselowy SVG), emoji z treści przez `<Emoji>` (w 8-bit pikselizowane na canvasie 14×14), więc nowe pakiety dostają ikony pikselowe automatycznie. Fiszki: drzewo treści (pakiety → fiszki → sekcje ze scrollspy) z boku na szerokich ekranach, w szufladzie pod ☰ na telefonie.
 
 ## Konwencje
 

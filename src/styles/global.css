@@ -1,121 +1,3 @@
-/*
- * Theme = palette (data-palette: classic | provence | pixel) × mode (data-theme: light | dark; absent = follow the system).
- * Colours use light-dark(), resolved through color-scheme, so each palette defines both modes in one place.
- * Palettes are scoped to [data-palette], not only :root, so Réglages can render a live preview of each one.
- */
-:root {
-  color-scheme: light dark;
-}
-
-:root[data-theme='light'] {
-  color-scheme: light;
-}
-
-:root[data-theme='dark'] {
-  color-scheme: dark;
-}
-
-:root,
-[data-palette='classic'] {
-  --bg: light-dark(#faf7f2, #11152a);
-  --surface: light-dark(#ffffff, #1a1f3a);
-  --text: light-dark(#1a1f3a, #f1ede4);
-  --muted: light-dark(#5d6280, #a3a8c3);
-  --border: light-dark(#e6e0d4, #2c3358);
-  --accent: light-dark(#2d4a7a, #7d9cd6);
-  --on-accent: light-dark(#ffffff, #11152a);
-  --highlight: #c9a84c;
-  --on-highlight: #1a1f3a;
-  --info: light-dark(#2d4a7a, #7d9cd6);
-  --success: light-dark(#27795b, #5fbf94);
-  --danger: light-dark(#c0392b, #e8776b);
-  --ok-bg: light-dark(#e3f2ec, #173a2f);
-  --bad-bg: light-dark(#f8e3e0, #44201c);
-  --near-bg: light-dark(#f7efd8, #3d3420);
-  --selected-bg: light-dark(#1a1f3a, #c9a84c);
-  --selected-fg: light-dark(#faf7f2, #1a1f3a);
-  --hero-bg: light-dark(#1a1f3a, #232a4d);
-  --hero-fg: #faf7f2;
-  --hero-muted: #c9cbe0;
-
-  --font-head: 'Playfair Display', Georgia, serif;
-  --font-body: 'Source Sans 3', system-ui, sans-serif;
-  --font-size: 17px;
-  --radius: 14px;
-  --radius-sm: 8px;
-  --pill-radius: 999px;
-  --border-w: 1px;
-  --shadow: none;
-  --shadow-sm: none;
-}
-
-[data-palette='provence'] {
-  --bg: light-dark(#f6f3f8, #1c1824);
-  --surface: light-dark(#ffffff, #262031);
-  --text: light-dark(#2e2a3a, #f1ecf6);
-  --muted: light-dark(#6b6478, #b1a8c0);
-  --border: light-dark(#e4dcea, #3a3148);
-  --accent: light-dark(#6b4fa0, #b9a2e6);
-  --on-accent: light-dark(#ffffff, #1c1824);
-  --highlight: light-dark(#e0a526, #f0bf4c);
-  --on-highlight: #2e2a3a;
-  --info: light-dark(#6b4fa0, #b9a2e6);
-  --success: light-dark(#5d7a2e, #a3c46a);
-  --danger: light-dark(#b8502e, #e88a6a);
-  --ok-bg: light-dark(#edf2e1, #26301a);
-  --bad-bg: light-dark(#f6e2da, #3d2219);
-  --near-bg: light-dark(#fbf0d5, #3b3119);
-  --selected-bg: light-dark(#6b4fa0, #f0bf4c);
-  --selected-fg: light-dark(#ffffff, #1c1824);
-  --hero-bg: light-dark(#4a3870, #352a4d);
-  --hero-fg: #fbf7ff;
-  --hero-muted: #d6cbe8;
-
-  --font-head: 'Playfair Display', Georgia, serif;
-  --font-body: 'Source Sans 3', system-ui, sans-serif;
-  --font-size: 17px;
-  --radius: 22px;
-  --radius-sm: 12px;
-  --pill-radius: 999px;
-  --border-w: 1px;
-  --shadow: 0 6px 18px light-dark(rgb(74 56 112 / 0.08), rgb(0 0 0 / 0.3));
-  --shadow-sm: none;
-}
-
-/* Light: Game Boy greens. Dark: NES night. */
-[data-palette='pixel'] {
-  --bg: light-dark(#c4cfa1, #0b0b1e);
-  --surface: light-dark(#e3ebc3, #16163a);
-  --text: light-dark(#0f380f, #fcfcfc);
-  --muted: light-dark(#3d6b3d, #a4a4d0);
-  --border: light-dark(#0f380f, #fcfcfc);
-  --accent: light-dark(#306230, #3cbcfc);
-  --on-accent: light-dark(#e3ebc3, #0b0b1e);
-  --highlight: light-dark(#8bac0f, #f8b800);
-  --on-highlight: light-dark(#0f380f, #0b0b1e);
-  --info: light-dark(#306230, #3cbcfc);
-  --success: light-dark(#306230, #58d854);
-  --danger: light-dark(#b8341b, #f83800);
-  --ok-bg: light-dark(#b3c77a, #0e3b12);
-  --bad-bg: light-dark(#e8b8a8, #4a1208);
-  --near-bg: light-dark(#d9d68a, #4a3a00);
-  --selected-bg: light-dark(#0f380f, #f8b800);
-  --selected-fg: light-dark(#e3ebc3, #0b0b1e);
-  --hero-bg: light-dark(#0f380f, #2038ec);
-  --hero-fg: light-dark(#e3ebc3, #fcfcfc);
-  --hero-muted: light-dark(#9bbc0f, #bcd0fc);
-
-  --font-head: 'Press Start 2P', ui-monospace, monospace;
-  --font-body: 'VT323', ui-monospace, monospace;
-  --font-size: 22px;
-  --radius: 0;
-  --radius-sm: 0;
-  --pill-radius: 0;
-  --border-w: 3px;
-  --shadow: 4px 4px 0 var(--border);
-  --shadow-sm: 3px 3px 0 var(--border);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -716,35 +598,8 @@ button {
   margin-top: 2px;
 }
 
-.section-chips {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding: 10px 16px;
-  margin: 0 -16px 8px;
-  background: var(--bg);
-  border-bottom: var(--border-w) solid var(--border);
-  scrollbar-width: none;
-}
-
-.chip {
-  flex-shrink: 0;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--text);
-  background: var(--surface);
-  border: var(--border-w) solid var(--border);
-  border-radius: var(--pill-radius);
-  padding: 5px 12px;
-  white-space: nowrap;
-}
-
 .sheet-section {
-  scroll-margin-top: 64px;
+  scroll-margin-top: 76px;
   background: var(--surface);
   border: var(--border-w) solid var(--border);
   border-radius: var(--radius);
@@ -921,7 +776,6 @@ button {
 
 .button,
 .pill,
-.chip,
 .accent-key,
 .answer-input {
   box-shadow: var(--shadow-sm);
@@ -958,7 +812,6 @@ button {
 
 [data-palette='pixel'] .button,
 [data-palette='pixel'] .pill button,
-[data-palette='pixel'] .chip,
 [data-palette='pixel'] .kicker,
 [data-palette='pixel'] .section-kind,
 [data-palette='pixel'] .lang-switch-label,
@@ -1108,4 +961,337 @@ button {
 
 [data-palette='pixel'] .palette-sample {
   font-size: 1.4em;
+}
+
+/* Sheets: content tree beside the text on wide screens, in a drawer behind ☰ on small ones. */
+.sheets-main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 16px max(24px, env(safe-area-inset-bottom));
+  min-height: 100dvh;
+}
+
+.sheets-sidebar {
+  display: none;
+}
+
+.sheets-bar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: max(8px, env(safe-area-inset-top)) 16px 8px;
+  margin: 0 -16px 12px;
+  background: var(--bg);
+  border-bottom: var(--border-w) solid var(--border);
+}
+
+.sheets-bar .lang-switch {
+  margin-left: auto;
+}
+
+.sheets-bar .lang-switch-label {
+  display: none;
+}
+
+.menu-button {
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 6px 8px;
+  color: var(--text);
+}
+
+.back-text {
+  display: none;
+}
+
+.bar-section {
+  flex: 1;
+  min-width: 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tree-drawer {
+  margin: 0;
+  padding: 0 0 16px;
+  width: min(86vw, 340px);
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  border: 0;
+  border-right: var(--border-w) solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  box-shadow: var(--shadow);
+}
+
+.tree-drawer[open] {
+  animation: drawer-in 0.2s ease-out;
+}
+
+@keyframes drawer-in {
+  from {
+    transform: translateX(-100%);
+  }
+}
+
+.tree-drawer::backdrop {
+  background: rgb(0 0 0 / 0.45);
+}
+
+.drawer-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: max(10px, env(safe-area-inset-top)) 8px 8px 16px;
+  margin-bottom: 8px;
+  background: var(--bg);
+  border-bottom: var(--border-w) solid var(--border);
+}
+
+.drawer-header .sidebar-heading {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-heading {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  padding: 0 16px;
+}
+
+.content-tree {
+  display: grid;
+  gap: 2px;
+  padding: 0 8px;
+}
+
+.tree-pack > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.tree-pack > summary::-webkit-details-marker {
+  display: none;
+}
+
+.tree-pack > summary::before {
+  content: '▸';
+  color: var(--muted);
+  transition: transform 0.15s;
+}
+
+.tree-pack[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.tree-pack ul,
+.tree-sections {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tree-pack ul {
+  display: grid;
+  gap: 2px;
+  padding: 0 0 6px 6px;
+}
+
+.tree-sheet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1.3;
+}
+
+.tree-sheet[aria-current='page'] {
+  background: var(--surface);
+  box-shadow: inset 3px 0 0 var(--highlight);
+  font-weight: 600;
+}
+
+.tree-pack > summary:hover,
+.tree-sheet:hover,
+.tree-section:hover {
+  background: var(--surface);
+}
+
+.tree-icon {
+  flex-shrink: 0;
+}
+
+.tree-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.tree-title {
+  display: block;
+}
+
+.tree-sections {
+  margin: 2px 0 8px 30px;
+  border-left: var(--border-w) solid var(--border);
+}
+
+.tree-section {
+  display: block;
+  margin-left: calc(-1 * var(--border-w));
+  padding: 5px 10px;
+  border-left: 3px solid transparent;
+  font-size: 0.88rem;
+  line-height: 1.3;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.tree-section[aria-current='location'] {
+  border-left-color: var(--accent);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.content-tree a:focus-visible,
+.tree-pack > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+@media (min-width: 600px) {
+  .back-text {
+    display: inline;
+  }
+}
+
+@media (min-width: 960px) {
+  .sheets-layout {
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+    gap: 32px;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .sheets-sidebar {
+    display: block;
+    position: sticky;
+    top: 0;
+    align-self: start;
+    max-height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 18px 0 24px;
+    border-right: var(--border-w) solid var(--border);
+  }
+
+  .sheets-main {
+    margin: 0;
+    padding: 0 0 24px;
+  }
+
+  .sheets-bar {
+    margin: 0 0 12px;
+    padding: 12px 0;
+  }
+
+  .menu-button,
+  .bar-section,
+  .tree-drawer {
+    display: none;
+  }
+}
+
+[data-palette='pixel'] .sidebar-heading {
+  font-size: 0.55rem;
+  line-height: 1.6;
+}
+
+[data-palette='pixel'] .tree-label {
+  font-family: var(--font-head);
+  font-size: 0.4rem;
+  letter-spacing: 0;
+  line-height: 1.8;
+}
+
+/* Icons: text glyphs and emoji everywhere; pixel drawings in the 8-bit palette. */
+.icon,
+.emoji {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: -0.12em;
+  line-height: 1;
+}
+
+.icon-pixel,
+.emoji-pixel {
+  display: none;
+}
+
+[data-palette='pixel'] .icon-glyph,
+[data-palette='pixel'] .emoji-glyph {
+  display: none;
+}
+
+[data-palette='pixel'] .icon-pixel {
+  display: block;
+  width: 0.8em;
+  height: 0.8em;
+}
+
+[data-palette='pixel'] .emoji-pixel {
+  display: block;
+  width: 1.15em;
+  height: 1.15em;
+  image-rendering: pixelated;
+}
+
+/* Press Start headings are small, so their emoji need a larger box to stay legible. */
+[data-palette='pixel'] h1 .emoji-pixel,
+[data-palette='pixel'] h2 .emoji-pixel,
+[data-palette='pixel'] .tree-pack > summary .emoji-pixel {
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.logotype {
+  color: var(--brand);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
 }

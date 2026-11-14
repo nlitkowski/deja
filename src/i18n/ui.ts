@@ -1,6 +1,6 @@
 /** Interface strings. Learning content lives in `content/`, not here. */
 export const ui = {
-  appTitle: 'Français',
+  appTitle: 'Déjà',
   appSubtitle: 'Révisions A1–A2 : Édito, connecteurs et plus encore',
   disclaimer:
     'Projet personnel d’apprentissage, sans lien avec les Éditions Didier. Édito est une marque des Éditions Didier ; les fiches et exercices sont des textes originaux qui suivent seulement le programme du manuel.',
@@ -8,15 +8,17 @@ export const ui = {
   dueCount: (n: number) => (n <= 1 ? 'entrée à réviser' : 'entrées à réviser'),
   newToday: (n: number, max: number) => `Nouvelles aujourd’hui : ${n} / ${max}`,
   review: 'Révision',
-  reviewWithCount: (n: number) => `Révision (${n})`,
-  allDoneToday: 'Tout est fait pour aujourd’hui',
+  reviewWithCount: (n: number) => `Déjà vu ? (${n})`,
+  allDoneToday: 'Rien à revoir. À demain !',
   unitSeen: (seen: number, total: number) => `${seen}/${total} découvertes`,
   unitDue: (n: number) => `${n} à réviser`,
   unitProgressLabel: (seen: number, total: number) => `Découvertes : ${seen} sur ${total}`,
 
   sheets: 'Fiches de révision',
   sheetsTeaser: (n: number) => `${n} fiche${n > 1 ? 's' : ''} : grammaire, vocabulaire, expressions`,
-  sheetContents: 'Sommaire de la fiche',
+  treeLabel: 'Sommaire des fiches',
+  openMenu: 'Ouvrir le sommaire',
+  closeMenu: 'Fermer le sommaire',
   sectionKinds: { grammar: 'Grammaire', vocabulary: 'Vocabulaire', phrases: 'Communication' },
   watchOut: 'Attention',
   practiceThis: 'S’entraîner',
@@ -39,7 +41,7 @@ export const ui = {
   noCards: 'Aucune carte dans cette séance.',
   back: 'Retour',
   next: 'Suivant',
-  correct: '✓ Bravo !',
+  correct: 'Bien !',
   nearMiss: 'Presque ! Attention à l’accent',
   wrong: 'Pas tout à fait',
   answerWas: 'La réponse',
@@ -48,13 +50,13 @@ export const ui = {
 
   typePlaceholder: 'Écris ta réponse…',
   answerLabel: 'Ta réponse',
-  showHint: '💡 Indice',
+  showHint: 'Indice',
   dontKnow: 'Je ne sais pas',
   check: 'Vérifier',
   accentBarLabel: 'Caractères accentués',
   translateToFrench: 'Traduis en français',
 
-  sessionDone: 'Séance terminée !',
+  sessionDone: 'Bravo.',
   percentCorrect: 'de bonnes réponses',
   answers: 'réponses',
   entriesReviewed: 'entrées révisées',

@@ -3,6 +3,7 @@ import { Segmented } from '../components/Segmented';
 import { HELP_LANGS } from '../content/localized';
 import { ui } from '../i18n/ui';
 import { COLOR_MODES, type SavedState, type Settings } from '../lib/storage';
+import { Icon } from '../components/Icon';
 
 interface Props {
   settings: Settings;
@@ -17,7 +18,7 @@ export function SettingsScreen({ settings, update, onBack }: Props) {
     <main className="screen settings">
       <header className="top-bar">
         <button className="back-button" onClick={onBack}>
-          ‹ {ui.back}
+          <Icon name="back" /> {ui.back}
         </button>
       </header>
       <h1>{ui.settings}</h1>

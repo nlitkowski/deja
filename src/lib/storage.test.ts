@@ -1,13 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { defaultState, loadState, migrate, rollDay, saveState, SCHEMA_VERSION } from './storage';
+import { defaultState, loadState, migrate, rollDay, saveState, SCHEMA_VERSION, STORAGE_KEY } from './storage';
 
-function memoryStore(initial?: string) {
-  let value = initial ?? null;
+function memoryStore(initial?: Record<string, string>) {
+  const values = new Map(Object.entries(initial ?? {}));
   return {
-    getItem: () => value,
-    setItem: (_key: string, next: string) => {
-      value = next;
-    },
+    getItem: (key: string) => values.get(key) ?? null,
+    setItem: (key: string, next: string) => void values.set(key, next),
+    removeItem: (key: string) => void values.delete(key),
+    keys: () => [...values.keys()],
   };
 }
 
@@ -20,7 +20,7 @@ describe('storage', () => {
   });
 
   it('falls back to defaults on corrupt or unknown data', () => {
-    expect(loadState(memoryStore('{not json'))).toEqual(defaultState());
+    expect(loadState(memoryStore({ [STORAGE_KEY]: '{not json' }))).toEqual(defaultState());
     expect(migrate({ schemaVersion: SCHEMA_VERSION + 1 })).toEqual(defaultState());
     expect(migrate(null)).toEqual(defaultState());
   });
@@ -49,6 +49,15 @@ describe('storage', () => {
     const s = migrate(v3);
     expect(s.settings).toMatchObject({ colorMode: 'dark', palette: 'classic' });
     expect(s.settings).not.toHaveProperty('theme');
+  });
+
+  it('moves progress from the pre-Déjà storage key', () => {
+    const state = { ...defaultState(), daily: { day: '2026-11-14', newIntroduced: 3 } };
+    const store = memoryStore({ 'revision-francaise:state': JSON.stringify(state) });
+    const loaded = loadState(store);
+    expect(loaded).toEqual(state);
+    saveState(loaded, store);
+    expect(store.keys()).toEqual([STORAGE_KEY]);
   });
 
   it('resets daily counters on a new day', () => {

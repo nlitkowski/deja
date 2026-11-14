@@ -8,6 +8,7 @@ import { dayKey } from '../lib/date';
 import { indexExercisesByEntry, requeue, type SessionItem } from '../lib/session';
 import { gradeFromResult, review, type AnswerResult } from '../lib/srs';
 import type { SavedState } from '../lib/storage';
+import { Icon } from '../components/Icon';
 
 export interface SessionOutcome {
   title: string;
@@ -127,7 +128,7 @@ export function Session({ title, initialItems, state, update, onExit, onFinish }
     <main className="screen session">
       <header className="session-header">
         <button className="icon-button" onClick={onExit} aria-label={ui.closeSession}>
-          ✕
+          <Icon name="close" />
         </button>
         <div className="progress session-progress" aria-label={ui.cardOf(index + 1, queue.length)}>
           <span style={{ width: `${(index / queue.length) * 100}%` }} />
@@ -171,7 +172,11 @@ export function Session({ title, initialItems, state, update, onExit, onFinish }
               <p>
                 <strong lang="fr">{entry.fr}</strong> = <span lang={helpLang}>{meaning}</span>
               </p>
-              {tip && <p lang={helpLang}>💡 {tip}</p>}
+              {tip && (
+                <p lang={helpLang}>
+                  <Icon name="hint" /> {tip}
+                </p>
+              )}
               {example && (
                 <p className="example">
                   <span lang="fr">{example.fr}</span>

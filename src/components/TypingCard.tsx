@@ -3,6 +3,7 @@ import { checkAnswer } from '../lib/answer';
 import type { AnswerResult, ExerciseContext } from '../exercises/types';
 import { ui } from '../i18n/ui';
 import { AccentBar } from './AccentBar';
+import { Icon } from './Icon';
 
 interface Props {
   answers: string[];
@@ -59,9 +60,11 @@ export function TypingCard({ answers, hint, ctx, locked, onAnswer, prompt }: Pro
     >
       <div className="prompt">{prompt(value)}</div>
 
-      {hint && (hintShown ? <p className="hint">💡 {hint}</p> : !locked && (
+      {hint && (hintShown ? <p className="hint">
+          <Icon name="hint" /> {hint}
+        </p> : !locked && (
         <button type="button" className="link-button" onClick={() => setHintShown(true)}>
-          {ui.showHint}
+          <Icon name="hint" /> {ui.showHint}
         </button>
       ))}
 

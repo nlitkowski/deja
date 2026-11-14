@@ -1,20 +1,21 @@
 import { useEffect } from 'react';
-import { LangSwitch } from '../components/LangSwitch';
+import { KIND_ICON, sectionId } from '../components/ContentTree';
 import { RichText } from '../components/RichText';
+import { SheetsLayout } from '../components/SheetsLayout';
 import { localize, type HelpLang } from '../content/localized';
 import { content } from '../content/registry';
 import type { SheetBlock } from '../content/sheet';
 import { ui } from '../i18n/ui';
+import { Emoji } from '../components/Emoji';
 
 interface Props {
   sheetKey: string;
   helpLang: HelpLang;
   onHelpLang: (lang: HelpLang) => void;
   onPractice: (unitKey: string) => void;
+  onOpenSheet: (key: string) => void;
   onBack: () => void;
 }
-
-const KIND_ICON = { grammar: '📐', vocabulary: '📚', phrases: '💬' } as const;
 
 function Block({ block, lang }: { block: SheetBlock; lang: HelpLang }) {
   const title = 'title' in block ? localize(block.title, lang) : undefined;
@@ -108,7 +109,7 @@ function Block({ block, lang }: { block: SheetBlock; lang: HelpLang }) {
   }
 }
 
-export function SheetView({ sheetKey, helpLang, onHelpLang, onPractice, onBack }: Props) {
+export function SheetView({ sheetKey, helpLang, onHelpLang, onPractice, onOpenSheet, onBack }: Props) {
   const sheet = content.sheets.get(sheetKey);
 
   useEffect(() => {
@@ -119,18 +120,19 @@ export function SheetView({ sheetKey, helpLang, onHelpLang, onPractice, onBack }
   const practice = sheet.practice.map((key) => content.units.get(key)).filter((u) => u !== undefined);
 
   return (
-    <main className="screen sheet">
-      <header className="top-bar">
-        <button className="back-button" onClick={onBack}>
-          ‹ {ui.sheets}
-        </button>
-        <LangSwitch value={helpLang} onChange={onHelpLang} />
-      </header>
-
+    <SheetsLayout
+      currentKey={sheet.key}
+      sectionTitles={sheet.sections.map((section) => section.title)}
+      backLabel={ui.sheets}
+      helpLang={helpLang}
+      onHelpLang={onHelpLang}
+      onOpenSheet={onOpenSheet}
+      onBack={onBack}
+    >
       <div className="sheet-hero">
         {sheet.label && <p className="kicker">{sheet.label}</p>}
         <h1>
-          <span aria-hidden>{sheet.icon}</span> {sheet.title}
+          <Emoji char={sheet.icon} /> {sheet.title}
         </h1>
         {sheet.summary && (
           <p className="muted" lang={helpLang}>
@@ -139,18 +141,10 @@ export function SheetView({ sheetKey, helpLang, onHelpLang, onPractice, onBack }
         )}
       </div>
 
-      <nav className="section-chips" aria-label={ui.sheetContents}>
-        {sheet.sections.map((section, i) => (
-          <a key={i} href={`#section-${i}`} className={`chip chip-${section.kind}`}>
-            <span aria-hidden>{KIND_ICON[section.kind]}</span> {section.title}
-          </a>
-        ))}
-      </nav>
-
       {sheet.sections.map((section, i) => (
-        <section key={i} id={`section-${i}`} className={`sheet-section kind-${section.kind}`}>
+        <section key={i} id={sectionId(i)} tabIndex={-1} className={`sheet-section kind-${section.kind}`}>
           <p className="section-kind">
-            {KIND_ICON[section.kind]} {ui.sectionKinds[section.kind]}
+            <Emoji char={KIND_ICON[section.kind]} /> {ui.sectionKinds[section.kind]}
           </p>
           <h2 lang="fr">{section.title}</h2>
           {section.blocks.map((block, j) => (
@@ -164,11 +158,11 @@ export function SheetView({ sheetKey, helpLang, onHelpLang, onPractice, onBack }
           <h2>{ui.practiceThis}</h2>
           {practice.map((unit) => (
             <button key={unit.key} className="button primary" onClick={() => onPractice(unit.key)}>
-              {unit.icon} {unit.title}
+              <Emoji char={unit.icon} /> {unit.title}
             </button>
           ))}
         </section>
       )}
-    </main>
+    </SheetsLayout>
   );
 }

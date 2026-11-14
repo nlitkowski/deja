@@ -6,6 +6,8 @@ import type { SessionItem } from '../lib/session';
 import { isDue } from '../lib/srs';
 import type { SavedState } from '../lib/storage';
 import { buildReviewSession, buildUnitSession, NEW_PER_DAY } from '../sessions';
+import { Icon } from '../components/Icon';
+import { Emoji } from '../components/Emoji';
 
 interface Props {
   state: SavedState;
@@ -26,13 +28,16 @@ export function Home({ state, update, onStart, onOpenSheets, onOpenSettings }: P
     <main className="screen home">
       <header className="home-header">
         <div>
-          <h1>{ui.appTitle}</h1>
+          <h1 className="logotype">
+            <img className="logo-mark" src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width={36} height={36} />
+            {ui.appTitle}
+          </h1>
           <p className="subtitle">{ui.appSubtitle}</p>
         </div>
         <div className="header-actions">
           <LangSwitch value={state.settings.helpLang} onChange={(helpLang) => update((s) => ({ ...s, settings: { ...s.settings, helpLang } }))} />
           <button className="icon-button settings-button" onClick={onOpenSettings} aria-label={ui.settings} title={ui.settings}>
-            ⚙
+            <Icon name="settings" />
           </button>
         </div>
       </header>
@@ -50,15 +55,15 @@ export function Home({ state, update, onStart, onOpenSheets, onOpenSettings }: P
 
       {sheetCount > 0 && (
         <button className="sheets-card" onClick={onOpenSheets}>
-          <span className="sheets-card-icon" aria-hidden>
-            📖
+          <span className="sheets-card-icon">
+            <Emoji char="📖" />
           </span>
           <span className="unit-body">
             <span className="unit-title">{ui.sheets}</span>
             <span className="muted small">{ui.sheetsTeaser(sheetCount)}</span>
           </span>
           <span className="chevron" aria-hidden>
-            ›
+            <Icon name="next" />
           </span>
         </button>
       )}
@@ -66,7 +71,7 @@ export function Home({ state, update, onStart, onOpenSheets, onOpenSettings }: P
       {exercisePacks.map((pack) => (
         <section key={pack.id} className="pack">
           <h2>
-            <span aria-hidden>{pack.icon}</span> {pack.title} <span className="level">{pack.level}</span>
+            <Emoji char={pack.icon} /> {pack.title} <span className="level">{pack.level}</span>
           </h2>
           <ol className="unit-list">
             {pack.unitList.map((unit) => {
@@ -76,8 +81,8 @@ export function Home({ state, update, onStart, onOpenSheets, onOpenSettings }: P
               return (
                 <li key={unit.key}>
                   <button className="unit" onClick={() => onStart(unit.title, buildUnitSession(state, unit.key))}>
-                    <span className="unit-icon" aria-hidden>
-                      {unit.icon}
+                    <span className="unit-icon">
+                      <Emoji char={unit.icon} />
                     </span>
                     <span className="unit-body">
                       <span className="unit-title">{unit.title}</span>
@@ -90,7 +95,7 @@ export function Home({ state, update, onStart, onOpenSheets, onOpenSettings }: P
                       </span>
                     </span>
                     <span className="chevron" aria-hidden>
-                      ›
+                      <Icon name="next" />
                     </span>
                   </button>
                 </li>

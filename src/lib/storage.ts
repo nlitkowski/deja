@@ -3,7 +3,9 @@ import type { DayKey } from './date';
 import type { SrsCard } from './srs';
 
 export const SCHEMA_VERSION = 4;
-const KEY = 'revision-francaise:state';
+export const STORAGE_KEY = 'deja:state';
+/** Key used before the app was named Déjà; read once, then removed. */
+const LEGACY_KEY = 'revision-francaise:state';
 
 export interface Settings {
   dailyGoal: 30 | 50 | 100;
@@ -67,7 +69,7 @@ export function migrate(raw: unknown): SavedState {
   };
 }
 
-type KeyValueStore = Pick<Storage, 'getItem' | 'setItem'>;
+type KeyValueStore = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
 
 function browserStore(): KeyValueStore | undefined {
   try {
@@ -79,7 +81,7 @@ function browserStore(): KeyValueStore | undefined {
 
 export function loadState(store: KeyValueStore | undefined = browserStore()): SavedState {
   try {
-    const text = store?.getItem(KEY);
+    const text = store?.getItem(STORAGE_KEY) ?? store?.getItem(LEGACY_KEY);
     return text ? migrate(JSON.parse(text)) : defaultState();
   } catch {
     return defaultState();
@@ -88,7 +90,8 @@ export function loadState(store: KeyValueStore | undefined = browserStore()): Sa
 
 export function saveState(state: SavedState, store: KeyValueStore | undefined = browserStore()): boolean {
   try {
-    store?.setItem(KEY, JSON.stringify(state));
+    store?.setItem(STORAGE_KEY, JSON.stringify(state));
+    store?.removeItem(LEGACY_KEY);
     return true;
   } catch {
     return false;

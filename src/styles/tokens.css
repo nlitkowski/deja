@@ -1,0 +1,121 @@
+/*
+ * Theme = palette (data-palette: classic | provence | pixel) × mode (data-theme: light | dark; absent = follow the system).
+ * Colours use light-dark(), resolved through color-scheme, so each palette defines both modes in one place.
+ * Palettes are scoped to [data-palette], not only :root, so Réglages can render a live preview of each one.
+ */
+:root {
+  color-scheme: light dark;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+:root,
+[data-palette='classic'] {
+  --bg: light-dark(#faf7f2, #12152a);
+  --surface: light-dark(#ffffff, #1a1f3a);
+  --text: light-dark(#2c2c2c, #f2ede4);
+  --muted: light-dark(#6b6b6b, #a3a8c3);
+  --border: light-dark(#e6e0d4, #2c3358);
+  --accent: light-dark(#2d4a7a, #7d9cd6);
+  --on-accent: light-dark(#ffffff, #11152a);
+  --highlight: #c9a84c;
+  --on-highlight: #1a1f3a;
+  --info: light-dark(#2d4a7a, #7d9cd6);
+  --success: light-dark(#27795b, #5fbf94);
+  --danger: light-dark(#c0392b, #e8776b);
+  --ok-bg: light-dark(#e3f2ec, #173a2f);
+  --bad-bg: light-dark(#f8e3e0, #44201c);
+  --near-bg: light-dark(#f0e6c8, #3d3420);
+  --selected-bg: light-dark(#1a1f3a, #c9a84c);
+  --selected-fg: light-dark(#faf7f2, #1a1f3a);
+  --hero-bg: light-dark(#1a1f3a, #232a4d);
+  --hero-fg: #faf7f2;
+  /* Logotype: navy on light backgrounds, gold on navy (BRANDING.md). */
+  --brand: light-dark(#1a1f3a, #c9a84c);
+  --hero-muted: #c9cbe0;
+
+  --font-head: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --font-size: 17px;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --pill-radius: 999px;
+  --border-w: 1px;
+  --shadow: none;
+  --shadow-sm: none;
+}
+
+[data-palette='provence'] {
+  --brand: var(--text);
+  --bg: light-dark(#f6f3f8, #1c1824);
+  --surface: light-dark(#ffffff, #262031);
+  --text: light-dark(#2e2a3a, #f1ecf6);
+  --muted: light-dark(#6b6478, #b1a8c0);
+  --border: light-dark(#e4dcea, #3a3148);
+  --accent: light-dark(#6b4fa0, #b9a2e6);
+  --on-accent: light-dark(#ffffff, #1c1824);
+  --highlight: light-dark(#e0a526, #f0bf4c);
+  --on-highlight: #2e2a3a;
+  --info: light-dark(#6b4fa0, #b9a2e6);
+  --success: light-dark(#5d7a2e, #a3c46a);
+  --danger: light-dark(#b8502e, #e88a6a);
+  --ok-bg: light-dark(#edf2e1, #26301a);
+  --bad-bg: light-dark(#f6e2da, #3d2219);
+  --near-bg: light-dark(#fbf0d5, #3b3119);
+  --selected-bg: light-dark(#6b4fa0, #f0bf4c);
+  --selected-fg: light-dark(#ffffff, #1c1824);
+  --hero-bg: light-dark(#4a3870, #352a4d);
+  --hero-fg: #fbf7ff;
+  --hero-muted: #d6cbe8;
+
+  --font-head: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --font-size: 17px;
+  --radius: 22px;
+  --radius-sm: 12px;
+  --pill-radius: 999px;
+  --border-w: 1px;
+  --shadow: 0 6px 18px light-dark(rgb(74 56 112 / 0.08), rgb(0 0 0 / 0.3));
+  --shadow-sm: none;
+}
+
+/* Light: Game Boy greens. Dark: NES night. */
+[data-palette='pixel'] {
+  --brand: var(--text);
+  --bg: light-dark(#c4cfa1, #0b0b1e);
+  --surface: light-dark(#e3ebc3, #16163a);
+  --text: light-dark(#0f380f, #fcfcfc);
+  --muted: light-dark(#3d6b3d, #a4a4d0);
+  --border: light-dark(#0f380f, #fcfcfc);
+  --accent: light-dark(#306230, #3cbcfc);
+  --on-accent: light-dark(#e3ebc3, #0b0b1e);
+  --highlight: light-dark(#8bac0f, #f8b800);
+  --on-highlight: light-dark(#0f380f, #0b0b1e);
+  --info: light-dark(#306230, #3cbcfc);
+  --success: light-dark(#306230, #58d854);
+  --danger: light-dark(#b8341b, #f83800);
+  --ok-bg: light-dark(#b3c77a, #0e3b12);
+  --bad-bg: light-dark(#e8b8a8, #4a1208);
+  --near-bg: light-dark(#d9d68a, #4a3a00);
+  --selected-bg: light-dark(#0f380f, #f8b800);
+  --selected-fg: light-dark(#e3ebc3, #0b0b1e);
+  --hero-bg: light-dark(#0f380f, #2038ec);
+  --hero-fg: light-dark(#e3ebc3, #fcfcfc);
+  --hero-muted: light-dark(#9bbc0f, #bcd0fc);
+
+  --font-head: 'Press Start 2P', ui-monospace, monospace;
+  --font-body: 'VT323', ui-monospace, monospace;
+  --font-size: 22px;
+  --radius: 0;
+  --radius-sm: 0;
+  --pill-radius: 0;
+  --border-w: 3px;
+  --shadow: 4px 4px 0 var(--border);
+  --shadow-sm: 3px 3px 0 var(--border);
+}
