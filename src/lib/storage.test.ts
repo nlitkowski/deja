@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { defaultState, loadState, migrate, rollDay, saveState, SCHEMA_VERSION, STORAGE_KEY } from './storage';
+import { defaultSettings, defaultState, deviceId, loadState, migrate, saveState, SCHEMA_VERSION, STORAGE_KEY } from './storage';
 
 function memoryStore(initial?: Record<string, string>) {
   const values = new Map(Object.entries(initial ?? {}));
@@ -11,58 +11,58 @@ function memoryStore(initial?: Record<string, string>) {
   };
 }
 
+const card = { ease: 2.5, interval: 1, due: '2026-11-15', reps: 1, lapses: 0, correctTotal: 1, lastReviewed: '2026-11-14' };
+
 describe('storage', () => {
-  it('round-trips state', () => {
+  it('round-trips settings', () => {
     const store = memoryStore();
-    const state = { ...defaultState(), daily: { day: '2026-11-14', newIntroduced: 2 } };
+    const state = { ...defaultState(), settings: { ...defaultSettings(), palette: 'pixel' as const } };
     saveState(state, store);
-    expect(loadState(store)).toEqual(state);
+    expect(loadState(store)).toEqual({ state });
   });
 
   it('falls back to defaults on corrupt or unknown data', () => {
-    expect(loadState(memoryStore({ [STORAGE_KEY]: '{not json' }))).toEqual(defaultState());
-    expect(migrate({ schemaVersion: SCHEMA_VERSION + 1 })).toEqual(defaultState());
-    expect(migrate(null)).toEqual(defaultState());
+    expect(loadState(memoryStore({ [STORAGE_KEY]: '{not json' })).state).toEqual(defaultState());
+    expect(migrate({ schemaVersion: SCHEMA_VERSION + 1 }).state).toEqual(defaultState());
+    expect(migrate(null).state).toEqual(defaultState());
   });
 
   it('fills missing settings with defaults', () => {
-    const s = migrate({ schemaVersion: SCHEMA_VERSION, srs: {}, daily: { day: '', newIntroduced: 0 }, settings: { sound: false } });
-    expect(s.settings).toEqual({ ...defaultState().settings, sound: false });
+    expect(migrate({ schemaVersion: SCHEMA_VERSION, settings: { sound: false } }).state.settings).toEqual({ ...defaultSettings(), sound: false });
   });
 
-  it('migrates v1 state and keeps progress', () => {
-    const card = { ease: 2.5, interval: 1, due: '2026-11-15', reps: 1, lapses: 0, correctTotal: 1, lastReviewed: '2026-11-14' };
+  it('migrates v1 settings and hands old progress out as legacy', () => {
     const v1 = {
       schemaVersion: 1,
       srs: { 'p/e': card },
       daily: { day: '2026-11-14', newIntroduced: 1 },
       settings: { dailyGoal: 100, sound: false, vibration: true },
     };
-    const s = migrate(v1);
-    expect(s.schemaVersion).toBe(SCHEMA_VERSION);
-    expect(s.srs['p/e']).toEqual(card);
-    expect(s.settings).toEqual({ dailyGoal: 100, sound: false, vibration: true, helpLang: 'pl', colorMode: 'system', palette: 'classic' });
+    const { state, legacy } = migrate(v1);
+    expect(state).toEqual({ schemaVersion: SCHEMA_VERSION, settings: { ...defaultSettings(), dailyGoal: 100, sound: false } });
+    expect(legacy).toEqual({ srs: { 'p/e': card }, daily: { day: '2026-11-14', newIntroduced: 1 } });
   });
 
   it('keeps the chosen colour mode when adding palettes (v3 → v4)', () => {
-    const v3 = { schemaVersion: 3, srs: {}, daily: { day: '', newIntroduced: 0 }, settings: { ...defaultState().settings, theme: 'dark' } };
-    const s = migrate(v3);
-    expect(s.settings).toMatchObject({ colorMode: 'dark', palette: 'classic' });
-    expect(s.settings).not.toHaveProperty('theme');
+    const v3 = { schemaVersion: 3, srs: {}, daily: { day: '', newIntroduced: 0 }, settings: { ...defaultSettings(), theme: 'dark' } };
+    const { state, legacy } = migrate(v3);
+    expect(state.settings).toMatchObject({ colorMode: 'dark', palette: 'classic' });
+    expect(state.settings).not.toHaveProperty('theme');
+    expect(legacy).toBeUndefined();
   });
 
-  it('moves progress from the pre-Déjà storage key', () => {
-    const state = { ...defaultState(), daily: { day: '2026-11-14', newIntroduced: 3 } };
-    const store = memoryStore({ 'revision-francaise:state': JSON.stringify(state) });
+  it('reads the pre-Déjà key and drops it on save', () => {
+    const v4 = { schemaVersion: 4, srs: { 'p/e': card }, daily: { day: '2026-11-14', newIntroduced: 3 }, settings: defaultSettings() };
+    const store = memoryStore({ 'revision-francaise:state': JSON.stringify(v4) });
     const loaded = loadState(store);
-    expect(loaded).toEqual(state);
-    saveState(loaded, store);
+    expect(loaded.legacy?.srs).toEqual({ 'p/e': card });
+    saveState(loaded.state, store);
     expect(store.keys()).toEqual([STORAGE_KEY]);
+    expect(loadState(store).legacy).toBeUndefined();
   });
 
-  it('resets daily counters on a new day', () => {
-    const s = { ...defaultState(), daily: { day: '2026-11-13', newIntroduced: 5 } };
-    expect(rollDay(s, '2026-11-14').daily).toEqual({ day: '2026-11-14', newIntroduced: 0 });
-    expect(rollDay(s, '2026-11-13')).toBe(s);
+  it('keeps one device id per browser', () => {
+    const store = memoryStore();
+    expect(deviceId(store)).toBe(deviceId(store));
   });
 });

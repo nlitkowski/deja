@@ -2,7 +2,11 @@ import type { HelpLang } from '../content/localized';
 import type { DayKey } from './date';
 import type { SrsCard } from './srs';
 
-export const SCHEMA_VERSION = 4;
+/**
+ * Settings live in localStorage: small, and index.html must read them synchronously to apply the theme
+ * before the first paint. Learning progress lives in the event log (see lib/progress).
+ */
+export const SCHEMA_VERSION = 5;
 export const STORAGE_KEY = 'deja:state';
 /** Key used before the app was named Déjà; read once, then removed. */
 const LEGACY_KEY = 'revision-francaise:state';
@@ -24,18 +28,26 @@ export const PALETTES: readonly Palette[] = ['classic', 'provence', 'pixel'];
 
 export interface SavedState {
   schemaVersion: typeof SCHEMA_VERSION;
-  srs: Record<string, SrsCard>;
-  daily: { day: DayKey; newIntroduced: number };
   settings: Settings;
 }
 
+/** Progress stored inside the state blob before v5; turned into a baseline event once. */
+export interface LegacyProgress {
+  srs: Record<string, SrsCard>;
+  daily: { day: DayKey; newIntroduced: number };
+}
+
+export interface LoadedState {
+  state: SavedState;
+  legacy?: LegacyProgress;
+}
+
+export function defaultSettings(): Settings {
+  return { dailyGoal: 50, sound: true, vibration: true, helpLang: 'pl', colorMode: 'system', palette: 'classic' };
+}
+
 export function defaultState(): SavedState {
-  return {
-    schemaVersion: SCHEMA_VERSION,
-    srs: {},
-    daily: { day: '', newIntroduced: 0 },
-    settings: { dailyGoal: 50, sound: true, vibration: true, helpLang: 'pl', colorMode: 'system', palette: 'classic' },
-  };
+  return { schemaVersion: SCHEMA_VERSION, settings: defaultSettings() };
 }
 
 /** `MIGRATIONS[n]` upgrades a state of version n to n + 1. */
@@ -46,32 +58,40 @@ const MIGRATIONS: Record<number, (s: Record<string, unknown>) => Record<string, 
     const { theme, ...settings } = s.settings as { theme?: ColorMode };
     return { ...s, schemaVersion: 4, settings: { ...settings, colorMode: theme ?? 'system', palette: 'classic' } };
   },
+  // Progress moved to the event log; migrate() hands it out as `legacy` instead of keeping it here.
+  4: (s) => {
+    const next: Record<string, unknown> = { ...s, schemaVersion: 5 };
+    delete next.srs;
+    delete next.daily;
+    return next;
+  },
 };
 
-export function migrate(raw: unknown): SavedState {
-  if (!raw || typeof raw !== 'object') return defaultState();
+export function migrate(raw: unknown): LoadedState {
+  if (!raw || typeof raw !== 'object') return { state: defaultState() };
   let state = raw as Record<string, unknown>;
   let version = typeof state.schemaVersion === 'number' ? state.schemaVersion : 0;
-  if (version > SCHEMA_VERSION) return defaultState();
+  if (version > SCHEMA_VERSION) return { state: defaultState() };
+
+  const old = state as Partial<LegacyProgress>;
+  const legacy =
+    version < 5 && old.srs && Object.keys(old.srs).length
+      ? { srs: old.srs, daily: old.daily ?? { day: '', newIntroduced: 0 } }
+      : undefined;
+
   while (version < SCHEMA_VERSION) {
     const step = MIGRATIONS[version];
-    if (!step) return defaultState();
+    if (!step) return { state: defaultState(), legacy };
     state = step(state);
     version += 1;
   }
-  const base = defaultState();
-  const s = state as Partial<SavedState>;
-  return {
-    schemaVersion: SCHEMA_VERSION,
-    srs: s.srs ?? base.srs,
-    daily: s.daily ?? base.daily,
-    settings: { ...base.settings, ...s.settings },
-  };
+  const settings = { ...defaultSettings(), ...(state as Partial<SavedState>).settings };
+  return { state: { schemaVersion: SCHEMA_VERSION, settings }, legacy };
 }
 
-type KeyValueStore = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
+export type KeyValueStore = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
 
-function browserStore(): KeyValueStore | undefined {
+export function browserStore(): KeyValueStore | undefined {
   try {
     return globalThis.localStorage;
   } catch {
@@ -79,15 +99,16 @@ function browserStore(): KeyValueStore | undefined {
   }
 }
 
-export function loadState(store: KeyValueStore | undefined = browserStore()): SavedState {
+export function loadState(store: KeyValueStore | undefined = browserStore()): LoadedState {
   try {
     const text = store?.getItem(STORAGE_KEY) ?? store?.getItem(LEGACY_KEY);
-    return text ? migrate(JSON.parse(text)) : defaultState();
+    return text ? migrate(JSON.parse(text)) : { state: defaultState() };
   } catch {
-    return defaultState();
+    return { state: defaultState() };
   }
 }
 
+/** Writes the v5 shape; call only after any `legacy` progress has been saved to the event log. */
 export function saveState(state: SavedState, store: KeyValueStore | undefined = browserStore()): boolean {
   try {
     store?.setItem(STORAGE_KEY, JSON.stringify(state));
@@ -98,7 +119,17 @@ export function saveState(state: SavedState, store: KeyValueStore | undefined = 
   }
 }
 
-/** Resets the per-day counters when the day changed. */
-export function rollDay(state: SavedState, today: DayKey): SavedState {
-  return state.daily.day === today ? state : { ...state, daily: { day: today, newIntroduced: 0 } };
+const DEVICE_KEY = 'deja:device';
+
+/** Stable per-browser id stamped on events, so logs from several devices can be told apart once synced. */
+export function deviceId(store: KeyValueStore | undefined = browserStore()): string {
+  try {
+    const existing = store?.getItem(DEVICE_KEY);
+    if (existing) return existing;
+    const id = crypto.randomUUID();
+    store?.setItem(DEVICE_KEY, id);
+    return id;
+  } catch {
+    return 'unknown-device';
+  }
 }

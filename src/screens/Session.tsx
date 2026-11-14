@@ -3,12 +3,11 @@ import { localize } from '../content/localized';
 import { accentPairs, content } from '../content/registry';
 import { exerciseTypes, isProduction, supportsHelpLang } from '../exercises/registry';
 import type { ExerciseContext } from '../exercises/types';
-import { ui } from '../i18n/ui';
-import { dayKey } from '../lib/date';
-import { indexExercisesByEntry, requeue, type SessionItem } from '../lib/session';
-import { gradeFromResult, review, type AnswerResult } from '../lib/srs';
-import type { SavedState } from '../lib/storage';
 import { Icon } from '../components/Icon';
+import { ui } from '../i18n/ui';
+import { indexExercisesByEntry, requeue, type SessionItem } from '../lib/session';
+import type { AnswerResult } from '../lib/srs';
+import { useAppStore } from '../state/appStore';
 
 export interface SessionOutcome {
   title: string;
@@ -21,8 +20,6 @@ export interface SessionOutcome {
 interface Props {
   title: string;
   initialItems: SessionItem[];
-  state: SavedState;
-  update: (fn: (s: SavedState) => SavedState) => void;
   onExit: () => void;
   onFinish: (outcome: SessionOutcome) => void;
 }
@@ -37,13 +34,14 @@ function vibrate(pattern: number | number[]) {
   }
 }
 
-export function Session({ title, initialItems, state, update, onExit, onFinish }: Props) {
+export function Session({ title, initialItems, onExit, onFinish }: Props) {
   const [queue, setQueue] = useState(initialItems);
   const [index, setIndex] = useState(0);
   const [result, setResult] = useState<AnswerResult>();
   const stats = useRef({ answered: 0, correct: 0, nearMiss: 0, entries: new Set<string>() });
 
-  const { helpLang } = state.settings;
+  const { helpLang, vibration } = useAppStore((s) => s.settings);
+  const recordAnswer = useAppStore((s) => s.recordAnswer);
   const ctx: ExerciseContext = useMemo(() => ({ accentPairs, helpLang }), [helpLang]);
   const byEntry = useMemo(
     () => indexExercisesByEntry([...content.exercises.values()].filter((ex) => supportsHelpLang(ex.type, helpLang))),
@@ -100,22 +98,10 @@ export function Session({ title, initialItems, state, update, onExit, onFinish }
     if (r.correct) s.correct += 1;
     if (r.nearMiss) s.nearMiss += 1;
     exercise.entryIds.forEach((id) => s.entries.add(id));
-    if (state.settings.vibration) vibrate(r.correct ? 15 : [30, 40, 30]);
+    if (vibration) vibrate(r.correct ? 15 : [30, 40, 30]);
 
     if (!r.correct) setQueue((q) => requeue(q, index, item, byEntry.get(item.entryId) ?? [], isProduction));
-    if (item.early && r.correct) return;
-
-    const grade = gradeFromResult(r);
-    const today = dayKey(new Date());
-    update((current) => {
-      const srs = { ...current.srs };
-      let fresh = 0;
-      for (const id of exercise.entryIds) {
-        if (!srs[id]) fresh += 1;
-        srs[id] = review(srs[id], grade, today);
-      }
-      return { ...current, srs, daily: { ...current.daily, newIntroduced: current.daily.newIntroduced + fresh } };
-    });
+    recordAnswer({ exerciseId: exercise.id, entryIds: exercise.entryIds, result: r, early: item.early });
   }
 
   const View = type.View;

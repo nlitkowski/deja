@@ -14,7 +14,11 @@ Zasady nadrzędne:
 ## Stack
 
 - Vite + React + TypeScript (strict), zależności w najnowszych stabilnych wersjach
-- Bez backendu. Stan trzymany w `localStorage` (wrapper z try/catch i wersjonowaniem schematu)
+- Bez backendu (na razie), ale bez blokowania drogi do kont i synchronizacji: **local-first, log zdarzeń**.
+  - Ustawienia: `localStorage` (`deja:state`, wersjonowanie schematu i migracje w `src/lib/storage.ts`), bo skrypt w `index.html` czyta je synchronicznie.
+  - Postęp: **append-only log zdarzeń** w IndexedDB (`src/lib/progress/`): każda odpowiedź to `ReviewEvent` z UUID, `deviceId`, `at`, `day`. Karty SRS, nowe na dziś, a później XP, streak i statystyki to czyste funkcje liczone z logu (`foldEvents`), niezależne od kolejności zdarzeń. Zdarzeń nie edytujemy ani nie usuwamy.
+  - Dostęp do logu tylko przez interfejs `ProgressStore`; przyszły sync z backendem to nowa implementacja tego interfejsu (wysyłka niewysłanych zdarzeń, pobranie cudzych od kursora), bez zmian w UI.
+  - Stan aplikacji w Zustand (`src/state/appStore.ts`): `settings`, `progress`, `recordAnswer`, `updateSettings`. Ekrany czytają store przez selektory zamiast przekazywać stan w propsach.
 - Stylowanie: CSS Modules albo zwykły CSS ze zmiennymi. Bez Tailwinda i bez bibliotek UI
 - PWA (vite-plugin-pwa), żeby dało się zainstalować na telefonie i używać offline
 - Walidacja pakietów treści: Zod (schemat jest źródłem typów, przez `z.infer`)
@@ -77,7 +81,10 @@ src/
     srs.ts                  # SM-2 lite
     answer.ts               # normalizacja i porównywanie odpowiedzi
     session.ts              # budowanie sesji z kolejki
-    storage.ts              # localStorage + migracje schematu
+    storage.ts              # ustawienia w localStorage + migracje schematu
+    progress/               # log zdarzeń: events.ts, fold.ts (czyste), store.ts (IndexedDB / pamięć), baseline.ts
+  state/
+    appStore.ts             # Zustand: settings, progress, recordAnswer
   components/
   screens/
 ```
@@ -233,7 +240,7 @@ Nawiązanie do kompendium: granat `#1a1f3a`, krem `#faf7f2`, złoto `#c9a84c`, a
 - Żadnych zewnętrznych API, żadnego trackingu.
 - Nowe treści dodawaj tylko w `content/`, jako pakiet zgodny ze schematem. Każdy nowy wpis potrzebuje co najmniej jednego ręcznie napisanego ćwiczenia produkcyjnego (gap-fill albo translate). Ćwiczenia generowane automatycznie są tylko dodatkiem.
 - Logika gry (`src/game/`) i SRS to czyste funkcje bez Reacta, z czasem przekazywanym jako argument, pokryte testami.
-- Stan zapisany na urządzeniu ma pole `schemaVersion`, a każda zmiana jego kształtu wymaga migracji w `storage.ts`.
+- Stan zapisany na urządzeniu ma pole `schemaVersion`, a każda zmiana jego kształtu wymaga migracji w `storage.ts`. Nowe dane o postępie zapisuj jako nowy typ zdarzenia w logu (z obsługą w `applyEvent`), nigdy jako osobny zapis stanu.
 
 ## Kolejność budowy
 

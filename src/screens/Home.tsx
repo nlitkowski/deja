@@ -1,26 +1,29 @@
+import { Emoji } from '../components/Emoji';
+import { Icon } from '../components/Icon';
 import { LangSwitch } from '../components/LangSwitch';
 import { content } from '../content/registry';
 import { ui } from '../i18n/ui';
 import { dayKey } from '../lib/date';
+import { newIntroducedOn } from '../lib/progress/fold';
 import type { SessionItem } from '../lib/session';
 import { isDue } from '../lib/srs';
-import type { SavedState } from '../lib/storage';
 import { buildReviewSession, buildUnitSession, NEW_PER_DAY } from '../sessions';
-import { Icon } from '../components/Icon';
-import { Emoji } from '../components/Emoji';
+import { useAppStore } from '../state/appStore';
 
 interface Props {
-  state: SavedState;
-  update: (fn: (s: SavedState) => SavedState) => void;
   onStart: (title: string, items: SessionItem[]) => void;
   onOpenSheets: () => void;
   onOpenSettings: () => void;
 }
 
-export function Home({ state, update, onStart, onOpenSheets, onOpenSettings }: Props) {
+export function Home({ onStart, onOpenSheets, onOpenSettings }: Props) {
+  const progress = useAppStore((s) => s.progress);
+  const settings = useAppStore((s) => s.settings);
+  const updateSettings = useAppStore((s) => s.updateSettings);
+  const cards = progress.cards;
   const today = dayKey(new Date());
-  const dueCount = [...content.entries.values()].filter((e) => !e.deprecated && state.srs[e.id] && isDue(state.srs[e.id]!, today)).length;
-  const reviewSize = buildReviewSession(state).length;
+  const dueCount = [...content.entries.values()].filter((e) => !e.deprecated && cards[e.id] && isDue(cards[e.id]!, today)).length;
+  const reviewSize = buildReviewSession(progress, settings).length;
   const sheetCount = content.sheets.size;
   const exercisePacks = content.packs.filter((p) => p.unitList.length);
 
@@ -35,7 +38,7 @@ export function Home({ state, update, onStart, onOpenSheets, onOpenSettings }: P
           <p className="subtitle">{ui.appSubtitle}</p>
         </div>
         <div className="header-actions">
-          <LangSwitch value={state.settings.helpLang} onChange={(helpLang) => update((s) => ({ ...s, settings: { ...s.settings, helpLang } }))} />
+          <LangSwitch value={settings.helpLang} onChange={(helpLang) => updateSettings({ helpLang })} />
           <button className="icon-button settings-button" onClick={onOpenSettings} aria-label={ui.settings} title={ui.settings}>
             <Icon name="settings" />
           </button>
@@ -46,9 +49,9 @@ export function Home({ state, update, onStart, onOpenSheets, onOpenSettings }: P
         <div>
           <p className="big-number">{dueCount}</p>
           <p className="muted">{ui.dueCount(dueCount)}</p>
-          <p className="muted small">{ui.newToday(state.daily.newIntroduced, NEW_PER_DAY)}</p>
+          <p className="muted small">{ui.newToday(newIntroducedOn(progress, today), NEW_PER_DAY)}</p>
         </div>
-        <button className="button primary big" disabled={reviewSize === 0} onClick={() => onStart(ui.review, buildReviewSession(state))}>
+        <button className="button primary big" disabled={reviewSize === 0} onClick={() => onStart(ui.review, buildReviewSession(progress, settings))}>
           {reviewSize === 0 ? ui.allDoneToday : ui.reviewWithCount(reviewSize)}
         </button>
       </section>
@@ -76,11 +79,11 @@ export function Home({ state, update, onStart, onOpenSheets, onOpenSettings }: P
           <ol className="unit-list">
             {pack.unitList.map((unit) => {
               const total = unit.entryIds.length;
-              const seen = unit.entryIds.filter((id) => state.srs[id]).length;
-              const due = unit.entryIds.filter((id) => state.srs[id] && isDue(state.srs[id]!, today)).length;
+              const seen = unit.entryIds.filter((id) => cards[id]).length;
+              const due = unit.entryIds.filter((id) => cards[id] && isDue(cards[id]!, today)).length;
               return (
                 <li key={unit.key}>
-                  <button className="unit" onClick={() => onStart(unit.title, buildUnitSession(state, unit.key))}>
+                  <button className="unit" onClick={() => onStart(unit.title, buildUnitSession(progress, settings, unit.key))}>
                     <span className="unit-icon">
                       <Emoji char={unit.icon} />
                     </span>

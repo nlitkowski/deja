@@ -1,18 +1,14 @@
+import { Icon } from '../components/Icon';
 import { PalettePicker } from '../components/PalettePicker';
 import { Segmented } from '../components/Segmented';
 import { HELP_LANGS } from '../content/localized';
 import { ui } from '../i18n/ui';
-import { COLOR_MODES, type SavedState, type Settings } from '../lib/storage';
-import { Icon } from '../components/Icon';
+import { COLOR_MODES } from '../lib/storage';
+import { useAppStore } from '../state/appStore';
 
-interface Props {
-  settings: Settings;
-  update: (fn: (s: SavedState) => SavedState) => void;
-  onBack: () => void;
-}
-
-export function SettingsScreen({ settings, update, onBack }: Props) {
-  const set = (patch: Partial<Settings>) => update((s) => ({ ...s, settings: { ...s.settings, ...patch } }));
+export function SettingsScreen({ onBack }: { onBack: () => void }) {
+  const settings = useAppStore((s) => s.settings);
+  const set = useAppStore((s) => s.updateSettings);
 
   return (
     <main className="screen settings">

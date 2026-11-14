@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { HelpLang } from './content/localized';
 import { content } from './content/registry';
 import type { SessionItem } from './lib/session';
@@ -10,8 +10,8 @@ import { SettingsScreen } from './screens/SettingsScreen';
 import { SheetList } from './screens/SheetList';
 import { SheetView } from './screens/SheetView';
 import { buildUnitSession } from './sessions';
+import { useAppStore } from './state/appStore';
 import { useTheme } from './theme';
-import { useAppState } from './useAppState';
 
 type Screen =
   | { name: 'home' }
@@ -22,22 +22,29 @@ type Screen =
   | { name: 'settings' };
 
 export function App() {
-  const [state, update] = useAppState();
+  const settings = useAppStore((s) => s.settings);
+  const status = useAppStore((s) => s.status);
+  const updateSettings = useAppStore((s) => s.updateSettings);
   const [screen, setScreen] = useState<Screen>({ name: 'home' });
-  useTheme(state.settings.colorMode, state.settings.palette);
+  useTheme(settings.colorMode, settings.palette);
+
+  useEffect(() => {
+    void useAppStore.getState().init();
+  }, []);
 
   if (import.meta.env.DEV && content.issues.length) return <ContentErrors issues={content.issues} />;
+  // The event log loads in a few milliseconds; render nothing rather than a flash of empty progress.
+  if (status === 'loading') return null;
 
   const home = () => setScreen({ name: 'home' });
-  const setHelpLang = (helpLang: HelpLang) => update((s) => ({ ...s, settings: { ...s.settings, helpLang } }));
+  const setHelpLang = (helpLang: HelpLang) => updateSettings({ helpLang });
+  const unitSession = (unitKey: string) => buildUnitSession(useAppStore.getState().progress, settings, unitKey);
   const startSession = (title: string, items: SessionItem[]) => setScreen({ name: 'session', title, items });
 
   switch (screen.name) {
     case 'home':
       return (
         <Home
-          state={state}
-          update={update}
           onStart={startSession}
           onOpenSheets={() => setScreen({ name: 'sheets' })}
           onOpenSettings={() => setScreen({ name: 'settings' })}
@@ -48,8 +55,6 @@ export function App() {
         <Session
           title={screen.title}
           initialItems={screen.items}
-          state={state}
-          update={update}
           onExit={home}
           onFinish={(outcome) => setScreen({ name: 'summary', outcome })}
         />
@@ -57,11 +62,11 @@ export function App() {
     case 'summary':
       return <SessionSummary outcome={screen.outcome} onDone={home} />;
     case 'settings':
-      return <SettingsScreen settings={state.settings} update={update} onBack={home} />;
+      return <SettingsScreen onBack={home} />;
     case 'sheets':
       return (
         <SheetList
-          helpLang={state.settings.helpLang}
+          helpLang={settings.helpLang}
           onHelpLang={setHelpLang}
           onOpen={(key) => setScreen({ name: 'sheet', key })}
           onBack={home}
@@ -71,9 +76,9 @@ export function App() {
       return (
         <SheetView
           sheetKey={screen.key}
-          helpLang={state.settings.helpLang}
+          helpLang={settings.helpLang}
           onHelpLang={setHelpLang}
-          onPractice={(unitKey) => startSession(content.units.get(unitKey)?.title ?? '', buildUnitSession(state, unitKey))}
+          onPractice={(unitKey) => startSession(content.units.get(unitKey)?.title ?? '', unitSession(unitKey))}
           onOpenSheet={(key) => setScreen({ name: 'sheet', key })}
           onBack={() => setScreen({ name: 'sheets' })}
         />
