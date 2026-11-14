@@ -31,7 +31,8 @@ Treści są w `content/` (format: `content/_template/README.md`), szczegóły pr
 
 Workflow `.github/workflows/deploy.yml` przy każdym pushu na `main`:
 
-- **api**: lint, testy, migracje D1, `wrangler deploy` na `deja-api.litkowski.com` (sekrety repo: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`). Staging ręcznie: Actions → Deploy → Run workflow → `staging`.
+- **check**: lint i testy (aplikacja, Worker, walidacja pakietów treści). Oba deploye czekają na ten job, więc nieudany check niczego nie publikuje.
+- **api**: migracje D1, `wrangler deploy` na `deja-api.litkowski.com` (sekrety repo: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`). Staging ręcznie: Actions → Deploy → Run workflow → `staging`.
 - **pages**: build z `BASE_PATH=/` i `VITE_API_URL=https://deja-api.litkowski.com`, publikacja na GitHub Pages. Domenę `deja.litkowski.com` ustawia się w **Settings → Pages → Custom domain** (przy publikacji z GitHub Actions plik `public/CNAME` jest tylko informacyjny), a w DNS Cloudflare: `CNAME deja → nlitkowski.github.io`, bez proxy (szara chmurka).
 
 ### Smoke test po deployu

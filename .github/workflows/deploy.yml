@@ -20,8 +20,27 @@ env:
   API_URL: https://deja-api.litkowski.com
 
 jobs:
+  # Both deploys wait for this, so a failing check ships nothing.
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run lint
+
+      # App, Worker and validation of every content pack.
+      - run: npm test
+
   # The API at deja-api.litkowski.com, with D1 migrations applied before the new code goes live.
   api:
+    needs: check
     runs-on: ubuntu-latest
     concurrency:
       group: cloudflare-${{ inputs.cloudflare-env || 'production' }}
@@ -41,17 +60,13 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run lint
-
-      # Includes validation of every content pack.
-      - run: npm test
-
       - run: npx wrangler d1 migrations apply $DATABASE --remote $ENV_FLAG
 
       - run: npx wrangler deploy $ENV_FLAG
 
   # The app at deja.litkowski.com (GitHub Pages, custom domain set in the repository's Pages settings).
   pages-build:
+    needs: check
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
