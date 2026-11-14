@@ -15,7 +15,7 @@ import { useTheme } from './theme';
 
 type Screen =
   | { name: 'home' }
-  | { name: 'session'; title: string; items: SessionItem[] }
+  | { name: 'session'; title: string; items: SessionItem[]; unitKey?: string }
   | { name: 'summary'; outcome: SessionOutcome }
   | { name: 'sheets' }
   | { name: 'sheet'; key: string }
@@ -39,7 +39,7 @@ export function App() {
   const home = () => setScreen({ name: 'home' });
   const setHelpLang = (helpLang: HelpLang) => updateSettings({ helpLang });
   const unitSession = (unitKey: string) => buildUnitSession(useAppStore.getState().progress, settings, unitKey);
-  const startSession = (title: string, items: SessionItem[]) => setScreen({ name: 'session', title, items });
+  const startSession = (title: string, items: SessionItem[], unitKey?: string) => setScreen({ name: 'session', title, items, unitKey });
 
   switch (screen.name) {
     case 'home':
@@ -56,6 +56,7 @@ export function App() {
         <Session
           title={screen.title}
           initialItems={screen.items}
+          unitKey={screen.unitKey}
           onExit={home}
           onFinish={(outcome) => setScreen({ name: 'summary', outcome })}
         />
@@ -70,7 +71,7 @@ export function App() {
           helpLang={settings.helpLang}
           onHelpLang={setHelpLang}
           onOpen={(key) => setScreen({ name: 'sheet', key })}
-          onPractice={(unitKey) => startSession(content.units.get(unitKey)?.title ?? '', unitSession(unitKey))}
+          onPractice={(unitKey) => startSession(content.units.get(unitKey)?.title ?? '', unitSession(unitKey), unitKey)}
           onBack={home}
         />
       );
@@ -80,7 +81,7 @@ export function App() {
           sheetKey={screen.key}
           helpLang={settings.helpLang}
           onHelpLang={setHelpLang}
-          onPractice={(unitKey) => startSession(content.units.get(unitKey)?.title ?? '', unitSession(unitKey))}
+          onPractice={(unitKey) => startSession(content.units.get(unitKey)?.title ?? '', unitSession(unitKey), unitKey)}
           onOpenSheet={(key) => setScreen({ name: 'sheet', key })}
           onBack={() => setScreen({ name: 'sheets' })}
         />

@@ -3,7 +3,8 @@ import { PalettePicker } from '../components/PalettePicker';
 import { Segmented } from '../components/Segmented';
 import { HELP_LANGS } from '../content/localized';
 import { ui } from '../i18n/ui';
-import { COLOR_MODES } from '../lib/storage';
+import { GAME } from '../game/config';
+import { COLOR_MODES, type Settings } from '../lib/storage';
 import { useAppStore } from '../state/appStore';
 
 export function SettingsScreen({ onBack }: { onBack: () => void }) {
@@ -41,6 +42,20 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
       </section>
 
       <section className="settings-card">
+        <Segmented
+          label={ui.dailyGoalLabel}
+          value={String(settings.dailyGoal)}
+          options={GAME.streak.goals.map((g) => ({ value: String(g), label: ui.goalOption(g) }))}
+          onChange={(goal) => set({ dailyGoal: Number(goal) as Settings['dailyGoal'] })}
+        />
+        <p className="muted small">{ui.dailyGoalHint}</p>
+      </section>
+
+      <section className="settings-card">
+        <label className="toggle">
+          <input type="checkbox" checked={settings.sound} onChange={(e) => set({ sound: e.target.checked })} />
+          <span>{ui.sound}</span>
+        </label>
         <label className="toggle">
           <input type="checkbox" checked={settings.vibration} onChange={(e) => set({ vibration: e.target.checked })} />
           <span>{ui.vibration}</span>

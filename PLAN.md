@@ -45,7 +45,9 @@ Zrobione z jednym odstępstwem: `registerType: 'prompt'` zamiast `autoUpdate`, b
 - Gdy jest dostępna nowa wersja, pokaż dyskretny toast „Nouvelle version · Recharger” zamiast przeładowywać stronę w trakcie sesji.
 - Kryteria: Lighthouse PWA bez błędów, instalacja na Androidzie i iOS (Dodaj do ekranu głównego), sesja działa w trybie samolotowym.
 
-## Etap 2 — Gamifikacja, część 1: XP, combo, cel dzienny, streak
+## Etap 2 — Gamifikacja, część 1: XP, combo, cel dzienny, streak ✅
+
+Odstępstwa: dźwięki syntezowane w locie przez Web Audio (`src/sfx.ts`) zamiast plików w `public/sfx/`, bo wysokość tonu i tak zależy od combo; animacje w CSS zamiast Framer Motion. Cel dzienny przed pierwszą zmianą w logu = 50 (dotychczas nie dało się go zmienić). Do Réglages doszły wybór celu dziennego i przełącznik dźwięku.
 
 **2.1 Zdarzenie sesji**
 - Nowy typ zdarzenia `session` (`ProgressEvent` jest unią, więc dodaj wariant), zapisywany przy zakończeniu sesji: `{ sessionId, kind: 'review' | 'unit' | 'boss', unitKey?, startedAt, items, correct, mistakes, maxCombo }`.

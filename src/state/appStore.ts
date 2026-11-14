@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { dayKey } from '../lib/date';
 import { baselineFromLegacy } from '../lib/progress/baseline';
-import { newEventId, type ReviewEvent } from '../lib/progress/events';
+import { newEventId, type ProgressEvent, type ReviewEvent, type SessionEvent, type SettingEvent } from '../lib/progress/events';
 import { emptyProgress, type ProgressState } from '../lib/progress/fold';
 import { Projection } from '../lib/progress/projection';
 import { indexedDbStore, type ProgressStore } from '../lib/progress/store';
@@ -13,16 +13,23 @@ export interface AnswerInput {
   entryIds: string[];
   result: AnswerResult;
   early: boolean;
+  sessionId?: string;
+  comboBefore?: number;
 }
+
+export type SessionInput = Omit<SessionEvent, 'type' | 'id' | 'deviceId' | 'at' | 'day'>;
 
 export interface AppState {
   /** `failed`: the event log could not be opened; the app still works, but answers are not saved. */
   status: 'loading' | 'ready' | 'failed';
   settings: Settings;
   progress: ProgressState;
+  /** The whole event log, for projections beyond SRS (XP, streak). A new array on every change. */
+  log: readonly ProgressEvent[];
   init: () => Promise<void>;
-  updateSettings: (patch: Partial<Settings>) => void;
+  updateSettings: (patch: Partial<Settings>, now?: Date) => void;
   recordAnswer: (input: AnswerInput, now?: Date) => ReviewEvent;
+  recordSession: (input: SessionInput, now?: Date) => SessionEvent;
 }
 
 interface Deps {
@@ -50,33 +57,44 @@ export function createAppStore({ progressStore, kv }: Deps) {
         // Only now is the old progress safe in the log, so the pre-v5 blob can be rewritten without it.
         if (loaded.legacy) persistSettings(get().settings);
         projection.add(events);
-        set({ progress: projection.state, status: 'ready' });
+        set({ progress: projection.state, log: projection.events, status: 'ready' });
       } catch (error) {
         console.error('Déjà: event log unavailable', error);
         set({ status: 'failed' });
       }
     }
 
+    function record<E extends ProgressEvent>(event: E, what: string): E {
+      projection.add([event]);
+      set({ progress: projection.state, log: projection.events });
+      progressStore.append([event]).catch((error) => console.error(`Déjà: ${what} not saved`, error));
+      return event;
+    }
+
+    const base = (now: Date) => ({ id: newEventId(), deviceId: device, at: now.toISOString(), day: dayKey(now) });
+
     return {
       status: 'loading',
       settings: loaded.state.settings,
       progress: emptyProgress(),
+      log: [],
 
       init: () => (initializing ??= load()),
 
-      updateSettings(patch) {
-        const settings = { ...get().settings, ...patch };
+      updateSettings(patch, now = new Date()) {
+        const previous = get().settings;
+        const settings = { ...previous, ...patch };
         set({ settings });
         persistSettings(settings);
+        if (patch.dailyGoal !== undefined && patch.dailyGoal !== previous.dailyGoal) {
+          record<SettingEvent>({ type: 'setting', ...base(now), key: 'dailyGoal', value: patch.dailyGoal }, 'goal change');
+        }
       },
 
-      recordAnswer({ exerciseId, entryIds, result, early }, now = new Date()) {
+      recordAnswer({ exerciseId, entryIds, result, early, sessionId, comboBefore }, now = new Date()) {
         const event: ReviewEvent = {
           type: 'review',
-          id: newEventId(),
-          deviceId: device,
-          at: now.toISOString(),
-          day: dayKey(now),
+          ...base(now),
           exerciseId,
           entryIds,
           grade: gradeFromResult(result),
@@ -85,11 +103,13 @@ export function createAppStore({ progressStore, kv }: Deps) {
           hintUsed: result.hintUsed,
           timeMs: Math.round(result.timeMs),
           early,
+          ...(sessionId ? { sessionId, comboBefore } : {}),
         };
-        projection.add([event]);
-        set({ progress: projection.state });
-        progressStore.append([event]).catch((error) => console.error('Déjà: answer not saved', error));
-        return event;
+        return record(event, 'answer');
+      },
+
+      recordSession(input, now = new Date()) {
+        return record<SessionEvent>({ type: 'session', ...base(now), ...input }, 'session');
       },
     };
   });

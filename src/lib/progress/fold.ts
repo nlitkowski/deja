@@ -46,6 +46,8 @@ function applyInPlace(state: ProgressState, event: ProgressEvent): void {
     return;
   }
 
+  if (event.type !== 'review') return;
+
   for (const id of event.entryIds) state.firstSeen[id] ??= event.day;
   if (event.early && event.correct) return;
   for (const id of event.entryIds) state.cards[id] = review(state.cards[id], event.grade, event.day);

@@ -1,5 +1,6 @@
 import { AppLayout, MenuButton } from '../components/AppLayout';
 import { Emoji } from '../components/Emoji';
+import { GameBar } from '../components/GameBar';
 import { Icon } from '../components/Icon';
 import { LangSwitch } from '../components/LangSwitch';
 import { content } from '../content/registry';
@@ -12,7 +13,7 @@ import { buildReviewSession, buildUnitSession, NEW_PER_DAY } from '../sessions';
 import { useAppStore } from '../state/appStore';
 
 interface Props {
-  onStart: (title: string, items: SessionItem[]) => void;
+  onStart: (title: string, items: SessionItem[], unitKey?: string) => void;
   onOpenSheets: () => void;
   onOpenSheet: (key: string) => void;
   onOpenSettings: () => void;
@@ -28,7 +29,7 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings }: Pro
   const reviewSize = buildReviewSession(progress, settings).length;
   const sheetCount = content.sheets.size;
   const exercisePacks = content.packs.filter((p) => p.unitList.length);
-  const practice = (unitKey: string) => onStart(content.units.get(unitKey)?.title ?? '', buildUnitSession(progress, settings, unitKey));
+  const practice = (unitKey: string) => onStart(content.units.get(unitKey)?.title ?? '', buildUnitSession(progress, settings, unitKey), unitKey);
 
   return (
     <AppLayout onOpenSheet={onOpenSheet} onPractice={practice}>
@@ -49,6 +50,8 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings }: Pro
             </button>
           </div>
         </header>
+
+        <GameBar />
 
         <section className="review-card">
           <div>

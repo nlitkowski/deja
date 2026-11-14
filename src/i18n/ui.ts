@@ -18,6 +18,15 @@ export const ui = {
   unitDue: (n: number) => `${n} à réviser`,
   unitProgressLabel: (seen: number, total: number) => `Découvertes : ${seen} sur ${total}`,
 
+  level: (n: number) => `Niv. ${n}`,
+  levelLabel: (n: number, title: string, toNext: number) => `Niveau ${n}, ${title} : encore ${toNext} XP`,
+  xpToNext: (n: number) => `encore ${n} XP`,
+  dailyGoal: 'Objectif du jour',
+  goalLabel: (xp: number, goal: number) => `Objectif du jour : ${xp} sur ${goal} XP`,
+  streakDays: (n: number) => (n <= 1 ? 'jour' : 'jours'),
+  streakLabel: (n: number) => `Flamme : ${n} ${n <= 1 ? 'jour' : 'jours'} de suite`,
+  freezesLabel: (n: number) => `${n} ${n <= 1 ? 'gel' : 'gels'} en réserve`,
+
   sheets: 'Fiches de révision',
   sheetsTeaser: (n: number) => `${n} fiche${n > 1 ? 's' : ''} : grammaire, vocabulaire, expressions`,
   treeHeading: 'Sommaire',
@@ -39,6 +48,10 @@ export const ui = {
   themeHint: '« Système » suit le mode clair ou sombre de ton appareil.',
   helpLangHint: 'Langue des traductions, explications et indices.',
   vibration: 'Vibrations',
+  sound: 'Sons',
+  dailyGoalLabel: 'Objectif quotidien',
+  dailyGoalHint: 'XP à gagner chaque jour pour garder ta flamme.',
+  goalOption: (xp: number) => `${xp} XP`,
 
   helpLangLabel: 'Aides',
   helpLangNames: { pl: 'polonais', fr: 'français' },
@@ -62,6 +75,8 @@ export const ui = {
   check: 'Vérifier',
   accentBarLabel: 'Caractères accentués',
   translateToFrench: 'Traduis en français',
+  combo: (n: number) => `Combo ${n}`,
+  xpGain: (n: number) => `+${n} XP`,
 
   sessionDone: 'Bravo.',
   percentCorrect: 'de bonnes réponses',
@@ -69,4 +84,12 @@ export const ui = {
   entriesReviewed: 'entrées révisées',
   accentsMissed: 'accents oubliés',
   backToMap: 'Retour à la carte',
+  xpEarned: 'XP gagnés',
+  xpAnswers: 'Réponses',
+  xpCombo: 'Combo',
+  xpBonus: 'Bonus',
+  dayStreak: (n: number) => `Jour ${n} !`,
+  goalReached: 'Objectif du jour atteint',
+  levelUp: 'Niveau supérieur !',
+  continue: 'Continuer',
 } as const;

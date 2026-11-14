@@ -69,14 +69,14 @@ src/
     confusable-duel/
     match-pairs/
     conjugation-grid/       # do przyszłych pakietów z czasownikami
-  game/                     # gamifikacja, czysta logika bez Reacta
+  game/                     # gamifikacja, czysta logika bez Reacta, liczona z logu zdarzeń (XP z ReviewEvent/SessionEvent, cel dzienny z SettingEvent)
+    config.ts               # wszystkie liczby do strojenia
     xp.ts
     levels.ts
     streak.ts
     achievements/           # każda odznaka to osobny plik z warunkiem
     quests.ts
     mastery.ts
-    events.ts               # event bus: answer.correct, session.finished, ...
   lib/
     srs.ts                  # SM-2 lite
     answer.ts               # normalizacja i porównywanie odpowiedzi
@@ -84,7 +84,8 @@ src/
     storage.ts              # ustawienia w localStorage + migracje schematu
     progress/               # log zdarzeń: events.ts, fold.ts (czyste), projection.ts, store.ts (IndexedDB / pamięć), baseline.ts
   state/
-    appStore.ts             # Zustand: settings, progress, recordAnswer
+    appStore.ts             # Zustand: settings, progress, log, recordAnswer, recordSession
+    useGame.ts              # XP, poziom i streak na dziś z logu
   components/
   screens/
 ```
@@ -152,7 +153,7 @@ Typy na start:
 
 ### Hooki gamifikacji
 
-Logika gry nasłuchuje zdarzeń z `game/events.ts` (`answer`, `session.start`, `session.finish`, `unit.complete`, `boss.defeat`, `pack.complete`). Odznaka albo quest to osobny plik eksportujący `{ id, title, icon, check(state, event) }`. Dodanie odznaki nie wymaga zmian w innych miejscach. Pakiet może też zdefiniować własne odznaki w `pack.json` w polu `achievements`, korzystając z deklaratywnych warunków (`{ "type": "unitMastery", "unit": "...", "level": 3 }`).
+Logika gry nie ma osobnego event busa: to czyste projekcje logu zdarzeń (`ReviewEvent`, `SessionEvent`, `SettingEvent` w `src/lib/progress/events.ts`). Odznaka albo quest to osobny plik eksportujący `{ id, title, icon, check(ctx) }`, gdzie `ctx` to projekcja logu. Dodanie odznaki nie wymaga zmian w innych miejscach. Pakiet może też zdefiniować własne odznaki w `pack.json` w polu `achievements`, korzystając z deklaratywnych warunków (`{ "type": "unitMastery", "unit": "...", "level": 3 }`).
 
 ## Gamifikacja
 

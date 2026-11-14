@@ -6,7 +6,8 @@ import { applyEvents, compareEvents, emptyProgress, foldEvents, type ProgressSta
  * of the last state; an older one (e.g. synced from another device) triggers a full refold.
  */
 export class Projection {
-  private readonly events: ProgressEvent[] = [];
+  /** Replaced (not mutated) on every change, in arrival order. */
+  events: readonly ProgressEvent[] = [];
   private readonly ids = new Set<string>();
   private newest: ProgressEvent | undefined;
   state: ProgressState = emptyProgress();
@@ -25,7 +26,7 @@ export class Projection {
     }
     if (!fresh.length) return false;
     fresh.sort(compareEvents);
-    this.events.push(...fresh);
+    this.events = [...this.events, ...fresh];
 
     const first = fresh[0]!;
     const last = fresh[fresh.length - 1]!;

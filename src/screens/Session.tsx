@@ -4,12 +4,18 @@ import { accentPairs, content } from '../content/registry';
 import { exerciseTypes, isProduction, supportsHelpLang } from '../exercises/registry';
 import type { ExerciseContext } from '../exercises/types';
 import { Icon } from '../components/Icon';
+import { GAME } from '../game/config';
+import { answerXp } from '../game/xp';
 import { ui } from '../i18n/ui';
 import { indexExercisesByEntry, requeue, type SessionItem } from '../lib/session';
+import { newEventId } from '../lib/progress/events';
 import type { AnswerResult } from '../lib/srs';
+import { sfx } from '../sfx';
 import { useAppStore } from '../state/appStore';
+import { xpContext } from '../xpContext';
 
 export interface SessionOutcome {
+  sessionId: string;
   title: string;
   answered: number;
   correct: number;
@@ -20,6 +26,7 @@ export interface SessionOutcome {
 interface Props {
   title: string;
   initialItems: SessionItem[];
+  unitKey?: string;
   onExit: () => void;
   onFinish: (outcome: SessionOutcome) => void;
 }
@@ -34,14 +41,19 @@ function vibrate(pattern: number | number[]) {
   }
 }
 
-export function Session({ title, initialItems, onExit, onFinish }: Props) {
+export function Session({ title, initialItems, unitKey, onExit, onFinish }: Props) {
   const [queue, setQueue] = useState(initialItems);
   const [index, setIndex] = useState(0);
   const [result, setResult] = useState<AnswerResult>();
-  const stats = useRef({ answered: 0, correct: 0, nearMiss: 0, entries: new Set<string>() });
+  const stats = useRef({ answered: 0, correct: 0, nearMiss: 0, maxCombo: 0, entries: new Set<string>() });
+  const [session] = useState(() => ({ id: newEventId(), startedAt: new Date().toISOString() }));
+  const [combo, setCombo] = useState(0);
+  const [comboBreak, setComboBreak] = useState<{ combo: number; key: number }>();
+  const [gain, setGain] = useState<{ xp: number; key: number }>();
 
-  const { helpLang, vibration } = useAppStore((s) => s.settings);
+  const { helpLang, vibration, sound } = useAppStore((s) => s.settings);
   const recordAnswer = useAppStore((s) => s.recordAnswer);
+  const recordSession = useAppStore((s) => s.recordSession);
   const ctx: ExerciseContext = useMemo(() => ({ accentPairs, helpLang }), [helpLang]);
   const byEntry = useMemo(
     () => indexExercisesByEntry([...content.exercises.values()].filter((ex) => supportsHelpLang(ex.type, helpLang))),
@@ -56,12 +68,22 @@ export function Session({ title, initialItems, onExit, onFinish }: Props) {
   const next = useCallback(() => {
     if (index + 1 >= queue.length) {
       const s = stats.current;
-      onFinish({ title, answered: s.answered, correct: s.correct, nearMiss: s.nearMiss, entriesReviewed: s.entries.size });
+      recordSession({
+        sessionId: session.id,
+        kind: unitKey ? 'unit' : 'review',
+        ...(unitKey ? { unitKey } : {}),
+        startedAt: session.startedAt,
+        items: s.answered,
+        correct: s.correct,
+        mistakes: s.answered - s.correct,
+        maxCombo: s.maxCombo,
+      });
+      onFinish({ sessionId: session.id, title, answered: s.answered, correct: s.correct, nearMiss: s.nearMiss, entriesReviewed: s.entries.size });
       return;
     }
     setResult(undefined);
     setIndex(index + 1);
-  }, [index, queue.length, onFinish, title]);
+  }, [index, queue.length, onFinish, title, recordSession, session, unitKey]);
 
   useEffect(() => {
     if (!result) return;
@@ -101,7 +123,25 @@ export function Session({ title, initialItems, onExit, onFinish }: Props) {
     if (vibration) vibrate(r.correct ? 15 : [30, 40, 30]);
 
     if (!r.correct) setQueue((q) => requeue(q, index, item, byEntry.get(item.entryId) ?? [], isProduction));
-    recordAnswer({ exerciseId: exercise.id, entryIds: exercise.entryIds, result: r, early: item.early });
+    const event = recordAnswer({
+      exerciseId: exercise.id,
+      entryIds: exercise.entryIds,
+      result: r,
+      early: item.early,
+      sessionId: session.id,
+      comboBefore: combo,
+    });
+
+    const nextCombo = r.correct ? combo + 1 : 0;
+    s.maxCombo = Math.max(s.maxCombo, nextCombo);
+    if (!r.correct && combo >= GAME.comboVisibleFrom) setComboBreak({ combo, key: s.answered });
+    setCombo(nextCombo);
+    const xp = answerXp(event, xpContext).total;
+    setGain(xp ? { xp, key: s.answered } : undefined);
+    if (sound) {
+      if (r.correct) sfx.correct(nextCombo);
+      else sfx.wrong();
+    }
   }
 
   const View = type.View;
@@ -124,7 +164,26 @@ export function Session({ title, initialItems, onExit, onFinish }: Props) {
         </span>
       </header>
 
+      <div className="combo-row" aria-live="polite">
+        {combo >= GAME.comboVisibleFrom ? (
+          <span key={combo} className="combo">
+            {ui.combo(combo)}
+          </span>
+        ) : (
+          comboBreak && (
+            <span key={`break-${comboBreak.key}`} className="combo broken" aria-hidden>
+              {ui.combo(comboBreak.combo)}
+            </span>
+          )
+        )}
+      </div>
+
       <section className={`card ${tone}`}>
+        {result && gain && (
+          <span key={gain.key} className="xp-gain" aria-hidden>
+            {ui.xpGain(gain.xp)}
+          </span>
+        )}
         <View key={`${index}:${item.exerciseId}`} data={exercise.data} ctx={ctx} locked={!!result} onAnswer={handleAnswer} />
       </section>
 

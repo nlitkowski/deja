@@ -26,6 +26,31 @@ export interface ReviewEvent extends EventBase {
   timeMs: number;
   /** Practised before it was due: a correct answer leaves the schedule unchanged. */
   early: boolean;
+  sessionId?: string;
+  /** Correct answers in a row just before this one. Depends on the order within a session, so it is stored, not derived. */
+  comboBefore?: number;
+}
+
+export type SessionKind = 'review' | 'unit' | 'boss';
+
+/** Written when a session is completed (not when it is left early). */
+export interface SessionEvent extends EventBase {
+  type: 'session';
+  sessionId: string;
+  kind: SessionKind;
+  unitKey?: string;
+  startedAt: string;
+  items: number;
+  correct: number;
+  mistakes: number;
+  maxCombo: number;
+}
+
+/** A setting whose history matters for derived state (the daily goal decides past streak days). */
+export interface SettingEvent extends EventBase {
+  type: 'setting';
+  key: 'dailyGoal';
+  value: number;
 }
 
 /** SRS state imported from the pre-event-log storage; history starts after it. */
@@ -36,7 +61,7 @@ export interface BaselineEvent extends EventBase {
   introduced?: { day: DayKey; count: number };
 }
 
-export type ProgressEvent = ReviewEvent | BaselineEvent;
+export type ProgressEvent = ReviewEvent | BaselineEvent | SessionEvent | SettingEvent;
 
 export function newEventId(): string {
   return crypto.randomUUID();

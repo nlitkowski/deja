@@ -80,4 +80,22 @@ describe('app store', () => {
     store.getState().updateSettings({ palette: 'pixel' });
     expect(createAppStore({ progressStore: memoryStore(), kv }).getState().settings.palette).toBe('pixel');
   });
+
+  it('logs sessions and daily goal changes, and exposes the whole log', async () => {
+    const progressStore = memoryStore();
+    const store = createAppStore({ progressStore, kv: memoryKv() });
+    await store.getState().init();
+    const now = new Date(2026, 10, 14, 9);
+
+    store.getState().recordAnswer({ exerciseId: 'p/x', entryIds: ['p/a'], result: ok, early: false, sessionId: 's1', comboBefore: 0 }, now);
+    store.getState().recordSession({ sessionId: 's1', kind: 'review', startedAt: now.toISOString(), items: 1, correct: 1, mistakes: 0, maxCombo: 1 }, now);
+    store.getState().updateSettings({ dailyGoal: 30 }, now);
+    store.getState().updateSettings({ dailyGoal: 30, sound: false }, now);
+
+    expect(store.getState().log.map((e) => e.type)).toEqual(['review', 'session', 'setting']);
+    expect(store.getState().log[0]).toMatchObject({ sessionId: 's1', comboBefore: 0 });
+    expect(store.getState().log[2]).toMatchObject({ key: 'dailyGoal', value: 30, day: '2026-11-14' });
+    await Promise.resolve();
+    expect(await progressStore.loadEvents()).toHaveLength(3);
+  });
 });
