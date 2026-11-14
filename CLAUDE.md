@@ -14,7 +14,7 @@ Zasady nadrzędne:
 ## Stack
 
 - Vite + React + TypeScript (strict), zależności w najnowszych stabilnych wersjach
-- Backend w budowie (etap 8 w `PLAN.md`): Cloudflare Worker (Hono) + D1 w `worker/`, na tej samej domenie co aplikacja (`deja.litkowski.com`, API pod `/api/*`, `wrangler.jsonc`). Konto jest opcjonalne, a aplikacja pozostaje **local-first z logiem zdarzeń**. O użytkowniku zapisujemy tylko e-mail. Testy Workera działają w zwykłym Vitest na zamienniku D1 z `node:sqlite` (`worker/test/d1.ts`); zmiany schematu tylko jako nowa migracja w `worker/migrations/`. Deploy: workflow `Deploy` (push na `main` → produkcja; staging przez workflow_dispatch). `env.staging` musi mieć `"routes": []`, bo trasy się dziedziczą.
+- Adresy: aplikacja **https://deja.litkowski.com** (GitHub Pages, serwowana z korzenia `/`), API **https://deja-api.litkowski.com** (Cloudflare Worker `deja`). Backend w budowie (etap 8 w `PLAN.md`): Worker (Hono) + D1 w `worker/`, konfiguracja `wrangler.jsonc`, tylko API, bez statycznych plików. Aplikacja zna API z `VITE_API_URL` (bez adresu na sztywno w kodzie; brak = karta „Compte” ukryta) i wysyła ciasteczko sesji z `credentials: 'include'`. CORS: originy z `ALLOWED_ORIGINS` w `wrangler.jsonc`. Ciasteczko `SameSite=Strict` działa, bo `deja.` i `deja-api.litkowski.com` to ta sama witryna. Konto jest opcjonalne, a aplikacja pozostaje **local-first z logiem zdarzeń**. O użytkowniku zapisujemy tylko e-mail. Testy Workera działają w zwykłym Vitest na zamienniku D1 z `node:sqlite` (`worker/test/d1.ts`); zmiany schematu tylko jako nowa migracja w `worker/migrations/`. Deploy: workflow `Deploy` (push na `main` → produkcja; staging przez workflow_dispatch). `env.staging` musi mieć `"routes": []`, bo trasy się dziedziczą.
   - Ustawienia: `localStorage` (`deja:state`, wersjonowanie schematu i migracje w `src/lib/storage.ts`), bo skrypt w `index.html` czyta je synchronicznie.
   - Postęp: **append-only log zdarzeń** w IndexedDB (`src/lib/progress/`): każda odpowiedź to `ReviewEvent` z UUID, `deviceId`, `at`, `day`. Karty SRS, nowe na dziś, a później XP, streak i statystyki to czyste funkcje liczone z logu (`foldEvents`), niezależne od kolejności zdarzeń. Store trzyma log w pamięci w `Projection` (`projection.ts`): nowsze zdarzenia nakłada przyrostowo, a starsze (z innego urządzenia) wymuszają pełne przeliczenie. Kilka zdarzeń `baseline` scala się kartami (nowsza karta wygrywa). Zdarzeń nie edytujemy ani nie usuwamy.
   - Dostęp do logu tylko przez interfejs `ProgressStore`; przyszły sync z backendem to nowa implementacja tego interfejsu (wysyłka niewysłanych zdarzeń, pobranie cudzych od kursora), bez zmian w UI.
@@ -34,8 +34,7 @@ npm run dev       # serwer deweloperski
 npm run build     # build produkcyjny
 npm run test      # vitest
 npm run lint      # eslint + tsc --noEmit (aplikacja i worker)
-npm run dev:worker  # build + lokalne D1 + wrangler dev na :8787 (aplikacja i /api razem)
-npm run dev:api     # sam Worker na :8787 dla `npm run dev` (Vite proxuje /api); sekrety i PUBLIC_ORIGIN w .dev.vars (wzór: .dev.vars.example)
+npm run dev:api     # API na :8787 z lokalnym D1 (aplikacja z `npm run dev` łączy się przez VITE_API_URL z .env.development); sekret Google w .dev.vars (wzór: .dev.vars.example)
 npm run db:migrate  # migracje na produkcyjnym D1
 ```
 

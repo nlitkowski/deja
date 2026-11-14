@@ -1,16 +1,21 @@
-/** Unavailable: no API behind this deployment (e.g. GitHub Pages) or offline; the app then simply stays local. */
+/** Unavailable: no API configured for this build, or offline; the app then simply stays local. */
 export type Account = { status: 'unavailable' } | { status: 'signedOut' } | { status: 'signedIn'; email: string };
 
 export type SignInResult = 'connected' | 'cancelled' | 'error';
 
-const api = (path: string) => `${import.meta.env.BASE_URL}api${path}`;
+/** The API's origin (VITE_API_URL at build time), e.g. https://deja-api.litkowski.com; empty = no account features. */
+const API_URL: string = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
-/** A full-page navigation, not fetch: the Worker redirects to Google and back. */
-export const signInUrl = () => api('/auth/google');
+const api = (path: string) => `${API_URL}${path}`;
 
-export async function fetchAccount(fetcher: typeof fetch = fetch): Promise<Account> {
+/** A full-page navigation, not fetch: the Worker redirects to Google and back to this page. */
+export const signInUrl = (appUrl: string) => api(`/auth/google?return=${encodeURIComponent(appUrl)}`);
+
+export async function fetchAccount(fetcher: typeof fetch = fetch, apiUrl = API_URL): Promise<Account> {
+  if (!apiUrl) return { status: 'unavailable' };
   try {
-    const res = await fetcher(api('/me'), { credentials: 'same-origin' });
+    // `include`: the API is on another subdomain, and the session cookie must travel with the request.
+    const res = await fetcher(`${apiUrl}/me`, { credentials: 'include' });
     if (res.status === 401) return { status: 'signedOut' };
     if (!res.ok || !res.headers.get('content-type')?.includes('application/json')) return { status: 'unavailable' };
     const body = (await res.json()) as { email?: unknown };
@@ -21,7 +26,7 @@ export async function fetchAccount(fetcher: typeof fetch = fetch): Promise<Accou
 }
 
 export async function signOut(fetcher: typeof fetch = fetch): Promise<void> {
-  await fetcher(api('/auth/logout'), { method: 'POST', credentials: 'same-origin' });
+  await fetcher(api('/auth/logout'), { method: 'POST', credentials: 'include' });
 }
 
 /** Reads and strips the `?account=` result the Worker appends after sign-in, so a reload doesn't show it again. */

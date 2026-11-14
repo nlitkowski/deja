@@ -3,7 +3,7 @@ import { ui } from '../i18n/ui';
 import { signInUrl } from '../lib/account';
 import { useAccountStore } from '../state/accountStore';
 
-/** Hidden where there is no API behind the app (GitHub Pages, offline): the app then just stays local. */
+/** Hidden when the build has no API or the API is unreachable: the app then just stays local. */
 export function AccountCard() {
   const account = useAccountStore((s) => s.account);
   const result = useAccountStore((s) => s.signInResult);
@@ -47,7 +47,7 @@ export function AccountCard() {
       ) : (
         <>
           <p className="muted small">{ui.accountHint}</p>
-          <a className="button primary" href={signInUrl()}>
+          <a className="button primary" href={signInUrl(`${window.location.origin}${import.meta.env.BASE_URL}`)}>
             {ui.signInGoogle}
           </a>
         </>

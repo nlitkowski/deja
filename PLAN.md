@@ -192,32 +192,31 @@ Zrobione. Uwagi: tabela ma 10 miejsc (ty, 4 duchy, 5 botów). Duchy liczą XP z 
 
 ## Etap 8 — Konto i synchronizacja między urządzeniami
 
-Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne małe API w Hono, logowanie Google. Aplikacja i API na jednej domenie `deja.litkowski.com` (aplikacja pod `/`, API pod `/api/*`), więc ciasteczko sesji jest first-party i działa też w Safari. DNS `litkowski.com` przenosimy do Cloudflare. Konto jest **opcjonalne**: bez niego aplikacja działa lokalnie jak dotąd. Zapisujemy tylko e-mail (bez imienia, nazwiska, daty urodzenia, avatara).
+Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne małe API w Hono, logowanie Google. Aplikacja na GitHub Pages pod `deja.litkowski.com` (korzeń `/`), API na Workerze pod `deja-api.litkowski.com` (CORS z listą originów). To ta sama witryna (litkowski.com), więc ciasteczko sesji `SameSite=Strict` działa też w Safari. (Pierwotnie oba na jednej domenie przez Workera; rozdzielone, żeby statyczna aplikacja była na Pages.) DNS `litkowski.com` przenosimy do Cloudflare. Konto jest **opcjonalne**: bez niego aplikacja działa lokalnie jak dotąd. Zapisujemy tylko e-mail (bez imienia, nazwiska, daty urodzenia, avatara).
 
 **8.1 Szkielet backendu** ✅
-- Worker w `worker/` (Hono), konfiguracja `wrangler.jsonc`: statyczny build z `dist/` (SPA), Worker tylko dla `/api/*`.
+- Worker w `worker/` (Hono), konfiguracja `wrangler.jsonc`: tylko API, jedyna trasa `deja-api.litkowski.com`.
 - Schemat D1 w `worker/migrations/`: `users` (id, email, created_at), `identities` (provider, subject → user_id), `sessions` (hash tokenu, wygasanie), `events` (id UUID, user_id, device_id, at, day, type, payload, `seq` jako kursor sync), `settings` (JSON, znacznik czasu per pole), `entitlements` (na później, puste).
-- `GET /api/health` sprawdza bazę. Testy Workera w Vitest na zamienniku D1 z `node:sqlite`.
-- Środowiska staging i prod. Workflow `Deploy`: push na `main` = migracje D1 i `wrangler deploy` na `deja.litkowski.com`; staging ręcznie (workflow_dispatch, adres workers.dev). GitHub Pages działa równolegle, dopóki postęp nie zostanie przeniesiony na nowy adres (dane są per adres).
+- `GET /health` sprawdza bazę (smoke test, bez autoryzacji). Testy Workera w Vitest na zamienniku D1 z `node:sqlite`.
+- Środowiska staging i prod. Workflow `Deploy`: push na `main` = migracje D1 i `wrangler deploy` API oraz build aplikacji (`BASE_PATH=/`, `VITE_API_URL`) na GitHub Pages; staging API ręcznie (workflow_dispatch, adres workers.dev). Smoke test w README.
 
 **8.2 Logowanie** ✅ (kod gotowy; działa po wpisaniu client ID i sekretu Google)
 - Karta „Compte” w Réglages z przyciskiem „Se connecter avec Google”. Karta jest ukryta, gdy za aplikacją nie ma API (GitHub Pages, offline).
-- Zamiast skryptu Google Identity Services: przekierowanie OAuth (authorization code + PKCE) obsługiwane w całości przez Workera (`GET /api/auth/google` → Google → `/api/auth/google/callback`). Aplikacja nie ładuje żadnego skryptu Google. Scope `openid email`; weryfikacja ID tokena (podpis z JWKS Google, `aud`, `iss`, `nonce`, `email_verified`), zapis tylko `sub` i e-maila.
-- Sesja: losowy token w ciasteczku `HttpOnly; Secure; SameSite=Strict; Path=/api`, w bazie tylko jego SHA-256, ważność 180 dni. `POST /api/auth/logout`, `GET /api/me`. Żądania zmieniające stan z obcego `Origin` dostają 403.
+- Zamiast skryptu Google Identity Services: przekierowanie OAuth (authorization code + PKCE) obsługiwane w całości przez Workera (`GET /auth/google?return=<adres aplikacji>` → Google → `/auth/google/callback` → z powrotem do aplikacji; `return` tylko z dozwolonego originu). Aplikacja nie ładuje żadnego skryptu Google. Scope `openid email`; weryfikacja ID tokena (podpis z JWKS Google, `aud`, `iss`, `nonce`, `email_verified`), zapis tylko `sub` i e-maila.
+- Sesja: losowy token w ciasteczku `HttpOnly; Secure; SameSite=Strict; Path=/` na domenie API, w bazie tylko jego SHA-256, ważność 180 dni. `POST /auth/logout`, `GET /me`. Żądania zmieniające stan z originu spoza listy dostają 403.
 - Po powrocie z Google aplikacja otwiera Réglages z komunikatem (`?account=connected|cancelled|error`, usuwany z adresu).
-- Service worker nie przechwytuje nawigacji do `/api/` (inaczej połknąłby przekierowania logowania).
 
 **Przeniesienie postępu na nowy adres** ✅
-- Karta „Sauvegarde” w Réglages: eksport całego logu i ustawień do pliku JSON, import scalający zdarzenia po id (idempotentny) i przywracający ustawienia. Służy do przeniesienia postępu z `nlitkowski.github.io/deja` na `deja.litkowski.com` (dane w przeglądarce są osobne dla każdego adresu); potem GitHub Pages można wyłączyć.
+- Karta „Sauvegarde” w Réglages: eksport całego logu i ustawień do pliku JSON, import scalający zdarzenia po id (idempotentny) i przywracający ustawienia. Służy do przeniesienia postępu z `nlitkowski.github.io/deja` na `deja.litkowski.com` (dane w przeglądarce są osobne dla każdego adresu). Test: import do pustej aplikacji, w dowolnej kolejności zdarzeń, daje identyczną projekcję. Przy sync (8.3) dojdzie analogiczny test dla pobrania całej historii z serwera.
 
 **8.3 Synchronizacja postępu**
 - `SyncingProgressStore` (nowa implementacja `ProgressStore`): outbox niewysłanych zdarzeń w IndexedDB, wysyłka po odpowiedzi (z opóźnieniem), przy powrocie do aplikacji i po odzyskaniu sieci.
-- `POST /api/sync`: przyjmuje zdarzenia (idempotentnie po UUID), zwraca cudze od kursora `seq`.
+- `/sync` (push/pull): przyjmuje zdarzenia (idempotentnie po UUID), zwraca cudze od kursora `seq`.
 - Pierwsze logowanie wysyła cały lokalny log. Wylogowanie czyści lokalny log (dane są na serwerze), żeby dwa konta się nie mieszały.
 
 **8.4 Ustawienia, eksport, usunięcie konta**
 - Synchronizacja wybranych ustawień (last write wins per pole).
-- `GET /api/me/export` (RODO), `DELETE /api/me`, krótka strona prywatności (wymaga jej też Google).
+- `GET /me/export` (RODO), `DELETE /me`, krótka strona prywatności (wymaga jej też Google).
 
 **Później:** `entitlements`, płatności (merchant of record, np. Paddle), płatne pakiety serwowane z API.
 

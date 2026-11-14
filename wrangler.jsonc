@@ -3,24 +3,18 @@
 	"name": "deja",
 	"main": "worker/src/index.ts",
 	"compatibility_date": "2026-11-01",
-	// Production only; staging is served on its workers.dev address.
+	// API only. The app itself is on GitHub Pages at deja.litkowski.com.
 	"routes": [
 		{
-			"pattern": "deja.litkowski.com",
+			"pattern": "deja-api.litkowski.com",
 			"custom_domain": true
 		}
 	],
-	// The app is static; only /api/* runs the Worker, so page loads stay free and don't count against Worker limits.
-	"assets": {
-		"directory": "./dist",
-		"not_found_handling": "single-page-application",
-		"run_worker_first": [
-			"/api/*"
-		]
-	},
 	// GOOGLE_CLIENT_SECRET is a secret: `wrangler secret put GOOGLE_CLIENT_SECRET`, locally in .dev.vars.
 	"vars": {
-		"GOOGLE_CLIENT_ID": "97369815483-mda24ub122rknlfvsrnc3hvh842jiarn.apps.googleusercontent.com"
+		"GOOGLE_CLIENT_ID": "97369815483-mda24ub122rknlfvsrnc3hvh842jiarn.apps.googleusercontent.com",
+		// TODO: remove https://nlitkowski.github.io once progress has moved to deja.litkowski.com.
+		"ALLOWED_ORIGINS": "https://deja.litkowski.com,http://localhost:5173,https://nlitkowski.github.io"
 	},
 	"d1_databases": [
 		{
@@ -33,10 +27,11 @@
 	"env": {
 		"staging": {
 			"name": "deja-staging",
-			// Routes are inherited; without this, deploying staging would take deja.litkowski.com from production.
+			// Routes are inherited; without this, deploying staging would take deja-api.litkowski.com from production.
 			"routes": [],
 			"vars": {
-				"GOOGLE_CLIENT_ID": "97369815483-mda24ub122rknlfvsrnc3hvh842jiarn.apps.googleusercontent.com"
+				"GOOGLE_CLIENT_ID": "97369815483-mda24ub122rknlfvsrnc3hvh842jiarn.apps.googleusercontent.com",
+				"ALLOWED_ORIGINS": "http://localhost:5173"
 			},
 			"d1_databases": [
 				{

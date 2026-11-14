@@ -10,7 +10,8 @@ export interface SessionUser {
   email: string;
 }
 
-const cookieOptions = { path: '/api', httpOnly: true, secure: true, sameSite: 'Strict' } as const;
+// Host-only on the API domain. Strict still sends it from the app: deja. and deja-api.litkowski.com are the same site.
+const cookieOptions = { path: '/', httpOnly: true, secure: true, sameSite: 'Strict' } as const;
 
 export async function startSession(c: Context, db: D1Database, userId: string, now: Date) {
   const token = randomToken();

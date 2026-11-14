@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { testApp } from './harness';
 
-describe('GET /api/health', () => {
+describe('GET /health', () => {
   it('is ok once the schema is migrated', async () => {
-    const res = await testApp().request('/api/health');
+    const res = await testApp().request('/health');
     expect(res.status).toBe(200);
     expect(await res.json()).toEqual({ ok: true });
   });
@@ -11,11 +11,11 @@ describe('GET /api/health', () => {
   it('reports a missing schema', async () => {
     const t = testApp();
     await t.env.DB.exec('DROP TABLE events');
-    expect((await t.request('/api/health')).status).toBe(503);
+    expect((await t.request('/health')).status).toBe(503);
   });
 
   it('answers unknown API paths with JSON 404', async () => {
-    const res = await testApp().request('/api/nope');
+    const res = await testApp().request('/nope');
     expect(res.status).toBe(404);
     expect(await res.json()).toEqual({ error: 'not found' });
   });

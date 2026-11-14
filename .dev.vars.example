@@ -1,3 +1,1 @@
 GOOGLE_CLIENT_SECRET=
-# Only for `npm run dev` + `npm run dev:api`: Vite proxies /api, so Google must send you back to Vite.
-PUBLIC_ORIGIN=http://localhost:5173

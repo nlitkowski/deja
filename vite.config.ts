@@ -2,7 +2,7 @@ import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
-// GitHub Pages serves the app from /<repo>/; the deploy workflow sets BASE_PATH.
+// The app is served from the root of deja.litkowski.com; BASE_PATH still allows a sub-path (e.g. a /<repo>/ Pages site).
 const base = process.env.BASE_PATH ?? '/';
 
 export default defineConfig({
@@ -35,15 +35,9 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png}', '**/*-latin-*.woff2'],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         navigateFallback: `${base}index.html`,
-        // Sign-in is a page navigation to /api/auth/…; answering it with the cached app would swallow the redirect.
-        navigateFallbackDenylist: [new RegExp(`^${base}api/`)],
       },
     }),
   ],
-  server: {
-    // The API runs in `wrangler dev` (npm run dev:worker); without it /api answers 502 and the account card stays hidden.
-    proxy: { '/api': 'http://127.0.0.1:8787' },
-  },
   build: {
     // Never inline fonts: a style's fonts should only download when that style is in use.
     assetsInlineLimit: (file) => (/\.woff2?$/.test(file) ? false : undefined),

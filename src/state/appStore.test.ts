@@ -121,4 +121,29 @@ describe('app store', () => {
     expect(await fresh.getState().importBackup(old.getState().log, {})).toBe(0);
     expect(fresh.getState().log).toHaveLength(2);
   });
+
+  it('rebuilds identical progress on a new address from a backup alone, whatever the event order', async () => {
+    const origin = createAppStore({ progressStore: memoryStore(), kv: memoryKv() });
+    await origin.getState().init();
+    const day = (d: number, h = 10) => new Date(`2026-11-${String(d).padStart(2, '0')}T${String(h).padStart(2, '0')}:00:00Z`);
+    origin.getState().updateSettings({ dailyGoal: 30 }, day(1, 8));
+    for (let d = 1; d <= 6; d++) {
+      for (const [i, entry] of ['p/a', 'p/b', 'p/c'].entries()) {
+        const result = { ...ok, correct: (d + i) % 4 !== 0 };
+        origin.getState().recordAnswer({ exerciseId: 'p/x', entryIds: [entry], result, early: false }, day(d, 10 + i));
+      }
+      origin.getState().recordSession({ sessionId: `s${d}`, kind: 'review', startedAt: day(d).toISOString(), items: 3, correct: 2, mistakes: 1, maxCombo: 2 }, day(d, 13));
+    }
+    origin.getState().claimQuest({ questId: 'daily/x', period: '2026-11-06', xp: 20 }, day(6, 14));
+
+    const shuffled = [...origin.getState().log].reverse();
+    const target = createAppStore({ progressStore: memoryStore(), kv: memoryKv() });
+    await target.getState().init();
+    await target.getState().importBackup(shuffled, origin.getState().settings);
+
+    expect(target.getState().progress).toEqual(origin.getState().progress);
+    expect(target.getState().log).toEqual(origin.getState().log);
+    expect(target.getState().settings).toEqual(origin.getState().settings);
+  });
 });
+

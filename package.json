@@ -10,9 +10,8 @@
     "lint": "eslint . && tsc --noEmit && tsc --noEmit -p worker",
     "preview": "vite preview",
     "icons": "node scripts/icons.mjs",
-    "dev:worker": "vite build && wrangler d1 migrations apply deja --local && wrangler dev",
     "db:migrate": "wrangler d1 migrations apply deja --remote",
-    "dev:api": "wrangler d1 migrations apply deja --local && wrangler dev --port 8787"
+    "dev:api": "wrangler d1 migrations apply deja --local && wrangler dev --port 8787 --infer-origin-from-routes=false"
   },
   "dependencies": {
     "@fontsource/playfair-display": "^5.3.0",

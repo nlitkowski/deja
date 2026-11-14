@@ -1,4 +1,5 @@
 import { Hono, type Context } from 'hono';
+import { cors } from 'hono/cors';
 import type { JWTVerifyGetKey } from 'jose';
 import { google } from './google';
 import { currentUser, endSession } from './sessions';
@@ -7,8 +8,8 @@ export interface Env {
   DB: D1Database;
   GOOGLE_CLIENT_ID: string;
   GOOGLE_CLIENT_SECRET: string;
-  /** Set only in local development, where Vite proxies /api and the Worker would otherwise see its own localhost:8787. */
-  PUBLIC_ORIGIN?: string;
+  /** Comma-separated origins of the app that may call the API with the session cookie; the first is the default. */
+  ALLOWED_ORIGINS: string;
 }
 
 /** What the Worker gets from the outside world; tests swap in local keys, a fake token endpoint and a fixed clock. */
@@ -20,21 +21,34 @@ export interface Deps {
 
 export type AppEnv = { Bindings: Env; Variables: { deps: Deps } };
 
-/** The origin the browser sees: where Google sends it back to, and what its Origin header must match. */
-export const publicOrigin = (c: Context<AppEnv>) => c.env.PUBLIC_ORIGIN || new URL(c.req.url).origin;
+export const allowedOrigins = (c: Context<AppEnv>) =>
+  c.env.ALLOWED_ORIGINS.split(',')
+    .map((o) => o.trim())
+    .filter(Boolean);
 
 export function createApp(deps: Deps) {
-  const app = new Hono<AppEnv>().basePath('/api');
+  const app = new Hono<AppEnv>();
 
   app.use(async (c, next) => {
     c.set('deps', deps);
     await next();
   });
 
-  // Defence in depth next to SameSite=Strict: state-changing requests must come from our own pages.
+  // The app lives on another subdomain; credentials are allowed so the session cookie travels with fetch.
+  app.use(
+    cors({
+      origin: (origin, c: Context<AppEnv>) => (allowedOrigins(c).includes(origin) ? origin : null),
+      credentials: true,
+      allowMethods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
+      allowHeaders: ['Authorization', 'Content-Type'],
+      maxAge: 86400,
+    }),
+  );
+
+  // Defence in depth next to SameSite=Strict: state-changing requests must come from the app.
   app.use(async (c, next) => {
     const origin = c.req.header('origin');
-    if (c.req.method !== 'GET' && c.req.method !== 'HEAD' && origin && origin !== publicOrigin(c)) {
+    if (!['GET', 'HEAD', 'OPTIONS'].includes(c.req.method) && origin && !allowedOrigins(c).includes(origin)) {
       return c.json({ error: 'forbidden' }, 403);
     }
     await next();

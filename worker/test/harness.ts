@@ -4,7 +4,8 @@ import { TOKEN_URL } from '../src/google';
 import { testDb } from './d1';
 
 export const CLIENT_ID = 'test-client.apps.googleusercontent.com';
-export const ORIGIN = 'https://deja.test';
+export const ORIGIN = 'https://deja-api.test';
+export const APP = 'https://deja.test';
 
 const { privateKey, publicKey } = await generateKeyPair('RS256');
 const jwk = { ...(await exportJWK(publicKey)), kid: 'k1', alg: 'RS256' };
@@ -19,7 +20,7 @@ export function signIdToken(claims: JWTPayload) {
 
 /** A Worker on an in-memory database, with Google's token endpoint answered by `tokenResponse`. */
 export function testApp() {
-  const env: Env = { DB: testDb(), GOOGLE_CLIENT_ID: CLIENT_ID, GOOGLE_CLIENT_SECRET: 'secret' };
+  const env: Env = { DB: testDb(), GOOGLE_CLIENT_ID: CLIENT_ID, GOOGLE_CLIENT_SECRET: 'secret', ALLOWED_ORIGINS: `${APP}, http://localhost:5173` };
   const state = { now: new Date(), tokenResponse: async (body: URLSearchParams): Promise<Response> => new Response(`no token for ${body.get('code')}`, { status: 500 }) };
   const app = createApp({
     googleKeys: createLocalJWKSet({ keys: [jwk] }),

@@ -1,7 +1,7 @@
-import { Hono } from 'hono';
+import { Hono, type Context } from 'hono';
 import { deleteCookie, getCookie, setCookie } from 'hono/cookie';
 import { jwtVerify } from 'jose';
-import { publicOrigin, type AppEnv } from './app';
+import { allowedOrigins, type AppEnv } from './app';
 import { pkceChallenge, randomToken } from './crypto';
 import { startSession } from './sessions';
 
@@ -11,27 +11,43 @@ const ISSUERS = ['https://accounts.google.com', 'accounts.google.com'];
 
 const OAUTH_COOKIE = 'deja_oauth';
 // Lax, not Strict: the callback is a top-level navigation coming back from Google, a cross-site request.
-const oauthCookie = { path: '/api/auth', httpOnly: true, secure: true, sameSite: 'Lax', maxAge: 600 } as const;
+const oauthCookie = { path: '/auth', httpOnly: true, secure: true, sameSite: 'Lax', maxAge: 600 } as const;
 
 interface Pending {
   state: string;
   nonce: string;
   verifier: string;
+  /** Where to send the browser afterwards: the app page that started sign-in. */
+  returnTo: string;
 }
 
 export type SignInResult = 'connected' | 'cancelled' | 'error';
-const back = (result: SignInResult) => `/?account=${result}`;
+
+/** The app URL to come back to, if its origin is allowed; otherwise the main app. Never an arbitrary site. */
+function safeReturn(c: Context<AppEnv>, wanted: string | undefined): string {
+  const fallback = `${allowedOrigins(c)[0]}/`;
+  if (!wanted) return fallback;
+  try {
+    const url = new URL(wanted);
+    return allowedOrigins(c).includes(url.origin) ? `${url.origin}${url.pathname}` : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+const back = (returnTo: string, result: SignInResult) => `${returnTo}?account=${result}`;
+const callbackUrl = (c: Context<AppEnv>) => new URL('/auth/google/callback', c.req.url).toString();
 
 export const google = new Hono<AppEnv>();
 
 /** Authorization code flow with PKCE, run entirely by the Worker: the app never loads Google's scripts. */
 google.get('/', async (c) => {
-  const pending: Pending = { state: randomToken(), nonce: randomToken(), verifier: randomToken() };
+  const pending: Pending = { state: randomToken(), nonce: randomToken(), verifier: randomToken(), returnTo: safeReturn(c, c.req.query('return')) };
   setCookie(c, OAUTH_COOKIE, JSON.stringify(pending), oauthCookie);
   const url = new URL(AUTHORIZE_URL);
   url.search = new URLSearchParams({
     client_id: c.env.GOOGLE_CLIENT_ID,
-    redirect_uri: `${publicOrigin(c)}/api/auth/google/callback`,
+    redirect_uri: callbackUrl(c),
     response_type: 'code',
     // Only what the account needs: a stable id and the email. No name, no avatar.
     scope: 'openid email',
@@ -49,8 +65,9 @@ google.get('/callback', async (c) => {
   const pending = readPending(getCookie(c, OAUTH_COOKIE));
   deleteCookie(c, OAUTH_COOKIE, oauthCookie);
   const { code, state, error } = c.req.query();
-  if (error) return c.redirect(back('cancelled'));
-  if (!pending || !code || state !== pending.state) return c.redirect(back('error'));
+  const returnTo = pending?.returnTo ?? safeReturn(c, undefined);
+  if (error) return c.redirect(back(returnTo, 'cancelled'));
+  if (!pending || !code || state !== pending.state) return c.redirect(back(returnTo, 'error'));
 
   const res = await deps.fetch(TOKEN_URL, {
     method: 'POST',
@@ -59,36 +76,36 @@ google.get('/callback', async (c) => {
       code,
       client_id: c.env.GOOGLE_CLIENT_ID,
       client_secret: c.env.GOOGLE_CLIENT_SECRET,
-      redirect_uri: `${publicOrigin(c)}/api/auth/google/callback`,
+      redirect_uri: callbackUrl(c),
       grant_type: 'authorization_code',
       code_verifier: pending.verifier,
     }),
   });
-  if (!res.ok) return c.redirect(back('error'));
+  if (!res.ok) return c.redirect(back(returnTo, 'error'));
   const { id_token: idToken } = await res.json<{ id_token?: string }>();
-  if (!idToken) return c.redirect(back('error'));
+  if (!idToken) return c.redirect(back(returnTo, 'error'));
 
   const now = deps.now();
   let claims;
   try {
     ({ payload: claims } = await jwtVerify(idToken, deps.googleKeys, { issuer: ISSUERS, audience: c.env.GOOGLE_CLIENT_ID, currentDate: now }));
   } catch {
-    return c.redirect(back('error'));
+    return c.redirect(back(returnTo, 'error'));
   }
   if (claims.nonce !== pending.nonce || claims.email_verified !== true || typeof claims.email !== 'string' || !claims.sub) {
-    return c.redirect(back('error'));
+    return c.redirect(back(returnTo, 'error'));
   }
 
   const userId = await upsertUser(c.env.DB, claims.sub, claims.email.toLowerCase(), now);
   await startSession(c, c.env.DB, userId, now);
-  return c.redirect(back('connected'));
+  return c.redirect(back(returnTo, 'connected'));
 });
 
 function readPending(raw: string | undefined): Pending | null {
   if (!raw) return null;
   try {
     const p = JSON.parse(raw) as Partial<Pending>;
-    return p.state && p.nonce && p.verifier ? (p as Pending) : null;
+    return p.state && p.nonce && p.verifier && p.returnTo ? (p as Pending) : null;
   } catch {
     return null;
   }
