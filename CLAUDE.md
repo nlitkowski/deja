@@ -235,7 +235,7 @@ Sesja: najpierw zaległe (due ≤ dziś), potem maksymalnie 5 nowych dziennie, �
 - **Fiches de révision**: lista fiszek per pakiet i widok fiszki (sekcje, tabele, przykłady, słówka, przycisk „S'entraîner”).
 - **Browse**: przeglądanie treści pakietów (jak zakładki oryginalnego kompendium), z wyszukiwarką.
 - **Stats**: najsłabsze wpisy, heatmapa aktywności (jak na GitHubie), postęp per pakiet.
-- **Settings** (ekran „Réglages”): styl (Classique / Provence / 8-bit) i tryb (Système / Clair / Sombre, domyślnie systemowy), język pomocy (polski / francuski), cel dzienny, dźwięk, wibracje, import pakietu JSON, eksport i import całego postępu (backup do pliku).
+- **Settings** (ekran „Réglages”): styl (Classique / Provence / 8-bit) i tryb (Système / Clair / Sombre, domyślnie systemowy), język pomocy (polski / francuski), cel dzienny, dźwięk, wibracje, import pakietu JSON, eksport i import całego postępu (karta „Sauvegarde”, `src/lib/backup.ts`: plik z całym logiem zdarzeń i ustawieniami; import **scala** zdarzenia po id, więc nic nie ginie i nic nie liczy się dwa razy), konto Google (karta „Compte”).
 
 ## Styl wizualny
 

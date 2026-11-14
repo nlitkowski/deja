@@ -98,4 +98,27 @@ describe('app store', () => {
     await Promise.resolve();
     expect(await progressStore.loadEvents()).toHaveLength(3);
   });
+
+  it('imports a backup from another device: merges the logs, restores settings, and adds nothing twice', async () => {
+    const answer = { exerciseId: 'p/x', entryIds: ['p/a'], result: ok, early: false };
+    const old = createAppStore({ progressStore: memoryStore(), kv: memoryKv() });
+    await old.getState().init();
+    old.getState().recordAnswer(answer, new Date('2026-11-10T10:00:00Z'));
+    old.getState().updateSettings({ palette: 'pixel' });
+
+    const kv = memoryKv();
+    const progressStore = memoryStore();
+    const fresh = createAppStore({ progressStore, kv });
+    await fresh.getState().init();
+    fresh.getState().recordAnswer({ ...answer, entryIds: ['p/b'] }, new Date('2026-11-14T10:00:00Z'));
+
+    expect(await fresh.getState().importBackup(old.getState().log, { palette: 'pixel' })).toBe(1);
+    expect(Object.keys(fresh.getState().progress.cards).sort()).toEqual(['p/a', 'p/b']);
+    expect(await progressStore.loadEvents()).toHaveLength(2);
+    expect(fresh.getState().settings.palette).toBe('pixel');
+    expect(JSON.parse(kv.raw(STORAGE_KEY)!).settings.palette).toBe('pixel');
+
+    expect(await fresh.getState().importBackup(old.getState().log, {})).toBe(0);
+    expect(fresh.getState().log).toHaveLength(2);
+  });
 });

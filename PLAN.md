@@ -207,6 +207,9 @@ Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne ma
 - Po powrocie z Google aplikacja otwiera Réglages z komunikatem (`?account=connected|cancelled|error`, usuwany z adresu).
 - Service worker nie przechwytuje nawigacji do `/api/` (inaczej połknąłby przekierowania logowania).
 
+**Przeniesienie postępu na nowy adres** ✅
+- Karta „Sauvegarde” w Réglages: eksport całego logu i ustawień do pliku JSON, import scalający zdarzenia po id (idempotentny) i przywracający ustawienia. Służy do przeniesienia postępu z `nlitkowski.github.io/deja` na `deja.litkowski.com` (dane w przeglądarce są osobne dla każdego adresu); potem GitHub Pages można wyłączyć.
+
 **8.3 Synchronizacja postępu**
 - `SyncingProgressStore` (nowa implementacja `ProgressStore`): outbox niewysłanych zdarzeń w IndexedDB, wysyłka po odpowiedzi (z opóźnieniem), przy powrocie do aplikacji i po odzyskaniu sieci.
 - `POST /api/sync`: przyjmuje zdarzenia (idempotentnie po UUID), zwraca cudze od kursora `seq`.

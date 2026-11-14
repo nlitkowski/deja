@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { missingEvents } from '../lib/backup';
 import { dayKey } from '../lib/date';
 import { baselineFromLegacy } from '../lib/progress/baseline';
 import { newEventId, type ProgressEvent, type QuestEvent, type ReviewEvent, type SessionEvent, type SettingEvent } from '../lib/progress/events';
@@ -32,6 +33,8 @@ export interface AppState {
   recordAnswer: (input: AnswerInput, now?: Date) => ReviewEvent;
   recordSession: (input: SessionInput, now?: Date) => SessionEvent;
   claimQuest: (input: { questId: string; period: string; xp: number }, now?: Date) => QuestEvent | undefined;
+  /** Merges a backup into the log and restores its settings; resolves to how many events were new. */
+  importBackup: (events: readonly ProgressEvent[], settings: Partial<Settings>) => Promise<number>;
 }
 
 interface Deps {
@@ -120,6 +123,18 @@ export function createAppStore({ progressStore, kv }: Deps) {
         const already = get().log.some((e) => e.type === 'quest' && e.questId === input.questId && e.period === input.period);
         if (already) return undefined;
         return record<QuestEvent>({ type: 'quest', ...base(now), ...input }, 'quest');
+      },
+
+      async importBackup(events, imported) {
+        const added = missingEvents(get().log, events);
+        // Saved before it is shown, so a failed write is reported instead of silently lost on reload.
+        if (added.length) await progressStore.append(added);
+        projection.add(added);
+        // Set directly, not through updateSettings: the backup's log already holds its daily goal history.
+        const settings = { ...get().settings, ...imported };
+        persistSettings(settings);
+        set({ settings, progress: projection.state, log: projection.events });
+        return added.length;
       },
     };
   });

@@ -100,6 +100,20 @@ export const ui = {
   signedInAs: (email: string) => `Compte : ${email}`,
   syncSoon: 'La synchronisation de ta progression entre appareils arrive bientôt.',
   signOut: 'Se déconnecter',
+  backup: 'Sauvegarde',
+  backupHint:
+    'Télécharge ta progression et tes réglages dans un fichier, pour les garder ou les transférer sur un autre appareil. L’import s’ajoute à ta progression actuelle : rien n’est effacé, rien n’est compté deux fois.',
+  backupExport: 'Exporter',
+  backupImport: 'Importer un fichier',
+  backupExported: (n: number) => `Fichier téléchargé : ${n} élément${n > 1 ? 's' : ''} de progression.`,
+  backupImported: (n: number) =>
+    n === 0 ? 'Rien de nouveau : ce fichier est déjà dans ta progression. Réglages restaurés.' : `Importé : ${n} élément${n > 1 ? 's' : ''} de progression. Réglages restaurés.`,
+  backupInvalid: {
+    notBackup: 'Ce fichier n’est pas une sauvegarde Déjà.',
+    newerVersion: 'Cette sauvegarde vient d’une version plus récente de Déjà. Recharge l’application, puis réessaie.',
+    damaged: 'Cette sauvegarde est endommagée : rien n’a été importé.',
+  },
+  backupSaveFailed: 'L’import n’a pas pu être enregistré sur cet appareil. Réessaie.',
   signInResult: {
     connected: 'Connexion réussie.',
     cancelled: 'Connexion annulée.',

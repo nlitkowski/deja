@@ -278,6 +278,17 @@ button {
   text-decoration: none;
 }
 
+.backup-card h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.backup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .account-result {
   padding: 8px 12px;
   border-radius: var(--radius-sm);
