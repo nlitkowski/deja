@@ -3,6 +3,13 @@
 	"name": "deja",
 	"main": "worker/src/index.ts",
 	"compatibility_date": "2026-11-01",
+	// Production only; staging is served on its workers.dev address.
+	"routes": [
+		{
+			"pattern": "deja.litkowski.com",
+			"custom_domain": true
+		}
+	],
 	// The app is static; only /api/* runs the Worker, so page loads stay free and don't count against Worker limits.
 	"assets": {
 		"directory": "./dist",
@@ -26,6 +33,8 @@
 	"env": {
 		"staging": {
 			"name": "deja-staging",
+			// Routes are inherited; without this, deploying staging would take deja.litkowski.com from production.
+			"routes": [],
 			"vars": {
 				"GOOGLE_CLIENT_ID": "97369815483-mda24ub122rknlfvsrnc3hvh842jiarn.apps.googleusercontent.com"
 			},

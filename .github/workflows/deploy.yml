@@ -1,22 +1,33 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      cloudflare-env:
+        description: Cloudflare environment
+        type: choice
+        options: [production, staging]
+        default: production
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
 jobs:
-  build:
+  # deja.litkowski.com: the app and the /api Worker, with D1 migrations applied first.
+  cloudflare:
     runs-on: ubuntu-latest
+    concurrency:
+      group: cloudflare-${{ inputs.cloudflare-env || 'production' }}
+      cancel-in-progress: false
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      ENV_FLAG: ${{ inputs.cloudflare-env == 'staging' && '--env=staging' || '--env=' }}
+      DATABASE: ${{ inputs.cloudflare-env == 'staging' && 'deja-staging' || 'deja' }}
     steps:
       - uses: actions/checkout@v7
 
@@ -31,6 +42,26 @@ jobs:
 
       # `build` also runs the tests, including validation of every content pack.
       - run: npm run build
+
+      - run: npx wrangler d1 migrations apply $DATABASE --remote $ENV_FLAG
+
+      - run: npx wrangler deploy $ENV_FLAG
+
+  # The old address stays up until progress has been moved to deja.litkowski.com: data is stored per address.
+  pages-build:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx vite build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
 
@@ -40,9 +71,12 @@ jobs:
         with:
           path: dist
 
-  deploy:
-    needs: build
+  pages-deploy:
+    needs: pages-build
     runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

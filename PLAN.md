@@ -194,11 +194,11 @@ Zrobione. Uwagi: tabela ma 10 miejsc (ty, 4 duchy, 5 botów). Duchy liczą XP z 
 
 Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne małe API w Hono, logowanie Google. Aplikacja i API na jednej domenie `deja.litkowski.com` (aplikacja pod `/`, API pod `/api/*`), więc ciasteczko sesji jest first-party i działa też w Safari. DNS `litkowski.com` przenosimy do Cloudflare. Konto jest **opcjonalne**: bez niego aplikacja działa lokalnie jak dotąd. Zapisujemy tylko e-mail (bez imienia, nazwiska, daty urodzenia, avatara).
 
-**8.1 Szkielet backendu** ✅ (bez deployu: czeka na konto Cloudflare, przeniesienie DNS i id baz D1)
+**8.1 Szkielet backendu** ✅
 - Worker w `worker/` (Hono), konfiguracja `wrangler.jsonc`: statyczny build z `dist/` (SPA), Worker tylko dla `/api/*`.
 - Schemat D1 w `worker/migrations/`: `users` (id, email, created_at), `identities` (provider, subject → user_id), `sessions` (hash tokenu, wygasanie), `events` (id UUID, user_id, device_id, at, day, type, payload, `seq` jako kursor sync), `settings` (JSON, znacznik czasu per pole), `entitlements` (na później, puste).
 - `GET /api/health` sprawdza bazę. Testy Workera w Vitest na zamienniku D1 z `node:sqlite`.
-- Środowiska staging i prod, deploy z GitHub Actions (`wrangler deploy`) zamiast GitHub Pages, gdy domena będzie gotowa.
+- Środowiska staging i prod. Workflow `Deploy`: push na `main` = migracje D1 i `wrangler deploy` na `deja.litkowski.com`; staging ręcznie (workflow_dispatch, adres workers.dev). GitHub Pages działa równolegle, dopóki postęp nie zostanie przeniesiony na nowy adres (dane są per adres).
 
 **8.2 Logowanie** ✅ (kod gotowy; działa po wpisaniu client ID i sekretu Google)
 - Karta „Compte” w Réglages z przyciskiem „Se connecter avec Google”. Karta jest ukryta, gdy za aplikacją nie ma API (GitHub Pages, offline).
