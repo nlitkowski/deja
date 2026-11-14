@@ -1,6 +1,8 @@
 import { useMemo } from 'react';
 import { content } from '../content/registry';
+import { achievementStats, BADGES, bossAchievements, unlockedIds } from '../game/achievements';
 import { levelFromXp } from '../game/levels';
+import { questStatus } from '../game/quests';
 import { defeatedBosses, mapState, type MapPack } from '../game/map';
 import { streakInfo } from '../game/streak';
 import { totalXp } from '../game/xp';
@@ -37,4 +39,27 @@ export function useMapState() {
 export function useLockedUnits(): ReadonlySet<string> {
   const map = useMapState();
   return useMemo(() => new Set([...map.values()].flatMap((p) => p.units.filter((u) => u.locked).map((u) => u.key))), [map]);
+}
+
+/** Every badge: the files in `game/achievements/badges/` plus one per unit boss. */
+export const ACHIEVEMENTS = [...BADGES, ...bossAchievements([...content.units.values()].map((u) => ({ key: u.key, title: u.title })))];
+
+const allUnits = mapPacks.flatMap((p) => p.units);
+
+export function useAchievements() {
+  const cards = useAppStore((s) => s.progress.cards);
+  const log = useAppStore((s) => s.log);
+  const today = dayKey(new Date());
+  return useMemo(() => {
+    const stats = achievementStats(log, { cards, units: allUnits, today, xp: xpContext });
+    return { stats, unlocked: unlockedIds(ACHIEVEMENTS, stats) };
+  }, [cards, log, today]);
+}
+
+const questContext = { ...xpContext, isTricky: (entryId: string) => (content.entries.get(entryId)?.confusables.length ?? 0) > 0 };
+
+export function useQuests() {
+  const log = useAppStore((s) => s.log);
+  const today = dayKey(new Date());
+  return useMemo(() => questStatus(log, today, questContext), [log, today]);
 }

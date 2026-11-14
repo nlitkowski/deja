@@ -1,6 +1,7 @@
 import { AppLayout, MenuButton } from '../components/AppLayout';
 import { Emoji } from '../components/Emoji';
 import { GameBar } from '../components/GameBar';
+import { QuestList } from '../components/QuestList';
 import { UnitMap } from '../components/UnitMap';
 import { Icon } from '../components/Icon';
 import { LangSwitch } from '../components/LangSwitch';
@@ -20,9 +21,10 @@ interface Props {
   onOpenSheet: (key: string) => void;
   onOpenSettings: () => void;
   onBoss: (unitKey: string) => void;
+  onOpenAchievements: () => void;
 }
 
-export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBoss }: Props) {
+export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBoss, onOpenAchievements }: Props) {
   const progress = useAppStore((s) => s.progress);
   const settings = useAppStore((s) => s.settings);
   const updateSettings = useAppStore((s) => s.updateSettings);
@@ -49,6 +51,9 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBos
           </div>
           <div className="header-actions">
             <LangSwitch value={settings.helpLang} onChange={(helpLang) => updateSettings({ helpLang })} />
+            <button className="icon-button" onClick={onOpenAchievements} aria-label={ui.achievements} title={ui.achievements}>
+              <Icon name="trophy" />
+            </button>
             <button className="icon-button settings-button" onClick={onOpenSettings} aria-label={ui.settings} title={ui.settings}>
               <Icon name="settings" />
             </button>
@@ -67,6 +72,8 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBos
             {reviewSize === 0 ? ui.allDoneToday : ui.reviewWithCount(reviewSize)}
           </button>
         </section>
+
+        <QuestList />
 
         {sheetCount > 0 && (
           <button className="sheets-card" onClick={onOpenSheets}>

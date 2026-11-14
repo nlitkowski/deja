@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import type { HelpLang } from './content/localized';
 import { content } from './content/registry';
 import type { SessionItem } from './lib/session';
+import { Achievements } from './screens/Achievements';
 import { Boss } from './screens/Boss';
 import { ContentErrors } from './screens/ContentErrors';
 import { Home } from './screens/Home';
@@ -21,7 +22,8 @@ type Screen =
   | { name: 'summary'; outcome: SessionOutcome }
   | { name: 'sheets' }
   | { name: 'sheet'; key: string }
-  | { name: 'settings' };
+  | { name: 'settings' }
+  | { name: 'achievements' };
 
 export function App() {
   const settings = useAppStore((s) => s.settings);
@@ -52,6 +54,7 @@ export function App() {
           onOpenSheet={(key) => setScreen({ name: 'sheet', key })}
           onOpenSettings={() => setScreen({ name: 'settings' })}
           onBoss={(unitKey) => setScreen({ name: 'boss', unitKey })}
+          onOpenAchievements={() => setScreen({ name: 'achievements' })}
         />
       );
     case 'session':
@@ -75,6 +78,8 @@ export function App() {
       );
     case 'summary':
       return <SessionSummary outcome={screen.outcome} onDone={home} />;
+    case 'achievements':
+      return <Achievements onBack={home} />;
     case 'settings':
       return <SettingsScreen onBack={home} />;
     case 'sheets':

@@ -37,6 +37,7 @@ export const GAME = {
     freezeEvery: 7,
     maxFreezes: 2,
   },
+  quests: { daily: 3, weekly: 1, dailyReward: 20, weeklyReward: 100 },
   /** A boss without its own config in the unit file. */
   boss: { questions: 10, lives: 3, secondsPerQuestion: 12 },
   /** The combo counter shows from this many correct answers in a row. */

@@ -144,7 +144,9 @@ Zrobione. Uwagi: malejące XP liczone przez odtworzenie logu w kolejności (`rep
 - Zdarzenie `session` z `kind: 'boss'` i `defeated: boolean`. Wygrana daje +100 XP i odznakę, przegrana nic nie odbiera.
 - Dopisz konfigurację bossa do każdej jednostki w `a1-connecteurs` i `a2-connecteurs` na podstawie istniejących `confusables`.
 
-## Etap 5 — Odznaki i questy
+## Etap 5 — Odznaki i questy ✅
+
+Zrobione. Uwagi: odznaki stopniowane (Flamme, bonnes réponses, Combo) to jeden plik z listą progów; odznaki bossów generuje `bossAchievements` z treści; galeria ma kolejność z listy `ORDER`, a nowe pliki trafiają na koniec. Na pierwszym uruchomieniu na urządzeniu już zdobyte odznaki zapisują się jako widziane bez toastów. „Oiseau de nuit” = sesja zakończona między 23:00 a 4:00, „Lève-tôt” = między 4:00 a 7:00 (czas urządzenia). Questy: 8 dziennych i 4 tygodniowe w pulach; „pokonaj mylonych bez błędu” zastąpiłem questem „Déjoue 8 pièges” (poprawne odpowiedzi na wpisy z `confusables`). Nagroda questa (20 / 100 XP) to zdarzenie `quest`, którego XP nie liczy się do postępu questów.
 
 **5.1 `src/game/achievements/`**
 - Jeden plik na odznakę: `{ id, title (fr), description (pl/fr przez helpLang), icon, check(ctx) }`, gdzie `ctx` zawiera projekcję (XP, streak, mastery, sesje). Rejestr zbiera je przez `import.meta.glob`.

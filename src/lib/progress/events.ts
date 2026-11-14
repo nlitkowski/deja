@@ -65,7 +65,16 @@ export interface BaselineEvent extends EventBase {
   introduced?: { day: DayKey; count: number };
 }
 
-export type ProgressEvent = ReviewEvent | BaselineEvent | SessionEvent | SettingEvent;
+/** A completed quest's reward, claimed by the learner: the XP lives in the log like every other XP. */
+export interface QuestEvent extends EventBase {
+  type: 'quest';
+  questId: string;
+  /** First day of the quest's period (the day, or the Monday of a weekly quest). */
+  period: DayKey;
+  xp: number;
+}
+
+export type ProgressEvent = ReviewEvent | BaselineEvent | SessionEvent | SettingEvent | QuestEvent;
 
 export function newEventId(): string {
   return crypto.randomUUID();

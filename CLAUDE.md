@@ -73,12 +73,11 @@ src/
     config.ts               # wszystkie liczby do strojenia
     mastery.ts, map.ts      # mastery 0–5 z karty SRS, blokady jednostek, pakietów i bossów
     boss.ts                 # pytania bossa z grup mylonych wpisów, życia
+    achievements/badges/    # jeden plik na odznakę (albo serię progów); rejestr przez import.meta.glob
+    quests/daily|weekly/    # jeden plik na quest; wybór deterministyczny z seeda dnia / tygodnia
     xp.ts
     levels.ts
     streak.ts
-    achievements/           # każda odznaka to osobny plik z warunkiem
-    quests.ts
-    mastery.ts
   lib/
     srs.ts                  # SM-2 lite
     answer.ts               # normalizacja i porównywanie odpowiedzi

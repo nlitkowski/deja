@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { QuestList } from '../components/QuestList';
 import { celebrate } from '../confetti';
 import { levelFromXp } from '../game/levels';
 import { streakInfo } from '../game/streak';
@@ -99,6 +100,8 @@ export function SessionSummary({ outcome, onDone }: { outcome: SessionOutcome; o
           </p>
         )}
       </section>
+
+      <QuestList />
 
       <div className="summary-grid">
         {tiles.map(([value, label]) => (

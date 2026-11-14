@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { dayKey } from '../lib/date';
 import { baselineFromLegacy } from '../lib/progress/baseline';
-import { newEventId, type ProgressEvent, type ReviewEvent, type SessionEvent, type SettingEvent } from '../lib/progress/events';
+import { newEventId, type ProgressEvent, type QuestEvent, type ReviewEvent, type SessionEvent, type SettingEvent } from '../lib/progress/events';
 import { emptyProgress, type ProgressState } from '../lib/progress/fold';
 import { Projection } from '../lib/progress/projection';
 import { indexedDbStore, type ProgressStore } from '../lib/progress/store';
@@ -31,6 +31,7 @@ export interface AppState {
   updateSettings: (patch: Partial<Settings>, now?: Date) => void;
   recordAnswer: (input: AnswerInput, now?: Date) => ReviewEvent;
   recordSession: (input: SessionInput, now?: Date) => SessionEvent;
+  claimQuest: (input: { questId: string; period: string; xp: number }, now?: Date) => QuestEvent | undefined;
 }
 
 interface Deps {
@@ -112,6 +113,13 @@ export function createAppStore({ progressStore, kv }: Deps) {
 
       recordSession(input, now = new Date()) {
         return record<SessionEvent>({ type: 'session', ...base(now), ...input }, 'session');
+      },
+
+      claimQuest(input, now = new Date()) {
+        // A second tap (or another device) must not pay the reward twice.
+        const already = get().log.some((e) => e.type === 'quest' && e.questId === input.questId && e.period === input.period);
+        if (already) return undefined;
+        return record<QuestEvent>({ type: 'quest', ...base(now), ...input }, 'quest');
       },
     };
   });

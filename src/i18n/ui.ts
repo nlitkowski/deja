@@ -39,6 +39,16 @@ export const ui = {
   mastered: 'Maîtrisé',
   locked: 'Verrouillé',
 
+  quests: 'Quêtes',
+  weekly: 'Semaine',
+  claim: (xp: number) => `Récupérer +${xp} XP`,
+  claimed: 'Récupéré ✓',
+  achievements: 'Succès',
+  achievementsCount: (n: number, total: number) => `${n} sur ${total} débloqués`,
+  newAchievement: 'Nouveau succès !',
+  earned: 'Débloqué',
+  notEarned: 'Pas encore débloqué',
+
   sheets: 'Fiches de révision',
   sheetsTeaser: (n: number) => `${n} fiche${n > 1 ? 's' : ''} : grammaire, vocabulaire, expressions`,
   treeHeading: 'Sommaire',

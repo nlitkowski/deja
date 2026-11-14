@@ -57,6 +57,8 @@ export function scoreEvents(events: readonly ProgressEvent[], ctx: XpContext): S
       scored.push({ event, xp: total, combo });
     } else if (event.type === 'session') {
       scored.push({ event, xp: sessionBonus(event), combo: 0 });
+    } else if (event.type === 'quest') {
+      scored.push({ event, xp: event.xp, combo: 0 });
     }
   });
   return scored;

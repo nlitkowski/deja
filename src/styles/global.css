@@ -2062,3 +2062,166 @@ button.tree-sheet:disabled {
   opacity: 0.45;
   cursor: default;
 }
+
+/* Quests */
+
+.quests {
+  margin-bottom: 24px;
+}
+
+.quests h2 {
+  margin-bottom: 10px;
+}
+
+.quests ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.quest {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: var(--border-w) solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.quest.done {
+  border-color: var(--highlight);
+}
+
+.quest.claimed {
+  opacity: 0.65;
+}
+
+.quest.claimed .progress > span {
+  background: var(--success);
+}
+
+.quest-icon {
+  font-size: 1.4rem;
+}
+
+.quest-body {
+  flex: 1;
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.quest-title {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.quest-title .level {
+  margin-left: 6px;
+}
+
+.quest-count {
+  white-space: nowrap;
+}
+
+.quest-claim {
+  padding: 0.5em 0.9em;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  background: var(--highlight);
+  color: var(--on-highlight);
+}
+
+.summary .quests {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* Achievements */
+
+.badge-grid {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.badge {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 6px;
+  padding: 14px 10px;
+  text-align: center;
+  background: var(--surface);
+  border: var(--border-w) solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.badge .progress {
+  width: 100%;
+}
+
+.badge-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+/* Not earned yet: a grey silhouette of the icon. */
+.badge:not(.earned) .badge-icon {
+  filter: grayscale(1) brightness(0);
+  opacity: 0.2;
+}
+
+.badge:not(.earned) .badge-title {
+  color: var(--muted);
+}
+
+.badge.earned {
+  border-color: var(--highlight);
+}
+
+.achievement-toast {
+  position: fixed;
+  left: 50%;
+  top: calc(16px + env(safe-area-inset-top));
+  transform: translateX(-50%);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100vw - 32px);
+  padding: 10px 18px 10px 12px;
+  background: var(--hero-bg);
+  color: var(--hero-fg);
+  border: 2px solid var(--highlight);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: toast-in 0.35s ease;
+}
+
+.achievement-toast > span:last-child {
+  display: grid;
+}
+
+.achievement-toast .muted {
+  color: var(--hero-muted);
+}
+
+.achievement-toast-icon {
+  font-size: 1.8rem;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -12px);
+  }
+}
