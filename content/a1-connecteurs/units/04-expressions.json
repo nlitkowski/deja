@@ -1,0 +1,255 @@
+{
+  "id": "04-expressions",
+  "title": "Expressions",
+  "icon": "🗺️",
+  "entries": [
+    {
+      "id": "expr-de-a",
+      "fr": "de… à…",
+      "pl": "od… do… (czas, miejsce)",
+      "def": "le début et la fin (heures, jours, trajet)",
+      "examples": [
+        {
+          "fr": "Je travaille de 9h à 17h.",
+          "pl": "Pracuję od 9 do 17."
+        },
+        {
+          "fr": "Le magasin est ouvert du lundi au samedi.",
+          "pl": "Sklep jest otwarty od poniedziałku do soboty."
+        }
+      ],
+      "tip": {
+        "pl": "z rodzajnikiem: du lundi au vendredi (de + le, à + le)",
+        "fr": "avec article : du lundi au vendredi (de + le, à + le)"
+      },
+      "confusables": [
+        "contr-au-aux",
+        "contr-du-des"
+      ],
+      "tags": [
+        "temps"
+      ]
+    },
+    {
+      "id": "expr-en-mois",
+      "fr": "en + miesiąc / rok",
+      "pl": "w (miesiącu / roku)",
+      "def": "avec les mois et les années",
+      "examples": [
+        {
+          "fr": "Mon anniversaire est en janvier.",
+          "pl": "Moje urodziny są w styczniu."
+        },
+        {
+          "fr": "Je suis arrivé en 2024.",
+          "pl": "Przyjechałem w 2024 roku."
+        }
+      ],
+      "tip": {
+        "pl": "en janvier, en 2024; ale à 8 heures i dans 5 minutes",
+        "fr": "en janvier, en 2024 ; mais à 8 heures et dans 5 minutes"
+      },
+      "confusables": [
+        "prep-dans",
+        "prep-a"
+      ],
+      "tags": [
+        "temps"
+      ]
+    },
+    {
+      "id": "expr-a-cote-de",
+      "fr": "à côté de",
+      "pl": "obok",
+      "def": "tout près, juste à droite ou à gauche",
+      "examples": [
+        {
+          "fr": "La boulangerie est à côté de la gare.",
+          "pl": "Piekarnia jest obok dworca."
+        }
+      ],
+      "tip": {
+        "pl": "de + le = du: à côté du cinéma",
+        "fr": "de + le = du : à côté du cinéma"
+      },
+      "confusables": [
+        "expr-pres-de",
+        "expr-en-face-de"
+      ],
+      "tags": [
+        "lieu"
+      ]
+    },
+    {
+      "id": "expr-en-face-de",
+      "fr": "en face de",
+      "pl": "naprzeciwko",
+      "def": "de l’autre côté, face à face",
+      "examples": [
+        {
+          "fr": "La pharmacie est en face de l'école.",
+          "pl": "Apteka jest naprzeciwko szkoły."
+        }
+      ],
+      "tip": {
+        "pl": "de + le = du: en face du parc",
+        "fr": "de + le = du : en face du parc"
+      },
+      "confusables": [
+        "expr-a-cote-de",
+        "prep-position"
+      ],
+      "tags": [
+        "lieu"
+      ]
+    },
+    {
+      "id": "expr-pres-de",
+      "fr": "près de",
+      "pl": "blisko",
+      "def": "pas loin",
+      "examples": [
+        {
+          "fr": "J'habite près de la gare.",
+          "pl": "Mieszkam blisko dworca."
+        }
+      ],
+      "tip": {
+        "pl": "près de chez moi = blisko mnie (mojego domu)",
+        "fr": "près de chez moi = pas loin de ma maison"
+      },
+      "confusables": [
+        "expr-loin-de",
+        "expr-a-cote-de"
+      ],
+      "tags": [
+        "lieu"
+      ]
+    },
+    {
+      "id": "expr-loin-de",
+      "fr": "loin de",
+      "pl": "daleko od",
+      "def": "à une grande distance",
+      "examples": [
+        {
+          "fr": "La maison est loin de la ville.",
+          "pl": "Dom jest daleko od miasta."
+        }
+      ],
+      "tip": {
+        "pl": "przed samogłoską loin d': loin d'ici",
+        "fr": "devant une voyelle : loin d'ici"
+      },
+      "confusables": [
+        "expr-pres-de"
+      ],
+      "tags": [
+        "lieu"
+      ]
+    },
+    {
+      "id": "expr-transport-en",
+      "fr": "en + voiture / bus / avion / train / métro",
+      "pl": "(jechać) samochodem / autobusem / samolotem… — w środku pojazdu",
+      "def": "transport fermé : on est dedans",
+      "examples": [
+        {
+          "fr": "Je vais au travail en métro.",
+          "pl": "Jeżdżę do pracy metrem."
+        },
+        {
+          "fr": "Nous partons en avion.",
+          "pl": "Lecimy samolotem."
+        }
+      ],
+      "tip": {
+        "pl": "en = siedzisz w środku pojazdu",
+        "fr": "« en » = on est à l’intérieur du véhicule"
+      },
+      "confusables": [
+        "expr-transport-a"
+      ],
+      "tags": [
+        "transport"
+      ]
+    },
+    {
+      "id": "expr-transport-a",
+      "fr": "à + pied / vélo / moto / cheval",
+      "pl": "pieszo / rowerem / motocyklem / konno — na czymś, otwarte",
+      "def": "transport ouvert : on est dessus, ou on marche",
+      "examples": [
+        {
+          "fr": "Je vais à l'école à pied.",
+          "pl": "Chodzę do szkoły pieszo."
+        },
+        {
+          "fr": "Il va au travail à vélo.",
+          "pl": "On jeździ do pracy rowerem."
+        }
+      ],
+      "tip": {
+        "pl": "à = siedzisz na czymś (rower, koń) albo idziesz pieszo",
+        "fr": "« à » = on est sur quelque chose (vélo, cheval) ou on marche"
+      },
+      "confusables": [
+        "expr-transport-en"
+      ],
+      "tags": [
+        "transport"
+      ]
+    }
+  ],
+  "boss": {
+    "entryIds": [
+      "expr-transport-en",
+      "expr-transport-a",
+      "prep-en",
+      "prep-a"
+    ],
+    "exerciseTypes": [
+      "gap-fill"
+    ],
+    "questions": 10,
+    "lives": 3,
+    "timeLimitSec": 20
+  },
+  "exercises": [
+    { "id": "de-a-1", "type": "gap-fill", "entryIds": ["expr-de-a"], "data": { "sentence": "Je travaille ___ 9h à 17h.", "answers": ["de"], "pl": "Pracuję od 9 do 17." } },
+    { "id": "de-a-2", "type": "gap-fill", "entryIds": ["expr-de-a"], "data": { "sentence": "Le magasin est ouvert de 10h ___ 19h.", "answers": ["à"], "pl": "Sklep jest otwarty od 10 do 19." } },
+    { "id": "de-a-3", "type": "gap-fill", "entryIds": ["expr-de-a"], "data": { "sentence": "Je travaille du lundi ___ vendredi.", "answers": ["au"], "pl": "Pracuję od poniedziałku do piątku.", "hint": { "pl": "à + le", "fr": "à + le" } } },
+    { "id": "de-a-4", "type": "gap-fill", "entryIds": ["expr-de-a"], "data": { "sentence": "Le musée est ouvert ___ mardi au dimanche.", "answers": ["du"], "pl": "Muzeum jest otwarte od wtorku do niedzieli." } },
+
+    { "id": "en-mois-1", "type": "gap-fill", "entryIds": ["expr-en-mois"], "data": { "sentence": "Mon anniversaire est ___ janvier.", "answers": ["en"], "pl": "Moje urodziny są w styczniu." } },
+    { "id": "en-mois-2", "type": "gap-fill", "entryIds": ["expr-en-mois"], "data": { "sentence": "Je suis né ___ 1995.", "answers": ["en"], "pl": "Urodziłem się w 1995 roku." } },
+    { "id": "en-mois-3", "type": "gap-fill", "entryIds": ["expr-en-mois"], "data": { "sentence": "On part en vacances ___ août.", "answers": ["en"], "pl": "Wyjeżdżamy na wakacje w sierpniu." } },
+    { "id": "en-mois-4", "type": "translate-pl-fr", "entryIds": ["expr-en-mois"], "data": { "pl": "w maju", "answers": ["en mai", "au mois de mai"] } },
+
+    { "id": "a-cote-de-1", "type": "gap-fill", "entryIds": ["expr-a-cote-de"], "data": { "sentence": "La boulangerie est ___ la gare.", "answers": ["à côté de"], "pl": "Piekarnia jest obok dworca.", "clue": "(les deux bâtiments se touchent)" } },
+    { "id": "a-cote-de-2", "type": "gap-fill", "entryIds": ["expr-a-cote-de"], "data": { "sentence": "Viens t'asseoir ___ moi !", "answers": ["à côté de"], "pl": "Chodź, usiądź obok mnie!", "clue": "(sur la chaise voisine)" } },
+    { "id": "a-cote-de-3", "type": "gap-fill", "entryIds": ["expr-a-cote-de"], "data": { "sentence": "Le parking est à côté ___ cinéma.", "answers": ["du"], "pl": "Parking jest obok kina.", "hint": { "pl": "de + le", "fr": "de + le" } } },
+
+    { "id": "en-face-de-1", "type": "gap-fill", "entryIds": ["expr-en-face-de"], "data": { "sentence": "La pharmacie est ___ l'hôpital.", "answers": ["en face de"], "pl": "Apteka jest naprzeciwko szpitala.", "clue": "(de l'autre côté de la rue)" } },
+    { "id": "en-face-de-2", "type": "gap-fill", "entryIds": ["expr-en-face-de"], "data": { "sentence": "J'habite en face ___ parc.", "answers": ["du"], "pl": "Mieszkam naprzeciwko parku.", "hint": { "pl": "de + le", "fr": "de + le" } } },
+    { "id": "en-face-de-3", "type": "gap-fill", "entryIds": ["expr-en-face-de"], "data": { "sentence": "Le bus s'arrête ___ l'école.", "answers": ["en face de"], "pl": "Autobus zatrzymuje się naprzeciwko szkoły.", "clue": "(de l'autre côté de la rue)" } },
+
+    { "id": "pres-de-1", "type": "gap-fill", "entryIds": ["expr-pres-de"], "data": { "sentence": "Il y a un parc ___ chez moi.", "answers": ["près de"], "pl": "Blisko mnie jest park.", "clue": "(pas loin)" } },
+    { "id": "pres-de-2", "type": "gap-fill", "entryIds": ["expr-pres-de"], "data": { "sentence": "L'hôtel est ___ la plage.", "answers": ["près de"], "pl": "Hotel jest blisko plaży.", "clue": "(pas loin)" } },
+    { "id": "pres-de-3", "type": "gap-fill", "entryIds": ["expr-pres-de"], "data": { "sentence": "Nous habitons près ___ centre-ville.", "answers": ["du"], "pl": "Mieszkamy blisko centrum miasta.", "hint": { "pl": "de + le", "fr": "de + le" } } },
+
+    { "id": "loin-de-1", "type": "gap-fill", "entryIds": ["expr-loin-de"], "data": { "sentence": "La maison est ___ la ville.", "answers": ["loin de"], "pl": "Dom jest daleko od miasta.", "clue": "(à 30 km)" } },
+    { "id": "loin-de-2", "type": "gap-fill", "entryIds": ["expr-loin-de"], "data": { "sentence": "J'habite ___ mon travail.", "answers": ["loin de"], "pl": "Mieszkam daleko od pracy.", "clue": "(≠ près de)" } },
+    { "id": "loin-de-3", "type": "gap-fill", "entryIds": ["expr-loin-de"], "data": { "sentence": "C'est loin ___ ici ?", "answers": ["d'"], "pl": "Czy to daleko stąd?", "hint": { "pl": "elizja przed samogłoską", "fr": "élision devant une voyelle" } } },
+
+    { "id": "transport-en-1", "type": "gap-fill", "entryIds": ["expr-transport-en"], "data": { "sentence": "Je vais au travail ___ métro.", "answers": ["en"], "pl": "Jeżdżę do pracy metrem." } },
+    { "id": "transport-en-2", "type": "gap-fill", "entryIds": ["expr-transport-en"], "data": { "sentence": "Nous partons à Rome ___ avion.", "answers": ["en"], "pl": "Lecimy do Rzymu samolotem." } },
+    { "id": "transport-en-3", "type": "gap-fill", "entryIds": ["expr-transport-en"], "data": { "sentence": "Elle va à l'école ___ bus.", "answers": ["en"], "pl": "Ona jeździ do szkoły autobusem." } },
+    { "id": "transport-en-4", "type": "translate-pl-fr", "entryIds": ["expr-transport-en"], "data": { "pl": "samochodem", "answers": ["en voiture"] } },
+
+    { "id": "transport-a-1", "type": "gap-fill", "entryIds": ["expr-transport-a"], "data": { "sentence": "Je vais à l'école ___ pied.", "answers": ["à"], "pl": "Chodzę do szkoły pieszo." } },
+    { "id": "transport-a-2", "type": "gap-fill", "entryIds": ["expr-transport-a"], "data": { "sentence": "Il va au travail ___ vélo.", "answers": ["à"], "pl": "On jeździ do pracy rowerem." } },
+    { "id": "transport-a-3", "type": "gap-fill", "entryIds": ["expr-transport-a"], "data": { "sentence": "Elle se promène ___ cheval.", "answers": ["à"], "pl": "Ona jeździ konno." } },
+    { "id": "transport-a-4", "type": "translate-pl-fr", "entryIds": ["expr-transport-a"], "data": { "pl": "pieszo", "answers": ["à pied"] } }
+  ]
+}

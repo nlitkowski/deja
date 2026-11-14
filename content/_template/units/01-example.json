@@ -1,0 +1,35 @@
+{
+  "id": "01-example",
+  "title": "Unité d'exemple",
+  "icon": "✏️",
+  "entries": [
+    {
+      "id": "word-bonjour",
+      "fr": "bonjour",
+      "pl": "dzień dobry",
+      "def": "salutation pendant la journée",
+      "examples": [{ "fr": "Bonjour, madame !", "pl": "Dzień dobry pani!" }],
+      "tip": { "pl": "Wieczorem: bonsoir.", "fr": "Le soir : bonsoir." }
+    }
+  ],
+  "exercises": [
+    {
+      "id": "bonjour-1",
+      "type": "gap-fill",
+      "entryIds": ["word-bonjour"],
+      "data": {
+        "sentence": "___, monsieur !",
+        "answers": ["bonjour"],
+        "pl": "Dzień dobry panu!",
+        "clue": "(il est 10 h du matin)",
+        "hint": { "pl": "powitanie", "fr": "salutation" }
+      }
+    },
+    {
+      "id": "bonjour-2",
+      "type": "translate-pl-fr",
+      "entryIds": ["word-bonjour"],
+      "data": { "pl": "dzień dobry", "answers": ["bonjour"] }
+    }
+  ]
+}

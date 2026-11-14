@@ -1,0 +1,16 @@
+{
+  "id": "a1-connecteurs",
+  "version": 1,
+  "title": "Connecteurs et prépositions",
+  "level": "A1",
+  "icon": "🔗",
+  "requires": [],
+  "units": ["01-prepositions", "02-conjunctions", "03-contractions", "04-expressions"],
+  "accentPairs": [
+    ["ou", "où"],
+    ["a", "à"],
+    ["la", "là"],
+    ["du", "dû"],
+    ["sur", "sûr"]
+  ]
+}

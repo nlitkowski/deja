@@ -1,0 +1,140 @@
+{
+  "id": "03-contractions",
+  "title": "Articles contractés",
+  "icon": "🔀",
+  "entries": [
+    {
+      "id": "contr-au-aux",
+      "fr": "au / aux",
+      "pl": "à + le = au, à + les = aux (à la, à l' bez zmian)",
+      "def": "à + le = au, à + les = aux",
+      "examples": [
+        {
+          "fr": "Je vais au cinéma.",
+          "pl": "Idę do kina."
+        },
+        {
+          "fr": "Je parle aux étudiants.",
+          "pl": "Mówię do studentów."
+        }
+      ],
+      "tip": {
+        "pl": "à + le = au, à + les = aux; à la i à l' się nie zmieniają",
+        "fr": "à + le = au, à + les = aux ; à la et à l' ne changent pas"
+      },
+      "confusables": [
+        "contr-du-des",
+        "prep-a"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    {
+      "id": "contr-du-des",
+      "fr": "du / des",
+      "pl": "de + le = du, de + les = des (de la, de l' bez zmian)",
+      "def": "de + le = du, de + les = des",
+      "examples": [
+        {
+          "fr": "Je reviens du bureau.",
+          "pl": "Wracam z biura."
+        },
+        {
+          "fr": "Les livres des enfants.",
+          "pl": "Książki dzieci."
+        }
+      ],
+      "tip": {
+        "pl": "du / de la / des to też partitifs: Je mange du pain.",
+        "fr": "du / de la / des sont aussi des articles partitifs : je mange du pain."
+      },
+      "confusables": [
+        "contr-au-aux",
+        "prep-de"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    {
+      "id": "contr-pays",
+      "fr": "en / au / aux + kraj; de / du / des + kraj",
+      "pl": "w / do kraju; z kraju",
+      "def": "en / au / aux + pays : aller, habiter ; de / du / des + pays : venir de",
+      "examples": [
+        {
+          "fr": "J'habite en France. Je viens de France.",
+          "pl": "Mieszkam we Francji. Pochodzę z Francji."
+        },
+        {
+          "fr": "Je vais au Japon. Il vient du Japon.",
+          "pl": "Jadę do Japonii. On pochodzi z Japonii."
+        },
+        {
+          "fr": "Ils habitent aux États-Unis. Elle vient des États-Unis.",
+          "pl": "Mieszkają w Stanach Zjednoczonych. Ona pochodzi ze Stanów."
+        }
+      ],
+      "tip": {
+        "pl": "kraje na -e są zwykle żeńskie (en / de), wyjątki: le Mexique, le Mozambique",
+        "fr": "les pays en -e sont souvent féminins (en / de) ; exceptions : le Mexique, le Mozambique"
+      },
+      "confusables": [
+        "prep-en",
+        "contr-au-aux",
+        "contr-du-des"
+      ],
+      "tags": [
+        "article",
+        "lieu"
+      ]
+    }
+  ],
+  "boss": {
+    "entryIds": [
+      "contr-au-aux",
+      "contr-du-des",
+      "contr-pays"
+    ],
+    "exerciseTypes": [
+      "gap-fill"
+    ],
+    "questions": 10,
+    "lives": 3,
+    "timeLimitSec": 20
+  },
+  "exercises": [
+    { "id": "table-a-le", "type": "gap-fill", "entryIds": ["contr-au-aux"], "data": { "sentence": "à + le = ___", "answers": ["au"] } },
+    { "id": "table-a-la", "type": "gap-fill", "entryIds": ["contr-au-aux"], "data": { "sentence": "à + la = ___", "answers": ["à la"] } },
+    { "id": "table-a-l", "type": "gap-fill", "entryIds": ["contr-au-aux"], "data": { "sentence": "à + l' = ___", "answers": ["à l'"] } },
+    { "id": "table-a-les", "type": "gap-fill", "entryIds": ["contr-au-aux"], "data": { "sentence": "à + les = ___", "answers": ["aux"] } },
+
+    { "id": "table-de-le", "type": "gap-fill", "entryIds": ["contr-du-des"], "data": { "sentence": "de + le = ___", "answers": ["du"] } },
+    { "id": "table-de-la", "type": "gap-fill", "entryIds": ["contr-du-des"], "data": { "sentence": "de + la = ___", "answers": ["de la"] } },
+    { "id": "table-de-l", "type": "gap-fill", "entryIds": ["contr-du-des"], "data": { "sentence": "de + l' = ___", "answers": ["de l'"] } },
+    { "id": "table-de-les", "type": "gap-fill", "entryIds": ["contr-du-des"], "data": { "sentence": "de + les = ___", "answers": ["des"] } },
+
+    { "id": "au-aux-1", "type": "gap-fill", "entryIds": ["contr-au-aux"], "data": { "sentence": "Je vais ___ cinéma.", "answers": ["au"], "pl": "Idę do kina.", "hint": { "pl": "à + le", "fr": "à + le" }, "clue": "(destination)" } },
+    { "id": "au-aux-2", "type": "gap-fill", "entryIds": ["contr-au-aux"], "data": { "sentence": "Je parle ___ étudiants.", "answers": ["aux"], "pl": "Mówię do studentów.", "hint": { "pl": "à + les", "fr": "à + les" }, "clue": "(destinataires : les étudiants)" } },
+    { "id": "au-aux-3", "type": "gap-fill", "entryIds": ["contr-au-aux"], "data": { "sentence": "Ce soir, on mange ___ restaurant.", "answers": ["au"], "pl": "Dziś wieczorem jemy w restauracji.", "clue": "(le lieu du repas)" } },
+    { "id": "au-aux-4", "type": "gap-fill", "entryIds": ["contr-au-aux"], "data": { "sentence": "Je vais ___ école à pied.", "answers": ["à l'"], "pl": "Chodzę do szkoły pieszo.", "clue": "(destination)" } },
+    { "id": "au-aux-5", "type": "gap-fill", "entryIds": ["contr-au-aux"], "data": { "sentence": "Je donne des bonbons ___ enfants.", "answers": ["aux"], "pl": "Daję cukierki dzieciom.", "clue": "(destinataires : les enfants)" } },
+
+    { "id": "du-des-1", "type": "gap-fill", "entryIds": ["contr-du-des"], "data": { "sentence": "Je reviens ___ bureau.", "answers": ["du"], "pl": "Wracam z biura.", "hint": { "pl": "de + le", "fr": "de + le" }, "clue": "(origine : le bureau)" } },
+    { "id": "du-des-2", "type": "gap-fill", "entryIds": ["contr-du-des"], "data": { "sentence": "Ce sont les livres ___ enfants.", "answers": ["des"], "pl": "To są książki dzieci.", "hint": { "pl": "de + les", "fr": "de + les" }, "clue": "(les enfants possèdent les livres)" } },
+    { "id": "du-des-3", "type": "gap-fill", "entryIds": ["contr-du-des"], "data": { "sentence": "Le matin, je mange ___ pain.", "answers": ["du"], "pl": "Rano jem chleb.", "hint": { "pl": "partitif", "fr": "article partitif" }, "clue": "(une quantité de pain)" } },
+    { "id": "du-des-4", "type": "gap-fill", "entryIds": ["contr-du-des"], "data": { "sentence": "Je rentre ___ travail à 18 heures.", "answers": ["du"], "pl": "Wracam z pracy o 18.", "clue": "(origine : le travail)" } },
+    { "id": "du-des-5", "type": "gap-fill", "entryIds": ["contr-du-des"], "data": { "sentence": "C'est la voiture ___ voisins.", "answers": ["des"], "pl": "To samochód sąsiadów.", "clue": "(les voisins possèdent la voiture)" } },
+
+    { "id": "pays-1", "type": "gap-fill", "entryIds": ["contr-pays"], "data": { "sentence": "J'habite ___ Japon.", "answers": ["au"], "pl": "Mieszkam w Japonii." } },
+    { "id": "pays-2", "type": "gap-fill", "entryIds": ["contr-pays"], "data": { "sentence": "Il vient ___ États-Unis.", "answers": ["des"], "pl": "On pochodzi ze Stanów Zjednoczonych." } },
+    { "id": "pays-3", "type": "gap-fill", "entryIds": ["contr-pays"], "data": { "sentence": "Nous allons ___ Portugal.", "answers": ["au"], "pl": "Jedziemy do Portugalii." } },
+    { "id": "pays-4", "type": "gap-fill", "entryIds": ["contr-pays"], "data": { "sentence": "Elle vient ___ France.", "answers": ["de"], "pl": "Ona pochodzi z Francji." } },
+    { "id": "pays-5", "type": "gap-fill", "entryIds": ["contr-pays"], "data": { "sentence": "Je pars ___ Mexique en mars.", "answers": ["au"], "pl": "W marcu wyjeżdżam do Meksyku.", "hint": { "pl": "le Mexique: wyjątek", "fr": "le Mexique : exception" } } },
+    { "id": "pays-6", "type": "gap-fill", "entryIds": ["contr-pays"], "data": { "sentence": "Mon ami vient ___ Japon.", "answers": ["du"], "pl": "Mój przyjaciel pochodzi z Japonii." } },
+    { "id": "pays-7", "type": "gap-fill", "entryIds": ["contr-pays"], "data": { "sentence": "Ils habitent ___ États-Unis.", "answers": ["aux"], "pl": "Oni mieszkają w Stanach Zjednoczonych." } },
+    { "id": "pays-8", "type": "gap-fill", "entryIds": ["contr-pays"], "data": { "sentence": "Je vais ___ Espagne en juillet.", "answers": ["en"], "pl": "W lipcu jadę do Hiszpanii." } },
+    { "id": "pays-9", "type": "translate-pl-fr", "entryIds": ["contr-pays"], "data": { "pl": "w Portugalii", "answers": ["au Portugal"] } }
+  ]
+}

@@ -1,0 +1,377 @@
+{
+  "id": "01-prepositions",
+  "title": "Prépositions",
+  "icon": "📍",
+  "entries": [
+    {
+      "id": "prep-dans",
+      "fr": "dans",
+      "pl": "w, do (wewnątrz); za (czas w przyszłości)",
+      "def": "à l'intérieur de ; + durée = après ce temps, dans le futur",
+      "examples": [
+        {
+          "fr": "Le chat est dans la boîte.",
+          "pl": "Kot jest w pudełku."
+        },
+        {
+          "fr": "Je pars dans cinq minutes.",
+          "pl": "Wyjeżdżam za pięć minut."
+        }
+      ],
+      "tip": {
+        "pl": "dans = zamknięta przestrzeń albo „za ile” w przyszłości",
+        "fr": "« dans » = un espace fermé, ou « après combien de temps » dans le futur"
+      },
+      "confusables": [
+        "prep-en",
+        "prep-pendant-depuis"
+      ],
+      "tags": [
+        "lieu",
+        "temps"
+      ]
+    },
+    {
+      "id": "prep-en",
+      "fr": "en",
+      "pl": "w (kraj żeński / transport zamknięty / czas wykonania); materiał",
+      "def": "+ pays féminin ; + transport fermé ; + durée = temps pour faire quelque chose",
+      "examples": [
+        {
+          "fr": "J'habite en France.",
+          "pl": "Mieszkam we Francji."
+        },
+        {
+          "fr": "Je voyage en train.",
+          "pl": "Podróżuję pociągiem."
+        },
+        {
+          "fr": "J'ai fini en deux heures.",
+          "pl": "Skończyłem w dwie godziny."
+        }
+      ],
+      "tip": {
+        "pl": "en + kraj żeński vs au + kraj męski; en voiture/avion vs à vélo/pied",
+        "fr": "en + pays féminin, au + pays masculin ; en voiture / en avion, mais à vélo / à pied"
+      },
+      "confusables": [
+        "prep-dans",
+        "prep-a",
+        "prep-pendant-depuis"
+      ],
+      "tags": [
+        "lieu",
+        "temps",
+        "transport"
+      ]
+    },
+    {
+      "id": "prep-a",
+      "fr": "à",
+      "pl": "do, w, na (miejsce / godzina / smak)",
+      "def": "le lieu, la ville, l’heure, le goût",
+      "examples": [
+        {
+          "fr": "Je vais à Paris.",
+          "pl": "Jadę do Paryża."
+        },
+        {
+          "fr": "Le cours commence à 8 heures.",
+          "pl": "Kurs zaczyna się o 8."
+        },
+        {
+          "fr": "Une glace à la vanille.",
+          "pl": "Lody waniliowe."
+        }
+      ],
+      "tip": {
+        "pl": "à + le = au, à + les = aux; z la i l' bez zmian",
+        "fr": "à + le = au, à + les = aux ; à la et à l' ne changent pas"
+      },
+      "confusables": [
+        "prep-en",
+        "prep-chez"
+      ],
+      "tags": [
+        "lieu",
+        "temps"
+      ]
+    },
+    {
+      "id": "prep-de",
+      "fr": "de",
+      "pl": "z, od, o (pochodzenie / przynależność / temat)",
+      "def": "l'origine, la possession, le sujet",
+      "examples": [
+        {
+          "fr": "Je viens de Pologne.",
+          "pl": "Pochodzę z Polski."
+        },
+        {
+          "fr": "Le livre de Marie.",
+          "pl": "Książka Marii."
+        },
+        {
+          "fr": "On parle de politique.",
+          "pl": "Rozmawiamy o polityce."
+        }
+      ],
+      "tip": {
+        "pl": "de + le = du, de + les = des",
+        "fr": "de + le = du, de + les = des"
+      },
+      "confusables": [
+        "prep-sur"
+      ],
+      "tags": [
+        "lieu"
+      ]
+    },
+    {
+      "id": "prep-pour",
+      "fr": "pour",
+      "pl": "dla, żeby, na (cel / przeznaczenie / planowany czas)",
+      "def": "le but, le destinataire, la durée prévue",
+      "examples": [
+        {
+          "fr": "C'est pour toi.",
+          "pl": "To dla ciebie."
+        },
+        {
+          "fr": "Je travaille pour apprendre.",
+          "pl": "Pracuję, żeby się uczyć."
+        },
+        {
+          "fr": "Je pars pour deux semaines.",
+          "pl": "Wyjeżdżam na dwa tygodnie."
+        }
+      ],
+      "tip": {
+        "pl": "pour + planowany czas (na ile wyjeżdżam); pendant = ile coś faktycznie trwało",
+        "fr": "« pour » + durée prévue (je pars pour une semaine) ; « pendant » = durée réelle"
+      },
+      "confusables": [
+        "prep-pendant-depuis"
+      ]
+    },
+    {
+      "id": "prep-sur",
+      "fr": "sur",
+      "pl": "na (powierzchnia); o (temat)",
+      "def": "sur une surface ; à propos d’un sujet",
+      "examples": [
+        {
+          "fr": "Le verre est sur la table.",
+          "pl": "Szklanka jest na stole."
+        },
+        {
+          "fr": "Un film sur la nature.",
+          "pl": "Film o naturze."
+        }
+      ],
+      "tip": {
+        "pl": "sur = na powierzchni; nie mylić z sûr (pewny)",
+        "fr": "« sur » = sur une surface ; attention : « sûr » (avec accent) = certain"
+      },
+      "confusables": [
+        "prep-de",
+        "prep-sous"
+      ],
+      "tags": [
+        "lieu"
+      ]
+    },
+    {
+      "id": "prep-sous",
+      "fr": "sous",
+      "pl": "pod",
+      "def": "en dessous de",
+      "examples": [
+        {
+          "fr": "Le chien dort sous la table.",
+          "pl": "Pies śpi pod stołem."
+        }
+      ],
+      "confusables": [
+        "prep-sur"
+      ],
+      "tags": [
+        "lieu"
+      ]
+    },
+    {
+      "id": "prep-avec-sans",
+      "fr": "avec / sans",
+      "pl": "z / bez",
+      "def": "avec quelqu’un ou quelque chose / sans : le contraire",
+      "examples": [
+        {
+          "fr": "Un café avec du lait.",
+          "pl": "Kawa z mlekiem."
+        },
+        {
+          "fr": "Un café sans sucre.",
+          "pl": "Kawa bez cukru."
+        }
+      ],
+      "tip": {
+        "pl": "po sans zwykle bez rodzajnika: sans sucre, sans parapluie",
+        "fr": "après « sans », en général pas d’article : sans sucre, sans parapluie"
+      }
+    },
+    {
+      "id": "prep-chez",
+      "fr": "chez",
+      "pl": "u (kogoś, w firmie)",
+      "def": "dans la maison ou au travail de quelqu’un",
+      "examples": [
+        {
+          "fr": "Je suis chez Pierre.",
+          "pl": "Jestem u Pierre'a."
+        },
+        {
+          "fr": "Je vais chez le médecin.",
+          "pl": "Idę do lekarza."
+        }
+      ],
+      "tip": {
+        "pl": "chez + osoba, nigdy + miejsce: à la boulangerie, nie „chez la boulangerie”",
+        "fr": "« chez » + personne, jamais + lieu : à la boulangerie, pas « chez la boulangerie »"
+      },
+      "confusables": [
+        "prep-a"
+      ],
+      "tags": [
+        "lieu"
+      ]
+    },
+    {
+      "id": "prep-position",
+      "fr": "devant / derrière / entre",
+      "pl": "przed / za / między",
+      "def": "devant ≠ derrière ; entre = au milieu de deux choses",
+      "examples": [
+        {
+          "fr": "Il est devant la porte.",
+          "pl": "On jest przed drzwiami."
+        },
+        {
+          "fr": "Le jardin est derrière la maison.",
+          "pl": "Ogród jest za domem."
+        },
+        {
+          "fr": "Entre toi et moi.",
+          "pl": "Między tobą a mną."
+        }
+      ],
+      "tip": {
+        "pl": "derrière ma akcent grave: è",
+        "fr": "« derrière » s’écrit avec un accent grave : è"
+      },
+      "tags": [
+        "lieu"
+      ]
+    },
+    {
+      "id": "prep-pendant-depuis",
+      "fr": "pendant / depuis",
+      "pl": "przez (zakończone) / od (trwa nadal)",
+      "def": "pendant = durée terminée ; depuis = action qui continue maintenant",
+      "examples": [
+        {
+          "fr": "J'ai dormi pendant deux heures.",
+          "pl": "Spałem przez dwie godziny."
+        },
+        {
+          "fr": "J'habite ici depuis 2020.",
+          "pl": "Mieszkam tu od 2020."
+        }
+      ],
+      "tip": {
+        "pl": "depuis = trwa do teraz; pendant = zakończone; en = ile zajęło wykonanie",
+        "fr": "« depuis » = ça continue maintenant ; « pendant » = c’est fini ; « en » = temps nécessaire pour faire quelque chose"
+      },
+      "confusables": [
+        "prep-dans",
+        "prep-en",
+        "prep-pour"
+      ],
+      "tags": [
+        "temps"
+      ]
+    }
+  ],
+  "boss": {
+    "entryIds": [
+      "prep-dans",
+      "prep-en",
+      "prep-pendant-depuis",
+      "prep-pour"
+    ],
+    "exerciseTypes": [
+      "gap-fill"
+    ],
+    "questions": 10,
+    "lives": 3,
+    "timeLimitSec": 20
+  },
+  "exercises": [
+    { "id": "dans-1", "type": "gap-fill", "entryIds": ["prep-dans"], "data": { "sentence": "Le chat est ___ la boîte.", "answers": ["dans"], "pl": "Kot jest w pudełku.", "clue": "(à l'intérieur)" } },
+    { "id": "dans-2", "type": "gap-fill", "entryIds": ["prep-dans"], "data": { "sentence": "Elle part ___ dix minutes.", "answers": ["dans"], "pl": "Ona wychodzi za dziesięć minut.", "hint": { "pl": "za ile czasu, w przyszłości", "fr": "après combien de temps, dans le futur" }, "clue": "(il est 10 h ; elle part à 10 h 10)" } },
+    { "id": "dans-3", "type": "gap-fill", "entryIds": ["prep-dans"], "data": { "sentence": "Le film commence ___ un quart d'heure.", "answers": ["dans"], "pl": "Film zaczyna się za kwadrans.", "clue": "(il est 20 h ; le film commence à 20 h 15)" } },
+    { "id": "dans-4", "type": "gap-fill", "entryIds": ["prep-dans"], "data": { "sentence": "Les enfants jouent ___ le jardin.", "answers": ["dans"], "pl": "Dzieci bawią się w ogrodzie.", "clue": "(à l'intérieur du jardin)" } },
+    { "id": "dans-5", "type": "translate-pl-fr", "entryIds": ["prep-dans"], "data": { "pl": "za pięć minut", "answers": ["dans cinq minutes", "dans 5 minutes"] } },
+
+    { "id": "en-1", "type": "gap-fill", "entryIds": ["prep-en"], "data": { "sentence": "J'habite ___ Pologne.", "answers": ["en"], "pl": "Mieszkam w Polsce.", "clue": "(le pays où j'habite)" } },
+    { "id": "en-2", "type": "gap-fill", "entryIds": ["prep-en"], "data": { "sentence": "Je voyage ___ train.", "answers": ["en"], "pl": "Podróżuję pociągiem.", "clue": "(moyen de transport)" } },
+    { "id": "en-3", "type": "gap-fill", "entryIds": ["prep-en"], "data": { "sentence": "J'ai fait mes devoirs ___ deux heures.", "answers": ["en"], "pl": "Odrobiłem lekcje w dwie godziny.", "hint": { "pl": "ile zajęło wykonanie", "fr": "le temps nécessaire" }, "clue": "(le temps nécessaire pour finir)" } },
+    { "id": "en-4", "type": "gap-fill", "entryIds": ["prep-en"], "data": { "sentence": "Nous allons ___ Italie cet été.", "answers": ["en"], "pl": "Tego lata jedziemy do Włoch.", "clue": "(destination : un pays)" } },
+    { "id": "en-5", "type": "gap-fill", "entryIds": ["prep-en"], "data": { "sentence": "Il va au travail ___ voiture.", "answers": ["en"], "pl": "On jeździ do pracy samochodem.", "clue": "(moyen de transport)" } },
+
+    { "id": "a-1", "type": "gap-fill", "entryIds": ["prep-a"], "data": { "sentence": "Je vais ___ Paris.", "answers": ["à"], "pl": "Jadę do Paryża.", "clue": "(destination : une ville)" } },
+    { "id": "a-2", "type": "gap-fill", "entryIds": ["prep-a"], "data": { "sentence": "Le cours commence ___ 8 heures.", "answers": ["à"], "pl": "Kurs zaczyna się o 8.", "clue": "(l'heure)" } },
+    { "id": "a-3", "type": "gap-fill", "entryIds": ["prep-a"], "data": { "sentence": "Je voudrais une glace ___ la vanille.", "answers": ["à"], "pl": "Poproszę lody waniliowe.", "clue": "(le goût de la glace)" } },
+    { "id": "a-4", "type": "gap-fill", "entryIds": ["prep-a"], "data": { "sentence": "J'habite ___ Cracovie.", "answers": ["à"], "pl": "Mieszkam w Krakowie.", "clue": "(la ville où j'habite)" } },
+    { "id": "a-5", "type": "gap-fill", "entryIds": ["prep-a"], "data": { "sentence": "Je vais ___ la boulangerie.", "answers": ["à"], "pl": "Idę do piekarni.", "hint": { "pl": "sklep to miejsce, nie osoba", "fr": "un magasin est un lieu, pas une personne" }, "clue": "(destination : un magasin)" } },
+
+    { "id": "de-1", "type": "gap-fill", "entryIds": ["prep-de"], "data": { "sentence": "Je viens ___ Pologne.", "answers": ["de"], "pl": "Pochodzę z Polski.", "clue": "(mon pays d'origine)" } },
+    { "id": "de-2", "type": "gap-fill", "entryIds": ["prep-de"], "data": { "sentence": "C'est le livre ___ Marie.", "answers": ["de"], "pl": "To książka Marii.", "clue": "(le livre appartient à Marie)" } },
+    { "id": "de-3", "type": "gap-fill", "entryIds": ["prep-de"], "data": { "sentence": "On parle ___ politique.", "answers": ["de"], "pl": "Rozmawiamy o polityce.", "clue": "(le sujet de la conversation)" } },
+    { "id": "de-4", "type": "gap-fill", "entryIds": ["prep-de"], "data": { "sentence": "Elle vient ___ Lyon.", "answers": ["de"], "pl": "Ona pochodzi z Lyonu.", "clue": "(sa ville d'origine)" } },
+
+    { "id": "pour-1", "type": "gap-fill", "entryIds": ["prep-pour"], "data": { "sentence": "Ce cadeau est ___ toi.", "answers": ["pour"], "pl": "Ten prezent jest dla ciebie.", "clue": "(le destinataire du cadeau)" } },
+    { "id": "pour-2", "type": "gap-fill", "entryIds": ["prep-pour"], "data": { "sentence": "J'apprends le français ___ travailler en France.", "answers": ["pour"], "pl": "Uczę się francuskiego, żeby pracować we Francji.", "clue": "(le but)" } },
+    { "id": "pour-3", "type": "gap-fill", "entryIds": ["prep-pour"], "data": { "sentence": "Je pars en vacances ___ deux semaines.", "answers": ["pour"], "pl": "Wyjeżdżam na wakacje na dwa tygodnie.", "hint": { "pl": "planowany czas", "fr": "durée prévue" }, "clue": "(retour prévu après deux semaines)" } },
+    { "id": "pour-4", "type": "translate-pl-fr", "entryIds": ["prep-pour"], "data": { "pl": "To dla ciebie.", "answers": ["C'est pour toi"] } },
+
+    { "id": "sur-1", "type": "gap-fill", "entryIds": ["prep-sur"], "data": { "sentence": "Le livre est ___ la table.", "answers": ["sur"], "pl": "Książka jest na stole.", "clue": "(posé dessus)" } },
+    { "id": "sur-2", "type": "gap-fill", "entryIds": ["prep-sur"], "data": { "sentence": "Je regarde un film ___ la nature.", "answers": ["sur"], "pl": "Oglądam film o naturze.", "clue": "(le thème du film)" } },
+    { "id": "sur-3", "type": "gap-fill", "entryIds": ["prep-sur"], "data": { "sentence": "Le chat dort ___ le canapé.", "answers": ["sur"], "pl": "Kot śpi na kanapie.", "clue": "(couché dessus)" } },
+    { "id": "sur-4", "type": "translate-pl-fr", "entryIds": ["prep-sur"], "data": { "pl": "na stole", "answers": ["sur la table"] } },
+
+    { "id": "sous-1", "type": "gap-fill", "entryIds": ["prep-sous"], "data": { "sentence": "Le chien dort ___ la table.", "answers": ["sous"], "pl": "Pies śpi pod stołem.", "clue": "(en dessous)" } },
+    { "id": "sous-2", "type": "gap-fill", "entryIds": ["prep-sous"], "data": { "sentence": "Mes chaussures sont ___ le lit.", "answers": ["sous"], "pl": "Moje buty są pod łóżkiem.", "clue": "(en dessous du lit)" } },
+    { "id": "sous-3", "type": "gap-fill", "entryIds": ["prep-sous"], "data": { "sentence": "On mange ___ un arbre.", "answers": ["sous"], "pl": "Jemy pod drzewem.", "clue": "(à l'ombre de l'arbre)" } },
+
+    { "id": "avec-sans-1", "type": "gap-fill", "entryIds": ["prep-avec-sans"], "data": { "sentence": "Un café ___ du lait, s'il vous plaît.", "answers": ["avec"], "pl": "Kawę z mlekiem, poproszę.", "clue": "(il y a du lait dans le café)" } },
+    { "id": "avec-sans-2", "type": "gap-fill", "entryIds": ["prep-avec-sans"], "data": { "sentence": "Un café ___ sucre, s'il vous plaît.", "answers": ["sans"], "pl": "Kawę bez cukru, poproszę.", "clue": "(pas de sucre)" } },
+    { "id": "avec-sans-3", "type": "gap-fill", "entryIds": ["prep-avec-sans"], "data": { "sentence": "Je vais au cinéma ___ mes amis.", "answers": ["avec"], "pl": "Idę do kina z przyjaciółmi.", "clue": "(mes amis viennent aussi)" } },
+    { "id": "avec-sans-4", "type": "gap-fill", "entryIds": ["prep-avec-sans"], "data": { "sentence": "Il sort ___ parapluie.", "answers": ["sans"], "pl": "On wychodzi bez parasola.", "clue": "(il n'a pas de parapluie)" } },
+
+    { "id": "chez-1", "type": "gap-fill", "entryIds": ["prep-chez"], "data": { "sentence": "Je suis ___ Pierre.", "answers": ["chez"], "pl": "Jestem u Pierre'a.", "clue": "(dans la maison de Pierre)" } },
+    { "id": "chez-2", "type": "gap-fill", "entryIds": ["prep-chez"], "data": { "sentence": "Demain, je vais ___ le médecin.", "answers": ["chez"], "pl": "Jutro idę do lekarza.", "clue": "(au cabinet du médecin)" } },
+    { "id": "chez-3", "type": "gap-fill", "entryIds": ["prep-chez"], "data": { "sentence": "Ce soir, on dîne ___ mes parents.", "answers": ["chez"], "pl": "Dziś wieczorem jemy kolację u moich rodziców.", "clue": "(dans la maison de mes parents)" } },
+    { "id": "chez-4", "type": "gap-fill", "entryIds": ["prep-chez"], "data": { "sentence": "Je rentre ___ moi.", "answers": ["chez"], "pl": "Wracam do domu.", "clue": "(à la maison)" } },
+
+    { "id": "position-1", "type": "gap-fill", "entryIds": ["prep-position"], "data": { "sentence": "Il attend ___ la porte.", "answers": ["devant"], "pl": "On czeka przed drzwiami.", "clue": "(≠ derrière)" } },
+    { "id": "position-2", "type": "gap-fill", "entryIds": ["prep-position"], "data": { "sentence": "Le jardin est ___ la maison.", "answers": ["derrière"], "pl": "Ogród jest za domem.", "clue": "(≠ devant)" } },
+    { "id": "position-3", "type": "gap-fill", "entryIds": ["prep-position"], "data": { "sentence": "La banque est ___ la poste et le café.", "answers": ["entre"], "pl": "Bank jest między pocztą a kawiarnią.", "clue": "(au milieu des deux)" } },
+    { "id": "position-4", "type": "translate-pl-fr", "entryIds": ["prep-position"], "data": { "pl": "przed szkołą", "answers": ["devant l'école"] } },
+
+    { "id": "pendant-depuis-1", "type": "gap-fill", "entryIds": ["prep-pendant-depuis"], "data": { "sentence": "J'ai dormi ___ deux heures.", "answers": ["pendant"], "pl": "Spałem przez dwie godziny.", "clue": "(durée terminée)" } },
+    { "id": "pendant-depuis-2", "type": "gap-fill", "entryIds": ["prep-pendant-depuis"], "data": { "sentence": "J'habite ici ___ 2020.", "answers": ["depuis"], "pl": "Mieszkam tu od 2020 roku.", "clue": "(je suis arrivé en 2020 et j'habite toujours ici)" } },
+    { "id": "pendant-depuis-3", "type": "gap-fill", "entryIds": ["prep-pendant-depuis"], "data": { "sentence": "Il travaille chez Renault ___ 2019.", "answers": ["depuis"], "pl": "Pracuje w Renault od 2019 roku (i nadal tam pracuje).", "clue": "(il travaille toujours là-bas)" } },
+    { "id": "pendant-depuis-4", "type": "gap-fill", "entryIds": ["prep-pendant-depuis"], "data": { "sentence": "J'apprends le français ___ trois mois.", "answers": ["depuis"], "pl": "Uczę się francuskiego od trzech miesięcy.", "clue": "(j'ai commencé il y a trois mois)" } },
+    { "id": "pendant-depuis-5", "type": "gap-fill", "entryIds": ["prep-pendant-depuis"], "data": { "sentence": "Hier, j'ai regardé la télé ___ une heure.", "answers": ["pendant"], "pl": "Wczoraj oglądałem telewizję przez godzinę.", "clue": "(durée terminée)" } }
+  ]
+}

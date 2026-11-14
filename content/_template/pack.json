@@ -1,0 +1,9 @@
+{
+  "id": "template",
+  "version": 1,
+  "title": "Nom du pack",
+  "level": "A1",
+  "icon": "📦",
+  "requires": [],
+  "units": ["01-example"]
+}

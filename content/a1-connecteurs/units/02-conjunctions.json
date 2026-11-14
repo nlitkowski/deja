@@ -1,0 +1,333 @@
+{
+  "id": "02-conjunctions",
+  "title": "Conjonctions",
+  "icon": "🧩",
+  "entries": [
+    {
+      "id": "conj-et",
+      "fr": "et",
+      "pl": "i, oraz",
+      "def": "addition : une chose et aussi une autre",
+      "examples": [
+        {
+          "fr": "J'aime le café et le thé.",
+          "pl": "Lubię kawę i herbatę."
+        }
+      ],
+      "tags": [
+        "coordination"
+      ]
+    },
+    {
+      "id": "conj-ou",
+      "fr": "ou",
+      "pl": "lub, albo, czy",
+      "def": "un choix entre deux choses",
+      "examples": [
+        {
+          "fr": "Tu veux du café ou du thé ?",
+          "pl": "Chcesz kawę czy herbatę?"
+        }
+      ],
+      "tip": {
+        "pl": "nie mylić z où (gdzie)",
+        "fr": "ne pas confondre avec « où » (le lieu)"
+      },
+      "confusables": [
+        "adv-ou"
+      ],
+      "tags": [
+        "coordination"
+      ]
+    },
+    {
+      "id": "adv-ou",
+      "fr": "où",
+      "pl": "gdzie",
+      "def": "question sur le lieu",
+      "examples": [
+        {
+          "fr": "Où est la gare ?",
+          "pl": "Gdzie jest dworzec?"
+        },
+        {
+          "fr": "Je ne sais pas où il habite.",
+          "pl": "Nie wiem, gdzie on mieszka."
+        }
+      ],
+      "tip": {
+        "pl": "où (z akcentem) = gdzie; ou (bez akcentu) = lub",
+        "fr": "« où » (avec accent) = le lieu ; « ou » (sans accent) = un choix"
+      },
+      "confusables": [
+        "conj-ou"
+      ],
+      "tags": [
+        "question"
+      ]
+    },
+    {
+      "id": "conj-mais",
+      "fr": "mais",
+      "pl": "ale, lecz",
+      "def": "l'opposition",
+      "examples": [
+        {
+          "fr": "Je suis fatigué mais content.",
+          "pl": "Jestem zmęczony, ale zadowolony."
+        }
+      ],
+      "tags": [
+        "coordination"
+      ]
+    },
+    {
+      "id": "conj-donc",
+      "fr": "donc",
+      "pl": "więc, zatem",
+      "def": "la conséquence",
+      "examples": [
+        {
+          "fr": "Il pleut, donc je prends un parapluie.",
+          "pl": "Pada, więc biorę parasol."
+        }
+      ],
+      "tags": [
+        "coordination"
+      ]
+    },
+    {
+      "id": "conj-ni",
+      "fr": "ni… ni…",
+      "pl": "ani… ani…",
+      "def": "la négation de deux choses",
+      "examples": [
+        {
+          "fr": "Je ne veux ni café ni thé.",
+          "pl": "Nie chcę ani kawy, ani herbaty."
+        }
+      ],
+      "tip": {
+        "pl": "wymaga ne przed czasownikiem; po ni zwykle bez rodzajnika cząstkowego",
+        "fr": "avec « ne » avant le verbe ; après « ni », en général pas d’article"
+      },
+      "tags": [
+        "coordination"
+      ]
+    },
+    {
+      "id": "conj-car",
+      "fr": "car",
+      "pl": "bo, ponieważ (formalniej)",
+      "def": "la cause, l’explication (plus formel)",
+      "examples": [
+        {
+          "fr": "Je reste chez moi, car je suis malade.",
+          "pl": "Zostaję w domu, bo jestem chory."
+        }
+      ],
+      "tip": {
+        "pl": "car stoi w środku zdania, po przecinku; nigdy na początku",
+        "fr": "« car » se place au milieu de la phrase, après une virgule ; jamais au début"
+      },
+      "confusables": [
+        "conj-parce-que",
+        "conj-comme"
+      ],
+      "tags": [
+        "coordination",
+        "cause"
+      ]
+    },
+    {
+      "id": "conj-parce-que",
+      "fr": "parce que / parce qu'",
+      "pl": "ponieważ, dlatego że",
+      "def": "la cause ; la réponse à « pourquoi ? »",
+      "examples": [
+        {
+          "fr": "Je suis heureux parce que c'est vendredi.",
+          "pl": "Jestem szczęśliwy, bo jest piątek."
+        }
+      ],
+      "tip": {
+        "pl": "przed samogłoską parce qu'il; odpowiedź na pourquoi ? zaczyna się od parce que",
+        "fr": "devant une voyelle : parce qu'il ; on répond à « pourquoi ? » avec « parce que »"
+      },
+      "confusables": [
+        "conj-car",
+        "conj-comme"
+      ],
+      "tags": [
+        "subordination",
+        "cause"
+      ]
+    },
+    {
+      "id": "conj-quand",
+      "fr": "quand",
+      "pl": "kiedy, gdy",
+      "def": "le moment",
+      "examples": [
+        {
+          "fr": "Quand je suis fatigué, je dors.",
+          "pl": "Kiedy jestem zmęczony, śpię."
+        }
+      ],
+      "confusables": [
+        "conj-si"
+      ],
+      "tags": [
+        "subordination",
+        "temps"
+      ]
+    },
+    {
+      "id": "conj-si",
+      "fr": "si",
+      "pl": "jeśli; czy",
+      "def": "la condition ; une question indirecte (oui ou non)",
+      "examples": [
+        {
+          "fr": "Si tu veux, on peut partir.",
+          "pl": "Jeśli chcesz, możemy wyjść."
+        },
+        {
+          "fr": "Je ne sais pas si c'est vrai.",
+          "pl": "Nie wiem, czy to prawda."
+        }
+      ],
+      "tip": {
+        "pl": "s'il / s'ils, ale si elle (bez elizji)",
+        "fr": "s'il / s'ils, mais si elle (pas d’élision)"
+      },
+      "confusables": [
+        "conj-quand"
+      ],
+      "tags": [
+        "subordination"
+      ]
+    },
+    {
+      "id": "conj-que",
+      "fr": "que / qu'",
+      "pl": "że",
+      "def": "introduit ce qu’on pense ou ce qu’on dit",
+      "examples": [
+        {
+          "fr": "Je pense que c'est bien.",
+          "pl": "Myślę, że to dobrze."
+        },
+        {
+          "fr": "Il dit qu'il est content.",
+          "pl": "Mówi, że jest zadowolony."
+        }
+      ],
+      "tip": {
+        "pl": "przed samogłoską qu': qu'il, qu'elle",
+        "fr": "devant une voyelle : qu'il, qu'elle"
+      },
+      "tags": [
+        "subordination"
+      ]
+    },
+    {
+      "id": "conj-comme",
+      "fr": "comme",
+      "pl": "ponieważ (na początku zdania); jak",
+      "def": "la cause (au début de la phrase) ; la comparaison",
+      "examples": [
+        {
+          "fr": "Comme il pleut, je reste ici.",
+          "pl": "Ponieważ pada, zostaję tutaj."
+        },
+        {
+          "fr": "Elle est belle comme le soleil.",
+          "pl": "Jest piękna jak słońce."
+        }
+      ],
+      "tip": {
+        "pl": "comme = ponieważ tylko na początku zdania; w środku użyj parce que albo car",
+        "fr": "« comme » = cause seulement au début de la phrase ; au milieu, utilise « parce que » ou « car »"
+      },
+      "confusables": [
+        "conj-car",
+        "conj-parce-que"
+      ],
+      "tags": [
+        "subordination",
+        "cause"
+      ]
+    }
+  ],
+  "boss": {
+    "entryIds": [
+      "conj-car",
+      "conj-parce-que",
+      "conj-comme",
+      "conj-si",
+      "conj-quand"
+    ],
+    "exerciseTypes": [
+      "gap-fill"
+    ],
+    "questions": 10,
+    "lives": 3,
+    "timeLimitSec": 20
+  },
+  "exercises": [
+    { "id": "et-1", "type": "gap-fill", "entryIds": ["conj-et"], "data": { "sentence": "J'aime le café ___ le thé.", "answers": ["et"], "pl": "Lubię kawę i herbatę.", "clue": "(les deux)" } },
+    { "id": "et-2", "type": "gap-fill", "entryIds": ["conj-et"], "data": { "sentence": "Paul ___ Marie sont amis.", "answers": ["et"], "pl": "Paul i Marie są przyjaciółmi.", "clue": "(les deux)" } },
+    { "id": "et-3", "type": "gap-fill", "entryIds": ["conj-et"], "data": { "sentence": "J'ai un frère ___ une sœur.", "answers": ["et"], "pl": "Mam brata i siostrę.", "clue": "(les deux)" } },
+
+    { "id": "ou-1", "type": "gap-fill", "entryIds": ["conj-ou"], "data": { "sentence": "Tu veux du café ___ du thé ?", "answers": ["ou"], "pl": "Chcesz kawę czy herbatę?", "clue": "(un choix)" } },
+    { "id": "ou-2", "type": "gap-fill", "entryIds": ["conj-ou"], "data": { "sentence": "On va au cinéma ___ au restaurant ?", "answers": ["ou"], "pl": "Idziemy do kina czy do restauracji?", "clue": "(un choix)" } },
+    { "id": "ou-3", "type": "gap-fill", "entryIds": ["conj-ou"], "data": { "sentence": "Je viens lundi ___ mardi.", "answers": ["ou"], "pl": "Przyjdę w poniedziałek albo we wtorek.", "clue": "(un des deux jours)" } },
+
+    { "id": "adv-ou-1", "type": "gap-fill", "entryIds": ["adv-ou"], "data": { "sentence": "___ est la gare ?", "answers": ["où"], "pl": "Gdzie jest dworzec?", "clue": "(question sur le lieu)" } },
+    { "id": "adv-ou-2", "type": "gap-fill", "entryIds": ["adv-ou"], "data": { "sentence": "Tu habites ___ ?", "answers": ["où"], "pl": "Gdzie mieszkasz?", "clue": "(question sur le lieu)" } },
+    { "id": "adv-ou-3", "type": "gap-fill", "entryIds": ["adv-ou"], "data": { "sentence": "Je ne sais pas ___ il travaille.", "answers": ["où"], "pl": "Nie wiem, gdzie on pracuje.", "clue": "(le lieu de son travail)" } },
+
+    { "id": "mais-1", "type": "gap-fill", "entryIds": ["conj-mais"], "data": { "sentence": "Il est fatigué ___ content.", "answers": ["mais"], "pl": "Jest zmęczony, ale zadowolony.", "clue": "(opposition)" } },
+    { "id": "mais-2", "type": "gap-fill", "entryIds": ["conj-mais"], "data": { "sentence": "Il est petit, ___ il est fort.", "answers": ["mais"], "pl": "Jest mały, ale silny.", "clue": "(opposition)" } },
+    { "id": "mais-3", "type": "gap-fill", "entryIds": ["conj-mais"], "data": { "sentence": "J'aime le sport, ___ je n'ai pas le temps.", "answers": ["mais"], "pl": "Lubię sport, ale nie mam czasu.", "clue": "(opposition)" } },
+
+    { "id": "donc-1", "type": "gap-fill", "entryIds": ["conj-donc"], "data": { "sentence": "Il pleut, ___ je prends un parapluie.", "answers": ["donc"], "pl": "Pada, więc biorę parasol.", "clue": "(conséquence)" } },
+    { "id": "donc-2", "type": "gap-fill", "entryIds": ["conj-donc"], "data": { "sentence": "Je suis malade, ___ je reste au lit.", "answers": ["donc"], "pl": "Jestem chory, więc zostaję w łóżku.", "clue": "(conséquence)" } },
+    { "id": "donc-3", "type": "gap-fill", "entryIds": ["conj-donc"], "data": { "sentence": "Il n'y a plus de pain, ___ je vais à la boulangerie.", "answers": ["donc"], "pl": "Nie ma już chleba, więc idę do piekarni.", "clue": "(conséquence)" } },
+
+    { "id": "ni-1", "type": "gap-fill", "entryIds": ["conj-ni"], "data": { "sentence": "Je ne veux ni café ___ thé.", "answers": ["ni"], "pl": "Nie chcę ani kawy, ani herbaty." } },
+    { "id": "ni-2", "type": "gap-fill", "entryIds": ["conj-ni"], "data": { "sentence": "Il ne parle ___ anglais ni allemand.", "answers": ["ni"], "pl": "On nie mówi ani po angielsku, ani po niemiecku." } },
+    { "id": "ni-3", "type": "translate-pl-fr", "entryIds": ["conj-ni"], "data": { "pl": "Nie chcę ani kawy, ani herbaty.", "answers": ["Je ne veux ni café ni thé"], "hint": { "pl": "ne … ni … ni …, bez rodzajnika", "fr": "ne … ni … ni …, sans article" } } },
+
+    { "id": "car-1", "type": "gap-fill", "entryIds": ["conj-car"], "data": { "sentence": "Je reste chez moi, ___ je suis malade.", "answers": ["car", "parce que"], "pl": "Zostaję w domu, bo jestem chory.", "clue": "(cause)" } },
+    { "id": "car-2", "type": "gap-fill", "entryIds": ["conj-car"], "data": { "sentence": "Je prends un taxi, ___ il est tard.", "answers": ["car", "parce qu'"], "pl": "Biorę taksówkę, bo jest późno.", "clue": "(cause)" } },
+    { "id": "car-3", "type": "gap-fill", "entryIds": ["conj-car"], "data": { "sentence": "Elle ne vient pas, ___ elle travaille.", "answers": ["car", "parce qu'"], "pl": "Ona nie przyjdzie, bo pracuje.", "clue": "(cause)" } },
+
+    { "id": "parce-que-1", "type": "gap-fill", "entryIds": ["conj-parce-que"], "data": { "sentence": "Je suis heureux ___ c'est vendredi.", "answers": ["parce que", "car"], "pl": "Jestem szczęśliwy, bo jest piątek.", "clue": "(cause)" } },
+    { "id": "parce-que-2", "type": "gap-fill", "entryIds": ["conj-parce-que"], "data": { "sentence": "Je reste ici ___ il pleut.", "answers": ["parce qu'", "car"], "pl": "Zostaję tutaj, ponieważ pada.", "hint": { "pl": "przed samogłoską elizja", "fr": "élision devant une voyelle" }, "clue": "(cause)" } },
+    { "id": "parce-que-3", "type": "gap-fill", "entryIds": ["conj-parce-que"], "data": { "sentence": "Pourquoi tu ris ? — ___ c'est drôle !", "answers": ["parce que"], "pl": "Dlaczego się śmiejesz? — Bo to jest śmieszne!" } },
+    { "id": "parce-que-4", "type": "gap-fill", "entryIds": ["conj-parce-que"], "data": { "sentence": "Il mange ___ il a faim.", "answers": ["parce qu'", "car"], "pl": "On je, bo jest głodny.", "clue": "(cause)" } },
+
+    { "id": "quand-1", "type": "gap-fill", "entryIds": ["conj-quand"], "data": { "sentence": "___ je suis fatigué, je dors.", "answers": ["quand"], "pl": "Kiedy jestem zmęczony, śpię.", "clue": "(chaque fois que)" } },
+    { "id": "quand-2", "type": "gap-fill", "entryIds": ["conj-quand"], "data": { "sentence": "Téléphone-moi ___ tu arrives.", "answers": ["quand"], "pl": "Zadzwoń do mnie, kiedy przyjedziesz.", "clue": "(au moment de ton arrivée)" } },
+    { "id": "quand-3", "type": "gap-fill", "entryIds": ["conj-quand"], "data": { "sentence": "Tu pars ___ ?", "answers": ["quand"], "pl": "Kiedy wyjeżdżasz?", "clue": "(question sur le moment)" } },
+    { "id": "quand-4", "type": "gap-fill", "entryIds": ["conj-quand"], "data": { "sentence": "___ il fait beau, on va au parc.", "answers": ["quand"], "pl": "Kiedy jest ładna pogoda, chodzimy do parku.", "clue": "(chaque fois qu'il fait beau)" } },
+
+    { "id": "si-1", "type": "gap-fill", "entryIds": ["conj-si"], "data": { "sentence": "___ tu veux, on y va.", "answers": ["si"], "pl": "Jeśli chcesz, to idziemy.", "clue": "(condition)" } },
+    { "id": "si-2", "type": "gap-fill", "entryIds": ["conj-si"], "data": { "sentence": "Je ne sais pas ___ c'est vrai.", "answers": ["si"], "pl": "Nie wiem, czy to prawda.", "clue": "(question indirecte : oui ou non ?)" } },
+    { "id": "si-3", "type": "gap-fill", "entryIds": ["conj-si"], "data": { "sentence": "___ pleut demain, je reste à la maison.", "answers": ["s'il"], "pl": "Jeśli jutro będzie padać, zostanę w domu.", "hint": { "pl": "si + il", "fr": "si + il" }, "clue": "(condition)" } },
+    { "id": "si-4", "type": "gap-fill", "entryIds": ["conj-si"], "data": { "sentence": "___ elle vient, on mange ensemble.", "answers": ["si"], "pl": "Jeśli ona przyjdzie, zjemy razem.", "hint": { "pl": "przed elle bez elizji", "fr": "pas d’élision devant « elle »" }, "clue": "(condition)" } },
+    { "id": "si-5", "type": "gap-fill", "entryIds": ["conj-si"], "data": { "sentence": "Je ne sais pas ___ sont à la maison.", "answers": ["s'ils"], "pl": "Nie wiem, czy oni są w domu.", "hint": { "pl": "si + ils", "fr": "si + ils" }, "clue": "(question indirecte : oui ou non ?)" } },
+
+    { "id": "que-1", "type": "gap-fill", "entryIds": ["conj-que"], "data": { "sentence": "Je pense ___ c'est bien.", "answers": ["que"], "pl": "Myślę, że to dobrze." } },
+    { "id": "que-2", "type": "gap-fill", "entryIds": ["conj-que"], "data": { "sentence": "Il dit ___ il est content.", "answers": ["qu'"], "pl": "Mówi, że jest zadowolony." } },
+    { "id": "que-3", "type": "gap-fill", "entryIds": ["conj-que"], "data": { "sentence": "Je sais ___ tu es fatigué.", "answers": ["que"], "pl": "Wiem, że jesteś zmęczony." } },
+    { "id": "que-4", "type": "gap-fill", "entryIds": ["conj-que"], "data": { "sentence": "Elle pense ___ il a raison.", "answers": ["qu'"], "pl": "Ona myśli, że on ma rację." } },
+
+    { "id": "comme-1", "type": "gap-fill", "entryIds": ["conj-comme"], "data": { "sentence": "___ il pleut, je reste ici.", "answers": ["comme"], "pl": "Ponieważ pada, zostaję tutaj.", "clue": "(cause, au début de la phrase)" } },
+    { "id": "comme-2", "type": "gap-fill", "entryIds": ["conj-comme"], "data": { "sentence": "Elle est belle ___ le soleil.", "answers": ["comme"], "pl": "Jest piękna jak słońce.", "clue": "(comparaison)" } },
+    { "id": "comme-3", "type": "gap-fill", "entryIds": ["conj-comme"], "data": { "sentence": "___ je suis malade, je ne vais pas au travail.", "answers": ["comme"], "pl": "Ponieważ jestem chory, nie idę do pracy.", "clue": "(cause, au début de la phrase)" } },
+    { "id": "comme-4", "type": "gap-fill", "entryIds": ["conj-comme"], "data": { "sentence": "Il parle ___ un professeur.", "answers": ["comme"], "pl": "On mówi jak nauczyciel.", "clue": "(comparaison)" } }
+  ]
+}

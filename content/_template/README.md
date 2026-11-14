@@ -1,0 +1,42 @@
+# Szablon pakietu treści
+
+Skopiuj ten katalog do `content/<id-pakietu>/` (bez podkreślnika na początku: katalogi `_*` są pomijane przez aplikację) i zmień `id` w `pack.json` na nazwę katalogu.
+
+## `pack.json`
+
+| pole | znaczenie |
+|---|---|
+| `id` | stałe id pakietu, równe nazwie katalogu; **nigdy go nie zmieniaj** |
+| `version` | podbijaj przy zmianie treści |
+| `title`, `level`, `icon` | wyświetlane na mapie |
+| `requires` | id pakietów, które trzeba ukończyć, żeby ten się odblokował |
+| `units` | kolejność jednostek; każda to plik `units/<id>.json` |
+| `accentPairs` | opcjonalnie: pary słów, w których brak akcentu daje inne słowo (`["ou", "où"]`), więc odpowiedź jest błędna, a nie „prawie dobrze” |
+| `achievements` | opcjonalnie: odznaki z deklaratywnym warunkiem, np. `{ "type": "unitMastery", "unit": "01-example", "level": 3 }` |
+
+## `units/<id>.json`
+
+- `entries`: wpisy `{ id, fr, pl, def?, examples: [{ fr, pl }], tip?, confusables?, tags?, deprecated? }`.
+  Id wpisu jest globalnie `<pakiet>/<wpis>` i wiąże postęp SRS, więc **nie zmieniaj go i nie usuwaj wpisów**; oznacz je `"deprecated": true`.
+  `confusables` mogą wskazywać wpisy z innych pakietów: `"a1-connecteurs/prep-dans"`.
+- `exercises`: `{ id, type, entryIds, data }`. Każdy wpis potrzebuje co najmniej jednego ćwiczenia produkcyjnego:
+  - `gap-fill`: `{ sentence: "… ___ …", answers: [...], hint?, pl?, clue? }` (dokładnie jedna luka `___`)
+  - `translate-pl-fr`: `{ pl, answers: [...], hint? }` (tylko w trybie pomocy po polsku)
+- `boss` (opcjonalnie): `{ entryIds, exerciseTypes, questions, lives, timeLimitSec }`.
+
+## Język pomocy (polski / francuski)
+
+Użytkownik wybiera, w jakim języku widzi materiały pomocnicze. Każdy tekst pomocniczy ma więc dwie wersje:
+
+| tryb PL | tryb FR |
+|---|---|
+| `pl` wpisu (znaczenie) | `def`: proste wyjaśnienie po francusku |
+| `tip.pl`, `hint.pl` | `tip.fr`, `hint.fr` (bez nich pokazuje się wersja polska) |
+| `pl` w gap-fill (tłumaczenie zdania) | `clue`: krótka francuska wskazówka kontekstu, np. `"(≠ derrière)"`, `"(durée terminée)"` |
+| przykłady z tłumaczeniem | same przykłady po francusku |
+
+`clue` nie może zdradzać odpowiedzi, ale musi rozstrzygać lukę tak samo jak tłumaczenie: bez niej „Le chat est ___ la boîte.” przyjmuje sur, sous, dans…
+
+Zasady treści: spacja przed `?` i `!` we francuskich zdaniach; jeśli luka dopuszcza dwie poprawne odpowiedzi, wpisz obie do `answers` albo przeredaguj zdanie.
+
+`npm run test` waliduje wszystkie pakiety i ten szablon.
