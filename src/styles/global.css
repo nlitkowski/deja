@@ -647,6 +647,30 @@ button {
   font-style: italic;
 }
 
+/* The French comes first; the translation only on request. */
+.translate-button {
+  justify-self: start;
+  margin: 2px 0 0;
+  padding: 0.1em 0.7em;
+  border: var(--border-w) solid var(--border);
+  border-radius: var(--pill-radius);
+  background: transparent;
+  color: var(--info);
+  font-size: 0.8rem;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.example .translate-button {
+  margin-left: 8px;
+  vertical-align: baseline;
+}
+
+.translation {
+  display: block;
+  font-style: normal;
+}
+
 /* Summary */
 
 .summary {

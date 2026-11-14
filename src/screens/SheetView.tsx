@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { KIND_ICON, sectionId } from '../components/NavTree';
 import { RichText } from '../components/RichText';
 import { SheetsLayout } from '../components/SheetsLayout';
+import { Translation } from '../components/Translation';
 import { localize, type HelpLang } from '../content/localized';
 import { content } from '../content/registry';
 import type { SheetBlock } from '../content/sheet';
@@ -77,11 +78,7 @@ function Block({ block, lang }: { block: SheetBlock; lang: HelpLang }) {
                 <span lang="fr">
                   <RichText text={item.fr} />
                 </span>
-                {lang === 'pl' && (
-                  <span className="muted" lang="pl">
-                    {item.pl}
-                  </span>
-                )}
+                {lang === 'pl' && <Translation key={item.fr} text={item.pl} lang="pl" />}
               </li>
             ))}
           </ul>

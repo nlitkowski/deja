@@ -111,6 +111,8 @@ export const ui = {
   signOutAnyway: 'Se déconnecter quand même',
   signOutOffline: 'La déconnexion demande une connexion à Internet. Rien n’a été effacé ; réessaie une fois en ligne.',
   cancel: 'Annuler',
+  translate: 'Traduire',
+  hideTranslation: 'Masquer',
   exportData: 'Télécharger mes données',
   privacy: 'Confidentialité',
   deleteAccount: 'Supprimer mon compte',

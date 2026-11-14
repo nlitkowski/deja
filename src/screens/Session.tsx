@@ -4,6 +4,7 @@ import { accentPairs, content } from '../content/registry';
 import { exerciseTypes, isProduction, supportsHelpLang } from '../exercises/registry';
 import type { ExerciseContext } from '../exercises/types';
 import { Icon } from '../components/Icon';
+import { Translation } from '../components/Translation';
 import { GAME } from '../game/config';
 import { answerXp } from '../game/xp';
 import { ui } from '../i18n/ui';
@@ -241,14 +242,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
               {example && (
                 <p className="example">
                   <span lang="fr">{example.fr}</span>
-                  {helpLang === 'pl' && (
-                    <>
-                      <br />
-                      <span className="muted" lang="pl">
-                        {example.pl}
-                      </span>
-                    </>
-                  )}
+                  {helpLang === 'pl' && <Translation key={example.fr} text={example.pl} lang="pl" />}
                 </p>
               )}
             </div>
