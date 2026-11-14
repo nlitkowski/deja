@@ -1,5 +1,5 @@
 import type { DayKey } from '../date';
-import { review, type SrsCard } from '../srs';
+import { cardKey, review, type SrsCard } from '../srs';
 import type { ProgressEvent } from './events';
 
 export interface ProgressState {
@@ -33,6 +33,7 @@ function applyInPlace(state: ProgressState, event: ProgressEvent): void {
   state.eventCount += 1;
 
   if (event.type === 'baseline') {
+    // A baseline's keys are card keys already: written cards are keyed by entry id (see cardKey).
     for (const [id, card] of Object.entries(event.cards)) {
       const current = state.cards[id];
       state.cards[id] = current ? newerCard(current, card) : card;
@@ -50,7 +51,10 @@ function applyInPlace(state: ProgressState, event: ProgressEvent): void {
 
   for (const id of event.entryIds) state.firstSeen[id] ??= event.day;
   if (event.early && event.correct) return;
-  for (const id of event.entryIds) state.cards[id] = review(state.cards[id], event.grade, event.day);
+  for (const id of event.entryIds) {
+    const key = cardKey(id);
+    state.cards[key] = review(state.cards[key], event.grade, event.day);
+  }
 }
 
 const copy = (state: ProgressState): ProgressState => ({

@@ -10,7 +10,7 @@ import { answerXp, allMastered } from '../game/xp';
 import { ui } from '../i18n/ui';
 import { dayKey } from '../lib/date';
 import { newEventId } from '../lib/progress/events';
-import { isDue, type AnswerResult } from '../lib/srs';
+import { cardKey, isDue, type AnswerResult } from '../lib/srs';
 import { sfx } from '../sfx';
 import { useAppStore } from '../state/appStore';
 import { xpContext } from '../xpContext';
@@ -68,7 +68,7 @@ export function Boss({ unitKey, title, onExit, onFinish }: Props) {
     if (!question || result) return;
     setResult(r);
     const cards = useAppStore.getState().progress.cards;
-    const card = cards[question.entryId];
+    const card = cards[cardKey(question.entryId)];
     const typed = question.kind === 'typed';
     const event = recordAnswer({
       exerciseId: question.exerciseId,

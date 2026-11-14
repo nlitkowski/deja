@@ -3,7 +3,7 @@ import type { Pack } from '../content/schema';
 import type { PackState } from '../game/map';
 import { ui } from '../i18n/ui';
 import { dayKey } from '../lib/date';
-import { isDue } from '../lib/srs';
+import { cardKey, isDue } from '../lib/srs';
 import { useAppStore } from '../state/appStore';
 import { Emoji } from './Emoji';
 import { Icon } from './Icon';
@@ -91,7 +91,7 @@ export function UnitMap({ pack, state, onPractice, onBoss, more }: Props) {
                 </li>
               );
             }
-            const due = unit.entryIds.filter((id) => cards[id] && isDue(cards[id]!, today)).length;
+            const due = unit.entryIds.filter((id) => cards[cardKey(id)] && isDue(cards[cardKey(id)]!, today)).length;
             const lockedLabel = previous ? ui.unitLocked(unit.title, previous.title) : unit.title;
             return (
               <li key={unit.key} className="map-step unit-step" style={style} data-index={i}>

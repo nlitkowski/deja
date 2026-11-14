@@ -231,7 +231,7 @@ Decyzje: Cloudflare Workers + D1 (darmowy plan, najwyżej 5 $/mies.), własne ma
 
 **Porządki**
 - D1 ✅ `https://nlitkowski.github.io` usunięty z `ALLOWED_ORIGINS`: stary adres przekierowuje na `deja.litkowski.com`, więc aplikacja nie działa już na tamtym originie.
-- D2 Przygotowanie pod audio: `cardKey(entryId, skill)`.
+- D2 ✅ Przygotowanie pod audio: `cardKey(entryId, skill = 'written')` w `src/lib/srs.ts` i wszędzie zamiast `cards[entryId]` (fold, mastery, mapa, sesje, XP, statystyki, odznaki, ekrany). Karta pisemna ma klucz równy id wpisu, więc zapisane karty (zdarzenia, baseline) pozostają ważne bez migracji; inna umiejętność dostanie `entryId#skill`. `firstSeen` zostaje per wpis (limit nowych dziennie). Zachowanie bez zmian: wszystkie dotychczasowe testy przechodzą bez modyfikacji.
 
 **Później:** `entitlements`, płatności (merchant of record, np. Paddle), płatne pakiety serwowane z API.
 

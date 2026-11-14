@@ -1,5 +1,5 @@
 import type { DayKey } from './date';
-import { isDue, type SrsCard } from './srs';
+import { cardKey, isDue, type SrsCard } from './srs';
 
 export interface SessionEntry {
   id: string;
@@ -99,15 +99,15 @@ export function buildSession(input: BuildSessionInput): SessionItem[] {
 
   // Recognition only revisits what the learner already produced correctly: never for new entries
   // or after a mistake, so choosing an answer never displaces typing it.
-  const known = (id: string) => (srs[id]?.reps ?? 0) > 0;
+  const known = (id: string) => (srs[cardKey(id)]?.reps ?? 0) > 0;
   const byEntry = indexExercisesByEntry(exercises.filter((ex) => isProduction(ex.type) || ex.entryIds.every(known)));
   const usable = entries.filter((e) => !e.deprecated && byEntry.has(e.id));
 
   const due = shuffle(
-    usable.filter((e) => srs[e.id] && isDue(srs[e.id]!, today)),
+    usable.filter((e) => srs[cardKey(e.id)] && isDue(srs[cardKey(e.id)]!, today)),
     rng,
   ).sort((a, b) => srs[a.id]!.due.localeCompare(srs[b.id]!.due));
-  const fresh = usable.filter((e) => !srs[e.id]).slice(0, Math.max(0, newAllowed));
+  const fresh = usable.filter((e) => !srs[cardKey(e.id)]).slice(0, Math.max(0, newAllowed));
 
   const chosen: { id: string; early: boolean }[] = [
     ...due.map((e) => ({ id: e.id, early: false })),
@@ -116,7 +116,7 @@ export function buildSession(input: BuildSessionInput): SessionItem[] {
 
   if (mode === 'practice' && chosen.length < minPracticeItems) {
     const extra = usable
-      .filter((e) => srs[e.id] && !isDue(srs[e.id]!, today))
+      .filter((e) => srs[cardKey(e.id)] && !isDue(srs[cardKey(e.id)]!, today))
       .sort((a, b) => srs[a.id]!.due.localeCompare(srs[b.id]!.due) || srs[a.id]!.ease - srs[b.id]!.ease)
       .slice(0, minPracticeItems - chosen.length);
     chosen.push(...extra.map((e) => ({ id: e.id, early: true })));

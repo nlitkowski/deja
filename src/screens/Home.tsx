@@ -12,7 +12,7 @@ import { ui } from '../i18n/ui';
 import { dayKey } from '../lib/date';
 import { newIntroducedOn } from '../lib/progress/fold';
 import type { SessionItem } from '../lib/session';
-import { isDue } from '../lib/srs';
+import { cardKey, isDue } from '../lib/srs';
 import { buildReviewSession, buildUnitSession, NEW_PER_DAY } from '../sessions';
 import { useAppStore } from '../state/appStore';
 import { useLeague, useMapState } from '../state/useGame';
@@ -37,7 +37,7 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBos
   const league = useLeague();
   const cards = progress.cards;
   const today = dayKey(new Date());
-  const dueCount = [...content.entries.values()].filter((e) => !e.deprecated && cards[e.id] && isDue(cards[e.id]!, today)).length;
+  const dueCount = [...content.entries.values()].filter((e) => !e.deprecated && cards[cardKey(e.id)] && isDue(cards[cardKey(e.id)]!, today)).length;
   const reviewSize = buildReviewSession(progress, settings).length;
   const sheetCount = content.sheets.size;
   const exercisePacks = content.packs.filter((p) => p.unitList.length);

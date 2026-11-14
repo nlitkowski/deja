@@ -1,7 +1,7 @@
 import type { DayKey } from '../lib/date';
 import type { ProgressEvent, ReviewEvent, SessionEvent } from '../lib/progress/events';
 import { compareEvents, emptyProgress, replayOnto, type ProgressState } from '../lib/progress/fold';
-import type { SrsCard } from '../lib/srs';
+import { cardKey, type SrsCard } from '../lib/srs';
 import { GAME } from './config';
 import { entryMastery } from './mastery';
 
@@ -22,7 +22,7 @@ export function comboMultiplier(combo: number): number {
 
 /** Whether every entry of an answer was already at the top mastery before it. */
 export const allMastered = (entryIds: readonly string[], cards: Readonly<Record<string, SrsCard>>) =>
-  entryIds.every((id) => entryMastery(cards[id]) === 5);
+  entryIds.every((id) => entryMastery(cards[cardKey(id)]) === 5);
 
 /** `mastered`: every entry of the answer was at mastery 5 before it, so it is worth less. */
 export function answerXp(event: ReviewEvent, ctx: XpContext, mastered = false): AnswerXp {
@@ -100,7 +100,7 @@ class Scorer {
     replayOnto(this.state, sorted, (event, before) => {
       if (event.type === 'review') {
         const { total, combo } = answerXp(event, this.ctx, allMastered(event.entryIds, before.cards));
-        out.push({ event, xp: total, combo, before: event.entryIds.flatMap((id) => before.cards[id] ?? []) });
+        out.push({ event, xp: total, combo, before: event.entryIds.flatMap((id) => before.cards[cardKey(id)] ?? []) });
       } else if (event.type === 'session') {
         out.push({ event, xp: this.firstPayment(`session:${event.sessionId}`) ? sessionBonus(event) : 0, combo: 0 });
       } else if (event.type === 'quest') {

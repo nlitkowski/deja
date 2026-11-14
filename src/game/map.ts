@@ -1,5 +1,5 @@
 import type { ProgressEvent } from '../lib/progress/events';
-import type { SrsCard } from '../lib/srs';
+import { cardKey, type SrsCard } from '../lib/srs';
 import { GAME } from './config';
 import { entryMastery, unitMastery, type Mastery } from './mastery';
 
@@ -61,10 +61,10 @@ export function mapState(packs: readonly MapPack[], cards: Readonly<Record<strin
         return {
           key: unit.key,
           mastery: m,
-          seen: unit.entryIds.filter((id) => cards[id]).length,
+          seen: unit.entryIds.filter((id) => cards[cardKey(id)]).length,
           total: unit.entryIds.length,
           locked: unitLocked,
-          golden: unit.entryIds.length > 0 && unit.entryIds.every((id) => entryMastery(cards[id]) === 5),
+          golden: unit.entryIds.length > 0 && unit.entryIds.every((id) => entryMastery(cards[cardKey(id)]) === 5),
           boss: { unlocked: !unitLocked && m >= GAME.mastery.bossFrom, defeated: defeated.has(unit.key) },
         };
       });

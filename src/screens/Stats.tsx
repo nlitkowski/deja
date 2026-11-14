@@ -2,6 +2,7 @@ import { Emoji } from '../components/Emoji';
 import { Icon } from '../components/Icon';
 import { content } from '../content/registry';
 import { ui } from '../i18n/ui';
+import { cardKey } from '../lib/srs';
 import { useAppStore } from '../state/appStore';
 import { useStats } from '../state/useGame';
 
@@ -61,7 +62,7 @@ export function Stats({ onBack, onReviseWeak }: Props) {
           <ol className="weak-list">
             {weakest.map((id) => {
               const entry = content.entries.get(id)!;
-              const card = cards[id]!;
+              const card = cards[cardKey(id)]!;
               return (
                 <li key={id}>
                   <span>

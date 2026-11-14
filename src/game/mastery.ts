@@ -1,4 +1,4 @@
-import type { SrsCard } from '../lib/srs';
+import { cardKey, type SrsCard } from '../lib/srs';
 import { GAME } from './config';
 
 export type Mastery = 0 | 1 | 2 | 3 | 4 | 5;
@@ -17,5 +17,5 @@ export function entryMastery(card: SrsCard | undefined): Mastery {
 /** The weakest entry decides: a unit is only as mastered as its least known entry. */
 export function unitMastery(entryIds: readonly string[], cards: Readonly<Record<string, SrsCard>>): Mastery {
   if (!entryIds.length) return 0;
-  return Math.min(...entryIds.map((id) => entryMastery(cards[id]))) as Mastery;
+  return Math.min(...entryIds.map((id) => entryMastery(cards[cardKey(id)]))) as Mastery;
 }

@@ -1,7 +1,7 @@
 import type { DayKey } from '../../lib/date';
 import type { ProgressEvent } from '../../lib/progress/events';
 import { compareEvents } from '../../lib/progress/fold';
-import type { SrsCard } from '../../lib/srs';
+import { cardKey, type SrsCard } from '../../lib/srs';
 import { GAME } from '../config';
 import { defeatedBosses, type MapUnit } from '../map';
 import { entryMastery } from '../mastery';
@@ -32,7 +32,7 @@ export function achievementStats(events: readonly ProgressEvent[], { cards, unit
     nightSessions: 0,
     earlySessions: 0,
     defeatedBosses: defeatedBosses(events),
-    goldenUnits: units.filter((u) => u.entryIds.length && u.entryIds.every((id) => entryMastery(cards[id]) === 5)).length,
+    goldenUnits: units.filter((u) => u.entryIds.length && u.entryIds.every((id) => entryMastery(cards[cardKey(id)]) === 5)).length,
   };
 
   let accentRun = 0;

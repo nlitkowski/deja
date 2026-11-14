@@ -219,7 +219,7 @@ Brak kont i backendu, więc nie ma ligi z innymi graczami. Zamiast tego jest **t
 
 ## SRS (`lib/srs.ts`)
 
-Uproszczone SM-2: `ease` (start 2.5, min 1.3), `interval` w dniach, `due`. Oceny Again / Hard / Good / Easy. W ćwiczeniach z wpisywaniem ocena wynika automatycznie z `AnswerResult`: błąd = Again, near-miss lub podpowiedź = Hard, poprawnie = Good, poprawnie i szybko = Easy. Jednostką powtórki jest **Entry**. Wynik ćwiczenia aktualizuje wszystkie wpisy z jego `entryIds`. SRS jest jeden dla wszystkich pakietów, a sesja „Powtórka” miesza je ze sobą.
+Uproszczone SM-2: `ease` (start 2.5, min 1.3), `interval` w dniach, `due`. Karty w stanie są pod kluczem `cardKey(entryId, skill)` (dziś tylko `'written'`, klucz = id wpisu); nigdy nie indeksuj `cards[entryId]` bezpośrednio, bo dojdą umiejętności (np. słuchanie). Oceny Again / Hard / Good / Easy. W ćwiczeniach z wpisywaniem ocena wynika automatycznie z `AnswerResult`: błąd = Again, near-miss lub podpowiedź = Hard, poprawnie = Good, poprawnie i szybko = Easy. Jednostką powtórki jest **Entry**. Wynik ćwiczenia aktualizuje wszystkie wpisy z jego `entryIds`. SRS jest jeden dla wszystkich pakietów, a sesja „Powtórka” miesza je ze sobą.
 
 Sesja: najpierw zaległe (due ≤ dziś), potem maksymalnie 5 nowych dziennie, łącznie około 15–20 kart. Wpis z oceną Again wraca jeszcze w tej samej sesji. Logika ma być czystymi funkcjami z datą przekazywaną jako argument, żeby dało się ją testować.
 

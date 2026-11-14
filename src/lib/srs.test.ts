@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { gradeFromResult, isDue, review } from './srs';
+import { cardKey, gradeFromResult, isDue, review } from './srs';
 
 const base = { correct: true, nearMiss: false, timeMs: 8000, hintUsed: false };
 
@@ -60,5 +60,12 @@ describe('review', () => {
     const easy = review(start, 'easy', day).interval;
     expect(hard).toBeLessThan(good);
     expect(good).toBeLessThan(easy);
+  });
+});
+
+describe('cardKey', () => {
+  it('keys the written card by the bare entry id, so stored cards stay valid', () => {
+    expect(cardKey('p/a')).toBe('p/a');
+    expect(cardKey('p/a', 'written')).toBe('p/a');
   });
 });

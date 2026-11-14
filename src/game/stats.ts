@@ -1,5 +1,5 @@
 import { addDays, type DayKey } from '../lib/date';
-import { SRS, type SrsCard } from '../lib/srs';
+import { cardKey, SRS, type SrsCard } from '../lib/srs';
 import type { MapPack } from './map';
 import { entryMastery } from './mastery';
 import { weekStart } from './quests';
@@ -29,8 +29,15 @@ export function heatmap(xpOn: ReadonlyMap<DayKey, number>, goalOn: (day: DayKey)
 /** Seen entries that went wrong most often, then the hardest (lowest ease). */
 export function weakestEntries(entryIds: readonly string[], cards: Readonly<Record<string, SrsCard>>, limit = 10): string[] {
   return entryIds
-    .filter((id) => cards[id] && (cards[id]!.lapses > 0 || cards[id]!.ease < SRS.startEase))
-    .sort((a, b) => cards[b]!.lapses - cards[a]!.lapses || cards[a]!.ease - cards[b]!.ease || a.localeCompare(b))
+    .filter((id) => {
+      const card = cards[cardKey(id)];
+      return card && (card.lapses > 0 || card.ease < SRS.startEase);
+    })
+    .sort((a, b) => {
+      const ca = cards[cardKey(a)]!;
+      const cb = cards[cardKey(b)]!;
+      return cb.lapses - ca.lapses || ca.ease - cb.ease || a.localeCompare(b);
+    })
     .slice(0, limit);
 }
 
@@ -39,7 +46,7 @@ export function masteryByPack(packs: readonly MapPack[], cards: Readonly<Record<
   return new Map(
     packs.map((pack) => {
       const counts = [0, 0, 0, 0, 0, 0];
-      for (const unit of pack.units) for (const id of unit.entryIds) counts[entryMastery(cards[id])]! += 1;
+      for (const unit of pack.units) for (const id of unit.entryIds) counts[entryMastery(cards[cardKey(id)])]! += 1;
       return [pack.id, counts];
     }),
   );

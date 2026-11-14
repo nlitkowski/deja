@@ -10,7 +10,7 @@ import { ui } from '../i18n/ui';
 import { indexExercisesByEntry, requeue, type SessionItem } from '../lib/session';
 import { newEventId } from '../lib/progress/events';
 import { dayKey } from '../lib/date';
-import { isDue, type AnswerResult } from '../lib/srs';
+import { cardKey, isDue, type AnswerResult } from '../lib/srs';
 import { sfx } from '../sfx';
 import { useAppStore } from '../state/appStore';
 import { xpContext } from '../xpContext';
@@ -124,7 +124,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
     const today = dayKey(new Date());
     const cards = useAppStore.getState().progress.cards;
     // Other entries of a duel or pairs count as early practice when they are not due yet, like the session's own entries.
-    const isEarly = (ids: string[]) => ids.every((id) => (id === item.entryId ? item.early : !!cards[id] && !isDue(cards[id]!, today)));
+    const isEarly = (ids: string[]) => ids.every((id) => (id === item.entryId ? item.early : !!cards[cardKey(id)] && !isDue(cards[cardKey(id)]!, today)));
     const parts = r.parts ?? [{ entryIds: exercise.entryIds, correct: r.correct, timeMs: r.timeMs }];
 
     const s = stats.current;
