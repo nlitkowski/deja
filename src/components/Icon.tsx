@@ -9,9 +9,12 @@ const PIXELS = {
   next: ['..XX....', '...XX...', '....XX..', '.....XX.', '.....XX.', '....XX..', '...XX...', '..XX....'],
   settings: ['X..XX..X', '.XXXXXX.', '.XX..XX.', 'XX....XX', 'XX....XX', '.XX..XX.', '.XXXXXX.', 'X..XX..X'],
   hint: ['..XXXX..', '.X....X.', 'X......X', 'X......X', '.X....X.', '..XXXX..', '..XXXX..', '...XX...'],
+  play: ['.X......', '.XX.....', '.XXX....', '.XXXX...', '.XXXX...', '.XXX....', '.XX.....', '.X......'],
+  collapse: ['...X...X', '..X...X.', '.X...X..', 'X...X...', 'X...X...', '.X...X..', '..X...X.', '...X...X'],
 } as const;
 
-const GLYPHS: Record<IconName, string> = { menu: '☰', close: '✕', back: '‹', next: '›', settings: '⚙', hint: '💡' };
+// U+FE0E keeps ▶ as a text glyph; without it some platforms draw an emoji.
+const GLYPHS: Record<IconName, string> = { menu: '☰', close: '✕', back: '‹', next: '›', settings: '⚙', hint: '💡', play: '▶︎', collapse: '«' };
 
 export type IconName = keyof typeof PIXELS;
 

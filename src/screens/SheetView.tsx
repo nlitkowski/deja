@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { KIND_ICON, sectionId } from '../components/ContentTree';
+import { KIND_ICON, sectionId } from '../components/NavTree';
 import { RichText } from '../components/RichText';
 import { SheetsLayout } from '../components/SheetsLayout';
 import { localize, type HelpLang } from '../content/localized';
@@ -127,6 +127,7 @@ export function SheetView({ sheetKey, helpLang, onHelpLang, onPractice, onOpenSh
       helpLang={helpLang}
       onHelpLang={onHelpLang}
       onOpenSheet={onOpenSheet}
+      onPractice={onPractice}
       onBack={onBack}
     >
       <div className="sheet-hero">

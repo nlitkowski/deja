@@ -47,6 +47,7 @@ export function App() {
         <Home
           onStart={startSession}
           onOpenSheets={() => setScreen({ name: 'sheets' })}
+          onOpenSheet={(key) => setScreen({ name: 'sheet', key })}
           onOpenSettings={() => setScreen({ name: 'settings' })}
         />
       );
@@ -69,6 +70,7 @@ export function App() {
           helpLang={settings.helpLang}
           onHelpLang={setHelpLang}
           onOpen={(key) => setScreen({ name: 'sheet', key })}
+          onPractice={(unitKey) => startSession(content.units.get(unitKey)?.title ?? '', unitSession(unitKey))}
           onBack={home}
         />
       );

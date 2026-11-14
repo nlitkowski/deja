@@ -16,8 +16,11 @@ export const ui = {
 
   sheets: 'Fiches de révision',
   sheetsTeaser: (n: number) => `${n} fiche${n > 1 ? 's' : ''} : grammaire, vocabulaire, expressions`,
-  treeLabel: 'Sommaire des fiches',
+  treeHeading: 'Sommaire',
+  treeLabel: 'Sommaire : unités et fiches',
+  practiceUnit: (title: string) => `S’entraîner : ${title}`,
   openMenu: 'Ouvrir le sommaire',
+  collapseTree: 'Masquer le sommaire',
   closeMenu: 'Fermer le sommaire',
   sectionKinds: { grammar: 'Grammaire', vocabulary: 'Vocabulaire', phrases: 'Communication' },
   watchOut: 'Attention',

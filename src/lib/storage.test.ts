@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { defaultSettings, defaultState, deviceId, loadState, migrate, saveState, SCHEMA_VERSION, STORAGE_KEY } from './storage';
+import { defaultSettings, defaultState, deviceId, loadState, migrate, saveState, SCHEMA_VERSION, STORAGE_KEY, type Settings } from './storage';
 
 function memoryStore(initial?: Record<string, string>) {
   const values = new Map(Object.entries(initial ?? {}));
@@ -59,6 +59,15 @@ describe('storage', () => {
     saveState(loaded.state, store);
     expect(store.keys()).toEqual([STORAGE_KEY]);
     expect(loadState(store).legacy).toBeUndefined();
+  });
+
+  it('adds new settings with their defaults to saved v5 state', () => {
+    const older: Partial<Settings> = defaultSettings();
+    delete older.navCollapsed;
+    expect(migrate({ schemaVersion: SCHEMA_VERSION, settings: { ...older, palette: 'pixel' } }).state.settings).toEqual({
+      ...defaultSettings(),
+      palette: 'pixel',
+    });
   });
 
   it('keeps one device id per browser', () => {

@@ -49,6 +49,9 @@
   --border-w: 1px;
   --shadow: none;
   --shadow-sm: none;
+  --scroll-thumb: light-dark(#d6cebf, #3a4268);
+  --scroll-track: transparent;
+  --scroll-width: thin;
 }
 
 [data-palette='provence'] {
@@ -83,6 +86,9 @@
   --border-w: 1px;
   --shadow: 0 6px 18px light-dark(rgb(74 56 112 / 0.08), rgb(0 0 0 / 0.3));
   --shadow-sm: none;
+  --scroll-thumb: light-dark(#d4c8e2, #463a5a);
+  --scroll-track: transparent;
+  --scroll-width: thin;
 }
 
 /* Light: Game Boy greens. Dark: NES night. */
@@ -118,4 +124,8 @@
   --border-w: 3px;
   --shadow: 4px 4px 0 var(--border);
   --shadow-sm: 3px 3px 0 var(--border);
+  /* Chunky and high-contrast, like a console UI. */
+  --scroll-thumb: var(--border);
+  --scroll-track: var(--surface);
+  --scroll-width: auto;
 }

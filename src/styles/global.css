@@ -271,8 +271,14 @@ button {
   accent-color: var(--accent);
 }
 
+.pack + .pack,
+.sheets-card + .pack {
+  margin-top: 32px;
+}
+
 .pack h2 {
   font-size: 1.3rem;
+  margin-bottom: 14px;
 }
 
 .level {
@@ -963,15 +969,15 @@ button {
   font-size: 1.4em;
 }
 
-/* Sheets: content tree beside the text on wide screens, in a drawer behind ☰ on small ones. */
-.sheets-main {
+/* Navigation tree beside the content on wide screens, in a drawer behind ☰ on small ones (home and sheets). */
+.layout-main {
   max-width: 680px;
   margin: 0 auto;
   padding: 0 16px max(24px, env(safe-area-inset-bottom));
   min-height: 100dvh;
 }
 
-.sheets-sidebar {
+.layout-sidebar {
   display: none;
 }
 
@@ -1192,7 +1198,7 @@ button {
 }
 
 @media (min-width: 960px) {
-  .sheets-layout {
+  .layout {
     display: grid;
     grid-template-columns: 290px minmax(0, 1fr);
     gap: 32px;
@@ -1201,7 +1207,7 @@ button {
     padding: 0 24px;
   }
 
-  .sheets-sidebar {
+  .layout-sidebar {
     display: block;
     position: sticky;
     top: 0;
@@ -1213,7 +1219,7 @@ button {
     border-right: var(--border-w) solid var(--border);
   }
 
-  .sheets-main {
+  .layout-main {
     margin: 0;
     padding: 0 0 24px;
   }
@@ -1294,4 +1300,104 @@ button {
   width: 1.1em;
   height: 1.1em;
   flex-shrink: 0;
+}
+
+.home {
+  padding-top: max(8px, env(safe-area-inset-top));
+}
+
+.home-header .menu-button {
+  margin: 2px -4px 0 -8px;
+}
+
+.home-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.tree-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.tree-row > .tree-sheet {
+  flex: 1;
+  min-width: 0;
+}
+
+button.tree-sheet {
+  border: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tree-action {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--accent);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.tree-action:hover {
+  background: var(--surface);
+}
+
+.tree-action:focus-visible,
+button.tree-sheet:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+/* Scrollbars follow the palette instead of the browser's default grey. */
+html,
+.layout-sidebar,
+.tree-drawer,
+.table-scroll {
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+  scrollbar-width: var(--scroll-width);
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 8px 0 16px;
+  margin-bottom: 8px;
+}
+
+.sidebar-header .sidebar-heading {
+  margin: 0;
+  padding: 0;
+}
+
+.collapse-button {
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 6px 8px;
+}
+
+@media (min-width: 960px) {
+  .layout.nav-collapsed {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 728px;
+  }
+
+  .layout.nav-collapsed .layout-sidebar {
+    display: none;
+  }
+
+  .layout.nav-collapsed .menu-button {
+    display: inline-block;
+  }
 }

@@ -10,12 +10,13 @@ interface Props {
   helpLang: HelpLang;
   onHelpLang: (lang: HelpLang) => void;
   onOpen: (sheetKey: string) => void;
+  onPractice: (unitKey: string) => void;
   onBack: () => void;
 }
 
-export function SheetList({ helpLang, onHelpLang, onOpen, onBack }: Props) {
+export function SheetList({ helpLang, onHelpLang, onOpen, onPractice, onBack }: Props) {
   return (
-    <SheetsLayout backLabel={ui.back} helpLang={helpLang} onHelpLang={onHelpLang} onOpenSheet={onOpen} onBack={onBack}>
+    <SheetsLayout backLabel={ui.back} helpLang={helpLang} onHelpLang={onHelpLang} onOpenSheet={onOpen} onPractice={onPractice} onBack={onBack}>
       <h1>{ui.sheets}</h1>
 
       {content.packs

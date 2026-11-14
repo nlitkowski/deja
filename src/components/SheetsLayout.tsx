@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useState, type ReactNode } from 'react';
 import type { HelpLang } from '../content/localized';
-import { ui } from '../i18n/ui';
-import { ContentTree, sectionId } from './ContentTree';
-import { LangSwitch } from './LangSwitch';
+import { AppLayout, MenuButton } from './AppLayout';
 import { Icon } from './Icon';
+import { LangSwitch } from './LangSwitch';
+import { sectionId } from './NavTree';
 
 interface Props {
   currentKey?: string;
@@ -13,6 +13,7 @@ interface Props {
   helpLang: HelpLang;
   onHelpLang: (lang: HelpLang) => void;
   onOpenSheet: (key: string) => void;
+  onPractice: (unitKey: string) => void;
   onBack: () => void;
   children: ReactNode;
 }
@@ -53,71 +54,28 @@ function useActiveSection(count: number, resetKey?: string) {
   return [active, setActive] as const;
 }
 
-/** Sheet screens: content tree as a sidebar on wide screens, as a drawer behind ☰ on small ones. */
-export function SheetsLayout({ currentKey, sectionTitles = [], backLabel, helpLang, onHelpLang, onOpenSheet, onBack, children }: Props) {
-  const drawer = useRef<HTMLDialogElement>(null);
-  const sidebar = useRef<HTMLElement>(null);
+/** Sheet screens: the shared navigation layout plus a sticky bar showing the section being read. */
+export function SheetsLayout({ currentKey, sectionTitles = [], backLabel, helpLang, onHelpLang, onOpenSheet, onPractice, onBack, children }: Props) {
   const [active, setActive] = useActiveSection(sectionTitles.length, currentKey);
 
-  useEffect(() => {
-    sidebar.current?.querySelector('[aria-current="page"]')?.scrollIntoView({ block: 'nearest' });
-  }, [currentKey]);
-
-  const closeDrawer = () => drawer.current?.open && drawer.current.close();
-
   const jump = (index: number) => {
-    closeDrawer();
     setActive(index);
     const section = document.getElementById(sectionId(index));
     section?.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
     section?.focus({ preventScroll: true });
   };
 
-  const openSheet = (key: string) => {
-    closeDrawer();
-    onOpenSheet(key);
-  };
-
-  const tree = <ContentTree currentKey={currentKey} activeSection={active} onOpenSheet={openSheet} onJump={jump} />;
-
   return (
-    <div className="sheets-layout">
-      <aside className="sheets-sidebar" ref={sidebar}>
-        <p className="sidebar-heading">{ui.sheets}</p>
-        {tree}
-      </aside>
-
-      <dialog
-        ref={drawer}
-        className="tree-drawer"
-        aria-label={ui.treeLabel}
-        // A click on the dialog element itself is a click on the backdrop.
-        onClick={(e) => e.target === e.currentTarget && closeDrawer()}
-      >
-        <div className="drawer-header">
-          <p className="sidebar-heading">{ui.sheets}</p>
-          <button className="icon-button" onClick={closeDrawer} aria-label={ui.closeMenu}>
-            <Icon name="close" />
-          </button>
-        </div>
-        {tree}
-      </dialog>
-
-      <main className="sheets-main">
-        <header className="sheets-bar">
-          <button className="icon-button menu-button" onClick={() => drawer.current?.showModal()} aria-label={ui.openMenu} aria-haspopup="dialog">
-            <Icon name="menu" />
-          </button>
-          <button className="back-button" onClick={onBack} aria-label={backLabel}>
-            <Icon name="back" /> <span className="back-text">{backLabel}</span>
-          </button>
-          {sectionTitles.length > 0 && (
-            <span className="bar-section">{sectionTitles[active]}</span>
-          )}
-          <LangSwitch value={helpLang} onChange={onHelpLang} />
-        </header>
-        {children}
-      </main>
-    </div>
+    <AppLayout currentSheetKey={currentKey} activeSection={active} onJump={jump} onOpenSheet={onOpenSheet} onPractice={onPractice}>
+      <header className="sheets-bar">
+        <MenuButton />
+        <button className="back-button" onClick={onBack} aria-label={backLabel}>
+          <Icon name="back" /> <span className="back-text">{backLabel}</span>
+        </button>
+        {sectionTitles.length > 0 && <span className="bar-section">{sectionTitles[active]}</span>}
+        <LangSwitch value={helpLang} onChange={onHelpLang} />
+      </header>
+      {children}
+    </AppLayout>
   );
 }

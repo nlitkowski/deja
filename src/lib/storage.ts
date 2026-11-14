@@ -19,6 +19,8 @@ export interface Settings {
   /** `system` follows prefers-color-scheme. */
   colorMode: ColorMode;
   palette: Palette;
+  /** Navigation tree hidden on wide screens (on small ones it is always a drawer). */
+  navCollapsed: boolean;
 }
 
 export type ColorMode = 'system' | 'light' | 'dark';
@@ -43,7 +45,7 @@ export interface LoadedState {
 }
 
 export function defaultSettings(): Settings {
-  return { dailyGoal: 50, sound: true, vibration: true, helpLang: 'pl', colorMode: 'system', palette: 'classic' };
+  return { dailyGoal: 50, sound: true, vibration: true, helpLang: 'pl', colorMode: 'system', palette: 'classic', navCollapsed: false };
 }
 
 export function defaultState(): SavedState {
