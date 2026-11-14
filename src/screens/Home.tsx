@@ -99,6 +99,8 @@ export function Home({ state, update, onStart, onOpenSheets, onOpenSettings }: P
           </ol>
         </section>
       ))}
+
+      <footer className="disclaimer muted small">{ui.disclaimer}</footer>
     </main>
   );
 }
