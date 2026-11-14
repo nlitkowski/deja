@@ -2,7 +2,7 @@ import type { HelpLang } from '../content/localized';
 import type { DayKey } from './date';
 import type { SrsCard } from './srs';
 
-export const SCHEMA_VERSION = 2;
+export const SCHEMA_VERSION = 3;
 const KEY = 'revision-francaise:state';
 
 export interface Settings {
@@ -10,7 +10,12 @@ export interface Settings {
   sound: boolean;
   vibration: boolean;
   helpLang: HelpLang;
+  /** `system` follows prefers-color-scheme. */
+  theme: Theme;
 }
+
+export type Theme = 'system' | 'light' | 'dark';
+export const THEMES: readonly Theme[] = ['system', 'light', 'dark'];
 
 export interface SavedState {
   schemaVersion: typeof SCHEMA_VERSION;
@@ -24,13 +29,14 @@ export function defaultState(): SavedState {
     schemaVersion: SCHEMA_VERSION,
     srs: {},
     daily: { day: '', newIntroduced: 0 },
-    settings: { dailyGoal: 50, sound: true, vibration: true, helpLang: 'pl' },
+    settings: { dailyGoal: 50, sound: true, vibration: true, helpLang: 'pl', theme: 'system' },
   };
 }
 
 /** `MIGRATIONS[n]` upgrades a state of version n to n + 1. */
 const MIGRATIONS: Record<number, (s: Record<string, unknown>) => Record<string, unknown>> = {
   1: (s) => ({ ...s, schemaVersion: 2, settings: { ...(s.settings as object), helpLang: 'pl' } }),
+  2: (s) => ({ ...s, schemaVersion: 3, settings: { ...(s.settings as object), theme: 'system' } }),
 };
 
 export function migrate(raw: unknown): SavedState {

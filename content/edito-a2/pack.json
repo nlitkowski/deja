@@ -1,0 +1,14 @@
+{
+  "id": "edito-a2",
+  "version": 1,
+  "title": "Édito A2",
+  "level": "A2",
+  "icon": "📗",
+  "requires": [],
+  "accentPairs": [
+    ["notre", "nôtre"],
+    ["votre", "vôtre"]
+  ],
+  "units": ["unite-01", "unite-02", "unite-03", "unite-04"],
+  "sheets": ["unite-01", "unite-02", "unite-03", "unite-04"]
+}

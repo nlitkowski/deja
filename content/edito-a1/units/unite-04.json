@@ -1,0 +1,168 @@
+{
+  "id": "unite-04",
+  "title": "Unité 4 · C'est où ?",
+  "icon": "🗺️",
+  "entries": [
+    {
+      "id": "u04-cest-ilest",
+      "fr": "c'est / il est",
+      "pl": "to jest / on jest",
+      "def": "c'est + article + nom ; il / elle est + adjectif ou profession",
+      "examples": [
+        { "fr": "C'est un musée.", "pl": "To jest muzeum." },
+        { "fr": "Il est médecin.", "pl": "On jest lekarzem." }
+      ],
+      "tip": {
+        "pl": "c'est + rodzajnik + rzeczownik; il / elle est + przymiotnik albo zawód bez rodzajnika",
+        "fr": "c'est + article + nom ; il / elle est + adjectif ou profession sans article"
+      },
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u04-frequence",
+      "fr": "toujours / souvent / ne … jamais",
+      "pl": "zawsze / często / nigdy",
+      "def": "100 % du temps / beaucoup de fois / 0 % du temps",
+      "examples": [
+        { "fr": "Je prends souvent le bus.", "pl": "Często jeżdżę autobusem." },
+        { "fr": "Il ne prend jamais le taxi.", "pl": "On nigdy nie jeździ taksówką." }
+      ],
+      "tip": {
+        "pl": "przysłówek stoi po czasowniku; jamais wymaga ne przed czasownikiem",
+        "fr": "l'adverbe se place après le verbe ; jamais demande ne avant le verbe"
+      },
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u04-imperatif",
+      "fr": "l'impératif",
+      "pl": "tryb rozkazujący",
+      "def": "pour donner un ordre ou une indication : trois formes (tu, nous, vous), sans sujet",
+      "examples": [
+        { "fr": "Tournez à gauche.", "pl": "Proszę skręcić w lewo." },
+        { "fr": "Prends le bus !", "pl": "Jedź autobusem!" }
+      ],
+      "tip": {
+        "pl": "bez podmiotu; czasowniki na -er i aller tracą -s w formie tu: monte, va",
+        "fr": "pas de sujet ; les verbes en -er et aller perdent le -s à la forme tu : monte, va"
+      },
+      "confusables": ["u04-imperatif-etre-avoir"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u04-imperatif-etre-avoir",
+      "fr": "sois, soyez / aie, ayez",
+      "pl": "bądź, bądźcie / miej, miejcie",
+      "def": "l'impératif irrégulier de être et avoir",
+      "examples": [
+        { "fr": "Sois patient !", "pl": "Bądź cierpliwy!" },
+        { "fr": "N'ayez pas peur.", "pl": "Nie bójcie się." }
+      ],
+      "tip": {
+        "pl": "être: sois, soyons, soyez; avoir: aie, ayons, ayez",
+        "fr": "être : sois, soyons, soyez ; avoir : aie, ayons, ayez"
+      },
+      "confusables": ["u04-imperatif"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u04-prendre",
+      "fr": "prendre",
+      "pl": "brać; jechać (środkiem transportu)",
+      "def": "je prends, nous prenons, ils prennent",
+      "examples": [
+        { "fr": "Nous prenons le tramway.", "pl": "Jedziemy tramwajem." },
+        { "fr": "Ils prennent un taxi.", "pl": "Biorą taksówkę." }
+      ],
+      "tip": {
+        "pl": "nous prenons (jedno n), ils prennent (dwa n)",
+        "fr": "nous prenons (un n), ils prennent (deux n)"
+      },
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u04-nombres",
+      "fr": "cent, mille, un million",
+      "pl": "sto, tysiąc, milion",
+      "def": "les nombres de 100 à 1 milliard",
+      "examples": [
+        { "fr": "deux cents, deux cent cinquante", "pl": "dwieście, dwieście pięćdziesiąt" },
+        { "fr": "trois mille", "pl": "trzy tysiące" }
+      ],
+      "tip": {
+        "pl": "cent ma -s tylko na końcu liczby (deux cents); mille nigdy nie ma -s",
+        "fr": "cent prend -s seulement à la fin du nombre (deux cents) ; mille ne prend jamais de -s"
+      },
+      "tags": ["grammaire"]
+    },
+    { "id": "u04-rue", "fr": "une rue", "pl": "ulica", "def": "voie dans une ville", "examples": [{ "fr": "J'habite rue Victor-Hugo.", "pl": "Mieszkam przy ulicy Victora Hugo." }], "tags": ["vocabulaire"] },
+    { "id": "u04-pont", "fr": "un pont", "pl": "most", "def": "il passe au-dessus d'une rivière", "examples": [{ "fr": "Traversez le pont.", "pl": "Proszę przejść przez most." }], "tags": ["vocabulaire"] },
+    { "id": "u04-place", "fr": "une place", "pl": "plac", "def": "espace ouvert entre les bâtiments", "examples": [{ "fr": "Le café est sur la place.", "pl": "Kawiarnia jest na placu." }], "tags": ["vocabulaire"] },
+    { "id": "u04-carrefour", "fr": "un carrefour", "pl": "skrzyżowanie", "def": "là où deux rues se croisent", "examples": [{ "fr": "Tournez à gauche au carrefour.", "pl": "Proszę skręcić w lewo na skrzyżowaniu." }], "tags": ["vocabulaire"] },
+    { "id": "u04-quartier", "fr": "un quartier", "pl": "dzielnica", "def": "une partie de la ville", "examples": [{ "fr": "C'est un quartier calme.", "pl": "To spokojna dzielnica." }], "tags": ["vocabulaire"] },
+    { "id": "u04-gare", "fr": "une gare", "pl": "dworzec (kolejowy)", "def": "on y prend le train", "examples": [{ "fr": "La gare est loin d'ici.", "pl": "Dworzec jest daleko stąd." }], "tags": ["vocabulaire"] },
+    { "id": "u04-mairie", "fr": "une mairie", "pl": "ratusz, urząd miasta", "def": "le bâtiment du maire", "examples": [{ "fr": "La mairie est sur la place.", "pl": "Ratusz jest na placu." }], "tags": ["vocabulaire"] },
+    { "id": "u04-arret", "fr": "un arrêt (de bus)", "pl": "przystanek (autobusowy)", "def": "là où le bus s'arrête", "examples": [{ "fr": "L'arrêt est en face de la poste.", "pl": "Przystanek jest naprzeciwko poczty." }], "tags": ["vocabulaire"] },
+    { "id": "u04-correspondance", "fr": "une correspondance", "pl": "przesiadka", "def": "on change de ligne", "examples": [{ "fr": "Il y a une correspondance à Châtelet.", "pl": "Na Châtelet jest przesiadka." }], "tags": ["vocabulaire"] },
+    { "id": "u04-ticket", "fr": "un ticket", "pl": "bilet (komunikacji miejskiej)", "def": "on le paie pour voyager en bus ou en métro", "examples": [{ "fr": "Un ticket de métro, s'il vous plaît.", "pl": "Poproszę bilet na metro." }], "tags": ["vocabulaire"] }
+  ],
+  "exercises": [
+    { "id": "u04-cest-1", "type": "gap-fill", "entryIds": ["u04-cest-ilest"], "data": { "sentence": "___ un quartier très animé.", "answers": ["c'est"], "pl": "To bardzo ożywiona dzielnica." } },
+    { "id": "u04-cest-2", "type": "gap-fill", "entryIds": ["u04-cest-ilest"], "data": { "sentence": "Tu connais Marc ? ___ médecin.", "answers": ["il est"], "pl": "Znasz Marca? Jest lekarzem.", "clue": "(sa profession)" } },
+    { "id": "u04-cest-3", "type": "gap-fill", "entryIds": ["u04-cest-ilest"], "data": { "sentence": "La tour Eiffel ? ___ très haute !", "answers": ["elle est"], "pl": "Wieża Eiffla? Jest bardzo wysoka!" } },
+    { "id": "u04-cest-4", "type": "gap-fill", "entryIds": ["u04-cest-ilest"], "data": { "sentence": "Regarde, ___ des monuments célèbres.", "answers": ["ce sont"], "pl": "Patrz, to są słynne zabytki.", "hint": { "pl": "liczba mnoga od c'est", "fr": "le pluriel de c'est" } } },
+
+    { "id": "u04-freq-1", "type": "gap-fill", "entryIds": ["u04-frequence"], "data": { "sentence": "Je prends ___ le métro, chaque jour, sans exception.", "answers": ["toujours"], "pl": "Zawsze jeżdżę metrem, codziennie, bez wyjątku.", "clue": "(100 % du temps)" } },
+    { "id": "u04-freq-2", "type": "gap-fill", "entryIds": ["u04-frequence"], "data": { "sentence": "Il ne prend ___ le taxi, c'est trop cher.", "answers": ["jamais"], "pl": "On nigdy nie jeździ taksówką, to za drogo.", "clue": "(0 % du temps)" } },
+    { "id": "u04-freq-3", "type": "gap-fill", "entryIds": ["u04-frequence"], "data": { "sentence": "Elle va ___ au musée : trois fois par mois.", "answers": ["souvent"], "pl": "Ona często chodzi do muzeum: trzy razy w miesiącu.", "clue": "(beaucoup de fois)" } },
+
+    { "id": "u04-imp-1", "type": "gap-fill", "entryIds": ["u04-imperatif"], "data": { "sentence": "___ à droite, puis allez tout droit. (tourner – vous)", "answers": ["tournez"], "pl": "Proszę skręcić w prawo, potem iść prosto." } },
+    { "id": "u04-imp-2", "type": "gap-fill", "entryIds": ["u04-imperatif"], "data": { "sentence": "___ la deuxième rue à gauche. (prendre – vous)", "answers": ["prenez"], "pl": "Proszę skręcić w drugą ulicę w lewo." } },
+    { "id": "u04-imp-3", "type": "gap-fill", "entryIds": ["u04-imperatif"], "data": { "sentence": "___ au marché avec moi ! (aller – tu)", "answers": ["va"], "pl": "Chodź ze mną na targ!", "hint": { "pl": "forma tu bez -s", "fr": "forme tu sans -s" } } },
+    { "id": "u04-imp-4", "type": "gap-fill", "entryIds": ["u04-imperatif"], "data": { "sentence": "Ne ___ pas ici, c'est dangereux ! (traverser – vous)", "answers": ["traversez"], "pl": "Proszę tu nie przechodzić, to niebezpieczne!" } },
+    { "id": "u04-imp-5", "type": "gap-fill", "entryIds": ["u04-imperatif"], "data": { "sentence": "___ dans le bus, il part ! (monter – tu)", "answers": ["monte"], "pl": "Wsiadaj do autobusu, odjeżdża!", "hint": { "pl": "czasownik na -er: forma tu bez -s", "fr": "verbe en -er : forme tu sans -s" } } },
+
+    { "id": "u04-imp-ea-1", "type": "gap-fill", "entryIds": ["u04-imperatif-etre-avoir"], "data": { "sentence": "___ patient, le bus arrive ! (être – tu)", "answers": ["sois"], "pl": "Bądź cierpliwy, autobus już jedzie!" } },
+    { "id": "u04-imp-ea-2", "type": "gap-fill", "entryIds": ["u04-imperatif-etre-avoir"], "data": { "sentence": "___ à l'heure demain, s'il vous plaît. (être – vous)", "answers": ["soyez"], "pl": "Proszę być jutro punktualnie." } },
+    { "id": "u04-imp-ea-3", "type": "gap-fill", "entryIds": ["u04-imperatif-etre-avoir"], "data": { "sentence": "N'___ pas peur, le quartier est calme. (avoir – tu)", "answers": ["aie"], "pl": "Nie bój się, dzielnica jest spokojna." } },
+    { "id": "u04-imp-ea-4", "type": "gap-fill", "entryIds": ["u04-imperatif-etre-avoir"], "data": { "sentence": "N'___ pas peur, le chien est gentil. (avoir – vous)", "answers": ["ayez"], "pl": "Nie bójcie się, pies jest łagodny." } },
+
+    { "id": "u04-prendre-1", "type": "gap-fill", "entryIds": ["u04-prendre"], "data": { "sentence": "Nous ___ le tramway. (prendre)", "answers": ["prenons"], "pl": "Jedziemy tramwajem." } },
+    { "id": "u04-prendre-2", "type": "gap-fill", "entryIds": ["u04-prendre"], "data": { "sentence": "Ils ___ un taxi pour aller à la gare. (prendre)", "answers": ["prennent"], "pl": "Biorą taksówkę, żeby dojechać na dworzec." } },
+    { "id": "u04-prendre-3", "type": "gap-fill", "entryIds": ["u04-prendre"], "data": { "sentence": "Vous ___ le bus ou le métro ? (prendre)", "answers": ["prenez"], "pl": "Jedziecie autobusem czy metrem?" } },
+    { "id": "u04-prendre-4", "type": "gap-fill", "entryIds": ["u04-prendre"], "data": { "sentence": "Elle ___ le train de 8 heures. (prendre)", "answers": ["prend"], "pl": "Ona jedzie pociągiem o 8." } },
+
+    { "id": "u04-nombres-1", "type": "gap-fill", "entryIds": ["u04-nombres"], "data": { "sentence": "200 = deux ___", "answers": ["cents"] } },
+    { "id": "u04-nombres-2", "type": "gap-fill", "entryIds": ["u04-nombres"], "data": { "sentence": "250 = deux ___ cinquante", "answers": ["cent"] } },
+    { "id": "u04-nombres-3", "type": "gap-fill", "entryIds": ["u04-nombres"], "data": { "sentence": "3 000 = trois ___", "answers": ["mille"] } },
+    { "id": "u04-nombres-4", "type": "gap-fill", "entryIds": ["u04-nombres"], "data": { "sentence": "1 000 000 = un ___", "answers": ["million"] } },
+
+    { "id": "u04-rue-1", "type": "gap-fill", "entryIds": ["u04-rue"], "data": { "sentence": "J'habite dans une petite ___ calme.", "answers": ["rue"], "pl": "Mieszkam przy małej, spokojnej ulicy.", "clue": "(voie dans une ville)" } },
+    { "id": "u04-rue-2", "type": "translate-pl-fr", "entryIds": ["u04-rue"], "data": { "pl": "ulica", "answers": ["une rue", "la rue"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-pont-1", "type": "gap-fill", "entryIds": ["u04-pont"], "data": { "sentence": "On traverse la Seine sur un ___.", "answers": ["pont"], "pl": "Przechodzimy przez Sekwanę po moście.", "clue": "(il passe au-dessus de l'eau)" } },
+    { "id": "u04-pont-2", "type": "translate-pl-fr", "entryIds": ["u04-pont"], "data": { "pl": "most", "answers": ["un pont", "le pont"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-place-1", "type": "gap-fill", "entryIds": ["u04-place"], "data": { "sentence": "Le marché est sur la ___ de la mairie.", "answers": ["place"], "pl": "Targ jest na placu przed ratuszem.", "clue": "(espace ouvert entre les bâtiments)" } },
+    { "id": "u04-place-2", "type": "translate-pl-fr", "entryIds": ["u04-place"], "data": { "pl": "plac", "answers": ["une place", "la place"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-carrefour-1", "type": "gap-fill", "entryIds": ["u04-carrefour"], "data": { "sentence": "Tournez à droite au ___.", "answers": ["carrefour"], "pl": "Proszę skręcić w prawo na skrzyżowaniu.", "clue": "(là où deux rues se croisent)" } },
+    { "id": "u04-carrefour-2", "type": "translate-pl-fr", "entryIds": ["u04-carrefour"], "data": { "pl": "skrzyżowanie", "answers": ["un carrefour", "le carrefour"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-quartier-1", "type": "gap-fill", "entryIds": ["u04-quartier"], "data": { "sentence": "Mon ___ est très animé le soir.", "answers": ["quartier"], "pl": "Moja dzielnica tętni życiem wieczorem.", "clue": "(une partie de la ville)" } },
+    { "id": "u04-quartier-2", "type": "translate-pl-fr", "entryIds": ["u04-quartier"], "data": { "pl": "dzielnica", "answers": ["un quartier", "le quartier"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-gare-1", "type": "gap-fill", "entryIds": ["u04-gare"], "data": { "sentence": "Le train part de la ___ à 9 heures.", "answers": ["gare"], "pl": "Pociąg odjeżdża z dworca o 9.", "clue": "(on y prend le train)" } },
+    { "id": "u04-gare-2", "type": "translate-pl-fr", "entryIds": ["u04-gare"], "data": { "pl": "dworzec (kolejowy)", "answers": ["une gare", "la gare"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-mairie-1", "type": "gap-fill", "entryIds": ["u04-mairie"], "data": { "sentence": "Pour se marier, on va à la ___.", "answers": ["mairie"], "pl": "Żeby wziąć ślub, idzie się do urzędu miasta.", "clue": "(le bâtiment du maire)" } },
+    { "id": "u04-mairie-2", "type": "translate-pl-fr", "entryIds": ["u04-mairie"], "data": { "pl": "ratusz, urząd miasta", "answers": ["une mairie", "la mairie"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-arret-1", "type": "gap-fill", "entryIds": ["u04-arret"], "data": { "sentence": "J'attends le bus 21 à l'___.", "answers": ["arrêt"], "pl": "Czekam na autobus 21 na przystanku.", "clue": "(là où le bus s'arrête)" } },
+    { "id": "u04-arret-2", "type": "translate-pl-fr", "entryIds": ["u04-arret"], "data": { "pl": "przystanek (autobusowy)", "answers": ["un arrêt", "l'arrêt", "un arrêt de bus", "l'arrêt de bus"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-correspondance-1", "type": "gap-fill", "entryIds": ["u04-correspondance"], "data": { "sentence": "À Châtelet, il y a une ___ avec la ligne 1.", "answers": ["correspondance"], "pl": "Na Châtelet jest przesiadka na linię 1.", "clue": "(on change de ligne)" } },
+    { "id": "u04-correspondance-2", "type": "translate-pl-fr", "entryIds": ["u04-correspondance"], "data": { "pl": "przesiadka", "answers": ["une correspondance", "la correspondance"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-ticket-1", "type": "gap-fill", "entryIds": ["u04-ticket"], "data": { "sentence": "Un ___ de métro coûte 2,15 euros.", "answers": ["ticket", "billet"], "pl": "Bilet na metro kosztuje 2,15 euro.", "clue": "(on le paie pour voyager)" } },
+    { "id": "u04-ticket-2", "type": "translate-pl-fr", "entryIds": ["u04-ticket"], "data": { "pl": "bilet (komunikacji miejskiej)", "answers": ["un ticket", "le ticket", "un ticket de métro", "un ticket de bus"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
+  ],
+  "boss": {
+    "entryIds": ["u04-cest-ilest", "u04-imperatif", "u04-imperatif-etre-avoir", "u04-prendre"],
+    "exerciseTypes": ["gap-fill"],
+    "questions": 10,
+    "lives": 3,
+    "timeLimitSec": 20
+  }
+}

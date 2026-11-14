@@ -1,0 +1,141 @@
+{
+  "id": "03-opposition",
+  "title": "Opposition",
+  "icon": "↔️",
+  "entries": [
+    {
+      "id": "u03-pourtant",
+      "fr": "pourtant",
+      "pl": "a jednak, mimo to; przecież",
+      "def": "le résultat est surprenant, contraire à ce qu'on attend",
+      "examples": [
+        { "fr": "Il a beaucoup travaillé, et pourtant il a raté son examen.", "pl": "Dużo pracował, a jednak oblał egzamin." },
+        { "fr": "C'est pourtant facile !", "pl": "Przecież to łatwe!" }
+      ],
+      "tip": {
+        "pl": "et pourtant = a jednak; w środku zdania pourtant = przecież: c'est pourtant simple !",
+        "fr": "« et pourtant » marque une surprise ; au milieu de la phrase, il insiste : c'est pourtant simple !"
+      },
+      "confusables": ["u03-cependant", "u03-par-contre", "a1-connecteurs/conj-mais"],
+      "tags": ["connecteur", "opposition"]
+    },
+    {
+      "id": "u03-cependant",
+      "fr": "cependant",
+      "pl": "jednak, jednakże (formalnie)",
+      "def": "l'opposition, dans un style plus soutenu (à l'écrit)",
+      "examples": [
+        { "fr": "Votre dossier est presque complet. Cependant, il manque une photo.", "pl": "Pana dokumenty są prawie kompletne. Brakuje jednak zdjęcia." }
+      ],
+      "tip": {
+        "pl": "cependant ≈ mais, ale bardziej formalnie (listy, teksty); zwykle na początku zdania z przecinkiem",
+        "fr": "« cependant » ≈ « mais », dans un style soutenu (lettres, textes) ; souvent au début de la phrase, avec une virgule"
+      },
+      "confusables": ["u03-pourtant", "a1-connecteurs/conj-mais"],
+      "tags": ["connecteur", "opposition"]
+    },
+    {
+      "id": "u03-par-contre",
+      "fr": "par contre",
+      "pl": "natomiast, za to",
+      "def": "compare deux choses différentes : d'un côté…, de l'autre côté…",
+      "examples": [
+        { "fr": "J'aime le thé ; par contre, je déteste le café.", "pl": "Lubię herbatę, natomiast nie znoszę kawy." }
+      ],
+      "tip": {
+        "pl": "par contre porównuje dwie rzeczy (bez zaskoczenia); w bardziej starannym stylu: en revanche",
+        "fr": "« par contre » compare deux choses (sans surprise) ; dans un style plus soigné : « en revanche »"
+      },
+      "confusables": ["u03-pourtant", "u03-alors-que"],
+      "tags": ["connecteur", "opposition"]
+    },
+    {
+      "id": "u03-alors-que",
+      "fr": "alors que / alors qu'",
+      "pl": "podczas gdy, a; chociaż",
+      "def": "oppose deux faits dans la même phrase",
+      "examples": [
+        { "fr": "Il pleut à Paris alors qu'il fait beau à Nice.", "pl": "W Paryżu pada, podczas gdy w Nicei jest ładnie." }
+      ],
+      "tip": {
+        "pl": "alors que + zdanie (podczas gdy); nie mylić z alors (więc)",
+        "fr": "« alors que » + sujet et verbe (l'opposition) ; ne pas confondre avec « alors » (la conséquence)"
+      },
+      "confusables": ["u02-alors", "u03-meme-si", "u03-par-contre"],
+      "tags": ["connecteur", "opposition"]
+    },
+    {
+      "id": "u03-meme-si",
+      "fr": "même si / même s'il",
+      "pl": "nawet jeśli",
+      "def": "une condition qui ne change pas le résultat",
+      "examples": [
+        { "fr": "Demain, je vais courir, même s'il pleut.", "pl": "Jutro pobiegam, nawet jeśli będzie padać." }
+      ],
+      "tip": {
+        "pl": "même si + tryb oznajmujący (jak si); même s'il / s'ils, ale même si elle",
+        "fr": "même si + indicatif (comme « si ») ; même s'il / s'ils, mais même si elle"
+      },
+      "confusables": ["a1-connecteurs/conj-si", "u03-alors-que"],
+      "tags": ["connecteur", "opposition"]
+    },
+    {
+      "id": "u03-au-lieu-de",
+      "fr": "au lieu de + infinitif / nom",
+      "pl": "zamiast",
+      "def": "on fait une chose à la place d'une autre",
+      "examples": [
+        { "fr": "Au lieu de regarder la télé, lis un livre !", "pl": "Zamiast oglądać telewizję, przeczytaj książkę!" },
+        { "fr": "J'ai pris du thé au lieu du café.", "pl": "Wziąłem herbatę zamiast kawy." }
+      ],
+      "tip": {
+        "pl": "au lieu de + le = au lieu du, + les = au lieu des; przed samogłoską au lieu d'",
+        "fr": "au lieu de + le = au lieu du, au lieu de + les = au lieu des ; devant une voyelle : au lieu d'"
+      },
+      "confusables": ["u01-avant-de"],
+      "tags": ["connecteur", "opposition"]
+    }
+  ],
+  "boss": {
+    "entryIds": ["u03-pourtant", "u03-par-contre", "u03-alors-que", "u03-meme-si", "u03-au-lieu-de"],
+    "exerciseTypes": ["gap-fill"],
+    "questions": 10,
+    "lives": 3,
+    "timeLimitSec": 20
+  },
+  "exercises": [
+    { "id": "pourtant-1", "type": "gap-fill", "entryIds": ["u03-pourtant"], "data": { "sentence": "C'est ___ facile ! Pourquoi tu n'y arrives pas ?", "answers": ["pourtant"], "pl": "Przecież to łatwe! Dlaczego ci się nie udaje?", "clue": "(connecteur d'opposition : je suis surpris)" } },
+    { "id": "pourtant-2", "type": "gap-fill", "entryIds": ["u03-pourtant"], "data": { "sentence": "Il a beaucoup travaillé, et ___ il a raté son examen.", "answers": ["pourtant", "cependant"], "pl": "Dużo pracował, a jednak oblał egzamin.", "clue": "(un résultat surprenant)" } },
+    { "id": "pourtant-3", "type": "gap-fill", "entryIds": ["u03-pourtant"], "data": { "sentence": "Je t'ai ___ dit de prendre un parapluie !", "answers": ["pourtant"], "pl": "Przecież mówiłem ci, żebyś wziął parasol!", "clue": "(connecteur d'opposition : et tu ne l'as pas pris)" } },
+    { "id": "pourtant-4", "type": "gap-fill", "entryIds": ["u03-pourtant"], "data": { "sentence": "Elle mange beaucoup. ___, elle est très mince.", "answers": ["pourtant", "cependant"], "pl": "Ona dużo je. A jednak jest bardzo szczupła.", "clue": "(c'est surprenant)" } },
+    { "id": "pourtant-5", "type": "translate-pl-fr", "entryIds": ["u03-pourtant"], "data": { "pl": "a jednak", "answers": ["et pourtant", "pourtant"] } },
+
+    { "id": "cependant-1", "type": "gap-fill", "entryIds": ["u03-cependant"], "data": { "sentence": "Le film a eu de bonnes critiques. ___, peu de spectateurs sont allés le voir.", "answers": ["cependant", "pourtant", "toutefois"], "pl": "Film miał dobre recenzje. Jednak niewielu widzów poszło go obejrzeć.", "clue": "(opposition, style soutenu)" } },
+    { "id": "cependant-2", "type": "gap-fill", "entryIds": ["u03-cependant"], "data": { "sentence": "Nous vous remercions pour votre candidature. ___, nous ne pouvons pas l'accepter.", "answers": ["cependant", "toutefois", "malheureusement"], "pl": "Dziękujemy za Pana zgłoszenie. Niestety jednak nie możemy go przyjąć.", "clue": "(lettre officielle : opposition)" } },
+    { "id": "cependant-3", "type": "gap-fill", "entryIds": ["u03-cependant"], "data": { "sentence": "Votre dossier est presque complet. ___, il manque encore une photo.", "answers": ["cependant", "toutefois", "par contre"], "pl": "Pana dokumenty są prawie kompletne. Brakuje jednak jeszcze zdjęcia.", "clue": "(lettre officielle : opposition)" } },
+    { "id": "cependant-4", "type": "translate-pl-fr", "entryIds": ["u03-cependant"], "data": { "pl": "jednakże (formalnie)", "answers": ["cependant", "toutefois"] } },
+
+    { "id": "par-contre-1", "type": "gap-fill", "entryIds": ["u03-par-contre"], "data": { "sentence": "J'aime le thé ; ___, je déteste le café.", "answers": ["par contre", "en revanche"], "pl": "Lubię herbatę, natomiast nie znoszę kawy.", "clue": "(on compare deux choses)" } },
+    { "id": "par-contre-2", "type": "gap-fill", "entryIds": ["u03-par-contre"], "data": { "sentence": "Mon frère adore le sport. Moi, ___, je préfère lire.", "answers": ["par contre", "en revanche"], "pl": "Mój brat uwielbia sport. Ja natomiast wolę czytać.", "clue": "(on compare deux personnes)" } },
+    { "id": "par-contre-3", "type": "gap-fill", "entryIds": ["u03-par-contre"], "data": { "sentence": "Le studio est petit. ___, il est très bien situé.", "answers": ["par contre", "en revanche", "cependant"], "pl": "Kawalerka jest mała. Za to ma bardzo dobrą lokalizację.", "clue": "(un point négatif, puis un point positif)" } },
+    { "id": "par-contre-4", "type": "translate-pl-fr", "entryIds": ["u03-par-contre"], "data": { "pl": "natomiast, za to", "answers": ["par contre", "en revanche"] } },
+
+    { "id": "alors-que-1", "type": "gap-fill", "entryIds": ["u03-alors-que"], "data": { "sentence": "Il pleut à Paris ___ il fait beau à Nice.", "answers": ["alors qu'", "tandis qu'", "mais"], "pl": "W Paryżu pada, podczas gdy w Nicei jest ładnie.", "hint": { "pl": "przed samogłoską elizja", "fr": "élision devant une voyelle" }, "clue": "(deux villes, deux temps différents)" } },
+    { "id": "alors-que-2", "type": "gap-fill", "entryIds": ["u03-alors-que"], "data": { "sentence": "Mon frère est grand, ___ moi, je suis petit.", "answers": ["alors que", "tandis que", "mais"], "pl": "Mój brat jest wysoki, a ja jestem niski.", "clue": "(on oppose deux personnes)" } },
+    { "id": "alors-que-3", "type": "gap-fill", "entryIds": ["u03-alors-que"], "data": { "sentence": "Il regarde la télé ___ il a un examen demain !", "answers": ["alors qu'", "même s'", "mais"], "pl": "On ogląda telewizję, chociaż jutro ma egzamin!", "clue": "(c'est incroyable : il devrait étudier)" } },
+    { "id": "alors-que-4", "type": "gap-fill", "entryIds": ["u03-alors-que"], "data": { "sentence": "Elle sort sans manteau ___ il fait très froid.", "answers": ["alors qu'", "même s'", "mais"], "pl": "Ona wychodzi bez płaszcza, chociaż jest bardzo zimno.", "clue": "(c'est étonnant)" } },
+
+    { "id": "meme-si-1", "type": "gap-fill", "entryIds": ["u03-meme-si"], "data": { "sentence": "Demain, je vais courir, ___ il pleut.", "answers": ["même s'"], "pl": "Jutro pobiegam, nawet jeśli będzie padać.", "hint": { "pl": "si + il", "fr": "si + il" }, "clue": "(la pluie ne change rien)" } },
+    { "id": "meme-si-2", "type": "gap-fill", "entryIds": ["u03-meme-si"], "data": { "sentence": "___ tu n'as pas faim, mange un peu.", "answers": ["même si"], "pl": "Nawet jeśli nie jesteś głodny, zjedz trochę.", "clue": "(ça ne change rien)" } },
+    { "id": "meme-si-3", "type": "gap-fill", "entryIds": ["u03-meme-si"], "data": { "sentence": "Même ___ ne veut pas, il doit venir.", "answers": ["s'il"], "pl": "Nawet jeśli nie chce, musi przyjść.", "hint": { "pl": "si + il", "fr": "si + il" } } },
+    { "id": "meme-si-4", "type": "gap-fill", "entryIds": ["u03-meme-si"], "data": { "sentence": "On va faire la fête, ___ il y a peu de monde.", "answers": ["même s'"], "pl": "Zrobimy imprezę, nawet jeśli przyjdzie mało ludzi.", "hint": { "pl": "si + il", "fr": "si + il" }, "clue": "(peu de monde ? ça ne change rien)" } },
+    { "id": "meme-si-5", "type": "translate-pl-fr", "entryIds": ["u03-meme-si"], "data": { "pl": "nawet jeśli pada", "answers": ["même s'il pleut"] } },
+
+    { "id": "au-lieu-de-1", "type": "gap-fill", "entryIds": ["u03-au-lieu-de"], "data": { "sentence": "___ regarder la télé, lis un livre !", "answers": ["au lieu de", "plutôt que de"], "pl": "Zamiast oglądać telewizję, przeczytaj książkę!", "clue": "(pas de télé : un livre à la place)" } },
+    { "id": "au-lieu-de-2", "type": "gap-fill", "entryIds": ["u03-au-lieu-de"], "data": { "sentence": "Il joue aux jeux vidéo ___ faire ses devoirs.", "answers": ["au lieu de", "plutôt que de"], "pl": "Gra w gry wideo, zamiast odrabiać lekcje.", "clue": "(il devrait faire ses devoirs)" } },
+    { "id": "au-lieu-de-3", "type": "gap-fill", "entryIds": ["u03-au-lieu-de"], "data": { "sentence": "Prends le vélo ___ la voiture !", "answers": ["au lieu de", "plutôt que"], "pl": "Weź rower zamiast samochodu!", "clue": "(à la place de)" } },
+    { "id": "au-lieu-de-4", "type": "gap-fill", "entryIds": ["u03-au-lieu-de"], "data": { "sentence": "J'ai pris du thé ___ café.", "answers": ["au lieu du", "plutôt que du"], "pl": "Wziąłem herbatę zamiast kawy.", "hint": { "pl": "de + le", "fr": "de + le" }, "clue": "(à la place de)" } },
+    { "id": "au-lieu-de-5", "type": "gap-fill", "entryIds": ["u03-au-lieu-de"], "data": { "sentence": "Il prend l'ascenseur ___ utiliser l'escalier.", "answers": ["au lieu d'", "plutôt que d'"], "pl": "Jedzie windą, zamiast iść schodami.", "hint": { "pl": "przed samogłoską elizja", "fr": "élision devant une voyelle" }, "clue": "(à la place de)" } },
+    { "id": "au-lieu-de-6", "type": "translate-pl-fr", "entryIds": ["u03-au-lieu-de"], "data": { "pl": "zamiast pracować", "answers": ["au lieu de travailler"] } }
+  ]
+}

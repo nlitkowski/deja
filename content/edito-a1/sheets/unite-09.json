@@ -1,0 +1,448 @@
+{
+  "id": "unite-09",
+  "label": "Unité 9",
+  "title": "Bonnes vacances !",
+  "icon": "🏖️",
+  "summary": {
+    "pl": "Wakacje, podróże i przyroda: porównania, przyimki przed nazwami miast i krajów, passé composé z être, c'était / il y avait / il faisait, wyrażanie preferencji.",
+    "fr": "Les vacances, les voyages et la nature : la comparaison, les prépositions devant les villes et les pays, le passé composé avec être, c'était / il y avait / il faisait, la préférence."
+  },
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "La comparaison",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**plus** + przymiotnik + **que** (bardziej… niż)\n**moins** + przymiotnik + **que** (mniej… niż)\n**aussi** + przymiotnik + **que** (tak samo… jak)\nPrzymiotnik zgadza się z rzeczownikiem: la mer est plus chaud**e** que le lac.",
+            "fr": "**plus** + adjectif + **que** (+)\n**moins** + adjectif + **que** (−)\n**aussi** + adjectif + **que** (=)\nL'adjectif s'accorde avec le nom : la mer est plus chaud**e** que le lac."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "exemple"],
+          "rows": [
+            ["+", "Le train est **plus** rapide **que** le bus."],
+            ["−", "Le camping est **moins** cher **que** l'hôtel."],
+            ["=", "Cette plage est **aussi** belle **que** l'autre."]
+          ]
+        },
+        {
+          "type": "table",
+          "title": { "pl": "Bon → meilleur (lepszy)", "fr": "Bon → meilleur" },
+          "head": ["", "singulier", "pluriel"],
+          "rows": [
+            ["masculin", "**meilleur**", "**meilleurs**"],
+            ["féminin", "**meilleure**", "**meilleures**"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "La Grèce est **plus** chaude **que** la Norvège.", "pl": "Grecja jest cieplejsza niż Norwegia." },
+            { "fr": "Les hôtels sont **moins** chers en mai **qu'**en août.", "pl": "Hotele są tańsze w maju niż w sierpniu." },
+            { "fr": "Ce restaurant est **meilleur que** l'autre.", "pl": "Ta restauracja jest lepsza niż tamta." },
+            { "fr": "La cuisine italienne est **meilleure que** la cuisine anglaise.", "pl": "Kuchnia włoska jest lepsza niż angielska." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Nie mów « plus bon ». Poprawnie: **meilleur(e)**. Ale **moins bon** i **aussi bon** są poprawne.\nPrzed samogłoską **que** → **qu'**: plus grand **qu'**à Paris.",
+            "fr": "On ne dit pas « plus bon ». On dit **meilleur(e)**. Mais **moins bon** et **aussi bon** sont corrects.\nDevant une voyelle, **que** → **qu'** : plus grand **qu'**à Paris."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les prépositions avec les villes et les pays",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Gdzie? / Dokąd? → **à** + miasto, **en** + kraj rodzaju żeńskiego (zwykle na **-e**) albo zaczynający się od samogłoski, **au** + kraj rodzaju męskiego, **aux** + kraj w liczbie mnogiej.\nSkąd? → **de / d'** + miasto lub kraj żeński, **du** + kraj męski, **des** + liczba mnoga.",
+            "fr": "Où ? → **à** + ville, **en** + pays féminin (souvent en **-e**) ou pays qui commence par une voyelle, **au** + pays masculin, **aux** + pays pluriel.\nD'où ? → **de / d'** + ville ou pays féminin, **du** + pays masculin, **des** + pays pluriel."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "aller, habiter, être…", "venir, rentrer, arriver…"],
+          "rows": [
+            ["ville", "**à** Rome", "**de** Rome / **d'**Athènes"],
+            ["la France, la Pologne", "**en** France", "**de** France"],
+            ["l'Italie, l'Iran", "**en** Italie", "**d'**Italie"],
+            ["le Portugal, le Japon", "**au** Portugal", "**du** Portugal"],
+            ["les États-Unis, les Pays-Bas", "**aux** États-Unis", "**des** États-Unis"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je viens **de** Pologne, mais j'habite **en** Espagne.", "pl": "Pochodzę z Polski, ale mieszkam w Hiszpanii." },
+            { "fr": "Cet été, nous allons **au** Canada.", "pl": "Tego lata jedziemy do Kanady." },
+            { "fr": "Elle arrive **des** Pays-Bas demain.", "pl": "Ona przyjeżdża jutro z Holandii." },
+            { "fr": "Ils passent une semaine **à** Lisbonne.", "pl": "Spędzają tydzień w Lizbonie." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Po polsku „w Polsce” i „do Polski” to różne formy, a po francusku jedna: **en Pologne**. „Z Polski” to **de Pologne** (bez rodzajnika).\nWyjątki: **le Mexique**, **le Cambodge** są rodzaju męskiego mimo **-e** → **au** Mexique.",
+            "fr": "Une seule forme pour « où » et « vers où » : **en Pologne**. Pour l'origine : **de Pologne** (sans article).\nExceptions : **le Mexique**, **le Cambodge** sont masculins → **au** Mexique."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Le passé composé avec être",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Czasowniki podróży: **aller, venir, partir, arriver, rester, rentrer, sortir, monter, descendre** tworzą passé composé z **être**.\nImiesłów zgadza się z podmiotem: +**e** (rodzaj żeński), +**s** (liczba mnoga).",
+            "fr": "Les verbes du voyage **aller, venir, partir, arriver, rester, rentrer, sortir, monter, descendre** forment le passé composé avec **être**.\nLe participe s'accorde avec le sujet : +**e** au féminin, +**s** au pluriel."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "partir"],
+          "rows": [
+            ["je", "suis parti(e)"],
+            ["tu", "es parti(e)"],
+            ["il / elle", "est parti / est parti**e**"],
+            ["nous", "sommes parti(e)**s**"],
+            ["vous", "êtes parti(e)(s)"],
+            ["ils / elles", "sont parti**s** / sont parti**es**"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "L'été dernier, je **suis allée** en Croatie.", "pl": "Zeszłego lata pojechałam do Chorwacji." },
+            { "fr": "Nous **sommes partis** le 2 août et nous **sommes rentrés** le 20.", "pl": "Wyjechaliśmy 2 sierpnia i wróciliśmy 20." },
+            { "fr": "Le train **est arrivé** à Nice à midi.", "pl": "Pociąg przyjechał do Nicei w południe." },
+            { "fr": "Mes amies **sont restées** une semaine à la montagne.", "pl": "Moje przyjaciółki zostały tydzień w górach." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "„Byłem w Hiszpanii” (na wakacjach) najczęściej mówi się **je suis allé(e) en Espagne**.\nNie zapominaj o zgodzie: kobieta pisze **je suis allée**, **je suis partie**.",
+            "fr": "Pour raconter un voyage, on dit souvent **je suis allé(e) en Espagne**.\nN'oubliez pas l'accord : une femme écrit **je suis allée**, **je suis partie**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "C'était, il y avait, il faisait",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Te trzy formy (czas imparfait) służą do **opisu** w przeszłości: jak było, co było, jaka była pogoda.\nPassé composé opowiada **wydarzenia**: je suis allé(e) à Nice. **C'était** super !",
+            "fr": "Ces trois formes (à l'imparfait) servent à **décrire** dans le passé : l'impression, ce qu'on voyait, le temps.\nLe passé composé raconte **les actions** : je suis allé(e) à Nice. **C'était** super !"
+          }
+        },
+        {
+          "type": "table",
+          "head": ["présent", "imparfait", "+"],
+          "rows": [
+            ["c'est", "**c'était**", "adjectif : c'était magnifique"],
+            ["il y a", "**il y avait**", "nom : il y avait beaucoup de touristes"],
+            ["il fait", "**il faisait**", "météo : il faisait beau / chaud / froid"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Nous sommes allés à Biarritz. **C'était** génial !", "pl": "Pojechaliśmy do Biarritz. Było świetnie!" },
+            { "fr": "**Il y avait** une piscine à l'hôtel.", "pl": "W hotelu był basen." },
+            { "fr": "**Il faisait** beau et chaud : 30 degrés !", "pl": "Była ładna pogoda i było gorąco: 30 stopni!" },
+            { "fr": "Les vacances ? **C'était** trop court !", "pl": "Wakacje? Były za krótkie!" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Pogoda zawsze z **faire**: „było gorąco” = **il faisait chaud** (nie « il était chaud »).\n**C'était** się nie zmienia, także z liczbą mnogą: les vacances, **c'était** super.",
+            "fr": "Pour la météo, on utilise **faire** : **il faisait chaud** (pas « il était chaud »).\n**C'était** ne change pas au pluriel : les vacances, **c'était** super."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Exprimer la préférence",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "préférer"],
+          "rows": [
+            ["je", "préf**è**re"],
+            ["tu", "préf**è**res"],
+            ["il / elle / on", "préf**è**re"],
+            ["nous", "préf**é**rons"],
+            ["vous", "préf**é**rez"],
+            ["ils / elles", "préf**è**rent"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**préférer** + rzeczownik albo bezokolicznik (bez przyimka): je préfère **la mer**, je préfère **voyager** en train.\nTo samo znaczy **aimer mieux**: j'aime mieux la montagne.",
+            "fr": "**préférer** + nom ou infinitif (sans préposition) : je préfère **la mer**, je préfère **voyager** en train.\n**Aimer mieux** a le même sens : j'aime mieux la montagne."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Tu préfères la mer ou la montagne ?", "pl": "Wolisz morze czy góry?" },
+            { "fr": "Je préfère dormir sous la tente.", "pl": "Wolę spać pod namiotem." },
+            { "fr": "Nous préférons partir en juin, c'est plus calme.", "pl": "Wolimy wyjeżdżać w czerwcu, jest spokojniej." },
+            { "fr": "Moi, j'aime mieux les petits villages.", "pl": "Ja wolę małe wioski." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Akcent się zmienia: je préf**è**re, ale nous préf**é**rons.\nBez **de** przed bezokolicznikiem: nie « je préfère de voyager », tylko **je préfère voyager**.",
+            "fr": "L'accent change : je préf**è**re, mais nous préf**é**rons.\nPas de **de** devant l'infinitif : **je préfère voyager**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les vacances",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Miejsca i cele podróży", "fr": "Les lieux et les destinations" },
+          "items": [
+            { "fr": "la mer", "pl": "morze" },
+            { "fr": "une plage", "pl": "plaża" },
+            { "fr": "la montagne", "pl": "góry", "def": "on y fait du ski" },
+            { "fr": "la campagne", "pl": "wieś", "def": "loin de la ville, avec des champs" },
+            { "fr": "une île", "pl": "wyspa", "def": "terre avec de l'eau tout autour" },
+            { "fr": "l'étranger", "pl": "zagranica", "def": "un autre pays (partir à l'étranger)" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Zakwaterowanie", "fr": "L'hébergement" },
+          "items": [
+            { "fr": "un hôtel", "pl": "hotel" },
+            { "fr": "un camping", "pl": "kemping, pole namiotowe", "def": "on dort sous une tente" },
+            { "fr": "une tente", "pl": "namiot" },
+            { "fr": "une auberge de jeunesse", "pl": "schronisko młodzieżowe, hostel", "def": "hébergement pas cher pour les jeunes" },
+            { "fr": "une chambre d'hôtes", "pl": "pokój gościnny (u gospodarzy)", "def": "on dort chez un habitant" },
+            { "fr": "un gîte", "pl": "dom wakacyjny na wsi", "def": "maison de vacances à louer" },
+            { "fr": "une location", "pl": "wynajem, wynajmowane mieszkanie", "def": "un appartement qu'on loue" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Rezerwacja", "fr": "La réservation" },
+          "items": [
+            { "fr": "réserver", "pl": "zarezerwować" },
+            { "fr": "une chambre simple / double", "pl": "pokój jednoosobowy / dwuosobowy" },
+            { "fr": "une nuit", "pl": "noc (nocleg)" },
+            { "fr": "le petit-déjeuner compris", "pl": "śniadanie wliczone w cenę", "def": "on ne paie pas en plus" },
+            { "fr": "la réception", "pl": "recepcja", "def": "on y arrive et on y paie" },
+            { "fr": "la clé", "pl": "klucz" },
+            { "fr": "complet / complète", "pl": "pełny, brak miejsc", "def": "il n'y a plus de chambre" },
+            { "fr": "libre", "pl": "wolny" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Środki transportu", "fr": "Les moyens de transport" },
+          "items": [
+            { "fr": "l'avion", "pl": "samolot" },
+            { "fr": "le train", "pl": "pociąg" },
+            { "fr": "la voiture", "pl": "samochód" },
+            { "fr": "le bateau", "pl": "statek, łódź" },
+            { "fr": "le car", "pl": "autokar", "def": "bus pour aller d'une ville à une autre" },
+            { "fr": "le vélo", "pl": "rower" },
+            { "fr": "un billet", "pl": "bilet (na pociąg, samolot)" },
+            { "fr": "une valise", "pl": "walizka" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**en** + pojazd zamknięty: en avion, en train, en voiture, en bateau, en car.\n**à** + gdy jesteś na czymś albo idziesz: à vélo, à pied.",
+            "fr": "**en** + véhicule fermé : en avion, en train, en voiture, en bateau, en car.\n**à** + quand on est dessus ou qu'on marche : à vélo, à pied."
+          }
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Aktywności", "fr": "Les activités" },
+          "items": [
+            { "fr": "se baigner", "pl": "kąpać się (w morzu, jeziorze)", "def": "aller dans l'eau" },
+            { "fr": "bronzer", "pl": "opalać się", "def": "rester au soleil" },
+            { "fr": "visiter un musée", "pl": "zwiedzać muzeum" },
+            { "fr": "faire du ski", "pl": "jeździć na nartach" },
+            { "fr": "faire de la plongée", "pl": "nurkować", "def": "nager sous l'eau" },
+            { "fr": "faire du camping", "pl": "biwakować" },
+            { "fr": "se reposer", "pl": "odpoczywać" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "La nature",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Miejsca", "fr": "Les lieux" },
+          "items": [
+            { "fr": "une forêt", "pl": "las", "def": "beaucoup d'arbres" },
+            { "fr": "un lac", "pl": "jezioro" },
+            { "fr": "une rivière", "pl": "rzeka" },
+            { "fr": "une colline", "pl": "wzgórze", "def": "petite montagne" },
+            { "fr": "une vallée", "pl": "dolina", "def": "entre deux montagnes" },
+            { "fr": "un champ", "pl": "pole", "def": "on y cultive du blé, du maïs" },
+            { "fr": "un paysage", "pl": "krajobraz", "def": "ce qu'on voit dans la nature" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Rośliny", "fr": "La flore" },
+          "items": [
+            { "fr": "un arbre", "pl": "drzewo" },
+            { "fr": "une fleur", "pl": "kwiat" },
+            { "fr": "l'herbe", "pl": "trawa" },
+            { "fr": "une plante", "pl": "roślina" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Zwierzęta", "fr": "Les animaux" },
+          "items": [
+            { "fr": "un oiseau / des oiseaux", "pl": "ptak / ptaki" },
+            { "fr": "un poisson", "pl": "ryba" },
+            { "fr": "une vache", "pl": "krowa" },
+            { "fr": "un cheval / des chevaux", "pl": "koń / konie" },
+            { "fr": "un mouton", "pl": "owca" },
+            { "fr": "un lapin", "pl": "królik" },
+            { "fr": "un ours", "pl": "niedźwiedź" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Aktywności", "fr": "Les activités" },
+          "items": [
+            { "fr": "se promener", "pl": "spacerować" },
+            { "fr": "faire une randonnée", "pl": "wybrać się na wędrówkę", "def": "une longue promenade à pied" },
+            { "fr": "pique-niquer", "pl": "urządzić piknik", "def": "manger dehors, dans l'herbe" },
+            { "fr": "faire du kayak", "pl": "pływać kajakiem" },
+            { "fr": "observer les oiseaux", "pl": "obserwować ptaki" },
+            { "fr": "cueillir des fleurs", "pl": "zbierać kwiaty" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Opis krajobrazu", "fr": "Décrire un paysage" },
+          "items": [
+            { "fr": "magnifique", "pl": "wspaniały", "def": "très beau" },
+            { "fr": "sauvage", "pl": "dziki", "def": "sans maisons, sans routes" },
+            { "fr": "calme", "pl": "spokojny" },
+            { "fr": "vert(e)", "pl": "zielony" },
+            { "fr": "ensoleillé(e)", "pl": "słoneczny", "def": "avec beaucoup de soleil" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Réserver une chambre d'hôtel",
+      "blocks": [
+        {
+          "type": "examples",
+          "title": { "pl": "Klient", "fr": "Le client" },
+          "items": [
+            { "fr": "Bonjour, je voudrais réserver une chambre double, s'il vous plaît.", "pl": "Dzień dobry, chciałbym / chciałabym zarezerwować pokój dwuosobowy." },
+            { "fr": "Du 12 au 15 juillet, pour trois nuits.", "pl": "Od 12 do 15 lipca, na trzy noce." },
+            { "fr": "Vous avez une chambre avec vue sur la mer ?", "pl": "Czy ma pan / pani pokój z widokiem na morze?" },
+            { "fr": "C'est combien, la nuit ?", "pl": "Ile kosztuje noc?" },
+            { "fr": "Le petit-déjeuner est compris ?", "pl": "Czy śniadanie jest wliczone w cenę?" }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Recepcja", "fr": "La réception" },
+          "items": [
+            { "fr": "Pour combien de personnes ?", "pl": "Dla ilu osób?" },
+            { "fr": "C'est à quel nom ?", "pl": "Na jakie nazwisko?" },
+            { "fr": "La chambre coûte 90 euros, petit-déjeuner compris.", "pl": "Pokój kosztuje 90 euro ze śniadaniem." },
+            { "fr": "Désolé, l'hôtel est complet ce week-end.", "pl": "Przykro mi, w ten weekend hotel nie ma wolnych miejsc." },
+            { "fr": "Voici votre clé, chambre 24, au deuxième étage.", "pl": "Oto pana / pani klucz, pokój 24, na drugim piętrze." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Décrire une ville, un pays, un paysage",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "C'est une ville ancienne et très animée.", "pl": "To stare i bardzo tętniące życiem miasto." },
+            { "fr": "Il y a beaucoup de monuments et de musées.", "pl": "Jest tam dużo zabytków i muzeów." },
+            { "fr": "Le Portugal est plus petit que l'Espagne.", "pl": "Portugalia jest mniejsza niż Hiszpania." },
+            { "fr": "En été, il fait chaud et il y a beaucoup de touristes.", "pl": "Latem jest gorąco i jest dużo turystów." },
+            { "fr": "C'est un paysage sauvage, avec des lacs et des forêts.", "pl": "To dziki krajobraz z jeziorami i lasami." },
+            { "fr": "On peut se baigner, faire du kayak et se promener.", "pl": "Można się kąpać, pływać kajakiem i spacerować." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Écrire une carte postale",
+      "blocks": [
+        {
+          "type": "examples",
+          "title": { "pl": "Powitanie", "fr": "Commencer" },
+          "items": [
+            { "fr": "Chère Julie, / Cher Marc,", "pl": "Droga Julio, / Drogi Marku," },
+            { "fr": "Salut tout le monde !", "pl": "Cześć wszystkim!" }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Treść", "fr": "Raconter" },
+          "items": [
+            { "fr": "Je suis à Biarritz depuis une semaine.", "pl": "Jestem w Biarritz od tygodnia." },
+            { "fr": "Il fait beau et la mer est chaude.", "pl": "Jest ładna pogoda, a morze jest ciepłe." },
+            { "fr": "Hier, nous sommes allés à la plage. C'était super !", "pl": "Wczoraj poszliśmy na plażę. Było super!" },
+            { "fr": "L'hôtel est petit mais très agréable.", "pl": "Hotel jest mały, ale bardzo przyjemny." }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Pożegnanie", "fr": "Terminer" },
+          "items": [
+            { "fr": "À bientôt !", "pl": "Do zobaczenia wkrótce!" },
+            { "fr": "Je t'embrasse. / Grosses bises !", "pl": "Ściskam cię. / Buziaki!" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Do kobiety: **Chère** Julie, do mężczyzny: **Cher** Marc (wymowa ta sama).",
+            "fr": "Pour une femme : **Chère** Julie. Pour un homme : **Cher** Marc."
+          }
+        }
+      ]
+    }
+  ],
+  "practice": ["edito-a1/unite-09", "a1-connecteurs/03-contractions", "a1-connecteurs/04-expressions"]
+}

@@ -1,0 +1,552 @@
+{
+  "id": "unite-08",
+  "label": "Unité 8",
+  "title": "En forme !",
+  "icon": "💪",
+  "summary": {
+    "pl": "Zdrowie, ciało, sport i emocje: passé composé z avoir i être, zaimek y, nakaz i zakaz, rady, czasownik boire.",
+    "fr": "La santé, le corps, le sport et les émotions : le passé composé avec avoir et être, le pronom y, l'obligation et l'interdiction, le conseil, le verbe boire."
+  },
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "Le passé composé avec avoir",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Passé composé = **avoir** w czasie teraźniejszym + **imiesłów** (participe passé). Opisuje zakończoną czynność w przeszłości.\nCzasowniki na **-er** → **-é** (manger → mangé), większość na **-ir** → **-i** (finir → fini, dormir → dormi).",
+            "fr": "Passé composé = **avoir** au présent + **participe passé**. Il exprime une action terminée dans le passé.\nLes verbes en **-er** → **-é** (manger → mangé), beaucoup de verbes en **-ir** → **-i** (finir → fini, dormir → dormi)."
+          }
+        },
+        {
+          "type": "table",
+          "title": { "pl": "Nieregularne imiesłowy", "fr": "Les participes irréguliers" },
+          "head": ["infinitif", "participe passé", "exemple"],
+          "rows": [
+            ["faire", "**fait**", "j'ai **fait** du sport"],
+            ["prendre", "**pris**", "tu as **pris** un médicament"],
+            ["boire", "**bu**", "il a **bu** de l'eau"],
+            ["avoir", "**eu**", "elle a **eu** de la fièvre"],
+            ["être", "**été**", "nous avons **été** malades"],
+            ["voir", "**vu**", "vous avez **vu** le médecin"],
+            ["devoir", "**dû**", "ils ont **dû** rester au lit"],
+            ["pouvoir", "**pu**", "je n'ai pas **pu** dormir"],
+            ["vouloir", "**voulu**", "elle a **voulu** courir"],
+            ["mettre", "**mis**", "j'ai **mis** un pull"],
+            ["dire", "**dit**", "le médecin a **dit** non"],
+            ["écrire", "**écrit**", "il a **écrit** une ordonnance"],
+            ["lire", "**lu**", "j'ai **lu** la notice"]
+          ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "Przeczenie otacza **avoir**: je **n'**ai **pas** mangé, il **n'**a **pas** bu de café.",
+            "fr": "La négation entoure **avoir** : je **n'**ai **pas** mangé, il **n'**a **pas** bu de café."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Hier, j'**ai fait** une heure de vélo.", "pl": "Wczoraj jeździłem / jeździłam godzinę na rowerze." },
+            { "fr": "Tu **as pris** ton sirop ce matin ?", "pl": "Wziąłeś / wzięłaś rano syrop?" },
+            { "fr": "Nous **avons vu** un kiné la semaine dernière.", "pl": "W zeszłym tygodniu byliśmy u fizjoterapeuty." },
+            { "fr": "Elle **n'a pas pu** venir au match.", "pl": "Nie mogła przyjść na mecz." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "« Byłem chory » to **j'ai été** malade (avoir + été), nie « je suis été ».",
+            "fr": "On dit **j'ai été** malade (avoir + été), pas « je suis été »."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Le passé composé avec être",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Kilka czasowników ruchu i zmiany tworzy passé composé z **être**. Imiesłów **zgadza się z podmiotem**: +**e** dla rodzaju żeńskiego, +**s** dla liczby mnogiej.\nCzasowniki zwrotne też łączą się z **être**: je me suis levé(e).",
+            "fr": "Quelques verbes de mouvement et de changement forment le passé composé avec **être**. Le participe **s'accorde avec le sujet** : +**e** au féminin, +**s** au pluriel.\nLes verbes pronominaux utilisent aussi **être** : je me suis levé(e)."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "aller"],
+          "rows": [
+            ["je", "suis allé(e)"],
+            ["tu", "es allé(e)"],
+            ["il", "est allé"],
+            ["elle", "est allé**e**"],
+            ["nous", "sommes allé(e)**s**"],
+            ["vous", "êtes allé(e)(s)"],
+            ["ils", "sont allé**s**"],
+            ["elles", "sont allé**es**"]
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Czasowniki z être", "fr": "Les verbes avec être" },
+          "items": [
+            { "fr": "aller → allé / venir → venu", "pl": "iść, jechać / przyjść" },
+            { "fr": "arriver → arrivé / partir → parti", "pl": "przybyć / wyjechać" },
+            { "fr": "entrer → entré / sortir → sorti", "pl": "wejść / wyjść" },
+            { "fr": "monter → monté / descendre → descendu", "pl": "wejść na górę / zejść" },
+            { "fr": "naître → né / mourir → mort", "pl": "urodzić się / umrzeć" },
+            { "fr": "rester → resté / tomber → tombé", "pl": "zostać / upaść" },
+            { "fr": "rentrer → rentré / revenir → revenu", "pl": "wrócić (do domu) / wrócić" }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je **suis allé** chez le médecin ce matin.", "pl": "Rano poszedłem do lekarza." },
+            { "fr": "Léa **est tombée** à vélo.", "pl": "Léa spadła z roweru." },
+            { "fr": "Mes parents **sont restés** à la maison.", "pl": "Moi rodzice zostali w domu." },
+            { "fr": "Elles **ne sont pas venues** à la salle de sport.", "pl": "One nie przyszły na siłownię." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Nie mów « j'ai allé ». Poprawnie: **je suis allé(e)**. I pamiętaj o zgodzie: Marie est **allée**, ils sont **partis**.",
+            "fr": "On ne dit pas « j'ai allé ». On dit **je suis allé(e)**. Et attention à l'accord : Marie est **allée**, ils sont **partis**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Le pronom y",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**y** zastępuje **miejsce** (à, au, en, dans, chez… + miejsce). Po polsku: „tam”.\nStoi **przed czasownikiem**: Tu vas à la piscine ? — Oui, j'**y** vais.",
+            "fr": "**y** remplace **un lieu** (à, au, en, dans, chez… + lieu).\nIl se place **avant le verbe** : Tu vas à la piscine ? — Oui, j'**y** vais."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "exemple"],
+          "rows": [
+            ["présent", "j'**y** vais"],
+            ["négation", "je **n'y** vais **pas**"],
+            ["passé composé", "j'**y** suis allé(e)"],
+            ["aller + infinitif", "je vais **y** aller"],
+            ["impératif", "va**s-y** ! allons-**y** ! allez-**y** !"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Tu vas à la salle de sport ? — Oui, j'**y** vais le lundi.", "pl": "Chodzisz na siłownię? — Tak, chodzę tam w poniedziałki." },
+            { "fr": "Paul est à l'hôpital ? — Oui, il **y** est depuis hier.", "pl": "Paul jest w szpitalu? — Tak, jest tam od wczoraj." },
+            { "fr": "Vous allez chez le dentiste ? — Non, nous **n'y** allons **pas**.", "pl": "Idziecie do dentysty? — Nie, nie idziemy." },
+            { "fr": "La pharmacie est ouverte, vas-**y** !", "pl": "Apteka jest otwarta, idź tam!" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Po polsku często pomijamy „tam”, po francusku **y** jest obowiązkowe: nie « Oui, je vais », tylko **Oui, j'y vais**.\nW trybie rozkazującym: tu vas → **va**, ale **vas-y** (z -s przed y).",
+            "fr": "En français, **y** est obligatoire : pas « Oui, je vais », mais **Oui, j'y vais**.\nÀ l'impératif : **va**, mais **vas-y** (avec un -s devant y)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "L'obligation et l'interdiction",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Nakaz: **devoir** + bezokolicznik (muszę) albo **il faut** + bezokolicznik (trzeba).\nZakaz: **ne pas devoir** (nie wolno mi), **il ne faut pas** (nie wolno), **il est interdit de** (zabronione jest).",
+            "fr": "L'obligation : **devoir** + infinitif ou **il faut** + infinitif.\nL'interdiction : **ne… pas devoir**, **il ne faut pas**, **il est interdit de** + infinitif."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "devoir"],
+          "rows": [
+            ["je", "**dois**"],
+            ["tu", "**dois**"],
+            ["il / elle / on", "**doit**"],
+            ["nous", "devons"],
+            ["vous", "devez"],
+            ["ils / elles", "**doivent**"],
+            ["passé composé", "j'ai **dû**"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je **dois** prendre ce médicament le matin.", "pl": "Muszę brać ten lek rano." },
+            { "fr": "**Il faut** boire beaucoup d'eau.", "pl": "Trzeba pić dużo wody." },
+            { "fr": "Tu **ne dois pas** fumer.", "pl": "Nie wolno ci palić." },
+            { "fr": "**Il ne faut pas** courir au bord de la piscine.", "pl": "Nie wolno biegać przy basenie." },
+            { "fr": "**Il est interdit de** manger dans le vestiaire.", "pl": "W szatni nie wolno jeść." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**Il ne faut pas** = „nie wolno”, a nie „nie trzeba”!\n**Il faut** nigdy się nie odmienia: nie « je faut », tylko **il faut** albo **je dois**.",
+            "fr": "**Il ne faut pas** exprime une interdiction.\n**Il faut** ne change jamais : pas « je faut », mais **il faut** ou **je dois**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Donner un conseil",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Radę można dać na kilka sposobów:\n**Il faut** + bezokolicznik · **Tu dois / Vous devez** + bezokolicznik · **tryb rozkazujący** · **Je te / vous conseille de** + bezokolicznik.",
+            "fr": "Pour donner un conseil :\n**Il faut** + infinitif · **Tu dois / Vous devez** + infinitif · **l'impératif** · **Je te / vous conseille de** + infinitif."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Tu es fatigué ? **Il faut** dormir plus.", "pl": "Jesteś zmęczony? Trzeba więcej spać." },
+            { "fr": "Vous avez mal au dos ? **Vous devez** faire du yoga.", "pl": "Bolą pana plecy? Musi pan uprawiać jogę." },
+            { "fr": "**Mange** des fruits et **bois** de l'eau !", "pl": "Jedz owoce i pij wodę!" },
+            { "fr": "**Je te conseille de** marcher tous les jours.", "pl": "Radzę ci codziennie chodzić na spacery." },
+            { "fr": "**Je vous conseille d'**aller chez le médecin.", "pl": "Radzę panu / pani pójść do lekarza." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Po **conseiller** zawsze **de** + bezokolicznik: je te conseille **de** dormir (nie « je te conseille dormir »). Przed samogłoską **d'**: je te conseille **d'**arrêter.",
+            "fr": "Après **conseiller**, il faut **de** + infinitif : je te conseille **de** dormir. Devant une voyelle : **d'** (je te conseille **d'**arrêter)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Le verbe boire",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "boire"],
+          "rows": [
+            ["je", "boi**s**"],
+            ["tu", "boi**s**"],
+            ["il / elle / on", "boi**t**"],
+            ["nous", "**buv**ons"],
+            ["vous", "**buv**ez"],
+            ["ils / elles", "**boiv**ent"],
+            ["passé composé", "j'ai **bu**"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**boire** + rodzajnik cząstkowy: boire **du** café, **de la** limonade, **de l'**eau.\nW przeczeniu: **pas de**: je ne bois **pas de** café.",
+            "fr": "**boire** + article partitif : boire **du** café, **de la** limonade, **de l'**eau.\nÀ la forme négative : **pas de** : je ne bois **pas de** café."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je bois deux litres d'eau par jour.", "pl": "Piję dwa litry wody dziennie." },
+            { "fr": "Vous buvez du thé ou du café ?", "pl": "Pije pan / pani herbatę czy kawę?" },
+            { "fr": "Les sportifs ne boivent pas d'alcool.", "pl": "Sportowcy nie piją alkoholu." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Liczba mnoga ma inne tematy: nous **buv**ons, vous **buv**ez, ale ils **boiv**ent.",
+            "fr": "Attention aux trois radicaux : je **boi**s, nous **buv**ons, ils **boiv**ent."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Le corps",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Części ciała", "fr": "Les parties du corps" },
+          "items": [
+            { "fr": "la tête", "pl": "głowa" },
+            { "fr": "un œil / les yeux", "pl": "oko / oczy" },
+            { "fr": "une oreille", "pl": "ucho" },
+            { "fr": "le nez", "pl": "nos" },
+            { "fr": "la bouche", "pl": "usta" },
+            { "fr": "une dent", "pl": "ząb" },
+            { "fr": "la gorge", "pl": "gardło", "def": "à l'intérieur du cou" },
+            { "fr": "le cou", "pl": "szyja" },
+            { "fr": "une épaule", "pl": "ramię (bark)" },
+            { "fr": "le bras", "pl": "ręka (ramię)" },
+            { "fr": "la main", "pl": "dłoń" },
+            { "fr": "le dos", "pl": "plecy" },
+            { "fr": "le ventre", "pl": "brzuch" },
+            { "fr": "la jambe", "pl": "noga" },
+            { "fr": "le genou / les genoux", "pl": "kolano / kolana" },
+            { "fr": "le pied", "pl": "stopa" },
+            { "fr": "le cœur", "pl": "serce" }
+          ]
+        },
+        {
+          "type": "table",
+          "title": { "pl": "Avoir mal à…", "fr": "Avoir mal à…" },
+          "head": ["à + le = au", "à + la", "à + l'", "à + les = aux"],
+          "rows": [
+            ["j'ai mal **au** ventre", "j'ai mal **à la** tête", "j'ai mal **à l'**oreille", "j'ai mal **aux** dents"],
+            ["j'ai mal **au** dos", "j'ai mal **à la** gorge", "j'ai mal **à l'**épaule", "j'ai mal **aux** yeux"],
+            ["j'ai mal **au** pied", "j'ai mal **à la** jambe", "j'ai mal **à l'**œil", "j'ai mal **aux** pieds"]
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "„Boli mnie głowa” to **j'ai mal à la tête**: podmiotem jest „ja”, a przed częścią ciała stoi rodzajnik, nie zaimek dzierżawczy (nie « j'ai mal à ma tête »).",
+            "fr": "On dit **j'ai mal à la tête** : avec un article, pas avec un possessif (pas « j'ai mal à ma tête »)."
+          }
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Wzrost i waga", "fr": "La taille et le poids" },
+          "items": [
+            { "fr": "la taille", "pl": "wzrost", "def": "combien on mesure (1,75 m)" },
+            { "fr": "mesurer", "pl": "mierzyć (mieć … wzrostu)", "def": "je mesure 1,75 m" },
+            { "fr": "le poids", "pl": "waga (ciała)", "def": "combien on pèse (70 kg)" },
+            { "fr": "peser", "pl": "ważyć", "def": "je pèse 70 kilos" },
+            { "fr": "grand(e) / petit(e)", "pl": "wysoki / niski" },
+            { "fr": "mince / gros (grosse)", "pl": "szczupły / gruby" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "La santé",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Objawy i choroby", "fr": "Les symptômes et les maladies" },
+          "items": [
+            { "fr": "être malade", "pl": "być chorym", "def": "ne pas être en bonne santé" },
+            { "fr": "avoir de la fièvre", "pl": "mieć gorączkę", "def": "la température est à 39 °C" },
+            { "fr": "tousser", "pl": "kaszleć" },
+            { "fr": "être fatigué(e)", "pl": "być zmęczonym" },
+            { "fr": "un rhume", "pl": "katar, przeziębienie", "def": "le nez coule" },
+            { "fr": "la grippe", "pl": "grypa", "def": "maladie avec fièvre, en hiver" },
+            { "fr": "une allergie", "pl": "alergia" },
+            { "fr": "se casser la jambe", "pl": "złamać nogę" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Miejsca", "fr": "Les lieux" },
+          "items": [
+            { "fr": "un cabinet médical", "pl": "gabinet lekarski", "def": "le lieu de travail du médecin" },
+            { "fr": "un hôpital", "pl": "szpital" },
+            { "fr": "les urgences", "pl": "izba przyjęć, SOR", "def": "on y va quand c'est grave" },
+            { "fr": "une pharmacie", "pl": "apteka", "def": "on y achète des médicaments" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Leki i badania", "fr": "Les médicaments et les examens" },
+          "items": [
+            { "fr": "un médicament", "pl": "lek" },
+            { "fr": "un comprimé", "pl": "tabletka" },
+            { "fr": "un sirop", "pl": "syrop", "def": "médicament liquide" },
+            { "fr": "une ordonnance", "pl": "recepta", "def": "papier du médecin pour la pharmacie" },
+            { "fr": "un rendez-vous", "pl": "wizyta (umówiona)" },
+            { "fr": "une radio", "pl": "prześwietlenie, RTG", "def": "photo de l'intérieur du corps" },
+            { "fr": "une prise de sang", "pl": "pobranie krwi", "def": "examen du sang" },
+            { "fr": "un vaccin", "pl": "szczepionka" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Zawody medyczne", "fr": "Les professions médicales" },
+          "items": [
+            { "fr": "un médecin / un docteur", "pl": "lekarz", "def": "il soigne les malades" },
+            { "fr": "un / une généraliste", "pl": "lekarz rodzinny", "def": "le médecin de famille" },
+            { "fr": "un infirmier / une infirmière", "pl": "pielęgniarz / pielęgniarka" },
+            { "fr": "un / une dentiste", "pl": "dentysta / dentystka", "def": "il soigne les dents" },
+            { "fr": "un pharmacien / une pharmacienne", "pl": "farmaceuta / farmaceutka" },
+            { "fr": "un / une kiné", "pl": "fizjoterapeuta", "def": "il soigne le dos, les muscles" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les émotions",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Pozytywne", "fr": "Positives" },
+          "items": [
+            { "fr": "content(e)", "pl": "zadowolony" },
+            { "fr": "heureux / heureuse", "pl": "szczęśliwy" },
+            { "fr": "ravi(e)", "pl": "zachwycony", "def": "très content" },
+            { "fr": "calme", "pl": "spokojny" },
+            { "fr": "la joie", "pl": "radość" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Negatywne", "fr": "Négatives" },
+          "items": [
+            { "fr": "triste", "pl": "smutny" },
+            { "fr": "en colère", "pl": "zły, rozgniewany", "def": "pas content du tout" },
+            { "fr": "stressé(e)", "pl": "zestresowany" },
+            { "fr": "inquiet / inquiète", "pl": "zaniepokojony", "def": "on pense à un problème" },
+            { "fr": "déçu(e)", "pl": "rozczarowany" },
+            { "fr": "avoir peur (de)", "pl": "bać się" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Emocje wyrażamy przez **être** + przymiotnik (je suis **triste**) albo **avoir** + rzeczownik (j'ai **peur**).",
+            "fr": "On exprime une émotion avec **être** + adjectif (je suis **triste**) ou **avoir** + nom (j'ai **peur**)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Le sport et l'alimentation",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Siłownia", "fr": "La salle de sport" },
+          "items": [
+            { "fr": "une salle de sport", "pl": "siłownia, klub fitness", "def": "on y fait du sport" },
+            { "fr": "un abonnement", "pl": "karnet", "def": "on paie pour un mois ou un an" },
+            { "fr": "un vestiaire", "pl": "szatnia", "def": "on y change de vêtements" },
+            { "fr": "un coach / une coach", "pl": "trener / trenerka" },
+            { "fr": "un tapis de course", "pl": "bieżnia" },
+            { "fr": "un cours collectif", "pl": "zajęcia grupowe" }
+          ]
+        },
+        {
+          "type": "table",
+          "title": { "pl": "Faire du / jouer au", "fr": "Faire du / jouer au" },
+          "head": ["faire de + sport", "jouer à + jeu, sport de ballon"],
+          "rows": [
+            ["faire **du** vélo", "jouer **au** football"],
+            ["faire **du** yoga", "jouer **au** tennis"],
+            ["faire **de la** natation", "jouer **au** basket"],
+            ["faire **de la** musculation", "jouer **à la** pétanque"],
+            ["faire **de la** course à pied", "jouer **aux** cartes"],
+            ["faire **de l'**escalade", "jouer **aux** échecs"]
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "„Grać w tenisa” to **jouer au tennis** (nie « jouer le tennis »). „Uprawiać sport” to **faire du sport**.",
+            "fr": "On dit **jouer au tennis** (pas « jouer le tennis ») et **faire du sport**."
+          }
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Odżywianie", "fr": "L'alimentation" },
+          "items": [
+            { "fr": "manger équilibré", "pl": "jeść zdrowo, zbilansowanie", "def": "manger un peu de tout" },
+            { "fr": "les fruits et les légumes", "pl": "owoce i warzywa" },
+            { "fr": "le sucre", "pl": "cukier" },
+            { "fr": "les plats gras", "pl": "tłuste potrawy" },
+            { "fr": "grignoter", "pl": "podjadać", "def": "manger entre les repas" },
+            { "fr": "être au régime", "pl": "być na diecie", "def": "manger moins pour maigrir" },
+            { "fr": "maigrir / grossir", "pl": "chudnąć / tyć" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Chez le médecin",
+      "blocks": [
+        {
+          "type": "examples",
+          "title": { "pl": "Lekarz", "fr": "Le médecin" },
+          "items": [
+            { "fr": "Qu'est-ce qui ne va pas ?", "pl": "Co panu / pani dolega?" },
+            { "fr": "Vous avez mal où ?", "pl": "Gdzie pana / panią boli?" },
+            { "fr": "Vous avez de la fièvre ?", "pl": "Ma pan / pani gorączkę?" },
+            { "fr": "Vous mesurez combien ? Vous pesez combien ?", "pl": "Ile ma pan / pani wzrostu? Ile pan / pani waży?" },
+            { "fr": "Prenez un comprimé trois fois par jour.", "pl": "Proszę brać jedną tabletkę trzy razy dziennie." },
+            { "fr": "Reposez-vous bien !", "pl": "Proszę dużo odpoczywać!" }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Pacjent", "fr": "Le patient" },
+          "items": [
+            { "fr": "Je ne me sens pas bien.", "pl": "Źle się czuję." },
+            { "fr": "J'ai mal à la gorge depuis trois jours.", "pl": "Od trzech dni boli mnie gardło." },
+            { "fr": "Je tousse beaucoup la nuit.", "pl": "W nocy dużo kaszlę." },
+            { "fr": "Je mesure 1,70 m (un mètre soixante-dix).", "pl": "Mam 1,70 m wzrostu." },
+            { "fr": "Je pèse 65 kilos.", "pl": "Ważę 65 kilogramów." },
+            { "fr": "Je voudrais prendre rendez-vous avec le docteur Martin.", "pl": "Chciałbym / chciałabym umówić się na wizytę u doktora Martina." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Émotions, accord et désaccord",
+      "blocks": [
+        {
+          "type": "examples",
+          "title": { "pl": "Pozytywne emocje", "fr": "Une émotion positive" },
+          "items": [
+            { "fr": "Super ! Génial !", "pl": "Super! Świetnie!" },
+            { "fr": "Quelle bonne nouvelle !", "pl": "Co za dobra wiadomość!" },
+            { "fr": "Je suis tellement content(e) !", "pl": "Tak się cieszę!" }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Negatywne emocje", "fr": "Une émotion négative" },
+          "items": [
+            { "fr": "Oh non ! C'est dommage !", "pl": "O nie! Szkoda!" },
+            { "fr": "C'est nul !", "pl": "To beznadziejne!" },
+            { "fr": "J'ai peur du dentiste.", "pl": "Boję się dentysty." }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Zgoda", "fr": "L'accord" },
+          "items": [
+            { "fr": "Je suis d'accord avec toi.", "pl": "Zgadzam się z tobą." },
+            { "fr": "Tu as raison.", "pl": "Masz rację." },
+            { "fr": "Bien sûr ! / Exactement !", "pl": "Oczywiście! / Właśnie!" }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Niezgoda", "fr": "Le désaccord" },
+          "items": [
+            { "fr": "Je ne suis pas d'accord.", "pl": "Nie zgadzam się." },
+            { "fr": "Tu as tort.", "pl": "Nie masz racji." },
+            { "fr": "Pas du tout ! Moi, je pense que le sport, c'est important.", "pl": "Wcale nie! Ja uważam, że sport jest ważny." }
+          ]
+        }
+      ]
+    }
+  ],
+  "practice": ["edito-a1/unite-08", "a1-connecteurs/03-contractions"]
+}

@@ -1,0 +1,357 @@
+{
+  "id": "unite-01",
+  "label": "Unité 1",
+  "title": "Nouvelles vies",
+  "icon": "🌱",
+  "summary": {
+    "pl": "Życiorys, plany i czas wolny: passé composé (avoir, être, czasowniki zwrotne, uzgodnienie), przeczenia ne… rien / personne / jamais / plus, il y a / pendant / depuis, wyrażanie zamiaru.",
+    "fr": "Le parcours de vie, les projets et les loisirs : le passé composé (avoir, être, verbes pronominaux, accord), la négation ne… rien / personne / jamais / plus, il y a / pendant / depuis, l'intention."
+  },
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "Le passé composé : emploi et formation",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Passé composé opisuje **zakończone wydarzenie** w przeszłości, zwłaszcza etapy życia: j'**ai fini** mes études, je **suis parti** au Canada.\nForma: **avoir** / **être** w czasie teraźniejszym + **imiesłów** (participe passé).",
+            "fr": "Le passé composé raconte une **action terminée** dans le passé, par exemple les étapes d'une vie : j'**ai fini** mes études, je **suis parti** au Canada.\nFormation : **avoir** / **être** au présent + **participe passé**."
+          }
+        },
+        {
+          "type": "table",
+          "title": { "pl": "Regularne imiesłowy", "fr": "Les participes réguliers" },
+          "head": ["infinitif", "participe", "exemple"],
+          "rows": [
+            ["-er : travailler", "-**é** : travaill**é**", "nous avons travaillé"],
+            ["-ir : finir, choisir", "-**i** : fin**i**, chois**i**", "elle a choisi"],
+            ["-re : attendre, vendre", "-**u** : attend**u**, vend**u**", "tu as attendu"]
+          ]
+        },
+        {
+          "type": "table",
+          "title": { "pl": "Nieregularne imiesłowy", "fr": "Les participes irréguliers" },
+          "head": ["-u", "-is / -it", "autres"],
+          "rows": [
+            ["avoir → **eu**", "prendre → **pris**", "être → **été**"],
+            ["voir → **vu**", "mettre → **mis**", "faire → **fait**"],
+            ["lire → **lu**", "dire → **dit**", "ouvrir → **ouvert**"],
+            ["pouvoir → **pu**, vouloir → **voulu**", "écrire → **écrit**", "naître → **né**"],
+            ["connaître → **connu**, recevoir → **reçu**", "apprendre → **appris**", "mourir → **mort**"]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Avoir ou être ? L'accord du participe",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Większość czasowników: **avoir**.\n**Être**: czasowniki ruchu i zmiany stanu (aller, venir, arriver, partir, entrer, sortir, monter, descendre, tomber, rester, naître, mourir, devenir, revenir, rentrer) i **wszystkie czasowniki zwrotne**.",
+            "fr": "La plupart des verbes : **avoir**.\n**Être** : les verbes de mouvement et de changement d'état (aller, venir, arriver, partir, entrer, sortir, monter, descendre, tomber, rester, naître, mourir, devenir, revenir, rentrer) et **tous les verbes pronominaux**."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "aller", "se marier"],
+          "rows": [
+            ["je", "suis allé(**e**)", "me suis marié(**e**)"],
+            ["tu", "es allé(**e**)", "t'es marié(**e**)"],
+            ["il / elle", "est allé / allé**e**", "s'est marié / marié**e**"],
+            ["nous", "sommes allé(**e**)**s**", "nous sommes marié(**e**)**s**"],
+            ["vous", "êtes allé(**e**)(**s**)", "vous êtes marié(**e**)(**s**)"],
+            ["ils / elles", "sont allé**s** / allé**es**", "se sont marié**s** / marié**es**"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Z **être** imiesłów zgadza się z podmiotem: elle est né**e**, ils sont venu**s**, elles se sont rencontré**es**.\nZ **avoir** – zwykle bez uzgodnienia: elle a travaillé, ils ont fini.",
+            "fr": "Avec **être**, le participe s'accorde avec le sujet : elle est né**e**, ils sont venu**s**, elles se sont rencontré**es**.\nAvec **avoir**, en général pas d'accord : elle a travaillé, ils ont fini."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je **suis né** à Lille et j'**ai grandi** à Lyon.", "pl": "Urodziłem się w Lille i dorastałem w Lyonie." },
+            { "fr": "Après son bac, elle **est partie** à Montréal.", "pl": "Po maturze wyjechała do Montrealu." },
+            { "fr": "Ils **se sont rencontrés** à l'université.", "pl": "Poznali się na studiach." },
+            { "fr": "Nous **nous sommes installés** à Bordeaux en 2019.", "pl": "Zamieszkaliśmy w Bordeaux w 2019 roku." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**Être** i **avoir** same tworzą passé composé z **avoir**: j'**ai été** comédien, j'**ai eu** un enfant (nie « je suis été »).",
+            "fr": "**Être** et **avoir** se conjuguent eux-mêmes avec **avoir** : j'**ai été** comédien, j'**ai eu** un enfant (pas « je suis été »)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "La négation : ne… rien / personne / jamais / plus",
+      "blocks": [
+        {
+          "type": "words",
+          "items": [
+            { "fr": "ne … pas", "pl": "nie", "def": "négation simple" },
+            { "fr": "ne … rien", "pl": "nic (nie)", "def": "≠ quelque chose, tout" },
+            { "fr": "ne … personne", "pl": "nikt, nikogo (nie)", "def": "≠ quelqu'un, tout le monde" },
+            { "fr": "ne … jamais", "pl": "nigdy (nie)", "def": "≠ toujours, souvent, déjà" },
+            { "fr": "ne … plus", "pl": "już nie", "def": "≠ encore, toujours (avant oui, maintenant non)" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "W czasie teraźniejszym: **ne** + czasownik + rien / personne / jamais / plus.\nW passé composé: **rien, jamais, plus** stoją **przed imiesłowem**, a **personne – po imiesłowie**.",
+            "fr": "Au présent : **ne** + verbe + rien / personne / jamais / plus.\nAu passé composé : **rien, jamais, plus** se placent **avant le participe**, mais **personne** se place **après le participe**."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["présent", "passé composé"],
+          "rows": [
+            ["je **ne** vois **rien**", "je **n'**ai **rien** vu"],
+            ["je **ne** vois **personne**", "je **n'**ai vu **personne**"],
+            ["il **ne** sort **jamais**", "il **n'**est **jamais** sorti"],
+            ["elle **ne** chante **plus**", "elle **n'**a **plus** chanté"]
+          ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "**Rien** i **personne** mogą być podmiotem – wtedy stoją na początku, a **ne** zostaje: **Personne n'**est venu. **Rien n'**a changé.",
+            "fr": "**Rien** et **personne** peuvent être sujets : ils se placent au début et on garde **ne** : **Personne n'**est venu. **Rien n'**a changé."
+          }
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Po przeczeniu: **un, une, du, des → de / d'**: Je n'ai **plus de** voiture. Il n'a **jamais d'**argent.\nPo polsku mówimy podwójnie (« nikt nic nie… »), po francusku bez **pas**: « je ne vois pas personne » to błąd.",
+            "fr": "Après la négation, **un, une, du, des → de / d'** : Je n'ai **plus de** voiture. Il n'a **jamais d'**argent.\nOn n'ajoute pas **pas** : on ne dit pas « je ne vois pas personne »."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les indicateurs de temps : il y a, pendant, depuis",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "sens", "exemple"],
+          "rows": [
+            ["**il y a** + durée", "moment terminé (= temu)", "J'ai eu mon bac **il y a** dix ans."],
+            ["**pendant** + durée", "durée terminée (= przez)", "J'ai vécu à Rome **pendant** deux ans."],
+            ["**depuis** + durée / date", "ça continue (= od)", "J'habite ici **depuis** 2018."]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**il y a** → zwykle passé composé. **depuis** → zwykle czas teraźniejszy (czynność trwa). **pendant** → czas przeszły, teraźniejszy lub przyszły.",
+            "fr": "**il y a** → en général le passé composé. **depuis** → en général le présent (l'action continue). **pendant** → passé, présent ou futur."
+          }
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Polskie « od trzech lat » to **depuis trois ans** + czas teraźniejszy: J'apprends le français **depuis** trois ans (nie « j'ai appris… depuis »).",
+            "fr": "Avec **depuis**, on utilise le présent quand l'action continue : J'apprends le français **depuis** trois ans."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Exprimer son intention",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**avoir l'intention de** + bezokolicznik (mieć zamiar)\n**compter** + bezokolicznik (zamierzać)\n**penser** + bezokolicznik (myśleć o…, planować)\n**avoir envie de** + bezokolicznik (mieć ochotę)",
+            "fr": "**avoir l'intention de** + infinitif\n**compter** + infinitif\n**penser** + infinitif\n**avoir envie de** + infinitif"
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "J'**ai l'intention de** reprendre mes études.", "pl": "Mam zamiar wrócić na studia." },
+            { "fr": "Nous **comptons** acheter une maison à la campagne.", "pl": "Zamierzamy kupić dom na wsi." },
+            { "fr": "Elle **pense** devenir comédienne.", "pl": "Myśli o tym, żeby zostać aktorką." },
+            { "fr": "Tu **as envie de** changer de vie ?", "pl": "Masz ochotę zmienić swoje życie?" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**compter** i **penser** bez przyimka: je compte partir (nie « je compte de partir »).",
+            "fr": "**compter** et **penser** sans préposition : je compte partir (pas « je compte de partir »)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Le parcours de vie",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Życie prywatne", "fr": "La vie personnelle" },
+          "items": [
+            { "fr": "une naissance / naître", "pl": "narodziny / urodzić się", "def": "arriver au monde" },
+            { "fr": "grandir", "pl": "dorastać", "def": "devenir grand, adulte" },
+            { "fr": "une rencontre / rencontrer", "pl": "spotkanie / poznać", "def": "voir quelqu'un pour la première fois" },
+            { "fr": "un mariage / se marier", "pl": "ślub / pobrać się", "def": "s'unir officiellement" },
+            { "fr": "un divorce / divorcer", "pl": "rozwód / rozwieść się", "def": "la fin d'un mariage" },
+            { "fr": "un déménagement / déménager", "pl": "przeprowadzka / przeprowadzić się", "def": "changer de logement" },
+            { "fr": "s'installer", "pl": "zamieszkać, osiedlić się", "def": "commencer à habiter dans un lieu" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Szkoła i praca", "fr": "Le parcours scolaire et professionnel" },
+          "items": [
+            { "fr": "passer / avoir le bac", "pl": "zdawać / zdać maturę", "def": "l'examen à la fin du lycée" },
+            { "fr": "faire des études de…", "pl": "studiować…", "def": "aller à l'université" },
+            { "fr": "un diplôme", "pl": "dyplom", "def": "le papier officiel à la fin des études" },
+            { "fr": "une formation", "pl": "szkolenie, kurs zawodowy", "def": "des cours pour apprendre un métier" },
+            { "fr": "un stage", "pl": "staż, praktyki", "def": "une période de travail pour apprendre" },
+            { "fr": "une carrière", "pl": "kariera", "def": "toute la vie professionnelle" },
+            { "fr": "changer de métier", "pl": "zmienić zawód", "def": "faire un autre travail" },
+            { "fr": "être / partir à la retraite", "pl": "być na / przejść na emeryturę", "def": "arrêter de travailler à cause de l'âge" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Zawody artystyczne", "fr": "Les professions artistiques" },
+          "items": [
+            { "fr": "un comédien / une comédienne", "pl": "aktor / aktorka", "def": "il joue au théâtre ou au cinéma" },
+            { "fr": "un réalisateur / une réalisatrice", "pl": "reżyser filmowy", "def": "il fait des films" },
+            { "fr": "un chanteur / une chanteuse", "pl": "piosenkarz / piosenkarka", "def": "il chante" },
+            { "fr": "un musicien / une musicienne", "pl": "muzyk", "def": "il joue d'un instrument" },
+            { "fr": "un danseur / une danseuse", "pl": "tancerz / tancerka", "def": "il danse sur scène" },
+            { "fr": "un peintre", "pl": "malarz / malarka", "def": "il fait des tableaux" },
+            { "fr": "un écrivain / une écrivaine", "pl": "pisarz / pisarka", "def": "il écrit des livres" },
+            { "fr": "un / une photographe", "pl": "fotograf", "def": "il prend des photos" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les loisirs",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Miejsca kultury", "fr": "Les lieux culturels" },
+          "items": [
+            { "fr": "un théâtre", "pl": "teatr" },
+            { "fr": "une salle de concert", "pl": "sala koncertowa" },
+            { "fr": "un musée / une exposition", "pl": "muzeum / wystawa" },
+            { "fr": "une galerie (d'art)", "pl": "galeria (sztuki)" },
+            { "fr": "un festival", "pl": "festiwal" },
+            { "fr": "une médiathèque", "pl": "mediateka, biblioteka", "def": "on y emprunte des livres, des films, de la musique" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Na zewnątrz i w domu", "fr": "Dehors et à l'intérieur" },
+          "items": [
+            { "fr": "une balade / se balader", "pl": "spacer / spacerować", "def": "une petite promenade" },
+            { "fr": "une randonnée", "pl": "wędrówka (piesza)", "def": "une longue marche dans la nature" },
+            { "fr": "faire du vélo / de l'escalade", "pl": "jeździć na rowerze / wspinać się" },
+            { "fr": "faire un pique-nique", "pl": "urządzić piknik", "def": "manger dehors, dans l'herbe" },
+            { "fr": "un jeu de société", "pl": "gra planszowa", "def": "un jeu à plusieurs, avec un plateau ou des cartes" },
+            { "fr": "un jeu vidéo", "pl": "gra wideo" },
+            { "fr": "faire de la cuisine / du bricolage", "pl": "gotować / majsterkować" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**sortir** = wyjść z domu dla rozrywki: sortir au restaurant, sortir avec des amis, sortir le soir.\n**jouer à** + gra (jouer **aux** cartes), **jouer de** + instrument (jouer **du** piano), **faire de** + sport (faire **de la** natation).",
+            "fr": "**sortir** = quitter la maison pour se divertir : sortir au restaurant, sortir avec des amis, sortir le soir.\n**jouer à** + jeu (jouer **aux** cartes), **jouer de** + instrument (jouer **du** piano), **faire de** + sport (faire **de la** natation)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Parler de son parcours",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je suis né(e) en 1998 à Cracovie.", "pl": "Urodziłem / urodziłam się w 1998 roku w Krakowie." },
+            { "fr": "J'ai fait des études d'architecture.", "pl": "Studiowałem / studiowałam architekturę." },
+            { "fr": "Après mon diplôme, j'ai fait un stage à Paris.", "pl": "Po dyplomie odbyłem / odbyłam staż w Paryżu." },
+            { "fr": "Il y a deux ans, j'ai changé de métier.", "pl": "Dwa lata temu zmieniłem / zmieniłam zawód." },
+            { "fr": "Je travaille comme graphiste depuis 2022.", "pl": "Pracuję jako grafik od 2022 roku." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Parler de ses goûts",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["+ +", "+", "–", "– –"],
+          "rows": [
+            ["J'adore…", "J'aime bien…", "Je n'aime pas trop…", "Je déteste…"],
+            ["Je suis fan de…", "Ça me plaît.", "Ça ne me plaît pas.", "J'ai horreur de…"],
+            ["Je suis passionné(e) de…", "Je m'intéresse à…", "Ça ne m'intéresse pas.", "Je ne supporte pas…"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je suis fan de jazz, je vais souvent en concert.", "pl": "Jestem fanem / fanką jazzu, często chodzę na koncerty." },
+            { "fr": "J'ai horreur de la foule.", "pl": "Nie znoszę tłumu." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Proposer, accepter ou refuser une sortie",
+      "blocks": [
+        {
+          "type": "examples",
+          "title": { "pl": "Proponować", "fr": "Proposer" },
+          "items": [
+            { "fr": "Ça te dit d'aller au théâtre samedi ?", "pl": "Masz ochotę pójść w sobotę do teatru?" },
+            { "fr": "Tu es libre ce soir ? On pourrait aller au cinéma.", "pl": "Masz dziś wieczorem czas? Moglibyśmy pójść do kina." },
+            { "fr": "Et si on faisait une balade ?", "pl": "Może pójdziemy na spacer?" }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Przyjąć", "fr": "Accepter" },
+          "items": [
+            { "fr": "Avec plaisir !", "pl": "Z przyjemnością!" },
+            { "fr": "Bonne idée, je suis partant(e) !", "pl": "Dobry pomysł, wchodzę w to!" },
+            { "fr": "D'accord, on se retrouve où ?", "pl": "Dobrze, gdzie się spotkamy?" }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Odmówić", "fr": "Refuser" },
+          "items": [
+            { "fr": "Désolé(e), je ne peux pas, je travaille.", "pl": "Przykro mi, nie mogę, pracuję." },
+            { "fr": "C'est gentil, mais je ne suis pas libre.", "pl": "To miłe, ale nie mam czasu." },
+            { "fr": "Une autre fois, peut-être ?", "pl": "Może innym razem?" }
+          ]
+        }
+      ]
+    }
+  ],
+  "practice": ["edito-a2/unite-01", "a1-connecteurs/01-prepositions", "a2-connecteurs/04-temps", "a2-connecteurs/01-chronologie"]
+}

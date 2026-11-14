@@ -1,0 +1,161 @@
+{
+  "id": "02-cause-consequence",
+  "title": "Cause et conséquence",
+  "icon": "⚖️",
+  "entries": [
+    {
+      "id": "u02-puisque",
+      "fr": "puisque / puisqu'",
+      "pl": "skoro, ponieważ (przyczyna oczywista)",
+      "def": "la cause est déjà connue de tout le monde",
+      "examples": [
+        { "fr": "Puisque tu es là, aide-moi à porter les sacs !", "pl": "Skoro tu jesteś, pomóż mi nieść torby!" }
+      ],
+      "tip": {
+        "pl": "puisque = skoro (przyczyna znana obu osobom); na pytanie pourquoi ? odpowiadamy parce que, nie puisque",
+        "fr": "« puisque » = une cause que l'autre personne connaît déjà ; pour répondre à « pourquoi ? », on utilise « parce que », pas « puisque »"
+      },
+      "confusables": ["a1-connecteurs/conj-parce-que", "a1-connecteurs/conj-comme"],
+      "tags": ["connecteur", "cause"]
+    },
+    {
+      "id": "u02-grace-a",
+      "fr": "grâce à + nom",
+      "pl": "dzięki (czemuś / komuś)",
+      "def": "une cause positive : le résultat est bon",
+      "examples": [
+        { "fr": "J'ai réussi mon examen grâce à mon professeur.", "pl": "Zdałem egzamin dzięki mojemu nauczycielowi." },
+        { "fr": "Les tomates poussent bien grâce au soleil.", "pl": "Pomidory dobrze rosną dzięki słońcu." }
+      ],
+      "tip": {
+        "pl": "grâce à + le = grâce au, + les = grâce aux; tylko dla dobrego skutku",
+        "fr": "grâce à + le = grâce au, grâce à + les = grâce aux ; seulement pour un résultat positif"
+      },
+      "confusables": ["u02-a-cause-de"],
+      "tags": ["connecteur", "cause"]
+    },
+    {
+      "id": "u02-a-cause-de",
+      "fr": "à cause de + nom",
+      "pl": "z powodu, przez (coś złego)",
+      "def": "une cause négative : le résultat est mauvais",
+      "examples": [
+        { "fr": "Le train est en retard à cause de la neige.", "pl": "Pociąg ma opóźnienie z powodu śniegu." },
+        { "fr": "On ne peut pas sortir à cause du vent.", "pl": "Nie można wyjść przez wiatr." }
+      ],
+      "tip": {
+        "pl": "à cause de + le = à cause du, + les = à cause des; à cause de + rzeczownik, ale parce que + zdanie",
+        "fr": "à cause de + le = à cause du, à cause de + les = à cause des ; « à cause de » + nom, mais « parce que » + sujet et verbe"
+      },
+      "confusables": ["u02-grace-a", "a1-connecteurs/conj-parce-que"],
+      "tags": ["connecteur", "cause"]
+    },
+    {
+      "id": "u02-en-effet",
+      "fr": "en effet",
+      "pl": "rzeczywiście, istotnie; bo (wyjaśnienie)",
+      "def": "confirme ce qu'on vient de dire et donne une explication",
+      "examples": [
+        { "fr": "Marie parle bien chinois. En effet, elle a habité à Pékin.", "pl": "Marie dobrze mówi po chińsku. Rzeczywiście, mieszkała w Pekinie." }
+      ],
+      "tip": {
+        "pl": "en effet = rzeczywiście (potwierdza); nie mylić z en fait = właściwie, w rzeczywistości (koryguje)",
+        "fr": "« en effet » confirme ; ne pas confondre avec « en fait », qui corrige ce qu'on a dit"
+      },
+      "confusables": ["a1-connecteurs/conj-car"],
+      "tags": ["connecteur", "cause"]
+    },
+    {
+      "id": "u02-alors",
+      "fr": "alors",
+      "pl": "więc, to (wtedy)",
+      "def": "la conséquence, surtout à l'oral ; aussi après « si… »",
+      "examples": [
+        { "fr": "Il fait beau, alors on va à la plage.", "pl": "Jest ładnie, więc idziemy na plażę." },
+        { "fr": "Si tu es fatigué, alors repose-toi.", "pl": "Jeśli jesteś zmęczony, to odpocznij." }
+      ],
+      "tip": {
+        "pl": "alors ≈ donc, ale bardziej potoczne; nie mylić z alors que (podczas gdy)",
+        "fr": "« alors » ≈ « donc », mais plus oral ; ne pas confondre avec « alors que » (l'opposition)"
+      },
+      "confusables": ["a1-connecteurs/conj-donc", "u02-du-coup", "u03-alors-que"],
+      "tags": ["connecteur", "conséquence"]
+    },
+    {
+      "id": "u02-cest-pourquoi",
+      "fr": "c'est pourquoi",
+      "pl": "dlatego",
+      "def": "la conséquence : c'est pour cette raison que",
+      "examples": [
+        { "fr": "J'adore l'Italie. C'est pourquoi j'apprends l'italien.", "pl": "Uwielbiam Włochy. Dlatego uczę się włoskiego." }
+      ],
+      "tip": {
+        "pl": "c'est pourquoi zwykle zaczyna nowe zdanie; w mowie: c'est pour ça que",
+        "fr": "« c'est pourquoi » commence souvent une nouvelle phrase ; à l'oral : « c'est pour ça que »"
+      },
+      "confusables": ["a1-connecteurs/conj-donc", "u02-alors"],
+      "tags": ["connecteur", "conséquence"]
+    },
+    {
+      "id": "u02-du-coup",
+      "fr": "du coup",
+      "pl": "więc, no to (potocznie)",
+      "def": "la conséquence, à l'oral seulement (familier)",
+      "examples": [
+        { "fr": "J'ai raté le bus, du coup je suis arrivé en retard.", "pl": "Spóźniłem się na autobus, więc przyjechałem za późno." }
+      ],
+      "tip": {
+        "pl": "du coup = bardzo potoczne; w tekście pisanym użyj donc albo c'est pourquoi",
+        "fr": "« du coup » est très familier ; à l'écrit, on utilise « donc » ou « c'est pourquoi »"
+      },
+      "confusables": ["u02-alors", "a1-connecteurs/conj-donc"],
+      "tags": ["connecteur", "conséquence"]
+    }
+  ],
+  "boss": {
+    "entryIds": ["u02-puisque", "u02-grace-a", "u02-a-cause-de", "u02-en-effet", "u02-alors"],
+    "exerciseTypes": ["gap-fill"],
+    "questions": 10,
+    "lives": 3,
+    "timeLimitSec": 20
+  },
+  "exercises": [
+    { "id": "puisque-1", "type": "gap-fill", "entryIds": ["u02-puisque"], "data": { "sentence": "___ tu es là, aide-moi à porter les sacs !", "answers": ["puisque", "comme"], "pl": "Skoro tu jesteś, pomóż mi nieść torby!", "clue": "(tu es là, on le voit bien)" } },
+    { "id": "puisque-2", "type": "gap-fill", "entryIds": ["u02-puisque"], "data": { "sentence": "___ il pleut, on reste à la maison.", "answers": ["puisqu'", "comme"], "pl": "Skoro pada, zostajemy w domu.", "hint": { "pl": "przed samogłoską elizja", "fr": "élision devant une voyelle" }, "clue": "(tout le monde voit la pluie)" } },
+    { "id": "puisque-3", "type": "gap-fill", "entryIds": ["u02-puisque"], "data": { "sentence": "Je ne t'explique pas la réponse, ___ tu la connais déjà !", "answers": ["puisque", "parce que", "car"], "pl": "Nie wyjaśniam ci odpowiedzi, skoro już ją znasz!", "clue": "(une cause évidente)" } },
+    { "id": "puisque-4", "type": "gap-fill", "entryIds": ["u02-puisque"], "data": { "sentence": "Pourquoi tu ne viens pas ? — ___ je suis malade.", "answers": ["parce que"], "pl": "Dlaczego nie przychodzisz? — Bo jestem chory.", "hint": { "pl": "odpowiedź na pourquoi ?", "fr": "réponse à « pourquoi ? »" } } },
+    { "id": "puisque-5", "type": "translate-pl-fr", "entryIds": ["u02-puisque"], "data": { "pl": "skoro jesteś zmęczony", "answers": ["puisque tu es fatigué", "puisque tu es fatiguée", "puisque vous êtes fatigué", "puisque vous êtes fatiguée", "puisque vous êtes fatigués"] } },
+
+    { "id": "grace-a-1", "type": "gap-fill", "entryIds": ["u02-grace-a"], "data": { "sentence": "J'ai réussi mon examen ___ mon professeur.", "answers": ["grâce à"], "pl": "Zdałem egzamin dzięki mojemu nauczycielowi.", "clue": "(il m'a beaucoup aidé)" } },
+    { "id": "grace-a-2", "type": "gap-fill", "entryIds": ["u02-grace-a"], "data": { "sentence": "Les tomates poussent bien ___ soleil.", "answers": ["grâce au"], "pl": "Pomidory dobrze rosną dzięki słońcu.", "hint": { "pl": "à + le", "fr": "à + le" }, "clue": "(une cause positive)" } },
+    { "id": "grace-a-3", "type": "gap-fill", "entryIds": ["u02-grace-a"], "data": { "sentence": "J'ai trouvé cet appartement ___ amis de ma sœur.", "answers": ["grâce aux"], "pl": "Znalazłem to mieszkanie dzięki przyjaciołom mojej siostry.", "hint": { "pl": "à + les", "fr": "à + les" }, "clue": "(ils m'ont aidé)" } },
+    { "id": "grace-a-4", "type": "gap-fill", "entryIds": ["u02-grace-a"], "data": { "sentence": "___ toi, j'ai passé une super soirée !", "answers": ["grâce à"], "pl": "Dzięki tobie spędziłem super wieczór!", "clue": "(merci !)" } },
+    { "id": "grace-a-5", "type": "translate-pl-fr", "entryIds": ["u02-grace-a"], "data": { "pl": "dzięki tobie", "answers": ["grâce à toi", "grâce à vous"] } },
+
+    { "id": "a-cause-de-1", "type": "gap-fill", "entryIds": ["u02-a-cause-de"], "data": { "sentence": "Le train est en retard ___ la neige.", "answers": ["à cause de"], "pl": "Pociąg ma opóźnienie z powodu śniegu.", "clue": "(une cause négative)" } },
+    { "id": "a-cause-de-2", "type": "gap-fill", "entryIds": ["u02-a-cause-de"], "data": { "sentence": "On ne peut pas sortir ___ vent.", "answers": ["à cause du"], "pl": "Nie można wyjść przez wiatr.", "hint": { "pl": "de + le", "fr": "de + le" }, "clue": "(une cause négative)" } },
+    { "id": "a-cause-de-3", "type": "gap-fill", "entryIds": ["u02-a-cause-de"], "data": { "sentence": "Je dors mal ___ voisins.", "answers": ["à cause des"], "pl": "Źle śpię przez sąsiadów.", "hint": { "pl": "de + les", "fr": "de + les" }, "clue": "(ils font du bruit)" } },
+    { "id": "a-cause-de-4", "type": "gap-fill", "entryIds": ["u02-a-cause-de"], "data": { "sentence": "Je n'ai pas dormi ___ orage.", "answers": ["à cause de l'"], "pl": "Nie spałem przez burzę.", "hint": { "pl": "de + l'", "fr": "de + l'" }, "clue": "(une cause négative)" } },
+    { "id": "a-cause-de-5", "type": "gap-fill", "entryIds": ["u02-a-cause-de"], "data": { "sentence": "Je suis en retard ___ toi !", "answers": ["à cause de"], "pl": "Spóźniłem się przez ciebie!", "clue": "(c'est ta faute)" } },
+    { "id": "a-cause-de-6", "type": "translate-pl-fr", "entryIds": ["u02-a-cause-de"], "data": { "pl": "z powodu deszczu", "answers": ["à cause de la pluie"] } },
+
+    { "id": "en-effet-1", "type": "gap-fill", "entryIds": ["u02-en-effet"], "data": { "sentence": "Marie parle très bien chinois. ___, elle a habité dix ans à Pékin.", "answers": ["en effet"], "pl": "Marie bardzo dobrze mówi po chińsku. Rzeczywiście, mieszkała dziesięć lat w Pekinie.", "clue": "(ça confirme et explique)" } },
+    { "id": "en-effet-2", "type": "gap-fill", "entryIds": ["u02-en-effet"], "data": { "sentence": "Le restaurant est toujours plein. ___, la cuisine y est excellente.", "answers": ["en effet"], "pl": "Restauracja jest zawsze pełna. Rzeczywiście, kuchnia jest tam znakomita.", "clue": "(ça confirme et explique)" } },
+    { "id": "en-effet-3", "type": "gap-fill", "entryIds": ["u02-en-effet"], "data": { "sentence": "Il fait froid aujourd'hui ! — ___, il neige depuis ce matin.", "answers": ["en effet", "effectivement"], "pl": "Ale dziś zimno! — Rzeczywiście, od rana pada śnieg.", "clue": "(c'est vrai, je confirme)" } },
+    { "id": "en-effet-4", "type": "translate-pl-fr", "entryIds": ["u02-en-effet"], "data": { "pl": "rzeczywiście, istotnie", "answers": ["en effet", "effectivement"] } },
+
+    { "id": "alors-1", "type": "gap-fill", "entryIds": ["u02-alors"], "data": { "sentence": "Si tu es fatigué, ___ repose-toi.", "answers": ["alors"], "pl": "Jeśli jesteś zmęczony, to odpocznij." } },
+    { "id": "alors-2", "type": "gap-fill", "entryIds": ["u02-alors"], "data": { "sentence": "Je n'ai plus d'argent. — Et ___ ? Ce n'est pas grave !", "answers": ["alors"], "pl": "Nie mam już pieniędzy. — No i co? To nic strasznego!" } },
+    { "id": "alors-3", "type": "gap-fill", "entryIds": ["u02-alors"], "data": { "sentence": "Il fait beau, ___ on va à la plage.", "answers": ["alors", "donc", "du coup"], "pl": "Jest ładnie, więc idziemy na plażę.", "clue": "(conséquence)" } },
+    { "id": "alors-4", "type": "gap-fill", "entryIds": ["u02-alors"], "data": { "sentence": "Le magasin était fermé, ___ je suis rentré à la maison.", "answers": ["alors", "donc", "du coup", "c'est pourquoi"], "pl": "Sklep był zamknięty, więc wróciłem do domu.", "clue": "(conséquence)" } },
+
+    { "id": "pourquoi-1", "type": "gap-fill", "entryIds": ["u02-cest-pourquoi"], "data": { "sentence": "J'adore la cuisine italienne. ___ je vais souvent à Rome.", "answers": ["c'est pourquoi", "c'est pour ça que", "alors", "donc", "du coup"], "pl": "Uwielbiam kuchnię włoską. Dlatego często jeżdżę do Rzymu.", "clue": "(pour cette raison)" } },
+    { "id": "pourquoi-2", "type": "gap-fill", "entryIds": ["u02-cest-pourquoi"], "data": { "sentence": "Le vol est annulé. C'est ___ nous restons une nuit de plus à l'hôtel.", "answers": ["pourquoi", "pour ça que", "pour cela que"], "pl": "Lot jest odwołany. Dlatego zostajemy jeszcze jedną noc w hotelu.", "clue": "(pour cette raison)" } },
+    { "id": "pourquoi-3", "type": "translate-pl-fr", "entryIds": ["u02-cest-pourquoi"], "data": { "pl": "Dlatego uczę się francuskiego.", "answers": ["C'est pourquoi j'apprends le français", "C'est pour ça que j'apprends le français", "C'est pourquoi j'étudie le français", "C'est pour ça que j'étudie le français"] } },
+
+    { "id": "du-coup-1", "type": "gap-fill", "entryIds": ["u02-du-coup"], "data": { "sentence": "J'ai raté le bus, ___ je suis arrivé en retard.", "answers": ["du coup", "alors", "donc"], "pl": "Spóźniłem się na autobus, więc przyjechałem za późno.", "clue": "(conséquence, à l'oral, familier)" } },
+    { "id": "du-coup-2", "type": "gap-fill", "entryIds": ["u02-du-coup"], "data": { "sentence": "Il n'y a plus de pain. — Ah, ___ on mange quoi ce soir ?", "answers": ["du coup", "alors", "donc"], "pl": "Nie ma już chleba. — Aha, to co jemy dziś wieczorem?", "clue": "(conséquence, à l'oral, familier)" } },
+    { "id": "du-coup-3", "type": "gap-fill", "entryIds": ["u02-du-coup"], "data": { "sentence": "Mon ami est malade, ___ on ne sort pas ce soir.", "answers": ["du coup", "alors", "donc"], "pl": "Mój kolega jest chory, więc nie wychodzimy dziś wieczorem.", "clue": "(conséquence, à l'oral, familier)" } },
+    { "id": "du-coup-4", "type": "translate-pl-fr", "entryIds": ["u02-du-coup"], "data": { "pl": "więc (bardzo potocznie)", "answers": ["du coup"] } }
+  ]
+}

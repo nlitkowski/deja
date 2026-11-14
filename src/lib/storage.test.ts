@@ -39,9 +39,9 @@ describe('storage', () => {
       settings: { dailyGoal: 100, sound: false, vibration: true },
     };
     const s = migrate(v1);
-    expect(s.schemaVersion).toBe(2);
+    expect(s.schemaVersion).toBe(SCHEMA_VERSION);
     expect(s.srs['p/e']).toEqual(card);
-    expect(s.settings).toEqual({ dailyGoal: 100, sound: false, vibration: true, helpLang: 'pl' });
+    expect(s.settings).toEqual({ dailyGoal: 100, sound: false, vibration: true, helpLang: 'pl', theme: 'system' });
   });
 
   it('resets daily counters on a new day', () => {

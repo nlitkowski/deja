@@ -1,0 +1,10 @@
+{
+  "id": "a2-connecteurs",
+  "version": 1,
+  "title": "Connecteurs A2",
+  "level": "A2",
+  "icon": "🧷",
+  "requires": [],
+  "units": ["01-chronologie", "02-cause-consequence", "03-opposition", "04-temps"],
+  "sheets": ["connecteurs-a2"]
+}

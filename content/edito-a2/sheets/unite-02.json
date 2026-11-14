@@ -1,0 +1,321 @@
+{
+  "id": "unite-02",
+  "label": "Unité 2",
+  "title": "Je me souviens",
+  "icon": "📷",
+  "summary": {
+    "pl": "Wspomnienia, krajobrazy i pogoda: imparfait (tworzenie, -ger / -cer, être, czasowniki zwrotne, imparfait czy passé composé), zaimki y i en, miejsce przymiotnika.",
+    "fr": "Les souvenirs, les paysages et la météo : l'imparfait (formation, -ger / -cer, être, verbes pronominaux, imparfait ou passé composé), les pronoms y et en, la place de l'adjectif."
+  },
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "L'imparfait : formation",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Temat = forma **nous** w czasie teraźniejszym bez **-ons** + końcówki **-ais, -ais, -ait, -ions, -iez, -aient**.\nnous finissons → je finiss**ais**, nous prenons → je pren**ais**, nous avons → j'av**ais**.",
+            "fr": "Radical = forme **nous** du présent sans **-ons** + terminaisons **-ais, -ais, -ait, -ions, -iez, -aient**.\nnous finissons → je finiss**ais**, nous prenons → je pren**ais**, nous avons → j'av**ais**."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "avoir", "changer", "être", "se déplacer"],
+          "rows": [
+            ["je / j'", "av**ais**", "chang**eais**", "ét**ais**", "me dépla**çais**"],
+            ["tu", "av**ais**", "chang**eais**", "ét**ais**", "te dépla**çais**"],
+            ["il / elle / on", "av**ait**", "chang**eait**", "ét**ait**", "se dépla**çait**"],
+            ["nous", "av**ions**", "chang**ions**", "ét**ions**", "nous déplac**ions**"],
+            ["vous", "av**iez**", "chang**iez**", "ét**iez**", "vous déplac**iez**"],
+            ["ils / elles", "av**aient**", "chang**eaient**", "ét**aient**", "se dépla**çaient**"]
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**être** to jedyny nieregularny czasownik: temat **ét-** (j'étais).\nCzasowniki na **-ger** / **-cer**: przed **a** dodajemy **e** / **ç** (je mang**e**ais, je commen**ç**ais), przed **i** – nie (nous mangions, nous commencions).",
+            "fr": "**être** est le seul verbe irrégulier : radical **ét-** (j'étais).\nVerbes en **-ger** / **-cer** : devant **a**, on ajoute **e** / **ç** (je mang**e**ais, je commen**ç**ais) ; devant **i**, non (nous mangions, nous commencions)."
+          }
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "Czasowniki zwrotne zachowują zaimek: je **me** levais, nous **nous** baignions, ils **se** promenaient.",
+            "fr": "Les verbes pronominaux gardent leur pronom : je **me** levais, nous **nous** baignions, ils **se** promenaient."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "L'imparfait : emploi",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Imparfait służy do opowiadania wspomnień:\n**zwyczaje** w przeszłości (co robiliśmy regularnie),\n**opisy** ludzi, miejsc, pogody, uczuć,\n**tło** wydarzenia.",
+            "fr": "L'imparfait sert à raconter un souvenir :\nles **habitudes** du passé,\nla **description** (personnes, lieux, météo, sentiments),\nle **décor** d'un événement."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["imparfait", "passé composé"],
+          "rows": [
+            ["habitude : **Chaque été**, nous **allions** à la mer.", "action unique : **Un été**, nous **sommes allés** en Grèce."],
+            ["description : La maison **était** petite.", "événement : Nous **avons acheté** la maison."],
+            ["décor : Il **pleuvait**…", "action : …quand je **suis sorti**."]
+          ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "Typowe sygnały imparfait: **avant, autrefois, à cette époque, quand j'étais petit(e), chaque jour, tous les étés, souvent, d'habitude**.\nSygnały passé composé: **un jour, soudain, tout à coup, hier, en 2015**.",
+            "fr": "Mots qui annoncent l'imparfait : **avant, autrefois, à cette époque, quand j'étais petit(e), chaque jour, tous les étés, souvent, d'habitude**.\nMots qui annoncent le passé composé : **un jour, soudain, tout à coup, hier, en 2015**."
+          }
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Polski aspekt pomaga: **niedokonany** (jeździłem, było) → często imparfait; **dokonany** (pojechałem, zgubiłem) → passé composé.",
+            "fr": "Une action qui se répète ou qui dure sans limite → imparfait ; une action terminée et datée → passé composé."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les pronoms y et en",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "remplace", "exemple"],
+          "rows": [
+            ["**y**", "à / en / chez / dans + lieu", "Tu vas à Nice ? – Oui, j'**y** vais."],
+            ["**y**", "à + chose (penser à, s'intéresser à)", "Tu penses à ton voyage ? – J'**y** pense."],
+            ["**en**", "de + lieu (venir de, revenir de)", "Tu viens de la plage ? – Oui, j'**en** viens."],
+            ["**en**", "de + chose (parler de, se souvenir de)", "Tu te souviens de ce jour ? – Je m'**en** souviens."],
+            ["**en**", "du / de la / des / un / une + nom", "Tu as des photos ? – Oui, j'**en** ai."],
+            ["**en**", "quantité + de + nom", "Tu as beaucoup d'amis ? – J'**en** ai beaucoup."]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**y** i **en** stoją **przed czasownikiem**; w passé composé **przed posiłkowym**; w przeczeniu między **ne** a czasownikiem:\nJ'**y** suis allé. Je **n'y** suis **jamais** allé. J'**en** ai mangé. Je **n'en** veux **pas**.",
+            "fr": "**y** et **en** se placent **avant le verbe** ; au passé composé, **avant l'auxiliaire** ; dans la négation, entre **ne** et le verbe :\nJ'**y** suis allé. Je **n'y** suis **jamais** allé. J'**en** ai mangé. Je **n'en** veux **pas**."
+          }
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Przy **en** liczba lub ilość zostaje na końcu: J'en ai **deux**. J'en veux **un peu**.\nZ **y** i **en** nie ma uzgodnienia imiesłowu: des photos ? J'en ai **pris** (nie « prises »).",
+            "fr": "Avec **en**, le nombre ou la quantité reste à la fin : J'en ai **deux**. J'en veux **un peu**.\nPas d'accord du participe avec **y** et **en** : des photos ? J'en ai **pris**."
+          }
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "Dla osób używamy zaimków akcentowanych: Je pense **à lui**. Je me souviens **d'elle**.",
+            "fr": "Pour une personne, on utilise les pronoms toniques : Je pense **à lui**. Je me souviens **d'elle**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "La place de l'adjectif",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Większość przymiotników stoi **po rzeczowniku**, zwłaszcza kolory, narodowość, kształt i dłuższe przymiotniki: un pull **rouge**, un film **italien**, une table **ronde**, un paysage **magnifique**.\nKrótkie i częste stoją **przed**: **beau, joli, bon, mauvais, grand, petit, gros, jeune, vieux, nouveau**: une **petite** maison, un **bon** souvenir.",
+            "fr": "La plupart des adjectifs se placent **après le nom**, surtout la couleur, la nationalité, la forme et les adjectifs longs : un pull **rouge**, un film **italien**, une table **ronde**, un paysage **magnifique**.\nLes adjectifs courts et fréquents se placent **avant** : **beau, joli, bon, mauvais, grand, petit, gros, jeune, vieux, nouveau** : une **petite** maison, un **bon** souvenir."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["masculin", "+ voyelle / h muet", "féminin"],
+          "rows": [
+            ["un **beau** jardin", "un **bel** été", "une **belle** plage"],
+            ["un **nouveau** voisin", "un **nouvel** ami", "une **nouvelle** vie"],
+            ["un **vieux** village", "un **vieil** homme", "une **vieille** photo"]
+          ]
+        },
+        {
+          "type": "table",
+          "title": { "pl": "Zmiana znaczenia (dla chętnych)", "fr": "Le sens change (pour aller plus loin)" },
+          "head": ["avant le nom", "après le nom"],
+          "rows": [
+            ["mon **ancien** professeur (= byłe)", "une table **ancienne** (= zabytkowa)"],
+            ["ma **chère** amie (= droga, kochana)", "un restaurant **cher** (= drogi, kosztowny)"],
+            ["un **grand** homme (= wielki, sławny)", "un homme **grand** (= wysoki)"],
+            ["mon **propre** appartement (= własne)", "un appartement **propre** (= czyste)"]
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "W liczbie mnogiej przed przymiotnikiem **des → de**: **de** belles plages, **de** bons souvenirs.",
+            "fr": "Au pluriel, devant un adjectif, **des → de** : **de** belles plages, **de** bons souvenirs."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Le souvenir",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Pamięć i wspomnienia", "fr": "La mémoire et les souvenirs" },
+          "items": [
+            { "fr": "un souvenir", "pl": "wspomnienie; pamiątka", "def": "une image du passé ; un objet rapporté de voyage" },
+            { "fr": "la mémoire", "pl": "pamięć", "def": "la capacité de se souvenir" },
+            { "fr": "se souvenir de", "pl": "pamiętać, przypominać sobie", "def": "avoir encore une image du passé en tête" },
+            { "fr": "se rappeler + nom", "pl": "pamiętać coś", "def": "se souvenir (sans de) : je me rappelle ce jour" },
+            { "fr": "oublier", "pl": "zapomnieć", "def": "≠ se souvenir" },
+            { "fr": "rappeler quelque chose à quelqu'un", "pl": "przypominać coś komuś", "def": "faire penser à un souvenir" },
+            { "fr": "l'enfance / l'adolescence", "pl": "dzieciństwo / młodość", "def": "la période où on est enfant / adolescent" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Zmysły", "fr": "Les sens" },
+          "items": [
+            { "fr": "la vue → voir", "pl": "wzrok → widzieć" },
+            { "fr": "l'ouïe → entendre", "pl": "słuch → słyszeć" },
+            { "fr": "l'odorat → sentir (une odeur)", "pl": "węch → czuć (zapach)" },
+            { "fr": "le goût → goûter", "pl": "smak → próbować, smakować" },
+            { "fr": "le toucher → toucher", "pl": "dotyk → dotykać" },
+            { "fr": "une odeur / un parfum", "pl": "zapach", "def": "ce qu'on sent avec le nez" },
+            { "fr": "un bruit / un son", "pl": "hałas / dźwięk", "def": "ce qu'on entend" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Jakie wspomnienie?", "fr": "Qualifier un souvenir" },
+          "items": [
+            { "fr": "un bon / un mauvais souvenir", "pl": "dobre / złe wspomnienie" },
+            { "fr": "un souvenir inoubliable", "pl": "niezapomniane wspomnienie", "def": "qu'on ne peut pas oublier" },
+            { "fr": "un souvenir précis / vague", "pl": "dokładne / mgliste wspomnienie", "def": "clair / pas clair" },
+            { "fr": "un souvenir d'enfance", "pl": "wspomnienie z dzieciństwa" },
+            { "fr": "être nostalgique", "pl": "tęsknić za przeszłością", "def": "regretter le passé avec un peu de tristesse" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les paysages et la météo",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Nad morzem", "fr": "À la mer" },
+          "items": [
+            { "fr": "une plage", "pl": "plaża" },
+            { "fr": "le sable", "pl": "piasek", "def": "la plage en est couverte" },
+            { "fr": "une vague", "pl": "fala", "def": "l'eau qui monte et arrive sur la plage" },
+            { "fr": "une falaise", "pl": "klif", "def": "un mur de roche au bord de la mer" },
+            { "fr": "un port", "pl": "port", "def": "là où les bateaux s'arrêtent" },
+            { "fr": "une île", "pl": "wyspa", "def": "une terre au milieu de l'eau" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Na wsi", "fr": "À la campagne" },
+          "items": [
+            { "fr": "un champ", "pl": "pole" },
+            { "fr": "une prairie", "pl": "łąka", "def": "un terrain couvert d'herbe" },
+            { "fr": "une colline", "pl": "wzgórze", "def": "une petite montagne" },
+            { "fr": "une rivière", "pl": "rzeka" },
+            { "fr": "une ferme", "pl": "gospodarstwo, farma", "def": "la maison et les terres d'un agriculteur" },
+            { "fr": "un village", "pl": "wieś, wioska" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "W górach", "fr": "À la montagne" },
+          "items": [
+            { "fr": "un sommet", "pl": "szczyt", "def": "le point le plus haut" },
+            { "fr": "une vallée", "pl": "dolina", "def": "le terrain bas entre deux montagnes" },
+            { "fr": "un lac", "pl": "jezioro" },
+            { "fr": "une forêt", "pl": "las" },
+            { "fr": "un chalet", "pl": "drewniany domek górski" },
+            { "fr": "un paysage", "pl": "krajobraz", "def": "ce qu'on voit d'un endroit" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Pogoda", "fr": "La météo" },
+          "items": [
+            { "fr": "il fait beau / mauvais", "pl": "jest ładna / brzydka pogoda" },
+            { "fr": "il fait chaud / froid / doux", "pl": "jest gorąco / zimno / łagodnie" },
+            { "fr": "il y a du soleil / du vent / des nuages", "pl": "świeci słońce / wieje wiatr / jest pochmurno" },
+            { "fr": "il y a du brouillard", "pl": "jest mgła", "def": "un nuage près du sol" },
+            { "fr": "il pleut / il neige", "pl": "pada deszcz / śnieg" },
+            { "fr": "une averse", "pl": "przelotny deszcz, ulewa", "def": "une pluie forte et courte" },
+            { "fr": "un orage", "pl": "burza", "def": "pluie, éclairs et tonnerre" },
+            { "fr": "le ciel est gris / bleu", "pl": "niebo jest szare / błękitne" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Pogoda we wspomnieniach – imparfait: il **faisait** beau, il **pleuvait**, il **neigeait**, il y **avait** du vent.",
+            "fr": "La météo dans un souvenir, à l'imparfait : il **faisait** beau, il **pleuvait**, il **neigeait**, il y **avait** du vent."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Raconter un souvenir",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Quand j'étais petit(e), je passais l'été chez mes grands-parents.", "pl": "Kiedy byłem mały / byłam mała, spędzałem / spędzałam lato u dziadków." },
+            { "fr": "Je me souviens de l'odeur des crêpes dans la cuisine.", "pl": "Pamiętam zapach naleśników w kuchni." },
+            { "fr": "Je me rappelle très bien ce jour-là.", "pl": "Bardzo dobrze pamiętam tamten dzień." },
+            { "fr": "Ça me rappelle mon enfance.", "pl": "To mi przypomina dzieciństwo." },
+            { "fr": "C'est un souvenir inoubliable.", "pl": "To niezapomniane wspomnienie." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Aimer et ne pas aimer",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "J'adorais aller à la plage avec mon père.", "pl": "Uwielbiałem / uwielbiałam chodzić z tatą na plażę." },
+            { "fr": "J'aimais beaucoup l'odeur de la mer.", "pl": "Bardzo lubiłem / lubiłam zapach morza." },
+            { "fr": "Ça me plaisait énormément.", "pl": "Ogromnie mi się to podobało." },
+            { "fr": "Je n'aimais pas du tout la pluie.", "pl": "Zupełnie nie lubiłem / nie lubiłam deszczu." },
+            { "fr": "Je détestais me lever tôt.", "pl": "Nienawidziłem / nienawidziłam wcześnie wstawać." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Interroger sur un souvenir",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Tu te souviens de ton premier jour d'école ?", "pl": "Pamiętasz swój pierwszy dzień w szkole?" },
+            { "fr": "Qu'est-ce que tu faisais pendant les vacances ?", "pl": "Co robiłeś / robiłaś w wakacje?" },
+            { "fr": "Où est-ce que vous habitiez quand vous étiez enfant ?", "pl": "Gdzie pan mieszkał, kiedy był pan dzieckiem?" },
+            { "fr": "Comment c'était ?", "pl": "Jak było?" },
+            { "fr": "Quel est ton meilleur souvenir ?", "pl": "Jakie jest twoje najlepsze wspomnienie?" }
+          ]
+        }
+      ]
+    }
+  ],
+  "practice": ["edito-a2/unite-02", "a2-connecteurs/01-chronologie", "a2-connecteurs/04-temps", "a1-connecteurs/02-conjunctions"]
+}

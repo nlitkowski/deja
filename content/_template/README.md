@@ -24,6 +24,19 @@ Skopiuj ten katalog do `content/<id-pakietu>/` (bez podkreślnika na początku: 
   - `translate-pl-fr`: `{ pl, answers: [...], hint? }` (tylko w trybie pomocy po polsku)
 - `boss` (opcjonalnie): `{ entryIds, exerciseTypes, questions, lives, timeLimitSec }`.
 
+## `sheets/<id>.json` (fiszki do czytania, opcjonalnie)
+
+Wpisz id w `"sheets": [...]` w `pack.json`. Fiszka: `{ id, label?, title, icon, summary?, sections, practice? }`, sekcja `{ kind: "grammar" | "vocabulary" | "phrases", title, blocks }`. Bloki:
+
+| `type` | pola | uwagi |
+|---|---|---|
+| `rule`, `text`, `warning` | `text: { pl, fr }` | reguła w ramce / zwykły tekst / typowy błąd |
+| `table` | `head`, `rows`, `title?` | komórki po francusku; każdy wiersz ma tyle komórek co `head` |
+| `examples` | `items: [{ fr, pl }]`, `title?` | `pl` widać tylko z pomocą po polsku |
+| `words` | `items: [{ fr, pl, def? }]`, `title?` | `def` to krótka francuska glosa dla trybu FR |
+
+`**pogrubienie**` i `\n` działają we wszystkich tekstach. `practice: ["<pakiet>/<jednostka>"]` dodaje przyciski „S'entraîner”. Wzór: `content/edito-a1/sheets/unite-04.json`.
+
 ## Język pomocy (polski / francuski)
 
 Użytkownik wybiera, w jakim języku widzi materiały pomocnicze. Każdy tekst pomocniczy ma więc dwie wersje:

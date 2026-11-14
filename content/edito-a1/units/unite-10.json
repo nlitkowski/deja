@@ -1,0 +1,233 @@
+{
+  "id": "unite-10",
+  "title": "Unité 10 · Au travail !",
+  "icon": "💼",
+  "entries": [
+    {
+      "id": "u10-cod-me-te",
+      "fr": "me, te, nous, vous (COD)",
+      "pl": "mnie, ciebie, nas, was / pana (dopełnienie bliższe)",
+      "def": "les pronoms COD pour je, tu, nous, vous ; ils se placent avant le verbe",
+      "examples": [
+        { "fr": "Ma collègue m'aide.", "pl": "Koleżanka mi pomaga." },
+        { "fr": "Je vous attends à 9 heures.", "pl": "Czekam na pana o 9." }
+      ],
+      "tip": {
+        "pl": "zaimek stoi przed czasownikiem; przed samogłoską me → m', te → t'",
+        "fr": "le pronom se place avant le verbe ; devant une voyelle, me → m', te → t'"
+      },
+      "confusables": ["u10-cod-le-la-les"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u10-cod-le-la-les",
+      "fr": "le, la, l', les (COD)",
+      "pl": "go, ją, je / ich (dopełnienie bliższe)",
+      "def": "les pronoms COD qui remplacent une personne ou une chose : le (masculin), la (féminin), les (pluriel)",
+      "examples": [
+        { "fr": "Ce client, je le connais.", "pl": "Tego klienta znam." },
+        { "fr": "Mes collègues, je les vois tous les jours.", "pl": "Moich współpracowników widuję codziennie." }
+      ],
+      "tip": {
+        "pl": "le / la przed samogłoską → l'; zaimek stoi przed czasownikiem",
+        "fr": "le / la devant une voyelle → l' ; le pronom se place avant le verbe"
+      },
+      "confusables": ["u10-cod-me-te"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u10-cod-place",
+      "fr": "je vais vous aider / appelle-moi",
+      "pl": "miejsce zaimka COD (bezokolicznik, tryb rozkazujący)",
+      "def": "verbe + infinitif : le pronom va avant l'infinitif ; impératif positif : verbe-moi, verbe-nous ; impératif négatif : ne me … pas",
+      "examples": [
+        { "fr": "Je vais vous aider.", "pl": "Pomogę wam." },
+        { "fr": "Appelle-moi ! Ne m'appelle pas ce soir !", "pl": "Zadzwoń do mnie! Nie dzwoń do mnie dziś wieczorem!" }
+      ],
+      "tip": {
+        "pl": "w twierdzącym trybie rozkazującym zaimek po czasowniku z łącznikiem (aidez-moi), w przeczącym przed nim (ne m'aidez pas)",
+        "fr": "à l'impératif positif, le pronom va après le verbe avec un tiret (aidez-moi) ; au négatif, avant (ne m'aidez pas)"
+      },
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u10-il-y-a-duree",
+      "fr": "il y a + durée",
+      "pl": "… temu",
+      "def": "il y a + durée + passé composé : un moment précis dans le passé",
+      "examples": [
+        { "fr": "J'ai fini mes études il y a deux ans.", "pl": "Skończyłem studia dwa lata temu." },
+        { "fr": "Il est parti il y a une heure.", "pl": "Wyszedł godzinę temu." }
+      ],
+      "tip": {
+        "pl": "il y a + passé composé = „temu”; depuis + présent = „od” (czynność trwa)",
+        "fr": "il y a + passé composé = un moment passé ; depuis + présent = l'action continue"
+      },
+      "confusables": ["a1-connecteurs/prep-pendant-depuis"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u10-encore-toujours",
+      "fr": "encore / toujours",
+      "pl": "nadal, wciąż",
+      "def": "l'action continue aujourd'hui",
+      "examples": [
+        { "fr": "Tu travailles encore chez Renault ?", "pl": "Nadal pracujesz w Renault?" },
+        { "fr": "Oui, j'y travaille toujours.", "pl": "Tak, nadal tam pracuję." }
+      ],
+      "tip": {
+        "pl": "toujours może też znaczyć „zawsze”",
+        "fr": "toujours peut aussi signifier « tout le temps »"
+      },
+      "confusables": ["u10-ne-plus"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u10-ne-plus",
+      "fr": "ne … plus",
+      "pl": "już nie",
+      "def": "ne + verbe + plus : l'action est terminée",
+      "examples": [
+        { "fr": "Je ne travaille plus chez Renault.", "pl": "Już nie pracuję w Renault." },
+        { "fr": "Elle n'est plus étudiante.", "pl": "Ona już nie jest studentką." }
+      ],
+      "tip": {
+        "pl": "bez pas: je ne travaille plus (nie „ne travaille pas plus”)",
+        "fr": "sans pas : je ne travaille plus (pas « je ne travaille pas plus »)"
+      },
+      "confusables": ["u10-encore-toujours"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u10-qui-que",
+      "fr": "qui / que",
+      "pl": "który (zaimki względne)",
+      "def": "qui est sujet, suivi d'un verbe ; que est COD, suivi d'un sujet",
+      "examples": [
+        { "fr": "J'ai un patron qui est très sympa.", "pl": "Mam szefa, który jest bardzo miły." },
+        { "fr": "Le métier que j'aime, c'est le journalisme.", "pl": "Zawód, który lubię, to dziennikarstwo." }
+      ],
+      "tip": {
+        "pl": "qui + czasownik, que + podmiot; que przed samogłoską → qu', qui nigdy się nie skraca",
+        "fr": "qui + verbe, que + sujet ; que devant une voyelle → qu', qui ne change jamais"
+      },
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u10-tres-trop-assez",
+      "fr": "très / trop / assez / un peu / vraiment",
+      "pl": "bardzo / za / wystarczająco / trochę / naprawdę",
+      "def": "ces mots se placent devant un adjectif pour donner l'intensité",
+      "examples": [
+        { "fr": "Mon travail est très intéressant.", "pl": "Moja praca jest bardzo ciekawa." },
+        { "fr": "Le bureau est trop loin.", "pl": "Biuro jest za daleko." }
+      ],
+      "tip": {
+        "pl": "trop jest negatywne (za dużo); przed przymiotnikiem nie używa się beaucoup",
+        "fr": "trop est négatif (plus que nécessaire) ; devant un adjectif, pas de beaucoup"
+      },
+      "confusables": ["u10-beaucoup"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u10-beaucoup",
+      "fr": "beaucoup / beaucoup de",
+      "pl": "dużo, bardzo (z czasownikiem)",
+      "def": "verbe + beaucoup ; beaucoup de + nom (sans article)",
+      "examples": [
+        { "fr": "J'aime beaucoup mes collègues.", "pl": "Bardzo lubię moich współpracowników." },
+        { "fr": "J'ai beaucoup de travail.", "pl": "Mam dużo pracy." }
+      ],
+      "tip": {
+        "pl": "beaucoup stoi po czasowniku; z rzeczownikiem: beaucoup de / d' (bez rodzajnika)",
+        "fr": "beaucoup se place après le verbe ; avec un nom : beaucoup de / d' (sans article)"
+      },
+      "confusables": ["u10-tres-trop-assez"],
+      "tags": ["grammaire"]
+    },
+    { "id": "u10-entreprise", "fr": "une entreprise", "pl": "firma, przedsiębiorstwo", "def": "une société où des personnes travaillent", "examples": [{ "fr": "Je travaille dans une petite entreprise.", "pl": "Pracuję w małej firmie." }], "tags": ["vocabulaire"] },
+    { "id": "u10-bureau", "fr": "un bureau", "pl": "biuro", "def": "une pièce où on travaille avec un ordinateur", "examples": [{ "fr": "Mon bureau est au troisième étage.", "pl": "Moje biuro jest na trzecim piętrze." }], "tags": ["vocabulaire"] },
+    { "id": "u10-usine", "fr": "une usine", "pl": "fabryka", "def": "un lieu où on fabrique des produits", "examples": [{ "fr": "Il travaille dans une usine de voitures.", "pl": "Pracuje w fabryce samochodów." }], "tags": ["vocabulaire"] },
+    { "id": "u10-salaire", "fr": "un salaire", "pl": "pensja", "def": "l'argent qu'on gagne chaque mois", "examples": [{ "fr": "Le salaire est intéressant.", "pl": "Pensja jest atrakcyjna." }], "tags": ["vocabulaire"] },
+    { "id": "u10-stage", "fr": "un stage", "pl": "staż, praktyki", "def": "une période de travail pour apprendre un métier", "examples": [{ "fr": "Je fais un stage de six mois.", "pl": "Odbywam sześciomiesięczny staż." }], "tags": ["vocabulaire"] },
+    { "id": "u10-reunion", "fr": "une réunion", "pl": "spotkanie, zebranie", "def": "on se rencontre pour parler du travail", "examples": [{ "fr": "La réunion commence à 10 heures.", "pl": "Zebranie zaczyna się o 10." }], "tags": ["vocabulaire"] },
+    { "id": "u10-ordinateur", "fr": "un ordinateur", "pl": "komputer", "def": "une machine pour écrire, calculer, envoyer des mails", "examples": [{ "fr": "Mon ordinateur est très lent.", "pl": "Mój komputer jest bardzo wolny." }], "tags": ["vocabulaire"] },
+    { "id": "u10-collegue", "fr": "un / une collègue", "pl": "współpracownik / współpracowniczka", "def": "une personne qui travaille avec moi", "examples": [{ "fr": "Mes collègues sont sympas.", "pl": "Moi współpracownicy są mili." }], "tags": ["vocabulaire"] },
+    { "id": "u10-examen", "fr": "un examen", "pl": "egzamin", "def": "un test à l'école ou à l'université", "examples": [{ "fr": "J'ai réussi mon examen.", "pl": "Zdałem egzamin." }], "tags": ["vocabulaire"] },
+    { "id": "u10-diplome", "fr": "un diplôme", "pl": "dyplom", "def": "le papier officiel à la fin des études", "examples": [{ "fr": "Elle a un diplôme d'ingénieure.", "pl": "Ma dyplom inżyniera." }], "tags": ["vocabulaire"] }
+  ],
+  "exercises": [
+    { "id": "u10-cod-me-1", "type": "gap-fill", "entryIds": ["u10-cod-me-te"], "data": { "sentence": "Ma collègue ___ aide beaucoup.", "answers": ["m'"], "pl": "Koleżanka bardzo mi pomaga.", "clue": "(la personne qui parle)" } },
+    { "id": "u10-cod-me-2", "type": "gap-fill", "entryIds": ["u10-cod-me-te"], "data": { "sentence": "Monsieur Dupont, je ___ attends à 9 heures.", "answers": ["vous"], "pl": "Panie Dupont, czekam na pana o 9." } },
+    { "id": "u10-cod-me-3", "type": "gap-fill", "entryIds": ["u10-cod-me-te"], "data": { "sentence": "Pendant la réunion, le chef ___ écoute, mes collègues et moi.", "answers": ["nous"], "pl": "Podczas zebrania szef słucha nas, mnie i moich współpracowników." } },
+    { "id": "u10-cod-me-4", "type": "gap-fill", "entryIds": ["u10-cod-me-te"], "data": { "sentence": "Tu as un problème ? Je ___ appelle ce soir.", "answers": ["t'"], "pl": "Masz problem? Zadzwonię do ciebie wieczorem.", "clue": "(la personne à qui on parle)" } },
+    { "id": "u10-cod-me-5", "type": "gap-fill", "entryIds": ["u10-cod-me-te"], "data": { "sentence": "Je parle trop vite ? Paul ne ___ comprend pas.", "answers": ["me"], "pl": "Mówię za szybko? Paweł mnie nie rozumie.", "clue": "(la personne qui parle)" } },
+
+    { "id": "u10-cod-le-1", "type": "gap-fill", "entryIds": ["u10-cod-le-la-les"], "data": { "sentence": "Ce client, je ___ connais bien.", "answers": ["le"], "pl": "Tego klienta dobrze znam." } },
+    { "id": "u10-cod-le-2", "type": "gap-fill", "entryIds": ["u10-cod-le-la-les"], "data": { "sentence": "La réunion ? Je ___ prépare ce matin.", "answers": ["la"], "pl": "Zebranie? Przygotowuję je dziś rano." } },
+    { "id": "u10-cod-le-3", "type": "gap-fill", "entryIds": ["u10-cod-le-la-les"], "data": { "sentence": "Mes collègues, je ___ vois tous les jours.", "answers": ["les"], "pl": "Moich współpracowników widuję codziennie." } },
+    { "id": "u10-cod-le-4", "type": "gap-fill", "entryIds": ["u10-cod-le-la-les"], "data": { "sentence": "Le rapport ? Je ___ envoie demain.", "answers": ["l'"], "pl": "Raport? Wyślę go jutro.", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
+
+    { "id": "u10-cod-place-1", "type": "gap-fill", "entryIds": ["u10-cod-place"], "data": { "sentence": "Vous avez beaucoup de travail ? Je vais ___ aider.", "answers": ["vous"], "pl": "Macie dużo pracy? Pomogę wam." } },
+    { "id": "u10-cod-place-2", "type": "gap-fill", "entryIds": ["u10-cod-place"], "data": { "sentence": "Appelle-___ demain matin !", "answers": ["moi"], "pl": "Zadzwoń do mnie jutro rano!", "clue": "(la personne qui parle)" } },
+    { "id": "u10-cod-place-3", "type": "gap-fill", "entryIds": ["u10-cod-place"], "data": { "sentence": "Ne ___ appelle pas pendant la réunion !", "answers": ["m'"], "pl": "Nie dzwoń do mnie podczas zebrania!", "clue": "(la personne qui parle)" } },
+    { "id": "u10-cod-place-4", "type": "gap-fill", "entryIds": ["u10-cod-place"], "data": { "sentence": "Ces documents ? Tu peux ___ lire avant lundi ?", "answers": ["les"], "pl": "Te dokumenty? Możesz je przeczytać przed poniedziałkiem?" } },
+    { "id": "u10-cod-place-5", "type": "gap-fill", "entryIds": ["u10-cod-place"], "data": { "sentence": "Aidez-___, on a un problème avec l'ordinateur !", "answers": ["nous"], "pl": "Pomóżcie nam, mamy problem z komputerem!", "clue": "(l'équipe qui parle)" } },
+
+    { "id": "u10-il-y-a-1", "type": "gap-fill", "entryIds": ["u10-il-y-a-duree"], "data": { "sentence": "J'ai fini mes études ___ deux ans.", "answers": ["il y a"], "pl": "Skończyłem studia dwa lata temu.", "clue": "(un moment dans le passé)" } },
+    { "id": "u10-il-y-a-2", "type": "gap-fill", "entryIds": ["u10-il-y-a-duree"], "data": { "sentence": "Nous avons commencé le projet ___ une semaine.", "answers": ["il y a"], "pl": "Zaczęliśmy projekt tydzień temu.", "clue": "(un moment dans le passé)" } },
+    { "id": "u10-il-y-a-3", "type": "gap-fill", "entryIds": ["u10-il-y-a-duree"], "data": { "sentence": "Elle est arrivée dans l'entreprise ___ trois mois.", "answers": ["il y a"], "pl": "Przyszła do firmy trzy miesiące temu.", "clue": "(un moment dans le passé)" } },
+    { "id": "u10-il-y-a-4", "type": "gap-fill", "entryIds": ["u10-il-y-a-duree"], "data": { "sentence": "Il a quitté son travail ___ un mois.", "answers": ["il y a"], "pl": "Rzucił pracę miesiąc temu.", "clue": "(un moment dans le passé)" } },
+
+    { "id": "u10-encore-1", "type": "gap-fill", "entryIds": ["u10-encore-toujours"], "data": { "sentence": "Tu travailles ___ chez Renault ?", "answers": ["encore", "toujours"], "pl": "Nadal pracujesz w Renault?", "clue": "(l'action continue)" } },
+    { "id": "u10-encore-2", "type": "gap-fill", "entryIds": ["u10-encore-toujours"], "data": { "sentence": "Oui, j'y travaille ___, depuis dix ans !", "answers": ["toujours", "encore"], "pl": "Tak, nadal tam pracuję, od dziesięciu lat!", "clue": "(l'action continue)" } },
+    { "id": "u10-encore-3", "type": "gap-fill", "entryIds": ["u10-encore-toujours"], "data": { "sentence": "Elle est ___ étudiante ? — Oui, elle finit son master en juin.", "answers": ["encore", "toujours"], "pl": "Ona nadal jest studentką? — Tak, kończy studia magisterskie w czerwcu.", "clue": "(l'action continue)" } },
+
+    { "id": "u10-ne-plus-1", "type": "gap-fill", "entryIds": ["u10-ne-plus"], "data": { "sentence": "Elle n'est ___ étudiante, elle est ingénieure.", "answers": ["plus"], "pl": "Ona już nie jest studentką, jest inżynierką.", "clue": "(avant, oui ; maintenant, non)" } },
+    { "id": "u10-ne-plus-2", "type": "gap-fill", "entryIds": ["u10-ne-plus"], "data": { "sentence": "Je ne travaille ___ chez Renault, j'ai changé d'entreprise.", "answers": ["plus"], "pl": "Już nie pracuję w Renault, zmieniłem firmę.", "clue": "(avant, oui ; maintenant, non)" } },
+    { "id": "u10-ne-plus-3", "type": "gap-fill", "entryIds": ["u10-ne-plus"], "data": { "sentence": "Depuis janvier, nous n'avons ___ de réunion le vendredi.", "answers": ["plus"], "pl": "Od stycznia nie mamy już zebrań w piątki.", "clue": "(avant, oui ; maintenant, non)" } },
+
+    { "id": "u10-qui-que-1", "type": "gap-fill", "entryIds": ["u10-qui-que"], "data": { "sentence": "J'ai un patron ___ est très sympa.", "answers": ["qui"], "pl": "Mam szefa, który jest bardzo miły." } },
+    { "id": "u10-qui-que-2", "type": "gap-fill", "entryIds": ["u10-qui-que"], "data": { "sentence": "C'est une entreprise ___ recrute des stagiaires.", "answers": ["qui"], "pl": "To firma, która przyjmuje stażystów." } },
+    { "id": "u10-qui-que-3", "type": "gap-fill", "entryIds": ["u10-qui-que"], "data": { "sentence": "Le cours ___ je préfère, c'est l'histoire.", "answers": ["que"], "pl": "Przedmiot, który najbardziej lubię, to historia." } },
+    { "id": "u10-qui-que-4", "type": "gap-fill", "entryIds": ["u10-qui-que"], "data": { "sentence": "Voici le rapport ___ on doit lire.", "answers": ["qu'"], "pl": "Oto raport, który musimy przeczytać.", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
+    { "id": "u10-qui-que-5", "type": "gap-fill", "entryIds": ["u10-qui-que"], "data": { "sentence": "J'ai une collègue ___ habite près de chez moi.", "answers": ["qui"], "pl": "Mam koleżankę z pracy, która mieszka blisko mnie." } },
+
+    { "id": "u10-tres-1", "type": "gap-fill", "entryIds": ["u10-tres-trop-assez"], "data": { "sentence": "Mon travail est ___ intéressant, j'adore !", "answers": ["très", "vraiment"], "pl": "Moja praca jest bardzo ciekawa, uwielbiam ją!", "clue": "(intensité forte et positive)" } },
+    { "id": "u10-tres-2", "type": "gap-fill", "entryIds": ["u10-tres-trop-assez"], "data": { "sentence": "Le bureau est ___ loin : deux heures de transport !", "answers": ["trop"], "pl": "Biuro jest za daleko: dwie godziny dojazdu!", "clue": "(plus que nécessaire, c'est négatif)" } },
+    { "id": "u10-tres-3", "type": "gap-fill", "entryIds": ["u10-tres-trop-assez"], "data": { "sentence": "Le salaire n'est pas ___ élevé pour vivre à Paris.", "answers": ["assez"], "pl": "Pensja nie jest wystarczająco wysoka, żeby żyć w Paryżu.", "clue": "(suffisamment)" } },
+    { "id": "u10-tres-4", "type": "gap-fill", "entryIds": ["u10-tres-trop-assez"], "data": { "sentence": "Je suis ___ stressé avant l'entretien, mais ça va.", "answers": ["un peu"], "pl": "Jestem trochę zestresowany przed rozmową, ale jest dobrze.", "clue": "(pas beaucoup)" } },
+
+    { "id": "u10-beaucoup-1", "type": "gap-fill", "entryIds": ["u10-beaucoup"], "data": { "sentence": "J'aime ___ mes collègues.", "answers": ["beaucoup"], "pl": "Bardzo lubię moich współpracowników.", "clue": "(intensité forte, après le verbe)" } },
+    { "id": "u10-beaucoup-2", "type": "gap-fill", "entryIds": ["u10-beaucoup"], "data": { "sentence": "Il travaille ___, même le week-end.", "answers": ["beaucoup"], "pl": "On dużo pracuje, nawet w weekend.", "clue": "(une grande quantité)" } },
+    { "id": "u10-beaucoup-3", "type": "gap-fill", "entryIds": ["u10-beaucoup"], "data": { "sentence": "Cette semaine, nous avons beaucoup ___ réunions.", "answers": ["de"], "pl": "W tym tygodniu mamy dużo zebrań.", "hint": { "pl": "beaucoup + ? + rzeczownik", "fr": "beaucoup + ? + nom" } } },
+
+    { "id": "u10-entreprise-1", "type": "gap-fill", "entryIds": ["u10-entreprise"], "data": { "sentence": "Renault est une grande ___ française.", "answers": ["entreprise", "société"], "pl": "Renault to duża francuska firma.", "clue": "(une société où des personnes travaillent)" } },
+    { "id": "u10-entreprise-2", "type": "translate-pl-fr", "entryIds": ["u10-entreprise"], "data": { "pl": "firma, przedsiębiorstwo", "answers": ["une entreprise", "l'entreprise"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u10-bureau-1", "type": "gap-fill", "entryIds": ["u10-bureau"], "data": { "sentence": "Je travaille dans un ___ au centre-ville.", "answers": ["bureau"], "pl": "Pracuję w biurze w centrum miasta.", "clue": "(une pièce avec des tables et des ordinateurs)" } },
+    { "id": "u10-bureau-2", "type": "translate-pl-fr", "entryIds": ["u10-bureau"], "data": { "pl": "biuro", "answers": ["un bureau", "le bureau"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u10-usine-1", "type": "gap-fill", "entryIds": ["u10-usine"], "data": { "sentence": "Mon père travaille dans une ___ de voitures.", "answers": ["usine"], "pl": "Mój tata pracuje w fabryce samochodów.", "clue": "(un lieu où on fabrique des produits)" } },
+    { "id": "u10-usine-2", "type": "translate-pl-fr", "entryIds": ["u10-usine"], "data": { "pl": "fabryka", "answers": ["une usine", "l'usine"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u10-salaire-1", "type": "gap-fill", "entryIds": ["u10-salaire"], "data": { "sentence": "Mon ___ est de 2 000 euros par mois.", "answers": ["salaire"], "pl": "Moja pensja wynosi 2000 euro miesięcznie.", "clue": "(l'argent qu'on gagne en travaillant)" } },
+    { "id": "u10-salaire-2", "type": "translate-pl-fr", "entryIds": ["u10-salaire"], "data": { "pl": "pensja", "answers": ["un salaire", "le salaire"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u10-stage-1", "type": "gap-fill", "entryIds": ["u10-stage"], "data": { "sentence": "Je fais un ___ de six mois dans une banque.", "answers": ["stage"], "pl": "Odbywam sześciomiesięczny staż w banku.", "clue": "(une période de travail pour apprendre)" } },
+    { "id": "u10-stage-2", "type": "translate-pl-fr", "entryIds": ["u10-stage"], "data": { "pl": "staż, praktyki", "answers": ["un stage", "le stage"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u10-reunion-1", "type": "gap-fill", "entryIds": ["u10-reunion"], "data": { "sentence": "Nous avons une ___ avec toute l'équipe à 10 heures.", "answers": ["réunion"], "pl": "O 10 mamy zebranie z całym zespołem.", "clue": "(on se rencontre pour parler du travail)" } },
+    { "id": "u10-reunion-2", "type": "translate-pl-fr", "entryIds": ["u10-reunion"], "data": { "pl": "spotkanie, zebranie", "answers": ["une réunion", "la réunion"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u10-ordinateur-1", "type": "gap-fill", "entryIds": ["u10-ordinateur"], "data": { "sentence": "J'écris mes mails sur mon ___.", "answers": ["ordinateur"], "pl": "Piszę maile na komputerze.", "clue": "(une machine avec un écran et un clavier)" } },
+    { "id": "u10-ordinateur-2", "type": "translate-pl-fr", "entryIds": ["u10-ordinateur"], "data": { "pl": "komputer", "answers": ["un ordinateur", "l'ordinateur"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u10-collegue-1", "type": "gap-fill", "entryIds": ["u10-collegue"], "data": { "sentence": "Ma ___ Sophie travaille avec moi depuis deux ans.", "answers": ["collègue"], "pl": "Moja współpracowniczka Zofia pracuje ze mną od dwóch lat.", "clue": "(une personne qui travaille avec moi)" } },
+    { "id": "u10-collegue-2", "type": "translate-pl-fr", "entryIds": ["u10-collegue"], "data": { "pl": "współpracownik", "answers": ["un collègue", "le collègue", "une collègue", "la collègue"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u10-examen-1", "type": "gap-fill", "entryIds": ["u10-examen"], "data": { "sentence": "Demain, j'ai un ___ de maths à l'université.", "answers": ["examen"], "pl": "Jutro mam egzamin z matematyki na uniwersytecie.", "clue": "(un test à l'université)" } },
+    { "id": "u10-examen-2", "type": "translate-pl-fr", "entryIds": ["u10-examen"], "data": { "pl": "egzamin", "answers": ["un examen", "l'examen"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u10-diplome-1", "type": "gap-fill", "entryIds": ["u10-diplome"], "data": { "sentence": "Il a eu son ___ de master l'année dernière.", "answers": ["diplôme"], "pl": "W zeszłym roku zdobył dyplom magistra.", "clue": "(le papier officiel à la fin des études)" } },
+    { "id": "u10-diplome-2", "type": "translate-pl-fr", "entryIds": ["u10-diplome"], "data": { "pl": "dyplom", "answers": ["un diplôme", "le diplôme"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
+  ],
+  "boss": {
+    "entryIds": ["u10-cod-me-te", "u10-cod-le-la-les", "u10-qui-que", "u10-il-y-a-duree", "u10-tres-trop-assez"],
+    "exerciseTypes": ["gap-fill"],
+    "questions": 10,
+    "lives": 3,
+    "timeLimitSec": 20
+  }
+}

@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { LocalizedSchema } from './localized';
+import type { Sheet } from './sheet';
 
 const localId = z.string().regex(/^[a-z0-9][a-z0-9-]*$/, 'id: małe litery, cyfry i myślniki');
 /** Local id (`prep-dans`) or cross-pack reference (`other-pack/prep-dans`). */
@@ -53,18 +54,23 @@ export const PackAchievementSchema = z.object({
   condition: z.looseObject({ type: z.string() }),
 });
 
-export const PackSchema = z.object({
-  id: localId,
-  version: z.number().int().nonnegative(),
-  title: z.string().min(1),
-  level: z.string().min(1),
-  icon: z.string().min(1),
-  requires: z.array(localId).default([]),
-  units: z.array(localId).min(1),
-  /** Word pairs where a missing accent yields a different valid word (ou/où), so it is wrong, not a near miss. */
-  accentPairs: z.array(z.tuple([z.string(), z.string()])).default([]),
-  achievements: z.array(PackAchievementSchema).default([]),
-});
+export const PackSchema = z
+  .object({
+    id: localId,
+    version: z.number().int().nonnegative(),
+    title: z.string().min(1),
+    level: z.string().min(1),
+    icon: z.string().min(1),
+    requires: z.array(localId).default([]),
+    /** Exercise units: `units/<id>.json`. */
+    units: z.array(localId).default([]),
+    /** Review sheets to read: `sheets/<id>.json`. */
+    sheets: z.array(localId).default([]),
+    /** Word pairs where a missing accent yields a different valid word (ou/où), so it is wrong, not a near miss. */
+    accentPairs: z.array(z.tuple([z.string(), z.string()])).default([]),
+    achievements: z.array(PackAchievementSchema).default([]),
+  })
+  .refine((p) => p.units.length + p.sheets.length > 0, { message: 'pakiet potrzebuje co najmniej jednej jednostki albo fiszki', path: ['units'] });
 
 export type Example = z.infer<typeof ExampleSchema>;
 export type RawEntry = z.infer<typeof EntrySchema>;
@@ -96,4 +102,4 @@ export type Unit = Omit<RawUnit, 'entries' | 'exercises' | 'boss'> & {
   boss?: BossConfig;
 };
 
-export type Pack = PackManifest & { unitList: Unit[] };
+export type Pack = PackManifest & { unitList: Unit[]; sheetList: Sheet[] };

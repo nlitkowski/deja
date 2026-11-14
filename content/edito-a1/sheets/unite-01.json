@@ -1,0 +1,456 @@
+{
+  "id": "unite-01",
+  "label": "Unité 1",
+  "title": "Je suis…",
+  "icon": "👋",
+  "summary": {
+    "pl": "Przedstawianie się i dane osobowe: narodowości, rodzajniki określone, przyimki przed miastami i krajami, quel, czasowniki être, avoir, s'appeler, parler.",
+    "fr": "Se présenter et donner des informations personnelles : les nationalités, les articles définis, les prépositions devant les villes et les pays, quel, les verbes être, avoir, s'appeler, parler."
+  },
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "Les verbes être et avoir",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "être", "avoir"],
+          "rows": [
+            ["je / j'", "suis", "**j'**ai"],
+            ["tu", "es", "as"],
+            ["il / elle / on", "est", "a"],
+            ["nous", "sommes", "avons"],
+            ["vous", "êtes", "avez"],
+            ["ils / elles", "**sont**", "**ont**"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**être** (być): narodowość, zawód, pochodzenie: je suis polonais, je suis de Cracovie.\n**avoir** (mieć): wiek zawsze z **ans**: j'**ai** vingt ans.",
+            "fr": "**être** : la nationalité, la profession, l'origine : je suis polonais, je suis de Cracovie.\n**avoir** : l'âge, toujours avec **ans** : j'**ai** vingt ans."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je **suis** étudiante. Je **suis** de Gdańsk.", "pl": "Jestem studentką. Jestem z Gdańska." },
+            { "fr": "Vous **êtes** français ?", "pl": "Jest pan Francuzem?" },
+            { "fr": "Il **a** quarante-cinq ans.", "pl": "On ma czterdzieści pięć lat." },
+            { "fr": "Nous **avons** un chat.", "pl": "Mamy kota." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Przed samogłoską **je** → **j'**: **j'ai**, nie « je ai ».\nUważaj na wymowę: ils **sont** [s] (są) i ils **ont** [z] (mają).",
+            "fr": "Devant une voyelle, **je** devient **j'** : **j'ai**, pas « je ai ».\nAttention à la prononciation : ils **sont** [s] et ils **ont** [z]."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les verbes s'appeler et parler",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "s'appeler", "parler"],
+          "rows": [
+            ["je", "**m'**appe**ll**e", "parl**e**"],
+            ["tu", "**t'**appe**ll**es", "parl**es**"],
+            ["il / elle / on", "**s'**appe**ll**e", "parl**e**"],
+            ["nous", "**nous** appe**l**ons", "parl**ons**"],
+            ["vous", "**vous** appe**l**ez", "parl**ez**"],
+            ["ils / elles", "**s'**appe**ll**ent", "parl**ent**"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**s'appeler** ma zaimek zwrotny (me, te, se, nous, vous, se), jak polskie « nazywam **się** ».\nPodwójne **ll** w formach je, tu, il, ils; jedno **l** przy nous i vous.\n**parler** to zwykły czasownik na **-er**. Język piszemy małą literą, zwykle bez rodzajnika: je parle **polonais**.",
+            "fr": "**s'appeler** a un pronom : me, te, se, nous, vous, se.\nDeux **l** avec je, tu, il, ils ; un **l** avec nous et vous.\n**parler** est un verbe en **-er** régulier. La langue s'écrit avec une minuscule, en général sans article : je parle **polonais**."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je **m'appelle** Marta. Et toi, tu **t'appelles** comment ?", "pl": "Mam na imię Marta. A ty, jak masz na imię?" },
+            { "fr": "Mes amis **s'appellent** Paul et Léa.", "pl": "Moi przyjaciele nazywają się Paul i Léa." },
+            { "fr": "Vous **parlez** anglais ?", "pl": "Czy mówi pan / pani po angielsku?" },
+            { "fr": "Nous **parlons** un peu français.", "pl": "Mówimy trochę po francusku." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Nie gub zaimka: **je m'appelle**, nie « je appelle ».\nKońcówki **-e, -es, -ent** są nieme: il parle i ils parlent brzmią tak samo.",
+            "fr": "N'oublie pas le pronom : **je m'appelle**, pas « je appelle ».\nLes finales **-e, -es, -ent** ne se prononcent pas : il parle et ils parlent ont le même son."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les adjectifs de nationalité",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Rodzaj żeński: zwykle dodajemy **-e**: polonais → polonais**e**.\nJeśli rodzaj męski kończy się na **-e**, nic się nie zmienia: belge → belge.\n**-ien** → **-ienne**: italien → italien**ne**.",
+            "fr": "Au féminin, on ajoute en général un **-e** : polonais → polonais**e**.\nSi le masculin finit par **-e**, pas de changement : belge → belge.\n**-ien** → **-ienne** : italien → italien**ne**."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "masculin", "féminin"],
+          "rows": [
+            ["+ e", "polonais, français, allemand, espagnol, américain", "polonais**e**, français**e**, allemand**e**, espagnol**e**, américain**e**"],
+            ["-e = -e", "belge, suisse, russe", "belge, suisse, russe"],
+            ["-ien → -ienne", "italien, canadien, ukrainien", "italien**ne**, canadien**ne**, ukrainien**ne**"]
+          ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "W liczbie mnogiej dodajemy **-s**: ils sont allemand**s**, elles sont italienne**s**. Jeśli słowo kończy się na **-s**, nic się nie zmienia: ils sont polonais.\nW rodzaju żeńskim słychać ostatnią spółgłoskę: polonai(s) → polonai**se**.",
+            "fr": "Au pluriel, on ajoute un **-s** : ils sont allemand**s**, elles sont italienne**s**. Si le mot finit par **-s**, pas de changement : ils sont polonais.\nAu féminin, on entend la consonne finale : polonai(s) → polonai**se**."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Marek est **polonais**, sa femme est **française**.", "pl": "Marek jest Polakiem, jego żona jest Francuzką." },
+            { "fr": "Giulia est **italienne**, elle habite à Rome.", "pl": "Giulia jest Włoszką, mieszka w Rzymie." },
+            { "fr": "Ils sont **canadiens**.", "pl": "Oni są Kanadyjczykami." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Przymiotnik narodowości piszemy **małą literą**: elle est **polonaise**. Wielką literą piszemy tylko rzeczownik: **une Polonaise** (Polka).",
+            "fr": "L'adjectif de nationalité s'écrit avec une **minuscule** : elle est **polonaise**. Le nom prend une majuscule : **une Polonaise**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les articles définis",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Rodzajnik określony stoi przed rzeczownikiem i pokazuje jego rodzaj:\n**le** (rodzaj męski), **la** (rodzaj żeński), **l'** (przed samogłoską lub niemym h), **les** (liczba mnoga).",
+            "fr": "L'article défini est devant le nom et montre son genre :\n**le** (masculin), **la** (féminin), **l'** (devant une voyelle ou un h muet), **les** (pluriel)."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "singulier", "pluriel"],
+          "rows": [
+            ["masculin", "**le** cinéma, **le** Japon", "**les** livres"],
+            ["féminin", "**la** musique, **la** France", "**les** langues"],
+            ["voyelle / h muet", "**l'**adresse, **l'**Italie, **l'**hôtel", "**les** adresses"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "J'aime **la** musique et **le** cinéma.", "pl": "Lubię muzykę i kino." },
+            { "fr": "**L'**Espagne est un beau pays.", "pl": "Hiszpania to piękny kraj." },
+            { "fr": "**Les** États-Unis sont très grands.", "pl": "Stany Zjednoczone są bardzo duże." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "W języku polskim nie ma rodzajników, ale po francusku rzeczownik prawie zawsze go ma. Ucz się słów razem z rodzajnikiem: **la** musique, **le** sport.\nNie mów « la amie », tylko **l'amie**.",
+            "fr": "En polonais, il n'y a pas d'article, mais en français le nom a presque toujours un article. Apprends les mots avec leur article : **la** musique, **le** sport.\nOn ne dit pas « la amie », on dit **l'amie**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les prépositions devant les villes et les pays",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Polskie « w » ma po francusku kilka form:\n**à** + miasto: à Paris\n**en** + kraj rodzaju żeńskiego (często na -e) albo zaczynający się od samogłoski: en France, en Iran\n**au** + kraj rodzaju męskiego: au Japon\n**aux** + kraj w liczbie mnogiej: aux États-Unis",
+            "fr": "Pour dire où on habite ou où on va :\n**à** + ville : à Paris\n**en** + pays féminin (souvent en -e) ou qui commence par une voyelle : en France, en Iran\n**au** + pays masculin : au Japon\n**aux** + pays pluriel : aux États-Unis"
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "pays / ville", "où ?"],
+          "rows": [
+            ["ville", "Varsovie, Lyon", "**à** Varsovie, **à** Lyon"],
+            ["pays féminin", "la Pologne, la Belgique", "**en** Pologne, **en** Belgique"],
+            ["pays masculin", "le Canada, le Portugal", "**au** Canada, **au** Portugal"],
+            ["pays pluriel", "les États-Unis, les Pays-Bas", "**aux** États-Unis, **aux** Pays-Bas"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "J'habite **à** Cracovie, **en** Pologne.", "pl": "Mieszkam w Krakowie, w Polsce." },
+            { "fr": "Mon frère travaille **au** Brésil.", "pl": "Mój brat pracuje w Brazylii." },
+            { "fr": "Elle étudie **aux** États-Unis.", "pl": "Ona studiuje w Stanach Zjednoczonych." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Nie mów « en Paris » ani « à France ». Miasto → **à**, kraj → **en / au / aux**.\nUwaga na wyjątek: **le** Mexique jest rodzaju męskiego, więc **au** Mexique.",
+            "fr": "On ne dit pas « en Paris » ou « à France ». Une ville → **à**, un pays → **en / au / aux**.\nAttention : **le** Mexique est masculin, donc **au** Mexique."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "L'adjectif interrogatif quel",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**quel** (jaki, który) zgadza się z rzeczownikiem w rodzaju i liczbie. Wszystkie cztery formy brzmią tak samo.",
+            "fr": "**quel** s'accorde avec le nom : masculin ou féminin, singulier ou pluriel. Les quatre formes ont le même son."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "singulier", "pluriel"],
+          "rows": [
+            ["masculin", "**quel** âge ?", "**quels** sports ?"],
+            ["féminin", "**quelle** nationalité ?", "**quelles** langues ?"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "**Quel** est votre nom ?", "pl": "Jak się pan / pani nazywa?" },
+            { "fr": "**Quelle** est votre adresse ?", "pl": "Jaki jest pana / pani adres?" },
+            { "fr": "Tu as **quel** âge ?", "pl": "Ile masz lat?" },
+            { "fr": "Vous parlez **quelles** langues ?", "pl": "Jakimi językami pan / pani mówi?" },
+            { "fr": "**Quels** sports tu aimes ?", "pl": "Jakie sporty lubisz?" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "« Jak masz na imię? » to **Comment** tu t'appelles ?, ale « Jakie jest twoje imię? » to **Quel** est ton prénom ?\nSłowa na **-té** są zwykle rodzaju żeńskiego: **quelle** nationalité (wyjątek: l'été).",
+            "fr": "On dit **Comment** tu t'appelles ? mais **Quel** est ton prénom ?\nLes mots en **-té** sont en général féminins : **quelle** nationalité (exception : l'été)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les pays et les nationalités",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Europa", "fr": "L'Europe" },
+          "items": [
+            { "fr": "la Pologne → polonais / polonaise", "pl": "Polska → polski / polska" },
+            { "fr": "la France → français / française", "pl": "Francja → francuski / francuska" },
+            { "fr": "l'Allemagne → allemand / allemande", "pl": "Niemcy → niemiecki / niemiecka" },
+            { "fr": "l'Espagne → espagnol / espagnole", "pl": "Hiszpania → hiszpański / hiszpańska" },
+            { "fr": "l'Italie → italien / italienne", "pl": "Włochy → włoski / włoska" },
+            { "fr": "l'Angleterre → anglais / anglaise", "pl": "Anglia → angielski / angielska" },
+            { "fr": "le Portugal → portugais / portugaise", "pl": "Portugalia → portugalski / portugalska" },
+            { "fr": "la Belgique → belge", "pl": "Belgia → belgijski / belgijska" },
+            { "fr": "la Suisse → suisse", "pl": "Szwajcaria → szwajcarski / szwajcarska" },
+            { "fr": "l'Ukraine → ukrainien / ukrainienne", "pl": "Ukraina → ukraiński / ukraińska" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Inne kontynenty", "fr": "Les autres continents" },
+          "items": [
+            { "fr": "les États-Unis → américain / américaine", "pl": "Stany Zjednoczone → amerykański / amerykańska" },
+            { "fr": "le Canada → canadien / canadienne", "pl": "Kanada → kanadyjski / kanadyjska" },
+            { "fr": "le Mexique → mexicain / mexicaine", "pl": "Meksyk → meksykański / meksykańska" },
+            { "fr": "le Brésil → brésilien / brésilienne", "pl": "Brazylia → brazylijski / brazylijska" },
+            { "fr": "le Japon → japonais / japonaise", "pl": "Japonia → japoński / japońska" },
+            { "fr": "la Chine → chinois / chinoise", "pl": "Chiny → chiński / chińska" },
+            { "fr": "le Maroc → marocain / marocaine", "pl": "Maroko → marokański / marokańska" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Nazwa języka = przymiotnik w rodzaju męskim: **le polonais**, **le français**, **l'anglais**.\nNie ma osobnego słowa « Polak »: **un Polonais**, **une Polonaise**.",
+            "fr": "Le nom de la langue = l'adjectif au masculin : **le polonais**, **le français**, **l'anglais**.\nLa personne : **un Polonais**, **une Polonaise**, avec une majuscule."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "L'identité",
+      "blocks": [
+        {
+          "type": "words",
+          "items": [
+            { "fr": "un nom (de famille)", "pl": "nazwisko", "def": "Nowak, Martin, Dupont…" },
+            { "fr": "un prénom", "pl": "imię", "def": "Anna, Pierre, Léa…" },
+            { "fr": "un âge", "pl": "wiek", "def": "le nombre d'années" },
+            { "fr": "une nationalité", "pl": "narodowość", "def": "polonaise, française…" },
+            { "fr": "une adresse", "pl": "adres", "def": "le numéro, la rue, la ville" },
+            { "fr": "un code postal", "pl": "kod pocztowy", "def": "75001, 31-000…" },
+            { "fr": "un numéro de téléphone", "pl": "numer telefonu", "def": "06 12 34 56 78" },
+            { "fr": "une adresse e-mail", "pl": "adres e-mail", "def": "nom@exemple.fr" },
+            { "fr": "une profession", "pl": "zawód", "def": "le travail : médecin, professeur…" },
+            { "fr": "une langue", "pl": "język", "def": "le polonais, le français…" },
+            { "fr": "une date de naissance", "pl": "data urodzenia", "def": "le jour où on est né" },
+            { "fr": "une signature", "pl": "podpis", "def": "le nom écrit à la main" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "W adresie e-mail", "fr": "Dans une adresse e-mail" },
+          "items": [
+            { "fr": "@ = arobase", "pl": "@ = małpa" },
+            { "fr": ". = point", "pl": ". = kropka" },
+            { "fr": "- = tiret", "pl": "- = myślnik" },
+            { "fr": "_ = tiret bas", "pl": "_ = podkreślnik" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les nombres de 32 à 100",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", ""],
+          "rows": [
+            ["32", "trente-deux"],
+            ["40", "quarante"],
+            ["41", "quarante **et** un"],
+            ["50", "cinquante"],
+            ["60", "soixante"],
+            ["70", "soixante-dix (60 + 10)"],
+            ["71", "soixante **et** onze (60 + 11)"],
+            ["75", "soixante-quinze (60 + 15)"],
+            ["80", "quatre-vingt**s** (4 × 20)"],
+            ["81", "quatre-vingt-un"],
+            ["90", "quatre-vingt-dix (4 × 20 + 10)"],
+            ["99", "quatre-vingt-dix-neuf"],
+            ["100", "cent"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**et** tylko w 21, 31, 41, 51, 61 i 71: quarante **et** un, soixante **et** onze. Ale: quatre-vingt-un, quatre-vingt-onze.\n**quatre-vingts** ma **-s** tylko wtedy, gdy nic po nim nie następuje: quatre-vingt**s**, ale quatre-vingt-deux.",
+            "fr": "**et** seulement pour 21, 31, 41, 51, 61 et 71 : quarante **et** un, soixante **et** onze. Mais : quatre-vingt-un, quatre-vingt-onze.\n**quatre-vingts** prend un **-s** seulement quand il est seul : quatre-vingt**s**, mais quatre-vingt-deux."
+          }
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "W Belgii i Szwajcarii mówi się **septante** (70) i **nonante** (90).",
+            "fr": "En Belgique et en Suisse, on dit **septante** (70) et **nonante** (90)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les loisirs",
+      "blocks": [
+        {
+          "type": "words",
+          "items": [
+            { "fr": "le sport", "pl": "sport", "def": "le football, le tennis, la natation…" },
+            { "fr": "la musique", "pl": "muzyka", "def": "le rock, le jazz, le rap…" },
+            { "fr": "le cinéma", "pl": "kino", "def": "on y regarde des films" },
+            { "fr": "la lecture", "pl": "czytanie", "def": "lire des livres" },
+            { "fr": "les voyages", "pl": "podróże", "def": "visiter d'autres pays" },
+            { "fr": "la danse", "pl": "taniec" },
+            { "fr": "la cuisine", "pl": "gotowanie", "def": "préparer des repas" },
+            { "fr": "la photo", "pl": "fotografia" },
+            { "fr": "les jeux vidéo", "pl": "gry wideo" },
+            { "fr": "la nature", "pl": "przyroda", "def": "la forêt, la montagne, la mer" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Po **j'aime** stawiamy rodzajnik określony: j'aime **le** sport, j'aime **les** voyages.\nAlbo bezokolicznik: j'aime **lire**, j'aime **voyager**.",
+            "fr": "Après **j'aime**, on met l'article défini : j'aime **le** sport, j'aime **les** voyages.\nOu un infinitif : j'aime **lire**, j'aime **voyager**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Se présenter",
+      "blocks": [
+        {
+          "type": "examples",
+          "title": { "pl": "Mówię o sobie", "fr": "Je parle de moi" },
+          "items": [
+            { "fr": "Bonjour ! Je m'appelle Anna Nowak.", "pl": "Dzień dobry! Nazywam się Anna Nowak." },
+            { "fr": "Je suis polonaise, de Wrocław.", "pl": "Jestem Polką, z Wrocławia." },
+            { "fr": "J'ai trente-quatre ans.", "pl": "Mam trzydzieści cztery lata." },
+            { "fr": "J'habite à Lyon, en France.", "pl": "Mieszkam w Lyonie, we Francji." },
+            { "fr": "Je parle polonais, anglais et un peu français.", "pl": "Mówię po polsku, po angielsku i trochę po francusku." },
+            { "fr": "J'aime le cinéma et les voyages.", "pl": "Lubię kino i podróże." }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Pytam drugą osobę", "fr": "Je pose des questions" },
+          "items": [
+            { "fr": "Tu t'appelles comment ? / Comment vous vous appelez ?", "pl": "Jak masz na imię? / Jak się pan / pani nazywa?" },
+            { "fr": "Tu es de quelle nationalité ?", "pl": "Jakiej jesteś narodowości?" },
+            { "fr": "Tu habites où ?", "pl": "Gdzie mieszkasz?" },
+            { "fr": "Vous avez quel âge ?", "pl": "Ile ma pan / pani lat?" },
+            { "fr": "Qu'est-ce que tu aimes ?", "pl": "Co lubisz?" },
+            { "fr": "Enchanté ! / Enchantée !", "pl": "Miło mi! (mówi mężczyzna / kobieta)" }
+          ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "**tu** – do przyjaciela, rodziny, dziecka. **vous** – do nieznajomego, w pracy, do kilku osób (pan, pani, państwo, wy).",
+            "fr": "**tu** : pour un ami, la famille, un enfant. **vous** : pour une personne inconnue, au travail, ou pour plusieurs personnes."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Donner des informations personnelles",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Quel est votre numéro de téléphone ?", "pl": "Jaki jest pana / pani numer telefonu?" },
+            { "fr": "C'est le 06 45 78 92 31.", "pl": "To 06 45 78 92 31." },
+            { "fr": "Quelle est votre adresse e-mail ?", "pl": "Jaki jest pana / pani adres e-mail?" },
+            { "fr": "C'est anna point nowak arobase exemple point fr.", "pl": "To anna kropka nowak małpa exemple kropka fr." },
+            { "fr": "J'habite 15, rue des Lilas, à Nantes.", "pl": "Mieszkam przy rue des Lilas 15, w Nantes." },
+            { "fr": "Vous pouvez épeler, s'il vous plaît ?", "pl": "Czy może pan / pani przeliterować?" },
+            { "fr": "Pardon ? Vous pouvez répéter ?", "pl": "Słucham? Może pan / pani powtórzyć?" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Po francusku podajemy numer telefonu **parami**: 06 45 78 92 31 = zéro six, quarante-cinq, soixante-dix-huit, quatre-vingt-douze, trente et un.",
+            "fr": "En France, on dit le numéro de téléphone **deux par deux** : 06 45 78 92 31 = zéro six, quarante-cinq, soixante-dix-huit, quatre-vingt-douze, trente et un."
+          }
+        }
+      ]
+    }
+  ],
+  "practice": ["edito-a1/unite-01", "a1-connecteurs/03-contractions"]
+}

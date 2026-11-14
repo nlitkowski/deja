@@ -1,0 +1,180 @@
+{
+  "id": "01-chronologie",
+  "title": "Chronologie",
+  "icon": "🧭",
+  "entries": [
+    {
+      "id": "u01-dabord",
+      "fr": "d'abord",
+      "pl": "najpierw",
+      "def": "la première étape d'une suite d'actions",
+      "examples": [
+        { "fr": "D'abord, je prends une douche, ensuite je m'habille.", "pl": "Najpierw biorę prysznic, potem się ubieram." }
+      ],
+      "tip": {
+        "pl": "d'abord = pierwszy krok w kolejności; au début = na początku jakiegoś okresu (filmu, kursu)",
+        "fr": "« d'abord » = la première étape ; « au début » = la première partie d'une période (un film, un cours)"
+      },
+      "confusables": ["u01-au-debut-a-la-fin"],
+      "tags": ["connecteur", "chronologie"]
+    },
+    {
+      "id": "u01-ensuite-puis",
+      "fr": "ensuite / puis",
+      "pl": "potem, następnie",
+      "def": "l'étape suivante dans une suite d'actions",
+      "examples": [
+        { "fr": "Je fais les courses, ensuite je prépare le dîner.", "pl": "Robię zakupy, potem przygotowuję kolację." },
+        { "fr": "Il a mangé, puis il est parti.", "pl": "Zjadł, a potem wyszedł." }
+      ],
+      "tip": {
+        "pl": "ensuite i puis znaczą to samo; często et puis; w mowie potocznej też après",
+        "fr": "« ensuite » et « puis » ont le même sens ; on dit souvent « et puis » ; à l'oral, on dit aussi « après »"
+      },
+      "confusables": ["u01-apres"],
+      "tags": ["connecteur", "chronologie"]
+    },
+    {
+      "id": "u01-apres",
+      "fr": "après + nom",
+      "pl": "po (czymś)",
+      "def": "quand une chose est finie ; le contraire de « avant »",
+      "examples": [
+        { "fr": "On se promène après le déjeuner.", "pl": "Spacerujemy po obiedzie." }
+      ],
+      "tip": {
+        "pl": "après + rzeczownik: après le travail, après le film; przeciwieństwo: avant",
+        "fr": "« après » + nom : après le travail, après le film ; le contraire : « avant »"
+      },
+      "confusables": ["u01-avant-de", "u01-ensuite-puis"],
+      "tags": ["connecteur", "chronologie"]
+    },
+    {
+      "id": "u01-enfin-finalement",
+      "fr": "enfin / finalement",
+      "pl": "w końcu, na koniec; nareszcie",
+      "def": "la dernière étape ; « enfin » = après une longue attente ; « finalement » = le résultat n'est pas celui qu'on avait prévu",
+      "examples": [
+        { "fr": "D'abord on visite le musée, ensuite on mange, et enfin on rentre.", "pl": "Najpierw zwiedzamy muzeum, potem jemy, a na koniec wracamy." },
+        { "fr": "Je voulais sortir, mais finalement je suis resté chez moi.", "pl": "Chciałem wyjść, ale ostatecznie zostałem w domu." }
+      ],
+      "tip": {
+        "pl": "enfin = nareszcie / na koniec; finalement = ostatecznie (inaczej, niż planowano)",
+        "fr": "« enfin » = après une longue attente, ou la dernière étape ; « finalement » = au bout du compte, autrement que prévu"
+      },
+      "confusables": ["u01-au-debut-a-la-fin"],
+      "tags": ["connecteur", "chronologie"]
+    },
+    {
+      "id": "u01-au-debut-a-la-fin",
+      "fr": "au début / à la fin (de)",
+      "pl": "na początku / na końcu (czegoś)",
+      "def": "la première partie / la dernière partie d'une période ou d'une histoire",
+      "examples": [
+        { "fr": "Au début du film, le héros est seul.", "pl": "Na początku filmu bohater jest sam." },
+        { "fr": "On paie à la fin du repas.", "pl": "Płaci się na końcu posiłku." }
+      ],
+      "tip": {
+        "pl": "au début de + rzeczownik (au début du cours); nie mylić à la fin (na końcu czegoś) z enfin (nareszcie)",
+        "fr": "au début de + nom (au début du cours) ; ne pas confondre « à la fin » (la dernière partie) et « enfin » (après une longue attente)"
+      },
+      "confusables": ["u01-enfin-finalement", "u01-dabord"],
+      "tags": ["connecteur", "chronologie"]
+    },
+    {
+      "id": "u01-avant-de",
+      "fr": "avant de + infinitif / avant + nom",
+      "pl": "zanim, przed (czymś)",
+      "def": "une action qui se passe plus tôt qu'une autre",
+      "examples": [
+        { "fr": "Je lis un peu avant de dormir.", "pl": "Czytam trochę przed snem." },
+        { "fr": "Je bois un café avant le cours.", "pl": "Piję kawę przed zajęciami." }
+      ],
+      "tip": {
+        "pl": "avant de + bezokolicznik (avant de partir), ale avant + rzeczownik (avant le départ); przed samogłoską avant d'",
+        "fr": "avant de + infinitif (avant de partir), mais avant + nom (avant le départ) ; devant une voyelle : avant d'"
+      },
+      "confusables": ["u01-apres"],
+      "tags": ["connecteur", "chronologie"]
+    },
+    {
+      "id": "u01-pendant-que",
+      "fr": "pendant que + verbe",
+      "pl": "podczas gdy, kiedy (w tym samym czasie)",
+      "def": "deux actions qui se passent au même moment ; « pendant » + nom, « pendant que » + sujet et verbe",
+      "examples": [
+        { "fr": "Je fais la cuisine pendant que tu mets la table.", "pl": "Gotuję, podczas gdy ty nakrywasz do stołu." }
+      ],
+      "tip": {
+        "pl": "pendant + rzeczownik (pendant le film), ale pendant que + zdanie (pendant que tu dors)",
+        "fr": "« pendant » + nom (pendant le film), mais « pendant que » + sujet et verbe (pendant que tu dors)"
+      },
+      "confusables": ["a1-connecteurs/prep-pendant-depuis", "u01-en-meme-temps"],
+      "tags": ["connecteur", "chronologie"]
+    },
+    {
+      "id": "u01-en-meme-temps",
+      "fr": "en même temps",
+      "pl": "w tym samym czasie, jednocześnie",
+      "def": "au même moment",
+      "examples": [
+        { "fr": "Je ne peux pas parler et écrire en même temps.", "pl": "Nie mogę jednocześnie mówić i pisać." }
+      ],
+      "confusables": ["u01-pendant-que"],
+      "tags": ["connecteur", "chronologie"]
+    }
+  ],
+  "boss": {
+    "entryIds": ["u01-dabord", "u01-ensuite-puis", "u01-enfin-finalement", "u01-avant-de", "u01-pendant-que"],
+    "exerciseTypes": ["gap-fill"],
+    "questions": 10,
+    "lives": 3,
+    "timeLimitSec": 20
+  },
+  "exercises": [
+    { "id": "dabord-1", "type": "gap-fill", "entryIds": ["u01-dabord"], "data": { "sentence": "___, je prends une douche, ensuite je m'habille.", "answers": ["d'abord", "premièrement"], "pl": "Najpierw biorę prysznic, potem się ubieram.", "clue": "(la première étape)" } },
+    { "id": "dabord-2", "type": "gap-fill", "entryIds": ["u01-dabord"], "data": { "sentence": "Pour faire une omelette, tu casses ___ les œufs, puis tu les bats.", "answers": ["d'abord"], "pl": "Żeby zrobić omlet, najpierw rozbijasz jajka, potem je ubijasz.", "clue": "(la première étape)" } },
+    { "id": "dabord-3", "type": "gap-fill", "entryIds": ["u01-dabord"], "data": { "sentence": "On va ___ au musée, et après on mange au restaurant.", "answers": ["d'abord"], "pl": "Najpierw idziemy do muzeum, a potem jemy w restauracji.", "clue": "(avant le restaurant)" } },
+    { "id": "dabord-4", "type": "gap-fill", "entryIds": ["u01-dabord"], "data": { "sentence": "Il faut ___ acheter les billets, ensuite on choisit les places.", "answers": ["d'abord"], "pl": "Najpierw trzeba kupić bilety, potem wybieramy miejsca.", "clue": "(la première étape)" } },
+    { "id": "dabord-5", "type": "translate-pl-fr", "entryIds": ["u01-dabord"], "data": { "pl": "najpierw", "answers": ["d'abord"] } },
+
+    { "id": "ensuite-1", "type": "gap-fill", "entryIds": ["u01-ensuite-puis"], "data": { "sentence": "D'abord je me lève, ___ je prends mon petit-déjeuner.", "answers": ["ensuite", "puis", "après"], "pl": "Najpierw wstaję, potem jem śniadanie.", "clue": "(l'étape suivante)" } },
+    { "id": "ensuite-2", "type": "gap-fill", "entryIds": ["u01-ensuite-puis"], "data": { "sentence": "Il a ouvert la porte, et ___ il est sorti.", "answers": ["puis", "ensuite", "après"], "pl": "Otworzył drzwi, a potem wyszedł.", "clue": "(l'action suivante)" } },
+    { "id": "ensuite-3", "type": "gap-fill", "entryIds": ["u01-ensuite-puis"], "data": { "sentence": "Tournez à gauche, ___ continuez tout droit.", "answers": ["puis", "ensuite", "après"], "pl": "Proszę skręcić w lewo, potem iść prosto.", "clue": "(l'étape suivante)" } },
+    { "id": "ensuite-4", "type": "translate-pl-fr", "entryIds": ["u01-ensuite-puis"], "data": { "pl": "potem, następnie", "answers": ["ensuite", "puis", "après"] } },
+
+    { "id": "apres-1", "type": "gap-fill", "entryIds": ["u01-apres"], "data": { "sentence": "On se promène ___ le déjeuner.", "answers": ["après"], "pl": "Spacerujemy po obiedzie.", "clue": "(le déjeuner est fini)" } },
+    { "id": "apres-2", "type": "gap-fill", "entryIds": ["u01-apres"], "data": { "sentence": "___ le film, on est allés boire un verre.", "answers": ["après"], "pl": "Po filmie poszliśmy na drinka.", "clue": "(le film est terminé)" } },
+    { "id": "apres-3", "type": "gap-fill", "entryIds": ["u01-apres"], "data": { "sentence": "Je me brosse les dents ___ chaque repas.", "answers": ["après"], "pl": "Myję zęby po każdym posiłku.", "clue": "(le repas est fini)" } },
+    { "id": "apres-4", "type": "gap-fill", "entryIds": ["u01-apres"], "data": { "sentence": "Tu passes chez moi ___ le travail ?", "answers": ["après"], "pl": "Wpadniesz do mnie po pracy?", "clue": "(quand tu as fini de travailler)" } },
+
+    { "id": "enfin-1", "type": "gap-fill", "entryIds": ["u01-enfin-finalement"], "data": { "sentence": "D'abord, on visite le musée, ensuite on mange, et ___ on rentre à l'hôtel.", "answers": ["enfin", "finalement"], "pl": "Najpierw zwiedzamy muzeum, potem jemy, a na koniec wracamy do hotelu.", "clue": "(la dernière étape)" } },
+    { "id": "enfin-2", "type": "gap-fill", "entryIds": ["u01-enfin-finalement"], "data": { "sentence": "Le bus arrive ___ ! On attend depuis une heure.", "answers": ["enfin", "finalement"], "pl": "Autobus nareszcie przyjeżdża! Czekamy od godziny.", "clue": "(après une longue attente)" } },
+    { "id": "enfin-3", "type": "gap-fill", "entryIds": ["u01-enfin-finalement"], "data": { "sentence": "Je voulais aller à la plage, mais ___ je suis resté à la maison.", "answers": ["finalement"], "pl": "Chciałem iść na plażę, ale ostatecznie zostałem w domu.", "hint": { "pl": "inaczej, niż planowano", "fr": "autrement que prévu" }, "clue": "(ce n'était pas le plan)" } },
+    { "id": "enfin-4", "type": "gap-fill", "entryIds": ["u01-enfin-finalement"], "data": { "sentence": "On a beaucoup hésité, et ___ on a choisi l'appartement près de la gare.", "answers": ["finalement", "enfin"], "pl": "Długo się wahaliśmy i ostatecznie wybraliśmy mieszkanie blisko dworca.", "clue": "(au bout du compte)" } },
+    { "id": "enfin-5", "type": "translate-pl-fr", "entryIds": ["u01-enfin-finalement"], "data": { "pl": "Nareszcie!", "answers": ["Enfin", "Enfin !"] } },
+
+    { "id": "debut-fin-1", "type": "gap-fill", "entryIds": ["u01-au-debut-a-la-fin"], "data": { "sentence": "___ du film, le héros est seul.", "answers": ["au début"], "pl": "Na początku filmu bohater jest sam.", "clue": "(les premières minutes)" } },
+    { "id": "debut-fin-2", "type": "gap-fill", "entryIds": ["u01-au-debut-a-la-fin"], "data": { "sentence": "En France, on paie ___ du repas.", "answers": ["à la fin"], "pl": "We Francji płaci się na końcu posiłku.", "clue": "(quand on a fini de manger)" } },
+    { "id": "debut-fin-3", "type": "gap-fill", "entryIds": ["u01-au-debut-a-la-fin"], "data": { "sentence": "___, je ne comprenais rien, mais maintenant, ça va.", "answers": ["au début"], "pl": "Na początku nic nie rozumiałem, ale teraz jest dobrze.", "clue": "(les premiers jours)" } },
+    { "id": "debut-fin-4", "type": "gap-fill", "entryIds": ["u01-au-debut-a-la-fin"], "data": { "sentence": "Il est arrivé ___ de la réunion, quand tout le monde partait.", "answers": ["à la fin"], "pl": "Przyszedł pod koniec zebrania, kiedy wszyscy wychodzili.", "hint": { "pl": "nie enfin", "fr": "pas « enfin »" } } },
+    { "id": "debut-fin-5", "type": "translate-pl-fr", "entryIds": ["u01-au-debut-a-la-fin"], "data": { "pl": "na początku kursu", "answers": ["au début du cours"] } },
+
+    { "id": "avant-de-1", "type": "gap-fill", "entryIds": ["u01-avant-de"], "data": { "sentence": "Lave-toi les mains ___ manger.", "answers": ["avant de"], "pl": "Umyj ręce przed jedzeniem.", "clue": "(et ensuite, tu manges)" } },
+    { "id": "avant-de-2", "type": "gap-fill", "entryIds": ["u01-avant-de"], "data": { "sentence": "Je lis un peu ___ dormir.", "answers": ["avant de"], "pl": "Czytam trochę przed snem.", "clue": "(et après, je dors)" } },
+    { "id": "avant-de-3", "type": "gap-fill", "entryIds": ["u01-avant-de"], "data": { "sentence": "Téléphone-moi ___ partir.", "answers": ["avant de"], "pl": "Zadzwoń do mnie, zanim wyjdziesz.", "clue": "(et ensuite, tu pars)" } },
+    { "id": "avant-de-4", "type": "gap-fill", "entryIds": ["u01-avant-de"], "data": { "sentence": "Réfléchis bien ___ acheter une voiture.", "answers": ["avant d'"], "pl": "Dobrze się zastanów, zanim kupisz samochód.", "hint": { "pl": "przed samogłoską elizja", "fr": "élision devant une voyelle" } } },
+    { "id": "avant-de-5", "type": "gap-fill", "entryIds": ["u01-avant-de"], "data": { "sentence": "Il arrive toujours ___ le professeur.", "answers": ["avant"], "pl": "On zawsze przychodzi przed nauczycielem.", "hint": { "pl": "+ rzeczownik", "fr": "+ nom" }, "clue": "(le professeur arrive après lui)" } },
+
+    { "id": "pendant-que-1", "type": "gap-fill", "entryIds": ["u01-pendant-que"], "data": { "sentence": "Je fais la cuisine ___ tu mets la table.", "answers": ["pendant que", "tandis que", "quand"], "pl": "Gotuję, podczas gdy ty nakrywasz do stołu.", "clue": "(les deux actions au même moment)" } },
+    { "id": "pendant-que-2", "type": "gap-fill", "entryIds": ["u01-pendant-que"], "data": { "sentence": "Profite du soleil ___ il fait beau !", "answers": ["pendant qu'", "tant qu'"], "pl": "Korzystaj ze słońca, póki jest ładna pogoda!", "hint": { "pl": "przed samogłoską elizja", "fr": "élision devant une voyelle" }, "clue": "(aujourd'hui, il fait beau, mais demain, il va pleuvoir)" } },
+    { "id": "pendant-que-3", "type": "gap-fill", "entryIds": ["u01-pendant-que"], "data": { "sentence": "J'ai lu un livre ___ le voyage.", "answers": ["pendant", "durant"], "pl": "Przeczytałem książkę podczas podróży.", "hint": { "pl": "+ rzeczownik", "fr": "+ nom" }, "clue": "(tout le temps du voyage)" } },
+    { "id": "pendant-que-4", "type": "gap-fill", "entryIds": ["u01-pendant-que"], "data": { "sentence": "Ne parle pas ___ je téléphone !", "answers": ["pendant que", "quand"], "pl": "Nie mów, kiedy rozmawiam przez telefon!", "clue": "(au moment où je suis au téléphone)" } },
+    { "id": "pendant-que-5", "type": "translate-pl-fr", "entryIds": ["u01-pendant-que"], "data": { "pl": "podczas gdy ty śpisz", "answers": ["pendant que tu dors", "tandis que tu dors"] } },
+
+    { "id": "meme-temps-1", "type": "gap-fill", "entryIds": ["u01-en-meme-temps"], "data": { "sentence": "Je ne peux pas parler et écrire ___.", "answers": ["en même temps", "à la fois"], "pl": "Nie mogę jednocześnie mówić i pisać.", "clue": "(au même moment)" } },
+    { "id": "meme-temps-2", "type": "gap-fill", "entryIds": ["u01-en-meme-temps"], "data": { "sentence": "Tout le monde parle ___ ! Je ne comprends rien.", "answers": ["en même temps", "à la fois"], "pl": "Wszyscy mówią naraz! Nic nie rozumiem.", "clue": "(au même moment)" } },
+    { "id": "meme-temps-3", "type": "gap-fill", "entryIds": ["u01-en-meme-temps"], "data": { "sentence": "Il travaille dans un café et, ___, il étudie à l'université.", "answers": ["en même temps", "à côté"], "pl": "Pracuje w kawiarni i jednocześnie studiuje na uniwersytecie.", "clue": "(pendant la même période)" } },
+    { "id": "meme-temps-4", "type": "translate-pl-fr", "entryIds": ["u01-en-meme-temps"], "data": { "pl": "w tym samym czasie", "answers": ["en même temps", "au même moment"] } }
+  ]
+}

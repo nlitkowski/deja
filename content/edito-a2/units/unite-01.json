@@ -1,0 +1,235 @@
+{
+  "id": "unite-01",
+  "title": "Unité 1 · Nouvelles vies",
+  "icon": "🌱",
+  "entries": [
+    {
+      "id": "u01-pc-avoir",
+      "fr": "passé composé avec avoir (participes réguliers)",
+      "pl": "czas przeszły z avoir (regularne imiesłowy)",
+      "def": "avoir au présent + participe passé : -er → -é, -ir → -i, -re → -u",
+      "examples": [
+        { "fr": "Nous avons travaillé à Lyon.", "pl": "Pracowaliśmy w Lyonie." },
+        { "fr": "Elle a fini ses études en 2020.", "pl": "Skończyła studia w 2020 roku." }
+      ],
+      "tip": {
+        "pl": "parler → parlé, finir → fini, attendre → attendu; z avoir imiesłów zwykle się nie odmienia",
+        "fr": "parler → parlé, finir → fini, attendre → attendu ; avec avoir, en général, pas d'accord"
+      },
+      "confusables": ["u01-pc-etre"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u01-pc-irreguliers",
+      "fr": "participes passés irréguliers",
+      "pl": "nieregularne imiesłowy",
+      "def": "fait, pris, mis, vu, eu, été, dit, écrit, lu, bu, pu, voulu, connu, ouvert…",
+      "examples": [
+        { "fr": "J'ai eu mon bac en 2015.", "pl": "Zdałem / zdałam maturę w 2015 roku." },
+        { "fr": "Ils ont fait un stage au Canada.", "pl": "Odbyli staż w Kanadzie." }
+      ],
+      "tip": {
+        "pl": "naucz się na pamięć: avoir → eu, être → été, faire → fait, prendre → pris, voir → vu, écrire → écrit",
+        "fr": "à apprendre par cœur : avoir → eu, être → été, faire → fait, prendre → pris, voir → vu, écrire → écrit"
+      },
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u01-pc-etre",
+      "fr": "passé composé avec être",
+      "pl": "czas przeszły z être",
+      "def": "verbes de mouvement et de changement d'état (aller, venir, naître, devenir, rester…) : être + participe accordé avec le sujet",
+      "examples": [
+        { "fr": "Elle est née à Marseille.", "pl": "Urodziła się w Marsylii." },
+        { "fr": "Ils sont partis au Québec.", "pl": "Wyjechali do Quebecu." }
+      ],
+      "tip": {
+        "pl": "z être imiesłów zgadza się z podmiotem: elle est allée, ils sont venus, elles sont restées",
+        "fr": "avec être, le participe s'accorde avec le sujet : elle est allée, ils sont venus, elles sont restées"
+      },
+      "confusables": ["u01-pc-avoir"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u01-pc-pronominaux",
+      "fr": "passé composé des verbes pronominaux",
+      "pl": "czas przeszły czasowników zwrotnych",
+      "def": "pronom + être + participe accordé : je me suis levé(e), ils se sont mariés",
+      "examples": [
+        { "fr": "Paul et Anne se sont mariés en 2018.", "pl": "Paul i Anne pobrali się w 2018 roku." },
+        { "fr": "Elle s'est installée à Nantes.", "pl": "Zamieszkała w Nantes." }
+      ],
+      "tip": {
+        "pl": "czasowniki zwrotne zawsze z être; zaimek stoi przed être: je me suis, tu t'es, il s'est",
+        "fr": "les verbes pronominaux se conjuguent toujours avec être ; le pronom se place avant être : je me suis, tu t'es, il s'est"
+      },
+      "confusables": ["u01-pc-etre"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u01-ne-rien",
+      "fr": "ne … rien",
+      "pl": "nic (nie)",
+      "def": "la négation de « quelque chose » ; au passé composé : je n'ai rien vu",
+      "examples": [
+        { "fr": "Je ne comprends rien.", "pl": "Nic nie rozumiem." },
+        { "fr": "Il n'a rien dit.", "pl": "Nic nie powiedział." }
+      ],
+      "tip": {
+        "pl": "w passé composé rien stoi PRZED imiesłowem: je n'ai rien fait",
+        "fr": "au passé composé, rien se place AVANT le participe : je n'ai rien fait"
+      },
+      "confusables": ["u01-ne-personne"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u01-ne-personne",
+      "fr": "ne … personne",
+      "pl": "nikt / nikogo (nie)",
+      "def": "la négation de « quelqu'un » ; au passé composé : je n'ai vu personne",
+      "examples": [
+        { "fr": "Je ne connais personne ici.", "pl": "Nikogo tu nie znam." },
+        { "fr": "Nous n'avons rencontré personne.", "pl": "Nikogo nie spotkaliśmy." }
+      ],
+      "tip": {
+        "pl": "w passé composé personne stoi PO imiesłowie: je n'ai vu personne (a nie « je n'ai personne vu »)",
+        "fr": "au passé composé, personne se place APRÈS le participe : je n'ai vu personne"
+      },
+      "confusables": ["u01-ne-rien"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u01-ne-jamais-plus",
+      "fr": "ne … jamais / ne … plus",
+      "pl": "nigdy / już nie",
+      "def": "jamais = 0 fois ; plus = c'est fini, avant oui, maintenant non",
+      "examples": [
+        { "fr": "Je ne suis jamais allé au Japon.", "pl": "Nigdy nie byłem w Japonii." },
+        { "fr": "Elle ne travaille plus, elle est à la retraite.", "pl": "Ona już nie pracuje, jest na emeryturze." }
+      ],
+      "tip": {
+        "pl": "w passé composé jamais i plus stoją między posiłkowym a imiesłowem: je n'ai jamais vu, il n'est plus venu",
+        "fr": "au passé composé, jamais et plus se placent entre l'auxiliaire et le participe : je n'ai jamais vu, il n'est plus venu"
+      },
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u01-il-y-a",
+      "fr": "il y a + durée",
+      "pl": "… temu",
+      "def": "un moment précis dans le passé, avec le passé composé : il y a trois ans",
+      "examples": [
+        { "fr": "J'ai déménagé il y a deux ans.", "pl": "Przeprowadziłem / przeprowadziłam się dwa lata temu." },
+        { "fr": "Ils se sont rencontrés il y a longtemps.", "pl": "Poznali się dawno temu." }
+      ],
+      "tip": {
+        "pl": "il y a = temu (zakończony moment); depuis = od (trwa nadal); pendant = przez (zamknięty okres)",
+        "fr": "il y a = un moment terminé ; depuis = ça continue aujourd'hui ; pendant = une durée terminée"
+      },
+      "confusables": ["a1-connecteurs/prep-pendant-depuis"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u01-intention",
+      "fr": "avoir l'intention de / compter / penser + infinitif",
+      "pl": "mieć zamiar / zamierzać + bezokolicznik",
+      "def": "pour exprimer un projet : j'ai l'intention de partir, je compte partir, je pense partir",
+      "examples": [
+        { "fr": "J'ai l'intention de changer de métier.", "pl": "Mam zamiar zmienić zawód." },
+        { "fr": "Nous comptons partir en septembre.", "pl": "Zamierzamy wyjechać we wrześniu." }
+      ],
+      "tip": {
+        "pl": "avoir l'intention DE + bezokolicznik; compter i penser bez przyimka: je compte partir",
+        "fr": "avoir l'intention DE + infinitif ; compter et penser sans préposition : je compte partir"
+      },
+      "tags": ["grammaire"]
+    },
+    { "id": "u01-naissance", "fr": "une naissance", "pl": "narodziny", "def": "le jour où un bébé arrive au monde", "examples": [{ "fr": "La naissance de ma fille a changé ma vie.", "pl": "Narodziny córki zmieniły moje życie." }], "tags": ["vocabulaire"] },
+    { "id": "u01-mariage", "fr": "un mariage", "pl": "ślub; małżeństwo", "def": "la cérémonie où deux personnes se marient", "examples": [{ "fr": "Leur mariage a eu lieu en juin.", "pl": "Ich ślub odbył się w czerwcu." }], "tags": ["vocabulaire"] },
+    { "id": "u01-demenagement", "fr": "un déménagement", "pl": "przeprowadzka", "def": "on change de logement ou de ville", "examples": [{ "fr": "Après mon déménagement, j'ai trouvé un nouveau travail.", "pl": "Po przeprowadzce znalazłem / znalazłam nową pracę." }], "tags": ["vocabulaire"] },
+    { "id": "u01-formation", "fr": "une formation", "pl": "szkolenie; wykształcenie", "def": "des cours pour apprendre un métier", "examples": [{ "fr": "Elle a suivi une formation de cuisinière.", "pl": "Ukończyła kurs kucharski." }], "tags": ["vocabulaire"] },
+    { "id": "u01-carriere", "fr": "une carrière", "pl": "kariera (zawodowa)", "def": "toute la vie professionnelle d'une personne", "examples": [{ "fr": "Il a fait toute sa carrière dans la même entreprise.", "pl": "Całą karierę spędził w tej samej firmie." }], "tags": ["vocabulaire"] },
+    { "id": "u01-retraite", "fr": "la retraite", "pl": "emerytura", "def": "la période où on ne travaille plus, après la vie professionnelle", "examples": [{ "fr": "Mon grand-père est à la retraite depuis cinq ans.", "pl": "Mój dziadek jest na emeryturze od pięciu lat." }], "tags": ["vocabulaire"] },
+    { "id": "u01-comedien", "fr": "un comédien / une comédienne", "pl": "aktor / aktorka", "def": "personne qui joue au théâtre ou au cinéma", "examples": [{ "fr": "Elle est devenue comédienne à vingt ans.", "pl": "Została aktorką w wieku dwudziestu lat." }], "tags": ["vocabulaire"] },
+    { "id": "u01-realisateur", "fr": "un réalisateur / une réalisatrice", "pl": "reżyser / reżyserka (filmowy)", "def": "personne qui fait un film", "examples": [{ "fr": "Ce réalisateur a tourné trois films en Afrique.", "pl": "Ten reżyser nakręcił trzy filmy w Afryce." }], "tags": ["vocabulaire"] },
+    { "id": "u01-jeu-societe", "fr": "un jeu de société", "pl": "gra planszowa", "def": "un jeu avec des cartes ou un plateau, à plusieurs, à la maison", "examples": [{ "fr": "Le dimanche, on joue à des jeux de société.", "pl": "W niedziele gramy w gry planszowe." }], "tags": ["vocabulaire"] },
+    { "id": "u01-balade", "fr": "une balade", "pl": "spacer, przechadzka", "def": "une petite promenade, à pied ou à vélo", "examples": [{ "fr": "On fait une balade au bord du lac ?", "pl": "Pójdziemy na spacer nad jezioro?" }], "tags": ["vocabulaire"] }
+  ],
+  "exercises": [
+    { "id": "u01-pca-1", "type": "gap-fill", "entryIds": ["u01-pc-avoir"], "data": { "sentence": "Hier soir, nous ___ un film italien. (regarder)", "answers": ["avons regardé"], "pl": "Wczoraj wieczorem obejrzeliśmy włoski film." } },
+    { "id": "u01-pca-2", "type": "gap-fill", "entryIds": ["u01-pc-avoir"], "data": { "sentence": "Elle ___ ses études en 2020. (finir)", "answers": ["a fini"], "pl": "Skończyła studia w 2020 roku." } },
+    { "id": "u01-pca-3", "type": "gap-fill", "entryIds": ["u01-pc-avoir"], "data": { "sentence": "Tu ___ longtemps devant le cinéma ? (attendre)", "answers": ["as attendu"], "pl": "Długo czekałeś / czekałaś przed kinem?" } },
+    { "id": "u01-pca-4", "type": "gap-fill", "entryIds": ["u01-pc-avoir"], "data": { "sentence": "Ils ___ dix ans dans une banque. (travailler)", "answers": ["ont travaillé"], "pl": "Pracowali dziesięć lat w banku." } },
+    { "id": "u01-pca-5", "type": "gap-fill", "entryIds": ["u01-pc-avoir"], "data": { "sentence": "Vous ___ une nouvelle formation ? (choisir)", "answers": ["avez choisi"], "pl": "Wybraliście nowe szkolenie?" } },
+
+    { "id": "u01-pci-1", "type": "gap-fill", "entryIds": ["u01-pc-irreguliers"], "data": { "sentence": "Tu ___ ton diplôme quand ? (avoir)", "answers": ["as eu"], "pl": "Kiedy dostałeś / dostałaś dyplom?" } },
+    { "id": "u01-pci-2", "type": "gap-fill", "entryIds": ["u01-pc-irreguliers"], "data": { "sentence": "Nous ___ une exposition de Monet. (voir)", "answers": ["avons vu"], "pl": "Widzieliśmy wystawę Moneta." } },
+    { "id": "u01-pci-3", "type": "gap-fill", "entryIds": ["u01-pc-irreguliers"], "data": { "sentence": "Elle ___ un livre sur sa vie. (écrire)", "answers": ["a écrit"], "pl": "Napisała książkę o swoim życiu." } },
+    { "id": "u01-pci-4", "type": "gap-fill", "entryIds": ["u01-pc-irreguliers"], "data": { "sentence": "Vous ___ quoi ce week-end ? (faire)", "answers": ["avez fait"], "pl": "Co robiliście w ten weekend?" } },
+    { "id": "u01-pci-5", "type": "gap-fill", "entryIds": ["u01-pc-irreguliers"], "data": { "sentence": "Il ___ le train de 7 heures. (prendre)", "answers": ["a pris"], "pl": "Pojechał pociągiem o 7." } },
+    { "id": "u01-pci-6", "type": "gap-fill", "entryIds": ["u01-pc-irreguliers"], "data": { "sentence": "Ils ___ comédiens pendant dix ans. (être)", "answers": ["ont été"], "pl": "Byli aktorami przez dziesięć lat.", "hint": { "pl": "être tworzy passé composé z avoir", "fr": "être se conjugue avec avoir au passé composé" } } },
+
+    { "id": "u01-pce-1", "type": "gap-fill", "entryIds": ["u01-pc-etre"], "data": { "sentence": "Ma sœur ___ en 1995 à Marseille. (naître)", "answers": ["est née"], "pl": "Moja siostra urodziła się w 1995 roku w Marsylii." } },
+    { "id": "u01-pce-2", "type": "gap-fill", "entryIds": ["u01-pc-etre"], "data": { "sentence": "Mes parents ___ à Lyon en 2010. (arriver)", "answers": ["sont arrivés"], "pl": "Moi rodzice przyjechali do Lyonu w 2010 roku." } },
+    { "id": "u01-pce-3", "type": "gap-fill", "entryIds": ["u01-pc-etre"], "data": { "sentence": "Léa et Chloé ___ au concert hier soir. (aller)", "answers": ["sont allées"], "pl": "Léa i Chloé poszły wczoraj wieczorem na koncert." } },
+    { "id": "u01-pce-4", "type": "gap-fill", "entryIds": ["u01-pc-etre"], "data": { "sentence": "Mon oncle ___ musicien à trente ans. (devenir)", "answers": ["est devenu"], "pl": "Mój wujek został muzykiem w wieku trzydziestu lat." } },
+    { "id": "u01-pce-5", "type": "gap-fill", "entryIds": ["u01-pc-etre", "u01-pc-avoir"], "data": { "sentence": "Après le bac, Julie ___ un an à Londres. (rester)", "answers": ["est restée"], "pl": "Po maturze Julie została rok w Londynie.", "hint": { "pl": "rester → être", "fr": "rester → être" } } },
+
+    { "id": "u01-pcp-1", "type": "gap-fill", "entryIds": ["u01-pc-pronominaux"], "data": { "sentence": "Paul et Anne ___ en 2018. (se marier)", "answers": ["se sont mariés"], "pl": "Paul i Anne pobrali się w 2018 roku." } },
+    { "id": "u01-pcp-2", "type": "gap-fill", "entryIds": ["u01-pc-pronominaux"], "data": { "sentence": "Ce matin, Julie ___ à 6 heures. (se lever)", "answers": ["s'est levée"], "pl": "Dziś rano Julie wstała o 6." } },
+    { "id": "u01-pcp-3", "type": "gap-fill", "entryIds": ["u01-pc-pronominaux"], "data": { "sentence": "Léa, tu ___ au festival ? (s'amuser)", "answers": ["t'es amusée"], "pl": "Léa, dobrze się bawiłaś na festiwalu?" } },
+    { "id": "u01-pcp-4", "type": "gap-fill", "entryIds": ["u01-pc-pronominaux"], "data": { "sentence": "Mon frère ___ à Nantes après ses études. (s'installer)", "answers": ["s'est installé"], "pl": "Mój brat zamieszkał w Nantes po studiach." } },
+
+    { "id": "u01-rien-1", "type": "gap-fill", "entryIds": ["u01-ne-rien"], "data": { "sentence": "Je n'ai ___ mangé ce matin, j'ai faim.", "answers": ["rien"], "pl": "Nic nie jadłem / jadłam rano, jestem głodny / głodna.", "clue": "(zéro chose)" } },
+    { "id": "u01-rien-2", "type": "gap-fill", "entryIds": ["u01-ne-rien"], "data": { "sentence": "Tu as entendu quelque chose ? – Non, je ___ entendu.", "answers": ["n'ai rien"], "pl": "Słyszałeś coś? – Nie, nic nie słyszałem.", "hint": { "pl": "ne + avoir + rien", "fr": "ne + avoir + rien" } } },
+    { "id": "u01-rien-3", "type": "gap-fill", "entryIds": ["u01-ne-rien"], "data": { "sentence": "Il ne fait ___ le dimanche, il se repose.", "answers": ["rien"], "pl": "W niedzielę nic nie robi, odpoczywa.", "clue": "(zéro activité)" } },
+
+    { "id": "u01-pers-1", "type": "gap-fill", "entryIds": ["u01-ne-personne"], "data": { "sentence": "Je ne connais ___ dans cette ville.", "answers": ["personne"], "pl": "Nikogo nie znam w tym mieście.", "clue": "(zéro personne)" } },
+    { "id": "u01-pers-2", "type": "gap-fill", "entryIds": ["u01-ne-personne"], "data": { "sentence": "Tu as vu quelqu'un ? – Non, je ___ personne. (voir)", "answers": ["n'ai vu"], "pl": "Widziałeś kogoś? – Nie, nikogo nie widziałem.", "hint": { "pl": "personne stoi po imiesłowie", "fr": "personne se place après le participe" } } },
+    { "id": "u01-pers-3", "type": "gap-fill", "entryIds": ["u01-ne-personne"], "data": { "sentence": "À la fête, je n'ai parlé à ___ : j'étais trop timide.", "answers": ["personne"], "pl": "Na imprezie z nikim nie rozmawiałem: byłem zbyt nieśmiały.", "clue": "(zéro personne)" } },
+    { "id": "u01-pers-4", "type": "gap-fill", "entryIds": ["u01-ne-personne"], "data": { "sentence": "___ n'est venu à mon anniversaire !", "answers": ["personne"], "pl": "Nikt nie przyszedł na moje urodziny!", "clue": "(zéro personne)" } },
+
+    { "id": "u01-jp-1", "type": "gap-fill", "entryIds": ["u01-ne-jamais-plus"], "data": { "sentence": "Je ___ à Rome, mais je rêve d'y aller. (ne … jamais – aller, passé composé)", "answers": ["ne suis jamais allé", "ne suis jamais allée"], "pl": "Nigdy nie byłem / byłam w Rzymie, ale marzę, żeby tam pojechać." } },
+    { "id": "u01-jp-2", "type": "gap-fill", "entryIds": ["u01-ne-jamais-plus"], "data": { "sentence": "Il ___ ici : il a déménagé. (ne … plus – habiter, présent)", "answers": ["n'habite plus"], "pl": "On już tu nie mieszka: przeprowadził się." } },
+    { "id": "u01-jp-3", "type": "gap-fill", "entryIds": ["u01-ne-jamais-plus"], "data": { "sentence": "Depuis son accident, elle ne fait ___ de vélo.", "answers": ["plus"], "pl": "Od wypadku już nie jeździ na rowerze.", "clue": "(avant oui, maintenant non)" } },
+    { "id": "u01-jp-4", "type": "gap-fill", "entryIds": ["u01-ne-jamais-plus"], "data": { "sentence": "Nous n'avons ___ vu la mer : c'est la première fois !", "answers": ["jamais"], "pl": "Nigdy nie widzieliśmy morza: to pierwszy raz!", "clue": "(zéro fois)" } },
+
+    { "id": "u01-ilya-1", "type": "gap-fill", "entryIds": ["u01-il-y-a"], "data": { "sentence": "J'ai eu mon diplôme ___ trois ans.", "answers": ["il y a"], "pl": "Dostałem / dostałam dyplom trzy lata temu.", "clue": "(un moment terminé dans le passé)" } },
+    { "id": "u01-ilya-2", "type": "gap-fill", "entryIds": ["u01-il-y-a", "a1-connecteurs/prep-pendant-depuis"], "data": { "sentence": "J'ai habité à Lyon ___ cinq ans, de 2010 à 2015.", "answers": ["pendant"], "pl": "Mieszkałem / mieszkałam w Lyonie przez pięć lat, od 2010 do 2015.", "clue": "(une durée terminée)" } },
+    { "id": "u01-ilya-3", "type": "gap-fill", "entryIds": ["u01-il-y-a", "a1-connecteurs/prep-pendant-depuis"], "data": { "sentence": "J'apprends le piano ___ deux ans et je continue.", "answers": ["depuis"], "pl": "Uczę się gry na pianinie od dwóch lat i dalej się uczę.", "clue": "(ça continue aujourd'hui)" } },
+    { "id": "u01-ilya-4", "type": "gap-fill", "entryIds": ["u01-il-y-a", "a1-connecteurs/prep-pendant-depuis"], "data": { "sentence": "Ils se sont mariés ___ dix ans.", "answers": ["il y a"], "pl": "Pobrali się dziesięć lat temu.", "clue": "(un moment terminé dans le passé)" } },
+
+    { "id": "u01-int-1", "type": "gap-fill", "entryIds": ["u01-intention"], "data": { "sentence": "Nous ___ l'intention de partir au Canada. (avoir)", "answers": ["avons"], "pl": "Mamy zamiar wyjechać do Kanady." } },
+    { "id": "u01-int-2", "type": "gap-fill", "entryIds": ["u01-intention"], "data": { "sentence": "Je ___ faire une formation l'année prochaine. (compter)", "answers": ["compte"], "pl": "Zamierzam zrobić kurs w przyszłym roku." } },
+    { "id": "u01-int-3", "type": "gap-fill", "entryIds": ["u01-intention"], "data": { "sentence": "Qu'est-ce que tu ___ faire après tes études ? (penser)", "answers": ["penses"], "pl": "Co myślisz robić po studiach?" } },
+    { "id": "u01-int-4", "type": "gap-fill", "entryIds": ["u01-intention"], "data": { "sentence": "Elle a l'intention ___ devenir réalisatrice.", "answers": ["de"], "pl": "Ona ma zamiar zostać reżyserką.", "clue": "(préposition)" } },
+
+    { "id": "u01-naissance-1", "type": "gap-fill", "entryIds": ["u01-naissance"], "data": { "sentence": "Ils ont annoncé la ___ de leur fils.", "answers": ["naissance"], "pl": "Ogłosili narodziny syna.", "clue": "(un bébé arrive au monde)" } },
+    { "id": "u01-naissance-2", "type": "translate-pl-fr", "entryIds": ["u01-naissance"], "data": { "pl": "narodziny", "answers": ["une naissance", "la naissance"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u01-mariage-1", "type": "gap-fill", "entryIds": ["u01-mariage"], "data": { "sentence": "Nous sommes invités au ___ de Paul et Anne.", "answers": ["mariage"], "pl": "Jesteśmy zaproszeni na ślub Paula i Anne.", "clue": "(la cérémonie quand on se marie)" } },
+    { "id": "u01-mariage-2", "type": "translate-pl-fr", "entryIds": ["u01-mariage"], "data": { "pl": "ślub", "answers": ["un mariage", "le mariage"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u01-demenagement-1", "type": "gap-fill", "entryIds": ["u01-demenagement"], "data": { "sentence": "Mes amis m'ont aidé pour le ___ : on a porté tous les cartons.", "answers": ["déménagement"], "pl": "Przyjaciele pomogli mi przy przeprowadzce: przenieśliśmy wszystkie kartony.", "clue": "(on change de logement)" } },
+    { "id": "u01-demenagement-2", "type": "translate-pl-fr", "entryIds": ["u01-demenagement"], "data": { "pl": "przeprowadzka", "answers": ["un déménagement", "le déménagement"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u01-formation-1", "type": "gap-fill", "entryIds": ["u01-formation"], "data": { "sentence": "Il a suivi une ___ de six mois pour devenir boulanger.", "answers": ["formation"], "pl": "Ukończył sześciomiesięczny kurs, żeby zostać piekarzem.", "clue": "(des cours pour apprendre un métier)" } },
+    { "id": "u01-formation-2", "type": "translate-pl-fr", "entryIds": ["u01-formation"], "data": { "pl": "szkolenie (zawodowe)", "answers": ["une formation", "la formation"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u01-carriere-1", "type": "gap-fill", "entryIds": ["u01-carriere"], "data": { "sentence": "Elle a commencé sa ___ de chanteuse à dix-huit ans.", "answers": ["carrière"], "pl": "Zaczęła karierę piosenkarki w wieku osiemnastu lat.", "clue": "(la vie professionnelle)" } },
+    { "id": "u01-carriere-2", "type": "translate-pl-fr", "entryIds": ["u01-carriere"], "data": { "pl": "kariera (zawodowa)", "answers": ["une carrière", "la carrière"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u01-retraite-1", "type": "gap-fill", "entryIds": ["u01-retraite"], "data": { "sentence": "Ma mère ne travaille plus : elle est à la ___.", "answers": ["retraite"], "pl": "Moja mama już nie pracuje: jest na emeryturze.", "clue": "(après la vie professionnelle)" } },
+    { "id": "u01-retraite-2", "type": "translate-pl-fr", "entryIds": ["u01-retraite"], "data": { "pl": "emerytura", "answers": ["la retraite", "une retraite"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u01-comedien-1", "type": "gap-fill", "entryIds": ["u01-comedien"], "data": { "sentence": "Ce ___ joue dans une pièce de Molière.", "answers": ["comédien", "acteur"], "pl": "Ten aktor gra w sztuce Moliera.", "clue": "(il joue au théâtre)" } },
+    { "id": "u01-comedien-2", "type": "translate-pl-fr", "entryIds": ["u01-comedien"], "data": { "pl": "aktor", "answers": ["un comédien", "le comédien", "un acteur", "l'acteur"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u01-realisateur-1", "type": "gap-fill", "entryIds": ["u01-realisateur"], "data": { "sentence": "Le ___ explique la scène aux acteurs.", "answers": ["réalisateur"], "pl": "Reżyser tłumaczy aktorom scenę.", "clue": "(il fait le film)" } },
+    { "id": "u01-realisateur-2", "type": "translate-pl-fr", "entryIds": ["u01-realisateur"], "data": { "pl": "reżyser (filmowy)", "answers": ["un réalisateur", "le réalisateur"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u01-jeu-societe-1", "type": "gap-fill", "entryIds": ["u01-jeu-societe"], "data": { "sentence": "Il pleut : on joue à un jeu de ___ ?", "answers": ["société"], "pl": "Pada deszcz: zagramy w grę planszową?", "clue": "(un jeu à plusieurs, avec un plateau)" } },
+    { "id": "u01-jeu-societe-2", "type": "translate-pl-fr", "entryIds": ["u01-jeu-societe"], "data": { "pl": "gra planszowa", "answers": ["un jeu de société", "le jeu de société"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u01-balade-1", "type": "gap-fill", "entryIds": ["u01-balade"], "data": { "sentence": "Il fait beau, on fait une ___ dans le parc ?", "answers": ["balade", "promenade"], "pl": "Jest ładnie, pójdziemy na spacer do parku?", "clue": "(une petite promenade)" } },
+    { "id": "u01-balade-2", "type": "translate-pl-fr", "entryIds": ["u01-balade"], "data": { "pl": "spacer, przechadzka", "answers": ["une balade", "la balade", "une promenade", "la promenade"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
+  ],
+  "boss": {
+    "entryIds": ["u01-pc-avoir", "u01-pc-irreguliers", "u01-pc-etre", "u01-pc-pronominaux", "u01-ne-personne"],
+    "exerciseTypes": ["gap-fill"],
+    "questions": 10,
+    "lives": 3,
+    "timeLimitSec": 20
+  }
+}

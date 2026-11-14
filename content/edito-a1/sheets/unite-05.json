@@ -1,0 +1,506 @@
+{
+  "id": "unite-05",
+  "label": "Unité 5",
+  "title": "C'est tendance !",
+  "icon": "👗",
+  "summary": {
+    "pl": "Ubrania, pogoda i przedmioty: rodzaj, liczba i miejsce przymiotników, zaimek wskazujący ce / cet / cette / ces, futur proche, czasowniki vendre, mettre, venir.",
+    "fr": "Les vêtements, la météo et les objets : le genre, le nombre et la place des adjectifs, ce / cet / cette / ces, le futur proche, les verbes vendre, mettre, venir."
+  },
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "Les adjectifs : le genre et le nombre",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Przymiotnik zgadza się z rzeczownikiem w rodzaju i liczbie.\nRodzaj żeński: zwykle **+ e**: un pull noir → une robe noir**e**.\nLiczba mnoga: zwykle **+ s**: des pulls noir**s**, des robes noir**es**.",
+            "fr": "L'adjectif s'accorde avec le nom en genre et en nombre.\nFéminin : en général **+ e** : un pull noir → une robe noir**e**.\nPluriel : en général **+ s** : des pulls noir**s**, des robes noir**es**."
+          }
+        },
+        {
+          "type": "table",
+          "title": { "pl": "Formy szczególne", "fr": "Les formes particulières" },
+          "head": ["masculin", "féminin", "même modèle"],
+          "rows": [
+            ["jaune", "jaune", "rouge, rose, beige"],
+            ["sportif", "sporti**ve**", "neuf → neu**ve**"],
+            ["heureux", "heureu**se**", "sérieux → sérieu**se**"],
+            ["naturel", "nature**lle**", "bon → bo**nne**, italien → italie**nne**"],
+            ["blanc", "blan**che**", "irrégulier"],
+            ["long", "lon**gue**", "irrégulier"],
+            ["beau", "**belle**", "irrégulier"],
+            ["nouveau", "**nouvelle**", "irrégulier"],
+            ["vieux", "**vieille**", "irrégulier"]
+          ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "Liczba mnoga: **-eau → -eaux** (beaux, nouveaux), **-al → -aux** (original → originaux). Przymiotniki na **-s** lub **-x** się nie zmieniają: un sac gris → des sacs gris, un vieux pull → de vieux pulls.",
+            "fr": "Pluriel : **-eau → -eaux** (beaux, nouveaux), **-al → -aux** (original → originaux). Les adjectifs en **-s** ou en **-x** ne changent pas : un sac gris → des sacs gris, un vieux pull → de vieux pulls."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "J'ai une chemise **blanche** et un pantalon **blanc**.", "pl": "Mam białą koszulę i białe spodnie." },
+            { "fr": "Elle porte une jupe **longue** et des bottes **noires**.", "pl": "Ona nosi długą spódnicę i czarne kozaki." },
+            { "fr": "Ces chaussures sont très **belles**.", "pl": "Te buty są bardzo ładne." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Kolory **marron** i **orange** się nie odmieniają: des chaussures **marron**, une veste **orange**.\nW rodzaju żeńskim często słychać ostatnią spółgłoskę: gran(d) → gran**de**, ver(t) → ver**te**.",
+            "fr": "Les couleurs **marron** et **orange** ne changent pas : des chaussures **marron**, une veste **orange**.\nAu féminin, on entend souvent la dernière consonne : gran(d) → gran**de**, ver(t) → ver**te**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "La place des adjectifs",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Przymiotnik stoi zwykle **po rzeczowniku**: un manteau **rouge**, une veste **élégante**, un sac **rond**.\nKilka krótkich, częstych przymiotników stoi **przed rzeczownikiem**: **beau, joli, grand, petit, gros, bon, mauvais, jeune, vieux, nouveau**.",
+            "fr": "En général, l'adjectif se place **après le nom** : un manteau **rouge**, une veste **élégante**, un sac **rond**.\nQuelques adjectifs courts et fréquents se placent **avant le nom** : **beau, joli, grand, petit, gros, bon, mauvais, jeune, vieux, nouveau**."
+          }
+        },
+        {
+          "type": "table",
+          "title": { "pl": "Przed samogłoską lub niemym h (rodzaj męski)", "fr": "Devant une voyelle ou un h muet (masculin)" },
+          "head": ["+ consonne", "+ voyelle / h muet", "féminin"],
+          "rows": [
+            ["un **beau** sac", "un **bel** appartement", "une **belle** robe"],
+            ["un **nouveau** pull", "un **nouvel** ordinateur", "une **nouvelle** montre"],
+            ["un **vieux** manteau", "un **vieil** homme", "une **vieille** veste"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "C'est un **petit** sac **noir**.", "pl": "To mała czarna torebka." },
+            { "fr": "J'ai un **nouvel** ordinateur très **léger**.", "pl": "Mam nowy, bardzo lekki komputer." },
+            { "fr": "Elle a une **jolie** robe **bleue**.", "pl": "Ona ma ładną niebieską sukienkę." }
+          ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "Gdy przymiotnik w liczbie mnogiej stoi **przed** rzeczownikiem, **des → de**: **de** belles chaussures, **de** nouveaux vêtements.",
+            "fr": "Quand l'adjectif pluriel est **avant** le nom, **des → de** : **de** belles chaussures, **de** nouveaux vêtements."
+          }
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Po polsku kolor stoi przed rzeczownikiem, po francusku **po nim**: nie « une rouge robe », tylko **une robe rouge**.",
+            "fr": "Les couleurs sont toujours **après le nom** : on ne dit pas « une rouge robe », on dit **une robe rouge**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "L'adjectif démonstratif",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "singulier", "pluriel"],
+          "rows": [
+            ["masculin + consonne", "**ce** pull", "**ces** pulls"],
+            ["masculin + voyelle / h muet", "**cet** anorak, **cet** hôtel", "**ces** anoraks"],
+            ["féminin", "**cette** robe, **cette** écharpe", "**ces** robes"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**ce / cet / cette / ces** = ten, ta, to, te. Wskazuje konkretną rzecz: **ce** manteau = ten płaszcz.\nŻeby odróżnić dwie rzeczy, dodaje się **-ci** (ten tutaj) i **-là** (tamten): ce pull-**ci** ou ce pull-**là** ?",
+            "fr": "**ce / cet / cette / ces** montrent une chose précise : **ce** manteau.\nPour comparer deux choses, on ajoute **-ci** (près) et **-là** (plus loin) : ce pull-**ci** ou ce pull-**là** ?"
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Combien coûte **ce** chapeau ?", "pl": "Ile kosztuje ten kapelusz?" },
+            { "fr": "J'adore **cette** couleur !", "pl": "Uwielbiam ten kolor!" },
+            { "fr": "**Cet** été, je vais acheter des sandales.", "pl": "Tego lata kupię sobie sandały." },
+            { "fr": "**Ces** lunettes sont trop chères.", "pl": "Te okulary są za drogie." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Przed samogłoską w rodzaju męskim **ce → cet**: **cet** ordinateur, **cet** été (nie « ce été »). **Cet** i **cette** brzmią tak samo.",
+            "fr": "Au masculin, devant une voyelle, **ce → cet** : **cet** ordinateur, **cet** été (pas « ce été »). **Cet** et **cette** se prononcent de la même façon."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Le futur proche",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**aller** w czasie teraźniejszym + **bezokolicznik** = to, co zaraz albo niedługo się wydarzy: je **vais acheter** une veste.\nPrzeczenie otacza **aller**: je **ne** vais **pas** acheter cette veste.",
+            "fr": "**aller** au présent + **infinitif** = une action proche dans le futur : je **vais acheter** une veste.\nLa négation est autour de **aller** : je **ne** vais **pas** acheter cette veste."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "aller", "+ infinitif"],
+          "rows": [
+            ["je", "**vais**", "mettre un pull"],
+            ["tu", "**vas**", "essayer la robe"],
+            ["il / elle / on", "**va**", "pleuvoir"],
+            ["nous", "**allons**", "faire les magasins"],
+            ["vous", "**allez**", "acheter des baskets"],
+            ["ils / elles", "**vont**", "vendre leur vélo"]
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Określenia czasu", "fr": "Les expressions de temps" },
+          "items": [
+            { "fr": "ce soir", "pl": "dziś wieczorem" },
+            { "fr": "demain", "pl": "jutro", "def": "le jour après aujourd'hui" },
+            { "fr": "ce week-end", "pl": "w ten weekend" },
+            { "fr": "la semaine prochaine", "pl": "w przyszłym tygodniu" },
+            { "fr": "le mois prochain / l'année prochaine", "pl": "w przyszłym miesiącu / roku" },
+            { "fr": "bientôt", "pl": "wkrótce", "def": "dans peu de temps" }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Demain, il **va faire** beau.", "pl": "Jutro będzie ładna pogoda." },
+            { "fr": "Ce soir, nous **allons sortir**.", "pl": "Dziś wieczorem wychodzimy." },
+            { "fr": "Tu **ne vas pas mettre** ce vieux pull ?", "pl": "Chyba nie założysz tego starego swetra?" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Między **aller** a bezokolicznikiem nie ma przyimka: nie « je vais **à** acheter », tylko **je vais acheter**.",
+            "fr": "Pas de préposition entre **aller** et l'infinitif : on ne dit pas « je vais **à** acheter », on dit **je vais acheter**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les verbes vendre, mettre, venir",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "vendre", "mettre", "venir"],
+          "rows": [
+            ["je", "vend**s**", "met**s**", "vien**s**"],
+            ["tu", "vend**s**", "met**s**", "vien**s**"],
+            ["il / elle / on", "vend", "met", "vien**t**"],
+            ["nous", "vend**ons**", "mett**ons**", "ven**ons**"],
+            ["vous", "vend**ez**", "mett**ez**", "ven**ez**"],
+            ["ils / elles", "vend**ent**", "mett**ent**", "vien**nent**"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**vendre** = sprzedawać. Tak samo: **attendre** (czekać), **répondre** (odpowiadać), **entendre** (słyszeć).\n**mettre** = kłaść; **zakładać** (ubranie): je mets un manteau.\n**venir** = przychodzić, przyjeżdżać; **venir de** = pochodzić z: je viens de Pologne. Tak samo: **revenir**, **devenir**.",
+            "fr": "**vendre** : **attendre**, **répondre** et **entendre** se conjuguent de la même façon.\n**mettre** = poser une chose quelque part ; on **met** aussi un vêtement : je mets un manteau.\n**venir de** = l'origine : je viens de Pologne. **Revenir** et **devenir** se conjuguent comme **venir**."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Ils **vendent** des vêtements d'occasion.", "pl": "Oni sprzedają używane ubrania." },
+            { "fr": "Qu'est-ce que tu **mets** ce soir ?", "pl": "Co zakładasz dziś wieczorem?" },
+            { "fr": "Il fait froid, **mettez** un bonnet !", "pl": "Jest zimno, załóżcie czapkę!" },
+            { "fr": "Vous **venez** avec nous au magasin ?", "pl": "Idziecie z nami do sklepu?" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**il vend**, **il met** — bez dodatkowego -t. Ale **il vient** z -t.\nW formie ils: **ils viennent** (podwójne n), **ils mettent** (podwójne t).",
+            "fr": "**il vend**, **il met** : pas de -t en plus. Mais **il vient** avec un -t.\nÀ la forme ils : **ils viennent** (deux n), **ils mettent** (deux t)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les vêtements, les couleurs et les matières",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Ubrania", "fr": "Les vêtements" },
+          "items": [
+            { "fr": "un pantalon", "pl": "spodnie", "def": "il couvre les deux jambes" },
+            { "fr": "un jean", "pl": "dżinsy", "def": "pantalon en toile bleue" },
+            { "fr": "une jupe", "pl": "spódnica", "def": "vêtement de femme, sans jambes" },
+            { "fr": "une robe", "pl": "sukienka", "def": "haut et jupe en une seule pièce" },
+            { "fr": "une chemise", "pl": "koszula", "def": "haut avec des boutons et un col" },
+            { "fr": "un tee-shirt", "pl": "koszulka, T-shirt", "def": "haut simple en coton" },
+            { "fr": "un pull", "pl": "sweter", "def": "haut chaud, souvent en laine" },
+            { "fr": "une veste", "pl": "marynarka; kurtka", "def": "on la met sur une chemise ou un pull" },
+            { "fr": "un manteau", "pl": "płaszcz", "def": "vêtement long et chaud pour l'hiver" },
+            { "fr": "un costume", "pl": "garnitur", "def": "veste et pantalon pour le travail" },
+            { "fr": "un maillot de bain", "pl": "kostium kąpielowy", "def": "on le met pour nager" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Buty i dodatki", "fr": "Les chaussures et les accessoires" },
+          "items": [
+            { "fr": "des chaussures (f)", "pl": "buty", "def": "on les porte aux pieds" },
+            { "fr": "des baskets (f)", "pl": "buty sportowe, adidasy", "def": "chaussures de sport" },
+            { "fr": "des bottes (f)", "pl": "kozaki, kalosze", "def": "chaussures hautes" },
+            { "fr": "des sandales (f)", "pl": "sandały", "def": "chaussures ouvertes pour l'été" },
+            { "fr": "un sac", "pl": "torba, torebka", "def": "on met ses affaires dedans" },
+            { "fr": "une ceinture", "pl": "pasek", "def": "elle tient le pantalon" },
+            { "fr": "un chapeau / une casquette", "pl": "kapelusz / czapka z daszkiem", "def": "on les porte sur la tête" },
+            { "fr": "un bonnet", "pl": "czapka zimowa", "def": "chapeau chaud en laine" },
+            { "fr": "une écharpe", "pl": "szalik", "def": "on la met autour du cou" },
+            { "fr": "des gants (m)", "pl": "rękawiczki", "def": "pour les mains quand il fait froid" },
+            { "fr": "des lunettes (de soleil) (f)", "pl": "okulary (przeciwsłoneczne)", "def": "on les porte devant les yeux" },
+            { "fr": "une montre", "pl": "zegarek", "def": "elle donne l'heure" },
+            { "fr": "un bijou / des bijoux", "pl": "biżuteria", "def": "bague, collier, bracelet…" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Kolory", "fr": "Les couleurs" },
+          "items": [
+            { "fr": "blanc / blanche", "pl": "biały" },
+            { "fr": "noir / noire", "pl": "czarny" },
+            { "fr": "gris / grise", "pl": "szary" },
+            { "fr": "rouge", "pl": "czerwony" },
+            { "fr": "rose", "pl": "różowy" },
+            { "fr": "bleu / bleue", "pl": "niebieski" },
+            { "fr": "vert / verte", "pl": "zielony" },
+            { "fr": "jaune", "pl": "żółty" },
+            { "fr": "violet / violette", "pl": "fioletowy" },
+            { "fr": "beige", "pl": "beżowy" },
+            { "fr": "marron", "pl": "brązowy", "def": "invariable" },
+            { "fr": "orange", "pl": "pomarańczowy", "def": "invariable" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Materiały: en + materiał", "fr": "Les matières : en + matière" },
+          "items": [
+            { "fr": "en coton", "pl": "bawełniany", "def": "matière naturelle et légère" },
+            { "fr": "en laine", "pl": "wełniany", "def": "elle vient du mouton" },
+            { "fr": "en cuir", "pl": "skórzany", "def": "peau d'animal pour les sacs, les chaussures" },
+            { "fr": "en soie", "pl": "jedwabny", "def": "matière douce et brillante" },
+            { "fr": "en jean", "pl": "dżinsowy" },
+            { "fr": "en plastique", "pl": "plastikowy" },
+            { "fr": "en métal", "pl": "metalowy" },
+            { "fr": "en bois", "pl": "drewniany", "def": "matière qui vient des arbres" },
+            { "fr": "en verre", "pl": "szklany", "def": "matière transparente" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**un pantalon**, **un jean**, **un short** to po francusku liczba **pojedyncza**: mon pantalon **est** noir. Ale **des lunettes** — zawsze liczba mnoga.",
+            "fr": "**un pantalon**, **un jean**, **un short** sont au **singulier** : mon pantalon **est** noir. Mais le mot **lunettes** est toujours au pluriel : **mes** lunettes **sont** neuves."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les saisons, les mois et la météo",
+      "blocks": [
+        {
+          "type": "table",
+          "title": { "pl": "Pory roku", "fr": "Les saisons" },
+          "head": ["saison", "quand ?"],
+          "rows": [
+            ["le printemps", "**au** printemps"],
+            ["l'été (m)", "**en** été"],
+            ["l'automne (m)", "**en** automne"],
+            ["l'hiver (m)", "**en** hiver"]
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Miesiące", "fr": "Les mois" },
+          "items": [
+            { "fr": "janvier, février, mars", "pl": "styczeń, luty, marzec" },
+            { "fr": "avril, mai, juin", "pl": "kwiecień, maj, czerwiec" },
+            { "fr": "juillet, août, septembre", "pl": "lipiec, sierpień, wrzesień" },
+            { "fr": "octobre, novembre, décembre", "pl": "październik, listopad, grudzień" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Miesiące piszemy **małą literą**. W miesiącu: **en** mai albo **au mois de** mai. Data: **le** 14 juillet.",
+            "fr": "Les mois s'écrivent avec une **minuscule**. Pour dire quand : **en** mai ou **au mois de** mai. La date : **le** 14 juillet."
+          }
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Pogoda", "fr": "La météo" },
+          "items": [
+            { "fr": "Il fait beau.", "pl": "Jest ładna pogoda.", "def": "il y a du soleil" },
+            { "fr": "Il fait mauvais.", "pl": "Jest brzydka pogoda." },
+            { "fr": "Il fait chaud / froid.", "pl": "Jest gorąco / zimno." },
+            { "fr": "Il fait doux.", "pl": "Jest ciepło, łagodnie.", "def": "ni chaud ni froid" },
+            { "fr": "Il y a du soleil.", "pl": "Świeci słońce." },
+            { "fr": "Il y a du vent.", "pl": "Wieje wiatr." },
+            { "fr": "Il y a des nuages. / Le ciel est gris.", "pl": "Jest pochmurno." },
+            { "fr": "Il pleut. / la pluie", "pl": "Pada deszcz. / deszcz" },
+            { "fr": "Il neige. / la neige", "pl": "Pada śnieg. / śnieg" },
+            { "fr": "Il y a de l'orage.", "pl": "Jest burza." }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Temperatura", "fr": "Les températures" },
+          "items": [
+            { "fr": "Il fait 25 degrés.", "pl": "Jest 25 stopni." },
+            { "fr": "Il fait moins 5. (−5 °C)", "pl": "Jest minus 5 stopni." },
+            { "fr": "Il fait combien aujourd'hui ?", "pl": "Ile dziś jest stopni?" },
+            { "fr": "Demain, il va pleuvoir dans le nord.", "pl": "Jutro będzie padać na północy." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "O pogodzie mówimy **il fait**, nie « c'est »: **il fait froid** (jest zimno). Uwaga: **au** printemps, ale **en** été, **en** automne, **en** hiver.",
+            "fr": "Pour la météo, on dit **il fait** : **il fait froid**. Attention : **au** printemps, mais **en** été, **en** automne, **en** hiver."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les objets",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Technologia", "fr": "Les objets technologiques" },
+          "items": [
+            { "fr": "un (téléphone) portable / un smartphone", "pl": "komórka / smartfon", "def": "téléphone qu'on porte sur soi" },
+            { "fr": "un ordinateur (portable)", "pl": "komputer (laptop)", "def": "on travaille et on écrit avec" },
+            { "fr": "une tablette", "pl": "tablet", "def": "petit écran tactile" },
+            { "fr": "un chargeur", "pl": "ładowarka", "def": "il sert à recharger la batterie" },
+            { "fr": "des écouteurs (m)", "pl": "słuchawki (douszne)", "def": "ils servent à écouter de la musique" },
+            { "fr": "un appareil photo", "pl": "aparat fotograficzny", "def": "il sert à prendre des photos" },
+            { "fr": "une enceinte", "pl": "głośnik", "def": "elle sert à écouter la musique fort" },
+            { "fr": "une montre connectée", "pl": "smartwatch", "def": "montre avec internet" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Przedmioty codzienne", "fr": "Les objets du quotidien" },
+          "items": [
+            { "fr": "une clé", "pl": "klucz", "def": "elle sert à ouvrir la porte" },
+            { "fr": "un portefeuille", "pl": "portfel", "def": "on y met l'argent et les cartes" },
+            { "fr": "un parapluie", "pl": "parasol", "def": "il protège de la pluie" },
+            { "fr": "une gourde", "pl": "bidon, butelka wielokrotnego użytku", "def": "bouteille pour l'eau" },
+            { "fr": "un réveil", "pl": "budzik", "def": "il sonne le matin" },
+            { "fr": "une lampe", "pl": "lampa", "def": "elle sert à éclairer" },
+            { "fr": "un sac à dos", "pl": "plecak", "def": "sac qu'on porte sur le dos" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Cechy przedmiotów", "fr": "Les caractéristiques" },
+          "items": [
+            { "fr": "rond / ronde", "pl": "okrągły", "def": "comme un cercle" },
+            { "fr": "carré / carrée", "pl": "kwadratowy", "def": "quatre côtés égaux" },
+            { "fr": "rectangulaire", "pl": "prostokątny", "def": "comme un livre" },
+            { "fr": "grand / petit", "pl": "duży / mały" },
+            { "fr": "lourd / lourde", "pl": "ciężki", "def": "qui pèse beaucoup" },
+            { "fr": "léger / légère", "pl": "lekki", "def": "qui ne pèse pas beaucoup" },
+            { "fr": "pratique", "pl": "praktyczny", "def": "facile à utiliser" },
+            { "fr": "solide / fragile", "pl": "wytrzymały / delikatny, kruchy" },
+            { "fr": "il mesure 10 centimètres", "pl": "ma 10 centymetrów", "def": "la taille" },
+            { "fr": "il pèse 200 grammes", "pl": "waży 200 gramów", "def": "le poids" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Do czego służy? **Ça sert à quoi ?** — **Ça sert à** + bezokolicznik: ça sert à téléphoner.\nO konkretnym przedmiocie: il / elle **sert à**…, ils / elles **servent à**…",
+            "fr": "Pour demander l'utilité : **Ça sert à quoi ?** — **Ça sert à** + infinitif : ça sert à téléphoner.\nAvec un objet précis : il / elle **sert à**…, ils / elles **servent à**…"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Dans un magasin de vêtements",
+      "blocks": [
+        {
+          "type": "examples",
+          "title": { "pl": "Cena", "fr": "Le prix" },
+          "items": [
+            { "fr": "Combien coûte ce manteau ?", "pl": "Ile kosztuje ten płaszcz?" },
+            { "fr": "C'est combien ?", "pl": "Ile to kosztuje?" },
+            { "fr": "Il coûte 89 euros.", "pl": "Kosztuje 89 euro." },
+            { "fr": "C'est cher ! / C'est trop cher pour moi.", "pl": "To drogie! / To dla mnie za drogie." },
+            { "fr": "Ce n'est pas cher, c'est une bonne affaire.", "pl": "To niedrogie, to okazja." },
+            { "fr": "C'est en solde ?", "pl": "Czy to jest przecenione?" }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Rozmiar i numer buta", "fr": "La taille et la pointure" },
+          "items": [
+            { "fr": "Vous faites quelle taille ?", "pl": "Jaki nosi pan / pani rozmiar?" },
+            { "fr": "Je fais du 38. / Je fais du M.", "pl": "Noszę rozmiar 38. / Noszę M." },
+            { "fr": "Quelle est votre pointure ?", "pl": "Jaki jest pana / pani numer buta?" },
+            { "fr": "Je fais du 42.", "pl": "Noszę (buty) 42." },
+            { "fr": "Je peux essayer ?", "pl": "Mogę przymierzyć?" },
+            { "fr": "Où sont les cabines d'essayage ?", "pl": "Gdzie są przymierzalnie?" },
+            { "fr": "C'est trop petit. Vous avez la taille au-dessus ?", "pl": "To za małe. Ma pan / pani większy rozmiar?" }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Opinia o ubraniu", "fr": "Donner une appréciation" },
+          "items": [
+            { "fr": "Il est joli, ce pull !", "pl": "Ładny ten sweter!" },
+            { "fr": "Cette robe te va très bien.", "pl": "Bardzo ci dobrze w tej sukience." },
+            { "fr": "Ce pantalon ne me va pas.", "pl": "Nie jest mi dobrze w tych spodniach." },
+            { "fr": "C'est à la mode. / C'est tendance.", "pl": "To jest modne." },
+            { "fr": "J'adore cette couleur !", "pl": "Uwielbiam ten kolor!" },
+            { "fr": "Bof… ce n'est pas mon style.", "pl": "E tam… to nie mój styl." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Décrire un objet",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Qu'est-ce que c'est ?", "pl": "Co to jest?" },
+            { "fr": "C'est un petit objet rond, en plastique.", "pl": "To mały, okrągły przedmiot z plastiku." },
+            { "fr": "Ça sert à quoi ?", "pl": "Do czego to służy?" },
+            { "fr": "Ça sert à recharger le téléphone.", "pl": "To służy do ładowania telefonu." },
+            { "fr": "Il pèse 300 grammes, il est très léger.", "pl": "Waży 300 gramów, jest bardzo lekki." },
+            { "fr": "Il est pratique et pas cher.", "pl": "Jest praktyczny i niedrogi." },
+            { "fr": "Elle est de quelle couleur ? — Elle est noire.", "pl": "Jakiego jest koloru? — Jest czarna." }
+          ]
+        }
+      ]
+    }
+  ],
+  "practice": ["edito-a1/unite-05", "a1-connecteurs/01-prepositions", "a1-connecteurs/04-expressions"]
+}

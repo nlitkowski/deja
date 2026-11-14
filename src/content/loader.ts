@@ -9,6 +9,7 @@ import {
   type RawUnit,
   type Unit,
 } from './schema';
+import { SheetSchema, type Sheet } from './sheet';
 
 export interface LoadIssue {
   file: string;
@@ -21,10 +22,11 @@ export interface ExerciseTypeInfo {
   production: boolean;
 }
 
-/** Parsed JSON keyed by path: `/content/<pack>/pack.json`, `/content/<pack>/units/<unit>.json`. */
+/** Parsed JSON keyed by path: `/content/<pack>/pack.json`, `/content/<pack>/units/<unit>.json`, `/content/<pack>/sheets/<sheet>.json`. */
 export interface ContentFiles {
   packs: Record<string, unknown>;
   units: Record<string, unknown>;
+  sheets?: Record<string, unknown>;
 }
 
 export interface LoadedContent {
@@ -32,11 +34,13 @@ export interface LoadedContent {
   entries: Map<string, Entry>;
   exercises: Map<string, Exercise>;
   units: Map<string, Unit>;
+  sheets: Map<string, Sheet>;
   issues: LoadIssue[];
 }
 
 const PACK_PATH = /\/([^/]+)\/pack\.json$/;
 const UNIT_PATH = /\/([^/]+)\/units\/([^/]+)\.json$/;
+const SHEET_PATH = /\/([^/]+)\/sheets\/([^/]+)\.json$/;
 
 const globalId = (packId: string, ref: string) => (ref.includes('/') ? ref : `${packId}/${ref}`);
 const pathOf = (path: PropertyKey[]) => path.map(String).join('.') || '(root)';
@@ -49,12 +53,19 @@ export function loadPacks(files: ContentFiles, exerciseTypes: Record<string, Exe
   const entries = new Map<string, Entry>();
   const exercises = new Map<string, Exercise>();
   const units = new Map<string, Unit>();
+  const sheets = new Map<string, Sheet>();
+  const practiceRefs: { file: string; path: string; key: string }[] = [];
   const refsToCheck: { file: string; path: string; id: string }[] = [];
 
   const unitFiles = new Map<string, { file: string; json: unknown }>();
   for (const [file, json] of Object.entries(files.units)) {
     const m = UNIT_PATH.exec(file);
     if (m) unitFiles.set(`${packDir(m[1]!)}/${m[2]}`, { file, json });
+  }
+  const sheetFiles = new Map<string, { file: string; json: unknown }>();
+  for (const [file, json] of Object.entries(files.sheets ?? {})) {
+    const m = SHEET_PATH.exec(file);
+    if (m) sheetFiles.set(`${packDir(m[1]!)}/${m[2]}`, { file, json });
   }
 
   for (const [file, json] of Object.entries(files.packs)) {
@@ -79,7 +90,32 @@ export function loadPacks(files: ContentFiles, exerciseTypes: Record<string, Exe
       const unit = loadUnit(manifest, unitId, found.file, found.json);
       if (unit) unitList.push(unit);
     });
-    packs.push({ ...manifest, unitList });
+
+    const sheetList: Sheet[] = [];
+    manifest.sheets.forEach((sheetId, sheetIndex) => {
+      const found = sheetFiles.get(`${dir}/${sheetId}`);
+      if (!found) {
+        issues.push({ file, path: `sheets.${sheetIndex}`, message: `brak pliku sheets/${sheetId}.json` });
+        return;
+      }
+      const sheet = loadSheet(manifest, sheetId, found.file, found.json);
+      if (sheet) sheetList.push(sheet);
+    });
+
+    packs.push({ ...manifest, unitList, sheetList });
+  }
+
+  function loadSheet(pack: PackManifest, sheetId: string, file: string, json: unknown): Sheet | undefined {
+    const parsed = SheetSchema.safeParse(json);
+    if (!parsed.success) {
+      for (const issue of parsed.error.issues) issues.push({ file, path: pathOf(issue.path), message: issue.message });
+      return undefined;
+    }
+    if (parsed.data.id !== sheetId) issues.push({ file, path: 'id', message: `id fiszki "${parsed.data.id}" musi być równe nazwie pliku "${sheetId}"` });
+    parsed.data.practice.forEach((key, i) => practiceRefs.push({ file, path: `practice.${i}`, key }));
+    const sheet: Sheet = { ...parsed.data, key: `${pack.id}/${parsed.data.id}`, packId: pack.id };
+    sheets.set(sheet.key, sheet);
+    return sheet;
   }
 
   function loadUnit(pack: PackManifest, unitId: string, file: string, json: unknown): Unit | undefined {
@@ -141,6 +177,10 @@ export function loadPacks(files: ContentFiles, exerciseTypes: Record<string, Exe
     if (!entries.has(ref.id)) issues.push({ file: ref.file, path: ref.path, message: `odwołanie do nieistniejącego wpisu "${ref.id}"` });
   }
 
+  for (const ref of practiceRefs) {
+    if (!units.has(ref.key)) issues.push({ file: ref.file, path: ref.path, message: `odwołanie do nieistniejącej jednostki "${ref.key}"` });
+  }
+
   const packIds = new Set(packs.map((p) => p.id));
   for (const pack of packs) {
     pack.requires.forEach((r, i) => {
@@ -162,5 +202,5 @@ export function loadPacks(files: ContentFiles, exerciseTypes: Record<string, Exe
     }
   }
 
-  return { packs, entries, exercises, units, issues };
+  return { packs, entries, exercises, units, sheets, issues };
 }

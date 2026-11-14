@@ -1,0 +1,196 @@
+{
+  "id": "connecteurs-a2",
+  "label": "A2",
+  "title": "Les connecteurs A2",
+  "icon": "🧷",
+  "summary": {
+    "pl": "Spójniki i wyrażenia poziomu A2: kolejność wydarzeń, przyczyna i skutek, przeciwstawienie, określenia czasu.",
+    "fr": "Les connecteurs du niveau A2 : organiser un récit, la cause et la conséquence, l'opposition, les marqueurs de temps."
+  },
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "Chronologie",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Opowiadanie porządkujemy krokami: **d'abord** (najpierw) → **ensuite / puis** (potem) → **enfin** (na koniec).\n**Finalement** = ostatecznie, często inaczej, niż planowano.",
+            "fr": "On organise un récit par étapes : **d'abord** → **ensuite / puis** → **enfin**.\n**Finalement** = au bout du compte, souvent autrement que prévu."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["+ nom", "+ infinitif / + verbe"],
+          "rows": [
+            ["**avant** le cours", "**avant de** partir, **avant d'**acheter"],
+            ["**après** le déjeuner", "—"],
+            ["**pendant** le film", "**pendant que** tu dors"],
+            ["**au début / à la fin du** film", "—"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "**D'abord**, je prends une douche, **ensuite** je m'habille, **puis** je pars.", "pl": "Najpierw biorę prysznic, potem się ubieram, a potem wychodzę." },
+            { "fr": "Je lis un peu **avant de** dormir.", "pl": "Czytam trochę przed snem." },
+            { "fr": "Je fais la cuisine **pendant que** tu mets la table.", "pl": "Gotuję, podczas gdy ty nakrywasz do stołu." },
+            { "fr": "Je voulais sortir, mais **finalement** je suis resté chez moi.", "pl": "Chciałem wyjść, ale ostatecznie zostałem w domu." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**À la fin** (du film) = na końcu czegoś; **enfin** = nareszcie / na koniec. **Pendant** + rzeczownik, ale **pendant que** + zdanie.",
+            "fr": "**À la fin** (du film) = la dernière partie ; **enfin** = après une longue attente. **Pendant** + nom, mais **pendant que** + sujet et verbe."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Cause et conséquence",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "connecteur", "exemple"],
+          "rows": [
+            ["cause connue", "**puisque**", "**Puisque** tu es là, aide-moi."],
+            ["cause positive + nom", "**grâce à**", "J'ai réussi **grâce à** toi."],
+            ["cause négative + nom", "**à cause de**", "Il est en retard **à cause de** la neige."],
+            ["explication", "**en effet**", "Il parle chinois. **En effet**, il a habité à Pékin."],
+            ["conséquence (oral)", "**alors**", "Il fait beau, **alors** on sort."],
+            ["conséquence", "**c'est pourquoi**", "J'adore l'Italie. **C'est pourquoi** j'apprends l'italien."],
+            ["conséquence (familier)", "**du coup**", "J'ai raté le bus, **du coup** je suis en retard."]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**grâce à** = dzięki (dobry skutek), **à cause de** = przez, z powodu (zły skutek).\nZ rodzajnikiem: grâce **au** / **aux**, à cause **du** / **des**.",
+            "fr": "**grâce à** = résultat positif, **à cause de** = résultat négatif.\nAvec l'article : grâce **au** / **aux**, à cause **du** / **des**."
+          }
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**À cause de** + rzeczownik (à cause de la pluie), ale **parce que** + zdanie (parce qu'il pleut). Na pytanie **pourquoi ?** odpowiadamy **parce que**, nie puisque.",
+            "fr": "**À cause de** + nom (à cause de la pluie), mais **parce que** + sujet et verbe (parce qu'il pleut). On répond à **pourquoi ?** avec **parce que**, pas avec puisque."
+          }
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "**Du coup** jest bardzo potoczne — w tekstach pisz **donc** albo **c'est pourquoi**. Nie myl **en effet** (rzeczywiście) z **en fait** (właściwie).",
+            "fr": "**Du coup** est très familier : à l'écrit, utilise **donc** ou **c'est pourquoi**. Ne confonds pas **en effet** (je confirme) et **en fait** (je corrige)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Opposition",
+      "blocks": [
+        {
+          "type": "words",
+          "items": [
+            { "fr": "pourtant", "pl": "a jednak; przecież", "def": "un résultat surprenant" },
+            { "fr": "cependant", "pl": "jednak, jednakże", "def": "l'opposition, style soutenu" },
+            { "fr": "par contre", "pl": "natomiast, za to", "def": "on compare deux choses" },
+            { "fr": "alors que + verbe", "pl": "podczas gdy, a", "def": "deux faits opposés" },
+            { "fr": "même si + verbe", "pl": "nawet jeśli", "def": "ça ne change pas le résultat" },
+            { "fr": "au lieu de + infinitif / nom", "pl": "zamiast", "def": "à la place de" }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Il a beaucoup travaillé, et **pourtant** il a raté son examen.", "pl": "Dużo pracował, a jednak oblał egzamin." },
+            { "fr": "J'aime le thé ; **par contre**, je déteste le café.", "pl": "Lubię herbatę, natomiast nie znoszę kawy." },
+            { "fr": "Il pleut à Paris **alors qu'**il fait beau à Nice.", "pl": "W Paryżu pada, podczas gdy w Nicei jest ładnie." },
+            { "fr": "Demain, je vais courir, **même s'**il pleut.", "pl": "Jutro pobiegam, nawet jeśli będzie padać." },
+            { "fr": "**Au lieu de** regarder la télé, lis un livre !", "pl": "Zamiast oglądać telewizję, przeczytaj książkę!" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**Même s'il**, **même s'ils**, ale **même si elle** (bez elizji). **Alors que** (podczas gdy) ≠ **alors** (więc).",
+            "fr": "**Même s'il**, **même s'ils**, mais **même si elle** (pas d'élision). **Alors que** (l'opposition) ≠ **alors** (la conséquence)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Le temps",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "exemple", "sens"],
+          "rows": [
+            ["**il y a** + durée", "Je suis arrivé **il y a** deux ans.", "passé (= temu)"],
+            ["**dans** + durée", "Je pars **dans** deux jours.", "futur (= za)"],
+            ["**depuis** / **ça fait … que**", "**Ça fait** deux ans **que** j'habite ici.", "ça continue maintenant"],
+            ["**à partir de**", "**À partir de** lundi, je travaille.", "début (et après)"],
+            ["**dès**", "J'ai compris **dès** le premier jour.", "tout de suite, déjà"],
+            ["**jusqu'à**", "Le magasin est ouvert **jusqu'à** 20 h.", "la fin, la limite"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**Il y a** + czas → przeszłość, z passé composé: il est parti il y a une heure.\n**Dans** + czas → przyszłość: il part dans une heure.",
+            "fr": "**Il y a** + durée → le passé, avec le passé composé : il est parti il y a une heure.\n**Dans** + durée → le futur : il part dans une heure."
+          }
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**Déjà** (już) i **pas encore** (jeszcze nie) w passé composé stoją między posiłkowym a imiesłowem: j'ai **déjà** vu, je n'ai **pas encore** vu.",
+            "fr": "Au passé composé, **déjà** et **pas encore** se placent entre l'auxiliaire et le participe : j'ai **déjà** vu, je n'ai **pas encore** vu."
+          }
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Z rodzajnikiem: jusqu'**au** soir, à partir **du** 1er juillet. **Ça fait … que** i **depuis** + czas teraźniejszy: ça fait un an que j'**habite** ici.",
+            "fr": "Avec l'article : jusqu'**au** soir, à partir **du** 1er juillet. **Ça fait … que** et **depuis** + présent : ça fait un an que j'**habite** ici."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Raconter et argumenter",
+      "blocks": [
+        {
+          "type": "examples",
+          "title": { "pl": "Opowiadanie", "fr": "Raconter" },
+          "items": [
+            { "fr": "Il y a trois ans, je suis parti vivre à Lyon.", "pl": "Trzy lata temu wyjechałem mieszkać do Lyonu." },
+            { "fr": "Au début, c'était difficile, mais ensuite je me suis fait des amis.", "pl": "Na początku było trudno, ale potem znalazłem przyjaciół." },
+            { "fr": "Ça fait deux ans que je travaille dans un restaurant.", "pl": "Od dwóch lat pracuję w restauracji." },
+            { "fr": "Finalement, je suis très content de mon choix.", "pl": "Ostatecznie jestem bardzo zadowolony ze swojego wyboru." }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Argumentowanie", "fr": "Argumenter" },
+          "items": [
+            { "fr": "J'aime la ville ; par contre, je trouve les loyers trop chers.", "pl": "Lubię miasto, natomiast czynsze są moim zdaniem za drogie." },
+            { "fr": "Grâce au télétravail, je passe plus de temps avec ma famille.", "pl": "Dzięki pracy zdalnej spędzam więcej czasu z rodziną." },
+            { "fr": "C'est pourquoi je préfère vivre à la campagne.", "pl": "Dlatego wolę mieszkać na wsi." },
+            { "fr": "Même si c'est loin, j'y vais à vélo.", "pl": "Nawet jeśli to daleko, jeżdżę tam rowerem." }
+          ]
+        }
+      ]
+    }
+  ],
+  "practice": [
+    "a2-connecteurs/01-chronologie",
+    "a2-connecteurs/02-cause-consequence",
+    "a2-connecteurs/03-opposition",
+    "a2-connecteurs/04-temps"
+  ]
+}

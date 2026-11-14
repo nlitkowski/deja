@@ -16,6 +16,9 @@ export function normalize(input: string): string {
     .replace(APOSTROPHES, "'")
     .replace(NBSP, ' ')
     .toLowerCase()
+    // Phone keyboards rarely offer the ligatures; "oeuf" and "œuf" are the same answer.
+    .replace(/œ/g, 'oe')
+    .replace(/æ/g, 'ae')
     .replace(/\s+/g, ' ')
     .replace(/'\s+/g, "'")
     .trim()

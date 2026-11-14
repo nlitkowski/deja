@@ -1,0 +1,10 @@
+{
+  "id": "edito-a1",
+  "version": 1,
+  "title": "Édito A1",
+  "level": "A1",
+  "icon": "📘",
+  "requires": [],
+  "units": ["unite-01", "unite-02", "unite-03", "unite-04", "unite-05", "unite-06", "unite-07", "unite-08", "unite-09", "unite-10"],
+  "sheets": ["unite-01", "unite-02", "unite-03", "unite-04", "unite-05", "unite-06", "unite-07", "unite-08", "unite-09", "unite-10"]
+}

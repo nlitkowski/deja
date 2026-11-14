@@ -1,52 +1,40 @@
-import { allEntries, content } from '../content/registry';
-import { HELP_LANGS } from '../content/localized';
-import { isProduction, supportsHelpLang } from '../exercises/registry';
+import { LangSwitch } from '../components/LangSwitch';
+import { content } from '../content/registry';
 import { ui } from '../i18n/ui';
 import { dayKey } from '../lib/date';
-import { buildSession, type SessionItem } from '../lib/session';
+import type { SessionItem } from '../lib/session';
 import { isDue } from '../lib/srs';
 import type { SavedState } from '../lib/storage';
-
-export const NEW_PER_DAY = 5;
-const NEW_PER_UNIT_SESSION = 5;
+import { buildReviewSession, buildUnitSession, NEW_PER_DAY } from '../sessions';
 
 interface Props {
   state: SavedState;
   update: (fn: (s: SavedState) => SavedState) => void;
   onStart: (title: string, items: SessionItem[]) => void;
+  onOpenSheets: () => void;
+  onOpenSettings: () => void;
 }
 
-export function Home({ state, update, onStart }: Props) {
+export function Home({ state, update, onStart, onOpenSheets, onOpenSettings }: Props) {
   const today = dayKey(new Date());
-  const { helpLang } = state.settings;
-  const entries = allEntries();
-  const exercises = [...content.exercises.values()].filter((ex) => supportsHelpLang(ex.type, helpLang));
-  const dueCount = entries.filter((e) => !e.deprecated && state.srs[e.id] && isDue(state.srs[e.id]!, today)).length;
-  const newLeft = Math.max(0, NEW_PER_DAY - state.daily.newIntroduced);
-
-  const reviewItems = () =>
-    buildSession({ entries, exercises, srs: state.srs, today, newAllowed: newLeft, isProduction, mode: 'review' });
-  const reviewSize = reviewItems().length;
-
-  function startUnit(unitKey: string) {
-    const unit = content.units.get(unitKey)!;
-    const items = buildSession({
-      entries: unit.entryIds.map((id) => content.entries.get(id)!),
-      exercises: exercises.filter((ex) => ex.unitId === unitKey),
-      srs: state.srs,
-      today,
-      newAllowed: NEW_PER_UNIT_SESSION,
-      isProduction,
-      mode: 'practice',
-    });
-    onStart(unit.title, items);
-  }
+  const dueCount = [...content.entries.values()].filter((e) => !e.deprecated && state.srs[e.id] && isDue(state.srs[e.id]!, today)).length;
+  const reviewSize = buildReviewSession(state).length;
+  const sheetCount = content.sheets.size;
+  const exercisePacks = content.packs.filter((p) => p.unitList.length);
 
   return (
     <main className="screen home">
       <header className="home-header">
-        <h1>{ui.appTitle}</h1>
-        <p className="subtitle">{ui.appSubtitle}</p>
+        <div>
+          <h1>{ui.appTitle}</h1>
+          <p className="subtitle">{ui.appSubtitle}</p>
+        </div>
+        <div className="header-actions">
+          <LangSwitch value={state.settings.helpLang} onChange={(helpLang) => update((s) => ({ ...s, settings: { ...s.settings, helpLang } }))} />
+          <button className="icon-button settings-button" onClick={onOpenSettings} aria-label={ui.settings} title={ui.settings}>
+            ⚙
+          </button>
+        </div>
       </header>
 
       <section className="review-card">
@@ -55,27 +43,27 @@ export function Home({ state, update, onStart }: Props) {
           <p className="muted">{ui.dueCount(dueCount)}</p>
           <p className="muted small">{ui.newToday(state.daily.newIntroduced, NEW_PER_DAY)}</p>
         </div>
-        <button className="button primary big" disabled={reviewSize === 0} onClick={() => onStart(ui.review, reviewItems())}>
+        <button className="button primary big" disabled={reviewSize === 0} onClick={() => onStart(ui.review, buildReviewSession(state))}>
           {reviewSize === 0 ? ui.allDoneToday : ui.reviewWithCount(reviewSize)}
         </button>
       </section>
 
-      <div className="segmented" role="radiogroup" aria-label={ui.helpLangLabel}>
-        <span className="segmented-label">{ui.helpLangLabel}</span>
-        {HELP_LANGS.map((lang) => (
-          <button
-            key={lang}
-            role="radio"
-            aria-checked={helpLang === lang}
-            className={helpLang === lang ? 'active' : ''}
-            onClick={() => update((s) => ({ ...s, settings: { ...s.settings, helpLang: lang } }))}
-          >
-            {ui.helpLangNames[lang]}
-          </button>
-        ))}
-      </div>
+      {sheetCount > 0 && (
+        <button className="sheets-card" onClick={onOpenSheets}>
+          <span className="sheets-card-icon" aria-hidden>
+            📖
+          </span>
+          <span className="unit-body">
+            <span className="unit-title">{ui.sheets}</span>
+            <span className="muted small">{ui.sheetsTeaser(sheetCount)}</span>
+          </span>
+          <span className="chevron" aria-hidden>
+            ›
+          </span>
+        </button>
+      )}
 
-      {content.packs.map((pack) => (
+      {exercisePacks.map((pack) => (
         <section key={pack.id} className="pack">
           <h2>
             <span aria-hidden>{pack.icon}</span> {pack.title} <span className="level">{pack.level}</span>
@@ -87,8 +75,10 @@ export function Home({ state, update, onStart }: Props) {
               const due = unit.entryIds.filter((id) => state.srs[id] && isDue(state.srs[id]!, today)).length;
               return (
                 <li key={unit.key}>
-                  <button className="unit" onClick={() => startUnit(unit.key)}>
-                    <span className="unit-icon" aria-hidden>{unit.icon}</span>
+                  <button className="unit" onClick={() => onStart(unit.title, buildUnitSession(state, unit.key))}>
+                    <span className="unit-icon" aria-hidden>
+                      {unit.icon}
+                    </span>
                     <span className="unit-body">
                       <span className="unit-title">{unit.title}</span>
                       <span className="progress" aria-label={ui.unitProgressLabel(seen, total)}>
@@ -99,7 +89,9 @@ export function Home({ state, update, onStart }: Props) {
                         {due ? ` · ${ui.unitDue(due)}` : ''}
                       </span>
                     </span>
-                    <span className="chevron" aria-hidden>›</span>
+                    <span className="chevron" aria-hidden>
+                      ›
+                    </span>
                   </button>
                 </li>
               );

@@ -1,0 +1,443 @@
+{
+  "id": "unite-06",
+  "label": "Unité 6",
+  "title": "Qu'est-ce qu'on fait aujourd'hui ?",
+  "icon": "⏰",
+  "summary": {
+    "pl": "Dzień codzienny, godziny, wyjścia i opis osoby: czasowniki zwrotne, częstotliwość, passé récent (venir de), czasowniki partir / sortir / dormir, pouvoir i vouloir.",
+    "fr": "La journée, l'heure, les sorties et la description d'une personne : les verbes pronominaux, la fréquence, le passé récent, partir / sortir / dormir, pouvoir et vouloir."
+  },
+  "sections": [
+    {
+      "kind": "grammar",
+      "title": "Les verbes pronominaux",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Czasownik zwrotny ma przed sobą zaimek, który **zmienia się z osobą**: je **me** lève, tu **te** lèves, il **se** lève…\nPrzed samogłoską lub niemym h: **me → m'**, **te → t'**, **se → s'**: je **m'**habille.",
+            "fr": "Le verbe pronominal a un pronom qui **change avec la personne** : je **me** lève, tu **te** lèves, il **se** lève…\nDevant une voyelle ou un h muet : **me → m'**, **te → t'**, **se → s'** : je **m'**habille."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "se lever", "s'habiller"],
+          "rows": [
+            ["je", "**me** lève", "**m'**habille"],
+            ["tu", "**te** lèves", "**t'**habilles"],
+            ["il / elle / on", "**se** lève", "**s'**habille"],
+            ["nous", "**nous** levons", "**nous** habillons"],
+            ["vous", "**vous** levez", "**vous** habillez"],
+            ["ils / elles", "**se** lèvent", "**s'**habillent"]
+          ]
+        },
+        {
+          "type": "words",
+          "items": [
+            { "fr": "se réveiller", "pl": "budzić się", "def": "ouvrir les yeux le matin" },
+            { "fr": "se lever", "pl": "wstawać", "def": "sortir du lit" },
+            { "fr": "se doucher / se laver", "pl": "brać prysznic / myć się" },
+            { "fr": "s'habiller", "pl": "ubierać się", "def": "mettre ses vêtements" },
+            { "fr": "se maquiller / se raser", "pl": "malować się / golić się" },
+            { "fr": "se dépêcher", "pl": "spieszyć się", "def": "aller vite" },
+            { "fr": "se promener", "pl": "spacerować", "def": "marcher pour le plaisir" },
+            { "fr": "se reposer", "pl": "odpoczywać" },
+            { "fr": "se coucher", "pl": "kłaść się spać", "def": "aller au lit" }
+          ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "Przeczenie: **ne** + zaimek + czasownik + **pas**: je **ne me** lève **pas** tôt.\nZ bezokolicznikiem zaimek pasuje do osoby: je vais **me** coucher, nous allons **nous** promener.",
+            "fr": "La négation : **ne** + pronom + verbe + **pas** : je **ne me** lève **pas** tôt.\nAvec un infinitif, le pronom change avec la personne : je vais **me** coucher, nous allons **nous** promener."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je **me réveille** à 7 heures.", "pl": "Budzę się o siódmej." },
+            { "fr": "Tu **te couches** tard ?", "pl": "Późno chodzisz spać?" },
+            { "fr": "Le dimanche, nous **nous reposons**.", "pl": "W niedziele odpoczywamy." },
+            { "fr": "Elle **ne s'habille pas** en noir.", "pl": "Ona nie ubiera się na czarno." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Polskie **się** jest zawsze takie samo, francuski zaimek — nie: nie « je se lève », tylko **je me lève**; nie « nous se levons », tylko **nous nous levons**.",
+            "fr": "Le pronom change avec la personne : on ne dit pas « je se lève », on dit **je me lève** ; pas « nous se levons », mais **nous nous levons**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "La fréquence",
+      "blocks": [
+        {
+          "type": "words",
+          "items": [
+            { "fr": "tous les jours", "pl": "codziennie", "def": "chaque jour" },
+            { "fr": "tous les lundis = le lundi", "pl": "w każdy poniedziałek, w poniedziałki" },
+            { "fr": "tous les matins / tous les soirs", "pl": "każdego ranka / każdego wieczoru" },
+            { "fr": "toutes les semaines", "pl": "co tydzień" },
+            { "fr": "une fois par semaine", "pl": "raz w tygodniu" },
+            { "fr": "deux fois par mois", "pl": "dwa razy w miesiącu" },
+            { "fr": "souvent", "pl": "często", "def": "beaucoup de fois" },
+            { "fr": "parfois / de temps en temps", "pl": "czasami / od czasu do czasu", "def": "pas souvent, mais pas jamais" },
+            { "fr": "rarement", "pl": "rzadko", "def": "presque jamais" },
+            { "fr": "ne … jamais", "pl": "nigdy", "def": "0 fois" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**tous les** + rzeczownik męski, **toutes les** + rzeczownik żeński: tous les jours, toutes les semaines.\n**le** + dzień tygodnia = co tydzień w ten dzień: **le** samedi, je fais du sport.",
+            "fr": "**tous les** + nom masculin, **toutes les** + nom féminin : tous les jours, toutes les semaines.\n**le** + jour = chaque semaine ce jour-là : **le** samedi, je fais du sport."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je fais les courses **une fois par semaine**.", "pl": "Robię zakupy raz w tygodniu." },
+            { "fr": "Il va **rarement** au théâtre.", "pl": "On rzadko chodzi do teatru." },
+            { "fr": "**Le mercredi**, les enfants n'ont pas école.", "pl": "W środy dzieci nie mają szkoły." },
+            { "fr": "Nous **ne** sortons **jamais** le lundi soir.", "pl": "Nigdy nie wychodzimy w poniedziałek wieczorem." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**lundi** = w najbliższy poniedziałek (jeden raz), **le lundi** = w każdy poniedziałek. « Lundi, je vais au cinéma » to jedno wyjście, « Le lundi, je vais au cinéma » — zwyczaj.",
+            "fr": "**lundi** = ce lundi (une seule fois), **le lundi** = tous les lundis. « Lundi, je vais au cinéma » : une fois. « Le lundi, je vais au cinéma » : une habitude."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Le passé récent",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**venir de** + **bezokolicznik** = coś przed chwilą się wydarzyło (po polsku: **właśnie** + czas przeszły).\nPrzed samogłoską: **de → d'**: il vient **d'**arriver.",
+            "fr": "**venir de** + **infinitif** = une action terminée il y a très peu de temps.\nDevant une voyelle : **de → d'** : il vient **d'**arriver."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "venir", "de + infinitif"],
+          "rows": [
+            ["je", "**viens**", "de manger"],
+            ["tu", "**viens**", "de te lever"],
+            ["il / elle / on", "**vient**", "d'arriver"],
+            ["nous", "**venons**", "de finir le travail"],
+            ["vous", "**venez**", "de rentrer"],
+            ["ils / elles", "**viennent**", "de partir"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je **viens de** me réveiller.", "pl": "Właśnie się obudziłem / obudziłam." },
+            { "fr": "Le film **vient de** commencer.", "pl": "Film właśnie się zaczął." },
+            { "fr": "Ils **viennent d'**acheter des places pour le concert.", "pl": "Właśnie kupili bilety na koncert." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Nie myl: **je viens de manger** (właśnie zjadłem — przeszłość) i **je vais manger** (zaraz zjem — przyszłość).",
+            "fr": "Attention : **je viens de manger** = c'est fini (passé) ; **je vais manger** = bientôt (futur)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les verbes partir, sortir, dormir",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "partir", "sortir", "dormir"],
+          "rows": [
+            ["je", "par**s**", "sor**s**", "dor**s**"],
+            ["tu", "par**s**", "sor**s**", "dor**s**"],
+            ["il / elle / on", "par**t**", "sor**t**", "dor**t**"],
+            ["nous", "part**ons**", "sort**ons**", "dorm**ons**"],
+            ["vous", "part**ez**", "sort**ez**", "dorm**ez**"],
+            ["ils / elles", "part**ent**", "sort**ent**", "dorm**ent**"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "W liczbie pojedynczej znika ostatnia spółgłoska tematu (**t**, **m**) i dochodzi **-s, -s, -t**: je par**s**, il dor**t**.\nW liczbie mnogiej spółgłoska wraca: nous par**t**ons, ils dor**m**ent.",
+            "fr": "Au singulier, la dernière consonne du radical (**t**, **m**) disparaît et on ajoute **-s, -s, -t** : je par**s**, il dor**t**.\nAu pluriel, la consonne revient : nous par**t**ons, ils dor**m**ent."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je **pars** au travail à 8 heures.", "pl": "Wychodzę do pracy o ósmej." },
+            { "fr": "Vous **sortez** ce soir ?", "pl": "Wychodzicie gdzieś dziś wieczorem?" },
+            { "fr": "Les enfants **dorment** huit heures par nuit.", "pl": "Dzieci śpią osiem godzin na dobę." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Te czasowniki nie odmieniają się jak **finir**: nie « nous partissons », tylko **nous partons**.\n**partir** = wyjeżdżać, wychodzić (na dłużej, w drogę); **sortir** = wychodzić (z domu, na miasto, rozrywkowo).",
+            "fr": "Ces verbes ne se conjuguent pas comme **finir** : on ne dit pas « nous partissons », on dit **nous partons**.\n**partir** = quitter un lieu pour aller ailleurs ; **sortir** = aller dehors, aller en ville pour s'amuser."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les verbes pouvoir et vouloir",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "pouvoir", "vouloir"],
+          "rows": [
+            ["je", "peu**x**", "veu**x**"],
+            ["tu", "peu**x**", "veu**x**"],
+            ["il / elle / on", "peu**t**", "veu**t**"],
+            ["nous", "pouv**ons**", "voul**ons**"],
+            ["vous", "pouv**ez**", "voul**ez**"],
+            ["ils / elles", "peuv**ent**", "veul**ent**"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**pouvoir** (móc) i **vouloir** (chcieć) + **bezokolicznik**: tu **peux venir** ? je **veux sortir**.\nGrzecznie: **je voudrais** (chciałbym / chciałabym).",
+            "fr": "**pouvoir** et **vouloir** + **infinitif** : tu **peux venir** ? je **veux sortir**.\nPour être poli : **je voudrais**."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Tu **veux** aller au cinéma samedi ?", "pl": "Chcesz iść do kina w sobotę?" },
+            { "fr": "Désolé, je ne **peux** pas, je travaille.", "pl": "Przykro mi, nie mogę, pracuję." },
+            { "fr": "On **peut** se retrouver devant le théâtre.", "pl": "Możemy się spotkać przed teatrem." },
+            { "fr": "Ils **veulent** voir l'exposition.", "pl": "Oni chcą zobaczyć wystawę." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Formy **je / tu** kończą się na **-x**: je peu**x**, tu veu**x** (nie « je peut »). Przeczenie otacza pierwszy czasownik: je **ne** peux **pas** venir.",
+            "fr": "Aux formes **je / tu**, on écrit **-x** : je peu**x**, tu veu**x** (pas « je peut »). La négation est autour du premier verbe : je **ne** peux **pas** venir."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "L'heure",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "langue courante", "heure officielle"],
+          "rows": [
+            ["8 h 00", "huit heures", "huit heures"],
+            ["8 h 15", "huit heures **et quart**", "huit heures quinze"],
+            ["8 h 30", "huit heures **et demie**", "huit heures trente"],
+            ["8 h 45", "neuf heures **moins le quart**", "huit heures quarante-cinq"],
+            ["9 h 50", "dix heures **moins dix**", "neuf heures cinquante"],
+            ["12 h 00", "**midi**", "douze heures"],
+            ["12 h 30", "**midi et demi**", "douze heures trente"],
+            ["15 h 20", "trois heures vingt (de l'après-midi)", "quinze heures vingt"],
+            ["21 h 00", "neuf heures (du soir)", "vingt et une heures"],
+            ["0 h 00", "**minuit**", "zéro heure"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Pytanie: **Il est quelle heure ?** / **Quelle heure est-il ?** Odpowiedź zawsze z **il est**: il est deux heures.\nGodzina oficjalna (0–24 h) — w rozkładach, kinie, radiu. Potocznie liczymy do 12 i dodajemy **du matin / de l'après-midi / du soir**.",
+            "fr": "La question : **Il est quelle heure ?** / **Quelle heure est-il ?** La réponse commence par **il est** : il est deux heures.\nL'heure officielle (0–24 h) : dans les horaires, au cinéma, à la radio. Dans la langue courante, on compte jusqu'à 12 et on ajoute **du matin / de l'après-midi / du soir**."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Il est **une** heure **et demie**.", "pl": "Jest wpół do drugiej." },
+            { "fr": "À quelle heure commence le film ? — **À** vingt heures.", "pl": "O której zaczyna się film? — O dwudziestej." },
+            { "fr": "Le musée est ouvert **de** 10 heures **à** 18 heures.", "pl": "Muzeum jest otwarte od 10 do 18." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Polskie « wpół do dziewiątej » = **huit heures et demie** (8.30) — Francuz liczy od pełnej godziny, która minęła!\nPisz **et demie** (z -e po heure), ale **midi / minuit et demi**.",
+            "fr": "8 h 30 = **huit heures et demie** : on part de l'heure passée.\nOn écrit **et demie** après heure, mais **midi et demi**, **minuit et demi**."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les activités",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Codzienny dzień", "fr": "La journée" },
+          "items": [
+            { "fr": "prendre le petit-déjeuner", "pl": "jeść śniadanie", "def": "le repas du matin" },
+            { "fr": "aller au travail / à l'école", "pl": "iść do pracy / do szkoły" },
+            { "fr": "commencer / finir le travail", "pl": "zaczynać / kończyć pracę" },
+            { "fr": "déjeuner", "pl": "jeść obiad (w południe)", "def": "manger à midi" },
+            { "fr": "rentrer (à la maison)", "pl": "wracać (do domu)", "def": "revenir chez soi" },
+            { "fr": "dîner", "pl": "jeść kolację", "def": "manger le soir" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Prace domowe", "fr": "Les activités de la maison" },
+          "items": [
+            { "fr": "faire le ménage", "pl": "sprzątać", "def": "nettoyer la maison" },
+            { "fr": "faire la cuisine", "pl": "gotować", "def": "préparer les repas" },
+            { "fr": "faire la vaisselle", "pl": "zmywać naczynia", "def": "laver les assiettes et les verres" },
+            { "fr": "faire les courses", "pl": "robić zakupy", "def": "acheter à manger" },
+            { "fr": "faire la lessive", "pl": "robić pranie", "def": "laver les vêtements" },
+            { "fr": "passer l'aspirateur", "pl": "odkurzać" },
+            { "fr": "ranger", "pl": "sprzątać, porządkować", "def": "mettre chaque chose à sa place" },
+            { "fr": "sortir le chien", "pl": "wyprowadzać psa" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Czas wolny i wyjścia", "fr": "Le temps libre et les sorties" },
+          "items": [
+            { "fr": "aller au cinéma / au théâtre", "pl": "iść do kina / do teatru" },
+            { "fr": "aller à un concert", "pl": "iść na koncert", "def": "écouter de la musique en direct" },
+            { "fr": "voir une exposition", "pl": "zobaczyć wystawę", "def": "regarder des œuvres dans un musée" },
+            { "fr": "aller au restaurant", "pl": "iść do restauracji" },
+            { "fr": "boire un verre", "pl": "iść na drinka, na kawę", "def": "prendre une boisson dans un café" },
+            { "fr": "faire du sport", "pl": "uprawiać sport" },
+            { "fr": "regarder une série", "pl": "oglądać serial" },
+            { "fr": "lire / jouer à des jeux vidéo", "pl": "czytać / grać w gry wideo" },
+            { "fr": "voir des amis", "pl": "spotykać się z przyjaciółmi" }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je me lève à 7 heures, je prends le petit-déjeuner et je pars à 8 heures.", "pl": "Wstaję o siódmej, jem śniadanie i wychodzę o ósmej." },
+            { "fr": "Le soir, je fais la cuisine et je regarde une série.", "pl": "Wieczorem gotuję i oglądam serial." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Décrire une personne",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Wygląd", "fr": "Le physique" },
+          "items": [
+            { "fr": "grand / grande", "pl": "wysoki" },
+            { "fr": "petit / petite", "pl": "niski" },
+            { "fr": "mince", "pl": "szczupły", "def": "pas gros" },
+            { "fr": "jeune / âgé, âgée", "pl": "młody / starszy" },
+            { "fr": "beau / belle", "pl": "przystojny / piękna" },
+            { "fr": "les cheveux blonds / bruns / roux", "pl": "jasne / ciemne / rude włosy" },
+            { "fr": "les cheveux courts / longs / frisés", "pl": "krótkie / długie / kręcone włosy" },
+            { "fr": "les yeux bleus / verts / marron", "pl": "niebieskie / zielone / brązowe oczy" },
+            { "fr": "une barbe / une moustache", "pl": "broda / wąsy" },
+            { "fr": "porter des lunettes", "pl": "nosić okulary" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Charakter", "fr": "Le caractère" },
+          "items": [
+            { "fr": "sympa (sympathique)", "pl": "sympatyczny, miły" },
+            { "fr": "gentil / gentille", "pl": "miły, uprzejmy", "def": "il aide les autres" },
+            { "fr": "drôle", "pl": "zabawny", "def": "il fait rire" },
+            { "fr": "timide", "pl": "nieśmiały", "def": "il ne parle pas beaucoup aux inconnus" },
+            { "fr": "calme", "pl": "spokojny" },
+            { "fr": "bavard / bavarde", "pl": "gadatliwy", "def": "il parle beaucoup" },
+            { "fr": "sérieux / sérieuse", "pl": "poważny, solidny" },
+            { "fr": "généreux / généreuse", "pl": "hojny", "def": "il aime donner" },
+            { "fr": "curieux / curieuse", "pl": "ciekawy (świata)", "def": "il veut tout savoir" },
+            { "fr": "dynamique", "pl": "energiczny", "def": "plein d'énergie" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**il / elle est** + przymiotnik: elle est grande et drôle.\n**il / elle a** + **les** cheveux / **les** yeux + przymiotnik: il **a les** cheveux courts.",
+            "fr": "**il / elle est** + adjectif : elle est grande et drôle.\n**il / elle a** + **les** cheveux / **les** yeux + adjectif : il **a les** cheveux courts."
+          }
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Przy włosach i oczach używamy **avoir** i rodzajnika **les**: nie « il est les yeux bleus », tylko **il a les yeux bleus**.",
+            "fr": "Pour les cheveux et les yeux, on utilise **avoir** + **les** : on dit **il a les yeux bleus**, pas « il est les yeux bleus »."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Proposer, accepter, refuser une sortie",
+      "blocks": [
+        {
+          "type": "examples",
+          "title": { "pl": "Propozycja", "fr": "Proposer" },
+          "items": [
+            { "fr": "Tu veux aller au cinéma ce soir ?", "pl": "Chcesz iść dziś wieczorem do kina?" },
+            { "fr": "Ça te dit de voir une exposition samedi ?", "pl": "Masz ochotę zobaczyć wystawę w sobotę?" },
+            { "fr": "On va boire un verre après le travail ?", "pl": "Idziemy na drinka po pracy?" },
+            { "fr": "On se retrouve à quelle heure ? Et où ?", "pl": "O której się spotykamy? I gdzie?" }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Zgoda", "fr": "Accepter" },
+          "items": [
+            { "fr": "Oui, avec plaisir !", "pl": "Tak, z przyjemnością!" },
+            { "fr": "D'accord, bonne idée !", "pl": "Dobrze, świetny pomysł!" },
+            { "fr": "Pourquoi pas ? À quelle heure ?", "pl": "Czemu nie? O której?" },
+            { "fr": "OK, rendez-vous à 20 heures devant le cinéma.", "pl": "OK, spotkajmy się o 20 przed kinem." }
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Odmowa", "fr": "Refuser" },
+          "items": [
+            { "fr": "Désolé(e), je ne peux pas, je travaille.", "pl": "Przykro mi, nie mogę, pracuję." },
+            { "fr": "Ce soir, ce n'est pas possible. Demain, peut-être ?", "pl": "Dziś wieczorem nie da rady. Może jutro?" },
+            { "fr": "Merci, mais je n'aime pas beaucoup le théâtre.", "pl": "Dziękuję, ale nie przepadam za teatrem." },
+            { "fr": "Je suis fatigué(e), je reste à la maison.", "pl": "Jestem zmęczony / zmęczona, zostaję w domu." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Demander l'heure, raconter sa journée",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Excusez-moi, vous avez l'heure, s'il vous plaît ?", "pl": "Przepraszam, która jest godzina?" },
+            { "fr": "Il est quelle heure ? — Il est midi et quart.", "pl": "Która godzina? — Kwadrans po dwunastej." },
+            { "fr": "Tu te lèves à quelle heure ?", "pl": "O której wstajesz?" },
+            { "fr": "Je travaille de 9 heures à 17 heures.", "pl": "Pracuję od 9 do 17." },
+            { "fr": "Le week-end, je me repose et je vois mes amis.", "pl": "W weekend odpoczywam i spotykam się z przyjaciółmi." },
+            { "fr": "Je suis en retard ! / Je suis à l'heure.", "pl": "Jestem spóźniony / spóźniona! / Jestem na czas." }
+          ]
+        }
+      ]
+    }
+  ],
+  "practice": ["edito-a1/unite-06", "a1-connecteurs/04-expressions"]
+}

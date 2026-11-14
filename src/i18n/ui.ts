@@ -1,7 +1,7 @@
 /** Interface strings. Learning content lives in `content/`, not here. */
 export const ui = {
-  appTitle: 'Français A1',
-  appSubtitle: 'Révisions : connecteurs, prépositions et plus encore',
+  appTitle: 'Français',
+  appSubtitle: 'Révisions A1–A2 : Édito, connecteurs et plus encore',
 
   dueCount: (n: number) => (n <= 1 ? 'entrée à réviser' : 'entrées à réviser'),
   newToday: (n: number, max: number) => `Nouvelles aujourd’hui : ${n} / ${max}`,
@@ -11,6 +11,20 @@ export const ui = {
   unitSeen: (seen: number, total: number) => `${seen}/${total} découvertes`,
   unitDue: (n: number) => `${n} à réviser`,
   unitProgressLabel: (seen: number, total: number) => `Découvertes : ${seen} sur ${total}`,
+
+  sheets: 'Fiches de révision',
+  sheetsTeaser: (n: number) => `${n} fiche${n > 1 ? 's' : ''} : grammaire, vocabulaire, expressions`,
+  sheetContents: 'Sommaire de la fiche',
+  sectionKinds: { grammar: 'Grammaire', vocabulary: 'Vocabulaire', phrases: 'Communication' },
+  watchOut: 'Attention',
+  practiceThis: 'S’entraîner',
+
+  settings: 'Réglages',
+  themeLabel: 'Thème',
+  themeNames: { system: 'Système', light: 'Clair', dark: 'Sombre' },
+  themeHint: '« Système » suit le mode clair ou sombre de ton appareil.',
+  helpLangHint: 'Langue des traductions, explications et indices.',
+  vibration: 'Vibrations',
 
   helpLangLabel: 'Aides',
   helpLangNames: { pl: 'polonais', fr: 'français' },

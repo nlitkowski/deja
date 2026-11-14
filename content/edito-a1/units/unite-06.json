@@ -1,0 +1,260 @@
+{
+  "id": "unite-06",
+  "title": "Unité 6 · Qu'est-ce qu'on fait aujourd'hui ?",
+  "icon": "⏰",
+  "entries": [
+    {
+      "id": "u06-pronominaux",
+      "fr": "je me lève, tu te lèves, il se lève…",
+      "pl": "czasowniki zwrotne",
+      "def": "verbe avec un pronom qui change avec la personne : me, te, se, nous, vous, se",
+      "examples": [
+        { "fr": "Je me réveille à 7 heures.", "pl": "Budzę się o siódmej." },
+        { "fr": "Le dimanche, nous nous reposons.", "pl": "W niedziele odpoczywamy." }
+      ],
+      "tip": {
+        "pl": "me, te, se, nous, vous, se; przed samogłoską: m', t', s' (je m'habille)",
+        "fr": "me, te, se, nous, vous, se ; devant une voyelle : m', t', s' (je m'habille)"
+      },
+      "confusables": ["u06-pronominaux-neg"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u06-pronominaux-neg",
+      "fr": "je ne me lève pas / je vais me coucher",
+      "pl": "czasowniki zwrotne: przeczenie i bezokolicznik",
+      "def": "négation : ne + pronom + verbe + pas ; avec un infinitif, le pronom change aussi avec la personne",
+      "examples": [
+        { "fr": "Elle ne s'habille pas en noir.", "pl": "Ona nie ubiera się na czarno." },
+        { "fr": "Nous allons nous promener.", "pl": "Idziemy na spacer." }
+      ],
+      "tip": {
+        "pl": "ne stoi przed zaimkiem: je ne me lève pas; przy bezokoliczniku zaimek pasuje do osoby: tu vas te coucher",
+        "fr": "ne se place avant le pronom : je ne me lève pas ; avec l'infinitif, le pronom suit la personne : tu vas te coucher"
+      },
+      "confusables": ["u06-pronominaux"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u06-tous-les",
+      "fr": "tous les / toutes les",
+      "pl": "każdy, co (codziennie, co tydzień)",
+      "def": "pour une habitude : tous les jours, toutes les semaines",
+      "examples": [
+        { "fr": "Je fais du sport tous les jours.", "pl": "Codziennie uprawiam sport." },
+        { "fr": "Il appelle sa mère toutes les semaines.", "pl": "Dzwoni do mamy co tydzień." }
+      ],
+      "tip": {
+        "pl": "tous les + rzeczownik rodzaju męskiego, toutes les + rzeczownik rodzaju żeńskiego",
+        "fr": "tous les + nom masculin, toutes les + nom féminin"
+      },
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u06-le-jour",
+      "fr": "le lundi / lundi",
+      "pl": "w poniedziałki / w (ten) poniedziałek",
+      "def": "le lundi = tous les lundis (une habitude) ; lundi = ce lundi (une seule fois)",
+      "examples": [
+        { "fr": "Le samedi, je fais du sport.", "pl": "W soboty uprawiam sport." },
+        { "fr": "Lundi, je vais au cinéma.", "pl": "W poniedziałek idę do kina." }
+      ],
+      "tip": {
+        "pl": "le + dzień tygodnia = zwyczaj (co tydzień); sam dzień = jeden raz",
+        "fr": "le + jour = une habitude (chaque semaine) ; le jour seul = une seule fois"
+      },
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u06-fois-par",
+      "fr": "une fois par semaine, parfois, rarement",
+      "pl": "raz w tygodniu, czasami, rzadko",
+      "def": "pour dire combien de fois on fait quelque chose",
+      "examples": [
+        { "fr": "Je fais les courses une fois par semaine.", "pl": "Robię zakupy raz w tygodniu." },
+        { "fr": "Il va rarement au théâtre.", "pl": "On rzadko chodzi do teatru." }
+      ],
+      "tip": {
+        "pl": "une fois / deux fois par + semaine, mois, an; parfois = de temps en temps; rarement = nie często",
+        "fr": "une fois / deux fois par + semaine, mois, an ; parfois = de temps en temps ; rarement = pas souvent"
+      },
+      "confusables": ["u04-frequence"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u06-passe-recent",
+      "fr": "venir de + infinitif",
+      "pl": "przeszłość niedawna (właśnie coś zrobiłem)",
+      "def": "une action terminée il y a très peu de temps : je viens de manger",
+      "examples": [
+        { "fr": "Je viens de me réveiller.", "pl": "Właśnie się obudziłem." },
+        { "fr": "Le film vient de commencer.", "pl": "Film właśnie się zaczął." }
+      ],
+      "tip": {
+        "pl": "venir w czasie teraźniejszym + de + bezokolicznik; przed samogłoską d' (il vient d'arriver)",
+        "fr": "venir au présent + de + infinitif ; devant une voyelle : d' (il vient d'arriver)"
+      },
+      "confusables": ["u05-futur-proche"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u06-partir-sortir-dormir",
+      "fr": "partir, sortir, dormir",
+      "pl": "wyjeżdżać, wychodzić, spać",
+      "def": "je pars, il sort, nous dormons, ils partent",
+      "examples": [
+        { "fr": "Je pars au travail à 8 heures.", "pl": "Wychodzę do pracy o ósmej." },
+        { "fr": "Les enfants dorment.", "pl": "Dzieci śpią." }
+      ],
+      "tip": {
+        "pl": "w liczbie pojedynczej znika t / m: je pars, il dort; w liczbie mnogiej wraca: nous partons, ils dorment",
+        "fr": "au singulier, le t / m disparaît : je pars, il dort ; au pluriel, il revient : nous partons, ils dorment"
+      },
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u06-pouvoir",
+      "fr": "pouvoir",
+      "pl": "móc",
+      "def": "je peux, il peut, nous pouvons, ils peuvent + infinitif",
+      "examples": [
+        { "fr": "Désolé, je ne peux pas venir.", "pl": "Przykro mi, nie mogę przyjść." },
+        { "fr": "On peut se retrouver devant le théâtre.", "pl": "Możemy się spotkać przed teatrem." }
+      ],
+      "tip": {
+        "pl": "je peux, tu peux (z -x), il peut, nous pouvons, vous pouvez, ils peuvent",
+        "fr": "je peux, tu peux (avec -x), il peut, nous pouvons, vous pouvez, ils peuvent"
+      },
+      "confusables": ["u06-vouloir"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u06-vouloir",
+      "fr": "vouloir",
+      "pl": "chcieć",
+      "def": "je veux, il veut, nous voulons, ils veulent ; poli : je voudrais",
+      "examples": [
+        { "fr": "Tu veux aller au cinéma samedi ?", "pl": "Chcesz iść do kina w sobotę?" },
+        { "fr": "Je voudrais un café, s'il vous plaît.", "pl": "Poproszę kawę." }
+      ],
+      "tip": {
+        "pl": "je veux, tu veux (z -x), il veut, nous voulons, vous voulez, ils veulent; grzecznie: je voudrais",
+        "fr": "je veux, tu veux (avec -x), il veut, nous voulons, vous voulez, ils veulent ; poli : je voudrais"
+      },
+      "confusables": ["u06-pouvoir"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u06-heure",
+      "fr": "et quart, et demie, moins le quart",
+      "pl": "podawanie godziny",
+      "def": "il est + l'heure : huit heures et quart, huit heures et demie, neuf heures moins le quart",
+      "examples": [
+        { "fr": "Il est une heure et demie.", "pl": "Jest wpół do drugiej." },
+        { "fr": "Il est midi et quart.", "pl": "Jest kwadrans po dwunastej." }
+      ],
+      "tip": {
+        "pl": "8:15 et quart, 8:30 et demie (ale midi / minuit et demi), 8:45 neuf heures moins le quart",
+        "fr": "8 h 15 et quart, 8 h 30 et demie (mais midi / minuit et demi), 8 h 45 neuf heures moins le quart"
+      },
+      "tags": ["grammaire"]
+    },
+    { "id": "u06-petit-dejeuner", "fr": "le petit-déjeuner", "pl": "śniadanie", "def": "le premier repas de la journée", "examples": [{ "fr": "Je prends le petit-déjeuner à 7 heures.", "pl": "Jem śniadanie o siódmej." }], "tags": ["vocabulaire"] },
+    { "id": "u06-menage", "fr": "le ménage", "pl": "sprzątanie", "def": "le travail pour avoir une maison propre", "examples": [{ "fr": "Le samedi, je fais le ménage.", "pl": "W soboty sprzątam." }], "tags": ["vocabulaire"] },
+    { "id": "u06-vaisselle", "fr": "la vaisselle", "pl": "naczynia (zmywanie)", "def": "les assiettes, les verres… à laver après le repas", "examples": [{ "fr": "Il fait la vaisselle après le dîner.", "pl": "Po kolacji zmywa naczynia." }], "tags": ["vocabulaire"] },
+    { "id": "u06-courses", "fr": "les courses", "pl": "zakupy (codzienne)", "def": "acheter à manger et les choses pour la maison", "examples": [{ "fr": "Je fais les courses au supermarché.", "pl": "Robię zakupy w supermarkecie." }], "tags": ["vocabulaire"] },
+    { "id": "u06-lessive", "fr": "la lessive", "pl": "pranie", "def": "laver les vêtements", "examples": [{ "fr": "Je fais la lessive le dimanche.", "pl": "Robię pranie w niedzielę." }], "tags": ["vocabulaire"] },
+    { "id": "u06-exposition", "fr": "une exposition", "pl": "wystawa", "def": "des œuvres à regarder dans un musée", "examples": [{ "fr": "On va voir une exposition samedi ?", "pl": "Idziemy w sobotę na wystawę?" }], "tags": ["vocabulaire"] },
+    { "id": "u06-serie", "fr": "une série", "pl": "serial", "def": "une histoire en plusieurs épisodes", "examples": [{ "fr": "Le soir, je regarde une série.", "pl": "Wieczorem oglądam serial." }], "tags": ["vocabulaire"] },
+    { "id": "u06-cheveux", "fr": "les cheveux", "pl": "włosy", "def": "ils poussent sur la tête", "examples": [{ "fr": "Il a les cheveux courts.", "pl": "On ma krótkie włosy." }], "tags": ["vocabulaire"] },
+    { "id": "u06-yeux", "fr": "les yeux", "pl": "oczy", "def": "on regarde avec eux", "examples": [{ "fr": "Elle a les yeux verts.", "pl": "Ona ma zielone oczy." }], "tags": ["vocabulaire"] },
+    { "id": "u06-barbe", "fr": "une barbe", "pl": "broda (zarost)", "def": "les poils sur le menton et les joues", "examples": [{ "fr": "Mon père a une barbe grise.", "pl": "Mój tata ma siwą brodę." }], "tags": ["vocabulaire"] }
+  ],
+  "exercises": [
+    { "id": "u06-pron-1", "type": "gap-fill", "entryIds": ["u06-pronominaux"], "data": { "sentence": "Je ___ à 7 heures. (se réveiller)", "answers": ["me réveille"], "pl": "Budzę się o siódmej." } },
+    { "id": "u06-pron-2", "type": "gap-fill", "entryIds": ["u06-pronominaux"], "data": { "sentence": "Tu ___ tard ? (se coucher)", "answers": ["te couches"], "pl": "Późno chodzisz spać?" } },
+    { "id": "u06-pron-3", "type": "gap-fill", "entryIds": ["u06-pronominaux"], "data": { "sentence": "Le dimanche, nous ___. (se reposer)", "answers": ["nous reposons"], "pl": "W niedziele odpoczywamy." } },
+    { "id": "u06-pron-4", "type": "gap-fill", "entryIds": ["u06-pronominaux"], "data": { "sentence": "Elle ___ en dix minutes. (s'habiller)", "answers": ["s'habille"], "pl": "Ona ubiera się w dziesięć minut." } },
+    { "id": "u06-pron-5", "type": "gap-fill", "entryIds": ["u06-pronominaux"], "data": { "sentence": "Vous ___ le matin ou le soir ? (se doucher)", "answers": ["vous douchez"], "pl": "Bierzecie prysznic rano czy wieczorem?" } },
+    { "id": "u06-pron-6", "type": "gap-fill", "entryIds": ["u06-pronominaux"], "data": { "sentence": "Ils ___ tôt pour aller au travail. (se lever)", "answers": ["se lèvent"], "pl": "Oni wstają wcześnie, żeby iść do pracy." } },
+
+    { "id": "u06-pron-neg-1", "type": "gap-fill", "entryIds": ["u06-pronominaux-neg"], "data": { "sentence": "Je ___ lève pas tôt le week-end.", "answers": ["ne me"], "pl": "W weekend nie wstaję wcześnie.", "clue": "(négation, je)" } },
+    { "id": "u06-pron-neg-2", "type": "gap-fill", "entryIds": ["u06-pronominaux-neg"], "data": { "sentence": "Il ne ___ rase pas tous les jours.", "answers": ["se"], "pl": "On nie goli się codziennie." } },
+    { "id": "u06-pron-neg-3", "type": "gap-fill", "entryIds": ["u06-pronominaux-neg"], "data": { "sentence": "Ce soir, je vais ___ coucher tôt.", "answers": ["me"], "pl": "Dziś wieczorem pójdę wcześnie spać." } },
+    { "id": "u06-pron-neg-4", "type": "gap-fill", "entryIds": ["u06-pronominaux-neg"], "data": { "sentence": "Nous allons ___ promener au parc.", "answers": ["nous"], "pl": "Idziemy na spacer do parku." } },
+    { "id": "u06-pron-neg-5", "type": "gap-fill", "entryIds": ["u06-pronominaux-neg"], "data": { "sentence": "Tu ne ___ dépêches pas ? Le film commence !", "answers": ["te"], "pl": "Nie pospieszysz się? Film się zaczyna!" } },
+
+    { "id": "u06-tous-1", "type": "gap-fill", "entryIds": ["u06-tous-les"], "data": { "sentence": "Je fais du sport ___ les jours.", "answers": ["tous"], "pl": "Codziennie uprawiam sport." } },
+    { "id": "u06-tous-2", "type": "gap-fill", "entryIds": ["u06-tous-les"], "data": { "sentence": "Il appelle sa mère ___ les semaines.", "answers": ["toutes"], "pl": "Dzwoni do mamy co tydzień." } },
+    { "id": "u06-tous-3", "type": "gap-fill", "entryIds": ["u06-tous-les"], "data": { "sentence": "Nous allons au marché ___ les samedis.", "answers": ["tous"], "pl": "Chodzimy na targ w każdą sobotę." } },
+    { "id": "u06-tous-4", "type": "gap-fill", "entryIds": ["u06-tous-les"], "data": { "sentence": "Le bébé se réveille ___ les nuits.", "answers": ["toutes"], "pl": "Dziecko budzi się każdej nocy." } },
+
+    { "id": "u06-jour-1", "type": "gap-fill", "entryIds": ["u06-le-jour"], "data": { "sentence": "___ samedi, je fais toujours du sport.", "answers": ["le"], "pl": "W soboty zawsze uprawiam sport.", "clue": "(tous les samedis)" } },
+    { "id": "u06-jour-2", "type": "gap-fill", "entryIds": ["u06-le-jour"], "data": { "sentence": "___ mercredi, les enfants n'ont pas école.", "answers": ["le"], "pl": "W środy dzieci nie mają szkoły.", "clue": "(chaque semaine)" } },
+    { "id": "u06-jour-3", "type": "gap-fill", "entryIds": ["u06-le-jour"], "data": { "sentence": "Nous ne travaillons jamais ___ dimanche.", "answers": ["le"], "pl": "Nigdy nie pracujemy w niedziele.", "clue": "(tous les dimanches)" } },
+    { "id": "u06-jour-4", "type": "gap-fill", "entryIds": ["u06-le-jour"], "data": { "sentence": "Le lundi, je vais à la piscine = je vais à la piscine ___ les lundis.", "answers": ["tous"], "pl": "W poniedziałki chodzę na basen = chodzę na basen w każdy poniedziałek." } },
+
+    { "id": "u06-fois-1", "type": "gap-fill", "entryIds": ["u06-fois-par"], "data": { "sentence": "Je fais les courses une fois ___ semaine.", "answers": ["par"], "pl": "Robię zakupy raz w tygodniu." } },
+    { "id": "u06-fois-2", "type": "gap-fill", "entryIds": ["u06-fois-par"], "data": { "sentence": "Elle va à la piscine deux ___ par semaine.", "answers": ["fois"], "pl": "Ona chodzi na basen dwa razy w tygodniu." } },
+    { "id": "u06-fois-3", "type": "gap-fill", "entryIds": ["u06-fois-par"], "data": { "sentence": "Il va ___ au théâtre : une fois par an.", "answers": ["rarement"], "pl": "On rzadko chodzi do teatru: raz w roku.", "clue": "(pas souvent)" } },
+    { "id": "u06-fois-4", "type": "gap-fill", "entryIds": ["u06-fois-par"], "data": { "sentence": "On mange ___ au restaurant, mais pas tous les week-ends.", "answers": ["parfois", "de temps en temps", "quelquefois"], "pl": "Czasami jemy w restauracji, ale nie w każdy weekend.", "clue": "(ça arrive, mais pas toujours)" } },
+
+    { "id": "u06-recent-1", "type": "gap-fill", "entryIds": ["u06-passe-recent"], "data": { "sentence": "Je ___ de me réveiller. (venir)", "answers": ["viens"], "pl": "Właśnie się obudziłem." } },
+    { "id": "u06-recent-2", "type": "gap-fill", "entryIds": ["u06-passe-recent"], "data": { "sentence": "Le film vient ___ commencer.", "answers": ["de"], "pl": "Film właśnie się zaczął." } },
+    { "id": "u06-recent-3", "type": "gap-fill", "entryIds": ["u06-passe-recent"], "data": { "sentence": "Désolé, ils ___ partir ! (venir de)", "answers": ["viennent de"], "pl": "Przykro mi, właśnie wyszli!" } },
+    { "id": "u06-recent-4", "type": "gap-fill", "entryIds": ["u06-passe-recent"], "data": { "sentence": "Nous ___ finir le travail. (venir de)", "answers": ["venons de"], "pl": "Właśnie skończyliśmy pracę." } },
+    { "id": "u06-recent-5", "type": "gap-fill", "entryIds": ["u06-passe-recent"], "data": { "sentence": "Tu ___ de manger ? (venir)", "answers": ["viens"], "pl": "Właśnie jadłeś?" } },
+
+    { "id": "u06-psd-1", "type": "gap-fill", "entryIds": ["u06-partir-sortir-dormir"], "data": { "sentence": "Je ___ au travail à 8 heures. (partir)", "answers": ["pars"], "pl": "Wychodzę do pracy o ósmej." } },
+    { "id": "u06-psd-2", "type": "gap-fill", "entryIds": ["u06-partir-sortir-dormir"], "data": { "sentence": "Vous ___ ce soir ? (sortir)", "answers": ["sortez"], "pl": "Wychodzicie gdzieś dziś wieczorem?" } },
+    { "id": "u06-psd-3", "type": "gap-fill", "entryIds": ["u06-partir-sortir-dormir"], "data": { "sentence": "Les enfants ___ huit heures par nuit. (dormir)", "answers": ["dorment"], "pl": "Dzieci śpią osiem godzin na dobę." } },
+    { "id": "u06-psd-4", "type": "gap-fill", "entryIds": ["u06-partir-sortir-dormir"], "data": { "sentence": "Il ___ le chien tous les matins. (sortir)", "answers": ["sort"], "pl": "Co rano wyprowadza psa." } },
+    { "id": "u06-psd-5", "type": "gap-fill", "entryIds": ["u06-partir-sortir-dormir"], "data": { "sentence": "Nous ___ en vacances demain. (partir)", "answers": ["partons"], "pl": "Jutro wyjeżdżamy na wakacje." } },
+    { "id": "u06-psd-6", "type": "gap-fill", "entryIds": ["u06-partir-sortir-dormir"], "data": { "sentence": "Tu ___ bien ? (dormir)", "answers": ["dors"], "pl": "Dobrze śpisz?" } },
+
+    { "id": "u06-pouvoir-1", "type": "gap-fill", "entryIds": ["u06-pouvoir"], "data": { "sentence": "Désolé, je ne ___ pas venir, je travaille. (pouvoir)", "answers": ["peux"], "pl": "Przykro mi, nie mogę przyjść, pracuję." } },
+    { "id": "u06-pouvoir-2", "type": "gap-fill", "entryIds": ["u06-pouvoir"], "data": { "sentence": "On ___ se retrouver devant le cinéma. (pouvoir)", "answers": ["peut"], "pl": "Możemy się spotkać przed kinem." } },
+    { "id": "u06-pouvoir-3", "type": "gap-fill", "entryIds": ["u06-pouvoir"], "data": { "sentence": "Vous ___ fermer la fenêtre, s'il vous plaît ? (pouvoir)", "answers": ["pouvez"], "pl": "Może pan / pani zamknąć okno?" } },
+    { "id": "u06-pouvoir-4", "type": "gap-fill", "entryIds": ["u06-pouvoir"], "data": { "sentence": "Ils ne ___ pas sortir ce soir. (pouvoir)", "answers": ["peuvent"], "pl": "Oni nie mogą dziś wieczorem wyjść." } },
+
+    { "id": "u06-vouloir-1", "type": "gap-fill", "entryIds": ["u06-vouloir"], "data": { "sentence": "Tu ___ aller au cinéma samedi ? (vouloir)", "answers": ["veux"], "pl": "Chcesz iść do kina w sobotę?" } },
+    { "id": "u06-vouloir-2", "type": "gap-fill", "entryIds": ["u06-vouloir"], "data": { "sentence": "Ils ___ voir l'exposition. (vouloir)", "answers": ["veulent"], "pl": "Oni chcą zobaczyć wystawę." } },
+    { "id": "u06-vouloir-3", "type": "gap-fill", "entryIds": ["u06-vouloir"], "data": { "sentence": "Nous ___ boire un verre après le travail. (vouloir)", "answers": ["voulons"], "pl": "Chcemy iść na drinka po pracy." } },
+    { "id": "u06-vouloir-4", "type": "gap-fill", "entryIds": ["u06-vouloir"], "data": { "sentence": "Je ___ un café, s'il vous plaît. (vouloir – poli)", "answers": ["voudrais"], "pl": "Poproszę kawę." } },
+
+    { "id": "u06-heure-1", "type": "gap-fill", "entryIds": ["u06-heure"], "data": { "sentence": "8 h 15 : il est huit heures et ___.", "answers": ["quart"] } },
+    { "id": "u06-heure-2", "type": "gap-fill", "entryIds": ["u06-heure"], "data": { "sentence": "8 h 30 : il est huit heures et ___.", "answers": ["demie"] } },
+    { "id": "u06-heure-3", "type": "gap-fill", "entryIds": ["u06-heure"], "data": { "sentence": "8 h 45 : il est neuf heures ___ le quart.", "answers": ["moins"] } },
+    { "id": "u06-heure-4", "type": "gap-fill", "entryIds": ["u06-heure"], "data": { "sentence": "12 h 00 : il est ___.", "answers": ["midi"] } },
+    { "id": "u06-heure-5", "type": "gap-fill", "entryIds": ["u06-heure"], "data": { "sentence": "12 h 30 : il est midi et ___.", "answers": ["demi"], "hint": { "pl": "po midi bez -e", "fr": "après midi, sans -e" } } },
+    { "id": "u06-heure-6", "type": "gap-fill", "entryIds": ["u06-heure"], "data": { "sentence": "0 h 00 : il est ___.", "answers": ["minuit"] } },
+
+    { "id": "u06-petit-dejeuner-1", "type": "gap-fill", "entryIds": ["u06-petit-dejeuner"], "data": { "sentence": "Le matin, je prends le ___ avec ma famille.", "answers": ["petit-déjeuner", "petit déjeuner"], "pl": "Rano jem śniadanie z rodziną.", "clue": "(le premier repas de la journée)" } },
+    { "id": "u06-petit-dejeuner-2", "type": "translate-pl-fr", "entryIds": ["u06-petit-dejeuner"], "data": { "pl": "śniadanie", "answers": ["le petit-déjeuner", "un petit-déjeuner", "le petit déjeuner", "un petit déjeuner"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u06-menage-1", "type": "gap-fill", "entryIds": ["u06-menage"], "data": { "sentence": "Le samedi matin, je fais le ___ dans tout l'appartement.", "answers": ["ménage"], "pl": "W sobotę rano sprzątam całe mieszkanie.", "clue": "(le travail pour une maison propre)" } },
+    { "id": "u06-menage-2", "type": "translate-pl-fr", "entryIds": ["u06-menage"], "data": { "pl": "sprzątanie", "answers": ["le ménage"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u06-vaisselle-1", "type": "gap-fill", "entryIds": ["u06-vaisselle"], "data": { "sentence": "Après le dîner, il fait la ___.", "answers": ["vaisselle"], "pl": "Po kolacji zmywa naczynia.", "clue": "(laver les assiettes et les verres)" } },
+    { "id": "u06-vaisselle-2", "type": "translate-pl-fr", "entryIds": ["u06-vaisselle"], "data": { "pl": "naczynia (zmywanie)", "answers": ["la vaisselle"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u06-courses-1", "type": "gap-fill", "entryIds": ["u06-courses"], "data": { "sentence": "Je fais les ___ au supermarché.", "answers": ["courses"], "pl": "Robię zakupy w supermarkecie.", "clue": "(acheter à manger)" } },
+    { "id": "u06-courses-2", "type": "translate-pl-fr", "entryIds": ["u06-courses"], "data": { "pl": "zakupy (codzienne)", "answers": ["les courses", "des courses"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u06-lessive-1", "type": "gap-fill", "entryIds": ["u06-lessive"], "data": { "sentence": "Mes vêtements sont sales : je fais la ___.", "answers": ["lessive"], "pl": "Moje ubrania są brudne: robię pranie.", "clue": "(laver les vêtements)" } },
+    { "id": "u06-lessive-2", "type": "translate-pl-fr", "entryIds": ["u06-lessive"], "data": { "pl": "pranie", "answers": ["la lessive", "une lessive"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u06-exposition-1", "type": "gap-fill", "entryIds": ["u06-exposition"], "data": { "sentence": "Samedi, on va voir une ___ de photos au musée.", "answers": ["exposition", "expo"], "pl": "W sobotę idziemy obejrzeć wystawę zdjęć w muzeum.", "clue": "(des œuvres à regarder)" } },
+    { "id": "u06-exposition-2", "type": "translate-pl-fr", "entryIds": ["u06-exposition"], "data": { "pl": "wystawa", "answers": ["une exposition", "l'exposition"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u06-serie-1", "type": "gap-fill", "entryIds": ["u06-serie"], "data": { "sentence": "Le soir, je regarde une ___ à la télé.", "answers": ["série"], "pl": "Wieczorem oglądam serial w telewizji.", "clue": "(une histoire en plusieurs épisodes)" } },
+    { "id": "u06-serie-2", "type": "translate-pl-fr", "entryIds": ["u06-serie"], "data": { "pl": "serial", "answers": ["une série", "la série"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u06-cheveux-1", "type": "gap-fill", "entryIds": ["u06-cheveux"], "data": { "sentence": "Elle a les ___ longs et blonds.", "answers": ["cheveux"], "pl": "Ona ma długie jasne włosy.", "clue": "(ils poussent sur la tête)" } },
+    { "id": "u06-cheveux-2", "type": "translate-pl-fr", "entryIds": ["u06-cheveux"], "data": { "pl": "włosy", "answers": ["les cheveux", "des cheveux"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u06-yeux-1", "type": "gap-fill", "entryIds": ["u06-yeux"], "data": { "sentence": "Il a les ___ bleus.", "answers": ["yeux"], "pl": "On ma niebieskie oczy.", "clue": "(on regarde avec eux)" } },
+    { "id": "u06-yeux-2", "type": "translate-pl-fr", "entryIds": ["u06-yeux"], "data": { "pl": "oczy", "answers": ["les yeux", "des yeux"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u06-barbe-1", "type": "gap-fill", "entryIds": ["u06-barbe"], "data": { "sentence": "Mon père a une ___ grise.", "answers": ["barbe"], "pl": "Mój tata ma siwą brodę.", "clue": "(des poils sur le menton et les joues)" } },
+    { "id": "u06-barbe-2", "type": "translate-pl-fr", "entryIds": ["u06-barbe"], "data": { "pl": "broda (zarost)", "answers": ["une barbe", "la barbe"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } }
+  ],
+  "boss": {
+    "entryIds": ["u06-pronominaux", "u06-passe-recent", "u06-partir-sortir-dormir", "u06-pouvoir", "u06-vouloir"],
+    "exerciseTypes": ["gap-fill"],
+    "questions": 10,
+    "lives": 3,
+    "timeLimitSec": 20
+  }
+}

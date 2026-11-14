@@ -48,6 +48,11 @@ describe('checkAnswer', () => {
     expect(checkAnswer("s' il", ["s'il"]).correct).toBe(true);
   });
 
+  it('treats the œ ligature and oe as the same', () => {
+    expect(checkAnswer('oeufs', ['œufs'])).toMatchObject({ correct: true, nearMiss: false });
+    expect(checkAnswer('sœur', ['soeur'])).toMatchObject({ correct: true, nearMiss: false });
+  });
+
   it('rejects empty input', () => {
     expect(checkAnswer('   ', ['et'])).toMatchObject({ correct: false, expected: 'et' });
   });
