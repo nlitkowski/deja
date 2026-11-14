@@ -2,7 +2,11 @@ import { useMemo } from 'react';
 import { content } from '../content/registry';
 import { achievementStats, BADGES, bossAchievements, unlockedIds } from '../game/achievements';
 import { levelFromXp } from '../game/levels';
+import { league } from '../game/league';
 import { questStatus } from '../game/quests';
+import { heatmap, masteryByPack, weakestEntries } from '../game/stats';
+import { goalResolver } from '../game/streak';
+import { xpByDay } from '../game/xp';
 import { defeatedBosses, mapState, type MapPack } from '../game/map';
 import { streakInfo } from '../game/streak';
 import { totalXp } from '../game/xp';
@@ -62,4 +66,26 @@ export function useQuests() {
   const log = useAppStore((s) => s.log);
   const today = dayKey(new Date());
   return useMemo(() => questStatus(log, today, questContext), [log, today]);
+}
+
+export function useLeague() {
+  const log = useAppStore((s) => s.log);
+  const today = dayKey(new Date());
+  return useMemo(() => league(log, today, xpContext), [log, today]);
+}
+
+const allEntryIds = allUnits.flatMap((u) => u.entryIds);
+
+export function useStats() {
+  const log = useAppStore((s) => s.log);
+  const cards = useAppStore((s) => s.progress.cards);
+  const today = dayKey(new Date());
+  return useMemo(
+    () => ({
+      heatmap: heatmap(xpByDay(log, xpContext), goalResolver(log), today),
+      weakest: weakestEntries(allEntryIds, cards),
+      mastery: masteryByPack(mapPacks, cards),
+    }),
+    [log, cards, today],
+  );
 }

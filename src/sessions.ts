@@ -38,3 +38,18 @@ export function buildUnitSession(progress: ProgressState, settings: Settings, un
     mode: 'practice',
   });
 }
+
+/** Practice of the given entries only (the weakest ones from Stats), due or not. */
+export function buildEntriesSession(progress: ProgressState, settings: Settings, entryIds: readonly string[], now = new Date()): SessionItem[] {
+  const ids = new Set(entryIds);
+  return buildSession({
+    entries: entryIds.map((id) => content.entries.get(id)!).filter(Boolean),
+    exercises: usableExercises(settings).filter((ex) => ex.entryIds.some((id) => ids.has(id))),
+    srs: progress.cards,
+    today: dayKey(now),
+    newAllowed: 0,
+    isProduction,
+    mode: 'practice',
+    minPracticeItems: entryIds.length,
+  });
+}

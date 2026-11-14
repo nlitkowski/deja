@@ -170,7 +170,9 @@ Zrobione. Uwagi: odznaki stopniowane (Flamme, bonnes réponses, Combo) to jeden 
 - Postęp questów liczony z logu. Nagroda to XP, a bonus questa wymaga własnego zdarzenia `quest` przy odbiorze, żeby XP było w logu.
 - Karta questów na Home i postęp questów w SessionSummary.
 
-## Etap 6 — Liga z duchami i statystyki
+## Etap 6 — Liga z duchami i statystyki ✅
+
+Zrobione. Uwagi: tabela ma 10 miejsc (ty, 4 duchy, 5 botów). Duchy liczą XP z tej samej liczby dni swojego tygodnia, co upłynęło w bieżącym. Boty: mediana twoich pełnych tygodni (od pierwszego aktywnego; bez historii 250 XP) × współczynnik 0,6–1,5 z seeda tygodnia, z losowym rozkładem na dni. Ligi przeliczane tydzień po tygodniu od pierwszego tygodnia z XP; remis rozstrzyga się na niekorzyść gracza, więc tydzień bez XP zawsze spada. Heatmapa: 26 tygodni, odcienie względem celu dziennego obowiązującego danego dnia. „Najsłabsze wpisy”: najwięcej `lapses`, potem najniższy ease, maks. 10.
 
 - Liga tygodniowa (od poniedziałku, według dnia nauki): rywalizujesz z własnym XP z 4 poprzednich tygodni oraz z 5 botami, których tempo jest deterministycznie losowane z seeda tygodnia i skalowane do twojej mediany.
 - Ligi Bronze → Argent → Or → Diamant: awans z top 3, spadek z ostatnich 2.

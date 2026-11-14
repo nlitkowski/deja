@@ -6,6 +6,7 @@ import { UnitMap } from '../components/UnitMap';
 import { Icon } from '../components/Icon';
 import { LangSwitch } from '../components/LangSwitch';
 import { content } from '../content/registry';
+import { GAME } from '../game/config';
 import { ui } from '../i18n/ui';
 import { dayKey } from '../lib/date';
 import { newIntroducedOn } from '../lib/progress/fold';
@@ -13,7 +14,8 @@ import type { SessionItem } from '../lib/session';
 import { isDue } from '../lib/srs';
 import { buildReviewSession, buildUnitSession, NEW_PER_DAY } from '../sessions';
 import { useAppStore } from '../state/appStore';
-import { useMapState } from '../state/useGame';
+import { useLeague, useMapState } from '../state/useGame';
+import { TIER_ICONS } from './League';
 
 interface Props {
   onStart: (title: string, items: SessionItem[], unitKey?: string) => void;
@@ -22,13 +24,16 @@ interface Props {
   onOpenSettings: () => void;
   onBoss: (unitKey: string) => void;
   onOpenAchievements: () => void;
+  onOpenLeague: () => void;
+  onOpenStats: () => void;
 }
 
-export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBoss, onOpenAchievements }: Props) {
+export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBoss, onOpenAchievements, onOpenLeague, onOpenStats }: Props) {
   const progress = useAppStore((s) => s.progress);
   const settings = useAppStore((s) => s.settings);
   const updateSettings = useAppStore((s) => s.updateSettings);
   const map = useMapState();
+  const league = useLeague();
   const cards = progress.cards;
   const today = dayKey(new Date());
   const dueCount = [...content.entries.values()].filter((e) => !e.deprecated && cards[e.id] && isDue(cards[e.id]!, today)).length;
@@ -74,6 +79,27 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBos
         </section>
 
         <QuestList />
+
+        <div className="home-links">
+          <button className="sheets-card" onClick={onOpenLeague}>
+            <span className="sheets-card-icon">
+              <Emoji char={TIER_ICONS[league.tier]!} />
+            </span>
+            <span className="unit-body">
+              <span className="unit-title">{ui.league}</span>
+              <span className="muted small">{ui.leagueSummary(GAME.league.tiers[league.tier]!, ui.rank(league.rank))}</span>
+            </span>
+          </button>
+          <button className="sheets-card" onClick={onOpenStats}>
+            <span className="sheets-card-icon">
+              <Emoji char="📊" />
+            </span>
+            <span className="unit-body">
+              <span className="unit-title">{ui.stats}</span>
+              <span className="muted small">{ui.statsTeaser}</span>
+            </span>
+          </button>
+        </div>
 
         {sheetCount > 0 && (
           <button className="sheets-card" onClick={onOpenSheets}>

@@ -75,6 +75,8 @@ src/
     boss.ts                 # pytania bossa z grup mylonych wpisów, życia
     achievements/badges/    # jeden plik na odznakę (albo serię progów); rejestr przez import.meta.glob
     quests/daily|weekly/    # jeden plik na quest; wybór deterministyczny z seeda dnia / tygodnia
+    league.ts               # liga tygodniowa: duchy z własnych tygodni i boty z seeda
+    stats.ts                # heatmapa, najsłabsze wpisy, mastery per pakiet
     xp.ts
     levels.ts
     streak.ts

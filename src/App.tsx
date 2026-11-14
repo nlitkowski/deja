@@ -1,17 +1,20 @@
 import { useEffect, useState } from 'react';
 import type { HelpLang } from './content/localized';
 import { content } from './content/registry';
+import { ui } from './i18n/ui';
 import type { SessionItem } from './lib/session';
 import { Achievements } from './screens/Achievements';
 import { Boss } from './screens/Boss';
 import { ContentErrors } from './screens/ContentErrors';
 import { Home } from './screens/Home';
+import { League } from './screens/League';
 import { Session, type SessionOutcome } from './screens/Session';
 import { SessionSummary } from './screens/SessionSummary';
 import { SettingsScreen } from './screens/SettingsScreen';
 import { SheetList } from './screens/SheetList';
 import { SheetView } from './screens/SheetView';
-import { buildUnitSession } from './sessions';
+import { Stats } from './screens/Stats';
+import { buildEntriesSession, buildUnitSession } from './sessions';
 import { useAppStore } from './state/appStore';
 import { useTheme } from './theme';
 
@@ -23,7 +26,9 @@ type Screen =
   | { name: 'sheets' }
   | { name: 'sheet'; key: string }
   | { name: 'settings' }
-  | { name: 'achievements' };
+  | { name: 'achievements' }
+  | { name: 'league' }
+  | { name: 'stats' };
 
 export function App() {
   const settings = useAppStore((s) => s.settings);
@@ -55,6 +60,8 @@ export function App() {
           onOpenSettings={() => setScreen({ name: 'settings' })}
           onBoss={(unitKey) => setScreen({ name: 'boss', unitKey })}
           onOpenAchievements={() => setScreen({ name: 'achievements' })}
+          onOpenLeague={() => setScreen({ name: 'league' })}
+          onOpenStats={() => setScreen({ name: 'stats' })}
         />
       );
     case 'session':
@@ -78,6 +85,12 @@ export function App() {
       );
     case 'summary':
       return <SessionSummary outcome={screen.outcome} onDone={home} />;
+    case 'league':
+      return <League onBack={home} />;
+    case 'stats':
+      return (
+        <Stats onBack={home} onReviseWeak={(ids) => startSession(ui.weakest, buildEntriesSession(useAppStore.getState().progress, settings, ids))} />
+      );
     case 'achievements':
       return <Achievements onBack={home} />;
     case 'settings':

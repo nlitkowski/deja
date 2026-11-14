@@ -2225,3 +2225,194 @@ button.tree-sheet:disabled {
     transform: translate(-50%, -12px);
   }
 }
+
+/* League */
+
+.home-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.home-links .sheets-card {
+  margin: 0;
+}
+
+.league-table {
+  list-style: none;
+  margin: 16px 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.league-row {
+  display: grid;
+  grid-template-columns: 2.5em auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: var(--border-w) solid var(--border);
+  border-left: 4px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.league-row.up {
+  border-left-color: var(--success);
+}
+
+.league-row.down {
+  border-left-color: var(--danger);
+}
+
+.league-row.you {
+  background: var(--near-bg);
+  border-color: var(--highlight);
+  font-weight: 700;
+}
+
+.league-row.ghost .league-name {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.league-place {
+  font-family: var(--font-head);
+  font-weight: 700;
+}
+
+.league-xp {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Stats */
+
+.stats .settings-card h2 {
+  margin: 0 0 10px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.section-head h2 {
+  margin: 0 !important;
+}
+
+.heatmap-scroll {
+  overflow-x: auto;
+  scrollbar-width: var(--scroll-width);
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+
+.heatmap {
+  display: flex;
+  gap: 3px;
+  width: max-content;
+  margin-left: auto;
+}
+
+.heat-week {
+  display: grid;
+  grid-template-rows: repeat(7, 12px);
+  gap: 3px;
+}
+
+.heat-day {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: var(--border);
+  vertical-align: middle;
+}
+
+.heat-day.level-1 {
+  background: color-mix(in srgb, var(--success) 30%, var(--surface));
+}
+
+.heat-day.level-2 {
+  background: color-mix(in srgb, var(--success) 55%, var(--surface));
+}
+
+.heat-day.level-3 {
+  background: color-mix(in srgb, var(--success) 80%, var(--surface));
+}
+
+.heat-day.level-4 {
+  background: var(--success);
+}
+
+.heat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin: 10px 0 0;
+}
+
+.weak-list {
+  margin: 0;
+  padding-left: 1.4em;
+  display: grid;
+  gap: 6px;
+}
+
+.weak-list li > span:first-child {
+  margin-right: 8px;
+}
+
+.pack-mastery p {
+  margin: 12px 0 6px;
+}
+
+.mastery-bar {
+  display: flex;
+  height: 14px;
+  border-radius: var(--pill-radius);
+  overflow: hidden;
+  background: var(--border);
+}
+
+.swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.mastery-0 {
+  background: var(--border);
+}
+
+.mastery-1 {
+  background: color-mix(in srgb, var(--accent) 30%, var(--surface));
+}
+
+.mastery-2 {
+  background: color-mix(in srgb, var(--accent) 55%, var(--surface));
+}
+
+.mastery-3 {
+  background: color-mix(in srgb, var(--accent) 80%, var(--surface));
+}
+
+.mastery-4 {
+  background: var(--accent);
+}
+
+.mastery-5 {
+  background: var(--highlight);
+}
+
+[data-palette='pixel'] .heat-day,
+[data-palette='pixel'] .swatch,
+[data-palette='pixel'] .mastery-bar {
+  border-radius: 0;
+}

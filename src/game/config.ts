@@ -38,6 +38,17 @@ export const GAME = {
     maxFreezes: 2,
   },
   quests: { daily: 3, weekly: 1, dailyReward: 20, weeklyReward: 100 },
+  league: {
+    tiers: ['Bronze', 'Argent', 'Or', 'Diamant'],
+    ghosts: 4,
+    bots: 5,
+    promote: 3,
+    relegate: 2,
+    /** Weekly XP the bots are scaled to before there is any history of your own. */
+    defaultPace: 250,
+    /** Each bot's pace is your median weekly XP times a factor in this range. */
+    botFactor: [0.6, 1.5],
+  },
   /** A boss without its own config in the unit file. */
   boss: { questions: 10, lives: 3, secondsPerQuestion: 12 },
   /** The combo counter shows from this many correct answers in a row. */
