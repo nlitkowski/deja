@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { AudioSchema } from './audio';
 import { LocalizedSchema } from './localized';
 
 const localId = z.string().regex(/^[a-z0-9][a-z0-9-]*$/, 'id: małe litery, cyfry i myślniki');
@@ -9,14 +10,14 @@ const ExamplesBlock = z.object({
   type: z.literal('examples'),
   title: LocalizedSchema.optional(),
   /** `pl` is shown only with Polish help. */
-  items: z.array(z.object({ fr: z.string().min(1), pl: z.string().min(1) })).min(1),
+  items: z.array(z.object({ fr: z.string().min(1), pl: z.string().min(1), audio: AudioSchema.optional() })).min(1),
 });
 
 const WordsBlock = z.object({
   type: z.literal('words'),
   title: LocalizedSchema.optional(),
   /** `pl` is shown with Polish help, `def` (a short French gloss) with French help. */
-  items: z.array(z.object({ fr: z.string().min(1), pl: z.string().min(1), def: z.string().min(1).optional() })).min(1),
+  items: z.array(z.object({ fr: z.string().min(1), pl: z.string().min(1), def: z.string().min(1).optional(), audio: AudioSchema.optional() })).min(1),
 });
 
 const TableBlock = z
@@ -25,6 +26,8 @@ const TableBlock = z
     title: LocalizedSchema.optional(),
     head: z.array(z.string()).min(1),
     rows: z.array(z.array(z.string())).min(1),
+    /** Only cells that are whole sentences are recorded; `skip` records none of them. */
+    audio: AudioSchema.pick({ skip: true }).optional(),
   })
   .refine((t) => t.rows.every((r) => r.length === t.head.length), { message: 'każdy wiersz musi mieć tyle komórek co nagłówek', path: ['rows'] });
 

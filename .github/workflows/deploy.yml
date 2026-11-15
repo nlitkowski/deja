@@ -20,11 +20,61 @@ env:
   API_URL: https://deja-api.litkowski.com
 
 jobs:
+  # Records French texts that have no recording yet (usually none: `npm run tts` is run locally before committing),
+  # uploads them to R2 and commits the manifest. Later jobs build that commit, so the manifest test sees it.
+  audio:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    permissions:
+      contents: write
+    concurrency:
+      group: audio
+      cancel-in-progress: false
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Only loads the content when nothing is missing; the keys are used only when something is.
+      - run: npm run tts
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+
+      # A push with GITHUB_TOKEN starts no new workflow run, so this run deploys the commit itself.
+      - id: commit
+        run: |
+          if git diff --quiet -- content/_audio/manifest.json; then
+            echo "sha=$GITHUB_SHA" >> "$GITHUB_OUTPUT"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Record audio for new content" -- content/_audio/manifest.json
+            git push
+            echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          fi
+
   # Both deploys wait for this, so a failing check ships nothing.
   check:
+    needs: audio
+    # Runs after `audio`, or without it on a manual (staging) run.
+    if: ${{ !cancelled() && needs.audio.result != 'failure' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.audio.outputs.sha || github.sha }}
 
       - uses: actions/setup-node@v7
         with:
@@ -40,7 +90,8 @@ jobs:
 
   # The API at deja-api.litkowski.com, with D1 migrations applied before the new code goes live.
   api:
-    needs: check
+    needs: [audio, check]
+    if: ${{ !cancelled() && needs.check.result == 'success' }}
     runs-on: ubuntu-latest
     concurrency:
       group: cloudflare-${{ inputs.cloudflare-env || 'production' }}
@@ -52,6 +103,8 @@ jobs:
       DATABASE: ${{ inputs.cloudflare-env == 'staging' && 'deja-staging' || 'deja' }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.audio.outputs.sha || github.sha }}
 
       - uses: actions/setup-node@v7
         with:
@@ -66,11 +119,13 @@ jobs:
 
   # The app at deja.litkowski.com (GitHub Pages, custom domain set in the repository's Pages settings).
   pages-build:
-    needs: check
-    if: github.event_name == 'push'
+    needs: [audio, check]
+    if: ${{ !cancelled() && github.event_name == 'push' && needs.check.result == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.audio.outputs.sha || github.sha }}
 
       - uses: actions/setup-node@v7
         with:

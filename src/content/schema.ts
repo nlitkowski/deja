@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { AudioSchema } from './audio';
 import { LocalizedSchema } from './localized';
 import type { Sheet } from './sheet';
 
@@ -6,7 +7,7 @@ const localId = z.string().regex(/^[a-z0-9][a-z0-9-]*$/, 'id: małe litery, cyfr
 /** Local id (`prep-dans`) or cross-pack reference (`other-pack/prep-dans`). */
 const entryRef = z.string().regex(/^([a-z0-9][a-z0-9-]*\/)?[a-z0-9][a-z0-9-]*$/, 'oczekiwano <entry> albo <pack>/<entry>');
 
-export const ExampleSchema = z.object({ fr: z.string().min(1), pl: z.string().min(1) });
+export const ExampleSchema = z.object({ fr: z.string().min(1), pl: z.string().min(1), audio: AudioSchema.optional() });
 
 export const EntrySchema = z.object({
   id: localId,
@@ -20,8 +21,8 @@ export const EntrySchema = z.object({
   confusables: z.array(entryRef).optional(),
   tags: z.array(z.string()).optional(),
   deprecated: z.boolean().optional(),
-  /** What speech synthesis should read when it differs from `fr`, e.g. a letter's name: `y` → "i grec". */
-  audio: z.object({ text: z.string().min(1) }).optional(),
+  /** Recording of `fr`; `text` when it should be read differently, e.g. a letter's name: `y` → "i grec". */
+  audio: AudioSchema.optional(),
 });
 
 export const ExerciseSchema = z.object({
@@ -29,6 +30,8 @@ export const ExerciseSchema = z.object({
   type: z.string().min(1),
   entryIds: z.array(entryRef).min(1),
   data: z.unknown(),
+  /** Recording of the full sentence (a gap-fill with its gap filled, a translation's first answer). */
+  audio: AudioSchema.optional(),
 });
 
 export const BossConfigSchema = z.object({

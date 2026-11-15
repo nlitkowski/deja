@@ -21,4 +21,5 @@ export const gapFill: ExerciseLogic<GapFillData> = {
   schema: gapFillSchema,
   production: true,
   skill: 'written',
+  audioText: (d) => d.sentence.replace(GAP, d.answers[0]!),
 };

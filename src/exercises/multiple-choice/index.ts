@@ -26,6 +26,8 @@ export const multipleChoice: ExerciseLogic<MultipleChoiceData> = {
   schema: multipleChoiceSchema,
   production: false,
   skill: 'written',
+  // Same text as the hand-written gap-fill it comes from, so it plays that recording.
+  audioText: (d) => d.sentence.replace(GAP, d.answer),
   generate(entry, ctx) {
     const candidates = [...entry.confusables, ...ctx.unitEntries.map((e) => e.id)].filter(
       (id) => id !== entry.id && !ctx.allEntries.get(id)?.deprecated,

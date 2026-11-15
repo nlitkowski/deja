@@ -16,4 +16,5 @@ export const translatePlFr: ExerciseLogic<TranslateData> = {
   production: true,
   skill: 'written',
   helpLangs: ['pl'],
+  audioText: (d) => d.answers[0]!,
 };

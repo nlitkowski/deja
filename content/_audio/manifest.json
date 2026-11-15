@@ -1,0 +1,2587 @@
+{
+ "001ca786669b18597a8d894bcca86dbf": {
+  "text": "Nadia est française. Elle habite à Lille.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 19296
+ },
+ "004a9b8c58e0a3b2e3446a0941000adb": {
+  "text": "si tu veux, on y va.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "00b71fda83a3b5e5f08b9763dc10399a": {
+  "text": "Le vol est annulé. C'est pourquoi nous restons une nuit de plus à l'hôtel.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 31248
+ },
+ "017b6150596874ddb2354d6dfa07eab1": {
+  "text": "un cinéma",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "018c26214f747956bef4b028c883be9b": {
+  "text": "Tu as déjà vu ce film ? — Non, pas encore. Je vais le voir ce soir.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 31248
+ },
+ "027a340038067339b98ef56a069c0834": {
+  "text": "Tu passes chez moi après le travail ?",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 16416
+ },
+ "02d871acfa5fd8c419860655361d3143": {
+  "text": "Votre dossier est presque complet. cependant, il manque encore une photo.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 33552
+ },
+ "031f536c7d219db650f93a4bc85e5e07": {
+  "text": "Le musée est gratuit le premier dimanche du mois.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 19872
+ },
+ "0401fb60639db88a88af0b618354328e": {
+  "text": "J'apprends le français pour travailler en France.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 18864
+ },
+ "040e01d1d0b4e2385175bcbf8fed1148": {
+  "text": "une banque",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "044a29aac9c1b632620420cace19025a": {
+  "text": "J'ai déjà fini",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11664
+ },
+ "04525ea78fcd7e12b6cb3eab377edae3": {
+  "text": "Le magasin est ouvert du lundi au samedi.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 17424
+ },
+ "046e81679ad60bc33619385ed81ad342": {
+  "text": "Il sort sans parapluie.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14112
+ },
+ "047bd9cbb4a7bc8babbe3f7c406c7efe": {
+  "text": "En avril, il pleut souvent.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 16704
+ },
+ "048a733d6f646d7ed99dbc87172a3e6f": {
+  "text": "L'hôtel est à cinq minutes de la plage.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 17424
+ },
+ "049032ba33de02d2369ded0db5217c50": {
+  "text": "sous",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ },
+ "052c29b6ca9d324f0386091507534863": {
+  "text": "Le livre de Marie.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11808
+ },
+ "056746beb45c82d8061d78b332f4a785": {
+  "text": "au Portugal",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "0620528e4c9af019dafd8e26d396c83d": {
+  "text": "au lieu de travailler",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11808
+ },
+ "0639a44762c0db738b2b1212ae45def2": {
+  "text": "C'est pour toi",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "06e365767a3d36020976bfa8339979fe": {
+  "text": "Je ne sais pas où il habite.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13680
+ },
+ "07551b038f70bc94ed2551f3db6a7fea": {
+  "text": "grâce à + nom",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11520
+ },
+ "087915bcc6d9246154e6077b74adead3": {
+  "text": "Mon ami est malade, du coup on ne sort pas ce soir.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 17280
+ },
+ "093efa10b627ca0392034c9feb7073b3": {
+  "text": "Le mois de mai a trente et un jours.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 16416
+ },
+ "0a01deee0e15b8f88ffa8a52052e38a6": {
+  "text": "près de",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "0a68ce37844ac71488839dbd6148a4ed": {
+  "text": "D'abord, on visite le musée, ensuite on mange, et enfin on rentre à l'hôtel.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 29376
+ },
+ "0b26d96d6acde19e9373115f1d982333": {
+  "text": "En août, beaucoup de magasins sont fermés à Paris.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 19152
+ },
+ "0b336f93bea5c6a372154bb0f0929b1e": {
+  "text": "Bonsoir, monsieur ! Une table pour deux ?",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 19008
+ },
+ "0cf7976106e0ffda773f736b8d6042e3": {
+  "text": "un restaurant",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "0d13cf73a1dc5f34ee22af22db4349a6": {
+  "text": "Je t'appelle dès que j'arrive.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 14256
+ },
+ "0de6f3d7e9f70ddaa38243b5292e3a0a": {
+  "text": "Il est fatigué mais content.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "0e44577feb06d371e7a69f906364edee": {
+  "text": "un an, deux euros, trois heures, six ans, dix euros",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 25920
+ },
+ "0e804c42ade444ad4025de30efd4d8f1": {
+  "text": "La boulangerie est à côté de la gare.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 18288
+ },
+ "0f19632627971a7a8034e1fe2a26e96e": {
+  "text": "Hier, j'ai regardé la télé pendant une heure.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 18288
+ },
+ "0f5eb98a537c2e392804369afff7d10a": {
+  "text": "Mon anniversaire est en janvier.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 13392
+ },
+ "0f6bc1ce6f6d8be71949c3131959bf01": {
+  "text": "L'été commence en juin.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "10f6cae7b9006489a64184b391f442c7": {
+  "text": "après + nom",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "117ffc3a2c8b2d6518bc89a26b825363": {
+  "text": "Je ne peux pas parler et écrire en même temps.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 18864
+ },
+ "11bd6ce4e9ebe6c9c67bb3bed37418f0": {
+  "text": "à + la = à la",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13248
+ },
+ "11c6c88775bba60498726063cc3f4b3d": {
+  "text": "Je suis malade, donc je reste au lit.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 17712
+ },
+ "120382d227790cdb26ace18994ab6756": {
+  "text": "d'abord, je prends une douche, ensuite je m'habille.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 23616
+ },
+ "123d8e089d299c20e7600f35bd08756a": {
+  "text": "Il travaille chez Renault depuis 2019.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 15696
+ },
+ "12586fdcabc36831f7bf07e56f0e56a4": {
+  "text": "Aujourd'hui, c'est lundi ; demain, c'est mardi.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 21744
+ },
+ "12b5d9f595dbdffae41ae4d656b1586a": {
+  "text": "octobre",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "1354cfce630b75440c3072218aacdddd": {
+  "text": "J'apprends le français depuis trois mois.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11808
+ },
+ "13695d156b00423db43639a436955f06": {
+  "text": "car",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "13f07ca204fb812fa23e785d790f3b5d": {
+  "text": "En janvier, il fait froid en Pologne.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 19008
+ },
+ "143b67b62cac1224553cc73dd89dca0d": {
+  "text": "Il mange parce qu' il a faim.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 12384
+ },
+ "1595fe85f0e18147947f570520ff4d06": {
+  "text": "Le taxi attend devant la gare.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 15264
+ },
+ "1647cb8068320fc38d064114e200f87b": {
+  "text": "à + l' = à l'",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14112
+ },
+ "16f484f64d34224ba73a29672bca9c2b": {
+  "text": "Il y a un nouveau film au cinéma.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 16128
+ },
+ "170ac7bb8d2a0a6ae1aa9c03107ab0ca": {
+  "text": "Je vais à Paris.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "1779ef7c88ba828911bb33a6d2529e4d": {
+  "text": "Il travaille jusqu'au soir.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "17935c2b8ea6166580077f4685586845": {
+  "text": "J'ai deux frères et une sœur.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13824
+ },
+ "17d53d351d00829b8648b1ba68433a0a": {
+  "text": "Salut, Théo ! Ça va ?",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 15696
+ },
+ "1803151107cb31ee643e75ca23cca257": {
+  "text": "Je fais les courses, ensuite je prépare le dîner.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 21024
+ },
+ "1892e380c1fe038e072fb6558e49fc5a": {
+  "text": "que, qu'",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "1909226f52855640f7fe1de77c9ae34e": {
+  "text": "La pharmacie est en face de l'hôpital.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 18144
+ },
+ "192aa45cd579e042a6a50cd0cfe14599": {
+  "text": "On parle de politique.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 13536
+ },
+ "193758ed0550e46de590123de3b03808": {
+  "text": "J'aime la ville ; par contre, je trouve les loyers trop chers.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 26208
+ },
+ "1a19b9b1e3f0fb1d4df2bf6f3677cc4d": {
+  "text": "ça fait + durée + que",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 14688
+ },
+ "1ad48ab785f566204bfc7ff8eaa80320": {
+  "text": "très bien, merci",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "1b8ab4996de6750d112bc94acd5e1a10": {
+  "text": "Le tram passe toutes les dix minutes.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 17136
+ },
+ "1be8cf354c83d66f87418854ef7686b7": {
+  "text": "Je travaille de 9h à 17h.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 13536
+ },
+ "1bf12122be6b3d451af8d0be606ee8e0": {
+  "text": "Un café avec du lait.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 13248
+ },
+ "1c6c17d158c3a08f5d31c7964adf5f1e": {
+  "text": "Je n'ai pas dormi à cause de l' orage.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 17568
+ },
+ "1d150d264342c9f581617c770f42d29c": {
+  "text": "Il dit qu' il est content.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "1d207e29c85fc989fdcc97b6ccf45b50": {
+  "text": "au début, à la fin",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 13680
+ },
+ "1d85223d8b3731f1a4a226db9a72862b": {
+  "text": "je m'appelle…",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ },
+ "1d8f583e0cd1b1c03ae2aef8a3305d82": {
+  "text": "Elle mange beaucoup. pourtant, elle est très mince.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 26208
+ },
+ "1e166f27272a32abcfc3ecfc34288b7f": {
+  "text": "Nous allons en Italie cet été.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 12960
+ },
+ "1e3152928978a3d32f740d594cbeda49": {
+  "text": "tu",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "1ebe5347f7e9a172ec61e7255f117809": {
+  "text": "Allez jusqu'à la place, puis tournez à droite.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 20736
+ },
+ "1f1d7ac0039574397dd689f86f1cab56": {
+  "text": "grâce à toi",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "1f2ff09041f1e6ef05f2439da5bcb7cf": {
+  "text": "Si tu veux, on peut partir.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 16848
+ },
+ "2084b37870c09f1e703fe03f5188131d": {
+  "text": "J'ai dix-huit ans aujourd'hui !",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "20ad8d2a553d70ae49ee59e7e6956a38": {
+  "text": "parce que, parce qu'",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 13680
+ },
+ "223c41fcad439feb1037b42998606864": {
+  "text": "Il est devant la porte.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "22a345f1f21b59b2944feaa6179fda73": {
+  "text": "Je vais en Espagne en juillet.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 13968
+ },
+ "22a6f0c7a21861f4c858a39d0e9662ad": {
+  "text": "Grâce au télétravail, je passe plus de temps avec ma famille.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 26352
+ },
+ "22cfc43d0395b2303426e68c063d0c45": {
+  "text": "avec, sans",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "237bb21e13ae6f065825fc8a5cff40e5": {
+  "text": "dimanche",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "2396b57b7c130530727c9c5d5a1c6c40": {
+  "text": "Il pleut, donc je prends un parapluie.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 18288
+ },
+ "23b55f06697e20c2f7f5fcc40ab3a11c": {
+  "text": "Ne parle pas pendant que je téléphone !",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 17856
+ },
+ "23bf3cb2cd7e6a2b44601e1b47b2a672": {
+  "text": "– Bonjour, monsieur. – Bonjour, madame.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 28512
+ },
+ "241125ad324e18abdeb3afe69866637f": {
+  "text": "Je regarde un film sur la nature.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 17712
+ },
+ "2477d3cea6088f8ae23c4afd81e2ddc4": {
+  "text": "loin de",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "24ab2ce650ee56286ccb437e6f187cb5": {
+  "text": "Je reste ici parce qu' il pleut.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11664
+ },
+ "259d3a7a8db6b4bd78cedc1f8f3a17ab": {
+  "text": "il y a deux ans",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "25fd77063b2c28e8fcb01dc90c6a620e": {
+  "text": "Je reste à Paris jusqu'à dimanche.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 17136
+ },
+ "266daaca2b86a568a54329c80ec17213": {
+  "text": "novembre",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "26dae0d455aa5d8c8a1032a3b8521f1e": {
+  "text": "Nous vous remercions pour votre candidature. cependant, nous ne pouvons pas l'accepter.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 35856
+ },
+ "28cc305fffa7268182cc0b0738ec6a28": {
+  "text": "alors que + verbe",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 13536
+ },
+ "28d0c1a9ed623ddf4dea3cc4b7ea3356": {
+  "text": "à pied",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "29face81f1afb624364041c8a88e4a13": {
+  "text": "gé, ji, cé, esse, vé, double vé, ache",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 28080
+ },
+ "2a2e9a4f91ffbb32acbc862c16c7281b": {
+  "text": "Il fait beau, alors on va à la plage.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 19008
+ },
+ "2ae5df1cde6fb2af2fa0ffe2609ab7f4": {
+  "text": "juin",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "2ae7408c2eafc2f64fc99ef191385626": {
+  "text": "La banque ouvre à neuf heures.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "2c3703dc4fe72c9580f14168c299c627": {
+  "text": "J'ai raté le bus, du coup je suis en retard.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 18144
+ },
+ "2ca7def4d6500df146afcd2a26dbb165": {
+  "text": "vendredi",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "2dae8749c225284611db669dd69c2b05": {
+  "text": "Il dit qu'il est content.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "2e013c0ce88b2f03a4b219652d47749d": {
+  "text": "Marie parle très bien chinois. en effet, elle a habité dix ans à Pékin.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 34992
+ },
+ "2eb355e9605cd17bca09a513c76d8c8c": {
+  "text": "C'est pour toi.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "2f007de43b470b38b50fc0e78d6d919e": {
+  "text": "au revoir",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "2f3166219f9ad2cb3f9754a36171b525": {
+  "text": "Il fait froid aujourd'hui ! — en effet, il neige depuis ce matin.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 30384
+ },
+ "2f7942b0b1b3985fbb74e2ac49043f3c": {
+  "text": "Le matin, je mange du pain.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 17136
+ },
+ "2fce5d05da3776113fb1c6f46ff260f5": {
+  "text": "Le théâtre est fermé en août.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 15408
+ },
+ "302aa8b33a0837445351c3d2be8be903": {
+  "text": "à bientôt, à demain",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14976
+ },
+ "30f5fdec6f5f91e0fc985f724e1bcaea": {
+  "text": "cependant",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "3105e96d3fc1c35b1d7f597d8bca241c": {
+  "text": "devant, derrière, entre",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 16848
+ },
+ "33c4487eee8ab08af07aeff97a72a618": {
+  "text": "Il faut d'abord acheter les billets, ensuite on choisit les places.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 25200
+ },
+ "34d6e917f58691209faabc51c8864cfb": {
+  "text": "madame, monsieur",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13392
+ },
+ "351258ddc9d12f5c4e8f72c2bcfed328": {
+  "text": "Où est la gare ?",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "362f45b0d8028d127c4ab850a715155a": {
+  "text": "ensuite",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "363cbe352b57a56ac0838e921560e0b5": {
+  "text": "pendant que + verbe",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 13104
+ },
+ "364482284d8719553b76c7c2f1fd2edd": {
+  "text": "Je vais à l' école à pied.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 12240
+ },
+ "36930bd6881cc2af66065d7893af4425": {
+  "text": "Ça fait deux euros.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 12096
+ },
+ "36bfb46ee00e224de79a1f0522557ea7": {
+  "text": "à partir du 1er juillet, le musée est aussi ouvert le lundi.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 27216
+ },
+ "36c8568e770e2e4ed23de12dd3cbc35b": {
+  "text": "dans",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 4608
+ },
+ "374300ca905bdd8d9bf2f7a2a93ea43a": {
+  "text": "Demain, je vais courir, même s' il pleut.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 21024
+ },
+ "374ed0ee6fe5b0c0910a789f95f7d08d": {
+  "text": "un musée",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "37c1ee82465f7ccd928b71e3be57850d": {
+  "text": "jusqu'à demain",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "37fe7a4225407c7d47aaedcb3e527348": {
+  "text": "Elle part dans dix minutes.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 13680
+ },
+ "3a7b025abf5f067c838e2dfa05f1982e": {
+  "text": "Un café sans sucre, s'il vous plaît.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 17568
+ },
+ "3b7d825917a973bf368bc84d2f945acc": {
+  "text": "Marie parle bien chinois. En effet, elle a habité à Pékin.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 31536
+ },
+ "3bbf822dfbcdfff0ff48677786739064": {
+  "text": "J'aime le thé ; par contre, je déteste le café.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 24480
+ },
+ "3c2bbc168272fc09936ddb59d4ef662b": {
+  "text": "un taxi",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "3c6680b1c60ea6288339d0457af2b228": {
+  "text": "Il est en retard à cause de la neige.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 16848
+ },
+ "3da9b261b4828bb5f33a1598ac7190cc": {
+  "text": "Nous partons à Rome en avion.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 14976
+ },
+ "3db815bdbfa20a0362510d38c2b262ee": {
+  "text": "comme il pleut, je reste ici.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 15840
+ },
+ "3dcac2cdc59144f19770312455dde3bb": {
+  "text": "Tu as déjà mangé ? — Non, pas encore.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 18000
+ },
+ "3f739afe0aece3885e6ae9f5bcca447f": {
+  "text": "Le train est en retard à cause de la neige.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 18576
+ },
+ "3f751c3001c8584c7dd3698db8d25c47": {
+  "text": "Le magasin est ouvert jusqu'à 20 h.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 17712
+ },
+ "3f85a00a3a599bc4f8f5948496e4e5a0": {
+  "text": "du coup",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "3f8d187502d774bbb886a1d47dd1a435": {
+  "text": "dix-sept, dix-huit, dix-neuf",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 17712
+ },
+ "3faa1655f9fbb9fba0751fab6992d469": {
+  "text": "Le facteur n'est pas encore passé ; il passe vers 11 heures.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 25488
+ },
+ "400463f0128bc9f12ce1297d3a70d1a5": {
+  "text": "J'ai trouvé cet appartement grâce aux amis de ma sœur.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 21600
+ },
+ "4024a5144a35ad95974fa639f0ec5913": {
+  "text": "Je n'ai plus d'argent. — Et alors ? Ce n'est pas grave !",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 21744
+ },
+ "41378a0593cec95061c18ca88608a6a8": {
+  "text": "Au début du film, le héros est seul.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 16992
+ },
+ "41413ba1b40b0789846e268af0e298fa": {
+  "text": "En septembre, les enfants retournent à l'école.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 18720
+ },
+ "4194d42e7b0850ab5a13902de2566599": {
+  "text": "dès que tu arrives",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "4221af85853cc86de9defb5e36bbb9e8": {
+  "text": "Il travaille dans un café et, en même temps, il étudie à l'université.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 27072
+ },
+ "42512ce1dacb7a73e3a2c8577116ce9b": {
+  "text": "Un film sur la nature.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13536
+ },
+ "42e5770ca3a4d593c37c90b97a025bb1": {
+  "text": "le chocolat",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ },
+ "42e95dd1891500479be4910b02025011": {
+  "text": "On commence les travaux dès demain matin.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 15120
+ },
+ "4551502d3c44984ad1e790985f556bf9": {
+  "text": "après le film, on est allés boire un verre.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 18432
+ },
+ "4679a34845e744eb7123149d1e5038ae": {
+  "text": "dès",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "46c6aec63ddda8a9abd0b605e162b8b8": {
+  "text": "Enfin",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "4719e0e7949187095fad243f356a636b": {
+  "text": "C'est le livre de Marie.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 12384
+ },
+ "471a07382d287170083af96087a90640": {
+  "text": "aujourd'hui, demain",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "482dbdfc7f3fe61579f9f8ab39f0738c": {
+  "text": "Pourquoi tu ris ? — parce que c'est drôle !",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 21600
+ },
+ "4840a767c7e2877f914af92e15169af3": {
+  "text": "Lave-toi les mains avant de manger.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 15120
+ },
+ "4a1ecdaa709b07d6349ff7b37275a020": {
+  "text": "Novembre est souvent gris et froid.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 13968
+ },
+ "4aedcd6ffc35d85c71250e2ab45d0e67": {
+  "text": "Je prends un taxi, car il est tard.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 18432
+ },
+ "4b08f0c86af2411ca403d8d712eb61b6": {
+  "text": "Je suis arrivé en 2024.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 17136
+ },
+ "4c12474b71ed4c738ed5b2c6090f9271": {
+  "text": "Elle vient de Lyon.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "4cb3a4dca6dc90b7738bed989299731e": {
+  "text": "Mon frère adore le sport. Moi, par contre, je préfère lire.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 34128
+ },
+ "4cbf4d917a0ffd9c80854f5281843523": {
+  "text": "en même temps",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "4cd1b087e3b67db0a312dbef5cd481ac": {
+  "text": "Demain, je vais chez le médecin.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 13536
+ },
+ "4cedde3f5b8a5bfd8878aaf596850014": {
+  "text": "Au début, c'était difficile, mais ensuite je me suis fait des amis.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 29088
+ },
+ "4d06f324ca8e973c815397a128edd6e5": {
+  "text": "en mai",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 5184
+ },
+ "4d41b807f650e08133ce9522eed8e32c": {
+  "text": "à + le = au",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "4da9f0bcd8e905982513d7e97017fafe": {
+  "text": "grâce à toi, j'ai passé une super soirée !",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 15840
+ },
+ "4de07fd3f042797376499696faab0269": {
+  "text": "Le jardin est derrière la maison.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 14544
+ },
+ "4e16a9d7f2e44088835689623dcf7b6f": {
+  "text": "J'ai réussi grâce à toi.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14544
+ },
+ "4fe2f0171e5be9733310271844f672bd": {
+  "text": "Le bus s'arrête en face de l'école.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 16848
+ },
+ "5045758e760df06294fdbd49f50d2572": {
+  "text": "Le livre est sur la table.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "50a909d8929c61edaa2e3425d6b86c7e": {
+  "text": "Il ne parle ni anglais ni allemand.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 14976
+ },
+ "518cf0d5c6e731b67166b80f5c68f9b2": {
+  "text": "à cause de la pluie",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "51971996b9ba462ac51f7c78649e9a4f": {
+  "text": "Ce soir, on mange au restaurant.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 16704
+ },
+ "51d81dfdd8b3b8866147433d9d5f6fc3": {
+  "text": "pourtant",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "51ff1cfb8f20faf6464096924d97c9c0": {
+  "text": "pendant que tu dors",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11808
+ },
+ "53622172b8c8cbe58f8fef052601faa3": {
+  "text": "Je t'appelle dès que j'arrive à la gare.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 12816
+ },
+ "53e50d48e33e12c44a2838fe01612b2b": {
+  "text": "J'habite en Pologne.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "53f2988cfbfff6eb8649c0c485e8bc14": {
+  "text": "puisque tu es là, aide-moi à porter les sacs !",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 21168
+ },
+ "54c047d24a22bbf6e0e23dad7143f32a": {
+  "text": "à + pied, vélo, moto, cheval",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 21168
+ },
+ "563eaf0873a346ff5b9a6927a6fb1012": {
+  "text": "Les tomates poussent bien grâce au soleil.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 18288
+ },
+ "56a650f0d0ddc27d199b512034b6277d": {
+  "text": "alors",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "56ca464fc7fa24be49c7e6bf3dfecdb2": {
+  "text": "si elle vient, on mange ensemble.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 17856
+ },
+ "56f747d5685712c2d4409c6beca9eb05": {
+  "text": "En octobre, les feuilles tombent.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 14112
+ },
+ "572201d7c7aa5cb0c33f2e9854635d7f": {
+  "text": "On a beaucoup hésité, et finalement on a choisi l'appartement près de la gare.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 26064
+ },
+ "575f899ba82e58d4de03391b14c7a050": {
+  "text": "février",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "581c44171ed32012b3943461acafca04": {
+  "text": "Je pars pour deux semaines.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 13536
+ },
+ "58e42761f5b96672b89701920395cbb1": {
+  "text": "Les livres des enfants.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "58efa4bb4ffaa3010ece7bba67207b19": {
+  "text": "janvier",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "594b2e7c3d8c494990c241e7ec2122e9": {
+  "text": "Le chat dort sur le canapé.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14400
+ },
+ "5cb27972cbc4b96641601b9765984972": {
+  "text": "samedi",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "5cb37b5836b06d2a0e6c94f2d872b973": {
+  "text": "un café",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ },
+ "5cc103ba32ad3dfb416d02daf6fed0e3": {
+  "text": "Elle vient de France.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11808
+ },
+ "5d6418025674947d392cc031de34bb80": {
+  "text": "On paie à la fin du repas.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "5d7185650302762437e4dc47ac898f04": {
+  "text": "J'ai raté le bus, du coup je suis arrivé en retard.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 20304
+ },
+ "5da80285630cb29c556b91adb58abf52": {
+  "text": "Ma mère est infirmière à l'hôpital.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 16416
+ },
+ "5db7435ffd1a15729c753806699f7434": {
+  "text": "Bonjour, je m'appelle Igor.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 16992
+ },
+ "5e0eb384fb7626410517a999b5d0f2c4": {
+  "text": "Un café et un croissant, s'il vous plaît !",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 18864
+ },
+ "5edde06e90e83d4e217b606216723ab7": {
+  "text": "au lieu de + infinitif, nom",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 15264
+ },
+ "5f5f1644712ea43fc083b74442aed6da": {
+  "text": "un théâtre",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "5fd1b01691e1767412497683870cc6da": {
+  "text": "zéro, un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 43344
+ },
+ "60b8ec427afddd086982d3f573ba217b": {
+  "text": "ça fait deux ans que j'apprends le français.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 13968
+ },
+ "6163dac2fc4f905d8871f4919faa83f0": {
+  "text": "Moi, je suis de Gdańsk. Et toi ?",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 23760
+ },
+ "61a9ff3aba7624ec48aa06956e21a655": {
+  "text": "Je travaille du lundi au vendredi.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 15984
+ },
+ "62545b6f41630c13b31c1f751487833e": {
+  "text": "Il vient des États-Unis.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 12672
+ },
+ "62856a298795923a4af2d10d10921463": {
+  "text": "Ce cadeau est pour toi.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "629eb766f1142182d4e7dd7c0621197c": {
+  "text": "J'ai pris du thé au lieu du café.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 15264
+ },
+ "6328050b22e66082ee56760cc33e50c1": {
+  "text": "de… à…",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "646d5d130a681e4b0e83e0b0b48a8e3d": {
+  "text": "Il prend l'ascenseur au lieu d' utiliser l'escalier.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 21024
+ },
+ "65f75b1a8413f670a0fba6f6496d7d4d": {
+  "text": "Je lis un peu avant de dormir.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 15696
+ },
+ "66cccbeaa9c3debc2135d6d3a196a0db": {
+  "text": "Puisque tu es là, aide-moi.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 14976
+ },
+ "66d51fe582ff260907a5b2a4991524ab": {
+  "text": "Tu es d'où, Karol ?",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13248
+ },
+ "6745c5c7735f4e3e8b8c02c805a857e0": {
+  "text": "à plus, ciao",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 13104
+ },
+ "67cc63df31e8411e383f2cd8a0bf0d89": {
+  "text": "Ce sont les livres des enfants.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14400
+ },
+ "67de54cb46b271c41fd3fd0fe572de15": {
+  "text": "J'ai un frère et une sœur.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "67f95228b3a3f6df3422e83f77985ac7": {
+  "text": "Je voulais sortir, mais finalement je suis resté chez moi.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 19008
+ },
+ "681bd46a449dc57d72578a5aa407cb8f": {
+  "text": "En juillet, je pars en vacances.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 14688
+ },
+ "684ae4ab6d9800ba7dc752191d75e4d3": {
+  "text": "jusqu'à",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "6926123bca30411555e0ff61a3ea04c0": {
+  "text": "J'ai lu un livre pendant le voyage.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 17424
+ },
+ "6b0baff2d08f9f4e39f61d5a2ff7da31": {
+  "text": "Ça fait longtemps qu'on ne s'est pas vus !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 12240
+ },
+ "6b2adf7d89292bc0575ad3134e516474": {
+  "text": "Je pars en vacances pour deux semaines.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 16272
+ },
+ "6b6ac4a062e68cddcf7bbb674ffef135": {
+  "text": "Quand je suis fatigué, je dors.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 17136
+ },
+ "6b6f20c20670534048fc57be3c931f07": {
+  "text": "Nous habitons près du centre-ville.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 16560
+ },
+ "6b75d453f1641a023985053361442578": {
+  "text": "avant de + infinitif, avant + nom",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 18576
+ },
+ "6b97dc00bff723ea0572831d00abb588": {
+  "text": "Prends le vélo au lieu de la voiture !",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 15840
+ },
+ "6bbc91b296b63353ec6538eae10fa808": {
+  "text": "Je vais à la boulangerie.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 13968
+ },
+ "6c3b6ee9bfc2569d18b58838f1922c72": {
+  "text": "de",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "6c664fa39e9ef81bdfc76d13abd56033": {
+  "text": "où est la gare ?",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "701356f70e8bc9b9ef9b44839158e456": {
+  "text": "Ça fait deux ans que je travaille dans un restaurant.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 19584
+ },
+ "70b42a11a9bb45f2de159abb3e9fb1e3": {
+  "text": "pour",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "70b4625bcf21af9939ea5d5c7d3dff92": {
+  "text": "Je vais chez le médecin.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 13248
+ },
+ "712cbcd903d0354285a49e5706740499": {
+  "text": "Le cours commence à 8 heures.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "715510dac1ad544057f596c47f7991cb": {
+  "text": "en, au, aux + kraj; de, du, des + kraj",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 26208
+ },
+ "722127b3899888ef07519b9403e98273": {
+  "text": "de + la = de la",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 13536
+ },
+ "723497caf07cfd871bc68804a9057981": {
+  "text": "J'habite loin de mon travail.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 15696
+ },
+ "72513507e039a1151d25ec82367ed64d": {
+  "text": "Je voulais aller à la plage, mais finalement je suis resté à la maison.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 20592
+ },
+ "74820dc5975d202cf6aa1666c33b4d6d": {
+  "text": "Le printemps commence en mars.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 14688
+ },
+ "761e75c0e190aad22fb8ef04bc51319e": {
+  "text": "Je ne sais pas où il travaille.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14832
+ },
+ "765fc2565e559f5e3a03e2c57a533c2f": {
+  "text": "C'est la voiture des voisins.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13392
+ },
+ "766cb3be5169f527674a54900ae13315": {
+  "text": "Elle se promène à cheval.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13680
+ },
+ "76b2a066d4e0122c7f65ba2fb7baa11b": {
+  "text": "Je suis arrivé il y a deux ans.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14544
+ },
+ "76d70dd4cf5e90f8147be8cf09d1ad42": {
+  "text": "Il a ouvert la porte, et puis il est sorti.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 18576
+ },
+ "77424e4a343d39622f81a9a660af53c4": {
+  "text": "Je travaille pour apprendre.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "7750bc1970d1919807309670af029499": {
+  "text": "Réfléchis bien avant d' acheter une voiture.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 19440
+ },
+ "775bfdf4d1f1946636b58676e97f0c95": {
+  "text": "Je pars au Mexique en mars.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 14688
+ },
+ "77f2b91cb03e5b80c7cfb493e9ce2f9d": {
+  "text": "– Vous allez bien ? – Très bien, merci. Et vous ?",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 32688
+ },
+ "7973fddc6f1b623dd83ffcf022fd6405": {
+  "text": "Mon frère est grand, alors que moi, je suis petit.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 23328
+ },
+ "7b90885aeb36a0c5848dcd09d1d256f0": {
+  "text": "et",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 4464
+ },
+ "7c085c0ea9a19d6002184ff00ab6861e": {
+  "text": "Il pleut à Paris alors qu'il fait beau à Nice.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 18864
+ },
+ "7ca354d0203a9cdc86274c04699bddeb": {
+  "text": "Elle va à l'école en bus.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13824
+ },
+ "7d018ed687e84a56891b5e7a8829919b": {
+  "text": "vingt, vingt et un, vingt-deux… trente, trente et un",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 25200
+ },
+ "7d4d906e3ac59c975e4237c46b5ab9e2": {
+  "text": "même si tu n'as pas faim, mange un peu.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 14688
+ },
+ "7d7fd86f65d585fe69dff12f05bcf187": {
+  "text": "Il pleut à Paris alors qu' il fait beau à Nice.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 20448
+ },
+ "7ddf28bc70690c08901286717bb0803a": {
+  "text": "alors que, alors qu'",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "7e0074d572d43eda29e1c80172dd2460": {
+  "text": "On va faire la fête, même s' il y a peu de monde.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 19584
+ },
+ "7e3fbc91472111cb455668079bc6590e": {
+  "text": "Le chien dort sous la table.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "7e84aa2b48062865c6a80671dc21f7b4": {
+  "text": "je, tu, il, elle, nous, vous, ils, elles",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 28080
+ },
+ "7ecf3b5227f027fcc61372f6ac7b0a43": {
+  "text": "enfin, finalement",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "805bed40113b9de618d92b33b3e259eb": {
+  "text": "s'il pleut demain, je reste à la maison.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 18576
+ },
+ "809630173986153b24b2e626e6fa2494": {
+  "text": "juillet",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "80cfba56e84417672cc4f463abc85958": {
+  "text": "Il va au travail en voiture.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 15408
+ },
+ "81de1f7bf4d1068fa85c705149f1e3c5": {
+  "text": "du, des",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "81fd8ead82758130b422fa090fb92092": {
+  "text": "Je sais que tu es fatigué.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 13968
+ },
+ "8232c1c36d1bd637430759611501869c": {
+  "text": "devant l'école",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ },
+ "82d4ce3312c2fc864961b3dcd38321a8": {
+  "text": "à partir de",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "830d9f97244eacfe2e6a77ac40920f3e": {
+  "text": "d'abord",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "8408c04f15650fcefad7d42a1358cd6c": {
+  "text": "Il est déjà midi ! Je suis en retard.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 17712
+ },
+ "8434a81c9bde53f04d7520273f675e08": {
+  "text": "mai",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "84c18e187f0865ef1b26e5684c1be6c3": {
+  "text": "Nous partons en avion.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 12528
+ },
+ "85539d718753f9aefab9fa0c8fd81d99": {
+  "text": "Le train est parti il y a cinq minutes.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 18000
+ },
+ "8660713e763b42b60bba2bed4dbaf362": {
+  "text": "Le parking est à côté du cinéma.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 16992
+ },
+ "87c1d7df92cf3ccf3dfea4d65dfec059": {
+  "text": "Il a beaucoup travaillé, et pourtant il a raté son examen.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 21312
+ },
+ "886bfdf3a1b63b85af66b858f4eb336f": {
+  "text": "Le film commence dans un quart d'heure.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 16848
+ },
+ "89eb471b49c093746f83fe664112f5dd": {
+  "text": "Je dors mal à cause des voisins.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "89f0e02cb41be01d7612088b13e953bd": {
+  "text": "D'abord, je prends une douche, ensuite je m'habille, puis je pars.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 28080
+ },
+ "8a671fb8d1ed21ae376585fc8ece24cd": {
+  "text": "Même si c'est loin, j'y vais à vélo.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 14256
+ },
+ "8aa3a17d8a198fa07f5609000c7285ed": {
+  "text": "en voiture",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "8b109a928dc22a784f7721e03860ed93": {
+  "text": "Je ne sais pas s'ils sont à la maison.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 12528
+ },
+ "8bb778875df2221433f91dcfa0150d85": {
+  "text": "à",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 3744
+ },
+ "8c21511d2468a93958cd9cecc77671b9": {
+  "text": "Le studio est petit. par contre, il est très bien situé.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 24768
+ },
+ "8caa20f1cb1e5ba89687c3081d0379ec": {
+  "text": "J'habite à Cracovie.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "8d1cde33a5b29a733272ec01d8570080": {
+  "text": "Bonne soirée, à demain !",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11520
+ },
+ "8d2f2e84b8a2f79d45a323ecd881332d": {
+  "text": "il y a + durée",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11808
+ },
+ "8dc98cd2e2c00f7640601e240105baf3": {
+  "text": "Une glace à la vanille.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13104
+ },
+ "8ded5c16bff2251d3600b774a35c3592": {
+  "text": "de + les = des",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 13248
+ },
+ "8e3c8a5f53fd898f8ef4e46c5abcf84c": {
+  "text": "J'adore la cuisine italienne. c'est pourquoi je vais souvent à Rome.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 31680
+ },
+ "8eae96710bab457812fb75288be879bc": {
+  "text": "L'hôtel est près de la plage.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "8eb66d7f389685d603b320f35239a249": {
+  "text": "Comme il pleut, je reste ici.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 13824
+ },
+ "8eeb946ce6c3e9ea7ead3088f97015e9": {
+  "text": "même s'il pleut",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "8f0733cb184a4dc60318275e07f2739d": {
+  "text": "– On est quel jour aujourd'hui ? – On est mercredi.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 16704
+ },
+ "90859c2ec780113719e1d0fe2884fe0a": {
+  "text": "On est quel jour ? – On est lundi.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 20592
+ },
+ "91da97aac60ee9e7f15ee22a3ae6fbe0": {
+  "text": "par contre",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ },
+ "91f60affe7f9ca0b77e0d7320c9527a2": {
+  "text": "Tout le monde parle en même temps ! Je ne comprends rien.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 26496
+ },
+ "92319ff7c9eb5bc47e635460aec52da7": {
+  "text": "de + l' = de l'",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 14400
+ },
+ "9320f5924bbc935ba696437fee0883f5": {
+  "text": "à + les = aux",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 12384
+ },
+ "9360e342340a923e4ade566c6cd41234": {
+  "text": "mais",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "9395367551ef89f31f0e4eb79604a825": {
+  "text": "Allez, à plus, Malik !",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 17712
+ },
+ "93a3e176cc889d0c61a10b86f6e197ba": {
+  "text": "Hélène : H, e accent aigu, L, e accent grave, N, E.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 30672
+ },
+ "944d31ac00c3d022acf921e35ae687e7": {
+  "text": "Il est petit, mais il est fort.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 16416
+ },
+ "94b82b95fc3d85f68dd804492db0b0c1": {
+  "text": "à côté de",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "957ca2b1728ec2d5bb839e12d55c0ff8": {
+  "text": "Bonjour, madame !",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14112
+ },
+ "95a7cc2b32452ecb0077e2e411ce8fa7": {
+  "text": "Je vais à l'école à pied.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 12816
+ },
+ "95fdfd4bac62936eb61220a2a2f17747": {
+  "text": "Ce restaurant est petit, mais très bon.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 13968
+ },
+ "96616f3eea4722574211c9da866f9c45": {
+  "text": "puisque, puisqu'",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "967e893c52f1ab49b6f441530a951c47": {
+  "text": "salut",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "9965dea9bc5fbb2091d04a0720a744b4": {
+  "text": "Je vais au Japon. Il vient du Japon.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 21744
+ },
+ "9973c1707a16a1b2fe60562bc8448c25": {
+  "text": "Je suis arrivé en France il y a deux ans.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 17424
+ },
+ "99783d63ddbc85fa9964baa7a499fbbe": {
+  "text": "Samedi, je dors jusqu'à dix heures.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 14688
+ },
+ "99ccc1b6a2df536715f7b790462ab675": {
+  "text": "Jeudi soir, on va au théâtre.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 18432
+ },
+ "99f809e353a056948f662d8fc4c314f8": {
+  "text": "en effet",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "9a4e9d6e8285eae8c3b714407587ac02": {
+  "text": "au début du film, le héros est seul.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 19872
+ },
+ "9a8bed5b3993e0e657ae058bfec748f4": {
+  "text": "Ça fait une heure que je t'attends !",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "9a95e569cf0a4ea78eea34e88738deed": {
+  "text": "onze, douze, treize, quatorze, quinze, seize",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 26640
+ },
+ "9acbfe9bbc7c15ab9b8c52e218b9088c": {
+  "text": "décembre",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "9b5be2ac5d5a207322baa55f7b5aa371": {
+  "text": "Mercredi, je vais à la piscine.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 17856
+ },
+ "9bc32b9f1d0ba56cc0b72091916855cc": {
+  "text": "Le magasin est ouvert jusqu'à 20 heures.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 17712
+ },
+ "9bf1ab9dd8a6a653bf7ba7691cc71e51": {
+  "text": "ça va ? – ça va",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "9c129881814e04ebcbc54b1028b07b0e": {
+  "text": "Je reviens du bureau.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "9c9b4fda92d663920e8256bfc6fb00c5": {
+  "text": "Je fais la cuisine pendant que tu mets la table.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 19872
+ },
+ "9ca6314b9d1eac8d138a9901e8c9a57a": {
+  "text": "Ils habitent aux États-Unis. Elle vient des États-Unis.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 27504
+ },
+ "9d4b82233282b85b25dd304f280f4e9b": {
+  "text": "On part en vacances en août.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 14112
+ },
+ "9dcc0483f32aa90c418e89e47998ddfb": {
+  "text": "bonsoir",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "9e14fd4f9e5ee2d43f58917ffb3e0fd7": {
+  "text": "J'adore l'Italie. C'est pourquoi j'apprends l'italien.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 26064
+ },
+ "9ec746b132a2bd5aa384c1e87eb933b0": {
+  "text": "août",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "9ed86bd9c992a84f7df624ad223f38cf": {
+  "text": "Téléphone-moi avant de partir.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 16272
+ },
+ "9ed950060bc7f7a21c8b87b2f186ad6d": {
+  "text": "septembre",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "9eef5b7a41f2ee718f15768244c62b9d": {
+  "text": "Lundi, je commence le travail à huit heures.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 21456
+ },
+ "9fbccd3d9e6bca4c070c2e6702426f47": {
+  "text": "même si, même s'il",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 12096
+ },
+ "a0795b9dcc8df7917e75338e809e4722": {
+  "text": "Ça fait trois mois que j'habite à Lyon",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 12672
+ },
+ "a08e4385923e3110ef19831621838e21": {
+  "text": "à partir de lundi, je commence un nouveau travail.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 22176
+ },
+ "a1a1c8897f8869ef9ba9d93196e6dba5": {
+  "text": "en",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 3888
+ },
+ "a1e5122c797b8bd75fab77fd60d7ad63": {
+  "text": "La maison est loin de la ville.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 15840
+ },
+ "a210df8a182dd35e262979fc3500e806": {
+  "text": "Je rentre du travail à 18 heures.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 16560
+ },
+ "a21a409bdf1cbf5dd2a76afff38c5dca": {
+  "text": "La banque est entre la poste et le café.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 15120
+ },
+ "a29280bdc12131ea71f445ee6398e2b6": {
+  "text": "Je n'ai pas encore fini mes devoirs.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 16704
+ },
+ "a33bf3c70b9735f1aae1ec4ffd053381": {
+  "text": "Je voudrais une glace à la vanille.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 16272
+ },
+ "a381c6ab2a1206c27c4edb4a5626cfdf": {
+  "text": "J'ai fait mes devoirs en deux heures.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "a3e14f0e2865103ae14b95b40a7ea0f9": {
+  "text": "Je donne des bonbons aux enfants.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11664
+ },
+ "a446aa2168df7c2d6dec9a7ee3fb7705": {
+  "text": "au, aux",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "a45b167f0ba85652746191bdf0e69e6e": {
+  "text": "en + miesiąc, rok",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 14544
+ },
+ "a7b506e752a0fe42be2f0c97e5620850": {
+  "text": "Nous allons au Portugal.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "a87dc064a7d91fe7eaafa328760bef92": {
+  "text": "J'ai vu Paul il y a trois jours.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 15840
+ },
+ "a8a1a0fbcf04e25d6540a6f3c78d5358": {
+  "text": "D'abord, je prends une douche, ensuite je m'habille.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 18720
+ },
+ "a8d6a75131d737009825277eae238638": {
+  "text": "Aujourd'hui, c'est le 9 octobre.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 17568
+ },
+ "a94ac781b63dc3b25c1edb01b2db8b53": {
+  "text": "e, i, u, i grec",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 18000
+ },
+ "aa335d4725ba2561138dc352fe990611": {
+  "text": "Yves, ça s'écrit i grec, vé, e, esse.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 23904
+ },
+ "aa753dd8decac4e41183e151e870f4fe": {
+  "text": "Il parle chinois. En effet, il a habité à Pékin.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 22032
+ },
+ "aa7d9a95842ed7f81b59b10a52657646": {
+  "text": "Je ne sais pas si c'est vrai.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13536
+ },
+ "aaea6a5621028ccd380c536fe7a366b5": {
+  "text": "Wolski : double vé, o, elle, esse, ka, i.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 23616
+ },
+ "abf70a59141dd4b8f7a8dd85a0f9aaae": {
+  "text": "Au lieu de regarder la télé, lis un livre !",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 20448
+ },
+ "ac6f769a0654775e62f7c3c92a37146b": {
+  "text": "Ça fait deux ans que j'habite ici.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 15408
+ },
+ "acb7a88bfaef796d2a84b1265fca9a81": {
+  "text": "sur",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ },
+ "ad2734457879b3fb7a6f5065527828ec": {
+  "text": "Il arrive toujours avant le professeur.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 16992
+ },
+ "ad9864dc8d50a5ef9c5bcdeb1b209f73": {
+  "text": "Il n'y a plus de pain, donc je vais à la boulangerie.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 19872
+ },
+ "adeb76f59eff4f40a3a78cc35738c0b9": {
+  "text": "J'ai compris dès le premier jour.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 15840
+ },
+ "adec95902a87632316d0a1411926aab5": {
+  "text": "en + voiture, bus, avion, train, métro",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 25632
+ },
+ "ae8d1fb405799c264d511aa952e85c42": {
+  "text": "dès son arrivée, il a commencé à travailler.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 21312
+ },
+ "afa3b15a9c2a0ff7fe320d9c768f86da": {
+  "text": "donc",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ },
+ "b047ef4451699d72477d950bcad989cf": {
+  "text": "Les enfants adorent le chocolat.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "b062c8efa371125cd5e146b11e5b9880": {
+  "text": "J'habite en France. Je viens de France.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 17280
+ },
+ "b09d417673b7eb68c9a5a39f0ab58696": {
+  "text": "Votre dossier est presque complet. Cependant, il manque une photo.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 25776
+ },
+ "b0d4d15f936b61e97d4a177939bba3c9": {
+  "text": "Il fait beau, alors on sort.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 16128
+ },
+ "b1294b01f4b25ab12d837125c1e126c7": {
+  "text": "On va au cinéma ou au restaurant ?",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 16416
+ },
+ "b1713242e6fa073681abb67445e1f2fb": {
+  "text": "J'aime le sport, mais je n'ai pas le temps.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 18864
+ },
+ "b270e567e7e9206680caa1f903e9d11d": {
+  "text": "au lieu de regarder la télé, lis un livre !",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 20016
+ },
+ "b2959117b138e6a90176d1815dd4cd1e": {
+  "text": "Je rentre chez moi.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 12672
+ },
+ "b2d7cc98852b66818c16227ac16b2b4c": {
+  "text": "J'habite en face du parc.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14112
+ },
+ "b32e86c5c92933ee6f6cf811bda9dcd9": {
+  "text": "mardi",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "b3ded6fbe687d2faebf634f57944b0b1": {
+  "text": "ou",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "b4d6f36d7e98119ec7c0ca69a29f861e": {
+  "text": "Il va au travail à vélo.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 14544
+ },
+ "b4daad21cd48e3d311c4dcfd5928d0fb": {
+  "text": "Tournez à gauche, puis continuez tout droit.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 18000
+ },
+ "b596a4a6239b30c3e9b390cc82dbb798": {
+  "text": "Il y a un parc près de chez moi.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "b5a13a792274ba03b0976e1816e4caf9": {
+  "text": "en face de",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "b5e800b09002080482b3f3ebe7319c8e": {
+  "text": "Le verre est sur la table.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 14256
+ },
+ "b618dbcb77771e2b5fb54e5c48983690": {
+  "text": "ensuite, puis",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "b643b11358cca0434adf1dc2933154bc": {
+  "text": "C'est pourquoi je préfère vivre à la campagne.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 19152
+ },
+ "b651c8d75af20cef2f609c2aa4dc23f6": {
+  "text": "On ne peut pas sortir à cause du vent.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 15840
+ },
+ "b66b1276af37a1de6d28cce6e7f9cefa": {
+  "text": "Tu habites où ?",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "b6e8d4d38b1b4190e040ec46fdb3ec50": {
+  "text": "au début, je ne comprenais rien, mais maintenant, ça va.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 20736
+ },
+ "b742348b06cda70d65dd75dc8d1b43d5": {
+  "text": "L'université de Cracovie est très ancienne.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 19440
+ },
+ "b810debf96c6065d79a24bcd328fcb8b": {
+  "text": "à partir de lundi",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 12096
+ },
+ "b87633fe1a36782df3104ce0d6244b6b": {
+  "text": "Le film a eu de bonnes critiques. cependant, peu de spectateurs sont allés le voir.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 37296
+ },
+ "b9ea52711d7d7db0c4b9e850acc73f17": {
+  "text": "Je pars dans cinq minutes.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 12240
+ },
+ "ba4ba7ccebc259af36dffca16589508a": {
+  "text": "Le premier mai, beaucoup de gens ne travaillent pas.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 15552
+ },
+ "ba9adaa334e3f17f66e3109b3eb279da": {
+  "text": "Le magasin est ouvert de 10h à 19h.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 19152
+ },
+ "bac3f13fd5c431869851c4870282f551": {
+  "text": "Je viens lundi ou mardi.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13104
+ },
+ "bba94654dd16f81badbf4cf0d28b94a4": {
+  "text": "un hôtel",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "bbaafaffd7d00a37eb874aed09352846": {
+  "text": "J'aime le café et le thé.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14256
+ },
+ "bccf767d43c9f0e8f8db4fc4f73a550f": {
+  "text": "Je reste chez moi, car je suis malade.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 19440
+ },
+ "bd705df2685f0fde48f042bde42fe639": {
+  "text": "Je ne t'explique pas la réponse, puisque tu la connais déjà !",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 23904
+ },
+ "bd9caaa4f8cb4a44f792f18e6c0f58eb": {
+  "text": "Un café avec du lait, s'il vous plaît.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 14112
+ },
+ "be79232b7f175ea435e342fd6cdf4ae7": {
+  "text": "Je mange une banane après le sport.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 14544
+ },
+ "bec0d7e7e0ac074703f76b1fecd33fbc": {
+  "text": "– Votre nom ? – Nowak. – Ça s'écrit comment ? – N-O-W-A-K.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 31968
+ },
+ "c026aa8d29833837db630d46e568d752": {
+  "text": "mercredi",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "c072cc65eed31c8b51da2293217315f5": {
+  "text": "Tu pars quand ?",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "c0b9813becd032da2335aeab78dabb0c": {
+  "text": "avril",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ },
+ "c1a0216ec743b68edaa4be0e2cc6c9e5": {
+  "text": "le 9 octobre, le premier mai",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 15408
+ },
+ "c20e0954f659b58733059a06d5ad1bc8": {
+  "text": "J'ai fini en deux heures.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "c28df0ecb9bbf40863258d464926417e": {
+  "text": "mars",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "c2e3d7ff4cec69fadeaff692536f17e0": {
+  "text": "Les enfants jouent dans le jardin.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 15264
+ },
+ "c31136bb6db9c61002e9c72829f6257f": {
+  "text": "C'est loin d' ici ?",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 13104
+ },
+ "c514c9d0e1c092476425be910f82c33c": {
+  "text": "D'abord je me lève, ensuite je prends mon petit-déjeuner.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 19008
+ },
+ "c61c2c762a041bdb0c44cd726777e4f0": {
+  "text": "Demain, je vais courir, même s'il pleut.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 20448
+ },
+ "c6360f4a97d8008c0e7bb95422c3941d": {
+  "text": "On mange sous un arbre.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 13392
+ },
+ "c7102278b15f484e7689195e1f46e96d": {
+  "text": "Pour faire une omelette, tu casses d'abord les œufs, puis tu les bats.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 24912
+ },
+ "c7985204c45e370743919add60f95109": {
+  "text": "quand",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "c799568e6f77e01202c5e766e63d6f7e": {
+  "text": "Elle pense qu' il a raison.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 13680
+ },
+ "c7e1d11a5bbb4ba88a3175260177796f": {
+  "text": "Le chat est dans la boîte.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 13968
+ },
+ "c8146d008983c300340ee9bd2040c61f": {
+  "text": "D'abord on visite le musée, ensuite on mange, et enfin on rentre.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 24768
+ },
+ "c8d49d2ba473f30822369111295e1ede": {
+  "text": "lundi",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ },
+ "c8e5943b42cbdbce240f3c37ff121a32": {
+  "text": "quand je suis fatigué, je dors.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 17136
+ },
+ "c8ff0a1b234d96df582be8c7bd409737": {
+  "text": "Je ne veux ni café ni thé.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "c92d6546c8d572d4169a50de76dd01ae": {
+  "text": "Je vais au cinéma.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 12240
+ },
+ "c95212564c570daee8e085c4b3492e8a": {
+  "text": "de + le = du",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13536
+ },
+ "ca51c0f1e1bd6178f9bb71de6097e57c": {
+  "text": "une banane",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "cb32845cf5f6e4d49a0e87a5adbe26a2": {
+  "text": "Viens t'asseoir à côté de moi !",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 15264
+ },
+ "cb3b097626c6195cfb66704626d360fa": {
+  "text": "Il est arrivé à la fin de la réunion, quand tout le monde partait.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 25776
+ },
+ "cb5bdd8a95815277538529f2b6b22110": {
+  "text": "J'habite au Japon.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "cb781b7f5be3f7eb934824928e343922": {
+  "text": "Paul et Marie sont amis.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 13824
+ },
+ "cbf9ee872e730f26bc0c77c7a4c894e0": {
+  "text": "puisqu' il pleut, on reste à la maison.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 19872
+ },
+ "cc4746c83bb5d6249b5864057131e560": {
+  "text": "Il y a trois ans, je suis parti vivre à Lyon.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 15264
+ },
+ "ccd7eefa257314ff63e967c04e1f18b3": {
+  "text": "C'est pourquoi j'apprends le français",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 15696
+ },
+ "cd4788a800871829910d1f126ac89937": {
+  "text": "J'ai dormi pendant deux heures.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 14832
+ },
+ "cd63c3a24be66f3f4b55dc414363b021": {
+  "text": "Noël, c'est en décembre.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 15840
+ },
+ "cd73431334a03259e1e9bb9f7bc93e14": {
+  "text": "En France, on paie à la fin du repas.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 18000
+ },
+ "ce365b0d9f08652c7411b0169222f8d8": {
+  "text": "comme",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ },
+ "cec1dd0b6891d2d9620f14706c601d59": {
+  "text": "pendant, depuis",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "cec95c08e374756ecd04fd245ec548c4": {
+  "text": "vous",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "cf0fc4a2c3376ada187d80ce8e0a123d": {
+  "text": "moi, toi, vous",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "cf14af8ab57e23bbcfbec38b9631f9f5": {
+  "text": "Nous nous sommes mariés il y a dix ans.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "cf87d2d483412d9160b0109dee80c29d": {
+  "text": "Le bus arrive enfin ! On attend depuis une heure.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 17856
+ },
+ "cfd3cd1f3e7d5a30f825c7cfd2956890": {
+  "text": "Je vais au cinéma avec mes amis.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 15264
+ },
+ "d0064ed58b5b100294af018d4b3bcaa1": {
+  "text": "Merci, au revoir, madame !",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 15696
+ },
+ "d0772030b4e74ef36407da091c70b6d3": {
+  "text": "Le musée est ouvert du mardi au dimanche.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 17136
+ },
+ "d2b1d721f4cf454a6a942d48437573cc": {
+  "text": "Ça s'écrit comment ?, épeler",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 15552
+ },
+ "d349de805f2ed23209833c48ad4fd4ef": {
+  "text": "Tu veux du café ou du thé ?",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 15264
+ },
+ "d3d7386ad43ff9192e6221965ac117fd": {
+  "text": "sur la table",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "d3f97e5ef91a9467606613492e3fc686": {
+  "text": "À partir de lundi, je travaille.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 18144
+ },
+ "d41932cbb81daee9338bb37cfe346509": {
+  "text": "Je pars dans deux jours.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "d46f21826658feeaa4e6f2148be3263a": {
+  "text": "où",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "d494f9333e81ce3fc9727ece89f1bcf2": {
+  "text": "à cause de + nom",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 12384
+ },
+ "d49b11e843d53382aed0af78abef23c8": {
+  "text": "Elle est belle comme le soleil.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "d52899f8079b1b9f1966aaebb588db3d": {
+  "text": "Ce soir, on dîne chez mes parents.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 16704
+ },
+ "d5a5e77a6354a07877521adbe35a7c82": {
+  "text": "Ça fait deux ans que j'apprends le français.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 16704
+ },
+ "d5e7939e1d3d5eb003c19f68b03ebdb8": {
+  "text": "C'est pourtant facile ! Pourquoi tu n'y arrives pas ?",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 19728
+ },
+ "d7c2acfa66c2d3e7e5fcd3f77723a800": {
+  "text": "J'ai réussi mon examen grâce à mon professeur.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 15696
+ },
+ "d83b95ba1cee4b206a226481192bdf29": {
+  "text": "Je viens de Pologne.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "da55994e8aa90714e88fe2ca1bd1ae40": {
+  "text": "On va d'abord au musée, et après on mange au restaurant.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 19872
+ },
+ "db042269315eeae9b9b88d8a4238ba1b": {
+  "text": "Mon ami vient du Japon.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 13824
+ },
+ "db7c692054fe40ed03ea97c6df5f8350": {
+  "text": "Téléphone-moi quand tu arrives.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 14976
+ },
+ "dba602763d7e37a17f2577bc5ac71909": {
+  "text": "jeudi",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "dbc3bc342877993edb9ef048da3335a4": {
+  "text": "J'habite près de la gare.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11520
+ },
+ "dc4bb803797643f7455212258eb5606b": {
+  "text": "Vous êtes d'où, madame ?",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11520
+ },
+ "dd51888b2f1ce30aa40a81def582331d": {
+  "text": "Je t'ai pourtant dit de prendre un parapluie !",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 18432
+ },
+ "ddb84a55384abfbad0a20e17c0ec092b": {
+  "text": "Dimanche, je mange chez mes parents.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 17424
+ },
+ "de1479adfdd65b3c9765c6053aebc431": {
+  "text": "Il a mangé, puis il est parti.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 13104
+ },
+ "deec8281c1f6a9660703259e8edae18c": {
+  "text": "Je suis né en 1995.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 18000
+ },
+ "df14c8cfeaa0bca8df942b7a7fbce1b9": {
+  "text": "une université",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11808
+ },
+ "df53cff24bb54f478f141ab47bfbc780": {
+  "text": "J'habite ici depuis 2020.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 16416
+ },
+ "df5f44cc948500dd274a9d713ce8ebe9": {
+  "text": "bonjour",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "df6381d0f2c349110e3ea868e19ccc3c": {
+  "text": "chez",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "e027bd08ed595c479760cbad91eeaa47": {
+  "text": "Je suis heureux parce que c'est vendredi.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 12240
+ },
+ "e1db94d452cbcb30e2c0a21e71926632": {
+  "text": "Je pense que c'est bien.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "e24b06ac3c0b551d7065c33676ff5412": {
+  "text": "ni… ni…",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "e29773f84cca3ed9fdfe002df65de4ae": {
+  "text": "déjà, pas encore",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 14688
+ },
+ "e2e554afec7bde4f2b0f01ed69ae2e3c": {
+  "text": "et pourtant",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "e30b271d74c721fecb5f8300d187ac80": {
+  "text": "Mardi, j'ai un cours de français.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 14256
+ },
+ "e32c8430aa30d437223fc92544b21dec": {
+  "text": "Un café sans sucre.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 12528
+ },
+ "e406974a347caa52af55667c3372296a": {
+  "text": "À partir de lundi, je commence un nouveau travail.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 23040
+ },
+ "e4158a82196e892db14f13099ef36cdc": {
+  "text": "Je parle aux étudiants.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 12528
+ },
+ "e433edebd4a8d9979244d925c85a00a3": {
+  "text": "Je ne veux ni café ni thé",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "e51b4eabea115b1c66f3cd899b177d6f": {
+  "text": "Entre toi et moi.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11952
+ },
+ "e5d9fb702167737e402a692ee04a622f": {
+  "text": "Le restaurant est toujours plein. en effet, la cuisine y est excellente.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 34848
+ },
+ "e611e18781da1d1d0a091383eff031a4": {
+  "text": "Vendredi, c'est le dernier jour de travail.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 18288
+ },
+ "e6164e487ed9473551b5acc8e4e40118": {
+  "text": "Elle sort sans manteau alors qu' il fait très froid.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 19872
+ },
+ "e6a524b003d336238adb1a00105fd42a": {
+  "text": "Elle travaille jusqu'au soir.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "e7145bdd19a8cff0c21a6ef0867e90d5": {
+  "text": "Même s'il ne veut pas, il doit venir.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 18864
+ },
+ "e71ff2619aa0724bffd83cacceb14456": {
+  "text": "dans cinq minutes",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "e78d2e0a084a759fc701799d76dc3b4d": {
+  "text": "puisque tu es fatigué",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "e8d2abcb6735a0cefb7809bc9a7875d3": {
+  "text": "J'ai compris dès le premier jour que ce travail était difficile.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 23040
+ },
+ "eac6342c2a3d2de9e3ab63ed3376c27c": {
+  "text": "On se promène après le déjeuner.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 15840
+ },
+ "ead3545cef95ec54c1ae99c12cd4a401": {
+  "text": "Je suis en retard à cause de toi !",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 12672
+ },
+ "eae92afb8ecefc81da8d6930cb323b87": {
+  "text": "Finalement, je suis très content de mon choix.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 17136
+ },
+ "eb8c3e471887b2fdbd19e3f68d4a6e91": {
+  "text": "Si tu es fatigué, alors repose-toi.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 20736
+ },
+ "ec3d41c70917ff5222dfa8341d1383f0": {
+  "text": "Je vais au travail en métro.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11520
+ },
+ "ec6d15cd2043d956abf4f6787626213f": {
+  "text": "au début du cours",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 12528
+ },
+ "ed1b28fc59795c588ea6ed3e92f2d4ab": {
+  "text": "Il parle comme un professeur.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 15120
+ },
+ "eda6456348ddf9f2632e07acb2e468e0": {
+  "text": "e accent aigu, e accent grave, e accent circonflexe, c cédille",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 28656
+ },
+ "ef3f9611b577fb7cce7f3972fc4af28b": {
+  "text": "Il attend devant la porte.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 13680
+ },
+ "ef850c221a18b042e18fbc8522524d8c": {
+  "text": "Février a vingt-huit ou vingt-neuf jours.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 18144
+ },
+ "f07a0e6863cfe85c3cc2af5843c89952": {
+  "text": "comme je suis malade, je ne vais pas au travail.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 20160
+ },
+ "f0c350acc2256f606a130b0759a06182": {
+  "text": "Mes chaussures sont sous le lit.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 14688
+ },
+ "f17fd8de3cb46cebdc9d17fb46cbc63b": {
+  "text": "Le magasin était fermé, alors je suis rentré à la maison.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 24336
+ },
+ "f202f409b4e34cf4fbc99ef03dac368e": {
+  "text": "Ils habitent aux États-Unis.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 13248
+ },
+ "f20707dd162a16a8b19d50e0932939a8": {
+  "text": "La pharmacie est en face de l'école.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 13248
+ },
+ "f216914d63f93322ea450602007320f7": {
+  "text": "Les billets coûtent à partir de 15 euros.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 18144
+ },
+ "f2843ded7b01f1a1a84b9df50687c45a": {
+  "text": "Mon frère a quinze ans.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 12240
+ },
+ "f2ac7f80af0a52fd215c0e1d917e761c": {
+  "text": "Pourquoi tu ne viens pas ? — parce que je suis malade.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 25344
+ },
+ "f3115b75a68b957493b37ce04d19fbcf": {
+  "text": "Tu as déjà mangé ? — Oui, il y a une heure.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 25200
+ },
+ "f3ae18d6ee7f0b083bafa0a47214ab92": {
+  "text": "quand il fait beau, on va au parc.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 17712
+ },
+ "f64899526c7e0d586fe9f6d0d2ce844e": {
+  "text": "un hôpital",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11232
+ },
+ "f694ef10e26623475bed0b3ea118c4eb": {
+  "text": "Il joue aux jeux vidéo au lieu de faire ses devoirs.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 17712
+ },
+ "f6e226647310c971b12925773d50d78b": {
+  "text": "Je me brosse les dents après chaque repas.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 12816
+ },
+ "f717d6d0cbb81f872a0d9aad412e935c": {
+  "text": "J'habite à Lyon depuis trois mois.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 15984
+ },
+ "f72205e3ad691da6c69af555509a5daf": {
+  "text": "– Salut, ça va ? – Ça va, et toi ?",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 25920
+ },
+ "f72b33d125bc4ab0346f0b58eceda59e": {
+  "text": "Elle ne vient pas, car elle travaille.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 12960
+ },
+ "f7fee5270249581bf7e88f13cf966058": {
+  "text": "J'habite en France.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
+ "f86d10b8a2c451c11df91f93abf6c0e2": {
+  "text": "Je voyage en train.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "fa16656401f63fe73957efb97f45a807": {
+  "text": "Je suis chez Pierre.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11952
+ },
+ "fbeda546fdf057b5b95f4e2f01d1a786": {
+  "text": "si",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "fcb0e08469bad1278b219fa0ae04f013": {
+  "text": "même si + verbe",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 13536
+ },
+ "fd2a8a04b0497843d1ee5ac5078bc936": {
+  "text": "Je suis fatigué mais content.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 12096
+ },
+ "fd40fad00e54862c0d86be1af6410055": {
+  "text": "un tramway",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
+ "fd5dca4fb0388f76d1ff835cc7b6e92f": {
+  "text": "Profite du soleil pendant qu' il fait beau !",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 18576
+ },
+ "febabd36b1df2d6760e56f649eb7213d": {
+  "text": "Je bois un café avant le cours.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 15696
+ },
+ "feef472a85848d2253f48537ca1c72d3": {
+  "text": "C'est pourtant facile !",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 13248
+ },
+ "ff05dcbc7b6bd3caafb801ecda79d93e": {
+  "text": "Puisque tu es là, aide-moi à porter les sacs !",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 20016
+ },
+ "ff1040d2a397130e41c56ac42a7e4a04": {
+  "text": "Le prochain train part dans dix minutes.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 17712
+ },
+ "ff28b3dbdc5edc00254a05bea23e2fb2": {
+  "text": "Il n'y a plus de pain. — Ah, du coup on mange quoi ce soir ?",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 20592
+ },
+ "ff69cdf646d4b5f8b2b9bd286660d0a7": {
+  "text": "Il regarde la télé alors qu' il a un examen demain !",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 21600
+ },
+ "ff75627ffb365a93795b43f5205597cb": {
+  "text": "c'est pourquoi",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11232
+ }
+}

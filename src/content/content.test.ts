@@ -1,9 +1,16 @@
+import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
+import audioConfig from '../../content/_audio/config.json';
+import manifest from '../../content/_audio/manifest.json';
+import { audioKey, voiceFor, type AudioConfig, type Manifest } from '../audio/manifest';
+import { collectAudioTexts } from '../audio/texts';
 import { buildBoss } from '../bosses';
 import { exerciseTypeInfo, isProduction, supportsHelpLang } from '../exercises/registry';
 import { mapState } from '../game/map';
 import { loadPacks } from './loader';
 import { content, contentFiles } from './registry';
+
+const sha256 = (s: string) => createHash('sha256').update(s).digest('hex');
 
 const formatIssues = (issues: { file: string; path: string; message: string }[]) =>
   issues.map((i) => `${i.file} › ${i.path}: ${i.message}`).join('\n');
@@ -258,5 +265,18 @@ describe('generated exercises', () => {
     const invalid = all.filter((ex) => !exerciseTypeInfo[ex.type]!.schema.safeParse(ex.data).success).map((ex) => ex.id);
     expect(invalid).toEqual([]);
     expect([...loadFromDisk().exercises.keys()]).toEqual([...disk.exercises.keys()]);
+  });
+});
+
+describe('audio', () => {
+  const config = audioConfig as AudioConfig;
+  const recorded = manifest as Manifest;
+
+  // Until voices are chosen there is nothing to record against; from then on every text needs its recording.
+  it.skipIf(!config.voices.length)('has a recording in the manifest for every text (npm run tts)', () => {
+    const missing = collectAudioTexts(content)
+      .filter((t) => !recorded[audioKey(config.provider, voiceFor(config, t.text, sha256), t.text, sha256)])
+      .map((t) => `${t.text}  ← ${t.sources[0]}`);
+    expect(missing, `${missing.length} text(s) without a recording; run npm run tts and commit content/_audio/manifest.json`).toEqual([]);
   });
 });

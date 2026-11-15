@@ -16,7 +16,7 @@ Skopiuj ten katalog do `content/<id-pakietu>/` (bez podkreślnika na początku: 
 
 ## `units/<id>.json`
 
-- `entries`: wpisy `{ id, fr, pl, def?, examples: [{ fr, pl }], tip?, confusables?, tags?, deprecated? }`.
+- `entries`: wpisy `{ id, fr, pl, def?, examples: [{ fr, pl, audio? }], tip?, confusables?, tags?, deprecated?, audio? }`.
   Id wpisu jest globalnie `<pakiet>/<wpis>` i wiąże postęp SRS, więc **nie zmieniaj go i nie usuwaj wpisów**; oznacz je `"deprecated": true`.
   `confusables` mogą wskazywać wpisy z innych pakietów: `"a1-connecteurs/prep-dans"`.
 - `exercises`: `{ id, type, entryIds, data }`. Każdy wpis potrzebuje co najmniej jednego ćwiczenia produkcyjnego:
@@ -36,6 +36,22 @@ Wpisz id w `"sheets": [...]` w `pack.json`. Fiszka: `{ id, label?, title, icon, 
 | `words` | `items: [{ fr, pl, def? }]`, `title?` | `def` to krótka francuska glosa dla trybu FR |
 
 `**pogrubienie**` i `\n` działają we wszystkich tekstach. `practice: ["<pakiet>/<jednostka>"]` dodaje przyciski „S'entraîner”. Wzór: `content/edito-a1/sheets/unite-04.json`.
+
+## Nagrania (`audio`)
+
+Każdy francuski tekst jest nagrywany syntezą mowy przy buildzie (`npm run tts`, opis w `scripts/tts.ts`): `fr` wpisu i jego przykładów, przykłady i słówka z fiszek, pełne zdania z tabel w fiszkach (od wielkiej litery, zakończone `.`, `?` lub `!`), zdanie z `gap-fill` z luką wypełnioną pierwszą odpowiedzią i pierwsza odpowiedź z `translate-pl-fr`. Nawiasy (`(avoir)`, `(fam.)`) nie są czytane, a `a / b` czyta się jak wyliczenie.
+
+Opcjonalne pole `audio` we wpisie, w przykładzie, w ćwiczeniu (obok `data`, nie w nim) i w pozycji bloku `examples` / `words`:
+
+```jsonc
+"audio": {
+  "skip": true,        // nie nagrywaj (np. nazwa własna, którą synteza przekręca)
+  "text": "…",         // co czytać, jeśli różni się od zapisu (liczby, skróty, nazwy liter)
+  "dictation": false   // nie używaj w dyktandzie (homofony: il parle / ils parlent)
+}
+```
+
+Tabela przyjmuje tylko `"audio": { "skip": true }`. Po zmianie treści uruchom `npm run tts` i zacommituj `content/_audio/manifest.json`; test nie przepuści tekstu bez nagrania.
 
 ## Język pomocy (polski / francuski)
 

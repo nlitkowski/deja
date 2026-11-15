@@ -21,6 +21,7 @@ Zasady nadrzędne:
   - Stan aplikacji w Zustand (`src/state/appStore.ts`): `settings`, `progress`, `recordAnswer`, `updateSettings`. Ekrany czytają store przez selektory zamiast przekazywać stan w propsach.
 - Stylowanie: CSS Modules albo zwykły CSS ze zmiennymi. Bez Tailwinda i bez bibliotek UI
 - PWA (vite-plugin-pwa, konfiguracja w `vite.config.ts`): precache całego buildu (pakiety treści są w JS) i fontów latin/latin-ext wszystkich stylów, więc po pierwszym wejściu działa offline. Nowa wersja czeka na toast „Nouvelle version · Recharger” (`UpdateToast`), nigdy nie przeładowuje sama. Ikony PNG w `public/` generuje `npm run icons` z plików SVG
+- Nagrania (plan w `PLAN-AUDIO.md`): TTS Azure generowany przy buildzie przez `npm run tts` (`scripts/tts.ts`), pliki `<klucz>.mp3` w R2 pod `https://deja-audio.litkowski.com`, manifest `content/_audio/manifest.json` commitowany (test pilnuje, żeby każdy tekst miał nagranie). Teksty do nagrania i ich normalizacja: `src/audio/texts.ts` (ten sam kod liczy klucz w skrypcie i w przeglądarce). Aplikacja pobiera plik przez `fetch` (CORS), trzyma go w Cache API (`deja-audio`) i odtwarza z bloba (`src/audio/player.ts`, przycisk `<Play>`); brak nagrania lub sieci tylko wyłącza przycisk.
 - Walidacja pakietów treści: Zod (schemat jest źródłem typów, przez `z.infer`)
 - Animacje: Framer Motion. Konfetti: canvas-confetti. Dźwięki: krótkie pliki w `public/sfx/` odtwarzane przez Web Audio, z wyciszeniem w ustawieniach
 - Haptyka: `navigator.vibrate` tam, gdzie jest dostępne
@@ -119,7 +120,7 @@ src/
 // schemat (Zod -> typy)
 Unit     { id, title, icon, entries: Entry[], exercises: Exercise[], boss?: BossConfig, optional?: boolean }  // optional = nie blokuje kolejnej jednostki ani ukończenia pakietu
 BossConfig { groups: string[][], questions, lives, secondsPerQuestion }  // brak = z confusables jednostki
-Entry    { id, fr, pl, def?, examples: {fr, pl}[], tip?: {pl, fr?}, confusables?: string[], tags?: string[], audio?: {text} }  // audio.text: co ma czytać TTS, gdy różni się od fr
+Entry    { id, fr, pl, def?, examples: {fr, pl}[], tip?: {pl, fr?}, confusables?: string[], tags?: string[], audio?: {skip?, text?, dictation?} }  // nagrania: content/_template/README.md, scripts/tts.ts
 Exercise { id, type: string, entryIds: string[], data: unknown }  // `data` walidowane przez schemat danego typu ćwiczenia
 ```
 

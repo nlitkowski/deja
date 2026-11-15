@@ -31,7 +31,9 @@ Kolejność etapów: A0 → A1 → A2 → A3 → A4 → A5 → S1 → S2 → S3 
   - log bez pola `skill` daje projekcję identyczną jak przed zmianą (test regresji na zapisanym logu);
   - odpowiedź `listening` nie zmienia karty `written`.
 
-## Etap A1 — Nagrania: generowanie, hosting, manifest
+## Etap A1 — Nagrania: generowanie, hosting, manifest ✅
+
+> Zrobione: 6 głosów (Denise, Vivienne Multilingual, Brigitte, Henri, Remy Multilingual, Alain), MP3 24 kHz 48 kbps. Czytane są też `fr` wpisów i słówka z fiszek, bez nawiasów, a `a / b` jak wyliczenie. Skrypt nagrywa 4 równolegle w limicie `--rpm` (F0: 20/min). Job CI `audio` dogrywa braki i commituje manifest.
 
 **Źródło głosu:** TTS generowany raz, przy buildzie, nie w przeglądarce. `speechSynthesis` brzmi inaczej na każdym urządzeniu i często słabo.
 - Interfejs `TtsProvider { synthesize(text, voice, lang): Promise<ArrayBuffer> }`, implementacja **Azure AI Speech, Neural** (francuskie głosy fr-FR).
@@ -75,7 +77,9 @@ Rozszerz schemat Zod i dopisz opis do `content/_template/README.md`.
 
 **CI:** job `audio` uruchamiany, gdy zmienia się `content/**`. Generuje brakujące nagrania przed buildem aplikacji. Test w `content.test.ts`: każdy tekst do nagrania (bez `audio.skip`) ma wpis w manifeście, inaczej build nie przechodzi.
 
-## Etap A2 — Odtwarzanie (bez nowych ćwiczeń)
+## Etap A2 — Odtwarzanie (bez nowych ćwiczeń) ✅
+
+> Zrobione inaczej niż w planie: zamiast Workbox CacheFirst aplikacja sama pobiera plik (`fetch`, CORS) do Cache API i odtwarza z bloba, bo `<audio src>` z innej domeny dawałby nieprzezroczyste odpowiedzi z zakresem. Ekranu Browse nie ma, więc przyciski są w fiszkach i w sesji. Pobieranie offline: na fiszce i na ekranie pakietu.
 
 Najtańszy, a bardzo wartościowy krok: dużo francuskiego „na ucho” przy tym, co już robisz.
 - Komponent `<Play text|hash />`: ikona głośnika i przytrzymanie dla wolniejszego tempa. Wolniej oznacza `playbackRate = 0.75` z `preservesPitch`, bez osobnych plików.

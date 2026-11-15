@@ -38,6 +38,8 @@ export interface ExerciseLogic<D> {
   production: boolean;
   /** Which of the entry's cards an answer trains. */
   skill: Skill;
+  /** The whole French sentence, read after the answer and recorded for hand-written exercises. */
+  audioText?: (data: D) => string;
   /** Help languages the exercise works in; omitted = all. */
   helpLangs?: readonly HelpLang[];
   /** Builds exercises from hand-written content; each may ask about several entries. */

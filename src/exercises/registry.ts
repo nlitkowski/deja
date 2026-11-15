@@ -1,4 +1,3 @@
-import type { ExerciseTypeInfo } from '../content/loader';
 import type { HelpLang } from '../content/localized';
 import type { Skill } from '../lib/srs';
 import { confusableDuel } from './confusable-duel';
@@ -24,9 +23,7 @@ const types: ExerciseType<any>[] = [
 
 export const exerciseTypes: ReadonlyMap<string, ExerciseType<unknown>> = new Map(types.map((t) => [t.id, t]));
 
-export const exerciseTypeInfo: Record<string, ExerciseTypeInfo> = Object.fromEntries(
-  types.map((t) => [t.id, { schema: t.schema, production: t.production, generate: t.generate }]),
-);
+export { exerciseTypeInfo } from './logic';
 
 export const isProduction = (type: string) => exerciseTypes.get(type)?.production ?? false;
 
