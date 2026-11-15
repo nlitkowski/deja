@@ -16,10 +16,12 @@ const PIXELS = {
   lock: ['..XXXX..', '.X....X.', '.X....X.', 'XXXXXXXX', 'XXX..XXX', 'XXX..XXX', 'XXXXXXXX', '........'],
   more: ['........', '........', '........', 'XX.XX.XX', 'XX.XX.XX', '........', '........', '........'],
   cloud: ['........', '...XX...', '..XXXX..', '.XXXXXX.', 'XXXXXXXX', 'XXXXXXXX', '.XXXXXX.', '........'],
+  speaker: ['...X....', '..XX..X.', 'XXXX...X', 'XXXX.X.X', 'XXXX.X.X', 'XXXX...X', '..XX..X.', '...X....'],
+  download: ['...XX...', '...XX...', '...XX...', '.XXXXXX.', '..XXXX..', '...XX...', '........', 'XXXXXXXX'],
 } as const;
 
 // U+FE0E keeps ▶ as a text glyph; without it some platforms draw an emoji.
-const GLYPHS: Record<IconName, string> = { menu: '☰', close: '✕', back: '‹', next: '›', settings: '⚙', hint: '💡', play: '▶︎', collapse: '«', crown: '♛', lock: '🔒', trophy: '🏆', more: '…', cloud: '☁︎' };
+const GLYPHS: Record<IconName, string> = { menu: '☰', close: '✕', back: '‹', next: '›', settings: '⚙', hint: '💡', play: '▶︎', collapse: '«', crown: '♛', lock: '🔒', trophy: '🏆', more: '…', cloud: '☁︎', speaker: '🔈︎', download: '⤓' };
 
 export type IconName = keyof typeof PIXELS;
 

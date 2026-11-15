@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { AppLayout, MenuButton } from '../components/AppLayout';
 import { Emoji } from '../components/Emoji';
 import { Icon } from '../components/Icon';
+import { AudioDownload } from '../components/AudioDownload';
 import { UnitMap } from '../components/UnitMap';
 import { content } from '../content/registry';
 import { ui } from '../i18n/ui';
@@ -39,6 +40,7 @@ export function PackScreen({ packId, onBack, onPractice, onBoss, onOpenSheet }: 
             <h1>
               <Emoji char={pack.icon} /> {pack.title} <span className="level">{pack.level}</span>
             </h1>
+            <AudioDownload key={pack.id} units={pack.unitList.map((u) => u.key)} sheets={pack.sheetList.map((s) => s.key)} />
             <UnitMap pack={pack} state={state} onPractice={onPractice} onBoss={onBoss} />
           </section>
         )}

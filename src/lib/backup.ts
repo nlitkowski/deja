@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { HELP_LANGS } from '../content/localized';
 import type { ProgressEvent } from './progress/events';
 import { EventSchema } from './progress/schema';
-import { COLOR_MODES, PALETTES, type Settings } from './storage';
+import { COLOR_MODES, PALETTES, READ_AFTER, type Settings } from './storage';
 
 /**
  * A backup is the whole event log plus settings. Importing merges events by id, so restoring an older
@@ -28,6 +28,7 @@ const SettingsSchema = z.object({
   colorMode: z.enum(COLOR_MODES).optional().catch(undefined),
   palette: z.enum(PALETTES).optional().catch(undefined),
   navCollapsed: z.boolean().optional().catch(undefined),
+  readAfter: z.enum(READ_AFTER).optional().catch(undefined),
 });
 
 const BackupSchema = z.object({

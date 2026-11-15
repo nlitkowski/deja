@@ -4,6 +4,9 @@ import { accentPairs, content } from '../content/registry';
 import { exerciseTypes, isProduction, skillOf, supportsHelpLang } from '../exercises/registry';
 import type { ExerciseContext } from '../exercises/types';
 import { Icon } from '../components/Icon';
+import { Play } from '../components/Play';
+import { play, stop, usePlayer } from '../audio/player';
+import { exerciseAudioText } from '../audio/texts';
 import { Translation } from '../components/Translation';
 import { GAME } from '../game/config';
 import { answerXp } from '../game/xp';
@@ -54,7 +57,8 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
   const [comboBreak, setComboBreak] = useState<{ combo: number; key: number }>();
   const [gain, setGain] = useState<{ xp: number; key: number }>();
 
-  const { helpLang, vibration, sound } = useAppStore((s) => s.settings);
+  const { helpLang, vibration, sound, readAfter } = useAppStore((s) => s.settings);
+  const player = usePlayer();
   const recordAnswer = useAppStore((s) => s.recordAnswer);
   const recordSession = useAppStore((s) => s.recordSession);
   const ctx: ExerciseContext = useMemo(() => ({ accentPairs, helpLang }), [helpLang]);
@@ -67,6 +71,9 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
   const exercise = item && content.exercises.get(item.exerciseId);
   const type = exercise && exerciseTypes.get(exercise.type);
   const entry = item && content.entries.get(item.entryId);
+  const sentence = exercise && readAfter !== 'never' ? exerciseAudioText(exercise) : undefined;
+  // A correct answer moves on by itself, but only once the sentence being read has finished.
+  const reading = !!sentence && player.text === sentence && !!player.status;
 
   const next = useCallback(() => {
     if (index + 1 >= queue.length) {
@@ -84,6 +91,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
       onFinish({ sessionId: session.id, title, answered: s.answered, correct: s.correct, nearMiss: s.nearMiss, entriesReviewed: s.entries.size });
       return;
     }
+    stop();
     setResult(undefined);
     setIndex(index + 1);
   }, [index, queue.length, onFinish, title, recordSession, session, unitKey]);
@@ -97,12 +105,14 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
       }
     };
     window.addEventListener('keydown', onKey);
-    const timer = result.correct && !result.nearMiss ? window.setTimeout(next, AUTO_ADVANCE_MS) : undefined;
+    const timer = result.correct && !result.nearMiss && !reading ? window.setTimeout(next, AUTO_ADVANCE_MS) : undefined;
     return () => {
       window.removeEventListener('keydown', onKey);
       window.clearTimeout(timer);
     };
-  }, [result, next]);
+  }, [result, next, reading]);
+
+  useEffect(() => stop, []);
 
   if (!item || !exercise || !type || !entry) {
     return (
@@ -118,6 +128,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
   function handleAnswer(r: AnswerResult) {
     if (!item || !exercise) return;
     setResult(r);
+    if (readAfter === 'auto' && sentence) void play(sentence);
     if (vibration) vibrate(r.correct ? 15 : [30, 40, 30]);
     if (!r.correct) setQueue((q) => requeue(q, index, item, byEntry.get(item.entryId) ?? [], isProduction));
 
@@ -231,6 +242,12 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
               </p>
             </>
           )}
+          {sentence && (
+            <p className="read-after">
+              <Play text={sentence} />
+              <span lang="fr">{sentence}</span>
+            </p>
+          )}
           {tone !== 'ok' && (
             <div className="explain">
               <p>
@@ -243,6 +260,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
               )}
               {example && (
                 <p className="example">
+                  <Play text={example.fr} audio={example.audio} />
                   <span lang="fr">{example.fr}</span>
                   {helpLang === 'pl' && <Translation key={example.fr} text={example.pl} lang="pl" />}
                 </p>

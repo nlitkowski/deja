@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
 import { KIND_ICON, sectionId } from '../components/NavTree';
+import { AudioDownload } from '../components/AudioDownload';
+import { Play } from '../components/Play';
+import { isSentence } from '../audio/texts';
 import { RichText } from '../components/RichText';
 import { SheetsLayout } from '../components/SheetsLayout';
 import { Translation } from '../components/Translation';
@@ -58,6 +61,7 @@ function Block({ block, lang }: { block: SheetBlock; lang: HelpLang }) {
                   <tr key={i}>
                     {row.map((cell, j) => (
                       <td key={j}>
+                        {!block.audio?.skip && isSentence(cell) && <Play text={cell} />}
                         <RichText text={cell} />
                       </td>
                     ))}
@@ -75,6 +79,7 @@ function Block({ block, lang }: { block: SheetBlock; lang: HelpLang }) {
           <ul>
             {block.items.map((item, i) => (
               <li key={i}>
+                <Play text={item.fr} audio={item.audio} />
                 <span lang="fr">
                   <RichText text={item.fr} />
                 </span>
@@ -94,6 +99,7 @@ function Block({ block, lang }: { block: SheetBlock; lang: HelpLang }) {
               return (
                 <div key={i} className={gloss ? '' : 'no-gloss'}>
                   <dt lang="fr">
+                    <Play text={item.fr} audio={item.audio} />
                     <RichText text={item.fr} />
                   </dt>
                   {gloss && <dd lang={lang}>{gloss}</dd>}
@@ -137,6 +143,7 @@ export function SheetView({ sheetKey, helpLang, onHelpLang, onPractice, onOpenSh
             {localize(sheet.summary, helpLang)}
           </p>
         )}
+        <AudioDownload key={sheet.key} sheets={[sheet.key]} units={sheet.practice} />
       </div>
 
       {sheet.sections.map((section, i) => (

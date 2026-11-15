@@ -144,6 +144,22 @@ export const ui = {
     error: 'La connexion a échoué. Réessaie dans un instant.',
   },
   sound: 'Sons',
+  listen: 'Écouter',
+  listenHint: 'Écouter · maintenir pour ralentir',
+  readAfterLabel: 'Lire la phrase après la réponse',
+  readAfterNames: { auto: 'Auto', manual: 'Sur demande', never: 'Jamais' },
+  readAfterHint: '« Auto » lit la phrase dès que tu as répondu. Maintiens le haut-parleur pour l’écouter plus lentement.',
+  audioStorage: (size: string) => `Audio hors ligne : ${size}`,
+  audioStorageEmpty: 'Aucun audio hors ligne.',
+  clearAudio: 'Vider',
+  downloadAudio: 'Télécharger l’audio',
+  downloadingAudio: (done: number, total: number) => `Téléchargement… ${done}/${total}`,
+  audioReady: (size: string) => `Audio hors ligne · ${size}`,
+  audioPartly: (missing: number) => `${missing} enregistrement${missing > 1 ? 's' : ''} indisponible${missing > 1 ? 's' : ''} pour l’instant. Réessaie plus tard.`,
+  fileSize: (bytes: number) =>
+    bytes < 1_000_000
+      ? `${Math.max(1, Math.round(bytes / 1000))} ko`
+      : `${(bytes / 1_000_000).toLocaleString('fr-FR', { maximumFractionDigits: 1, minimumFractionDigits: 1 })} Mo`,
   dailyGoalLabel: 'Objectif quotidien',
   dailyGoalHint: 'XP à gagner chaque jour pour garder ta flamme.',
   goalOption: (xp: number) => `${xp} XP`,

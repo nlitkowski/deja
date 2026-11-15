@@ -671,6 +671,63 @@ button {
   font-style: normal;
 }
 
+/* Playing a recording */
+
+.play-button {
+  display: inline-grid;
+  place-items: center;
+  width: 2em;
+  height: 2em;
+  margin: 0 0.35em 0 0;
+  padding: 0;
+  vertical-align: middle;
+  border: var(--border-w) solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--info);
+  font-size: 0.8rem;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.play-button.loading,
+.play-button.playing {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.play-button.playing {
+  animation: play-pulse 1s ease-in-out infinite;
+}
+
+.play-button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+@keyframes play-pulse {
+  50% {
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+  }
+}
+
+.read-after {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  margin: 0 0 0.6em;
+}
+
+.audio-download {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0.5em 0;
+}
+
 /* Summary */
 
 .summary {

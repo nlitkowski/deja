@@ -1,4 +1,5 @@
 import { AccountCard } from '../components/AccountCard';
+import { AudioCard } from '../components/AudioCard';
 import { BackupCard } from '../components/BackupCard';
 import { Icon } from '../components/Icon';
 import { PalettePicker } from '../components/PalettePicker';
@@ -65,6 +66,8 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
           <span>{ui.vibration}</span>
         </label>
       </section>
+
+      <AudioCard />
 
       <BackupCard />
     </main>

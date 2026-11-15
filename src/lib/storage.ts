@@ -21,7 +21,12 @@ export interface Settings {
   palette: Palette;
   /** Navigation tree hidden on wide screens (on small ones it is always a drawer). */
   navCollapsed: boolean;
+  /** Whether the whole sentence is read after an answer: by itself, on a tap, or not offered. */
+  readAfter: ReadAfter;
 }
+
+export type ReadAfter = 'auto' | 'manual' | 'never';
+export const READ_AFTER: readonly ReadAfter[] = ['auto', 'manual', 'never'];
 
 export type ColorMode = 'system' | 'light' | 'dark';
 export const COLOR_MODES: readonly ColorMode[] = ['system', 'light', 'dark'];
@@ -45,7 +50,7 @@ export interface LoadedState {
 }
 
 export function defaultSettings(): Settings {
-  return { dailyGoal: 50, sound: true, vibration: true, helpLang: 'pl', colorMode: 'system', palette: 'classic', navCollapsed: false };
+  return { dailyGoal: 50, sound: true, vibration: true, helpLang: 'pl', colorMode: 'system', palette: 'classic', navCollapsed: false, readAfter: 'manual' };
 }
 
 export function defaultState(): SavedState {
