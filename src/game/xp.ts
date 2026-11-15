@@ -1,4 +1,5 @@
 import type { DayKey } from '../lib/date';
+import { resolveEntryIds } from '../lib/progress/aliases';
 import { reviewSkill, type ProgressEvent, type ReviewEvent, type SessionEvent } from '../lib/progress/events';
 import { compareEvents, emptyProgress, replayOnto, type ProgressState } from '../lib/progress/fold';
 import { cardKey, type Skill, type SrsCard } from '../lib/srs';
@@ -104,8 +105,9 @@ class Scorer {
     replayOnto(this.state, sorted, (event, before) => {
       if (event.type === 'review') {
         const skill = reviewSkill(event);
-        const { total, combo } = answerXp(event, this.ctx, allMastered(event.entryIds, before.cards, skill));
-        out.push({ event, xp: total, combo, before: event.entryIds.flatMap((id) => before.cards[cardKey(id, skill)] ?? []) });
+        const entryIds = resolveEntryIds(event.entryIds);
+        const { total, combo } = answerXp(event, this.ctx, allMastered(entryIds, before.cards, skill));
+        out.push({ event, xp: total, combo, before: entryIds.flatMap((id) => before.cards[cardKey(id, skill)] ?? []) });
       } else if (event.type === 'session') {
         out.push({ event, xp: this.firstPayment(`session:${event.sessionId}`) ? sessionBonus(event) : 0, combo: 0 });
       } else if (event.type === 'quest') {

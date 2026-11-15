@@ -1,4 +1,5 @@
 import { buildPairSet } from '../lib/answer';
+import { setEntryAliases } from '../lib/progress/aliases';
 import { exerciseTypeInfo } from '../exercises/registry';
 import { loadPacks } from './loader';
 
@@ -10,6 +11,7 @@ export const contentFiles = {
 };
 
 export const content = loadPacks(contentFiles, exerciseTypeInfo);
+setEntryAliases(content.aliases);
 
 export const accentPairs = buildPairSet(content.packs.flatMap((p) => p.accentPairs));
 

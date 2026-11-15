@@ -124,7 +124,7 @@ Entry    { id, fr, pl, def?, examples: {fr, pl}[], tip?: {pl, fr?}, confusables?
 Exercise { id, type: string, entryIds: string[], data: unknown }  // `data` walidowane przez schemat danego typu ćwiczenia
 ```
 
-- Id wpisów są globalne w formacie `<pack>/<entry>`. Postęp SRS i mastery jest powiązany z tym id, więc **id nigdy się nie zmienia**. Wpis można oznaczyć `"deprecated": true`, ale nie usuwać go.
+- Id wpisów są globalne w formacie `<pack>/<entry>`. Postęp SRS i mastery jest powiązany z tym id, więc **id nigdy się nie zmienia**. Wpis można oznaczyć `"deprecated": true`, ale nie usuwać go. Scalony wpis dostaje `"replacedBy": "<nowy wpis>"`: projekcja liczy jego stare odpowiedzi do nowej karty (aliasy w `src/lib/progress/aliases.ts`, zdarzenia bez zmian). Usunięte ćwiczenia trafiają do `retiredExercises` jednostki (typ → id), żeby dawne odpowiedzi zachowały XP.
 - Loader przy starcie waliduje wszystkie pakiety. W trybie dev błędy wyświetla czytelnie, z plikiem i ścieżką pola. W buildzie produkcyjnym błędny pakiet blokuje build (test w Vitest ładuje wszystkie pakiety).
 - `confusables` mogą wskazywać wpisy z innych pakietów.
 - Ekran ustawień pozwala **zaimportować pakiet z pliku JSON** (ta sama walidacja). Taki pakiet trafia do IndexedDB, więc można dodawać treści z telefonu bez przebudowywania aplikacji.

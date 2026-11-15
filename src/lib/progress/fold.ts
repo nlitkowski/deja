@@ -2,6 +2,7 @@ import { GAME } from '../../game/config';
 import { entryMastery } from '../../game/mastery';
 import { addDays, type DayKey } from '../date';
 import { cardKey, review, skillOfKey, type Skill, type SrsCard } from '../srs';
+import { resolveEntryIds } from './aliases';
 import { reviewSkill, type ProgressEvent } from './events';
 
 export interface ProgressState {
@@ -61,9 +62,10 @@ function applyInPlace(state: ProgressState, event: ProgressEvent): void {
   if (event.type !== 'review') return;
 
   const skill = reviewSkill(event);
-  for (const id of event.entryIds) state.firstSeen[cardKey(id, skill)] ??= event.day;
+  const entryIds = resolveEntryIds(event.entryIds);
+  for (const id of entryIds) state.firstSeen[cardKey(id, skill)] ??= event.day;
   if (event.early && event.correct) return;
-  for (const id of event.entryIds) {
+  for (const id of entryIds) {
     const key = cardKey(id, skill);
     const before = state.cards[key];
     const card = review(before, event.grade, event.day);

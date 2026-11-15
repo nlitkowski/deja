@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { review, type Grade, type SrsCard } from '../srs';
+import { setEntryAliases } from './aliases';
 import type { BaselineEvent, ProgressEvent, ReviewEvent } from './events';
 import { applyEvent, compareEvents, emptyProgress, foldEvents, newIntroducedOn } from './fold';
 
@@ -154,5 +155,24 @@ describe('newIntroducedOn', () => {
     expect(newIntroducedOn(state, '2026-11-14')).toBe(2);
     expect(newIntroducedOn(state, '2026-11-13')).toBe(1);
     expect(newIntroducedOn(emptyProgress(), '2026-11-14')).toBe(0);
+  });
+});
+
+describe('merged entries', () => {
+  it('folds answers to a deprecated entry into the entry that replaced it, once per answer', () => {
+    setEntryAliases(new Map([['p/old-1', 'p/new'], ['p/old-2', 'p/new']]));
+    try {
+      const events = [
+        answer({ at: '2026-11-14T08:00:00Z', day: '2026-11-14', entryIds: ['p/old-1'] }),
+        answer({ at: '2026-11-15T08:00:00Z', day: '2026-11-15', entryIds: ['p/old-2', 'p/old-1'] }),
+        answer({ at: '2026-11-18T08:00:00Z', day: '2026-11-18', entryIds: ['p/new'] }),
+      ];
+      const state = foldEvents(events);
+      expect(Object.keys(state.cards)).toEqual(['p/new']);
+      expect(state.cards['p/new']!.reps).toBe(3);
+      expect(state.firstSeen['p/new']).toBe('2026-11-14');
+    } finally {
+      setEntryAliases(new Map());
+    }
   });
 });

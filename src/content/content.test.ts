@@ -34,6 +34,8 @@ function loadFromDisk() {
 const disk = loadFromDisk();
 /** Content checks look at what authors wrote; generated exercises are tested on their own below. */
 const written = [...disk.exercises.values()].filter((ex) => !ex.generated);
+/** Deprecated entries are no longer practised, so they need no exercises. */
+const activeEntryIds = [...disk.entries.values()].filter((e) => !e.deprecated).map((e) => e.id);
 const isVocabulary = (entryId: string) => disk.entries.get(entryId)?.tags?.includes('vocabulaire') ?? false;
 
 describe('content packs', () => {
@@ -57,7 +59,7 @@ describe('content packs', () => {
   it('every grammar entry has at least 3 exercises, every vocabulary entry at least 2', () => {
     const counts = new Map<string, number>();
     for (const ex of written) ex.entryIds.forEach((id) => counts.set(id, (counts.get(id) ?? 0) + 1));
-    const thin = [...disk.entries.keys()].filter((id) => (counts.get(id) ?? 0) < (isVocabulary(id) ? 2 : 3));
+    const thin = activeEntryIds.filter((id) => (counts.get(id) ?? 0) < (isVocabulary(id) ? 2 : 3));
     expect(thin).toEqual([]);
   });
 
@@ -71,7 +73,7 @@ describe('content packs', () => {
         if (ex.type === 'translate-pl-fr') translated.add(id);
       }
     }
-    const thin = [...disk.entries.keys()]
+    const thin = activeEntryIds
       .filter((id) => id.startsWith('edito-'))
       .filter((id) => (production.get(id) ?? 0) < 3 || !translated.has(id));
     expect(thin).toEqual([]);
@@ -130,7 +132,7 @@ describe('content packs', () => {
     const covered = new Set(
       written.filter((ex) => supportsHelpLang(ex.type, 'fr')).flatMap((ex) => ex.entryIds),
     );
-    expect([...disk.entries.keys()].filter((id) => !covered.has(id))).toEqual([]);
+    expect(activeEntryIds.filter((id) => !covered.has(id))).toEqual([]);
   });
 
   it('every unit has a playable boss: full length, and choices wherever a group has two entries', () => {
@@ -143,6 +145,17 @@ describe('content packs', () => {
       if (pairs && !boss?.questions.some((q) => q.kind === 'choice')) problems.push(`${unit.key}: brak pytań z wyborem`);
     }
     expect(problems).toEqual([]);
+  });
+
+  it('warns about oversized units (over 25 active entries or 110 exercises)', () => {
+    const oversized = disk.packs.flatMap((p) =>
+      p.unitList.flatMap((u) => {
+        const active = u.entryIds.filter((id) => !disk.entries.get(id)?.deprecated).length;
+        const exercises = u.exerciseIds.length;
+        return active > 25 || exercises > 110 ? [`${u.key}: ${active} wpisów, ${exercises} ćwiczeń`] : [];
+      }),
+    );
+    if (oversized.length) console.warn(['Za duże jednostki (cel: do 25 wpisów i 110 ćwiczeń):', ...oversized].join('\n'));
   });
 
   it('Édito A1 unité 0 is optional: unité 1 stays open without it', () => {
@@ -201,6 +214,24 @@ describe('loadPacks', () => {
   it('requires a production exercise per entry', () => {
     const { issues } = load({ id: 'u', title: 'U', icon: 'x', entries: [entry], exercises: [] });
     expect(issues).toContainEqual(expect.objectContaining({ path: 'p/e' }));
+  });
+
+  it('validates replacedBy: only on deprecated entries, pointing at an active one', () => {
+    const merged = { ...entry, id: 'm' };
+    const ok = load({ id: 'u', title: 'U', icon: 'x', entries: [entry, { ...merged, deprecated: true, replacedBy: 'e' }], exercises: [exercise] });
+    expect(ok.issues).toEqual([]);
+    expect(ok.aliases.get('p/m')).toBe('p/e');
+    const active = load({ id: 'u', title: 'U', icon: 'x', entries: [entry, { ...merged, replacedBy: 'e' }], exercises: [exercise, { ...exercise, id: 'y', entryIds: ['m'] }] });
+    expect(active.issues).toContainEqual(expect.objectContaining({ path: 'entries.1.replacedBy' }));
+    const toOld = load({ id: 'u', title: 'U', icon: 'x', entries: [entry, { ...merged, deprecated: true, replacedBy: 'm' }], exercises: [exercise] });
+    expect(toOld.issues).toContainEqual(expect.objectContaining({ path: 'p/m' }));
+  });
+
+  it('keeps the types of retired exercises', () => {
+    const loaded = load({ id: 'u', title: 'U', icon: 'x', entries: [entry], exercises: [exercise], retiredExercises: { 'translate-pl-fr': ['old'] } });
+    expect(loaded.retiredExercises.get('p/old')).toBe('translate-pl-fr');
+    const clash = load({ id: 'u', title: 'U', icon: 'x', entries: [entry], exercises: [exercise], retiredExercises: { 'gap-fill': ['x'] } });
+    expect(clash.issues).toContainEqual(expect.objectContaining({ path: 'p/x' }));
   });
 
   it('makes ids global', () => {

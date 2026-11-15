@@ -37,6 +37,10 @@ export interface LoadedContent {
   exercises: Map<string, Exercise>;
   units: Map<string, Unit>;
   sheets: Map<string, Sheet>;
+  /** Deprecated entry → the entry it was merged into, for folding past answers. */
+  aliases: Map<string, string>;
+  /** Removed exercise → its type. */
+  retiredExercises: Map<string, string>;
   issues: LoadIssue[];
 }
 
@@ -56,6 +60,8 @@ export function loadPacks(files: ContentFiles, exerciseTypes: Record<string, Exe
   const exercises = new Map<string, Exercise>();
   const units = new Map<string, Unit>();
   const sheets = new Map<string, Sheet>();
+  const aliases = new Map<string, string>();
+  const retiredExercises = new Map<string, string>();
   const practiceRefs: { file: string; path: string; key: string }[] = [];
   const refsToCheck: { file: string; path: string; id: string }[] = [];
 
@@ -135,8 +141,15 @@ export function loadPacks(files: ContentFiles, exerciseTypes: Record<string, Exe
       if (entries.has(id)) issues.push({ file, path: `entries.${i}.id`, message: `zduplikowane id wpisu "${id}"` });
       const confusables = (e.confusables ?? []).map((c) => globalId(pack.id, c));
       confusables.forEach((c, j) => refsToCheck.push({ file, path: `entries.${i}.confusables.${j}`, id: c }));
-      entries.set(id, { ...e, id, packId: pack.id, unitId: key, confusables });
+      const replacedBy = e.replacedBy && globalId(pack.id, e.replacedBy);
+      if (replacedBy) {
+        if (!e.deprecated) issues.push({ file, path: `entries.${i}.replacedBy`, message: 'replacedBy tylko przy wpisie deprecated' });
+        aliases.set(id, replacedBy);
+      }
+      entries.set(id, { ...e, id, packId: pack.id, unitId: key, confusables, replacedBy });
     });
+
+    for (const [type, ids] of Object.entries(raw.retiredExercises ?? {})) for (const id of ids) retiredExercises.set(`${pack.id}/${id}`, type);
 
     raw.exercises.forEach((ex, i) => {
       const id = `${pack.id}/${ex.id}`;
@@ -180,6 +193,14 @@ export function loadPacks(files: ContentFiles, exerciseTypes: Record<string, Exe
     if (!entries.has(ref.id)) issues.push({ file: ref.file, path: ref.path, message: `odwołanie do nieistniejącego wpisu "${ref.id}"` });
   }
 
+  for (const [from, to] of aliases) {
+    const target = entries.get(to);
+    if (!target || target.deprecated) issues.push({ file: `/content/${entries.get(from)!.packId}`, path: from, message: `replacedBy musi wskazywać aktywny wpis, a nie "${to}"` });
+  }
+  for (const id of retiredExercises.keys()) {
+    if (exercises.has(id)) issues.push({ file: `/content/${id.split('/')[0]}`, path: id, message: 'ćwiczenie jest jednocześnie aktywne i w retiredExercises' });
+  }
+
   for (const ref of practiceRefs) {
     if (!units.has(ref.key)) issues.push({ file: ref.file, path: ref.path, message: `odwołanie do nieistniejącej jednostki "${ref.key}"` });
   }
@@ -206,7 +227,7 @@ export function loadPacks(files: ContentFiles, exerciseTypes: Record<string, Exe
   }
 
   generateExercises(entries, exercises, exerciseTypes);
-  return { packs, entries, exercises, units, sheets, issues };
+  return { packs, entries, exercises, units, sheets, aliases, retiredExercises, issues };
 }
 
 /**

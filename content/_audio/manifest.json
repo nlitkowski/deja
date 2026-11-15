@@ -739,6 +739,11 @@
   "voice": "fr-FR-VivienneMultilingualNeural",
   "bytes": 11232
  },
+ "0b7eab5f5cdd4fd99771efc4645b99ee": {
+  "text": "En février, il fait froid à Varsovie.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 20304
+ },
  "0b8a88bfa168c6b21954a4ad10eb402c": {
   "text": "J'apprends le piano depuis deux ans et je continue.",
   "voice": "fr-FR-RemyMultilingualNeural",
@@ -1738,6 +1743,11 @@
   "text": "un cours collectif",
   "voice": "fr-FR-VivienneMultilingualNeural",
   "bytes": 11232
+ },
+ "1c16aa525624595877294c4c13ac324c": {
+  "text": "ça va ? – ça va bien ; vous allez bien ?",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 21888
  },
  "1c2660e111459451754dbc3f58300708": {
   "text": "Cette exposition de peintures est ouverte jusqu'à dimanche.",
@@ -4979,6 +4989,11 @@
   "voice": "fr-FR-VivienneMultilingualNeural",
   "bytes": 5184
  },
+ "4d0dd3b8de7bc439a933d8218f67b675": {
+  "text": "tu, vous",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
  "4d41b807f650e08133ce9522eed8e32c": {
   "text": "à + le = au",
   "voice": "fr-FR-RemyMultilingualNeural",
@@ -5383,6 +5398,11 @@
   "text": "J'aime beaucoup le théâtre.",
   "voice": "fr-FR-BrigitteNeural",
   "bytes": 13824
+ },
+ "5358721fb3364aa26089c776c9bc6d15": {
+  "text": "En octobre, les jours sont plus courts.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 18720
  },
  "535a4388d9e1bc8591be7830eb48ae1e": {
   "text": "Le plombier vient demain pour réparer la douche.",
@@ -5899,6 +5919,11 @@
   "voice": "fr-FR-DeniseNeural",
   "bytes": 11232
  },
+ "5c454c9101b9fc13b433cbead1a90b89": {
+  "text": "bonjour, bonsoir, salut, madame, monsieur",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 22896
+ },
  "5c60db276a37a8880b4bf33eb513d4b5": {
   "text": "un tapis",
   "voice": "fr-FR-VivienneMultilingualNeural",
@@ -6103,6 +6128,11 @@
   "text": "le mari, la femme",
   "voice": "fr-FR-AlainNeural",
   "bytes": 14832
+ },
+ "5f07b7e4ac9eb75047701dfb73c4e6eb": {
+  "text": "janvier, février, mars, avril",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 23472
  },
  "5f3f70572179b179603e961bb18aa08e": {
   "text": "entre … et …",
@@ -7314,6 +7344,11 @@
   "voice": "fr-FR-RemyMultilingualNeural",
   "bytes": 14544
  },
+ "71d8be80c38d68b363658974d5a23f5b": {
+  "text": "sâil vous plaît, merci, pardon, excusez-moi",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 25488
+ },
  "71f03bb19cecb5213a023a37ea20e392": {
   "text": "à demain",
   "voice": "fr-FR-DeniseNeural",
@@ -8214,6 +8249,11 @@
   "voice": "fr-FR-RemyMultilingualNeural",
   "bytes": 14544
  },
+ "804ea7249da9a9fab083bbc6371beda6": {
+  "text": "lâalphabet : épeler",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 15984
+ },
  "805a97cf17a96d71d3d4ffae8709b8fa": {
   "text": "Je me rappelle très bien ce jour-là.",
   "voice": "fr-FR-RemyMultilingualNeural",
@@ -8613,6 +8653,11 @@
   "text": "Pour une omelette, il faut trois œufs.",
   "voice": "fr-FR-VivienneMultilingualNeural",
   "bytes": 12240
+ },
+ "86780d63e1a40be5704ea8fa0dd6ff66": {
+  "text": "lundi, mardi, mercredi, jeudi, vendredi",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 26352
  },
  "867b58425119d88812cf26afbed5e000": {
   "text": "un yaourt",
@@ -10369,6 +10414,11 @@
   "voice": "fr-FR-AlainNeural",
   "bytes": 22176
  },
+ "a09e01dd71084c3057521f7055c1852c": {
+  "text": "septembre, octobre, novembre, décembre",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 24192
+ },
  "a0b922e3317c1a09d666af57d4fb8c65": {
   "text": "le frère, la sœur",
   "voice": "fr-FR-AlainNeural",
@@ -10443,6 +10493,11 @@
   "text": "C'est une meilleure solution.",
   "voice": "fr-FR-AlainNeural",
   "bytes": 13536
+ },
+ "a21c2d6d7f436d7424ec031cfd3ede3d": {
+  "text": "onze, douze, treize… seize, dix-sept, dix-huit, dix-neuf",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 33120
  },
  "a227763cb911da32a7133b1d079239b0": {
   "text": "Ma chambre est au premier étage.",
@@ -11304,6 +11359,11 @@
   "voice": "fr-FR-BrigitteNeural",
   "bytes": 15552
  },
+ "af03f39ae567af04c23c9ceb40d2a7a2": {
+  "text": "mai, juin, juillet, août",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 15696
+ },
  "af1205f03dda481329af1d84f6aa5c3a": {
   "text": "Nous avons vu un bel appartement.",
   "voice": "fr-FR-HenriNeural",
@@ -12103,6 +12163,11 @@
   "text": "un lapin",
   "voice": "fr-FR-DeniseNeural",
   "bytes": 11232
+ },
+ "baa162a3bf64142e7887d27e2164797f": {
+  "text": "aujourdâhui, demain ; On est quel jour ?",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 20736
  },
  "bab8007532da5ace663cc45a49fbb302": {
   "text": "On peut se retrouver devant le théâtre.",
@@ -13389,6 +13454,11 @@
   "voice": "fr-FR-HenriNeural",
   "bytes": 11232
  },
+ "cce2d5b18c86b9463cfe72aebe55ef95": {
+  "text": "au revoir, à bientôt, à demain, à plus",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 25344
+ },
  "ccf2f02cf2f2c1245ce4572bcf8a825e": {
   "text": "ils se sont mariés en mai",
   "voice": "fr-FR-RemyMultilingualNeural",
@@ -13453,6 +13523,11 @@
   "text": "Nous ne connaissons pas encore la ville.",
   "voice": "fr-FR-AlainNeural",
   "bytes": 16128
+ },
+ "cde3fcbf8f6f508fe575705dc8742387": {
+  "text": "samedi, dimanche",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 14112
  },
  "cdea51e62d37c99bce8a6aaaf8443bf9": {
   "text": "Le polonais est une langue difficile.",

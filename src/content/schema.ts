@@ -21,6 +21,8 @@ export const EntrySchema = z.object({
   confusables: z.array(entryRef).optional(),
   tags: z.array(z.string()).optional(),
   deprecated: z.boolean().optional(),
+  /** Merged into this entry: past answers count toward it (only on deprecated entries). */
+  replacedBy: entryRef.optional(),
   /** Recording of `fr`; `text` when it should be read differently, e.g. a letter's name: `y` → "i grec". */
   audio: AudioSchema.optional(),
 });
@@ -51,6 +53,8 @@ export const UnitSchema = z.object({
   boss: BossConfigSchema.optional(),
   /** Never locks the unit after it and does not count toward the pack's completion (an introduction added later). */
   optional: z.boolean().optional(),
+  /** Removed exercises by type, so past answers to them keep their XP. */
+  retiredExercises: z.record(z.string(), z.array(localId)).optional(),
 });
 
 export const PackAchievementSchema = z.object({
@@ -87,11 +91,12 @@ export type RawUnit = z.infer<typeof UnitSchema>;
 export type PackManifest = z.infer<typeof PackSchema>;
 
 /** Entry after loading: ids are global (`<pack>/<entry>`). */
-export type Entry = Omit<RawEntry, 'id' | 'confusables'> & {
+export type Entry = Omit<RawEntry, 'id' | 'confusables' | 'replacedBy'> & {
   id: string;
   packId: string;
   unitId: string;
   confusables: string[];
+  replacedBy?: string;
 };
 
 export type Exercise = Omit<RawExercise, 'id' | 'entryIds'> & {
@@ -103,7 +108,7 @@ export type Exercise = Omit<RawExercise, 'id' | 'entryIds'> & {
   generated?: boolean;
 };
 
-export type Unit = Omit<RawUnit, 'entries' | 'exercises' | 'boss'> & {
+export type Unit = Omit<RawUnit, 'entries' | 'exercises' | 'boss' | 'retiredExercises'> & {
   key: string;
   packId: string;
   entryIds: string[];
