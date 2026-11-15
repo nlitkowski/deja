@@ -33,6 +33,8 @@ export interface ReviewEvent extends EventBase {
   production?: boolean;
   /** Card the answer trains; omitted = written (every event from before listening and speaking). */
   skill?: Skill;
+  /** Listening: times the recording was played again (slower included). */
+  replays?: number;
 }
 
 export const reviewSkill = (event: ReviewEvent): Skill => event.skill ?? 'written';

@@ -1,3 +1,4 @@
+import type { Audio } from '../content/audio';
 import { GAP, type GapFillData } from './gap-fill';
 import type { GenCtx } from './types';
 
@@ -9,6 +10,7 @@ export interface GapSentence {
   answers: string[];
   pl?: string;
   clue?: string;
+  audio?: Audio;
 }
 
 export function gapSentences(entryId: string, ctx: GenCtx): GapSentence[] {
@@ -17,7 +19,7 @@ export function gapSentences(entryId: string, ctx: GenCtx): GapSentence[] {
     .filter((ex) => ex.type === 'gap-fill' && ex.entryIds.length === 1)
     .map((ex) => {
       const { sentence, answers, pl, clue } = ex.data as GapFillData;
-      return { exerciseId: ex.id, entryId, sentence, answers, pl, clue };
+      return { exerciseId: ex.id, entryId, sentence, answers, pl, clue, audio: ex.audio };
     });
 }
 

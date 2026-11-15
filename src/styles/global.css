@@ -729,6 +729,83 @@ button {
   margin: 0 0 0.6em;
 }
 
+/* Listening exercises */
+
+.listen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75em;
+  margin: 0 0 0.75em;
+}
+
+.listen p {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.listen-button {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+  border: var(--border-w) solid var(--accent);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
+  font-size: 1.5rem;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.listen-button.playing {
+  animation: play-pulse 1s ease-in-out infinite;
+}
+
+.listen-button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.choices:has(.choice-row) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.choice-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  min-width: 0;
+}
+
+.choice-row .choice {
+  flex: 1;
+}
+
+.dictation-diff .word.ok {
+  color: var(--success);
+}
+
+.dictation-diff .word.accent ins {
+  color: var(--highlight);
+}
+
+.dictation-diff .word.wrong ins,
+.dictation-diff .word.missing {
+  color: var(--danger);
+  text-decoration: underline wavy;
+}
+
+.dictation-diff del {
+  color: var(--muted);
+}
+
+.dictation-diff ins {
+  text-decoration: none;
+}
+
 .audio-download {
   display: flex;
   flex-wrap: wrap;

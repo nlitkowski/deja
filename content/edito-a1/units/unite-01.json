@@ -203,7 +203,9 @@
     { "id": "u01-numero-3", "type": "gap-fill", "entryIds": ["u01-numero"], "data": { "sentence": "Tu me donnes ton ___ de téléphone ? Je t'appelle ce soir.", "answers": ["numéro"], "pl": "Dasz mi swój numer telefonu? Zadzwonię do ciebie wieczorem." } },
     { "id": "u01-date-naissance-3", "type": "gap-fill", "entryIds": ["u01-date-naissance"], "data": { "sentence": "Votre ___ de naissance, s'il vous plaît ? – Le 12 juin 2001.", "answers": ["date"], "pl": "Pana data urodzenia, proszę? – 12 czerwca 2001." } },
     { "id": "u01-lecture-3", "type": "gap-fill", "entryIds": ["u01-lecture"], "data": { "sentence": "Mes loisirs ? La ___ et le cinéma : j'aime beaucoup les livres.", "answers": ["lecture"], "pl": "Moje zainteresowania? Czytanie i kino: bardzo lubię książki." } },
-    { "id": "u01-voyage-3", "type": "gap-fill", "entryIds": ["u01-voyage"], "data": { "sentence": "En juillet, je fais un ___ en Italie.", "answers": ["voyage"], "pl": "W lipcu jadę w podróż do Włoch.", "clue": "(on part visiter un pays)" } }
+    { "id": "u01-voyage-3", "type": "gap-fill", "entryIds": ["u01-voyage"], "data": { "sentence": "En juillet, je fais un ___ en Italie.", "answers": ["voyage"], "pl": "W lipcu jadę w podróż do Włoch.", "clue": "(on part visiter un pays)" } },
+    { "id": "mp-le-les", "type": "paires-minimales", "entryIds": ["u01-articles-definis"], "data": { "pair": ["Je prends le livre.", "Je prends les livres."] } },
+    { "id": "mp-sont-ont", "type": "paires-minimales", "entryIds": ["u01-etre", "u01-avoir"], "data": { "pair": ["Ils sont.", "Ils ont."] } }
   ],
   "boss": {
     "groups": [["u01-etre", "u01-avoir"], ["u01-sappeler"], ["u01-nationalites"], ["u01-quel"]],

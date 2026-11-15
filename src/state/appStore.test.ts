@@ -70,6 +70,14 @@ describe('app store', () => {
     expect(store.getState().progress.cards['p/a#listening']).toBeDefined();
   });
 
+  it('stores replays only when there were some', async () => {
+    const store = createAppStore({ progressStore: memoryStore(), kv: memoryKv() });
+    await store.getState().init();
+    const answer = { exerciseId: 'p/x', entryIds: ['p/a'], early: false, skill: 'listening' as const };
+    expect(store.getState().recordAnswer({ ...answer, result: { ...ok, replays: 0 } })).not.toHaveProperty('replays');
+    expect(store.getState().recordAnswer({ ...answer, result: { ...ok, replays: 2 } }).replays).toBe(2);
+  });
+
   it('rebuilds the same state from the stored log on the next start', async () => {
     const progressStore = memoryStore();
     const kv = memoryKv();

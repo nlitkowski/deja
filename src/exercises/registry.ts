@@ -2,12 +2,20 @@ import type { HelpLang } from '../content/localized';
 import type { Skill } from '../lib/srs';
 import { confusableDuel } from './confusable-duel';
 import { DuelView } from './confusable-duel/View';
+import { dictee } from './dictee';
+import { DicteeView } from './dictee/View';
+import { dicteeTrous } from './dictee-trous';
+import { DicteeTrousView } from './dictee-trous/View';
+import { ecouteSens } from './ecoute-sens';
+import { EcouteSensView } from './ecoute-sens/View';
 import { gapFill } from './gap-fill';
 import { GapFillView } from './gap-fill/View';
 import { matchPairs } from './match-pairs';
 import { MatchPairsView } from './match-pairs/View';
 import { multipleChoice } from './multiple-choice';
 import { MultipleChoiceView } from './multiple-choice/View';
+import { pairesMinimales } from './paires-minimales';
+import { PairesMinimalesView } from './paires-minimales/View';
 import { translatePlFr } from './translate-pl-fr';
 import { TranslateView } from './translate-pl-fr/View';
 import type { ExerciseType } from './types';
@@ -19,6 +27,10 @@ const types: ExerciseType<any>[] = [
   { ...multipleChoice, View: MultipleChoiceView },
   { ...confusableDuel, View: DuelView },
   { ...matchPairs, View: MatchPairsView },
+  { ...dicteeTrous, View: DicteeTrousView },
+  { ...dictee, View: DicteeView },
+  { ...ecouteSens, View: EcouteSensView },
+  { ...pairesMinimales, View: PairesMinimalesView },
 ];
 
 export const exerciseTypes: ReadonlyMap<string, ExerciseType<unknown>> = new Map(types.map((t) => [t.id, t]));

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { checkAnswer } from '../lib/answer';
+import { checkAnswer, type AnswerCheck } from '../lib/answer';
 import type { AnswerResult, ExerciseContext } from '../exercises/types';
 import { ui } from '../i18n/ui';
 import { AccentBar } from './AccentBar';
@@ -11,11 +11,13 @@ interface Props {
   ctx: ExerciseContext;
   locked: boolean;
   onAnswer: (r: AnswerResult) => void;
+  /** Replaces the usual comparison with `answers` (a dictation compares word by word). */
+  check?: (given: string) => AnswerCheck;
   /** Renders the prompt; receives the current input so a gap can show it inline. */
   prompt: (value: string) => ReactNode;
 }
 
-export function TypingCard({ answers, hint, ctx, locked, onAnswer, prompt }: Props) {
+export function TypingCard({ answers, hint, ctx, locked, onAnswer, check: customCheck, prompt }: Props) {
   const [value, setValue] = useState('');
   const [hintShown, setHintShown] = useState(false);
   const started = useState(() => performance.now())[0];
@@ -27,7 +29,7 @@ export function TypingCard({ answers, hint, ctx, locked, onAnswer, prompt }: Pro
 
   function submit(given: string) {
     if (locked) return;
-    const check = checkAnswer(given, answers, ctx.accentPairs);
+    const check = customCheck ? customCheck(given) : checkAnswer(given, answers, ctx.accentPairs);
     onAnswer({
       correct: check.correct,
       nearMiss: check.nearMiss,

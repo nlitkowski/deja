@@ -33,6 +33,7 @@ export const EventSchema = z.discriminatedUnion('type', [
     comboBefore: z.number().optional(),
     production: z.boolean().optional(),
     skill: z.enum(['written', 'listening', 'speaking']).optional(),
+    replays: z.number().int().nonnegative().optional(),
   }),
   z.object({
     ...base,

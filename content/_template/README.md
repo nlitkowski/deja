@@ -22,6 +22,7 @@ Skopiuj ten katalog do `content/<id-pakietu>/` (bez podkreślnika na początku: 
 - `exercises`: `{ id, type, entryIds, data }`. Każdy wpis potrzebuje co najmniej jednego ćwiczenia produkcyjnego:
   - `gap-fill`: `{ sentence: "… ___ …", answers: [...], hint?, pl?, clue? }` (dokładnie jedna luka `___`)
   - `translate-pl-fr`: `{ pl, answers: [...], hint? }` (tylko w trybie pomocy po polsku)
+  - `paires-minimales` (słuchanie, opcjonalnie): `{ pair: ["Le chat est sur la table.", "Le chat est sous la table."] }`. Aplikacja odtwarza jedną stronę, a użytkownik wybiera zapis. Strony muszą brzmieć inaczej: homofony (`ou` / `où`, `et` / `est`, `ces` / `ses`, `il parle` / `ils parlent`) blokują walidację. Krótkie zdanie brzmi w syntezie lepiej niż samo słowo.
 - `boss` (opcjonalnie): `{ groups, questions, lives, secondsPerQuestion }`. `groups` to listy id mylonych wpisów (np. `[["prep-dans", "prep-en"]]`); grupa z jednym wpisem daje tylko pytania z wpisywaniem. Bez pola boss powstaje automatycznie z `confusables` jednostki.
 
 ## `sheets/<id>.json` (fiszki do czytania, opcjonalnie)
@@ -39,7 +40,7 @@ Wpisz id w `"sheets": [...]` w `pack.json`. Fiszka: `{ id, label?, title, icon, 
 
 ## Nagrania (`audio`)
 
-Każdy francuski tekst jest nagrywany syntezą mowy przy buildzie (`npm run tts`, opis w `scripts/tts.ts`): `fr` wpisu i jego przykładów, przykłady i słówka z fiszek, pełne zdania z tabel w fiszkach (od wielkiej litery, zakończone `.`, `?` lub `!`), zdanie z `gap-fill` z luką wypełnioną pierwszą odpowiedzią i pierwsza odpowiedź z `translate-pl-fr`. Nawiasy (`(avoir)`, `(fam.)`) nie są czytane, a `a / b` czyta się jak wyliczenie.
+Każdy francuski tekst jest nagrywany syntezą mowy przy buildzie (`npm run tts`, opis w `scripts/tts.ts`): `fr` wpisu i jego przykładów, przykłady i słówka z fiszek, pełne zdania z tabel w fiszkach (od wielkiej litery, zakończone `.`, `?` lub `!`), zdanie z `gap-fill` z luką wypełnioną pierwszą odpowiedzią, pierwsza odpowiedź z `translate-pl-fr` i obie strony `paires-minimales`. Z nagranych zdań `gap-fill` i przykładów powstają automatycznie ćwiczenia ze słuchu (`dictee-trous`, `dictee` do 8 słów, `ecoute-sens`), z pominięciem tych z `skip`, `text` albo `dictation: false` i dyktand z cyframi. Nawiasy (`(avoir)`, `(fam.)`) nie są czytane, a `a / b` czyta się jak wyliczenie.
 
 Opcjonalne pole `audio` we wpisie, w przykładzie, w ćwiczeniu (obok `data`, nie w nim) i w pozycji bloku `examples` / `words`:
 

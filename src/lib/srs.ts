@@ -36,6 +36,8 @@ export interface AnswerResult {
   grade?: Grade;
   given?: string;
   expected?: string;
+  /** Listening: how many times the recording was played again. Recorded, never scored. */
+  replays?: number;
   /**
    * Exercises that ask about several entries (duel, pairs) report each answer separately;
    * every part becomes its own review event, for its own entries.

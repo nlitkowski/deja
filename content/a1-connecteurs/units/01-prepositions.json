@@ -364,6 +364,7 @@
     { "id": "pendant-depuis-2", "type": "gap-fill", "entryIds": ["prep-pendant-depuis"], "data": { "sentence": "J'habite ici ___ 2020.", "answers": ["depuis"], "pl": "Mieszkam tu od 2020 roku.", "clue": "(je suis arrivé en 2020 et j'habite toujours ici)" } },
     { "id": "pendant-depuis-3", "type": "gap-fill", "entryIds": ["prep-pendant-depuis"], "data": { "sentence": "Il travaille chez Renault ___ 2019.", "answers": ["depuis"], "pl": "Pracuje w Renault od 2019 roku (i nadal tam pracuje).", "clue": "(il travaille toujours là-bas)" } },
     { "id": "pendant-depuis-4", "type": "gap-fill", "entryIds": ["prep-pendant-depuis"], "data": { "sentence": "J'apprends le français ___ trois mois.", "answers": ["depuis"], "pl": "Uczę się francuskiego od trzech miesięcy.", "clue": "(j'ai commencé il y a trois mois)" } },
-    { "id": "pendant-depuis-5", "type": "gap-fill", "entryIds": ["prep-pendant-depuis"], "data": { "sentence": "Hier, j'ai regardé la télé ___ une heure.", "answers": ["pendant"], "pl": "Wczoraj oglądałem telewizję przez godzinę.", "clue": "(durée terminée)" } }
+    { "id": "pendant-depuis-5", "type": "gap-fill", "entryIds": ["prep-pendant-depuis"], "data": { "sentence": "Hier, j'ai regardé la télé ___ une heure.", "answers": ["pendant"], "pl": "Wczoraj oglądałem telewizję przez godzinę.", "clue": "(durée terminée)" } },
+    { "id": "mp-sur-sous", "type": "paires-minimales", "entryIds": ["prep-sur", "prep-sous"], "data": { "pair": ["Le chat est sur la table.", "Le chat est sous la table."] } }
   ]
 }

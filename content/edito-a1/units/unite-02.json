@@ -248,7 +248,9 @@
     { "id": "u02-tante-3", "type": "gap-fill", "entryIds": ["u02-tante"], "data": { "sentence": "Ma ___ Sophie est la femme de mon oncle.", "answers": ["tante"], "pl": "Moja ciocia Sophie jest żoną mojego wujka." } },
     { "id": "u02-grands-parents-3", "type": "gap-fill", "entryIds": ["u02-grands-parents"], "data": { "sentence": "Mes ___ ont quatre petits-enfants.", "answers": ["grands-parents"], "pl": "Moi dziadkowie mają czworo wnucząt.", "clue": "(le père et la mère de mes parents)" } },
     { "id": "u02-appartement-3", "type": "gap-fill", "entryIds": ["u02-appartement"], "data": { "sentence": "Notre ___ a trois pièces et un balcon.", "answers": ["appartement"], "pl": "Nasze mieszkanie ma trzy pokoje i balkon.", "clue": "(un logement dans un immeuble)" } },
-    { "id": "u02-voisin-3", "type": "gap-fill", "entryIds": ["u02-voisin"], "data": { "sentence": "Ma ___ habite à côté de chez moi, elle est très gentille.", "answers": ["voisine"], "pl": "Moja sąsiadka mieszka obok mnie, jest bardzo miła.", "clue": "(une femme de mon immeuble)" } }
+    { "id": "u02-voisin-3", "type": "gap-fill", "entryIds": ["u02-voisin"], "data": { "sentence": "Ma ___ habite à côté de chez moi, elle est très gentille.", "answers": ["voisine"], "pl": "Moja sąsiadka mieszka obok mnie, jest bardzo miła.", "clue": "(une femme de mon immeuble)" } },
+    { "id": "mp-son-ses", "type": "paires-minimales", "entryIds": ["u02-possessifs-mon"], "data": { "pair": ["Je cherche son livre.", "Je cherche ses livres."] } },
+    { "id": "mp-mon-mes", "type": "paires-minimales", "entryIds": ["u02-possessifs-mon"], "data": { "pair": ["Voici mon ami.", "Voici mes amis."] } }
   ],
   "boss": {
     "groups": [["u02-verbes-er"], ["u02-un-ou-le"], ["u02-possessifs-mon", "u02-possessifs-notre"], ["u02-professions-feminin"]],

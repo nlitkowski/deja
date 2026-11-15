@@ -128,6 +128,8 @@
     { "id": "pays-6", "type": "gap-fill", "entryIds": ["contr-pays"], "data": { "sentence": "Mon ami vient ___ Japon.", "answers": ["du"], "pl": "Mój przyjaciel pochodzi z Japonii." } },
     { "id": "pays-7", "type": "gap-fill", "entryIds": ["contr-pays"], "data": { "sentence": "Ils habitent ___ États-Unis.", "answers": ["aux"], "pl": "Oni mieszkają w Stanach Zjednoczonych." } },
     { "id": "pays-8", "type": "gap-fill", "entryIds": ["contr-pays"], "data": { "sentence": "Je vais ___ Espagne en juillet.", "answers": ["en"], "pl": "W lipcu jadę do Hiszpanii." } },
-    { "id": "pays-9", "type": "translate-pl-fr", "entryIds": ["contr-pays"], "data": { "pl": "w Portugalii", "answers": ["au Portugal"] } }
+    { "id": "pays-9", "type": "translate-pl-fr", "entryIds": ["contr-pays"], "data": { "pl": "w Portugalii", "answers": ["au Portugal"] } },
+    { "id": "mp-du-deux", "type": "paires-minimales", "entryIds": ["contr-du-des"], "data": { "pair": ["Je voudrais du pain.", "Je voudrais deux pains."] } },
+    { "id": "mp-du-des", "type": "paires-minimales", "entryIds": ["contr-du-des"], "data": { "pair": ["Il parle du professeur.", "Il parle des professeurs."] } }
   ]
 }

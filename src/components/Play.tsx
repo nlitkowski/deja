@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { play, stop, usePlayer } from '../audio/player';
-import { audioTextOf } from '../audio/texts';
+import { audioTextOf } from '../audio/spoken';
 import type { Audio } from '../content/audio';
 import { ui } from '../i18n/ui';
 import { Icon } from './Icon';

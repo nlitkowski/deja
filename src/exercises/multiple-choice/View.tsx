@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { ui } from '../../i18n/ui';
+import { useState } from 'react';
+import { ChoiceList } from '../../components/ChoiceList';
 import { shuffle } from '../../lib/session';
 import { GAP } from '../gap-fill';
 import type { ViewProps } from '../types';
@@ -25,16 +25,6 @@ export function MultipleChoiceView({ data, ctx, locked, onAnswer }: ViewProps<Mu
     });
   }
 
-  // Keys 1–4 pick an option, so a keyboard user never has to reach for the mouse.
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      const option = options[Number(e.key) - 1];
-      if (option && !e.altKey && !e.ctrlKey && !e.metaKey) choose(option);
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  });
-
   return (
     <div className="choice-card">
       <p className="fr-sentence" lang="fr">
@@ -47,19 +37,7 @@ export function MultipleChoiceView({ data, ctx, locked, onAnswer }: ViewProps<Mu
           {aid}
         </p>
       )}
-      <div className="choices" role="group" aria-label={ui.chooseAnswer}>
-        {options.map((option, i) => {
-          const state = !chosen ? '' : option === data.answer ? ' right' : option === chosen ? ' wrong' : '';
-          return (
-            <button key={option} className={`choice${state}`} lang="fr" disabled={locked || !!chosen} onClick={() => choose(option)}>
-              <span className="choice-key" aria-hidden>
-                {i + 1}
-              </span>
-              {option}
-            </button>
-          );
-        })}
-      </div>
+      <ChoiceList options={options} answer={data.answer} chosen={chosen} locked={locked} lang="fr" onChoose={choose} />
     </div>
   );
 }

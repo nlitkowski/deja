@@ -244,7 +244,9 @@
     { "id": "u05-chaussures-3", "type": "gap-fill", "entryIds": ["u05-chaussures"], "data": { "sentence": "J'achète des ___ pour courir.", "answers": ["chaussures", "baskets"], "pl": "Kupuję buty do biegania.", "clue": "(on les met aux pieds)" } },
     { "id": "u05-echarpe-3", "type": "gap-fill", "entryIds": ["u05-echarpe"], "data": { "sentence": "En hiver, je porte une ___ autour du cou.", "answers": ["écharpe"], "pl": "Zimą noszę szalik na szyi.", "clue": "(accessoire chaud, souvent en laine)" } },
     { "id": "u05-parapluie-3", "type": "gap-fill", "entryIds": ["u05-parapluie"], "data": { "sentence": "Le ciel est gris : n'oublie pas ton ___ !", "answers": ["parapluie"], "pl": "Niebo jest szare: nie zapomnij parasola!", "clue": "(il protège de la pluie)" } },
-    { "id": "u05-portefeuille-3", "type": "gap-fill", "entryIds": ["u05-portefeuille"], "data": { "sentence": "Je ne trouve pas mon ___ : mes cartes sont dedans !", "answers": ["portefeuille"], "pl": "Nie mogę znaleźć portfela: są w nim moje karty!", "clue": "(petit objet pour l'argent et les cartes)" } }
+    { "id": "u05-portefeuille-3", "type": "gap-fill", "entryIds": ["u05-portefeuille"], "data": { "sentence": "Je ne trouve pas mon ___ : mes cartes sont dedans !", "answers": ["portefeuille"], "pl": "Nie mogę znaleźć portfela: są w nim moje karty!", "clue": "(petit objet pour l'argent et les cartes)" } },
+    { "id": "mp-ce-ces", "type": "paires-minimales", "entryIds": ["u05-demonstratif"], "data": { "pair": ["Je voudrais ce pull.", "Je voudrais ces pulls."] } },
+    { "id": "mp-a-va", "type": "paires-minimales", "entryIds": ["u05-futur-proche"], "data": { "pair": ["Il a mangé.", "Il va manger."] } }
   ],
   "boss": {
     "groups": [["u05-adj-feminin", "u05-beau-nouveau-vieux"], ["u05-demonstratif"], ["u05-futur-proche"], ["u05-venir"]],

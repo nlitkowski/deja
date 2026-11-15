@@ -208,7 +208,8 @@
     { "id": "u03-fromage-3", "type": "gap-fill", "entryIds": ["u03-fromage"], "data": { "sentence": "Le brie et le camembert sont des ___ français.", "answers": ["fromages"], "pl": "Brie i camembert to francuskie sery." } },
     { "id": "u03-addition-3", "type": "gap-fill", "entryIds": ["u03-addition"], "data": { "sentence": "Le repas est fini : le serveur apporte l'___.", "answers": ["addition"], "pl": "Posiłek skończony: kelner przynosi rachunek.", "clue": "(le prix à payer)" } },
     { "id": "u03-assiette-3", "type": "gap-fill", "entryIds": ["u03-assiette"], "data": { "sentence": "Mets les ___ et les verres sur la table, s'il te plaît.", "answers": ["assiettes"], "pl": "Połóż talerze i szklanki na stole, proszę.", "clue": "(on y met la nourriture)" } },
-    { "id": "u03-fourchette-3", "type": "gap-fill", "entryIds": ["u03-fourchette"], "data": { "sentence": "Je n'ai pas de ___ pour manger mes pâtes !", "answers": ["fourchette"], "pl": "Nie mam widelca, żeby zjeść makaron!", "clue": "(elle va avec le couteau)" } }
+    { "id": "u03-fourchette-3", "type": "gap-fill", "entryIds": ["u03-fourchette"], "data": { "sentence": "Je n'ai pas de ___ pour manger mes pâtes !", "answers": ["fourchette"], "pl": "Nie mam widelca, żeby zjeść makaron!", "clue": "(elle va avec le couteau)" } },
+    { "id": "mp-du-deux", "type": "paires-minimales", "entryIds": ["u03-partitifs"], "data": { "pair": ["Je prends du café.", "Je prends deux cafés."] } }
   ],
   "boss": {
     "groups": [["u03-partitifs", "u03-quantite"], ["u03-verbes-ir"], ["u03-acheter-payer-manger"], ["u03-aller-faire"]],

@@ -31,7 +31,7 @@ export function stripAccents(input: string): string {
 }
 
 const tokens = (s: string) => s.split(/[\s']+/).filter(Boolean);
-const pairKey = (a: string, b: string) => (a < b ? `${a}|${b}` : `${b}|${a}`);
+export const pairKey = (a: string, b: string) => (a < b ? `${a}|${b}` : `${b}|${a}`);
 
 export function buildPairSet(pairs: AccentPairs): Set<string> {
   return new Set(pairs.map(([a, b]) => pairKey(normalize(a), normalize(b))));

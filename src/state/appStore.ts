@@ -139,6 +139,7 @@ export function createAppStore({ progressStore, kv }: Deps) {
           ...(production !== undefined ? { production } : {}),
           // Written stays implicit, so its events look exactly like those from before skills existed.
           ...(skill && skill !== 'written' ? { skill } : {}),
+          ...(result.replays ? { replays: result.replays } : {}),
         };
         return record(event, 'answer');
       },

@@ -159,6 +159,11 @@
   "voice": "fr-FR-DeniseNeural",
   "bytes": 17568
  },
+ "0261350d1e887f235174fbc690124ee9": {
+  "text": "Le chat est sous la table.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 14112
+ },
  "026d158f469f862273bc43b3eab0119f": {
   "text": "un message",
   "voice": "fr-FR-VivienneMultilingualNeural",
@@ -614,6 +619,16 @@
   "voice": "fr-FR-VivienneMultilingualNeural",
   "bytes": 20160
  },
+ "089419b648c69e232e7259d32b7bf1d6": {
+  "text": "Je cherche ses livres.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 12672
+ },
+ "08a9e7037f992631af2b5ae4cfbeff0d": {
+  "text": "Je voudrais deux pains.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
+ },
  "08bca99789c5a3b45b79f8db64457c79": {
   "text": "chaque matin, il met une heure à se coiffer.",
   "voice": "fr-FR-DeniseNeural",
@@ -772,6 +787,11 @@
  "0c487f18a545f441eb238e5adaff5f51": {
   "text": "une tante",
   "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
+ },
+ "0c98970a417bb723a4d57a7d60f015df": {
+  "text": "Je prends deux cafés.",
+  "voice": "fr-FR-RemyMultilingualNeural",
   "bytes": 11232
  },
  "0cd013860e4f69900e60a50554cbd553": {
@@ -1104,6 +1124,11 @@
   "voice": "fr-FR-RemyMultilingualNeural",
   "bytes": 17712
  },
+ "124d6ce3a40d555a96433e5eb85f74b1": {
+  "text": "Ils ont.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11232
+ },
  "125187fda019081c73e642d4d1fddfd5": {
   "text": "Qu'est-ce que tu choisis comme dessert ?",
   "voice": "fr-FR-HenriNeural",
@@ -1318,6 +1343,11 @@
   "text": "une barbe, une moustache",
   "voice": "fr-FR-AlainNeural",
   "bytes": 15840
+ },
+ "15e00b3458b1205cb927ace5d8bf3eb2": {
+  "text": "Ils sont.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
  },
  "15e1e2433c5bb7b4636f3203ba961548": {
   "text": "ne pas marcher",
@@ -1608,6 +1638,11 @@
   "text": "Je te présente ma sœur.",
   "voice": "fr-FR-DeniseNeural",
   "bytes": 14976
+ },
+ "1a337bd433091c3ce680d34a3b7738c6": {
+  "text": "Il a mangé.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 11232
  },
  "1a41355780470526539df5ff1e255f56": {
   "text": "Ma sœur est rentrée de vacances hier soir.",
@@ -2311,6 +2346,11 @@
  },
  "24ac7eed1c8277b3498a93b4704e17a3": {
   "text": "J'ai beaucoup de travail.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
+ "24aea2327d2114c65338460704703dab": {
+  "text": "Voici mon ami.",
   "voice": "fr-FR-VivienneMultilingualNeural",
   "bytes": 11232
  },
@@ -5834,6 +5874,11 @@
   "voice": "fr-FR-BrigitteNeural",
   "bytes": 13104
  },
+ "5c039b17958cfa8fd534f7937a3d7d27": {
+  "text": "Je fais les courses.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 12096
+ },
  "5c095a1341a1c39812404c59fc5b4f98": {
   "text": "Le huitième mois de l'année, c'est août.",
   "voice": "fr-FR-HenriNeural",
@@ -6579,6 +6624,11 @@
   "voice": "fr-FR-DeniseNeural",
   "bytes": 12384
  },
+ "67008c8de3a681049a032152079ac2af": {
+  "text": "Je prends les livres.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
+ },
  "6704e22c00b10950744c5a0d9b1704d8": {
   "text": "une allergie",
   "voice": "fr-FR-HenriNeural",
@@ -6958,6 +7008,11 @@
   "text": "J'adore l'odeur des croissants le matin.",
   "voice": "fr-FR-AlainNeural",
   "bytes": 16416
+ },
+ "6d1c85636f7c20352ab58c8b1b31d51a": {
+  "text": "Je prends le livre.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11664
  },
  "6d319241142fede09a62f4f2f6d002ac": {
   "text": "La fête de la Musique, c'est le 21 juin.",
@@ -7438,6 +7493,11 @@
   "text": "un doctorat",
   "voice": "fr-FR-HenriNeural",
   "bytes": 11232
+ },
+ "74dc99800e021d72161fce943a763322": {
+  "text": "Il parle des professeurs.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11664
  },
  "74f76a6b20ab48eb46443fdc1ec99cdf": {
   "text": "Mon portefeuille est dans mon sac.",
@@ -8618,6 +8678,11 @@
   "text": "et quart, et demie, moins le quart",
   "voice": "fr-FR-DeniseNeural",
   "bytes": 19440
+ },
+ "879a4e64726ba2d304042fb88398709f": {
+  "text": "Je prends du café.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 11232
  },
  "87c1d7df92cf3ccf3dfea4d65dfec059": {
   "text": "Il a beaucoup travaillé, et pourtant il a raté son examen.",
@@ -9953,6 +10018,11 @@
   "text": "Il est interdit de laisser les vélos dans l'entrée.",
   "voice": "fr-FR-AlainNeural",
   "bytes": 18288
+ },
+ "9c907fae2254ed594c8d40b83bd8c536": {
+  "text": "Je voudrais ce pull.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11232
  },
  "9c9b4fda92d663920e8256bfc6fb00c5": {
   "text": "Je fais la cuisine pendant que tu mets la table.",
@@ -12264,6 +12334,11 @@
   "voice": "fr-FR-DeniseNeural",
   "bytes": 20016
  },
+ "bdef8129fea4ed82d120ebd8466ef0ac": {
+  "text": "Il parle du professeur.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11376
+ },
  "bdf8abf6c18fa22a85552b9d01bda9a7": {
   "text": "Tu penses à ton voyage ? – J'y pense.",
   "voice": "fr-FR-DeniseNeural",
@@ -12783,6 +12858,11 @@
   "text": "une exposition",
   "voice": "fr-FR-HenriNeural",
   "bytes": 11376
+ },
+ "c5612e9f63c97c36dcda43f26b1811df": {
+  "text": "Je voudrais du pain.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11952
  },
  "c5732d5d598b86a23481381444b43974": {
   "text": "Il y a de la salade dans mon assiette.",
@@ -13448,6 +13528,11 @@
   "text": "Nous nous sommes mariés il y a dix ans.",
   "voice": "fr-FR-VivienneMultilingualNeural",
   "bytes": 11232
+ },
+ "cf17d8e68c05db27af1271b15b5cfb80": {
+  "text": "Je voudrais ces pulls.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 12816
  },
  "cf1bc56de6bb1742ef14fb06740f8165": {
   "text": "faire de la plongée",
@@ -14468,6 +14553,11 @@
   "text": "À midi, le sable est très chaud : mets tes chaussures !",
   "voice": "fr-FR-DeniseNeural",
   "bytes": 24048
+ },
+ "df2b307044fd7914d1e71a3b88843421": {
+  "text": "J'ai fait les courses.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 12240
  },
  "df53cff24bb54f478f141ab47bfbc780": {
   "text": "J'habite ici depuis 2020.",
@@ -15674,6 +15764,11 @@
   "voice": "fr-FR-AlainNeural",
   "bytes": 11952
  },
+ "f15f5058f3b87005376a65476428b0c3": {
+  "text": "Le chat est sur la table.",
+  "voice": "fr-FR-RemyMultilingualNeural",
+  "bytes": 11376
+ },
  "f178cebaf4d74f0b1e7f68cb31ba0cc7": {
   "text": "Ne fumez pas !",
   "voice": "fr-FR-HenriNeural",
@@ -15844,6 +15939,11 @@
   "voice": "fr-FR-VivienneMultilingualNeural",
   "bytes": 11232
  },
+ "f3f1acc7a30501c8196a594c71b4455d": {
+  "text": "Il va manger.",
+  "voice": "fr-FR-DeniseNeural",
+  "bytes": 11376
+ },
  "f3fd694b9e943631daa28dede4fa7b21": {
   "text": "un steak-frites",
   "voice": "fr-FR-BrigitteNeural",
@@ -15988,6 +16088,11 @@
   "text": "un hôpital",
   "voice": "fr-FR-DeniseNeural",
   "bytes": 11232
+ },
+ "f64ef80a7cf547a28d4806c96672d339": {
+  "text": "Voici mes amis.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 11952
  },
  "f656b3377a42a1a1c0daa8c35bf58f34": {
   "text": "Je n'ai pas de mémoire : j'oublie tout !",
@@ -16548,6 +16653,11 @@
   "text": "Puisque tu es là, aide-moi à porter les sacs !",
   "voice": "fr-FR-HenriNeural",
   "bytes": 20016
+ },
+ "ff0d1b14974d49474efc9631e8e8153d": {
+  "text": "Je cherche son livre.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 12672
  },
  "ff1040d2a397130e41c56ac42a7e4a04": {
   "text": "Le prochain train part dans dix minutes.",

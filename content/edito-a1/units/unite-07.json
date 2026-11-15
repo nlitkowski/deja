@@ -252,7 +252,8 @@
     { "id": "u07-armoire-3", "type": "gap-fill", "entryIds": ["u07-armoire"], "data": { "sentence": "Je range mes pulls dans l'___ de la chambre.", "answers": ["armoire"], "pl": "Chowam swetry do szafy w sypialni.", "clue": "(un grand meuble pour les vêtements)" } },
     { "id": "u07-lave-linge-3", "type": "gap-fill", "entryIds": ["u07-lave-linge"], "data": { "sentence": "Je mets les vêtements sales dans le ___.", "answers": ["lave-linge"], "pl": "Wkładam brudne ubrania do pralki.", "clue": "(une machine pour laver les vêtements)" } },
     { "id": "u07-fuite-3", "type": "gap-fill", "entryIds": ["u07-fuite"], "data": { "sentence": "Le plombier répare la ___ sous l'évier.", "answers": ["fuite"], "pl": "Hydraulik naprawia przeciek pod zlewem.", "clue": "(l'eau sort là où elle ne doit pas sortir)" } },
-    { "id": "u07-plombier-3", "type": "gap-fill", "entryIds": ["u07-plombier"], "data": { "sentence": "Le ___ vient demain pour réparer la douche.", "answers": ["plombier"], "pl": "Hydraulik przyjdzie jutro naprawić prysznic.", "clue": "(il répare les problèmes d'eau)" } }
+    { "id": "u07-plombier-3", "type": "gap-fill", "entryIds": ["u07-plombier"], "data": { "sentence": "Le ___ vient demain pour réparer la douche.", "answers": ["plombier"], "pl": "Hydraulik przyjdzie jutro naprawić prysznic.", "clue": "(il répare les problèmes d'eau)" } },
+    { "id": "mp-fais-fait", "type": "paires-minimales", "entryIds": ["u07-pc-avoir"], "data": { "pair": ["Je fais les courses.", "J'ai fait les courses."] } }
   ],
   "boss": {
     "groups": [["u07-pc-avoir", "u07-participes"], ["u07-pc-negation"], ["u07-cod"], ["u07-connaitre"]],

@@ -105,7 +105,15 @@ Najtańszy, a bardzo wartościowy krok: dużo francuskiego „na ucho” przy ty
   - zaległe karty słuchania czekają i **nie są** karane, bo SRS liczy tylko udzielone odpowiedzi.
 - Home pokazuje osobne liczniki zaległych kart dla pisania, słuchania i mówienia.
 
-## Etap A4 — Ćwiczenia ze słuchu (generowane z danych)
+## Etap A4 — Ćwiczenia ze słuchu (generowane z danych) ✅
+
+> Zrobione: cztery typy w `src/exercises/` (`dictee-trous`, `dictee`, `ecoute-sens`, `paires-minimales`), wspólny `<Listen>` (autoodtwarzanie, „Réécouter”, „Plus lentement”), `replays` w `ReviewEvent`. Odstępstwa:
+> - pary minimalne są zwykłymi ćwiczeniami w `units/*.json` (`"type": "paires-minimales", "data": { "pair": [...] }`), a nie osobnym plikiem pakietu: dostają `entryIds` i jednostkę, więc SRS i przyszły boss ze słuchu działają bez zmian w loaderze. Strona do odtworzenia losuje się przy każdym pokazaniu. Pierwsze 11 par jest w a1-connecteurs i edito-a1;
+> - dyktando przyjmuje tylko zdanie, które było czytane: inne odpowiedzi z `gap-fill` (`on` / `nous`) brzmią inaczej, więc ich nie zaliczamy. Z tego samego powodu `dictee-trous` przyjmuje tylko pierwszą odpowiedź;
+> - wielkość liter i interpunkcja nigdy nie decydują (jak w `answer.ts`), near-miss daje tylko brak akcentu;
+> - generatory pomijają też zdania z `audio.text` (czytane inaczej, niż są zapisane) i dyktanda z cyframi;
+> - po odpowiedzi w ćwiczeniu ze słuchu zdanie jest pokazywane, ale nie czytane ponownie automatycznie.
+
 
 Każdy typ ma `skill: 'listening'` i generuje się z istniejącej treści. Nagranie jest odtwarzane automatycznie, a przycisk powtórki (także wolniej) jest zawsze dostępny. Liczba odtworzeń jest zapisywana w zdarzeniu jako `replays`, bez wpływu na XP.
 

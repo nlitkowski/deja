@@ -3,6 +3,9 @@ import type { LoadedContent } from '../content/loader';
 import type { Exercise } from '../content/schema';
 import type { SheetBlock } from '../content/sheet';
 import { exerciseLogic } from '../exercises/logic';
+import { audioTextOf, normalizeText, spoken } from './spoken';
+
+export { audioTextOf, normalizeText, spoken } from './spoken';
 
 /** A French text to record, with every place in the content that shows it. */
 export interface AudioText {
@@ -14,33 +17,10 @@ export interface AudioText {
   sources: string[];
 }
 
-/** Canonical form of a text: hashing it must not depend on markup, apostrophe style or spacing. */
-export function normalizeText(text: string): string {
-  return text
-    .normalize('NFC')
-    .replace(/\*\*/g, '')
-    .replace(/[’ʼ]/g, "'")
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-/** Asides in parentheses (a verb to conjugate, `(fam.)`, a number in digits) are not read; `a / b` is read as a list. */
-export const spoken = (text: string) =>
-  normalizeText(text)
-    .replace(/\s*\([^)]*\)/g, '')
-    .replace(/,? \/ /g, ', ')
-    .trim();
-
 /** A table cell worth recording: a whole sentence, not a label or a fragment. */
 export function isSentence(cell: string): boolean {
   const text = normalizeText(cell);
   return /^[A-ZÀ-Ý«"]/.test(text) && /[.?!…»"]$/.test(text) && text.includes(' ') && !/ \/ |[=+]/.test(text);
-}
-
-/** What is read for a French text and its `audio` options; undefined when it is not recorded. */
-export function audioTextOf(written: string, audio?: Audio): string | undefined {
-  if (audio?.skip) return undefined;
-  return spoken(audio?.text ?? written) || undefined;
 }
 
 const logicById = new Map(exerciseLogic.map((t) => [t.id, t]));
@@ -80,7 +60,9 @@ export function collectAudioTexts(content: LoadedContent, scope: AudioScope = {}
       }
       for (const id of unit.exerciseIds) {
         const ex = content.exercises.get(id)!;
-        if (!ex.generated) add(exerciseAudioText(ex), ex.audio, `${unit.key} › ${id}`);
+        if (ex.generated) continue;
+        add(exerciseAudioText(ex), ex.audio, `${unit.key} › ${id}`);
+        logicById.get(ex.type)?.listenTexts?.(ex.data).forEach((t, i) => add(spoken(t) || undefined, undefined, `${unit.key} › ${id} › ${i}`));
       }
     }
     for (const sheet of pack.sheetList) {

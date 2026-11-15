@@ -136,7 +136,8 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
   function handleAnswer(r: AnswerResult) {
     if (!item || !exercise) return;
     setResult(r);
-    if (readAfter === 'auto' && !quiet && sentence) void play(sentence);
+    // A listening exercise has just played the sentence; it is shown, not read again.
+    if (readAfter === 'auto' && !quiet && sentence && item.skill === 'written') void play(sentence);
     if (vibration) vibrate(r.correct ? 15 : [30, 40, 30]);
     if (!r.correct) setQueue((q) => requeue(q, index, item, (byEntry.get(item.entryId) ?? []).filter((ex) => skillOf(ex.type) === item.skill), isProduction));
 

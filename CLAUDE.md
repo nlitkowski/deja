@@ -159,6 +159,8 @@ Typy na start:
 6. **match-pairs**: dopasowanie FR ↔ PL na czas. Generowany automatycznie.
 7. **conjugation-grid**: tabela odmiany (je/tu/il…). Teraz nieużywany, przygotowany pod pakiet czasowników.
 
+Ze słuchu (`skill: 'listening'`, plan w `PLAN-AUDIO.md`): **dictee-trous** i **dictee** (production, diff słowo po słowie w `src/lib/dictation.ts`), **ecoute-sens** (zdanie → polskie tłumaczenie) generowane z nagranych zdań (`src/exercises/heard.ts`), oraz ręcznie pisane **paires-minimales** (`data: { pair }`, homofony odrzuca `soundsAlike`). Widok odtwarza nagranie przez `<Listen>`, a liczba powtórek trafia do zdarzenia jako `replays`.
+
 ### Hooki gamifikacji
 
 Logika gry nie ma osobnego event busa: to czyste projekcje logu zdarzeń (`ReviewEvent`, `SessionEvent`, `SettingEvent` w `src/lib/progress/events.ts`). Odznaka albo quest to osobny plik eksportujący `{ id, title, icon, check(ctx) }`, gdzie `ctx` to projekcja logu. Dodanie odznaki nie wymaga zmian w innych miejscach. Pakiet może też zdefiniować własne odznaki w `pack.json` w polu `achievements`, korzystając z deklaratywnych warunków (`{ "type": "unitMastery", "unit": "...", "level": 3 }`).
