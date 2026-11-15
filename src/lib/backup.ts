@@ -2,14 +2,15 @@ import { z } from 'zod';
 import { HELP_LANGS } from '../content/localized';
 import type { ProgressEvent } from './progress/events';
 import { EventSchema } from './progress/schema';
-import { COLOR_MODES, PALETTES, READ_AFTER, type Settings } from './storage';
+import { COLOR_MODES, normalizeGoal, PALETTES, READ_AFTER, type Settings } from './storage';
 
 /**
  * A backup is the whole event log plus settings. Importing merges events by id, so restoring an older
  * backup or the same one twice never loses or duplicates progress: the log is a set of immutable events.
  */
 export const BACKUP_FORMAT = 'deja-backup';
-const BACKUP_VERSION = 1;
+/** 2: daily goals rescaled to 100 / 300 / 600 XP; older backups' goals are mapped on import. */
+const BACKUP_VERSION = 2;
 
 export interface Backup {
   format: typeof BACKUP_FORMAT;
@@ -21,7 +22,7 @@ export interface Backup {
 
 // Each setting falls back on its own, so a backup from an older or newer version still restores what it can.
 const SettingsSchema = z.object({
-  dailyGoal: z.union([z.literal(30), z.literal(50), z.literal(100)]).optional().catch(undefined),
+  dailyGoal: z.number().optional().catch(undefined),
   sound: z.boolean().optional().catch(undefined),
   vibration: z.boolean().optional().catch(undefined),
   helpLang: z.enum(HELP_LANGS).optional().catch(undefined),
@@ -63,7 +64,9 @@ export function parseBackup(text: string): ParsedBackup {
   }
   const parsed = BackupSchema.safeParse(raw);
   if (!parsed.success) return { ok: false, reason: 'damaged' };
-  const settings = Object.fromEntries(Object.entries(parsed.data.settings).filter(([, v]) => v !== undefined)) as Partial<Settings>;
+  const { dailyGoal, ...rest } = parsed.data.settings;
+  const settings = Object.fromEntries(Object.entries(rest).filter(([, v]) => v !== undefined)) as Partial<Settings>;
+  if (dailyGoal !== undefined) settings.dailyGoal = normalizeGoal(dailyGoal, parsed.data.version < 2);
   return { ok: true, events: parsed.data.events as ProgressEvent[], settings, exportedAt: parsed.data.exportedAt };
 }
 

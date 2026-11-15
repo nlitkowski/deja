@@ -76,8 +76,8 @@ describe('questStatus', () => {
     const claim: QuestEvent = { type: 'quest', id: 'q1', deviceId: 'd', at: '2026-11-14T20:00:00Z', day: '2026-11-14', questId: first.quest.id, period: first.period, xp: 20 };
     const status = questStatus([claim], '2026-11-14', digestCtx);
     expect(status).toHaveLength(4);
-    expect(status[0]).toMatchObject({ claimed: true, reward: 20 });
-    expect(status[3]).toMatchObject({ claimed: false, reward: 100 });
+    expect(status[0]).toMatchObject({ claimed: true, reward: 50 });
+    expect(status[3]).toMatchObject({ claimed: false, reward: 250 });
     expect(totalXp([claim], ctx)).toBe(20);
   });
 });

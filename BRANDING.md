@@ -69,7 +69,7 @@ Instrukcje dla Claude'a dotyczące identyfikacji wizualnej i języka aplikacji. 
 
 ## Nazewnictwo w grywalizacji
 
-- Tytuły poziomów: Débutant → Touriste → Flâneur → Bavard → Habitué → Parisien → Érudit → Académicien.
+- Tytuły poziomów: Débutant → Touriste → Flâneur → Bavard → Habitué → Parisien → Lettré → Érudit → Virtuose → Maître → Académicien → Immortel.
 - Ligi: Bronze → Argent → Or → Diamant.
 - Mastery wpisów to **korony**. Złota jednostka nazywa się „Maîtrisé”.
 - Streak to **flamme** (ikona płomienia w złocie), a zamrożenie streaka to „Gel”.

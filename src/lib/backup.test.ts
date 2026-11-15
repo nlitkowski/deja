@@ -58,6 +58,15 @@ describe('backup', () => {
     const parsed = parseBackup(JSON.stringify(backup));
     expect(parsed.ok && parsed.settings).toEqual({ helpLang: 'fr' });
   });
+
+  it('rescales the daily goal of a backup from before v2 (30 → 100, 50 → 300, 100 → 600)', () => {
+    const goalOf = (version: number, dailyGoal: number) => {
+      const parsed = parseBackup(JSON.stringify({ ...createBackup([], defaultSettings(), new Date()), version, settings: { dailyGoal } }));
+      return parsed.ok ? parsed.settings.dailyGoal : undefined;
+    };
+    expect([30, 50, 100].map((g) => goalOf(1, g))).toEqual([100, 300, 600]);
+    expect([100, 300, 600].map((g) => goalOf(2, g))).toEqual([100, 300, 600]);
+  });
 });
 
 describe('missingEvents', () => {

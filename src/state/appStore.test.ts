@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { memoryStore } from '../lib/progress/store';
 import { review } from '../lib/srs';
-import { defaultSettings, STORAGE_KEY } from '../lib/storage';
+import { defaultSettings, SCHEMA_VERSION, STORAGE_KEY } from '../lib/storage';
 import { createAppStore } from './appStore';
 
 function memoryKv(initial: Record<string, string> = {}) {
@@ -28,15 +28,18 @@ describe('app store', () => {
 
     expect(store.getState().status).toBe('ready');
     expect(store.getState().progress.cards['p/a']).toEqual(card);
+    await Promise.resolve();
     const events = await progressStore.loadEvents();
-    expect(events).toHaveLength(1);
+    // The baseline, then the daily goal rescaled by v6.
+    expect(events).toHaveLength(2);
     expect(events[0]).toMatchObject({ type: 'baseline', cards: { 'p/a': card } });
-    expect(JSON.parse(kv.raw(STORAGE_KEY)!)).toEqual({ schemaVersion: 5, settings: defaultSettings() });
+    expect(events[1]).toMatchObject({ type: 'setting', key: 'dailyGoal', value: 300 });
+    expect(JSON.parse(kv.raw(STORAGE_KEY)!)).toEqual({ schemaVersion: SCHEMA_VERSION, settings: defaultSettings() });
 
-    // A second start must not import the baseline again.
+    // A second start must not import the baseline or rescale the goal again.
     const again = createAppStore({ progressStore, kv });
     await again.getState().init();
-    expect(await progressStore.loadEvents()).toHaveLength(1);
+    expect(await progressStore.loadEvents()).toHaveLength(2);
   });
 
   it('migrates once even when init runs twice at the same time (StrictMode)', async () => {
@@ -46,6 +49,22 @@ describe('app store', () => {
     const progressStore = memoryStore();
     const store = createAppStore({ progressStore, kv });
     await Promise.all([store.getState().init(), store.getState().init()]);
+    await Promise.resolve();
+    expect((await progressStore.loadEvents()).map((e) => e.type)).toEqual(['baseline', 'setting']);
+  });
+
+  it('rescales a v5 daily goal once and logs the change from today, so past days keep the old goal', async () => {
+    const kv = memoryKv({ [STORAGE_KEY]: JSON.stringify({ schemaVersion: 5, settings: { ...defaultSettings(), dailyGoal: 30 } }) });
+    const progressStore = memoryStore();
+    const store = createAppStore({ progressStore, kv });
+    await store.getState().init();
+    await Promise.resolve();
+    expect(store.getState().settings.dailyGoal).toBe(100);
+    expect(store.getState().log).toEqual([expect.objectContaining({ type: 'setting', key: 'dailyGoal', value: 100 })]);
+    expect(JSON.parse(kv.raw(STORAGE_KEY)!).settings.dailyGoal).toBe(100);
+
+    const again = createAppStore({ progressStore, kv });
+    await again.getState().init();
     expect(await progressStore.loadEvents()).toHaveLength(1);
   });
 
@@ -106,12 +125,12 @@ describe('app store', () => {
 
     store.getState().recordAnswer({ exerciseId: 'p/x', entryIds: ['p/a'], result: ok, early: false, sessionId: 's1', comboBefore: 0 }, now);
     store.getState().recordSession({ sessionId: 's1', kind: 'review', startedAt: now.toISOString(), items: 1, correct: 1, mistakes: 0, maxCombo: 1 }, now);
-    store.getState().updateSettings({ dailyGoal: 30 }, now);
-    store.getState().updateSettings({ dailyGoal: 30, sound: false }, now);
+    store.getState().updateSettings({ dailyGoal: 100 }, now);
+    store.getState().updateSettings({ dailyGoal: 100, sound: false }, now);
 
     expect(store.getState().log.map((e) => e.type)).toEqual(['review', 'session', 'setting']);
     expect(store.getState().log[0]).toMatchObject({ sessionId: 's1', comboBefore: 0 });
-    expect(store.getState().log[2]).toMatchObject({ key: 'dailyGoal', value: 30, day: '2026-11-14' });
+    expect(store.getState().log[2]).toMatchObject({ key: 'dailyGoal', value: 100, day: '2026-11-14' });
     await Promise.resolve();
     expect(await progressStore.loadEvents()).toHaveLength(3);
   });
@@ -143,7 +162,7 @@ describe('app store', () => {
     const origin = createAppStore({ progressStore: memoryStore(), kv: memoryKv() });
     await origin.getState().init();
     const day = (d: number, h = 10) => new Date(`2026-11-${String(d).padStart(2, '0')}T${String(h).padStart(2, '0')}:00:00Z`);
-    origin.getState().updateSettings({ dailyGoal: 30 }, day(1, 8));
+    origin.getState().updateSettings({ dailyGoal: 100 }, day(1, 8));
     for (let d = 1; d <= 6; d++) {
       for (const [i, entry] of ['p/a', 'p/b', 'p/c'].entries()) {
         const result = { ...ok, correct: (d + i) % 4 !== 0 };

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { SrsCard } from '../lib/srs';
+import { review, type SrsCard } from '../lib/srs';
 import { entriesBelow, entryMastery, unitMastery } from './mastery';
 
 const card = (interval: number, reps = 1): SrsCard => ({ ease: 2.5, interval, due: '2026-12-01', reps, lapses: 0, correctTotal: reps, lastReviewed: '2026-11-14' });
@@ -7,15 +7,26 @@ const card = (interval: number, reps = 1): SrsCard => ({ ease: 2.5, interval, du
 describe('entryMastery', () => {
   it('follows the interval, with the gold level also needing 4 good answers in a row', () => {
     expect(entryMastery(undefined)).toBe(0);
-    expect([0, 2, 3, 6, 7, 20, 21, 59].map((i) => entryMastery(card(i)))).toEqual([1, 1, 2, 2, 3, 3, 4, 4]);
+    expect([0, 2, 3, 6, 7, 19, 20, 59].map((i) => entryMastery(card(i)))).toEqual([1, 1, 2, 2, 3, 3, 4, 4]);
     expect(entryMastery(card(60, 3))).toBe(4);
     expect(entryMastery(card(60, 4))).toBe(5);
+  });
+
+  it('reaches mastery 4 on the fourth good answer, each on its due day', () => {
+    let c: SrsCard | undefined;
+    let day = '2026-11-01';
+    for (let i = 0; i < 4; i++) {
+      c = review(c, 'good', day);
+      day = c.due;
+    }
+    expect(c!.interval).toBe(20);
+    expect(entryMastery(c)).toBe(4);
   });
 });
 
 describe('unitMastery', () => {
   const unit = (levels: number[]) => {
-    const intervals = [0, 0, 3, 7, 21, 60];
+    const intervals = [0, 0, 3, 7, 20, 60];
     const cards = Object.fromEntries(levels.flatMap((m, i) => (m ? [[`e${i}`, card(intervals[m]!, m === 5 ? 4 : 1)]] : [])));
     return { ids: levels.map((_, i) => `e${i}`), cards };
   };
@@ -53,12 +64,12 @@ describe('unitMastery', () => {
 describe('entriesBelow', () => {
   it('names the entries that keep the crown under its peak', () => {
     const levels = [...Array<number>(19).fill(4), 1];
-    const intervals = [0, 0, 3, 7, 21, 60];
+    const intervals = [0, 0, 3, 7, 20, 60];
     const cards = Object.fromEntries(levels.map((m, i) => [`e${i}`, card(intervals[m]!)]));
     const ids = levels.map((_, i) => `e${i}`);
     expect(entriesBelow(ids, cards, 4)).toEqual(['e19']);
     // Five at 3: 15/20 at 4, one more is needed for 80%.
-    const short = { ...cards, e19: card(21), e0: card(7), e1: card(7), e2: card(7), e3: card(7), e4: card(7) };
+    const short = { ...cards, e19: card(20), e0: card(7), e1: card(7), e2: card(7), e3: card(7), e4: card(7) };
     expect(entriesBelow(ids, short, 4)).toHaveLength(1);
     expect(unitMastery(ids, short)).toBe(3);
   });

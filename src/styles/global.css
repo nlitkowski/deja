@@ -2927,3 +2927,34 @@ button.tree-sheet:disabled {
 .refresh-unit {
   flex: 1 1 100%;
 }
+
+.level-notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 12px 0;
+  padding: 12px 14px;
+  background: var(--near-bg);
+  border-radius: var(--radius);
+  border: var(--border-w) solid var(--border);
+}
+
+.level-notice p {
+  flex: 1 1 220px;
+  margin: 0;
+}
+
+.tomorrow {
+  text-align: center;
+}
+
+.pill-two-lines {
+  display: grid;
+  line-height: 1.2;
+}
+
+.pill-two-lines small {
+  font-size: 0.8em;
+  opacity: 0.85;
+}

@@ -10,7 +10,7 @@ import { appendingStore } from './localStore';
 import { gradeFromResult, type AnswerResult, type Skill } from '../lib/srs';
 import { compareEvents } from '../lib/progress/fold';
 import { NEVER, parseStamped, stampSettings, SYNCED_SETTINGS, type StampedSettings, type SyncedKey } from '../lib/settingsSync';
-import { browserStore, deviceId, loadState, saveState, SCHEMA_VERSION, type KeyValueStore, type Settings } from '../lib/storage';
+import { browserStore, deviceId, loadState, normalizeGoal, saveState, SCHEMA_VERSION, type KeyValueStore, type Settings } from '../lib/storage';
 
 export interface AnswerInput {
   exerciseId: string;
@@ -85,6 +85,11 @@ export function createAppStore({ progressStore, kv }: Deps) {
         if (loaded.legacy) persistSettings(get().settings);
         projection.add(events);
         set({ progress: projection.state, log: projection.events, status: 'ready' });
+        // v6 rescaled the goal: past days keep the old one through the log, so the new one starts from today.
+        if (loaded.goalRescaled) {
+          record<SettingEvent>({ type: 'setting', ...base(new Date()), key: 'dailyGoal', value: loaded.goalRescaled.to }, 'goal rescale');
+          persistSettings(get().settings);
+        }
       } catch (error) {
         console.error('Déjà: event log unavailable', error);
         set({ status: 'failed' });
@@ -173,8 +178,8 @@ export function createAppStore({ progressStore, kv }: Deps) {
         // A goal changed on another device: the setting follows the latest change in the log.
         if (events.some((e) => e.type === 'setting')) {
           const latest = projection.events.filter((e) => e.type === 'setting' && e.key === 'dailyGoal').sort(compareEvents).at(-1);
-          if (latest?.type === 'setting' && latest.value !== get().settings.dailyGoal) {
-            const settings = { ...get().settings, dailyGoal: latest.value as Settings['dailyGoal'] };
+          if (latest?.type === 'setting' && normalizeGoal(latest.value) !== get().settings.dailyGoal) {
+            const settings = { ...get().settings, dailyGoal: normalizeGoal(latest.value) };
             persistSettings(settings);
             set({ settings });
           }

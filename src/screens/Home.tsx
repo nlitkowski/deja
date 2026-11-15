@@ -1,6 +1,7 @@
 import { AppLayout, MenuButton } from '../components/AppLayout';
 import { Emoji } from '../components/Emoji';
 import { GameBar } from '../components/GameBar';
+import { LevelNotice } from '../components/LevelNotice';
 import { QuestList } from '../components/QuestList';
 import { SyncBadge } from '../components/SyncBadge';
 import { Icon } from '../components/Icon';
@@ -77,6 +78,7 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onOpe
         </header>
 
         <GameBar />
+        <LevelNotice />
 
         <section className="review-card">
           <div>

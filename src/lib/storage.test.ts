@@ -39,8 +39,18 @@ describe('storage', () => {
       settings: { dailyGoal: 100, sound: false, vibration: true },
     };
     const { state, legacy } = migrate(v1);
-    expect(state).toEqual({ schemaVersion: SCHEMA_VERSION, settings: { ...defaultSettings(), dailyGoal: 100, sound: false } });
+    // The old 100 XP goal became 600 XP in v6.
+    expect(state).toEqual({ schemaVersion: SCHEMA_VERSION, settings: { ...defaultSettings(), dailyGoal: 600, sound: false } });
     expect(legacy).toEqual({ srs: { 'p/e': card }, daily: { day: '2026-11-14', newIntroduced: 1 } });
+  });
+
+  it('rescales daily goals in v6: 30 → 100, 50 → 300, 100 → 600, and reports it', () => {
+    const v5 = (dailyGoal?: number) => ({ schemaVersion: 5, settings: { ...defaultSettings(), dailyGoal } });
+    expect([30, 50, 100].map((g) => migrate(v5(g)).state.settings.dailyGoal)).toEqual([100, 300, 600]);
+    expect(migrate(v5(50)).goalRescaled).toEqual({ from: 50, to: 300 });
+    expect(migrate(v5(undefined)).goalRescaled).toEqual({ from: 50, to: 300 });
+    expect(migrate({ schemaVersion: 6, settings: defaultSettings() }).goalRescaled).toBeUndefined();
+    expect(defaultSettings().dailyGoal).toBe(300);
   });
 
   it('keeps the chosen colour mode when adding palettes (v3 → v4)', () => {

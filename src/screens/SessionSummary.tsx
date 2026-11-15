@@ -5,7 +5,11 @@ import { levelFromXp } from '../game/levels';
 import { streakInfo } from '../game/streak';
 import { sessionXp, totalXp } from '../game/xp';
 import { ui } from '../i18n/ui';
-import { dayKey } from '../lib/date';
+import { addDays, dayKey } from '../lib/date';
+import { newIntroducedOn } from '../lib/progress/fold';
+import { skillOfKey } from '../lib/srs';
+import { NEW_PER_DAY } from '../sessions';
+import { acknowledgeLevel, isNewLevel } from '../state/levelMemory';
 import { sfx } from '../sfx';
 import { useAppStore } from '../state/appStore';
 import { xpContext } from '../xpContext';
@@ -25,8 +29,17 @@ export function SessionSummary({ outcome, onDone }: { outcome: SessionOutcome; o
       streak: streakInfo(log, dayKey(new Date()), xpContext),
     };
   });
-  const levelledUp = view.after.level > view.before.level;
+  // Levels already shown on this device (before a recalculation of the curve, say) are not celebrated again.
+  const [levelledUp] = useState(() => view.after.level > view.before.level && isNewLevel(view.after.level));
   const [showLevelUp, setShowLevelUp] = useState(levelledUp);
+  useEffect(() => acknowledgeLevel(view.after.level), [view.after.level]);
+  const progress = useAppStore((s) => s.progress);
+  const [dueTomorrow] = useState(() => {
+    const today = dayKey(new Date());
+    if (newIntroducedOn(progress, today) < NEW_PER_DAY) return undefined;
+    const tomorrow = addDays(today, 1);
+    return Object.entries(progress.cards).filter(([key, card]) => skillOfKey(key) === 'written' && card.due === tomorrow).length;
+  });
   const [barFilled, setBarFilled] = useState(false);
 
   useEffect(() => {
@@ -100,6 +113,8 @@ export function SessionSummary({ outcome, onDone }: { outcome: SessionOutcome; o
           </p>
         )}
       </section>
+
+      {dueTomorrow !== undefined && <p className="muted tomorrow">{ui.dueTomorrow(dueTomorrow)}</p>}
 
       <QuestList />
 

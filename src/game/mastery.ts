@@ -3,7 +3,7 @@ import { GAME } from './config';
 
 export type Mastery = 0 | 1 | 2 | 3 | 4 | 5;
 
-/** 0 unknown, 1 seen, then by interval: 2 from 3 days, 3 from 7, 4 from 21, 5 from 60 with at least 4 good answers in a row. */
+/** 0 unknown, 1 seen, then by interval: 2 from 3 days, 3 from 7, 4 from 20, 5 from 60 with at least 4 good answers in a row. */
 export function entryMastery(card: SrsCard | undefined): Mastery {
   if (!card) return 0;
   const { intervals, goldReps } = GAME.mastery;

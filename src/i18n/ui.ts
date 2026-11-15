@@ -10,7 +10,9 @@ export const ui = {
   reload: 'Recharger',
 
   dueCount: (n: number) => (n <= 1 ? 'entrée à réviser' : 'entrées à réviser'),
-  newToday: (n: number, max: number) => `Nouvelles aujourd’hui : ${n} / ${max}`,
+  newToday: (n: number, max: number) => (n < max ? `Nouvelles aujourd’hui : ${n} / ${max}` : `${n} nouvelles aujourd’hui`),
+  dueTomorrow: (n: number) => `Demain : ${n} entrée${n > 1 ? 's' : ''} à réviser`,
+  levelsRecalculated: (level: number, title: string) => `Les niveaux ont été recalculés : tu es maintenant niveau ${level} · ${title}. Ton XP ne change pas.`,
   review: 'Révision',
   reviewWithCount: (n: number) => `Déjà vu ? (${n})`,
   allDoneToday: 'Rien à revoir. À demain !',
@@ -81,7 +83,7 @@ export const ui = {
   reviseWeak: 'Réviser',
   mistakes: (n: number) => `${n} erreur${n > 1 ? 's' : ''}`,
   masteryByPack: 'Maîtrise par pack',
-  masteryLevels: ['Inconnu', 'Vu', '3 j', '7 j', '21 j', 'Maîtrisé'],
+  masteryLevels: ['Inconnu', 'Vu', '3 j', '7 j', '20 j', 'Maîtrisé'],
 
   sheets: 'Fiches de révision',
   sheetsTeaser: (n: number) => `${n} fiche${n > 1 ? 's' : ''} : grammaire, vocabulaire, expressions`,
@@ -183,6 +185,7 @@ export const ui = {
   dailyGoalLabel: 'Objectif quotidien',
   dailyGoalHint: 'XP à gagner chaque jour pour garder ta flamme.',
   goalOption: (xp: number) => `${xp} XP`,
+  goalMinutes: (minutes: number) => `≈ ${minutes} min`,
 
   helpLangLabel: 'Aides',
   helpLangNames: { pl: 'polonais', fr: 'français' },
@@ -232,4 +235,5 @@ export const ui = {
   bossLost: 'Le boss a gagné… cette fois.',
   bossRetry: 'Rien n’est perdu : réessaie quand tu veux.',
   continue: 'Continuer',
+  ok: 'Compris',
 } as const;

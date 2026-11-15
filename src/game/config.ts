@@ -21,7 +21,7 @@ export const GAME = {
   },
   mastery: {
     /** Minimum interval in days for mastery 2, 3, 4 and 5. */
-    intervals: [3, 7, 21, 60],
+    intervals: [3, 7, 20, 60],
     goldReps: 4,
     /** Unit crown L: at least `unitShare` of its entries at mastery ≥ L, and none below L − `unitMaxGap`. */
     unitShare: 0.8,
@@ -30,19 +30,27 @@ export const GAME = {
     unlockNext: 1,
     bossFrom: 2,
   },
+  /** XP from level n to n + 1: base × n^exponent (150 × n²: level 2 at 150 XP, 5 at 4 500, 12 at 75 900). About 1 300 XP an hour. */
   level: {
-    base: 50,
-    exponent: 1.5,
-    titles: ['Débutant', 'Touriste', 'Flâneur', 'Bavard', 'Habitué', 'Parisien', 'Érudit', 'Académicien'],
+    base: 150,
+    exponent: 2,
+    /** Past the last title the number keeps growing under it. */
+    titles: ['Débutant', 'Touriste', 'Flâneur', 'Bavard', 'Habitué', 'Parisien', 'Lettré', 'Érudit', 'Virtuose', 'Maître', 'Académicien', 'Immortel'],
   },
+  /** New written entries a day in the cross-pack review; unit sessions on the map are not limited by it. */
+  newPerDay: 15,
   streak: {
-    /** Goal for days before the first recorded change; matches the default setting. */
+    /** Goal for days before the first recorded change: the default before goals were rescaled. */
     defaultGoal: 50,
-    goals: [30, 50, 100],
+    goals: [100, 300, 600],
+    /** Roughly how long each goal takes, shown next to it. */
+    goalMinutes: { 100: 5, 300: 15, 600: 30 } as Readonly<Record<number, number>>,
+    /** Goals before the rescale (30 / 50 / 100 XP) and what they became. */
+    oldGoals: { 30: 100, 50: 300, 100: 600 } as Readonly<Record<number, number>>,
     freezeEvery: 7,
     maxFreezes: 2,
   },
-  quests: { daily: 3, weekly: 1, dailyReward: 20, weeklyReward: 100 },
+  quests: { daily: 3, weekly: 1, dailyReward: 50, weeklyReward: 250 },
   league: {
     tiers: ['Bronze', 'Argent', 'Or', 'Diamant'],
     ghosts: 4,

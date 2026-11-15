@@ -6,7 +6,7 @@ import { newIntroducedOn, type ProgressState } from './lib/progress/fold';
 import { buildSession, type OtherSkill, type SessionItem } from './lib/session';
 import type { Settings } from './lib/storage';
 
-export const NEW_PER_DAY = 5;
+export const NEW_PER_DAY = GAME.newPerDay;
 const NEW_PER_UNIT_SESSION = 5;
 
 function usableExercises(settings: Settings) {

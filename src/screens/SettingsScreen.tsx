@@ -50,7 +50,7 @@ export function SettingsScreen({ onBack }: { onBack: () => void }) {
         <Segmented
           label={ui.dailyGoalLabel}
           value={String(settings.dailyGoal)}
-          options={GAME.streak.goals.map((g) => ({ value: String(g), label: ui.goalOption(g) }))}
+          options={GAME.streak.goals.map((g) => ({ value: String(g), label: ui.goalOption(g), detail: ui.goalMinutes(GAME.streak.goalMinutes[g]!) }))}
           onChange={(goal) => set({ dailyGoal: Number(goal) as Settings['dailyGoal'] })}
         />
         <p className="muted small">{ui.dailyGoalHint}</p>
