@@ -29,6 +29,7 @@ const SettingsSchema = z.object({
   palette: z.enum(PALETTES).optional().catch(undefined),
   navCollapsed: z.boolean().optional().catch(undefined),
   readAfter: z.enum(READ_AFTER).optional().catch(undefined),
+  quiet: z.boolean().optional().catch(undefined),
 });
 
 const BackupSchema = z.object({

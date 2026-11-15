@@ -1,4 +1,6 @@
-import type { DayKey } from '../date';
+import { GAME } from '../../game/config';
+import { entryMastery } from '../../game/mastery';
+import { addDays, type DayKey } from '../date';
 import { cardKey, review, skillOfKey, type Skill, type SrsCard } from '../srs';
 import { reviewSkill, type ProgressEvent } from './events';
 
@@ -28,6 +30,16 @@ function newerCard(a: SrsCard, b: SrsCard): SrsCard {
   return a;
 }
 
+/** A first listening answer, right, about an entry already well known in writing: no need to start from a day. */
+function knownInWriting(state: ProgressState, entryId: string, event: { grade: string }): boolean {
+  return (event.grade === 'good' || event.grade === 'easy') && entryMastery(state.cards[cardKey(entryId)]) >= GAME.skills.knownStart.minWrittenMastery;
+}
+
+function knownStart(card: SrsCard, day: DayKey): SrsCard {
+  const interval = Math.max(card.interval, GAME.skills.knownStart.interval);
+  return { ...card, interval, due: addDays(day, interval) };
+}
+
 /** Applies an event in place. Only for states owned by the caller. */
 function applyInPlace(state: ProgressState, event: ProgressEvent): void {
   state.eventCount += 1;
@@ -48,10 +60,15 @@ function applyInPlace(state: ProgressState, event: ProgressEvent): void {
 
   if (event.type !== 'review') return;
 
-  const keys = event.entryIds.map((id) => cardKey(id, reviewSkill(event)));
-  for (const key of keys) state.firstSeen[key] ??= event.day;
+  const skill = reviewSkill(event);
+  for (const id of event.entryIds) state.firstSeen[cardKey(id, skill)] ??= event.day;
   if (event.early && event.correct) return;
-  for (const key of keys) state.cards[key] = review(state.cards[key], event.grade, event.day);
+  for (const id of event.entryIds) {
+    const key = cardKey(id, skill);
+    const before = state.cards[key];
+    const card = review(before, event.grade, event.day);
+    state.cards[key] = !before && skill === 'listening' && knownInWriting(state, id, event) ? knownStart(card, event.day) : card;
+  }
 }
 
 const copy = (state: ProgressState): ProgressState => ({

@@ -92,7 +92,9 @@ Najtańszy, a bardzo wartościowy krok: dużo francuskiego „na ucho” przy ty
   - w Réglages widać zajęte miejsce i jest przycisk „Vider”.
 - Brak nagrania lub sieci nigdy nie blokuje sesji. Przycisk wtedy po prostu jest nieaktywny.
 
-## Etap A3 — Tor „Écoute” w SRS i sesjach
+## Etap A3 — Tor „Écoute” w SRS i sesjach ✅
+
+> Zrobione: reguły umiejętności w `GAME.skills` (listening wymaga karty written, speaking karty listening; limity nowych 5 i 3; udział w sesji 30% i 20%). Słuchanie i mówienie dochodzą tylko do sesji „Révision”. Tryb cichy wyłącza też automatyczne czytanie zdań po odpowiedzi, więc domyślne „Lire la phrase” to teraz „Auto”. Dopóki nie ma typów ćwiczeń ze słuchu (A4), kart listening w sesjach nie ma.
 
 - **Kiedy wpis wchodzi do słuchania:** wpis z `written` mastery ≥ 1 i z nagraniem zostaje kandydatem do `listening`. Osobny limit nowych kart dziennie dla słuchania (domyślnie 5), w `game/config.ts`.
 - **Szybszy start dla znanych wpisów:** jeśli pierwsza odpowiedź `listening` jest poprawna, a `written` mastery wynosi co najmniej 3, karta dostaje od razu interwał 3 dni zamiast 1. Nie zakładaj z góry, że wpis jest znany ze słuchu.

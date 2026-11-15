@@ -5,6 +5,8 @@ import { exerciseTypes, isProduction, skillOf, supportsHelpLang } from '../exerc
 import type { ExerciseContext } from '../exercises/types';
 import { Icon } from '../components/Icon';
 import { Play } from '../components/Play';
+import { QuietToggle } from '../components/QuietToggle';
+import { useQuiet } from '../state/quiet';
 import { play, stop, usePlayer } from '../audio/player';
 import { exerciseAudioText } from '../audio/texts';
 import { Translation } from '../components/Translation';
@@ -59,6 +61,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
 
   const { helpLang, vibration, sound, readAfter } = useAppStore((s) => s.settings);
   const player = usePlayer();
+  const { quiet } = useQuiet();
   const recordAnswer = useAppStore((s) => s.recordAnswer);
   const recordSession = useAppStore((s) => s.recordSession);
   const ctx: ExerciseContext = useMemo(() => ({ accentPairs, helpLang }), [helpLang]);
@@ -76,7 +79,11 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
   const reading = !!sentence && player.text === sentence && !!player.status;
 
   const next = useCallback(() => {
-    if (index + 1 >= queue.length) {
+    // In quiet mode (perhaps turned on mid-session) the listening and speaking cards still to come are dropped.
+    const rest = queue.slice(index + 1);
+    const kept = quiet ? rest.filter((i) => i.skill === 'written') : rest;
+    if (kept.length !== rest.length) setQueue([...queue.slice(0, index + 1), ...kept]);
+    if (!kept.length) {
       const s = stats.current;
       recordSession({
         sessionId: session.id,
@@ -94,7 +101,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
     stop();
     setResult(undefined);
     setIndex(index + 1);
-  }, [index, queue.length, onFinish, title, recordSession, session, unitKey]);
+  }, [index, queue, quiet, onFinish, title, recordSession, session, unitKey]);
 
   useEffect(() => {
     if (!result) return;
@@ -114,6 +121,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
 
   useEffect(() => stop, []);
 
+
   if (!item || !exercise || !type || !entry) {
     return (
       <main className="screen">
@@ -128,9 +136,9 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
   function handleAnswer(r: AnswerResult) {
     if (!item || !exercise) return;
     setResult(r);
-    if (readAfter === 'auto' && sentence) void play(sentence);
+    if (readAfter === 'auto' && !quiet && sentence) void play(sentence);
     if (vibration) vibrate(r.correct ? 15 : [30, 40, 30]);
-    if (!r.correct) setQueue((q) => requeue(q, index, item, byEntry.get(item.entryId) ?? [], isProduction));
+    if (!r.correct) setQueue((q) => requeue(q, index, item, (byEntry.get(item.entryId) ?? []).filter((ex) => skillOf(ex.type) === item.skill), isProduction));
 
     const recognition = !isProduction(exercise.type);
     const today = dayKey(new Date());
@@ -192,6 +200,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
         <span className="muted small">
           {index + 1}/{queue.length}
         </span>
+        <QuietToggle />
       </header>
 
       <div className="combo-row" aria-live="polite">

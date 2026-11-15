@@ -1,5 +1,5 @@
 import type { DayKey } from './date';
-import { cardKey, isDue, type SrsCard } from './srs';
+import { cardKey, isDue, type Skill, type SrsCard } from './srs';
 
 export interface SessionEntry {
   id: string;
@@ -15,6 +15,8 @@ export interface SessionExercise {
 export interface SessionItem {
   exerciseId: string;
   entryId: string;
+  /** Which of the entry's cards the item trains. */
+  skill: Skill;
   /** Reviewed before it was due: a correct answer does not move the SRS schedule. */
   early: boolean;
   attempt: number;
@@ -34,7 +36,20 @@ export interface BuildSessionInput {
   minPracticeItems?: number;
   /** Share of recognition (non-production) exercises when both kinds exist. */
   recognitionShare?: number;
+  /** Which card an exercise type trains; omitted = every type is written. */
+  skillOf?: (type: string) => Skill;
+  /** Listening or speaking cards mixed into the session (review only), each up to its share. */
+  otherSkills?: readonly OtherSkill[];
   rng?: () => number;
+}
+
+export interface OtherSkill {
+  skill: Exclude<Skill, 'written'>;
+  /** An entry becomes a candidate once it has a card of this skill (mastery ≥ 1): hear before you speak. */
+  requires: Skill;
+  newAllowed: number;
+  /** Most of the session this skill may take. */
+  share: number;
 }
 
 export const SESSION = {
@@ -82,6 +97,19 @@ export function pickExercise(
   return from[Math.floor(rng() * from.length)];
 }
 
+/** Spreads `others` evenly through `base`. */
+export function interleave<T>(base: readonly T[], others: readonly T[]): T[] {
+  const total = base.length + others.length;
+  const out: T[] = [];
+  let b = 0;
+  let k = 0;
+  for (let i = 0; i < total; i++) {
+    const isOther = k < others.length && (b === base.length || i === Math.floor(((k + 0.5) * total) / others.length));
+    out.push(isOther ? others[k++]! : base[b++]!);
+  }
+  return out;
+}
+
 export function buildSession(input: BuildSessionInput): SessionItem[] {
   const {
     entries,
@@ -94,46 +122,59 @@ export function buildSession(input: BuildSessionInput): SessionItem[] {
     maxItems = SESSION.maxItems,
     minPracticeItems = SESSION.minPracticeItems,
     recognitionShare = SESSION.recognitionShare,
+    skillOf = () => 'written',
+    otherSkills = [],
     rng = Math.random,
   } = input;
-
-  // Recognition only revisits what the learner already produced correctly: never for new entries
-  // or after a mistake, so choosing an answer never displaces typing it.
-  const known = (id: string) => (srs[cardKey(id)]?.reps ?? 0) > 0;
-  const byEntry = indexExercisesByEntry(exercises.filter((ex) => isProduction(ex.type) || ex.entryIds.every(known)));
-  const usable = entries.filter((e) => !e.deprecated && byEntry.has(e.id));
-
-  const due = shuffle(
-    usable.filter((e) => srs[cardKey(e.id)] && isDue(srs[cardKey(e.id)]!, today)),
-    rng,
-  ).sort((a, b) => srs[a.id]!.due.localeCompare(srs[b.id]!.due));
-  const fresh = usable.filter((e) => !srs[cardKey(e.id)]).slice(0, Math.max(0, newAllowed));
-
-  const chosen: { id: string; early: boolean }[] = [
-    ...due.map((e) => ({ id: e.id, early: false })),
-    ...fresh.map((e) => ({ id: e.id, early: false })),
-  ].slice(0, maxItems);
-
-  if (mode === 'practice' && chosen.length < minPracticeItems) {
-    const extra = usable
-      .filter((e) => srs[cardKey(e.id)] && !isDue(srs[cardKey(e.id)]!, today))
-      .sort((a, b) => srs[a.id]!.due.localeCompare(srs[b.id]!.due) || srs[a.id]!.ease - srs[b.id]!.ease)
-      .slice(0, minPracticeItems - chosen.length);
-    chosen.push(...extra.map((e) => ({ id: e.id, early: true })));
-  }
-
   const used = new Set<string>();
-  const items: SessionItem[] = [];
-  for (const { id, early } of chosen) {
-    const ex = pickExercise(byEntry.get(id)!, used, isProduction, recognitionShare, rng);
-    if (!ex) continue;
-    used.add(ex.id);
-    items.push({ exerciseId: ex.id, entryId: id, early, attempt: 1 });
+
+  /** Due cards of a skill first (oldest first), then new ones. */
+  function candidates(skill: Skill, ready: (id: string) => boolean, allowedNew: number) {
+    const card = (id: string) => srs[cardKey(id, skill)];
+    // Recognition only revisits what the learner already produced correctly: never for new cards
+    // or after a mistake, so choosing an answer never displaces typing it.
+    const known = (id: string) => (card(id)?.reps ?? 0) > 0;
+    const byEntry = indexExercisesByEntry(
+      exercises.filter((ex) => skillOf(ex.type) === skill && (isProduction(ex.type) || ex.entryIds.every(known))),
+    );
+    const usable = entries.filter((e) => !e.deprecated && byEntry.has(e.id) && ready(e.id));
+    const due = shuffle(
+      usable.filter((e) => card(e.id) && isDue(card(e.id)!, today)),
+      rng,
+    ).sort((a, b) => card(a.id)!.due.localeCompare(card(b.id)!.due));
+    const fresh = usable.filter((e) => !card(e.id)).slice(0, Math.max(0, allowedNew));
+    const notDue = () =>
+      usable
+        .filter((e) => card(e.id) && !isDue(card(e.id)!, today))
+        .sort((a, b) => card(a.id)!.due.localeCompare(card(b.id)!.due) || card(a.id)!.ease - card(b.id)!.ease);
+    return { byEntry, chosen: [...due, ...fresh].map((e) => ({ id: e.id, early: false })), notDue };
   }
-  return items;
+
+  function toItems(skill: Skill, byEntry: Map<string, SessionExercise[]>, chosen: readonly { id: string; early: boolean }[]): SessionItem[] {
+    const items: SessionItem[] = [];
+    for (const { id, early } of chosen) {
+      const ex = pickExercise(byEntry.get(id)!, used, isProduction, recognitionShare, rng);
+      if (!ex) continue;
+      used.add(ex.id);
+      items.push({ exerciseId: ex.id, entryId: id, skill, early, attempt: 1 });
+    }
+    return items;
+  }
+
+  const others = otherSkills.flatMap(({ skill, requires, newAllowed: allowedNew, share }) => {
+    const { byEntry, chosen } = candidates(skill, (id) => !!srs[cardKey(id, requires)], allowedNew);
+    return toItems(skill, byEntry, chosen.slice(0, Math.floor(maxItems * share)));
+  });
+
+  const written = candidates('written', () => true, newAllowed);
+  const chosen = written.chosen.slice(0, Math.max(0, maxItems - others.length));
+  if (mode === 'practice' && chosen.length < minPracticeItems) {
+    chosen.push(...written.notDue().slice(0, minPracticeItems - chosen.length).map((e) => ({ id: e.id, early: true })));
+  }
+  return interleave(toItems('written', written.byEntry, chosen), others);
 }
 
-/** Puts a failed entry back a few cards later, with a different exercise when one exists. */
+/** Puts a failed entry back a few cards later, with a different exercise when one exists. `candidates` must train the same skill. */
 export function requeue(
   queue: readonly SessionItem[],
   position: number,
@@ -147,6 +188,7 @@ export function requeue(
   const item: SessionItem = {
     exerciseId: ex?.id ?? failed.exerciseId,
     entryId: failed.entryId,
+    skill: failed.skill,
     early: false,
     attempt: failed.attempt + 1,
   };

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { review, type SrsCard } from './srs';
-import { buildSession, requeue, type SessionExercise } from './session';
+import { buildSession, interleave, requeue, type OtherSkill, type SessionExercise } from './session';
 
 const today = '2026-11-14';
 const ids = Array.from({ length: 30 }, (_, i) => `p/e${i}`);
@@ -110,7 +110,7 @@ describe('buildSession', () => {
 });
 
 describe('requeue', () => {
-  const queue = ['a', 'b', 'c', 'd', 'e', 'f'].map((e) => ({ exerciseId: `${e}-x`, entryId: e, early: false, attempt: 1 }));
+  const queue = ['a', 'b', 'c', 'd', 'e', 'f'].map((e) => ({ exerciseId: `${e}-x`, entryId: e, skill: 'written' as const, early: false, attempt: 1 }));
 
   it('puts the failed entry back a few cards later with another exercise', () => {
     const cands = [
@@ -126,5 +126,53 @@ describe('requeue', () => {
     const last = queue[5]!;
     expect(requeue(queue, 5, last, [], isProduction).at(-1)).toMatchObject({ entryId: 'f', attempt: 2 });
     expect(requeue(queue, 5, { ...last, attempt: 3 }, [], isProduction)).toHaveLength(6);
+  });
+});
+
+describe('listening in a review', () => {
+  const listening: SessionExercise[] = ids.map((id) => ({ id: `${id}-l`, type: 'dictee-trous', entryIds: [id] }));
+  const skillOf = (type: string) => (type === 'dictee-trous' ? 'listening' : 'written');
+  const rule: OtherSkill = { skill: 'listening', requires: 'written', newAllowed: 5, share: 0.3 };
+  const build = (srs: Record<string, SrsCard>, extra: Partial<Parameters<typeof buildSession>[0]> = {}) =>
+    buildSession({ entries, exercises: [...exercises, ...listening], srs, today, newAllowed: 5, isProduction, skillOf, otherSkills: [rule], mode: 'review', rng: seeded(), ...extra });
+
+  it('only hears entries already met in writing, within its own daily limit', () => {
+    const srs = Object.fromEntries(ids.slice(0, 8).map((id) => [id, cardDue('2026-11-20')]));
+    const heard = build(srs).filter((i) => i.skill === 'listening');
+    expect(heard.map((i) => i.entryId)).toEqual(ids.slice(0, 5));
+    expect(heard.every((i) => i.exerciseId.endsWith('-l'))).toBe(true);
+  });
+
+  it('takes at most its share of the session, due listening cards first', () => {
+    const srs: Record<string, SrsCard> = {};
+    for (const id of ids) {
+      srs[id] = cardDue('2026-11-01');
+      srs[`${id}#listening`] = cardDue('2026-11-02');
+    }
+    const items = build(srs);
+    expect(items).toHaveLength(18);
+    expect(items.filter((i) => i.skill === 'listening')).toHaveLength(5);
+    expect(items.filter((i) => i.skill === 'written')).toHaveLength(13);
+  });
+
+  it('spreads listening through the session rather than bunching it', () => {
+    const srs = Object.fromEntries(ids.map((id) => [id, cardDue('2026-11-01')]));
+    const positions = build(srs)
+      .map((item, i) => (item.skill === 'listening' ? i : -1))
+      .filter((i) => i >= 0);
+    expect(positions).toEqual([1, 5, 9, 12, 16]);
+  });
+
+  it('leaves listening out without the rule (quiet mode) and never schedules the written card from it', () => {
+    const srs = Object.fromEntries(ids.map((id) => [id, cardDue('2026-11-01')]));
+    expect(build(srs, { otherSkills: [] }).every((i) => i.skill === 'written' && !i.exerciseId.endsWith('-l'))).toBe(true);
+  });
+});
+
+describe('interleave', () => {
+  it('keeps both orders and places the others evenly', () => {
+    expect(interleave(['a', 'b', 'c', 'd'], ['X', 'Y'])).toEqual(['a', 'X', 'b', 'c', 'Y', 'd']);
+    expect(interleave([], ['X'])).toEqual(['X']);
+    expect(interleave(['a'], [])).toEqual(['a']);
   });
 });

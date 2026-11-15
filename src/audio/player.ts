@@ -52,6 +52,10 @@ export async function cachedBytes(): Promise<number> {
   return total;
 }
 
+export async function hasCachedAudio(): Promise<boolean> {
+  return ((await (await openCache())?.keys())?.length ?? 0) > 0;
+}
+
 export async function clearCache(): Promise<void> {
   if ('caches' in globalThis) await caches.delete(CACHE).catch(() => false);
 }

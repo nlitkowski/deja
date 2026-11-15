@@ -66,3 +66,24 @@ describe('skills', () => {
     expect(parseEvent({ ...answer('a'), skill: 'reading' })).toBeNull();
   });
 });
+
+describe('a first listening answer', () => {
+  const known = (interval: number) => ({ ease: 2.5, interval, due: '2026-12-01', reps: 4, lapses: 0, correctTotal: 4, lastReviewed: '2026-11-01' });
+  const baseline = (interval: number): ProgressEvent => ({ type: 'baseline', id: 'b', deviceId: 'd1', at: '2026-11-14T07:00:00Z', day: '2026-11-14', cards: { 'p/a': known(interval) } });
+
+  it('starts at three days when the entry is well known in writing', () => {
+    const state = foldEvents([baseline(7), answer('l', { skill: 'listening' })]);
+    expect(state.cards['p/a#listening']).toMatchObject({ interval: 3, due: '2026-11-17' });
+  });
+
+  it('starts at one day otherwise, or after a hesitant or wrong answer', () => {
+    expect(foldEvents([baseline(3), answer('l', { skill: 'listening' })]).cards['p/a#listening']?.interval).toBe(1);
+    expect(foldEvents([baseline(7), answer('l', { skill: 'listening', grade: 'hard' })]).cards['p/a#listening']?.interval).toBe(1);
+    expect(foldEvents([baseline(7), answer('l', { skill: 'listening', grade: 'again', correct: false })]).cards['p/a#listening']?.interval).toBe(0);
+  });
+
+  it('only applies to the first answer', () => {
+    const state = foldEvents([baseline(7), answer('l', { skill: 'listening', grade: 'again', correct: false }), answer('ll', { skill: 'listening' })]);
+    expect(state.cards['p/a#listening']?.interval).toBe(1);
+  });
+});

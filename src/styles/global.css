@@ -713,6 +713,15 @@ button {
   }
 }
 
+.quiet-toggle.on {
+  color: var(--accent);
+}
+
+/* Due listening and speaking cards wait in quiet mode, unpunished. */
+.skill-waiting {
+  opacity: 0.6;
+}
+
 .read-after {
   display: flex;
   align-items: center;

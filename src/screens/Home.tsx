@@ -11,7 +11,9 @@ import { ui } from '../i18n/ui';
 import { dayKey } from '../lib/date';
 import { newIntroducedOn } from '../lib/progress/fold';
 import type { SessionItem } from '../lib/session';
-import { cardKey, isDue } from '../lib/srs';
+import { cardKey, isDue, type Skill } from '../lib/srs';
+import { QuietToggle } from '../components/QuietToggle';
+import { useQuiet } from '../state/quiet';
 import { buildReviewSession, buildUnitSession, NEW_PER_DAY } from '../sessions';
 import { useAppStore } from '../state/appStore';
 import { useLeague, useMapState } from '../state/useGame';
@@ -36,8 +38,14 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onOpe
   const league = useLeague();
   const cards = progress.cards;
   const today = dayKey(new Date());
-  const dueCount = [...content.entries.values()].filter((e) => !e.deprecated && cards[cardKey(e.id)] && isDue(cards[cardKey(e.id)]!, today)).length;
-  const reviewSize = buildReviewSession(progress, settings).length;
+  const { quiet } = useQuiet();
+  const dueOf = (skill: Skill) =>
+    [...content.entries.values()].filter((e) => !e.deprecated && cards[cardKey(e.id, skill)] && isDue(cards[cardKey(e.id, skill)]!, today)).length;
+  const dueCount = dueOf('written');
+  const dueListening = dueOf('listening');
+  const dueSpeaking = dueOf('speaking');
+  const review = () => buildReviewSession(progress, settings, { quiet });
+  const reviewSize = review().length;
   const sheetCount = content.sheets.size;
   const exercisePacks = content.packs.filter((p) => p.unitList.length);
   const practice = (unitKey: string) => onStart(content.units.get(unitKey)?.title ?? '', buildUnitSession(progress, settings, unitKey), unitKey);
@@ -56,6 +64,7 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onOpe
           </div>
           <div className="header-actions">
             <SyncBadge />
+            <QuietToggle />
             <LangSwitch value={settings.helpLang} onChange={(helpLang) => updateSettings({ helpLang })} />
             <button className="icon-button" onClick={onOpenAchievements} aria-label={ui.achievements} title={ui.achievements}>
               <Icon name="trophy" />
@@ -73,8 +82,13 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onOpe
             <p className="big-number">{dueCount}</p>
             <p className="muted">{ui.dueCount(dueCount)}</p>
             <p className="muted small">{ui.newToday(newIntroducedOn(progress, today), NEW_PER_DAY)}</p>
+            {(dueListening > 0 || dueSpeaking > 0) && (
+              <p className={`muted small${quiet ? ' skill-waiting' : ''}`}>
+                {[dueListening > 0 && ui.dueListening(dueListening), dueSpeaking > 0 && ui.dueSpeaking(dueSpeaking)].filter(Boolean).join(' · ')}
+              </p>
+            )}
           </div>
-          <button className="button primary big" disabled={reviewSize === 0} onClick={() => onStart(ui.review, buildReviewSession(progress, settings))}>
+          <button className="button primary big" disabled={reviewSize === 0} onClick={() => onStart(ui.review, review())}>
             {reviewSize === 0 ? ui.allDoneToday : ui.reviewWithCount(reviewSize)}
           </button>
         </section>

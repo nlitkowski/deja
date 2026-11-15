@@ -53,4 +53,11 @@ export const GAME = {
   boss: { questions: 10, lives: 3, secondsPerQuestion: 12 },
   /** The combo counter shows from this many correct answers in a row. */
   comboVisibleFrom: 3,
+  /** Listening and speaking: separate cards, each opened by the skill before it (read → hear → speak). */
+  skills: {
+    listening: { requires: 'written', newPerDay: 5, sessionShare: 0.3 },
+    speaking: { requires: 'listening', newPerDay: 3, sessionShare: 0.2 },
+    /** A first correct listening answer about an entry already known in writing starts at a longer interval. */
+    knownStart: { minWrittenMastery: 3, interval: 3 },
+  },
 } as const;

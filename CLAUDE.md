@@ -222,7 +222,7 @@ Brak kont i backendu, więc nie ma ligi z innymi graczami. Zamiast tego jest **t
 
 Uproszczone SM-2: `ease` (start 2.5, min 1.3), `interval` w dniach, `due`. Karty w stanie są pod kluczem `cardKey(entryId, skill)`: `written` = samo id wpisu, `listening` / `speaking` = `id#skill` (plan w `PLAN-AUDIO.md`). Nigdy nie indeksuj `cards[entryId]` bezpośrednio. `ReviewEvent.skill` bez pola = `written`; typ ćwiczenia deklaruje `skill`. Odblokowania, bossowie i złote jednostki liczą się tylko z `written`, a każda umiejętność ma osobny limit nowych kart (`newIntroducedOn(state, day, skill)`). Oceny Again / Hard / Good / Easy. W ćwiczeniach z wpisywaniem ocena wynika automatycznie z `AnswerResult`: błąd = Again, near-miss lub podpowiedź = Hard, poprawnie = Good, poprawnie i szybko = Easy. Jednostką powtórki jest **Entry**. Wynik ćwiczenia aktualizuje wszystkie wpisy z jego `entryIds`. SRS jest jeden dla wszystkich pakietów, a sesja „Powtórka” miesza je ze sobą.
 
-Sesja: najpierw zaległe (due ≤ dziś), potem maksymalnie 5 nowych dziennie, łącznie około 15–20 kart. Wpis z oceną Again wraca jeszcze w tej samej sesji. Logika ma być czystymi funkcjami z datą przekazywaną jako argument, żeby dało się ją testować.
+Sesja: najpierw zaległe (due ≤ dziś), potem maksymalnie 5 nowych dziennie, łącznie około 15–20 kart. Sesja „Révision” dokłada karty listening / speaking według `GAME.skills` (wymagana karta poprzedniej umiejętności, osobny limit nowych, maksymalny udział w sesji), rozłożone równo; tryb cichy (`settings.quiet` albo brak sieci i nagrań offline, `src/state/quiet.ts`) je pomija. Wpis z oceną Again wraca jeszcze w tej samej sesji. Logika ma być czystymi funkcjami z datą przekazywaną jako argument, żeby dało się ją testować.
 
 ## Ekrany
 
