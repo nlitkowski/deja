@@ -3,7 +3,8 @@ import { content } from '../content/registry';
 import type { Pack, Unit } from '../content/schema';
 import type { Sheet, SheetSection } from '../content/sheet';
 import { ui } from '../i18n/ui';
-import { useLockedUnits } from '../state/useGame';
+import { useLockedUnits, useUnitStates } from '../state/useGame';
+import { Crowns } from './Crowns';
 import { Emoji } from './Emoji';
 import { Icon } from './Icon';
 
@@ -41,6 +42,7 @@ export interface NavTreeProps {
 export function NavTree({ currentSheetKey, activeSection, onOpenSheet, onPractice, onJump }: NavTreeProps) {
   const current = currentSheetKey ? content.sheets.get(currentSheetKey) : undefined;
   const locked = useLockedUnits();
+  const states = useUnitStates();
 
   const follow = (e: MouseEvent, go: () => void) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
@@ -60,6 +62,7 @@ export function NavTree({ currentSheetKey, activeSection, onOpenSheet, onPractic
               const isCurrent = !!sheet && sheet.key === currentSheetKey;
               const label = sheet?.label;
               const title = sheet?.title ?? unit!.title;
+              const state = unit && states.get(unit.key);
               const body = (
                 <>
                   <span className="tree-icon">
@@ -68,6 +71,12 @@ export function NavTree({ currentSheetKey, activeSection, onOpenSheet, onPractic
                   <span>
                     {label && <span className="tree-label">{label}</span>}
                     <span className="tree-title">{title}</span>
+                    {state && !state.locked && state.peak > 0 && (
+                      <span className="tree-crowns" role="img" aria-label={ui.masteryPeakLabel(state.mastery, state.peak)}>
+                        <Crowns mastery={state.mastery} peak={state.peak} small />
+                        {state.refresh.length > 0 && <span className="muted small"> {ui.toRefresh(state.refresh.length)}</span>}
+                      </span>
+                    )}
                   </span>
                 </>
               );

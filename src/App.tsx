@@ -58,6 +58,8 @@ export function App() {
   const setHelpLang = (helpLang: HelpLang) => updateSettings({ helpLang });
   const unitSession = (unitKey: string) => buildUnitSession(useAppStore.getState().progress, settings, unitKey);
   const startSession = (title: string, items: SessionItem[], unitKey?: string) => setScreen({ name: 'session', title, items, unitKey });
+  const refresh = (unitKey: string, entryIds: string[]) =>
+    startSession(ui.refreshTitle(content.units.get(unitKey)?.title ?? ''), buildEntriesSession(useAppStore.getState().progress, settings, entryIds), unitKey);
 
   switch (screen.name) {
     case 'home':
@@ -80,6 +82,7 @@ export function App() {
           onBack={home}
           onPractice={(unitKey) => startSession(content.units.get(unitKey)?.title ?? '', unitSession(unitKey), unitKey)}
           onBoss={(unitKey, listening) => setScreen({ name: 'boss', unitKey, listening })}
+          onRefresh={refresh}
           onOpenSheet={(key) => setScreen({ name: 'sheet', key })}
         />
       );
@@ -115,7 +118,11 @@ export function App() {
       return <League onBack={home} />;
     case 'stats':
       return (
-        <Stats onBack={home} onReviseWeak={(ids) => startSession(ui.weakest, buildEntriesSession(useAppStore.getState().progress, settings, ids))} />
+        <Stats
+          onBack={home}
+          onReviseWeak={(ids) => startSession(ui.weakest, buildEntriesSession(useAppStore.getState().progress, settings, ids))}
+          onRefresh={refresh}
+        />
       );
     case 'achievements':
       return <Achievements onBack={home} />;

@@ -13,11 +13,12 @@ interface Props {
   onBack: () => void;
   onPractice: (unitKey: string) => void;
   onBoss: (unitKey: string, listening?: boolean) => void;
+  onRefresh: (unitKey: string, entryIds: string[]) => void;
   onOpenSheet: (key: string) => void;
 }
 
 /** One pack's path of units and bosses, opened from its tile on the home screen. */
-export function PackScreen({ packId, onBack, onPractice, onBoss, onOpenSheet }: Props) {
+export function PackScreen({ packId, onBack, onPractice, onBoss, onRefresh, onOpenSheet }: Props) {
   const map = useMapState();
   const pack = content.packs.find((p) => p.id === packId);
   const state = map.get(packId);
@@ -41,7 +42,7 @@ export function PackScreen({ packId, onBack, onPractice, onBoss, onOpenSheet }: 
               <Emoji char={pack.icon} /> {pack.title} <span className="level">{pack.level}</span>
             </h1>
             <AudioDownload key={pack.id} units={pack.unitList.map((u) => u.key)} sheets={pack.sheetList.map((s) => s.key)} />
-            <UnitMap pack={pack} state={state} onPractice={onPractice} onBoss={onBoss} />
+            <UnitMap pack={pack} state={state} onPractice={onPractice} onBoss={onBoss} onRefresh={onRefresh} />
           </section>
         )}
       </main>

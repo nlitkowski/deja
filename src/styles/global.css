@@ -2331,6 +2331,16 @@ html,
   opacity: 1;
 }
 
+/* Below the peak: the crown was earned and only needs refreshing, so it stays visible but dull. */
+.crown.faded {
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+.crowns.small {
+  font-size: 0.65rem;
+}
+
 .map-caption,
 .crowns {
   /* Masks the dotted path where it passes behind the text. */
@@ -2876,4 +2886,44 @@ button.tree-sheet:disabled {
 
 .pack-screen h1 {
   margin-bottom: 14px;
+}
+
+.refresh-link {
+  color: var(--info);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  justify-self: center;
+}
+
+.tree-crowns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.refresh-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  width: 100%;
+  margin-top: 6px;
+  padding: 4px 0;
+  background: none;
+  border: 0;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.refresh-unit {
+  flex: 1 1 100%;
 }

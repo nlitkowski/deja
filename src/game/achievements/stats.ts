@@ -4,7 +4,8 @@ import { compareEvents } from '../../lib/progress/fold';
 import { cardKey, type SrsCard } from '../../lib/srs';
 import { GAME } from '../config';
 import { defeatedBosses, type MapUnit } from '../map';
-import { entryMastery } from '../mastery';
+import { entryMastery, unitMastery } from '../mastery';
+import type { Peaks } from '../peaks';
 import { streakInfo } from '../streak';
 import type { XpContext } from '../xp';
 import type { AchievementStats } from './types';
@@ -14,12 +15,14 @@ export interface StatsInput {
   units: readonly MapUnit[];
   today: DayKey;
   xp: XpContext;
+  /** Highest crown of each unit: Maîtrisé, once earned, stays. */
+  peaks?: Peaks;
 }
 
 /** Local hour of an event, on this device's clock: night and morning badges follow the learner's day. */
 const localHour = (at: string) => new Date(at).getHours();
 
-export function achievementStats(events: readonly ProgressEvent[], { cards, units, today, xp }: StatsInput): AchievementStats {
+export function achievementStats(events: readonly ProgressEvent[], { cards, units, today, xp, peaks = new Map() }: StatsInput): AchievementStats {
   const sorted = [...events].sort(compareEvents);
   const stats: AchievementStats = {
     sessions: 0,
@@ -32,7 +35,7 @@ export function achievementStats(events: readonly ProgressEvent[], { cards, unit
     nightSessions: 0,
     earlySessions: 0,
     defeatedBosses: defeatedBosses(events),
-    goldenUnits: units.filter((u) => u.entryIds.length && u.entryIds.every((id) => entryMastery(cards[cardKey(id)]) === 5)).length,
+    goldenUnits: units.filter((u) => Math.max(peaks.get(u.key) ?? 0, unitMastery(u.entryIds, cards)) === 5).length,
     listeningCorrect: 0,
     cleanDictations: 0,
     cleanListeningSessions: 0,

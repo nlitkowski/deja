@@ -5,6 +5,7 @@ import { ui } from '../i18n/ui';
 import { dayKey } from '../lib/date';
 import { cardKey, isDue } from '../lib/srs';
 import { useAppStore } from '../state/appStore';
+import { Crowns } from './Crowns';
 import { Emoji } from './Emoji';
 import { Icon } from './Icon';
 
@@ -30,12 +31,14 @@ interface Props {
   state: PackState;
   onPractice: (unitKey: string) => void;
   onBoss: (unitKey: string, listening?: boolean) => void;
+  /** Practise the entries that keep a unit's crown below its peak. */
+  onRefresh: (unitKey: string, entryIds: string[]) => void;
   /** Continue the path to a "more modules coming" marker; set on the last pack. */
   more?: boolean;
 }
 
 /** The pack as a path: each unit, then its boss. Locks and crowns come from the learner's mastery. */
-export function UnitMap({ pack, state, onPractice, onBoss, more }: Props) {
+export function UnitMap({ pack, state, onPractice, onBoss, onRefresh, more }: Props) {
   const cards = useAppStore((s) => s.progress.cards);
   const today = dayKey(new Date());
 
@@ -110,7 +113,7 @@ export function UnitMap({ pack, state, onPractice, onBoss, more }: Props) {
                   className={`map-node unit-node${u.locked ? ' locked' : ''}${u.golden ? ' golden' : ''}`}
                   disabled={u.locked}
                   onClick={() => onPractice(unit.key)}
-                  aria-label={u.locked ? lockedLabel : `${unit.title}, ${ui.masteryLabel(u.mastery)}`}
+                  aria-label={u.locked ? lockedLabel : `${unit.title}, ${ui.masteryPeakLabel(u.mastery, u.peak)}`}
                   title={u.locked ? lockedLabel : undefined}
                 >
                   <Emoji char={unit.icon} />
@@ -120,13 +123,7 @@ export function UnitMap({ pack, state, onPractice, onBoss, more }: Props) {
                     </span>
                   )}
                 </button>
-                <span className="crowns" aria-hidden>
-                  {[1, 2, 3, 4, 5].map((n) => (
-                    <span key={n} className={n <= u.mastery ? 'crown on' : 'crown'}>
-                      <Icon name="crown" />
-                    </span>
-                  ))}
-                </span>
+                <Crowns mastery={u.mastery} peak={u.peak} />
                 <span className="map-caption">
                   <span className="map-title">{unit.title}</span>
                   <span className="muted small">
@@ -134,6 +131,11 @@ export function UnitMap({ pack, state, onPractice, onBoss, more }: Props) {
                     {due ? ` · ${ui.unitDue(due)}` : ''}
                   </span>
                   {u.golden && <span className="mastered-badge small">{ui.mastered}</span>}
+                  {u.refresh.length > 0 && (
+                    <button className="refresh-link small" onClick={() => onRefresh(unit.key, u.refresh)}>
+                      {ui.toRefresh(u.refresh.length)}
+                    </button>
+                  )}
                   {u.listening.started && (
                     <span className="listening-level small" role="img" aria-label={ui.listeningLevel(u.listening.mastery)}>
                       <Icon name="headphones" /> {u.listening.mastery}/5

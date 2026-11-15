@@ -178,11 +178,11 @@ Wszystkie wartości liczbowe trzymaj w `game/config.ts`, żeby dało się je ła
 - Level-up: pełnoekranowa animacja, konfetti i dźwięk.
 
 ### Mastery wpisów (korony)
-Każdy wpis ma poziom 0–5, liczony z SRS (interval i liczba poprawnych odpowiedzi z rzędu). Na mapie wpisy i jednostki pokazują kolor lub korony. Jednostka ma poziom równy minimum z jej wpisów. Złota jednostka oznacza wszystkie wpisy na poziomie 5.
+Każdy wpis ma poziom 0–5, liczony z SRS (interval i liczba poprawnych odpowiedzi z rzędu). Na mapie wpisy i jednostki pokazują kolor lub korony. Korona jednostki to najwyższy poziom L, który ma co najmniej 80% aktywnych wpisów, przy czym żaden wpis nie jest niżej niż L − 2 (`GAME.mastery.unitShare`, `unitMaxGap`). Szczyt (`unitPeaks`, `src/game/peaks.ts`) to najwyższa korona w historii: liczony z logu i zapamiętywany lokalnie (`deja:unit-peaks`), nigdy nie spada. Korony między bieżącą a szczytem są wyszarzone, z linkiem „N entrées à rafraîchir”. „Maîtrisé” i odznaki liczą się od szczytu (korona 5).
 
 ### Mapa (skill tree)
 - Ekran główny to ścieżka jednostek w ramach pakietu, a pakiety układają się w kolejne „regiony”.
-- Kolejna jednostka odblokowuje się, gdy poprzednia ma wszystkie wpisy na mastery ≥ 1.
+- Kolejna jednostka odblokowuje się, gdy poprzednia ma wszystkie wpisy na mastery ≥ 1 (niezależnie od reguły 80% dla korony). Boss: co najmniej 80% wpisów na mastery ≥ 2.
 - Na końcu każdej jednostki jest **boss**: 10 pytań typu confusable-duel lub gap-fill, 3 życia, limit czasu na pytanie. Pokonanie bossa daje odznakę i duży bonus XP. Przegrana nic nie odbiera, można spróbować ponownie.
 
 ### Streak i cel dzienny

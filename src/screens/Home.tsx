@@ -137,7 +137,8 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onOpe
           <div className="pack-tiles">
             {exercisePacks.map((pack) => {
               const state = map.get(pack.id)!;
-              const opened = state.units.filter((u) => u.mastery >= 1).length;
+              const opened = state.units.filter((u) => u.total > 0 && u.seen === u.total).length;
+              const fading = state.units.filter((u) => u.refresh.length).length;
               const due = pack.unitList
                 .flatMap((u) => u.entryIds)
                 .filter((id) => cards[cardKey(id)] && isDue(cards[cardKey(id)]!, today)).length;
@@ -160,6 +161,7 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onOpe
                       <>
                         {ui.unitsDone(opened, state.units.length)}
                         {due ? ` · ${ui.unitDue(due)}` : ''}
+                        {fading ? ` · ${ui.unitsToRefresh(fading)}` : ''}
                       </>
                     )}
                   </span>

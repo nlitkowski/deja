@@ -1,7 +1,7 @@
 import type { ProgressEvent, SessionKind } from '../lib/progress/events';
 import { cardKey, type Skill, type SrsCard } from '../lib/srs';
 import { GAME } from './config';
-import { entryMastery, unitMastery, type Mastery } from './mastery';
+import { entriesBelow, entryMastery, mostAtLeast, unitMastery, type Mastery } from './mastery';
 
 export interface MapUnit {
   key: string;
@@ -21,11 +21,16 @@ export interface MapPack {
 
 export interface UnitState {
   key: string;
+  /** The crown now. */
   mastery: Mastery;
+  /** The highest crown the unit ever had (never below `mastery`): faded crowns between the two. */
+  peak: Mastery;
+  /** Below its peak: the entries that keep the crown down, weakest first. */
+  refresh: string[];
   seen: number;
   total: number;
   locked: boolean;
-  /** Every entry at mastery 5. */
+  /** Maîtrisé: the unit once reached crown 5, and keeps the title. */
   golden: boolean;
   boss: { unlocked: boolean; defeated: boolean };
   /** The second track: never gates anything on the map. */
@@ -65,36 +70,45 @@ export function defeatedBosses(events: readonly ProgressEvent[], kind: SessionKi
 const goldenIn = (entryIds: readonly string[], cards: Readonly<Record<string, SrsCard>>, skill: Skill = 'written') =>
   entryIds.length > 0 && entryIds.every((id) => entryMastery(cards[cardKey(id, skill)]) === 5);
 
+/** Every entry seen: what opens the next unit. Kept apart from the crown so its 80% rule does not loosen unlocks. */
+export const allSeen = (entryIds: readonly string[], cards: Readonly<Record<string, SrsCard>>) =>
+  entryIds.length > 0 && entryIds.every((id) => entryMastery(cards[cardKey(id)]) >= GAME.mastery.unlockNext);
+
 /**
  * The map's locks. A unit opens once the one before it has every entry seen (mastery ≥ 1); its boss
- * once the unit reaches mastery 2. A pack with `requires` opens once those packs are complete.
+ * once most of its entries reach mastery 2. A pack with `requires` opens once those packs are complete.
  * Optional units are skipped: the unit after one waits for the last required unit before it.
+ * `peaks`: the highest crown each unit ever had (see `unitPeaks`).
  */
 export function mapState(
   packs: readonly MapPack[],
   cards: Readonly<Record<string, SrsCard>>,
   defeated: ReadonlySet<string>,
   defeatedListening: ReadonlySet<string> = new Set(),
+  peaks: ReadonlyMap<string, Mastery> = new Map(),
 ): Map<string, PackState> {
-  const mastery = new Map(packs.flatMap((p) => p.units.map((u) => [u.key, unitMastery(u.entryIds, cards)] as const)));
-  const complete = new Map(packs.map((p) => [p.id, p.units.every((u) => u.optional || mastery.get(u.key)! >= GAME.mastery.unlockNext)]));
+  const seen = new Map(packs.flatMap((p) => p.units.map((u) => [u.key, allSeen(u.entryIds, cards)] as const)));
+  const complete = new Map(packs.map((p) => [p.id, p.units.every((u) => u.optional || seen.get(u.key)!)]));
 
   return new Map(
     packs.map((pack) => {
       const missing = pack.requires.filter((id) => !complete.get(id));
       const locked = missing.length > 0;
       const units = pack.units.map((unit, i): UnitState => {
-        const m = mastery.get(unit.key)!;
+        const m = unitMastery(unit.entryIds, cards);
+        const peak = Math.max(m, peaks.get(unit.key) ?? 0) as Mastery;
         const previous = gatingUnit(pack.units, i);
-        const unitLocked = locked || (!!previous && mastery.get(previous.key)! < GAME.mastery.unlockNext);
+        const unitLocked = locked || (!!previous && !seen.get(previous.key)!);
         return {
           key: unit.key,
           mastery: m,
+          peak,
+          refresh: peak > m ? entriesBelow(unit.entryIds, cards, peak) : [],
           seen: unit.entryIds.filter((id) => cards[cardKey(id)]).length,
           total: unit.entryIds.length,
           locked: unitLocked,
-          golden: goldenIn(unit.entryIds, cards),
-          boss: { unlocked: !unitLocked && m >= GAME.mastery.bossFrom, defeated: defeated.has(unit.key) },
+          golden: peak === 5,
+          boss: { unlocked: !unitLocked && mostAtLeast(unit.entryIds, cards, GAME.mastery.bossFrom), defeated: defeated.has(unit.key) },
           listening: listeningState(unit, cards, unitLocked, defeatedListening),
         };
       });
@@ -109,6 +123,8 @@ function listeningState(unit: MapUnit, cards: Readonly<Record<string, SrsCard>>,
     started: unit.entryIds.some((id) => cards[cardKey(id, 'listening')]),
     mastery,
     golden: goldenIn(unit.entryIds, cards, 'listening'),
-    boss: unit.listeningBoss ? { unlocked: !unitLocked && mastery >= GAME.mastery.bossFrom, defeated: defeated.has(unit.key) } : undefined,
+    boss: unit.listeningBoss
+      ? { unlocked: !unitLocked && mostAtLeast(unit.entryIds, cards, GAME.mastery.bossFrom, 'listening'), defeated: defeated.has(unit.key) }
+      : undefined,
   };
 }

@@ -43,6 +43,10 @@ export const ui = {
   unitLocked: (title: string, previous: string) => `${title} : verrouillé. Découvre d’abord tous les mots de « ${previous} ».`,
   packLocked: (packs: string) => `Termine d’abord : ${packs}`,
   masteryLabel: (n: number) => `Maîtrise ${n} sur 5`,
+  masteryPeakLabel: (n: number, peak: number) => (peak > n ? `Maîtrise ${n} sur 5 (record ${peak})` : `Maîtrise ${n} sur 5`),
+  toRefresh: (n: number) => `${n} entrée${n > 1 ? 's' : ''} à rafraîchir`,
+  refreshTitle: (unit: string) => `À rafraîchir · ${unit}`,
+  unitsToRefresh: (n: number) => `${n} couronne${n > 1 ? 's' : ''} à rafraîchir`,
   mastered: 'Maîtrisé',
   locked: 'Verrouillé',
 

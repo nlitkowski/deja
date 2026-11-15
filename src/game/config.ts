@@ -23,7 +23,10 @@ export const GAME = {
     /** Minimum interval in days for mastery 2, 3, 4 and 5. */
     intervals: [3, 7, 21, 60],
     goldReps: 4,
-    /** A unit's next unit opens at this unit mastery; its boss at `bossFrom`. */
+    /** Unit crown L: at least `unitShare` of its entries at mastery ≥ L, and none below L − `unitMaxGap`. */
+    unitShare: 0.8,
+    unitMaxGap: 2,
+    /** The next unit opens once every entry is seen (mastery ≥ `unlockNext`); the boss once `unitShare` of them reach `bossFrom`. */
     unlockNext: 1,
     bossFrom: 2,
   },

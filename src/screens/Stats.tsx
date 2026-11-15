@@ -4,15 +4,18 @@ import { content } from '../content/registry';
 import { ui } from '../i18n/ui';
 import { cardKey } from '../lib/srs';
 import { useAppStore } from '../state/appStore';
-import { useStats } from '../state/useGame';
+import { useStats, useUnitStates } from '../state/useGame';
+import { Crowns } from '../components/Crowns';
 
 interface Props {
   onBack: () => void;
   onReviseWeak: (entryIds: string[]) => void;
+  onRefresh: (unitKey: string, entryIds: string[]) => void;
 }
 
-export function Stats({ onBack, onReviseWeak }: Props) {
+export function Stats({ onBack, onReviseWeak, onRefresh }: Props) {
   const { heatmap, weakest, mastery } = useStats();
+  const units = useUnitStates();
   const cards = useAppStore((s) => s.progress.cards);
   const helpLang = useAppStore((s) => s.settings.helpLang);
 
@@ -94,6 +97,18 @@ export function Stats({ onBack, onReviseWeak }: Props) {
                 <span className="mastery-bar" role="img" aria-label={counts.map((n, level) => `${ui.masteryLevels[level]} : ${n}`).join(', ')}>
                   {counts.map((n, level) => (n ? <span key={level} className={`mastery-${level}`} style={{ flexGrow: n / total }} /> : null))}
                 </span>
+                {pack.unitList
+                  .filter((u) => units.get(u.key)?.refresh.length)
+                  .map((u) => {
+                    const state = units.get(u.key)!;
+                    return (
+                      <button key={u.key} className="refresh-row" onClick={() => onRefresh(u.key, state.refresh)}>
+                        <span className="refresh-unit">{u.title}</span>
+                        <Crowns mastery={state.mastery} peak={state.peak} small />
+                        <span className="refresh-link small">{ui.toRefresh(state.refresh.length)}</span>
+                      </button>
+                    );
+                  })}
               </div>
             );
           })}
