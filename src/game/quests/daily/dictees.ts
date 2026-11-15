@@ -6,7 +6,7 @@ const quietFallback: Quest = {
   id: 'trous-sans-faute',
   period: 'day',
   title: `${TARGET} phrases à trous sans faute`,
-  icon: '✏️',
+  icon: '📝',
   target: () => TARGET,
   progress: (d) => d.reviews.filter((r) => r.event.correct && !r.event.nearMiss && d.exerciseType(r.event.exerciseId) === 'gap-fill').length,
 };

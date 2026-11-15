@@ -8,6 +8,13 @@ const EMOJI_FONT = `${PIXEL_SIZE - 2}px "Apple Color Emoji", "Segoe UI Emoji", "
  * A content emoji. In the 8-bit palette CSS swaps the glyph for a low-resolution canvas drawing
  * of the same emoji, scaled up without smoothing, so any emoji in a content pack becomes pixel art.
  */
+/**
+ * What the canvas draws: a ZWJ sequence (👨‍👩‍👧) or a variation selector can come out as an empty box on a
+ * 14-pixel canvas (iOS), so the drawing keeps only the first emoji of a sequence. Content icons are single
+ * characters anyway (content.test.ts); this covers packs imported from a file.
+ */
+export const pixelChar = (char: string) => char.split('\u200d')[0]!.replace(/\ufe0f/g, '');
+
 export function Emoji({ char }: { char: string }) {
   const canvas = useRef<HTMLCanvasElement>(null);
 
@@ -18,7 +25,7 @@ export function Emoji({ char }: { char: string }) {
     ctx.font = EMOJI_FONT;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(char, PIXEL_SIZE / 2, PIXEL_SIZE / 2 + 1);
+    ctx.fillText(pixelChar(char), PIXEL_SIZE / 2, PIXEL_SIZE / 2 + 1);
   }, [char]);
 
   return (

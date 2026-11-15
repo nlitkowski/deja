@@ -55,6 +55,7 @@ export const ui = {
   quests: 'Quêtes',
   weekly: 'Semaine',
   claim: (xp: number) => `Récupérer +${xp} XP`,
+  claimShort: 'Récupérer',
   claimed: 'Récupéré ✓',
   achievements: 'Succès',
   achievementsCount: (n: number, total: number) => `${n} sur ${total} débloqués`,
@@ -118,6 +119,8 @@ export const ui = {
     if (status === 'offline') return `Hors ligne : ${items} en attente d’envoi. Tout reste sur cet appareil.`;
     return `${items} en attente d’envoi.`;
   },
+  syncShort: (status: 'syncing' | 'synced' | 'pending' | 'offline', pending: number) =>
+    status === 'synced' ? 'Synchronisé' : status === 'syncing' ? 'Synchronisation…' : status === 'offline' ? `Hors ligne · ${pending} en attente` : `${pending} en attente`,
   signOutHint: 'Ta progression reste sur ton compte. En te déconnectant, elle est retirée de cet appareil.',
   unsentWarning: (n: number) =>
     `${n} élément${n > 1 ? 's' : ''} de progression n’${n > 1 ? 'ont' : 'a'} pas pu être envoyé${n > 1 ? 's' : ''}. Si tu te déconnectes maintenant, ${n > 1 ? 'ils seront perdus' : 'il sera perdu'}. Exporte d’abord ta progression pour la garder.`,

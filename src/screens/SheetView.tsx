@@ -80,10 +80,15 @@ function Block({ block, lang }: { block: SheetBlock; lang: HelpLang }) {
             {block.items.map((item, i) => (
               <li key={i}>
                 <Play text={item.fr} audio={item.audio} />
-                <span lang="fr">
-                  <RichText text={item.fr} />
-                </span>
-                {lang === 'pl' && <Translation key={item.fr} text={item.pl} lang="pl" />}
+                {lang === 'pl' ? (
+                  <Translation key={item.fr} text={item.pl} lang="pl">
+                    <RichText text={item.fr} />
+                  </Translation>
+                ) : (
+                  <span lang="fr">
+                    <RichText text={item.fr} />
+                  </span>
+                )}
               </li>
             ))}
           </ul>

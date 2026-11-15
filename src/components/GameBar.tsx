@@ -17,8 +17,17 @@ export function GameBar() {
           <circle className="goal-ring-fill" cx="32" cy="32" r="26" strokeDasharray={RING} strokeDashoffset={RING * (1 - goalShare)} />
         </svg>
         <span className="goal-ring-text" aria-hidden>
-          <strong>{streak.todayXp}</strong>
-          <small>/{streak.goal}</small>
+          {streak.todayDone ? (
+            <>
+              <small className="goal-check">✓</small>
+              <strong>{streak.todayXp}</strong>
+            </>
+          ) : (
+            <>
+              <strong>{streak.todayXp}</strong>
+              <small>/{streak.goal}</small>
+            </>
+          )}
         </span>
       </div>
 

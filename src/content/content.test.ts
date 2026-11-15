@@ -158,6 +158,17 @@ describe('content packs', () => {
     if (oversized.length) console.warn(['Za duże jednostki (cel: do 25 wpisów i 110 ćwiczeń):', ...oversized].join('\n'));
   });
 
+  it('every icon is a single character, without ZWJ sequences or variation selectors (they break in 8-bit)', () => {
+    const icons = [
+      ...disk.packs.map((p) => [p.id, p.icon]),
+      ...disk.packs.flatMap((p) => p.unitList.map((u) => [u.key, u.icon])),
+      ...[...disk.sheets.values()].map((s) => [s.key, s.icon]),
+    ];
+    const graphemes = (s: string) => [...new Intl.Segmenter('fr', { granularity: 'grapheme' }).segment(s)].length;
+    const broken = icons.filter(([, icon]) => graphemes(icon!) !== 1 || icon!.includes('\u200d') || icon!.includes('\ufe0f')).map(([key, icon]) => `${key}: ${icon}`);
+    expect(broken).toEqual([]);
+  });
+
   it('Édito A1 unité 0 is optional: unité 1 stays open without it', () => {
     const edito = content.packs.find((p) => p.id === 'edito-a1')!;
     const packs = [{ id: edito.id, requires: [], units: edito.unitList.map((u) => ({ key: u.key, optional: u.optional, entryIds: u.entryIds })) }];

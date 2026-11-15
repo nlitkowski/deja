@@ -33,8 +33,9 @@ export function QuestList() {
               </span>
             </span>
             {done && !claimed ? (
-              <button className="button primary quest-claim" onClick={() => claim(quest.id, period, reward)}>
-                {ui.claim(reward)}
+              <button className="button primary quest-claim" onClick={() => claim(quest.id, period, reward)} aria-label={ui.claim(reward)}>
+                <span aria-hidden>{ui.claimShort}</span>
+                <span aria-hidden>+{reward} XP</span>
               </button>
             ) : (
               <span className="quest-count muted small">{claimed ? ui.claimed : `${progress}/${target}`}</span>

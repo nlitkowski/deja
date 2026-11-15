@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef, useState, type CSSProperties, type RefObject } from 'react';
 import { content } from '../content/registry';
 import type { Pack } from '../content/schema';
 import { gatingUnit, type PackState } from '../game/map';
@@ -9,21 +10,43 @@ import { Crowns } from './Crowns';
 import { Emoji } from './Emoji';
 import { Icon } from './Icon';
 
-/** Horizontal position of each step, in % of the width: a gentle zigzag, like a path on a game map. */
-const ZIGZAG = [50, 78, 50, 22];
-const UNIT_STEP = 150;
-const BOSS_STEP = 96;
-const MORE_STEP = 110;
-const NODE_CENTER = 36;
+/** Horizontal position of each node, in % of the width: a gentle zigzag, like a path on a game map. */
+const ZIGZAG = [50, 66, 50, 34];
 
-function layout<S extends { height: number }>(steps: S[]) {
-  const placed: (S & { top: number; x: number })[] = [];
-  let top = 0;
-  for (const [i, step] of steps.entries()) {
-    placed.push({ ...step, top, x: ZIGZAG[i % ZIGZAG.length]! });
-    top += step.height;
-  }
-  return { placed, height: top };
+/** "Unité 1 · Je suis…" → a label line and a title line, so a long title never wraps mid-phrase. */
+function splitTitle(title: string): { label?: string; name: string } {
+  const at = title.indexOf(' · ');
+  return at < 0 ? { name: title } : { label: title.slice(0, at), name: title.slice(at + 3) };
+}
+
+/**
+ * The dotted path, measured from the laid-out steps: from under each caption to the top of the next node,
+ * so it never runs behind text.
+ */
+function usePathLine(ref: RefObject<HTMLDivElement | null>) {
+  const [line, setLine] = useState<{ d: string; width: number; height: number }>();
+  useLayoutEffect(() => {
+    const root = ref.current;
+    if (!root) return;
+    const measure = () => {
+      const box = root.getBoundingClientRect();
+      const steps = [...root.querySelectorAll<HTMLElement>('.map-step')];
+      const segments: string[] = [];
+      let from: string | undefined;
+      for (const step of steps) {
+        const node = step.querySelector<HTMLElement>('.map-node')!.getBoundingClientRect();
+        const x = Math.round(node.left + node.width / 2 - box.left);
+        if (from) segments.push(`M${from}L${x},${Math.round(node.top - box.top - 6)}`);
+        from = `${x},${Math.round(step.getBoundingClientRect().bottom - box.top + 4)}`;
+      }
+      setLine({ d: segments.join(''), width: box.width, height: box.height });
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(root);
+    return () => observer.disconnect();
+  }, [ref]);
+  return line;
 }
 
 interface Props {
@@ -42,17 +65,18 @@ export function UnitMap({ pack, state, onPractice, onBoss, onRefresh, more }: Pr
   const cards = useAppStore((s) => s.progress.cards);
   const today = dayKey(new Date());
 
+  const pathRef = useRef<HTMLDivElement>(null);
+  const line = usePathLine(pathRef);
+
   const steps = pack.unitList.flatMap((unit, i) => {
     const unitState = state.units[i]!;
     return [
-      { kind: 'unit' as const, unit, unitState, height: UNIT_STEP },
-      { kind: 'boss' as const, unit, unitState, height: BOSS_STEP },
+      { kind: 'unit' as const, unit, unitState },
+      { kind: 'boss' as const, unit, unitState },
     ];
   });
-  const { placed, height: pathHeight } = layout(steps);
-  const end = { top: pathHeight, x: ZIGZAG[placed.length % ZIGZAG.length]! };
-  const height = more ? pathHeight + MORE_STEP : pathHeight;
-  const points = [...placed, ...(more ? [end] : [])].map((s) => `${s.x},${s.top + NODE_CENTER}`).join(' ');
+  const placed = steps.map((step, i) => ({ ...step, x: ZIGZAG[i % ZIGZAG.length]! }));
+  const endX = ZIGZAG[placed.length % ZIGZAG.length]!;
   const missing = state.missing.map((id) => content.packs.find((p) => p.id === id)?.title ?? id).join(', ');
 
   return (
@@ -62,15 +86,17 @@ export function UnitMap({ pack, state, onPractice, onBoss, onRefresh, more }: Pr
           <Icon name="lock" /> {ui.packLocked(missing)}
         </p>
       )}
-      <div className="map-path" style={{ height }}>
-        <svg className="map-line" viewBox={`0 0 100 ${height}`} preserveAspectRatio="none" aria-hidden>
-          <polyline points={points} vectorEffect="non-scaling-stroke" />
-        </svg>
+      <div className="map-path" ref={pathRef}>
+        {line && (
+          <svg className="map-line" viewBox={`0 0 ${line.width} ${line.height}`} aria-hidden>
+            <path d={line.d} />
+          </svg>
+        )}
         <ol>
           {placed.map((step, i) => {
             const { unit, unitState: u } = step;
             const previous = gatingUnit(pack.unitList, pack.unitList.indexOf(unit));
-            const style = { top: step.top, left: `${step.x}%` };
+            const style = { '--x': `${step.x}%` } as CSSProperties;
             if (step.kind === 'boss') {
               const open = u.boss.unlocked;
               const label = open ? ui.bossLabel(unit.title) : ui.bossLocked(unit.title);
@@ -107,6 +133,7 @@ export function UnitMap({ pack, state, onPractice, onBoss, onRefresh, more }: Pr
             }
             const due = unit.entryIds.filter((id) => cards[cardKey(id)] && isDue(cards[cardKey(id)]!, today)).length;
             const lockedLabel = previous ? ui.unitLocked(unit.title, previous.title) : unit.title;
+            const title = splitTitle(unit.title);
             return (
               <li key={unit.key} className="map-step unit-step" style={style} data-index={i}>
                 <button
@@ -125,7 +152,10 @@ export function UnitMap({ pack, state, onPractice, onBoss, onRefresh, more }: Pr
                 </button>
                 <Crowns mastery={u.mastery} peak={u.peak} />
                 <span className="map-caption">
-                  <span className="map-title">{unit.title}</span>
+                  <span className="map-title">
+                    {title.label && <span className="map-label">{title.label}</span>}
+                    {title.name}
+                  </span>
                   <span className="muted small">
                     {ui.unitSeen(u.seen, u.total)}
                     {due ? ` · ${ui.unitDue(due)}` : ''}
@@ -147,7 +177,7 @@ export function UnitMap({ pack, state, onPractice, onBoss, onRefresh, more }: Pr
             );
           })}
           {more && (
-            <li className="map-step more-step" style={{ top: end.top, left: `${end.x}%` }}>
+            <li className="map-step more-step" style={{ '--x': `${endX}%` } as CSSProperties}>
               <span className="map-node more-node" aria-hidden>
                 <Icon name="more" />
               </span>

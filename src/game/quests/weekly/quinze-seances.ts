@@ -4,7 +4,7 @@ const quest: Quest = {
   id: 'quinze-seances',
   period: 'week',
   title: 'Termine 15 séances',
-  icon: '🗓️',
+  icon: '📆',
   target: () => 15,
   progress: (d) => d.sessions.length,
 };

@@ -271,8 +271,13 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
               {example && (
                 <p className="example">
                   <Play text={example.fr} audio={example.audio} />
-                  <span lang="fr">{example.fr}</span>
-                  {helpLang === 'pl' && <Translation key={example.fr} text={example.pl} lang="pl" />}
+                  {helpLang === 'pl' ? (
+                    <Translation key={example.fr} text={example.pl} lang="pl">
+                      {example.fr}
+                    </Translation>
+                  ) : (
+                    <span lang="fr">{example.fr}</span>
+                  )}
                 </p>
               )}
             </div>
