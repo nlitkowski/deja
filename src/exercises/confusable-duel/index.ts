@@ -39,6 +39,7 @@ export const confusableDuel: ExerciseLogic<DuelData> = {
   id: 'confusable-duel',
   schema: duelSchema,
   production: false,
+  skill: 'written',
   generate(entry, ctx) {
     const group = [entry.id, ...entry.confusables]
       .filter((id) => !ctx.allEntries.get(id)?.deprecated && labelOf(id, ctx))

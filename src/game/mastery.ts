@@ -1,4 +1,4 @@
-import { cardKey, type SrsCard } from '../lib/srs';
+import { cardKey, type Skill, type SrsCard } from '../lib/srs';
 import { GAME } from './config';
 
 export type Mastery = 0 | 1 | 2 | 3 | 4 | 5;
@@ -14,8 +14,14 @@ export function entryMastery(card: SrsCard | undefined): Mastery {
   return 1;
 }
 
-/** The weakest entry decides: a unit is only as mastered as its least known entry. */
-export function unitMastery(entryIds: readonly string[], cards: Readonly<Record<string, SrsCard>>): Mastery {
+export const skillMastery = (cards: Readonly<Record<string, SrsCard>>, entryId: string, skill: Skill): Mastery =>
+  entryMastery(cards[cardKey(entryId, skill)]);
+
+/**
+ * The weakest entry decides: a unit is only as mastered as its least known entry.
+ * Unlocks, bosses and gold use the written skill, so listening and speaking never close the map.
+ */
+export function unitMastery(entryIds: readonly string[], cards: Readonly<Record<string, SrsCard>>, skill: Skill = 'written'): Mastery {
   if (!entryIds.length) return 0;
-  return Math.min(...entryIds.map((id) => entryMastery(cards[cardKey(id)]))) as Mastery;
+  return Math.min(...entryIds.map((id) => skillMastery(cards, id, skill))) as Mastery;
 }

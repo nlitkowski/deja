@@ -7,7 +7,7 @@ import { emptyProgress, type ProgressState } from '../lib/progress/fold';
 import { Projection } from '../lib/progress/projection';
 import type { ProgressStore } from '../lib/progress/store';
 import { appendingStore } from './localStore';
-import { gradeFromResult, type AnswerResult } from '../lib/srs';
+import { gradeFromResult, type AnswerResult, type Skill } from '../lib/srs';
 import { compareEvents } from '../lib/progress/fold';
 import { NEVER, parseStamped, stampSettings, SYNCED_SETTINGS, type StampedSettings, type SyncedKey } from '../lib/settingsSync';
 import { browserStore, deviceId, loadState, saveState, SCHEMA_VERSION, type KeyValueStore, type Settings } from '../lib/storage';
@@ -20,6 +20,7 @@ export interface AnswerInput {
   sessionId?: string;
   comboBefore?: number;
   production?: boolean;
+  skill?: Skill;
 }
 
 export type SessionInput = Omit<SessionEvent, 'type' | 'id' | 'deviceId' | 'at' | 'day'>;
@@ -122,7 +123,7 @@ export function createAppStore({ progressStore, kv }: Deps) {
         }
       },
 
-      recordAnswer({ exerciseId, entryIds, result, early, sessionId, comboBefore, production }, now = new Date()) {
+      recordAnswer({ exerciseId, entryIds, result, early, sessionId, comboBefore, production, skill }, now = new Date()) {
         const event: ReviewEvent = {
           type: 'review',
           ...base(now),
@@ -136,6 +137,8 @@ export function createAppStore({ progressStore, kv }: Deps) {
           early,
           ...(sessionId ? { sessionId, comboBefore } : {}),
           ...(production !== undefined ? { production } : {}),
+          // Written stays implicit, so its events look exactly like those from before skills existed.
+          ...(skill && skill !== 'written' ? { skill } : {}),
         };
         return record(event, 'answer');
       },

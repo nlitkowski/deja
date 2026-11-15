@@ -32,6 +32,7 @@ export const EventSchema = z.discriminatedUnion('type', [
     sessionId: z.string().optional(),
     comboBefore: z.number().optional(),
     production: z.boolean().optional(),
+    skill: z.enum(['written', 'listening', 'speaking']).optional(),
   }),
   z.object({
     ...base,

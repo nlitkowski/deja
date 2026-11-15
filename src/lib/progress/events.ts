@@ -1,5 +1,5 @@
 import type { DayKey } from '../date';
-import type { Grade, SrsCard } from '../srs';
+import type { Grade, Skill, SrsCard } from '../srs';
 
 /**
  * Progress is an append-only log of events; everything else (SRS cards, new-per-day, later XP and streaks)
@@ -31,7 +31,11 @@ export interface ReviewEvent extends EventBase {
   comboBefore?: number;
   /** Typed or chosen, when the exercise id alone does not tell (a boss asks both kinds about one exercise). */
   production?: boolean;
+  /** Card the answer trains; omitted = written (every event from before listening and speaking). */
+  skill?: Skill;
 }
+
+export const reviewSkill = (event: ReviewEvent): Skill => event.skill ?? 'written';
 
 export type SessionKind = 'review' | 'unit' | 'boss';
 

@@ -20,4 +20,5 @@ export const gapFill: ExerciseLogic<GapFillData> = {
   id: 'gap-fill',
   schema: gapFillSchema,
   production: true,
+  skill: 'written',
 };

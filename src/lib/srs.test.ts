@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cardKey, gradeFromResult, isDue, review } from './srs';
+import { cardKey, gradeFromResult, isDue, review, skillOfKey } from './srs';
 
 const base = { correct: true, nearMiss: false, timeMs: 8000, hintUsed: false };
 
@@ -67,5 +67,13 @@ describe('cardKey', () => {
   it('keys the written card by the bare entry id, so stored cards stay valid', () => {
     expect(cardKey('p/a')).toBe('p/a');
     expect(cardKey('p/a', 'written')).toBe('p/a');
+  });
+});
+
+describe('cardKey for other skills', () => {
+  it('suffixes the skill and reads it back', () => {
+    expect(cardKey('p/a', 'listening')).toBe('p/a#listening');
+    expect(skillOfKey(cardKey('p/a', 'speaking'))).toBe('speaking');
+    expect(skillOfKey('p/a')).toBe('written');
   });
 });

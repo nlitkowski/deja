@@ -14,5 +14,6 @@ export const translatePlFr: ExerciseLogic<TranslateData> = {
   id: 'translate-pl-fr',
   schema: translateSchema,
   production: true,
+  skill: 'written',
   helpLangs: ['pl'],
 };

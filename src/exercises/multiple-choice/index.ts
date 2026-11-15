@@ -25,6 +25,7 @@ export const multipleChoice: ExerciseLogic<MultipleChoiceData> = {
   id: 'multiple-choice',
   schema: multipleChoiceSchema,
   production: false,
+  skill: 'written',
   generate(entry, ctx) {
     const candidates = [...entry.confusables, ...ctx.unitEntries.map((e) => e.id)].filter(
       (id) => id !== entry.id && !ctx.allEntries.get(id)?.deprecated,

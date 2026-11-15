@@ -14,6 +14,7 @@ export const matchPairs: ExerciseLogic<MatchPairsData> = {
   id: 'match-pairs',
   schema: matchPairsSchema,
   production: false,
+  skill: 'written',
   helpLangs: ['pl'],
   generate(entry, ctx) {
     const unit = ctx.unitEntries;

@@ -1,12 +1,12 @@
 import type { DayKey } from '../date';
-import { cardKey, review, type SrsCard } from '../srs';
-import type { ProgressEvent } from './events';
+import { cardKey, review, skillOfKey, type Skill, type SrsCard } from '../srs';
+import { reviewSkill, type ProgressEvent } from './events';
 
 export interface ProgressState {
   cards: Record<string, SrsCard>;
-  /** Day each entry was first reviewed; '' for entries that came from a baseline (before history). */
+  /** Day each card (by card key) was first reviewed; '' for cards that came from a baseline (before history). */
   firstSeen: Record<string, DayKey>;
-  /** New entries counted on a day without per-entry history (from a baseline). */
+  /** New written cards counted on a day without per-card history (from a baseline). */
   introducedExtra: Record<DayKey, number>;
   eventCount: number;
 }
@@ -33,7 +33,6 @@ function applyInPlace(state: ProgressState, event: ProgressEvent): void {
   state.eventCount += 1;
 
   if (event.type === 'baseline') {
-    // A baseline's keys are card keys already: written cards are keyed by entry id (see cardKey).
     for (const [id, card] of Object.entries(event.cards)) {
       const current = state.cards[id];
       state.cards[id] = current ? newerCard(current, card) : card;
@@ -49,12 +48,10 @@ function applyInPlace(state: ProgressState, event: ProgressEvent): void {
 
   if (event.type !== 'review') return;
 
-  for (const id of event.entryIds) state.firstSeen[id] ??= event.day;
+  const keys = event.entryIds.map((id) => cardKey(id, reviewSkill(event)));
+  for (const key of keys) state.firstSeen[key] ??= event.day;
   if (event.early && event.correct) return;
-  for (const id of event.entryIds) {
-    const key = cardKey(id);
-    state.cards[key] = review(state.cards[key], event.grade, event.day);
-  }
+  for (const key of keys) state.cards[key] = review(state.cards[key], event.grade, event.day);
 }
 
 const copy = (state: ProgressState): ProgressState => ({
@@ -97,8 +94,9 @@ export function replayOnto(state: ProgressState, sorted: readonly ProgressEvent[
   return state;
 }
 
-export function newIntroducedOn(state: ProgressState, day: DayKey): number {
-  let count = state.introducedExtra[day] ?? 0;
-  for (const seen of Object.values(state.firstSeen)) if (seen === day) count += 1;
+/** New cards of a skill first reviewed on a day: each skill has its own daily limit. */
+export function newIntroducedOn(state: ProgressState, day: DayKey, skill: Skill = 'written'): number {
+  let count = skill === 'written' ? (state.introducedExtra[day] ?? 0) : 0;
+  for (const [key, seen] of Object.entries(state.firstSeen)) if (seen === day && skillOfKey(key) === skill) count += 1;
   return count;
 }

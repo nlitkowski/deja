@@ -1,0 +1,5512 @@
+[
+ {
+  "type": "baseline",
+  "id": "00000000-0000-4000-8000-000000000001",
+  "deviceId": "phone",
+  "at": "2026-09-05T08:00:00.000Z",
+  "day": "2026-09-05",
+  "cards": {
+   "p/a": {
+    "ease": 2.5,
+    "interval": 3,
+    "due": "2026-09-06",
+    "reps": 2,
+    "lapses": 0,
+    "correctTotal": 2,
+    "lastReviewed": "2026-09-03"
+   },
+   "p/b": {
+    "ease": 2.35,
+    "interval": 1,
+    "due": "2026-09-05",
+    "reps": 1,
+    "lapses": 0,
+    "correctTotal": 1,
+    "lastReviewed": "2026-09-04"
+   }
+  },
+  "introduced": {
+   "day": "2026-09-05",
+   "count": 2
+  }
+ },
+ {
+  "type": "setting",
+  "id": "00000000-0000-4000-8000-000000000002",
+  "deviceId": "phone",
+  "at": "2026-09-05T08:01:00.000Z",
+  "day": "2026-09-05",
+  "key": "dailyGoal",
+  "value": 50
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000004",
+  "deviceId": "phone",
+  "at": "2026-09-05T09:00:00.000Z",
+  "day": "2026-09-05",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8487,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000003",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000005",
+  "deviceId": "phone",
+  "at": "2026-09-05T09:01:00.000Z",
+  "day": "2026-09-05",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10455,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000003",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000006",
+  "deviceId": "phone",
+  "at": "2026-09-05T09:02:00.000Z",
+  "day": "2026-09-05",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5031,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000003",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000007",
+  "deviceId": "phone",
+  "at": "2026-09-05T09:03:00.000Z",
+  "day": "2026-09-05",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9042,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000003",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000008",
+  "deviceId": "phone",
+  "at": "2026-09-05T09:04:00.000Z",
+  "day": "2026-09-05",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8402,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000003",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000009",
+  "deviceId": "phone",
+  "at": "2026-09-05T09:05:00.000Z",
+  "day": "2026-09-05",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5018,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000003",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000010",
+  "deviceId": "phone",
+  "at": "2026-09-05T09:06:00.000Z",
+  "day": "2026-09-05",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5013,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000003",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000011",
+  "deviceId": "phone",
+  "at": "2026-09-05T09:07:00.000Z",
+  "day": "2026-09-05",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5384,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000003",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000012",
+  "deviceId": "phone",
+  "at": "2026-09-05T09:08:00.000Z",
+  "day": "2026-09-05",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 170,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000003",
+  "comboBefore": 3
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000013",
+  "deviceId": "phone",
+  "at": "2026-09-05T10:00:00.000Z",
+  "day": "2026-09-05",
+  "sessionId": "00000000-0000-4000-8000-000000000003",
+  "kind": "unit",
+  "startedAt": "2026-09-05T09:00:00.000Z",
+  "items": 9,
+  "correct": 7,
+  "mistakes": 2,
+  "maxCombo": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000015",
+  "deviceId": "laptop",
+  "at": "2026-09-06T09:00:00.000Z",
+  "day": "2026-09-06",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1034,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "comboBefore": 0,
+  "production": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000016",
+  "deviceId": "laptop",
+  "at": "2026-09-06T09:01:00.000Z",
+  "day": "2026-09-06",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5162,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000017",
+  "deviceId": "laptop",
+  "at": "2026-09-06T09:02:00.000Z",
+  "day": "2026-09-06",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 68,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000018",
+  "deviceId": "laptop",
+  "at": "2026-09-06T09:03:00.000Z",
+  "day": "2026-09-06",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1564,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000019",
+  "deviceId": "laptop",
+  "at": "2026-09-06T09:04:00.000Z",
+  "day": "2026-09-06",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3974,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000020",
+  "deviceId": "laptop",
+  "at": "2026-09-06T09:05:00.000Z",
+  "day": "2026-09-06",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3837,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "comboBefore": 5
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000021",
+  "deviceId": "laptop",
+  "at": "2026-09-06T09:06:00.000Z",
+  "day": "2026-09-06",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 1161,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000022",
+  "deviceId": "laptop",
+  "at": "2026-09-06T09:07:00.000Z",
+  "day": "2026-09-06",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11098,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "comboBefore": 1,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000023",
+  "deviceId": "laptop",
+  "at": "2026-09-06T09:08:00.000Z",
+  "day": "2026-09-06",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8785,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000024",
+  "deviceId": "laptop",
+  "at": "2026-09-06T09:09:00.000Z",
+  "day": "2026-09-06",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1635,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "comboBefore": 3,
+  "production": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000025",
+  "deviceId": "laptop",
+  "at": "2026-09-06T09:10:00.000Z",
+  "day": "2026-09-06",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5205,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "comboBefore": 4
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000026",
+  "deviceId": "laptop",
+  "at": "2026-09-06T10:00:00.000Z",
+  "day": "2026-09-06",
+  "sessionId": "00000000-0000-4000-8000-000000000014",
+  "kind": "review",
+  "startedAt": "2026-09-06T09:00:00.000Z",
+  "items": 11,
+  "correct": 10,
+  "mistakes": 1,
+  "maxCombo": 5
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000028",
+  "deviceId": "phone",
+  "at": "2026-09-07T09:00:00.000Z",
+  "day": "2026-09-07",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/e",
+   "p/d"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 4537,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000029",
+  "deviceId": "phone",
+  "at": "2026-09-07T09:01:00.000Z",
+  "day": "2026-09-07",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10743,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000030",
+  "deviceId": "phone",
+  "at": "2026-09-07T09:02:00.000Z",
+  "day": "2026-09-07",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 301,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000031",
+  "deviceId": "phone",
+  "at": "2026-09-07T09:03:00.000Z",
+  "day": "2026-09-07",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2422,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000032",
+  "deviceId": "phone",
+  "at": "2026-09-07T09:04:00.000Z",
+  "day": "2026-09-07",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9307,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000033",
+  "deviceId": "phone",
+  "at": "2026-09-07T09:05:00.000Z",
+  "day": "2026-09-07",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 2936,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000034",
+  "deviceId": "phone",
+  "at": "2026-09-07T09:06:00.000Z",
+  "day": "2026-09-07",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/d",
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9373,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000035",
+  "deviceId": "phone",
+  "at": "2026-09-07T09:07:00.000Z",
+  "day": "2026-09-07",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x",
+   "p/e"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7046,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000036",
+  "deviceId": "phone",
+  "at": "2026-09-07T09:08:00.000Z",
+  "day": "2026-09-07",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/y",
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11145,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000037",
+  "deviceId": "phone",
+  "at": "2026-09-07T09:09:00.000Z",
+  "day": "2026-09-07",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6045,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000038",
+  "deviceId": "phone",
+  "at": "2026-09-07T09:10:00.000Z",
+  "day": "2026-09-07",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 52,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "comboBefore": 0
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000039",
+  "deviceId": "phone",
+  "at": "2026-09-07T10:00:00.000Z",
+  "day": "2026-09-07",
+  "sessionId": "00000000-0000-4000-8000-000000000027",
+  "kind": "boss",
+  "startedAt": "2026-09-07T09:00:00.000Z",
+  "items": 11,
+  "correct": 8,
+  "mistakes": 3,
+  "maxCombo": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000041",
+  "deviceId": "laptop",
+  "at": "2026-09-08T09:00:00.000Z",
+  "day": "2026-09-08",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 4269,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000040",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000042",
+  "deviceId": "laptop",
+  "at": "2026-09-08T09:01:00.000Z",
+  "day": "2026-09-08",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1840,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000040",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000043",
+  "deviceId": "laptop",
+  "at": "2026-09-08T09:02:00.000Z",
+  "day": "2026-09-08",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/y",
+   "p/e"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 4559,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000040",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000044",
+  "deviceId": "laptop",
+  "at": "2026-09-08T09:03:00.000Z",
+  "day": "2026-09-08",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x",
+   "p/e"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1020,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000040",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000045",
+  "deviceId": "laptop",
+  "at": "2026-09-08T09:04:00.000Z",
+  "day": "2026-09-08",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 3401,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000040",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000046",
+  "deviceId": "laptop",
+  "at": "2026-09-08T09:05:00.000Z",
+  "day": "2026-09-08",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 1629,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000040",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000047",
+  "deviceId": "laptop",
+  "at": "2026-09-08T09:06:00.000Z",
+  "day": "2026-09-08",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9287,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000040",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000048",
+  "deviceId": "laptop",
+  "at": "2026-09-08T09:07:00.000Z",
+  "day": "2026-09-08",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 981,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000040",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000049",
+  "deviceId": "laptop",
+  "at": "2026-09-08T09:08:00.000Z",
+  "day": "2026-09-08",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9396,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000040",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000050",
+  "deviceId": "laptop",
+  "at": "2026-09-08T09:09:00.000Z",
+  "day": "2026-09-08",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d",
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6424,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000040",
+  "comboBefore": 0
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000051",
+  "deviceId": "laptop",
+  "at": "2026-09-08T10:00:00.000Z",
+  "day": "2026-09-08",
+  "sessionId": "00000000-0000-4000-8000-000000000040",
+  "kind": "boss",
+  "startedAt": "2026-09-08T09:00:00.000Z",
+  "items": 10,
+  "correct": 6,
+  "mistakes": 4,
+  "maxCombo": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000053",
+  "deviceId": "phone",
+  "at": "2026-09-09T09:00:00.000Z",
+  "day": "2026-09-09",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11554,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000052",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000054",
+  "deviceId": "phone",
+  "at": "2026-09-09T09:01:00.000Z",
+  "day": "2026-09-09",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7144,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000052",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000055",
+  "deviceId": "phone",
+  "at": "2026-09-09T09:02:00.000Z",
+  "day": "2026-09-09",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x",
+   "p/c"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 2014,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000052",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000056",
+  "deviceId": "phone",
+  "at": "2026-09-09T09:03:00.000Z",
+  "day": "2026-09-09",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2472,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000052",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000057",
+  "deviceId": "phone",
+  "at": "2026-09-09T09:04:00.000Z",
+  "day": "2026-09-09",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8886,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000052",
+  "comboBefore": 4
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000058",
+  "deviceId": "phone",
+  "at": "2026-09-09T10:00:00.000Z",
+  "day": "2026-09-09",
+  "sessionId": "00000000-0000-4000-8000-000000000052",
+  "kind": "review",
+  "startedAt": "2026-09-09T09:00:00.000Z",
+  "items": 5,
+  "correct": 5,
+  "mistakes": 0,
+  "maxCombo": 5
+ },
+ {
+  "type": "quest",
+  "id": "00000000-0000-4000-8000-000000000059",
+  "deviceId": "phone",
+  "at": "2026-09-09T11:00:00.000Z",
+  "day": "2026-09-09",
+  "questId": "daily-combo",
+  "period": "2026-09-09",
+  "xp": 20
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000061",
+  "deviceId": "laptop",
+  "at": "2026-09-10T09:00:00.000Z",
+  "day": "2026-09-10",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 11289,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000060",
+  "comboBefore": 0,
+  "production": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000062",
+  "deviceId": "laptop",
+  "at": "2026-09-10T09:01:00.000Z",
+  "day": "2026-09-10",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d",
+   "p/e"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 10084,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000060",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000063",
+  "deviceId": "laptop",
+  "at": "2026-09-10T09:02:00.000Z",
+  "day": "2026-09-10",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 11719,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000060",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000064",
+  "deviceId": "laptop",
+  "at": "2026-09-10T09:03:00.000Z",
+  "day": "2026-09-10",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9521,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000060",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000065",
+  "deviceId": "laptop",
+  "at": "2026-09-10T09:04:00.000Z",
+  "day": "2026-09-10",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3753,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000060",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000066",
+  "deviceId": "laptop",
+  "at": "2026-09-10T09:05:00.000Z",
+  "day": "2026-09-10",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9742,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000060",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000067",
+  "deviceId": "laptop",
+  "at": "2026-09-10T09:06:00.000Z",
+  "day": "2026-09-10",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/f",
+   "p/e"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3409,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000060",
+  "comboBefore": 5
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000068",
+  "deviceId": "laptop",
+  "at": "2026-09-10T09:07:00.000Z",
+  "day": "2026-09-10",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9163,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000060",
+  "comboBefore": 6
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000069",
+  "deviceId": "laptop",
+  "at": "2026-09-10T09:08:00.000Z",
+  "day": "2026-09-10",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3353,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000060",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000070",
+  "deviceId": "laptop",
+  "at": "2026-09-10T09:09:00.000Z",
+  "day": "2026-09-10",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3947,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000060",
+  "comboBefore": 1
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000071",
+  "deviceId": "laptop",
+  "at": "2026-09-10T10:00:00.000Z",
+  "day": "2026-09-10",
+  "sessionId": "00000000-0000-4000-8000-000000000060",
+  "kind": "boss",
+  "startedAt": "2026-09-10T09:00:00.000Z",
+  "items": 10,
+  "correct": 8,
+  "mistakes": 2,
+  "maxCombo": 6
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000073",
+  "deviceId": "phone",
+  "at": "2026-09-12T09:00:00.000Z",
+  "day": "2026-09-12",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5772,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000074",
+  "deviceId": "phone",
+  "at": "2026-09-12T09:01:00.000Z",
+  "day": "2026-09-12",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/y",
+   "p/b"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10600,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000075",
+  "deviceId": "phone",
+  "at": "2026-09-12T09:02:00.000Z",
+  "day": "2026-09-12",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8403,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000076",
+  "deviceId": "phone",
+  "at": "2026-09-12T09:03:00.000Z",
+  "day": "2026-09-12",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11772,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000077",
+  "deviceId": "phone",
+  "at": "2026-09-12T09:04:00.000Z",
+  "day": "2026-09-12",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/g",
+   "q/y"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 763,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000078",
+  "deviceId": "phone",
+  "at": "2026-09-12T09:05:00.000Z",
+  "day": "2026-09-12",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6361,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "comboBefore": 3,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000079",
+  "deviceId": "phone",
+  "at": "2026-09-12T09:06:00.000Z",
+  "day": "2026-09-12",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/g",
+   "q/y"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3851,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000080",
+  "deviceId": "phone",
+  "at": "2026-09-12T09:07:00.000Z",
+  "day": "2026-09-12",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8899,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000081",
+  "deviceId": "phone",
+  "at": "2026-09-12T09:08:00.000Z",
+  "day": "2026-09-12",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 1619,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000082",
+  "deviceId": "phone",
+  "at": "2026-09-12T09:09:00.000Z",
+  "day": "2026-09-12",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2603,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000083",
+  "deviceId": "phone",
+  "at": "2026-09-12T09:10:00.000Z",
+  "day": "2026-09-12",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/y",
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10518,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "comboBefore": 3
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000084",
+  "deviceId": "phone",
+  "at": "2026-09-12T10:00:00.000Z",
+  "day": "2026-09-12",
+  "sessionId": "00000000-0000-4000-8000-000000000072",
+  "kind": "boss",
+  "startedAt": "2026-09-12T09:00:00.000Z",
+  "items": 11,
+  "correct": 8,
+  "mistakes": 3,
+  "maxCombo": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000086",
+  "deviceId": "phone",
+  "at": "2026-09-13T09:00:00.000Z",
+  "day": "2026-09-13",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3308,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000085",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000087",
+  "deviceId": "phone",
+  "at": "2026-09-13T09:01:00.000Z",
+  "day": "2026-09-13",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5790,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000085",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000088",
+  "deviceId": "phone",
+  "at": "2026-09-13T09:02:00.000Z",
+  "day": "2026-09-13",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3783,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000085",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000089",
+  "deviceId": "phone",
+  "at": "2026-09-13T09:03:00.000Z",
+  "day": "2026-09-13",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1238,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000085",
+  "comboBefore": 3,
+  "production": false
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000090",
+  "deviceId": "phone",
+  "at": "2026-09-13T10:00:00.000Z",
+  "day": "2026-09-13",
+  "sessionId": "00000000-0000-4000-8000-000000000085",
+  "kind": "review",
+  "startedAt": "2026-09-13T09:00:00.000Z",
+  "items": 4,
+  "correct": 4,
+  "mistakes": 0,
+  "maxCombo": 4,
+  "unitKey": "p/u1",
+  "defeated": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000092",
+  "deviceId": "laptop",
+  "at": "2026-09-15T09:00:00.000Z",
+  "day": "2026-09-15",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7101,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000091",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000093",
+  "deviceId": "laptop",
+  "at": "2026-09-15T09:01:00.000Z",
+  "day": "2026-09-15",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2153,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000091",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000094",
+  "deviceId": "laptop",
+  "at": "2026-09-15T09:02:00.000Z",
+  "day": "2026-09-15",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1458,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000091",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000095",
+  "deviceId": "laptop",
+  "at": "2026-09-15T09:03:00.000Z",
+  "day": "2026-09-15",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": true,
+  "timeMs": 1016,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000091",
+  "comboBefore": 3
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000096",
+  "deviceId": "laptop",
+  "at": "2026-09-15T10:00:00.000Z",
+  "day": "2026-09-15",
+  "sessionId": "00000000-0000-4000-8000-000000000091",
+  "kind": "boss",
+  "startedAt": "2026-09-15T09:00:00.000Z",
+  "items": 4,
+  "correct": 4,
+  "mistakes": 0,
+  "maxCombo": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000098",
+  "deviceId": "phone",
+  "at": "2026-09-16T09:00:00.000Z",
+  "day": "2026-09-16",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 876,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000097",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000099",
+  "deviceId": "phone",
+  "at": "2026-09-16T09:01:00.000Z",
+  "day": "2026-09-16",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10121,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000097",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000100",
+  "deviceId": "phone",
+  "at": "2026-09-16T09:02:00.000Z",
+  "day": "2026-09-16",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 8040,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000097",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000101",
+  "deviceId": "phone",
+  "at": "2026-09-16T09:03:00.000Z",
+  "day": "2026-09-16",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 4546,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000097",
+  "comboBefore": 1
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000102",
+  "deviceId": "phone",
+  "at": "2026-09-16T10:00:00.000Z",
+  "day": "2026-09-16",
+  "sessionId": "00000000-0000-4000-8000-000000000097",
+  "kind": "unit",
+  "startedAt": "2026-09-16T09:00:00.000Z",
+  "items": 4,
+  "correct": 3,
+  "mistakes": 1,
+  "maxCombo": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000104",
+  "deviceId": "phone",
+  "at": "2026-09-19T09:00:00.000Z",
+  "day": "2026-09-19",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10084,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000105",
+  "deviceId": "phone",
+  "at": "2026-09-19T09:01:00.000Z",
+  "day": "2026-09-19",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6950,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000106",
+  "deviceId": "phone",
+  "at": "2026-09-19T09:02:00.000Z",
+  "day": "2026-09-19",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 9095,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000107",
+  "deviceId": "phone",
+  "at": "2026-09-19T09:03:00.000Z",
+  "day": "2026-09-19",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6361,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000108",
+  "deviceId": "phone",
+  "at": "2026-09-19T09:04:00.000Z",
+  "day": "2026-09-19",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6114,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000109",
+  "deviceId": "phone",
+  "at": "2026-09-19T09:05:00.000Z",
+  "day": "2026-09-19",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 5047,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "comboBefore": 5
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000110",
+  "deviceId": "phone",
+  "at": "2026-09-19T09:06:00.000Z",
+  "day": "2026-09-19",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9436,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "comboBefore": 6
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000111",
+  "deviceId": "phone",
+  "at": "2026-09-19T09:07:00.000Z",
+  "day": "2026-09-19",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6810,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "comboBefore": 7
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000112",
+  "deviceId": "phone",
+  "at": "2026-09-19T09:08:00.000Z",
+  "day": "2026-09-19",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7429,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "comboBefore": 8
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000113",
+  "deviceId": "phone",
+  "at": "2026-09-19T09:09:00.000Z",
+  "day": "2026-09-19",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 542,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000114",
+  "deviceId": "phone",
+  "at": "2026-09-19T09:10:00.000Z",
+  "day": "2026-09-19",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11265,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "comboBefore": 0
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000115",
+  "deviceId": "phone",
+  "at": "2026-09-19T10:00:00.000Z",
+  "day": "2026-09-19",
+  "sessionId": "00000000-0000-4000-8000-000000000103",
+  "kind": "unit",
+  "startedAt": "2026-09-19T09:00:00.000Z",
+  "items": 11,
+  "correct": 8,
+  "mistakes": 3,
+  "maxCombo": 8
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000117",
+  "deviceId": "laptop",
+  "at": "2026-09-20T09:00:00.000Z",
+  "day": "2026-09-20",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7438,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000116",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000118",
+  "deviceId": "laptop",
+  "at": "2026-09-20T09:01:00.000Z",
+  "day": "2026-09-20",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5245,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000116",
+  "comboBefore": 1,
+  "production": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000119",
+  "deviceId": "laptop",
+  "at": "2026-09-20T09:02:00.000Z",
+  "day": "2026-09-20",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": true,
+  "timeMs": 6676,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000116",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000120",
+  "deviceId": "laptop",
+  "at": "2026-09-20T09:03:00.000Z",
+  "day": "2026-09-20",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 4856,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000116",
+  "comboBefore": 3
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000121",
+  "deviceId": "laptop",
+  "at": "2026-09-20T10:00:00.000Z",
+  "day": "2026-09-20",
+  "sessionId": "00000000-0000-4000-8000-000000000116",
+  "kind": "unit",
+  "startedAt": "2026-09-20T09:00:00.000Z",
+  "items": 4,
+  "correct": 4,
+  "mistakes": 0,
+  "maxCombo": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000123",
+  "deviceId": "phone",
+  "at": "2026-09-22T09:00:00.000Z",
+  "day": "2026-09-22",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6670,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000122",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000124",
+  "deviceId": "phone",
+  "at": "2026-09-22T09:01:00.000Z",
+  "day": "2026-09-22",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3102,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000122",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000125",
+  "deviceId": "phone",
+  "at": "2026-09-22T09:02:00.000Z",
+  "day": "2026-09-22",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 354,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000122",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000126",
+  "deviceId": "phone",
+  "at": "2026-09-22T09:03:00.000Z",
+  "day": "2026-09-22",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10840,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000122",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000127",
+  "deviceId": "phone",
+  "at": "2026-09-22T09:04:00.000Z",
+  "day": "2026-09-22",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1295,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000122",
+  "comboBefore": 0
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000128",
+  "deviceId": "phone",
+  "at": "2026-09-22T10:00:00.000Z",
+  "day": "2026-09-22",
+  "sessionId": "00000000-0000-4000-8000-000000000122",
+  "kind": "boss",
+  "startedAt": "2026-09-22T09:00:00.000Z",
+  "items": 5,
+  "correct": 3,
+  "mistakes": 2,
+  "maxCombo": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000130",
+  "deviceId": "phone",
+  "at": "2026-09-24T09:00:00.000Z",
+  "day": "2026-09-24",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11547,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000129",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000131",
+  "deviceId": "phone",
+  "at": "2026-09-24T09:01:00.000Z",
+  "day": "2026-09-24",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/f",
+   "q/x"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 5704,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000129",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000132",
+  "deviceId": "phone",
+  "at": "2026-09-24T09:02:00.000Z",
+  "day": "2026-09-24",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10779,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000129",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000133",
+  "deviceId": "phone",
+  "at": "2026-09-24T09:03:00.000Z",
+  "day": "2026-09-24",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2096,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000129",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000134",
+  "deviceId": "phone",
+  "at": "2026-09-24T09:04:00.000Z",
+  "day": "2026-09-24",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9709,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000129",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000135",
+  "deviceId": "phone",
+  "at": "2026-09-24T09:05:00.000Z",
+  "day": "2026-09-24",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 4426,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000129",
+  "comboBefore": 5
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000136",
+  "deviceId": "phone",
+  "at": "2026-09-24T09:06:00.000Z",
+  "day": "2026-09-24",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1937,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000129",
+  "comboBefore": 6
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000137",
+  "deviceId": "phone",
+  "at": "2026-09-24T10:00:00.000Z",
+  "day": "2026-09-24",
+  "sessionId": "00000000-0000-4000-8000-000000000129",
+  "kind": "review",
+  "startedAt": "2026-09-24T09:00:00.000Z",
+  "items": 7,
+  "correct": 7,
+  "mistakes": 0,
+  "maxCombo": 7
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000139",
+  "deviceId": "phone",
+  "at": "2026-09-25T09:00:00.000Z",
+  "day": "2026-09-25",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11571,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "comboBefore": 0,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000140",
+  "deviceId": "phone",
+  "at": "2026-09-25T09:01:00.000Z",
+  "day": "2026-09-25",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 6287,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000141",
+  "deviceId": "phone",
+  "at": "2026-09-25T09:02:00.000Z",
+  "day": "2026-09-25",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 792,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000142",
+  "deviceId": "phone",
+  "at": "2026-09-25T09:03:00.000Z",
+  "day": "2026-09-25",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9654,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "comboBefore": 0,
+  "production": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000143",
+  "deviceId": "phone",
+  "at": "2026-09-25T09:04:00.000Z",
+  "day": "2026-09-25",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 6476,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000144",
+  "deviceId": "phone",
+  "at": "2026-09-25T09:05:00.000Z",
+  "day": "2026-09-25",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8203,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000145",
+  "deviceId": "phone",
+  "at": "2026-09-25T09:06:00.000Z",
+  "day": "2026-09-25",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 3798,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "comboBefore": 0,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000146",
+  "deviceId": "phone",
+  "at": "2026-09-25T09:07:00.000Z",
+  "day": "2026-09-25",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7304,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000147",
+  "deviceId": "phone",
+  "at": "2026-09-25T09:08:00.000Z",
+  "day": "2026-09-25",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6138,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000148",
+  "deviceId": "phone",
+  "at": "2026-09-25T09:09:00.000Z",
+  "day": "2026-09-25",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 10415,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000149",
+  "deviceId": "phone",
+  "at": "2026-09-25T09:10:00.000Z",
+  "day": "2026-09-25",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9991,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "comboBefore": 4
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000150",
+  "deviceId": "phone",
+  "at": "2026-09-25T10:00:00.000Z",
+  "day": "2026-09-25",
+  "sessionId": "00000000-0000-4000-8000-000000000138",
+  "kind": "review",
+  "startedAt": "2026-09-25T09:00:00.000Z",
+  "items": 11,
+  "correct": 8,
+  "mistakes": 3,
+  "maxCombo": 5,
+  "unitKey": "p/u1",
+  "defeated": true
+ },
+ {
+  "type": "quest",
+  "id": "00000000-0000-4000-8000-000000000151",
+  "deviceId": "phone",
+  "at": "2026-09-25T11:00:00.000Z",
+  "day": "2026-09-25",
+  "questId": "daily-combo",
+  "period": "2026-09-25",
+  "xp": 20
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000153",
+  "deviceId": "phone",
+  "at": "2026-09-26T09:00:00.000Z",
+  "day": "2026-09-26",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a",
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 509,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000152",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000154",
+  "deviceId": "phone",
+  "at": "2026-09-26T09:01:00.000Z",
+  "day": "2026-09-26",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 427,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000152",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000155",
+  "deviceId": "phone",
+  "at": "2026-09-26T09:02:00.000Z",
+  "day": "2026-09-26",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5198,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000152",
+  "comboBefore": 2,
+  "production": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000156",
+  "deviceId": "phone",
+  "at": "2026-09-26T09:03:00.000Z",
+  "day": "2026-09-26",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5807,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000152",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000157",
+  "deviceId": "phone",
+  "at": "2026-09-26T09:04:00.000Z",
+  "day": "2026-09-26",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x",
+   "q/y"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3573,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000152",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000158",
+  "deviceId": "phone",
+  "at": "2026-09-26T09:05:00.000Z",
+  "day": "2026-09-26",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2305,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000152",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000159",
+  "deviceId": "phone",
+  "at": "2026-09-26T09:06:00.000Z",
+  "day": "2026-09-26",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3255,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000152",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000160",
+  "deviceId": "phone",
+  "at": "2026-09-26T09:07:00.000Z",
+  "day": "2026-09-26",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1427,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000152",
+  "comboBefore": 0
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000161",
+  "deviceId": "phone",
+  "at": "2026-09-26T10:00:00.000Z",
+  "day": "2026-09-26",
+  "sessionId": "00000000-0000-4000-8000-000000000152",
+  "kind": "unit",
+  "startedAt": "2026-09-26T09:00:00.000Z",
+  "items": 8,
+  "correct": 6,
+  "mistakes": 2,
+  "maxCombo": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000163",
+  "deviceId": "phone",
+  "at": "2026-09-27T09:00:00.000Z",
+  "day": "2026-09-27",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 6914,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000162",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000164",
+  "deviceId": "phone",
+  "at": "2026-09-27T09:01:00.000Z",
+  "day": "2026-09-27",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5792,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000162",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000165",
+  "deviceId": "phone",
+  "at": "2026-09-27T09:02:00.000Z",
+  "day": "2026-09-27",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10687,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000162",
+  "comboBefore": 2,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000166",
+  "deviceId": "phone",
+  "at": "2026-09-27T09:03:00.000Z",
+  "day": "2026-09-27",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2014,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000162",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000167",
+  "deviceId": "phone",
+  "at": "2026-09-27T09:04:00.000Z",
+  "day": "2026-09-27",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2867,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000162",
+  "comboBefore": 4,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000168",
+  "deviceId": "phone",
+  "at": "2026-09-27T09:05:00.000Z",
+  "day": "2026-09-27",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8529,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000162",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000169",
+  "deviceId": "phone",
+  "at": "2026-09-27T09:06:00.000Z",
+  "day": "2026-09-27",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8120,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000162",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000170",
+  "deviceId": "phone",
+  "at": "2026-09-27T09:07:00.000Z",
+  "day": "2026-09-27",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9473,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000162",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000171",
+  "deviceId": "phone",
+  "at": "2026-09-27T09:08:00.000Z",
+  "day": "2026-09-27",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8911,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000162",
+  "comboBefore": 3
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000172",
+  "deviceId": "phone",
+  "at": "2026-09-27T10:00:00.000Z",
+  "day": "2026-09-27",
+  "sessionId": "00000000-0000-4000-8000-000000000162",
+  "kind": "boss",
+  "startedAt": "2026-09-27T09:00:00.000Z",
+  "items": 9,
+  "correct": 8,
+  "mistakes": 1,
+  "maxCombo": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000174",
+  "deviceId": "laptop",
+  "at": "2026-09-29T09:00:00.000Z",
+  "day": "2026-09-29",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 5318,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000173",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000175",
+  "deviceId": "laptop",
+  "at": "2026-09-29T09:01:00.000Z",
+  "day": "2026-09-29",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3936,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000173",
+  "comboBefore": 1,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000176",
+  "deviceId": "laptop",
+  "at": "2026-09-29T09:02:00.000Z",
+  "day": "2026-09-29",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8409,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000173",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000177",
+  "deviceId": "laptop",
+  "at": "2026-09-29T09:03:00.000Z",
+  "day": "2026-09-29",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6818,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000173",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000178",
+  "deviceId": "laptop",
+  "at": "2026-09-29T09:04:00.000Z",
+  "day": "2026-09-29",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8549,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000173",
+  "comboBefore": 4,
+  "production": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000179",
+  "deviceId": "laptop",
+  "at": "2026-09-29T09:05:00.000Z",
+  "day": "2026-09-29",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7279,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000173",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000180",
+  "deviceId": "laptop",
+  "at": "2026-09-29T09:06:00.000Z",
+  "day": "2026-09-29",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 4582,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000173",
+  "comboBefore": 1,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000181",
+  "deviceId": "laptop",
+  "at": "2026-09-29T09:07:00.000Z",
+  "day": "2026-09-29",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2080,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000173",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000182",
+  "deviceId": "laptop",
+  "at": "2026-09-29T09:08:00.000Z",
+  "day": "2026-09-29",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2692,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000173",
+  "comboBefore": 3
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000183",
+  "deviceId": "laptop",
+  "at": "2026-09-29T10:00:00.000Z",
+  "day": "2026-09-29",
+  "sessionId": "00000000-0000-4000-8000-000000000173",
+  "kind": "review",
+  "startedAt": "2026-09-29T09:00:00.000Z",
+  "items": 9,
+  "correct": 8,
+  "mistakes": 1,
+  "maxCombo": 4,
+  "unitKey": "p/u1",
+  "defeated": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000185",
+  "deviceId": "phone",
+  "at": "2026-09-30T09:00:00.000Z",
+  "day": "2026-09-30",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3690,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000184",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000186",
+  "deviceId": "phone",
+  "at": "2026-09-30T09:01:00.000Z",
+  "day": "2026-09-30",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8999,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000184",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000187",
+  "deviceId": "phone",
+  "at": "2026-09-30T09:02:00.000Z",
+  "day": "2026-09-30",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/b",
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10635,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000184",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000188",
+  "deviceId": "phone",
+  "at": "2026-09-30T09:03:00.000Z",
+  "day": "2026-09-30",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/x",
+   "p/d"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 8988,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000184",
+  "comboBefore": 2,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000189",
+  "deviceId": "phone",
+  "at": "2026-09-30T09:04:00.000Z",
+  "day": "2026-09-30",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 5463,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000184",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000190",
+  "deviceId": "phone",
+  "at": "2026-09-30T09:05:00.000Z",
+  "day": "2026-09-30",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8355,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000184",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000191",
+  "deviceId": "phone",
+  "at": "2026-09-30T09:06:00.000Z",
+  "day": "2026-09-30",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5060,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000184",
+  "comboBefore": 5
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000192",
+  "deviceId": "phone",
+  "at": "2026-09-30T10:00:00.000Z",
+  "day": "2026-09-30",
+  "sessionId": "00000000-0000-4000-8000-000000000184",
+  "kind": "boss",
+  "startedAt": "2026-09-30T09:00:00.000Z",
+  "items": 7,
+  "correct": 6,
+  "mistakes": 1,
+  "maxCombo": 6
+ },
+ {
+  "type": "quest",
+  "id": "00000000-0000-4000-8000-000000000193",
+  "deviceId": "phone",
+  "at": "2026-09-30T11:00:00.000Z",
+  "day": "2026-09-30",
+  "questId": "daily-combo",
+  "period": "2026-09-30",
+  "xp": 20
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000195",
+  "deviceId": "phone",
+  "at": "2026-10-01T09:00:00.000Z",
+  "day": "2026-10-01",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9862,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000194",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000196",
+  "deviceId": "phone",
+  "at": "2026-10-01T09:01:00.000Z",
+  "day": "2026-10-01",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8924,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000194",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000197",
+  "deviceId": "phone",
+  "at": "2026-10-01T09:02:00.000Z",
+  "day": "2026-10-01",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2076,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000194",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000198",
+  "deviceId": "phone",
+  "at": "2026-10-01T09:03:00.000Z",
+  "day": "2026-10-01",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 731,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000194",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000199",
+  "deviceId": "phone",
+  "at": "2026-10-01T09:04:00.000Z",
+  "day": "2026-10-01",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 10361,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000194",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000200",
+  "deviceId": "phone",
+  "at": "2026-10-01T09:05:00.000Z",
+  "day": "2026-10-01",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5764,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000194",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000201",
+  "deviceId": "phone",
+  "at": "2026-10-01T09:06:00.000Z",
+  "day": "2026-10-01",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8713,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000194",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000202",
+  "deviceId": "phone",
+  "at": "2026-10-01T09:07:00.000Z",
+  "day": "2026-10-01",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 465,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000194",
+  "comboBefore": 1,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000203",
+  "deviceId": "phone",
+  "at": "2026-10-01T09:08:00.000Z",
+  "day": "2026-10-01",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11175,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000194",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000204",
+  "deviceId": "phone",
+  "at": "2026-10-01T09:09:00.000Z",
+  "day": "2026-10-01",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9959,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000194",
+  "comboBefore": 3
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000205",
+  "deviceId": "phone",
+  "at": "2026-10-01T10:00:00.000Z",
+  "day": "2026-10-01",
+  "sessionId": "00000000-0000-4000-8000-000000000194",
+  "kind": "review",
+  "startedAt": "2026-10-01T09:00:00.000Z",
+  "items": 10,
+  "correct": 8,
+  "mistakes": 2,
+  "maxCombo": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000207",
+  "deviceId": "laptop",
+  "at": "2026-10-02T09:00:00.000Z",
+  "day": "2026-10-02",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x",
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8483,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000206",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000208",
+  "deviceId": "laptop",
+  "at": "2026-10-02T09:01:00.000Z",
+  "day": "2026-10-02",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6769,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000206",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000209",
+  "deviceId": "laptop",
+  "at": "2026-10-02T09:02:00.000Z",
+  "day": "2026-10-02",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7434,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000206",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000210",
+  "deviceId": "laptop",
+  "at": "2026-10-02T09:03:00.000Z",
+  "day": "2026-10-02",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 11376,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000206",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000211",
+  "deviceId": "laptop",
+  "at": "2026-10-02T09:04:00.000Z",
+  "day": "2026-10-02",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 586,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000206",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000212",
+  "deviceId": "laptop",
+  "at": "2026-10-02T09:05:00.000Z",
+  "day": "2026-10-02",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6352,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000206",
+  "comboBefore": 1,
+  "production": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000213",
+  "deviceId": "laptop",
+  "at": "2026-10-02T09:06:00.000Z",
+  "day": "2026-10-02",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5542,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000206",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000214",
+  "deviceId": "laptop",
+  "at": "2026-10-02T09:07:00.000Z",
+  "day": "2026-10-02",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 5903,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000206",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000215",
+  "deviceId": "laptop",
+  "at": "2026-10-02T09:08:00.000Z",
+  "day": "2026-10-02",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9273,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000206",
+  "comboBefore": 4
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000216",
+  "deviceId": "laptop",
+  "at": "2026-10-02T10:00:00.000Z",
+  "day": "2026-10-02",
+  "sessionId": "00000000-0000-4000-8000-000000000206",
+  "kind": "review",
+  "startedAt": "2026-10-02T09:00:00.000Z",
+  "items": 9,
+  "correct": 8,
+  "mistakes": 1,
+  "maxCombo": 5
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000218",
+  "deviceId": "phone",
+  "at": "2026-10-03T09:00:00.000Z",
+  "day": "2026-10-03",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10322,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "comboBefore": 0,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000219",
+  "deviceId": "phone",
+  "at": "2026-10-03T09:01:00.000Z",
+  "day": "2026-10-03",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6802,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000220",
+  "deviceId": "phone",
+  "at": "2026-10-03T09:02:00.000Z",
+  "day": "2026-10-03",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3283,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000221",
+  "deviceId": "phone",
+  "at": "2026-10-03T09:03:00.000Z",
+  "day": "2026-10-03",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9631,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000222",
+  "deviceId": "phone",
+  "at": "2026-10-03T09:04:00.000Z",
+  "day": "2026-10-03",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7636,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000223",
+  "deviceId": "phone",
+  "at": "2026-10-03T09:05:00.000Z",
+  "day": "2026-10-03",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5232,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000224",
+  "deviceId": "phone",
+  "at": "2026-10-03T09:06:00.000Z",
+  "day": "2026-10-03",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 206,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000225",
+  "deviceId": "phone",
+  "at": "2026-10-03T09:07:00.000Z",
+  "day": "2026-10-03",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/h",
+   "p/d"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9082,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000226",
+  "deviceId": "phone",
+  "at": "2026-10-03T09:08:00.000Z",
+  "day": "2026-10-03",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/a",
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 8635,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000227",
+  "deviceId": "phone",
+  "at": "2026-10-03T09:09:00.000Z",
+  "day": "2026-10-03",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8815,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000228",
+  "deviceId": "phone",
+  "at": "2026-10-03T09:10:00.000Z",
+  "day": "2026-10-03",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5180,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "comboBefore": 2
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000229",
+  "deviceId": "phone",
+  "at": "2026-10-03T10:00:00.000Z",
+  "day": "2026-10-03",
+  "sessionId": "00000000-0000-4000-8000-000000000217",
+  "kind": "unit",
+  "startedAt": "2026-10-03T09:00:00.000Z",
+  "items": 11,
+  "correct": 8,
+  "mistakes": 3,
+  "maxCombo": 4,
+  "unitKey": "p/u1",
+  "defeated": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000231",
+  "deviceId": "laptop",
+  "at": "2026-10-04T09:00:00.000Z",
+  "day": "2026-10-04",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3157,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000230",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000232",
+  "deviceId": "laptop",
+  "at": "2026-10-04T09:01:00.000Z",
+  "day": "2026-10-04",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 2215,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000230",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000233",
+  "deviceId": "laptop",
+  "at": "2026-10-04T09:02:00.000Z",
+  "day": "2026-10-04",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6510,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000230",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000234",
+  "deviceId": "laptop",
+  "at": "2026-10-04T09:03:00.000Z",
+  "day": "2026-10-04",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 2039,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000230",
+  "comboBefore": 0,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000235",
+  "deviceId": "laptop",
+  "at": "2026-10-04T09:04:00.000Z",
+  "day": "2026-10-04",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 4753,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000230",
+  "comboBefore": 1
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000236",
+  "deviceId": "laptop",
+  "at": "2026-10-04T10:00:00.000Z",
+  "day": "2026-10-04",
+  "sessionId": "00000000-0000-4000-8000-000000000230",
+  "kind": "review",
+  "startedAt": "2026-10-04T09:00:00.000Z",
+  "items": 5,
+  "correct": 4,
+  "mistakes": 1,
+  "maxCombo": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000238",
+  "deviceId": "phone",
+  "at": "2026-10-05T09:00:00.000Z",
+  "day": "2026-10-05",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8248,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000237",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000239",
+  "deviceId": "phone",
+  "at": "2026-10-05T09:01:00.000Z",
+  "day": "2026-10-05",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10449,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000237",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000240",
+  "deviceId": "phone",
+  "at": "2026-10-05T09:02:00.000Z",
+  "day": "2026-10-05",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 7499,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000237",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000241",
+  "deviceId": "phone",
+  "at": "2026-10-05T09:03:00.000Z",
+  "day": "2026-10-05",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 6308,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000237",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000242",
+  "deviceId": "phone",
+  "at": "2026-10-05T09:04:00.000Z",
+  "day": "2026-10-05",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1275,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000237",
+  "comboBefore": 4
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000243",
+  "deviceId": "phone",
+  "at": "2026-10-05T10:00:00.000Z",
+  "day": "2026-10-05",
+  "sessionId": "00000000-0000-4000-8000-000000000237",
+  "kind": "unit",
+  "startedAt": "2026-10-05T09:00:00.000Z",
+  "items": 5,
+  "correct": 5,
+  "mistakes": 0,
+  "maxCombo": 5,
+  "unitKey": "p/u1",
+  "defeated": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000245",
+  "deviceId": "laptop",
+  "at": "2026-10-06T09:00:00.000Z",
+  "day": "2026-10-06",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 4764,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000244",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000246",
+  "deviceId": "laptop",
+  "at": "2026-10-06T09:01:00.000Z",
+  "day": "2026-10-06",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 1373,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000244",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000247",
+  "deviceId": "laptop",
+  "at": "2026-10-06T09:02:00.000Z",
+  "day": "2026-10-06",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x",
+   "p/d"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 884,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000244",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000248",
+  "deviceId": "laptop",
+  "at": "2026-10-06T09:03:00.000Z",
+  "day": "2026-10-06",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/y",
+   "p/h"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8993,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000244",
+  "comboBefore": 0
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000249",
+  "deviceId": "laptop",
+  "at": "2026-10-06T10:00:00.000Z",
+  "day": "2026-10-06",
+  "sessionId": "00000000-0000-4000-8000-000000000244",
+  "kind": "boss",
+  "startedAt": "2026-10-06T09:00:00.000Z",
+  "items": 4,
+  "correct": 3,
+  "mistakes": 1,
+  "maxCombo": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000251",
+  "deviceId": "laptop",
+  "at": "2026-10-07T09:00:00.000Z",
+  "day": "2026-10-07",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g",
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9089,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000250",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000252",
+  "deviceId": "laptop",
+  "at": "2026-10-07T09:01:00.000Z",
+  "day": "2026-10-07",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 4300,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000250",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000253",
+  "deviceId": "laptop",
+  "at": "2026-10-07T09:02:00.000Z",
+  "day": "2026-10-07",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7681,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000250",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000254",
+  "deviceId": "laptop",
+  "at": "2026-10-07T09:03:00.000Z",
+  "day": "2026-10-07",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6580,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000250",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000255",
+  "deviceId": "laptop",
+  "at": "2026-10-07T09:04:00.000Z",
+  "day": "2026-10-07",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 6471,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000250",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000256",
+  "deviceId": "laptop",
+  "at": "2026-10-07T09:05:00.000Z",
+  "day": "2026-10-07",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9392,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000250",
+  "comboBefore": 5,
+  "production": true
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000257",
+  "deviceId": "laptop",
+  "at": "2026-10-07T10:00:00.000Z",
+  "day": "2026-10-07",
+  "sessionId": "00000000-0000-4000-8000-000000000250",
+  "kind": "unit",
+  "startedAt": "2026-10-07T09:00:00.000Z",
+  "items": 6,
+  "correct": 6,
+  "mistakes": 0,
+  "maxCombo": 6
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000259",
+  "deviceId": "laptop",
+  "at": "2026-10-08T09:00:00.000Z",
+  "day": "2026-10-08",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 986,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000258",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000260",
+  "deviceId": "laptop",
+  "at": "2026-10-08T09:01:00.000Z",
+  "day": "2026-10-08",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10356,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000258",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000261",
+  "deviceId": "laptop",
+  "at": "2026-10-08T09:02:00.000Z",
+  "day": "2026-10-08",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a",
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2530,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000258",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000262",
+  "deviceId": "laptop",
+  "at": "2026-10-08T09:03:00.000Z",
+  "day": "2026-10-08",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1419,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000258",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000263",
+  "deviceId": "laptop",
+  "at": "2026-10-08T09:04:00.000Z",
+  "day": "2026-10-08",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11993,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000258",
+  "comboBefore": 0
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000264",
+  "deviceId": "laptop",
+  "at": "2026-10-08T10:00:00.000Z",
+  "day": "2026-10-08",
+  "sessionId": "00000000-0000-4000-8000-000000000258",
+  "kind": "unit",
+  "startedAt": "2026-10-08T09:00:00.000Z",
+  "items": 5,
+  "correct": 3,
+  "mistakes": 2,
+  "maxCombo": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000266",
+  "deviceId": "phone",
+  "at": "2026-10-09T09:00:00.000Z",
+  "day": "2026-10-09",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3956,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000265",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000267",
+  "deviceId": "phone",
+  "at": "2026-10-09T09:01:00.000Z",
+  "day": "2026-10-09",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/h",
+   "p/d"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9590,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000265",
+  "comboBefore": 1,
+  "production": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000268",
+  "deviceId": "phone",
+  "at": "2026-10-09T09:02:00.000Z",
+  "day": "2026-10-09",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11533,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000265",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000269",
+  "deviceId": "phone",
+  "at": "2026-10-09T09:03:00.000Z",
+  "day": "2026-10-09",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7717,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000265",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000270",
+  "deviceId": "phone",
+  "at": "2026-10-09T09:04:00.000Z",
+  "day": "2026-10-09",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/d"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6214,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000265",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000271",
+  "deviceId": "phone",
+  "at": "2026-10-09T09:05:00.000Z",
+  "day": "2026-10-09",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/d",
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 909,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000265",
+  "comboBefore": 5
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000272",
+  "deviceId": "phone",
+  "at": "2026-10-09T09:06:00.000Z",
+  "day": "2026-10-09",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 11852,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000265",
+  "comboBefore": 6
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000273",
+  "deviceId": "phone",
+  "at": "2026-10-09T09:07:00.000Z",
+  "day": "2026-10-09",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a",
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8056,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000265",
+  "comboBefore": 7,
+  "production": false
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000274",
+  "deviceId": "phone",
+  "at": "2026-10-09T10:00:00.000Z",
+  "day": "2026-10-09",
+  "sessionId": "00000000-0000-4000-8000-000000000265",
+  "kind": "review",
+  "startedAt": "2026-10-09T09:00:00.000Z",
+  "items": 8,
+  "correct": 8,
+  "mistakes": 0,
+  "maxCombo": 8
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000276",
+  "deviceId": "phone",
+  "at": "2026-10-10T09:00:00.000Z",
+  "day": "2026-10-10",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1986,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000277",
+  "deviceId": "phone",
+  "at": "2026-10-10T09:01:00.000Z",
+  "day": "2026-10-10",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a",
+   "p/g"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9733,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000278",
+  "deviceId": "phone",
+  "at": "2026-10-10T09:02:00.000Z",
+  "day": "2026-10-10",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8867,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000279",
+  "deviceId": "phone",
+  "at": "2026-10-10T09:03:00.000Z",
+  "day": "2026-10-10",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 544,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000280",
+  "deviceId": "phone",
+  "at": "2026-10-10T09:04:00.000Z",
+  "day": "2026-10-10",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1241,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000281",
+  "deviceId": "phone",
+  "at": "2026-10-10T09:05:00.000Z",
+  "day": "2026-10-10",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 10360,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000282",
+  "deviceId": "phone",
+  "at": "2026-10-10T09:06:00.000Z",
+  "day": "2026-10-10",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/x",
+   "p/a"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 8782,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000283",
+  "deviceId": "phone",
+  "at": "2026-10-10T09:07:00.000Z",
+  "day": "2026-10-10",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1332,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "comboBefore": 5
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000284",
+  "deviceId": "phone",
+  "at": "2026-10-10T09:08:00.000Z",
+  "day": "2026-10-10",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11669,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "comboBefore": 6
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000285",
+  "deviceId": "phone",
+  "at": "2026-10-10T09:09:00.000Z",
+  "day": "2026-10-10",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a",
+   "p/f"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8481,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000286",
+  "deviceId": "phone",
+  "at": "2026-10-10T09:10:00.000Z",
+  "day": "2026-10-10",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 2370,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "comboBefore": 1
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000287",
+  "deviceId": "phone",
+  "at": "2026-10-10T10:00:00.000Z",
+  "day": "2026-10-10",
+  "sessionId": "00000000-0000-4000-8000-000000000275",
+  "kind": "review",
+  "startedAt": "2026-10-10T09:00:00.000Z",
+  "items": 11,
+  "correct": 8,
+  "mistakes": 3,
+  "maxCombo": 6,
+  "unitKey": "p/u1",
+  "defeated": false
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000289",
+  "deviceId": "phone",
+  "at": "2026-10-11T09:00:00.000Z",
+  "day": "2026-10-11",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/b"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 8509,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000288",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000290",
+  "deviceId": "phone",
+  "at": "2026-10-11T09:01:00.000Z",
+  "day": "2026-10-11",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11670,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000288",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000291",
+  "deviceId": "phone",
+  "at": "2026-10-11T09:02:00.000Z",
+  "day": "2026-10-11",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11631,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000288",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000292",
+  "deviceId": "phone",
+  "at": "2026-10-11T09:03:00.000Z",
+  "day": "2026-10-11",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5981,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000288",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000293",
+  "deviceId": "phone",
+  "at": "2026-10-11T09:04:00.000Z",
+  "day": "2026-10-11",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3047,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000288",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000294",
+  "deviceId": "phone",
+  "at": "2026-10-11T09:05:00.000Z",
+  "day": "2026-10-11",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10167,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000288",
+  "comboBefore": 0
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000295",
+  "deviceId": "phone",
+  "at": "2026-10-11T10:00:00.000Z",
+  "day": "2026-10-11",
+  "sessionId": "00000000-0000-4000-8000-000000000288",
+  "kind": "boss",
+  "startedAt": "2026-10-11T09:00:00.000Z",
+  "items": 6,
+  "correct": 4,
+  "mistakes": 2,
+  "maxCombo": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000297",
+  "deviceId": "laptop",
+  "at": "2026-10-12T09:00:00.000Z",
+  "day": "2026-10-12",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": true,
+  "timeMs": 10335,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000298",
+  "deviceId": "laptop",
+  "at": "2026-10-12T09:01:00.000Z",
+  "day": "2026-10-12",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1488,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000299",
+  "deviceId": "laptop",
+  "at": "2026-10-12T09:02:00.000Z",
+  "day": "2026-10-12",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/d",
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10805,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000300",
+  "deviceId": "laptop",
+  "at": "2026-10-12T09:03:00.000Z",
+  "day": "2026-10-12",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10121,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000301",
+  "deviceId": "laptop",
+  "at": "2026-10-12T09:04:00.000Z",
+  "day": "2026-10-12",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/a",
+   "p/g"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 3166,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000302",
+  "deviceId": "laptop",
+  "at": "2026-10-12T09:05:00.000Z",
+  "day": "2026-10-12",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7559,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000303",
+  "deviceId": "laptop",
+  "at": "2026-10-12T09:06:00.000Z",
+  "day": "2026-10-12",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6671,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000304",
+  "deviceId": "laptop",
+  "at": "2026-10-12T09:07:00.000Z",
+  "day": "2026-10-12",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 4446,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000305",
+  "deviceId": "laptop",
+  "at": "2026-10-12T09:08:00.000Z",
+  "day": "2026-10-12",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10267,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000306",
+  "deviceId": "laptop",
+  "at": "2026-10-12T09:09:00.000Z",
+  "day": "2026-10-12",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 4353,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000307",
+  "deviceId": "laptop",
+  "at": "2026-10-12T09:10:00.000Z",
+  "day": "2026-10-12",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "q/x",
+   "p/g"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 4320,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "comboBefore": 1
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000308",
+  "deviceId": "laptop",
+  "at": "2026-10-12T10:00:00.000Z",
+  "day": "2026-10-12",
+  "sessionId": "00000000-0000-4000-8000-000000000296",
+  "kind": "unit",
+  "startedAt": "2026-10-12T09:00:00.000Z",
+  "items": 11,
+  "correct": 7,
+  "mistakes": 4,
+  "maxCombo": 4,
+  "unitKey": "p/u1",
+  "defeated": true
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000310",
+  "deviceId": "laptop",
+  "at": "2026-10-13T09:00:00.000Z",
+  "day": "2026-10-13",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/x"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 9315,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000309",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000311",
+  "deviceId": "laptop",
+  "at": "2026-10-13T09:01:00.000Z",
+  "day": "2026-10-13",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/a"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11633,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000309",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000312",
+  "deviceId": "laptop",
+  "at": "2026-10-13T09:02:00.000Z",
+  "day": "2026-10-13",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/e",
+   "p/d"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11483,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000309",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000313",
+  "deviceId": "laptop",
+  "at": "2026-10-13T09:03:00.000Z",
+  "day": "2026-10-13",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 8233,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000309",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000314",
+  "deviceId": "laptop",
+  "at": "2026-10-13T09:04:00.000Z",
+  "day": "2026-10-13",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11535,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000309",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000315",
+  "deviceId": "laptop",
+  "at": "2026-10-13T09:05:00.000Z",
+  "day": "2026-10-13",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 4345,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000309",
+  "comboBefore": 3
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000316",
+  "deviceId": "laptop",
+  "at": "2026-10-13T09:06:00.000Z",
+  "day": "2026-10-13",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 389,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000309",
+  "comboBefore": 4
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000317",
+  "deviceId": "laptop",
+  "at": "2026-10-13T09:07:00.000Z",
+  "day": "2026-10-13",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 204,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000309",
+  "comboBefore": 5
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000318",
+  "deviceId": "laptop",
+  "at": "2026-10-13T09:08:00.000Z",
+  "day": "2026-10-13",
+  "exerciseId": "p/a~multiple-choice-0",
+  "entryIds": [
+   "p/e"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8128,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000309",
+  "comboBefore": 6
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000319",
+  "deviceId": "laptop",
+  "at": "2026-10-13T09:09:00.000Z",
+  "day": "2026-10-13",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/h"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 8593,
+  "early": true,
+  "sessionId": "00000000-0000-4000-8000-000000000309",
+  "comboBefore": 7
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000320",
+  "deviceId": "laptop",
+  "at": "2026-10-13T10:00:00.000Z",
+  "day": "2026-10-13",
+  "sessionId": "00000000-0000-4000-8000-000000000309",
+  "kind": "review",
+  "startedAt": "2026-10-13T09:00:00.000Z",
+  "items": 10,
+  "correct": 9,
+  "mistakes": 1,
+  "maxCombo": 8
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000322",
+  "deviceId": "phone",
+  "at": "2026-10-14T09:00:00.000Z",
+  "day": "2026-10-14",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 5674,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000321",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000323",
+  "deviceId": "phone",
+  "at": "2026-10-14T09:01:00.000Z",
+  "day": "2026-10-14",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/f"
+  ],
+  "grade": "hard",
+  "correct": true,
+  "nearMiss": true,
+  "hintUsed": false,
+  "timeMs": 10623,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000321",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000324",
+  "deviceId": "phone",
+  "at": "2026-10-14T09:02:00.000Z",
+  "day": "2026-10-14",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "q/y",
+   "p/d"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 7336,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000321",
+  "comboBefore": 2
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000325",
+  "deviceId": "phone",
+  "at": "2026-10-14T09:03:00.000Z",
+  "day": "2026-10-14",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/c"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 10513,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000321",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000326",
+  "deviceId": "phone",
+  "at": "2026-10-14T09:04:00.000Z",
+  "day": "2026-10-14",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/g"
+  ],
+  "grade": "easy",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 11481,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000321",
+  "comboBefore": 0
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000327",
+  "deviceId": "phone",
+  "at": "2026-10-14T09:05:00.000Z",
+  "day": "2026-10-14",
+  "exerciseId": "p/x1",
+  "entryIds": [
+   "p/c",
+   "p/f"
+  ],
+  "grade": "again",
+  "correct": false,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 1608,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000321",
+  "comboBefore": 1
+ },
+ {
+  "type": "review",
+  "id": "00000000-0000-4000-8000-000000000328",
+  "deviceId": "phone",
+  "at": "2026-10-14T09:06:00.000Z",
+  "day": "2026-10-14",
+  "exerciseId": "p/x2",
+  "entryIds": [
+   "q/y"
+  ],
+  "grade": "good",
+  "correct": true,
+  "nearMiss": false,
+  "hintUsed": false,
+  "timeMs": 6289,
+  "early": false,
+  "sessionId": "00000000-0000-4000-8000-000000000321",
+  "comboBefore": 0
+ },
+ {
+  "type": "session",
+  "id": "00000000-0000-4000-8000-000000000329",
+  "deviceId": "phone",
+  "at": "2026-10-14T10:00:00.000Z",
+  "day": "2026-10-14",
+  "sessionId": "00000000-0000-4000-8000-000000000321",
+  "kind": "review",
+  "startedAt": "2026-10-14T09:00:00.000Z",
+  "items": 7,
+  "correct": 4,
+  "mistakes": 3,
+  "maxCombo": 2
+ }
+]

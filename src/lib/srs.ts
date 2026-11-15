@@ -2,14 +2,19 @@ import { addDays, type DayKey } from './date';
 
 export type Grade = 'again' | 'hard' | 'good' | 'easy';
 
-/** What a card trains. Only written practice exists today; listening or speaking would be new skills. */
-export type Skill = 'written';
+/** What a card trains: an entry has up to one card per skill, each scheduled on its own. */
+export type Skill = 'written' | 'listening' | 'speaking';
 
 /**
  * Key of an entry's card for a skill. The written card keeps the bare entry id, so every card stored so far
- * (in events and baselines) stays valid; another skill would get `entryId#skill`.
+ * (in events and baselines) stays valid; other skills get `entryId#skill`.
  */
 export const cardKey = (entryId: string, skill: Skill = 'written'): string => (skill === 'written' ? entryId : `${entryId}#${skill}`);
+
+export function skillOfKey(key: string): Skill {
+  const hash = key.lastIndexOf('#');
+  return hash < 0 ? 'written' : (key.slice(hash + 1) as Skill);
+}
 
 export interface SrsCard {
   ease: number;

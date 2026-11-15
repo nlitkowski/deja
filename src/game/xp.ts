@@ -1,7 +1,7 @@
 import type { DayKey } from '../lib/date';
-import type { ProgressEvent, ReviewEvent, SessionEvent } from '../lib/progress/events';
+import { reviewSkill, type ProgressEvent, type ReviewEvent, type SessionEvent } from '../lib/progress/events';
 import { compareEvents, emptyProgress, replayOnto, type ProgressState } from '../lib/progress/fold';
-import { cardKey, type SrsCard } from '../lib/srs';
+import { cardKey, type Skill, type SrsCard } from '../lib/srs';
 import { GAME } from './config';
 import { entryMastery } from './mastery';
 
@@ -20,9 +20,9 @@ export function comboMultiplier(combo: number): number {
   return GAME.xp.combo.find((step) => combo >= step.from)?.multiplier ?? 1;
 }
 
-/** Whether every entry of an answer was already at the top mastery before it. */
-export const allMastered = (entryIds: readonly string[], cards: Readonly<Record<string, SrsCard>>) =>
-  entryIds.every((id) => entryMastery(cards[cardKey(id)]) === 5);
+/** Whether every entry of an answer was already at the top mastery of the skill before it. */
+export const allMastered = (entryIds: readonly string[], cards: Readonly<Record<string, SrsCard>>, skill: Skill = 'written') =>
+  entryIds.every((id) => entryMastery(cards[cardKey(id, skill)]) === 5);
 
 /** `mastered`: every entry of the answer was at mastery 5 before it, so it is worth less. */
 export function answerXp(event: ReviewEvent, ctx: XpContext, mastered = false): AnswerXp {
@@ -46,7 +46,7 @@ export interface ScoredEvent {
   xp: number;
   /** Part of `xp` from the combo multiplier. */
   combo: number;
-  /** Review events only: the cards of its entries just before it (entries never seen are left out). */
+  /** Review events only: its entries' cards for its skill just before it (cards never seen are left out). */
   before?: SrsCard[];
 }
 
@@ -99,8 +99,9 @@ class Scorer {
     const out: ScoredEvent[] = [];
     replayOnto(this.state, sorted, (event, before) => {
       if (event.type === 'review') {
-        const { total, combo } = answerXp(event, this.ctx, allMastered(event.entryIds, before.cards));
-        out.push({ event, xp: total, combo, before: event.entryIds.flatMap((id) => before.cards[cardKey(id)] ?? []) });
+        const skill = reviewSkill(event);
+        const { total, combo } = answerXp(event, this.ctx, allMastered(event.entryIds, before.cards, skill));
+        out.push({ event, xp: total, combo, before: event.entryIds.flatMap((id) => before.cards[cardKey(id, skill)] ?? []) });
       } else if (event.type === 'session') {
         out.push({ event, xp: this.firstPayment(`session:${event.sessionId}`) ? sessionBonus(event) : 0, combo: 0 });
       } else if (event.type === 'quest') {

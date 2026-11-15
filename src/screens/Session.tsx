@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { localize } from '../content/localized';
 import { accentPairs, content } from '../content/registry';
-import { exerciseTypes, isProduction, supportsHelpLang } from '../exercises/registry';
+import { exerciseTypes, isProduction, skillOf, supportsHelpLang } from '../exercises/registry';
 import type { ExerciseContext } from '../exercises/types';
 import { Icon } from '../components/Icon';
 import { Translation } from '../components/Translation';
@@ -125,7 +125,9 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
     const today = dayKey(new Date());
     const cards = useAppStore.getState().progress.cards;
     // Other entries of a duel or pairs count as early practice when they are not due yet, like the session's own entries.
-    const isEarly = (ids: string[]) => ids.every((id) => (id === item.entryId ? item.early : !!cards[cardKey(id)] && !isDue(cards[cardKey(id)]!, today)));
+    const skill = skillOf(exercise.type);
+    const isEarly = (ids: string[]) =>
+      ids.every((id) => (id === item.entryId ? item.early : !!cards[cardKey(id, skill)] && !isDue(cards[cardKey(id, skill)]!, today)));
     const parts = r.parts ?? [{ entryIds: exercise.entryIds, correct: r.correct, timeMs: r.timeMs }];
 
     const s = stats.current;
@@ -138,7 +140,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
       // Picking an answer is easier than typing it: recognition never schedules a card as "easy".
       const graded = recognition ? { ...partResult, grade: partResult.grade ?? (part.correct ? 'good' : 'again') } : partResult;
       const event = recordAnswer(
-        { exerciseId: exercise.id, entryIds: part.entryIds, result: graded, early: isEarly(part.entryIds), sessionId: session.id, comboBefore: streak },
+        { exerciseId: exercise.id, entryIds: part.entryIds, result: graded, early: isEarly(part.entryIds), sessionId: session.id, comboBefore: streak, skill },
         // One millisecond apart, so the log keeps the parts in the order they were answered.
         new Date(answeredAt + i),
       );

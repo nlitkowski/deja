@@ -1,5 +1,6 @@
 import type { ExerciseTypeInfo } from '../content/loader';
 import type { HelpLang } from '../content/localized';
+import type { Skill } from '../lib/srs';
 import { confusableDuel } from './confusable-duel';
 import { DuelView } from './confusable-duel/View';
 import { gapFill } from './gap-fill';
@@ -28,6 +29,8 @@ export const exerciseTypeInfo: Record<string, ExerciseTypeInfo> = Object.fromEnt
 );
 
 export const isProduction = (type: string) => exerciseTypes.get(type)?.production ?? false;
+
+export const skillOf = (type: string): Skill => exerciseTypes.get(type)?.skill ?? 'written';
 
 export function supportsHelpLang(type: string, lang: HelpLang): boolean {
   const langs = exerciseTypes.get(type)?.helpLangs;

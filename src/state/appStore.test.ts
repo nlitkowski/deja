@@ -61,6 +61,15 @@ describe('app store', () => {
     expect((await progressStore.loadEvents()).map((e) => e.id)).toEqual([event.id]);
   });
 
+  it('stores the skill only when it is not written', async () => {
+    const store = createAppStore({ progressStore: memoryStore(), kv: memoryKv() });
+    await store.getState().init();
+    const answer = { exerciseId: 'p/x', entryIds: ['p/a'], result: ok, early: false };
+    expect(store.getState().recordAnswer({ ...answer, skill: 'written' })).not.toHaveProperty('skill');
+    expect(store.getState().recordAnswer({ ...answer, skill: 'listening' }).skill).toBe('listening');
+    expect(store.getState().progress.cards['p/a#listening']).toBeDefined();
+  });
+
   it('rebuilds the same state from the stored log on the next start', async () => {
     const progressStore = memoryStore();
     const kv = memoryKv();
