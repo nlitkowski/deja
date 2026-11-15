@@ -264,6 +264,44 @@
           ]
         },
         {
+          "type": "rule",
+          "text": {
+            "pl": "**neuf** → [v] tylko przed « ans » i « heures »: neuf‿ans, neuf‿heures (w innych przypadkach zwykłe [f]: neuf euros)\n**vingt** → [t] przed samogłoską: vingt‿ans, vingt‿euros",
+            "fr": "**neuf** → [v] seulement devant « ans » et « heures » : neuf‿ans, neuf‿heures (sinon [f] : neuf euros)\n**vingt** → [t] devant une voyelle : vingt‿ans, vingt‿euros"
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Ma nièce a neuf‿ans.", "pl": "Moja siostrzenica ma dziewięć lat." },
+            { "fr": "Le magasin ouvre à neuf‿heures.", "pl": "Sklep otwiera się o dziewiątej." },
+            { "fr": "Mon cousin a vingt‿ans demain.", "pl": "Mój kuzyn kończy jutro dwadzieścia lat." }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**six** i **dix** mają trzy wymowy: same, na końcu zdania [sis] / [dis]; przed samogłoską [z]; przed spółgłoską bez końcówki [si] / [di].",
+            "fr": "**six** et **dix** se prononcent de trois façons : seuls, en fin de phrase [sis] / [dis] ; devant une voyelle [z] ; devant une consonne, sans la finale [si] / [di]."
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "seul", "devant une voyelle", "devant une consonne"],
+          "rows": [
+            ["six", "six [sis]", "six‿amis [siz]", "si(x) chats [si]"],
+            ["dix", "dix [dis]", "dix‿euros [diz]", "di(x) minutes [di]"]
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "– Tu as combien de cousins ? – Six.", "pl": "– Ilu masz kuzynów? – Sześciu." },
+            { "fr": "Le bus passe toutes les dix minutes.", "pl": "Autobus jeździ co dziesięć minut." },
+            { "fr": "Il y a dix‿élèves dans la classe.", "pl": "W klasie jest dziesięcioro uczniów." }
+          ]
+        },
+        {
           "type": "warning",
           "text": {
             "pl": "Przed spółgłoską nie ma łączenia: deu(x) livres, si(x) personnes.",

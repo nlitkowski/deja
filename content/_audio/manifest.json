@@ -654,6 +654,11 @@
   "voice": "fr-FR-DeniseNeural",
   "bytes": 16416
  },
+ "0949f9dc370f35f6f12b029f2558b8bd": {
+  "text": "Le magasin ouvre à neuf‿heures.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 14400
+ },
  "095afdc903ddb0c08df4d0da64c0f407": {
   "text": "rester → resté, tomber → tombé",
   "voice": "fr-FR-RemyMultilingualNeural",
@@ -3579,6 +3584,11 @@
   "voice": "fr-FR-HenriNeural",
   "bytes": 20592
  },
+ "36f8ee1de7ed9923e9b1be2609bd8483": {
+  "text": "Mon cousin a vingt‿ans demain.",
+  "voice": "fr-FR-BrigitteNeural",
+  "bytes": 14688
+ },
  "370c5c27338b612b38c7d58070c3f54c": {
   "text": "Au camping, on dort sous une tente.",
   "voice": "fr-FR-DeniseNeural",
@@ -4828,6 +4838,11 @@
   "text": "voir une exposition",
   "voice": "fr-FR-BrigitteNeural",
   "bytes": 13392
+ },
+ "4a8ae65e38b090aa846160e7637ed4ff": {
+  "text": "Ma nièce a neuf‿ans.",
+  "voice": "fr-FR-AlainNeural",
+  "bytes": 11664
  },
  "4a8be52f976d6acc9669315d641d1454": {
   "text": "J'ai acheté des rideaux bleus pour la chambre.",
@@ -6823,6 +6838,11 @@
   "text": "J'ai peur du dentiste.",
   "voice": "fr-FR-RemyMultilingualNeural",
   "bytes": 11232
+ },
+ "69c27e4f816cca8fa4bde3b699fead45": {
+  "text": "– Tu as combien de cousins ? – Six.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 21456
  },
  "69cc8e2e4ed4633c7f477408248d9d94": {
   "text": "en coton",
@@ -9228,6 +9248,11 @@
   "text": "L'hôtel est près de la plage.",
   "voice": "fr-FR-VivienneMultilingualNeural",
   "bytes": 11232
+ },
+ "8eb22e8a6e3a8f801d51ac2d9a512b0b": {
+  "text": "Il y a dix‿élèves dans la classe.",
+  "voice": "fr-FR-HenriNeural",
+  "bytes": 15840
  },
  "8eb66d7f389685d603b320f35239a249": {
   "text": "Comme il pleut, je reste ici.",
@@ -13268,6 +13293,11 @@
   "text": "un bel appartement",
   "voice": "fr-FR-DeniseNeural",
   "bytes": 11952
+ },
+ "cafbc55b630627cbf5b4f1b2642c52d5": {
+  "text": "Le bus passe toutes les dix minutes.",
+  "voice": "fr-FR-VivienneMultilingualNeural",
+  "bytes": 12240
  },
  "cb05e4d22cc13ee93278349a75a423a3": {
   "text": "Le bureau est trop loin de chez moi.",
