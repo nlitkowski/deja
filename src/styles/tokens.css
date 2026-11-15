@@ -39,6 +39,12 @@
   /* Logotype: navy on light backgrounds, gold on navy (BRANDING.md). */
   --brand: light-dark(#1a1f3a, #c9a84c);
   --hero-muted: #c9cbe0;
+  /* Eye mark: navy on light (cut-out pupil), gold on dark. Favicon tile: the fixed navy + gold of the brand. */
+  --mark: light-dark(#1a1f3a, #c9a84c);
+  --mark-pupil-color: light-dark(var(--bg), var(--text));
+  --favicon-tile: #1a1f3a;
+  --favicon-mark: #c9a84c;
+  --favicon-pupil: #faf7f2;
 
   --font-head: 'Playfair Display', Georgia, serif;
   --font-body: 'Source Sans 3', system-ui, sans-serif;
@@ -76,6 +82,11 @@
   --hero-bg: light-dark(#4a3870, #352a4d);
   --hero-fg: #fbf7ff;
   --hero-muted: #d6cbe8;
+  --mark: light-dark(#6b4fa0, #f0bf4c);
+  --mark-pupil-color: light-dark(var(--bg), var(--text));
+  --favicon-tile: var(--hero-bg);
+  --favicon-mark: var(--highlight);
+  --favicon-pupil: var(--hero-fg);
 
   --font-head: 'Playfair Display', Georgia, serif;
   --font-body: 'Source Sans 3', system-ui, sans-serif;
@@ -117,6 +128,11 @@
   --hero-bg: light-dark(#2a582a, #2a3474);
   --hero-fg: light-dark(#e3ebc3, #e2e2ee);
   --hero-muted: light-dark(#c4cfa1, #b0bce4);
+  --mark: light-dark(#2a582a, #e0aa3a);
+  --mark-pupil-color: light-dark(var(--bg), var(--text));
+  --favicon-tile: light-dark(#0f380f, #12152a);
+  --favicon-mark: var(--highlight);
+  --favicon-pupil: var(--hero-fg);
 
   --font-head: 'Press Start 2P', ui-monospace, monospace;
   --font-body: 'VT323', ui-monospace, monospace;

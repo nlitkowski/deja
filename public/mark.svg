@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="15 5 71 83" fill="none">
+  <circle cx="44" cy="58" r="19" stroke="currentColor" stroke-width="9"/>
+  <path d="M67 37 V70 Q67 79 77 79" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+  <circle class="pupil" cx="37" cy="54" r="7" fill="var(--mark-pupil, currentColor)"/>
+  <line x1="24" y1="14" x2="52" y2="26" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+</svg>

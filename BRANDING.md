@@ -11,12 +11,16 @@ Instrukcje dla Claude'a dotyczące identyfikacji wizualnej i języka aplikacji. 
 
 ## Logo i favicon
 
-- Znak: złote **„à”** (Playfair Display Bold, glif zamieniony na ścieżkę) na granatowym kwadracie.
-  - Favicon i UI: zaokrąglony kwadrat (`rx` = 22% boku).
-  - Ikony PWA i iOS (`icon-maskable.svg`, `apple-touch-icon.png`): pełny kwadrat bez zaokrągleń, bo system sam przycina rogi.
-- Litera zajmuje ok. 75% wysokości kwadratu i jest wyśrodkowana optycznie.
-- Logotyp w UI to słowo „Déjà” w Playfair Display Bold, kolor granat na jasnym tle albo złoto na granacie. Znak „à” może stać obok logotypu, ale nie zastępuje w nim litery.
-- Nie zmieniaj kolorów znaku, nie dodawaj cieni, gradientów ani obrysów. Nie podmieniaj fontu w znaku. Nie używaj emoji flagi jako logo.
+- Znak: **„à” jako oko**. Litera „a” to oko: okrągła tęczówka (obrys) i laska z ogonkiem w prawo na dole. Źrenica to pełne kółko w lewej górnej części oka, więc patrzy w lewo i lekko w górę, czyli wstecz („déjà vu”). Akcent grave nad literą jest brwią. Źródła: `public/mark.svg` (sam znak), `public/favicon.svg`, `public/icon-maskable.svg`.
+  - Kolory marki: złoty znak (`#c9a84c`) na granacie (`#1a1f3a`), źrenica kremowa (`#faf7f2`).
+  - Favicon i UI: zaokrąglony kwadrat (`rx` = 22% boku). `favicon.ico` to zapas dla przeglądarek bez SVG.
+  - Ikony PWA i iOS (`icon-maskable.svg`, `apple-touch-icon.png`, `pwa-*.png`): pełny kwadrat bez zaokrągleń, znak w strefie bezpiecznej, bo system sam przycina rogi. Są stałe (granat + złoto) we wszystkich stylach, bo system pobiera je przy instalacji. PNG generuje `npm run icons`.
+- **Wariant pikselowy** (`mark-pixel.svg`, `favicon-pixel.svg`, siatka 14 × 14, `shape-rendering="crispEdges"`): ta sama geometria w pikselach, tylko w stylu 8-bit.
+- **W aplikacji** znak to komponent `<Mark />` (inline SVG, w 8-bit wariant pikselowy). Kolor znaku z tokenu `--mark` (akcent stylu w trybie jasnym, złoto w ciemnym), źrenica z `--mark-pupil`: w trybie jasnym kolor tła, więc źrenica jest „wycięta”, w ciemnym jasny tekst. Favicon karty przeglądarki podąża za stylem i trybem (tokeny `--favicon-tile`, `--favicon-mark`, `--favicon-pupil`, `src/theme.ts`).
+- **Wersja jednokolorowa:** `mark.svg` z `--mark-pupil` równym kolorowi znaku (źrenica zlewa się z tęczówką).
+- Źrenica jest w SVG osobnym elementem z klasą `pupil` (pod przyszłą animację). Nie scalaj jej ze znakiem w jedną ścieżkę.
+- Logotyp w UI to słowo „Déjà” w Playfair Display Bold, kolor granat na jasnym tle albo złoto na granacie. Znak może stać obok logotypu, ale nie zastępuje w nim litery.
+- Nie dodawaj cieni, gradientów ani obrysów, nie zmieniaj proporcji znaku. Nie używaj emoji flagi jako logo.
 
 ## Kolory
 

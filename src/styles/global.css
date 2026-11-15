@@ -1601,6 +1601,26 @@ button {
   gap: 10px;
 }
 
+.mark {
+  display: inline-flex;
+  color: var(--mark);
+  --mark-pupil: var(--mark-pupil-color);
+}
+
+.mark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.mark-pixel,
+[data-palette='pixel'] .mark-smooth {
+  display: none;
+}
+
+[data-palette='pixel'] .mark-pixel {
+  display: block;
+}
+
 .logo-mark {
   width: 1.1em;
   height: 1.1em;

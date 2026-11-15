@@ -12,7 +12,7 @@ export default defineConfig({
     VitePWA({
       // `prompt`, not `autoUpdate`: a new version waits for the user's "Recharger" so a session is never reloaded mid-way.
       registerType: 'prompt',
-      includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
+      includeAssets: ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png'],
       manifest: {
         name: 'Déjà',
         short_name: 'Déjà',
@@ -32,7 +32,7 @@ export default defineConfig({
       workbox: {
         // Content packs are bundled into the JS, so precaching the build covers them. Fonts of every style are
         // precached so switching styles works offline, but only the subsets French and Polish need, as woff2.
-        globPatterns: ['**/*.{js,css,html,svg,png}', '**/*-latin-*.woff2'],
+        globPatterns: ['**/*.{js,css,html,svg,png,ico}', '**/*-latin-*.woff2'],
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         navigateFallback: `${base}index.html`,
         // Standalone pages: the app shell must not answer for them.

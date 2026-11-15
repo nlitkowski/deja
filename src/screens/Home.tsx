@@ -5,6 +5,7 @@ import { QuestList } from '../components/QuestList';
 import { SyncBadge } from '../components/SyncBadge';
 import { Icon } from '../components/Icon';
 import { LangSwitch } from '../components/LangSwitch';
+import { Mark } from '../components/Mark';
 import { content } from '../content/registry';
 import { GAME } from '../game/config';
 import { ui } from '../i18n/ui';
@@ -57,7 +58,7 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onOpe
           <MenuButton />
           <div className="home-title">
             <h1 className="logotype">
-              <img className="logo-mark" src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width={36} height={36} />
+              <Mark className="logo-mark" />
               {ui.appTitle}
             </h1>
             <p className="subtitle">{ui.appSubtitle}</p>
