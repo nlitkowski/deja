@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { buildBoss } from '../bosses';
 import { exerciseTypeInfo, isProduction, supportsHelpLang } from '../exercises/registry';
+import { mapState } from '../game/map';
 import { loadPacks } from './loader';
 import { content, contentFiles } from './registry';
 
@@ -135,6 +136,17 @@ describe('content packs', () => {
       if (pairs && !boss?.questions.some((q) => q.kind === 'choice')) problems.push(`${unit.key}: brak pytań z wyborem`);
     }
     expect(problems).toEqual([]);
+  });
+
+  it('Édito A1 unité 0 is optional: unité 1 stays open without it', () => {
+    const edito = content.packs.find((p) => p.id === 'edito-a1')!;
+    const packs = [{ id: edito.id, requires: [], units: edito.unitList.map((u) => ({ key: u.key, optional: u.optional, entryIds: u.entryIds })) }];
+    const units = mapState(packs, {}, new Set()).get('edito-a1')!.units;
+    expect(units.slice(0, 3).map((u) => [u.key, u.locked])).toEqual([
+      ['edito-a1/unite-00', false],
+      ['edito-a1/unite-01', false],
+      ['edito-a1/unite-02', true],
+    ]);
   });
 
   it('the template pack is valid', () => {

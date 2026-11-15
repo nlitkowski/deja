@@ -29,7 +29,7 @@ const mapPacks: MapPack[] = content.packs
   .map((p) => ({
     id: p.id,
     requires: p.requires,
-    units: p.unitList.map((u) => ({ key: u.key, entryIds: u.entryIds.filter((id) => !content.entries.get(id)?.deprecated) })),
+    units: p.unitList.map((u) => ({ key: u.key, optional: u.optional, entryIds: u.entryIds.filter((id) => !content.entries.get(id)?.deprecated) })),
   }));
 
 /** Locks, mastery and bosses of every unit, by pack id. */

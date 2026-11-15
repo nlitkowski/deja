@@ -39,6 +39,17 @@ describe('mapState', () => {
     expect(state.get('a')!.units[1]!.golden).toBe(false);
     expect(state.get('b')).toMatchObject({ locked: false, missing: [] });
   });
+
+  it('an optional unit locks nothing: the next unit and the pack do not wait for it', () => {
+    const intro: MapPack[] = [
+      { id: 'a', requires: [], units: [{ key: 'a/0', entryIds: ['a0'], optional: true }, { key: 'a/1', entryIds: ['a1'] }, { key: 'a/2', entryIds: ['a2'] }] },
+      { id: 'b', requires: ['a'], units: [{ key: 'b/1', entryIds: ['b1'] }] },
+    ];
+    expect(mapState(intro, {}, new Set()).get('a')!.units.map((u) => u.locked)).toEqual([false, false, true]);
+    const state = mapState(intro, { a1: card(1), a2: card(1) }, new Set());
+    expect(state.get('a')).toMatchObject({ complete: true });
+    expect(state.get('b')!.locked).toBe(false);
+  });
 });
 
 describe('defeatedBosses', () => {

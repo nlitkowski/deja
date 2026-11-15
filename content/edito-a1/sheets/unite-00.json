@@ -1,0 +1,484 @@
+{
+  "id": "unite-00",
+  "label": "Unité 0",
+  "title": "Bienvenue !",
+  "icon": "🎉",
+  "summary": {
+    "pl": "Pierwsze kroki: słowa, które już znasz, powitania i pożegnania, tu czy vous, zaimki, alfabet i literowanie, liczby od 0 do 31, dni tygodnia, miesiące i data.",
+    "fr": "Les premiers pas : des mots que tu connais déjà, saluer et prendre congé, tu ou vous, les pronoms, l'alphabet, les nombres de 0 à 31, les jours, les mois et la date."
+  },
+  "sections": [
+    {
+      "kind": "vocabulary",
+      "title": "Des mots que tu connais déjà",
+      "blocks": [
+        {
+          "type": "text",
+          "text": {
+            "pl": "Wiele francuskich słów rozumiesz bez nauki. Uważaj tylko na **pisownię** (akcenty, nieme końcówki) i na **rodzaj**, który często jest inny niż po polsku.",
+            "fr": "Tu comprends beaucoup de mots français sans les apprendre. Attention seulement à l'**orthographe** (les accents, les lettres muettes) et au **genre**, souvent différent du polonais."
+          }
+        },
+        {
+          "type": "words",
+          "title": { "pl": "W mieście", "fr": "En ville" },
+          "items": [
+            { "fr": "un café", "pl": "kawa; kawiarnia", "def": "une boisson, et l'endroit où on la boit" },
+            { "fr": "un restaurant", "pl": "restauracja", "def": "on y mange" },
+            { "fr": "un hôtel", "pl": "hotel", "def": "on y dort en voyage" },
+            { "fr": "un cinéma", "pl": "kino", "def": "on y regarde des films" },
+            { "fr": "un théâtre", "pl": "teatr", "def": "on y regarde une pièce" },
+            { "fr": "un musée", "pl": "muzeum", "def": "on y regarde des tableaux" },
+            { "fr": "une banque", "pl": "bank", "def": "on y garde son argent" },
+            { "fr": "une université", "pl": "uniwersytet", "def": "on y fait des études" },
+            { "fr": "un hôpital", "pl": "szpital", "def": "on y soigne les malades" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Transport i jedzenie", "fr": "Le transport et la nourriture" },
+          "items": [
+            { "fr": "un taxi", "pl": "taksówka", "def": "une voiture avec un chauffeur" },
+            { "fr": "un tramway (le tram)", "pl": "tramwaj", "def": "un train électrique en ville" },
+            { "fr": "le chocolat", "pl": "czekolada", "def": "un aliment sucré et brun" },
+            { "fr": "une banane", "pl": "banan", "def": "un fruit jaune" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Rodzaj nie zgadza się z polskim: **le** chocolat (czekolada), **le** taxi (taksówka), **la** banque (bank), **la** banane (banan), **l'**université (uniwersytet).\nKońcówki są często nieme: restauran(t), chocola(t). Akcenty są częścią pisowni: caf**é**, h**ô**tel, th**éâ**tre.",
+            "fr": "Le genre est souvent différent du polonais : **le** chocolat, **le** taxi, **la** banque, **la** banane, **l'**université.\nLes lettres finales sont souvent muettes : restauran(t), chocola(t). Les accents font partie de l'orthographe : caf**é**, h**ô**tel, th**éâ**tre."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Tu ou vous ?",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**tu** – na ty: przyjaciel, rodzina, dziecko, kolega w podobnym wieku.\n**vous** – grzecznie (pan, pani, państwo): osoba nieznajoma, sklep, urząd, przełożony. **vous** znaczy też **wy**, kiedy mówimy do kilku osób.",
+            "fr": "**tu** : pour un ami, la famille, un enfant, un camarade du même âge.\n**vous** : pour être poli avec une personne inconnue, dans un magasin, au travail. **vous** sert aussi pour parler à plusieurs personnes."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Salut Karol ! Tu vas bien ?", "pl": "Cześć Karol! Jak się masz?" },
+            { "fr": "Bonjour, madame. Vous allez bien ?", "pl": "Dzień dobry pani. Jak się pani miewa?" },
+            { "fr": "Les enfants, vous êtes prêts ?", "pl": "Dzieci, jesteście gotowe?" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Jeśli nie wiesz, którą formę wybrać, mów **vous**. Rozmówca sam zaproponuje przejście na ty: « On peut se tutoyer ? ».",
+            "fr": "Si tu hésites, dis **vous**. L'autre personne propose de passer au **tu** : « On peut se tutoyer ? »."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les pronoms",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "pronom sujet", "pronom tonique"],
+          "rows": [
+            ["ja", "je / j'", "moi"],
+            ["ty", "tu", "toi"],
+            ["on / ona", "il / elle", "lui / elle"],
+            ["my", "nous", "nous"],
+            ["wy / pan, pani", "vous", "vous"],
+            ["oni / one", "ils / elles", "eux / elles"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Po francusku zaimek stoi **zawsze** przed czasownikiem, także tam, gdzie po polsku go pomijamy: « Mieszka w Lille » = **Elle** habite à Lille.\n**ils** – grupa mężczyzn albo grupa mieszana, **elles** – same kobiety.",
+            "fr": "En français, le pronom est **toujours** devant le verbe : **Elle** habite à Lille.\n**ils** : un groupe d'hommes ou un groupe mixte ; **elles** : seulement des femmes."
+          }
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Formy akcentowane **moi, toi, vous** służą do podkreślenia i do odbicia pytania: **Moi**, je… (A ja…), Et **toi** ? (A ty?), Et **vous** ? (A pan / pani?).",
+            "fr": "Les pronoms toniques **moi, toi, vous** servent à insister ou à retourner une question : **Moi**, je… Et **toi** ? Et **vous** ?"
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Moi, je suis de Gdańsk. Et toi ?", "pl": "Ja jestem z Gdańska. A ty?" },
+            { "fr": "Très bien, merci. Et vous, madame ?", "pl": "Bardzo dobrze, dziękuję. A pani?" },
+            { "fr": "Inès et Mathis ? Ils sont au cinéma.", "pl": "Inès i Mathis? Są w kinie." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Nie mów « et tu ? ». Po **et** stoi forma akcentowana: **et toi ?**",
+            "fr": "On ne dit pas « et tu ? ». Après **et**, on utilise le pronom tonique : **et toi ?**"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Se présenter : je m'appelle…",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Żeby podać imię, mówimy **je m'appelle** + imię. Pełną odmianę czasownika **s'appeler** poznasz w unité 1.",
+            "fr": "Pour dire son prénom : **je m'appelle** + prénom. Toute la conjugaison de **s'appeler** est dans l'unité 1."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Bonjour, je m'appelle Igor.", "pl": "Dzień dobry, mam na imię Igor." },
+            { "fr": "– Tu t'appelles comment ? – Je m'appelle Chloé.", "pl": "– Jak masz na imię? – Mam na imię Chloé." },
+            { "fr": "Enchantée ! Moi, c'est Margot.", "pl": "Miło mi! Ja jestem Margot." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Nie gub **m'**: je **m'**appelle, nie « je appelle ». Kobieta mówi **enchantée**, mężczyzna **enchanté** (wymowa ta sama).",
+            "fr": "N'oublie pas **m'** : je **m'**appelle. Une femme dit **enchantée**, un homme **enchanté** (même prononciation)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "L'alphabet",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["lettre", "nom", "lettre", "nom"],
+          "rows": [
+            ["A", "a", "N", "enne"],
+            ["B", "bé", "O", "o"],
+            ["C", "cé", "P", "pé"],
+            ["D", "dé", "Q", "ku"],
+            ["E", "e", "R", "erre"],
+            ["F", "effe", "S", "esse"],
+            ["G", "gé", "T", "té"],
+            ["H", "ache", "U", "u"],
+            ["I", "i", "V", "vé"],
+            ["J", "ji", "W", "double vé"],
+            ["K", "ka", "X", "ixe"],
+            ["L", "elle", "Y", "i grec"],
+            ["M", "emme", "Z", "zède"]
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Te litery Polacy mylą najczęściej:\n**E** brzmi jak w « le » (prawie jak polskie y), **I** jak polskie i, **U** jak w « tu » (usta jak do u, język jak do i).\n**G** to « gé », a **J** to « ji » – ucho podpowiada odwrotnie.\n**C** to « cé », choć brzmi jak polskie « se »; **S** to « esse ».\n**V** to « vé », **W** to « double vé », **Y** to « i grec », **H** to « ache ».",
+            "fr": "Les lettres difficiles pour un Polonais :\n**E** comme dans « le », **I** comme dans « il », **U** comme dans « tu ».\n**G** se dit « gé », **J** se dit « ji ».\n**C** se dit « cé », **S** se dit « esse ».\n**V** se dit « vé », **W** « double vé », **Y** « i grec », **H** « ache »."
+          }
+        },
+        {
+          "type": "table",
+          "title": { "pl": "Znaki przy literach", "fr": "Les accents et la cédille" },
+          "head": ["", "nom", "exemple"],
+          "rows": [
+            ["é", "e accent aigu", "café, université"],
+            ["è", "e accent grave", "très, mère"],
+            ["ê", "e accent circonflexe", "fenêtre, être"],
+            ["ç", "c cédille", "ça, français"]
+          ]
+        },
+        {
+          "type": "examples",
+          "title": { "pl": "Literowanie", "fr": "Épeler" },
+          "items": [
+            { "fr": "– Votre nom, ça s'écrit comment ? – N-O-W-A-K.", "pl": "– Jak się pisze pana nazwisko? – N-O-W-A-K." },
+            { "fr": "Wolski : double vé, o, elle, esse, ka, i.", "pl": "Wolski: W-O-L-S-K-I." },
+            { "fr": "Annette, avec deux n et deux t.", "pl": "Annette, przez dwa n i dwa t." },
+            { "fr": "Vous pouvez épeler, s'il vous plaît ?", "pl": "Czy może pan / pani przeliterować?" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les nombres de 0 à 31",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["", "", "", ""],
+          "rows": [
+            ["0 zéro", "8 huit", "16 seize", "24 vingt-quatre"],
+            ["1 un", "9 neuf", "17 dix-sept", "25 vingt-cinq"],
+            ["2 deux", "10 dix", "18 dix-huit", "26 vingt-six"],
+            ["3 trois", "11 onze", "19 dix-neuf", "27 vingt-sept"],
+            ["4 quatre", "12 douze", "20 vingt", "28 vingt-huit"],
+            ["5 cinq", "13 treize", "21 vingt **et** un", "29 vingt-neuf"],
+            ["6 six", "14 quatorze", "22 vingt-deux", "30 trente"],
+            ["7 sept", "15 quinze", "23 vingt-trois", "31 trente **et** un"]
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Od 11 do 16 liczby mają własne nazwy. Od 17 liczymy: dix-sept = 10 + 7.\nW **21** i **31** jest **et** bez łączników: vingt **et** un, trente **et** un. Pozostałe liczby łączymy łącznikiem: vingt-deux.\nCiąg dalszy (32–100) znajdziesz w unité 1.",
+            "fr": "De 11 à 16, des mots spéciaux. À partir de 17 : dix-sept = 10 + 7.\n**21** et **31** avec **et** : vingt **et** un, trente **et** un. Les autres avec un trait d'union : vingt-deux.\nLa suite (32 à 100) est dans l'unité 1."
+          }
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Pary, które łatwo pomylić: **deux** (2) i **douze** (12), **treize** (13) i **trente** (30), **six** (6) i **dix** (10).\nW **six** i **dix** końcowe x: nieme przed spółgłoską (six livres), [s] na końcu (j'en ai six), [z] przed samogłoską (six ans).",
+            "fr": "Attention aux paires : **deux** (2) et **douze** (12), **treize** (13) et **trente** (30), **six** (6) et **dix** (10).\nDans **six** et **dix**, le x est muet devant une consonne, se dit [s] à la fin et [z] devant une voyelle."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "La liaison avec les nombres",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Przed samogłoską albo niemym h wymawiamy ostatnią spółgłoskę liczby i łączymy ją z następnym słowem:\n**un** → [n]: un‿an\n**deux, trois, six, dix** → [z]: deux‿euros, trois‿heures, six‿ans, dix‿euros",
+            "fr": "Devant une voyelle ou un h muet, on prononce la consonne finale du nombre avec le mot suivant :\n**un** → [n] : un‿an\n**deux, trois, six, dix** → [z] : deux‿euros, trois‿heures, six‿ans, dix‿euros"
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "J'ai un‿an de plus que toi.", "pl": "Jestem o rok starszy od ciebie." },
+            { "fr": "Ça fait deux‿euros.", "pl": "To kosztuje dwa euro." },
+            { "fr": "Le train part à trois‿heures.", "pl": "Pociąg odjeżdża o trzeciej." },
+            { "fr": "Mon fils a six‿ans.", "pl": "Mój syn ma sześć lat." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Przed spółgłoską nie ma łączenia: deu(x) livres, si(x) personnes.",
+            "fr": "Devant une consonne, pas de liaison : deu(x) livres, si(x) personnes."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "grammar",
+      "title": "Les jours et la date",
+      "blocks": [
+        {
+          "type": "rule",
+          "text": {
+            "pl": "Data: **le** + liczba + miesiąc: **le** 9 octobre, **le** vingt-trois mars.\nPierwszy dzień miesiąca to **le premier** (1er), nie « le un »: **le premier** mai.",
+            "fr": "La date : **le** + nombre + mois : **le** 9 octobre, **le** vingt-trois mars.\nLe premier jour du mois : **le premier** (1er), pas « le un » : **le premier** mai."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "– On est quel jour aujourd'hui ? – On est mercredi.", "pl": "– Jaki jest dzisiaj dzień? – Środa." },
+            { "fr": "Quel jour sommes-nous ?", "pl": "Jaki dziś dzień?" },
+            { "fr": "Aujourd'hui, c'est le 9 octobre ; demain, c'est le 10.", "pl": "Dziś jest 9 października, jutro 10." },
+            { "fr": "Mon anniversaire, c'est le premier juin.", "pl": "Moje urodziny są pierwszego czerwca." }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "Dni i miesiące piszemy **małą literą**: lundi, mai.\nOdpowiadając, jaki jest dzień, nie używamy rodzajnika: on est **mardi**. « **Le** mardi » znaczy « we wtorki » – o tym w unité 6.",
+            "fr": "Les jours et les mois s'écrivent avec une **minuscule** : lundi, mai.\nPour dire le jour, pas d'article : on est **mardi**. « **Le** mardi » veut dire « tous les mardis » (unité 6)."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les jours et les mois",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Dni tygodnia", "fr": "Les jours de la semaine" },
+          "items": [
+            { "fr": "lundi", "pl": "poniedziałek" },
+            { "fr": "mardi", "pl": "wtorek" },
+            { "fr": "mercredi", "pl": "środa" },
+            { "fr": "jeudi", "pl": "czwartek" },
+            { "fr": "vendredi", "pl": "piątek" },
+            { "fr": "samedi", "pl": "sobota" },
+            { "fr": "dimanche", "pl": "niedziela" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Miesiące", "fr": "Les mois" },
+          "items": [
+            { "fr": "janvier, février, mars", "pl": "styczeń, luty, marzec" },
+            { "fr": "avril, mai, juin", "pl": "kwiecień, maj, czerwiec" },
+            { "fr": "juillet, août, septembre", "pl": "lipiec, sierpień, wrzesień" },
+            { "fr": "octobre, novembre, décembre", "pl": "październik, listopad, grudzień" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Dziś i jutro", "fr": "Aujourd'hui et demain" },
+          "items": [
+            { "fr": "aujourd'hui", "pl": "dziś", "def": "ce jour" },
+            { "fr": "demain", "pl": "jutro", "def": "le jour après aujourd'hui" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**mardi** (wtorek) i **mercredi** (środa), **juin** (czerwiec) i **juillet** (lipiec) łatwo pomylić. Juin jest krótsze i wcześniejsze.",
+            "fr": "Attention : **mardi** et **mercredi**, **juin** et **juillet**. Juin est le mot le plus court et le mois qui vient avant."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Saluer et prendre congé",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Na powitanie", "fr": "Pour saluer" },
+          "items": [
+            { "fr": "bonjour", "pl": "dzień dobry", "def": "le matin et la journée" },
+            { "fr": "bonsoir", "pl": "dobry wieczór", "def": "le soir" },
+            { "fr": "salut (fam.)", "pl": "cześć", "def": "entre amis, aussi pour partir" },
+            { "fr": "madame / monsieur", "pl": "pani / pan", "def": "pour parler poliment à une femme / à un homme" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Na pożegnanie", "fr": "Pour partir" },
+          "items": [
+            { "fr": "au revoir", "pl": "do widzenia", "def": "poli, avec tout le monde" },
+            { "fr": "à bientôt", "pl": "do zobaczenia wkrótce", "def": "on se revoit dans peu de temps" },
+            { "fr": "à demain", "pl": "do jutra", "def": "on se revoit le jour suivant" },
+            { "fr": "à plus (fam.)", "pl": "na razie", "def": "entre amis, de « à plus tard »" },
+            { "fr": "ciao (fam.)", "pl": "pa", "def": "entre amis, un mot italien" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Jak się masz?", "fr": "Ça va ?" },
+          "items": [
+            { "fr": "Ça va ? – Ça va (bien).", "pl": "Jak leci? – W porządku (dobrze)." },
+            { "fr": "Tu vas bien ? / Vous allez bien ?", "pl": "Dobrze się czujesz? / Jak się pan / pani miewa?" },
+            { "fr": "Très bien, merci. Et toi ? / Et vous ?", "pl": "Bardzo dobrze, dziękuję. A ty? / A pan / pani?" }
+          ]
+        },
+        {
+          "type": "rule",
+          "text": {
+            "pl": "**salut**, **à plus** i **ciao** są potoczne: tylko do osób, z którymi jesteś na ty. **bonjour** i **au revoir** pasują zawsze. Do nieznajomej osoby grzeczniej jest dodać **madame** albo **monsieur**: « Bonjour, madame ! ».",
+            "fr": "**salut**, **à plus** et **ciao** sont familiers : seulement avec tu. **bonjour** et **au revoir** vont avec tout le monde. Avec une personne inconnue, on ajoute **madame** ou **monsieur** : « Bonjour, madame ! »."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "La politesse",
+      "blocks": [
+        {
+          "type": "words",
+          "items": [
+            { "fr": "s'il vous plaît / s'il te plaît", "pl": "proszę (prosząc o coś)", "def": "pour demander poliment ; vous / tu" },
+            { "fr": "merci / merci beaucoup", "pl": "dziękuję / bardzo dziękuję", "def": "pour remercier" },
+            { "fr": "de rien", "pl": "nie ma za co", "def": "la réponse à « merci »" },
+            { "fr": "pardon", "pl": "przepraszam; słucham?", "def": "pour une petite erreur, ou pour faire répéter" },
+            { "fr": "excusez-moi / excuse-moi", "pl": "przepraszam", "def": "pour appeler quelqu'un ou pour s'excuser ; vous / tu" }
+          ]
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Un thé, s'il vous plaît.", "pl": "Poproszę herbatę." },
+            { "fr": "Tu m'aides, s'il te plaît ?", "pl": "Pomożesz mi, proszę?" },
+            { "fr": "Excusez-moi, monsieur, où est la banque ?", "pl": "Przepraszam pana, gdzie jest bank?" },
+            { "fr": "Pardon ? Vous pouvez répéter ?", "pl": "Słucham? Może pan / pani powtórzyć?" }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "En cours de français",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Vous pouvez répéter, s'il vous plaît ?", "pl": "Może pan / pani powtórzyć?" },
+            { "fr": "Je ne comprends pas.", "pl": "Nie rozumiem." },
+            { "fr": "Ça s'écrit comment ?", "pl": "Jak to się pisze?" },
+            { "fr": "Comment on dit « dziękuję » en français ?", "pl": "Jak się mówi « dziękuję » po francusku?" },
+            { "fr": "Qu'est-ce que ça veut dire ?", "pl": "Co to znaczy?" },
+            { "fr": "Vous pouvez parler plus lentement ?", "pl": "Może pan / pani mówić wolniej?" },
+            { "fr": "Excusez-moi, je suis en retard.", "pl": "Przepraszam za spóźnienie." }
+          ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "« Comment on dit… ? » to wygodny wzór do pytania o każde słowo. Odpowiedź: « On dit… ».",
+            "fr": "« Comment on dit… ? » sert pour demander n'importe quel mot. La réponse : « On dit… »."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Se saluer : la bise ou la main ?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": {
+            "pl": "Z osobą, której nie znasz, w pracy albo w urzędzie wita się **podaniem ręki**.\nPrzyjaciele i rodzina robią **la bise**: lekko dotykają się policzkami i cmokają w powietrze. Liczba buziaków zależy od regionu: najczęściej dwa, ale bywa jeden, trzy, a nawet cztery. Jeśli nie wiesz, ile, pozwól drugiej osobie zacząć.",
+            "fr": "Avec une personne inconnue, au travail ou dans un bureau, on se **serre la main**.\nEntre amis et en famille, on se fait **la bise** : les joues se touchent un peu et on fait un petit bruit de bisou. Le nombre de bises change selon la région : souvent deux, parfois une, trois ou quatre. Si tu ne sais pas, laisse l'autre personne commencer."
+          }
+        },
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "On se fait la bise ?", "pl": "Witamy się buziakiem?" },
+            { "fr": "Enchanté, madame. – Enchantée.", "pl": "Miło mi panią poznać. – Mnie również." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Quelques fêtes françaises",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Le premier mai, c'est la fête du Travail. Les gens offrent du muguet.", "pl": "Pierwszego maja jest Święto Pracy. Ludzie dają sobie konwalie." },
+            { "fr": "Le 21 juin, c'est la fête de la Musique : on joue de la musique dans la rue.", "pl": "21 czerwca jest Święto Muzyki: gra się muzykę na ulicach." },
+            { "fr": "Le 14 juillet, c'est la fête nationale : il y a un défilé et des feux d'artifice.", "pl": "14 lipca jest święto narodowe: jest defilada i fajerwerki." }
+          ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "Ćwicz daty na świętach: « C'est quand, la fête de la Musique ? – C'est **le** vingt et un juin. »",
+            "fr": "Pour pratiquer la date : « C'est quand, la fête de la Musique ? – C'est **le** vingt et un juin. »"
+          }
+        }
+      ]
+    }
+  ],
+  "practice": ["edito-a1/unite-00"]
+}

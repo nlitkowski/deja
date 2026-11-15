@@ -170,6 +170,7 @@ export function loadPacks(files: ContentFiles, exerciseTypes: Record<string, Exe
       entryIds: raw.entries.map((e) => `${pack.id}/${e.id}`),
       exerciseIds: raw.exercises.map((ex) => `${pack.id}/${ex.id}`),
       boss,
+      optional: raw.optional,
     };
     units.set(key, unit);
     return unit;

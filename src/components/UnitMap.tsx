@@ -1,6 +1,6 @@
 import { content } from '../content/registry';
 import type { Pack } from '../content/schema';
-import type { PackState } from '../game/map';
+import { gatingUnit, type PackState } from '../game/map';
 import { ui } from '../i18n/ui';
 import { dayKey } from '../lib/date';
 import { cardKey, isDue } from '../lib/srs';
@@ -66,7 +66,7 @@ export function UnitMap({ pack, state, onPractice, onBoss, more }: Props) {
         <ol>
           {placed.map((step, i) => {
             const { unit, unitState: u } = step;
-            const previous = pack.unitList[pack.unitList.indexOf(unit) - 1];
+            const previous = gatingUnit(pack.unitList, pack.unitList.indexOf(unit));
             const style = { top: step.top, left: `${step.x}%` };
             if (step.kind === 'boss') {
               const open = u.boss.unlocked;

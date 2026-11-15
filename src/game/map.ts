@@ -7,6 +7,8 @@ export interface MapUnit {
   key: string;
   /** Without deprecated entries. */
   entryIds: readonly string[];
+  /** Does not gate the next unit nor the pack's completion. */
+  optional?: boolean;
 }
 
 export interface MapPack {
@@ -36,6 +38,12 @@ export interface PackState {
   units: UnitState[];
 }
 
+/** The unit that must be seen before unit `index` opens: the closest earlier one that is not optional. */
+export function gatingUnit<U extends { optional?: boolean }>(units: readonly U[], index: number): U | undefined {
+  for (let i = index - 1; i >= 0; i--) if (!units[i]!.optional) return units[i];
+  return undefined;
+}
+
 export function defeatedBosses(events: readonly ProgressEvent[]): Set<string> {
   const out = new Set<string>();
   for (const e of events) if (e.type === 'session' && e.kind === 'boss' && e.defeated && e.unitKey) out.add(e.unitKey);
@@ -45,10 +53,11 @@ export function defeatedBosses(events: readonly ProgressEvent[]): Set<string> {
 /**
  * The map's locks. A unit opens once the one before it has every entry seen (mastery ≥ 1); its boss
  * once the unit reaches mastery 2. A pack with `requires` opens once those packs are complete.
+ * Optional units are skipped: the unit after one waits for the last required unit before it.
  */
 export function mapState(packs: readonly MapPack[], cards: Readonly<Record<string, SrsCard>>, defeated: ReadonlySet<string>): Map<string, PackState> {
   const mastery = new Map(packs.flatMap((p) => p.units.map((u) => [u.key, unitMastery(u.entryIds, cards)] as const)));
-  const complete = new Map(packs.map((p) => [p.id, p.units.every((u) => mastery.get(u.key)! >= GAME.mastery.unlockNext)]));
+  const complete = new Map(packs.map((p) => [p.id, p.units.every((u) => u.optional || mastery.get(u.key)! >= GAME.mastery.unlockNext)]));
 
   return new Map(
     packs.map((pack) => {
@@ -56,7 +65,7 @@ export function mapState(packs: readonly MapPack[], cards: Readonly<Record<strin
       const locked = missing.length > 0;
       const units = pack.units.map((unit, i): UnitState => {
         const m = mastery.get(unit.key)!;
-        const previous = pack.units[i - 1];
+        const previous = gatingUnit(pack.units, i);
         const unitLocked = locked || (!!previous && mastery.get(previous.key)! < GAME.mastery.unlockNext);
         return {
           key: unit.key,

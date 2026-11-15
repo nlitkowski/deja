@@ -20,6 +20,8 @@ export const EntrySchema = z.object({
   confusables: z.array(entryRef).optional(),
   tags: z.array(z.string()).optional(),
   deprecated: z.boolean().optional(),
+  /** What speech synthesis should read when it differs from `fr`, e.g. a letter's name: `y` → "i grec". */
+  audio: z.object({ text: z.string().min(1) }).optional(),
 });
 
 export const ExerciseSchema = z.object({
@@ -44,6 +46,8 @@ export const UnitSchema = z.object({
   entries: z.array(EntrySchema).min(1),
   exercises: z.array(ExerciseSchema),
   boss: BossConfigSchema.optional(),
+  /** Never locks the unit after it and does not count toward the pack's completion (an introduction added later). */
+  optional: z.boolean().optional(),
 });
 
 export const PackAchievementSchema = z.object({

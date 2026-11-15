@@ -55,7 +55,7 @@ content/                    # pakiety treści: same dane, zero kodu
   edito-a1/                 # fiszki powtórkowe według podręcznika Édito A1 (Didier, 10 unités)
     pack.json
     sheets/
-      unite-01.json … unite-10.json
+      unite-00.json … unite-10.json
   <kolejny-pakiet>/...
 src/
   content/
@@ -117,9 +117,9 @@ src/
 
 ```ts
 // schemat (Zod -> typy)
-Unit     { id, title, icon, entries: Entry[], exercises: Exercise[], boss?: BossConfig }
+Unit     { id, title, icon, entries: Entry[], exercises: Exercise[], boss?: BossConfig, optional?: boolean }  // optional = nie blokuje kolejnej jednostki ani ukończenia pakietu
 BossConfig { groups: string[][], questions, lives, secondsPerQuestion }  // brak = z confusables jednostki
-Entry    { id, fr, pl, def?, examples: {fr, pl}[], tip?: {pl, fr?}, confusables?: string[], tags?: string[] }
+Entry    { id, fr, pl, def?, examples: {fr, pl}[], tip?: {pl, fr?}, confusables?: string[], tags?: string[], audio?: {text} }  // audio.text: co ma czytać TTS, gdy różni się od fr
 Exercise { id, type: string, entryIds: string[], data: unknown }  // `data` walidowane przez schemat danego typu ćwiczenia
 ```
 
