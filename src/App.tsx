@@ -8,6 +8,7 @@ import { Boss } from './screens/Boss';
 import { ContentErrors } from './screens/ContentErrors';
 import { Home } from './screens/Home';
 import { League } from './screens/League';
+import { PackScreen } from './screens/PackScreen';
 import { Session, type SessionOutcome } from './screens/Session';
 import { SessionSummary } from './screens/SessionSummary';
 import { SettingsScreen } from './screens/SettingsScreen';
@@ -23,7 +24,8 @@ type Screen =
   | { name: 'home' }
   | { name: 'session'; title: string; items: SessionItem[]; unitKey?: string }
   | { name: 'boss'; unitKey: string }
-  | { name: 'summary'; outcome: SessionOutcome }
+  | { name: 'pack'; packId: string }
+  | { name: 'summary'; outcome: SessionOutcome; unitKey?: string }
   | { name: 'sheets' }
   | { name: 'sheet'; key: string }
   | { name: 'settings' }
@@ -48,6 +50,11 @@ export function App() {
   if (status === 'loading') return null;
 
   const home = () => setScreen({ name: 'home' });
+  // A unit session or boss ends back on its pack's path, a cross-pack review on the home screen.
+  const exitTo = (unitKey?: string) => {
+    const packId = unitKey && content.units.get(unitKey)?.packId;
+    setScreen(packId ? { name: 'pack', packId } : { name: 'home' });
+  };
   const setHelpLang = (helpLang: HelpLang) => updateSettings({ helpLang });
   const unitSession = (unitKey: string) => buildUnitSession(useAppStore.getState().progress, settings, unitKey);
   const startSession = (title: string, items: SessionItem[], unitKey?: string) => setScreen({ name: 'session', title, items, unitKey });
@@ -60,33 +67,49 @@ export function App() {
           onOpenSheets={() => setScreen({ name: 'sheets' })}
           onOpenSheet={(key) => setScreen({ name: 'sheet', key })}
           onOpenSettings={() => setScreen({ name: 'settings' })}
-          onBoss={(unitKey) => setScreen({ name: 'boss', unitKey })}
+          onOpenPack={(packId) => setScreen({ name: 'pack', packId })}
           onOpenAchievements={() => setScreen({ name: 'achievements' })}
           onOpenLeague={() => setScreen({ name: 'league' })}
           onOpenStats={() => setScreen({ name: 'stats' })}
         />
       );
-    case 'session':
+    case 'pack':
+      return (
+        <PackScreen
+          packId={screen.packId}
+          onBack={home}
+          onPractice={(unitKey) => startSession(content.units.get(unitKey)?.title ?? '', unitSession(unitKey), unitKey)}
+          onBoss={(unitKey) => setScreen({ name: 'boss', unitKey })}
+          onOpenSheet={(key) => setScreen({ name: 'sheet', key })}
+        />
+      );
+    case 'session': {
+      const { unitKey } = screen;
       return (
         <Session
           title={screen.title}
           initialItems={screen.items}
-          unitKey={screen.unitKey}
-          onExit={home}
-          onFinish={(outcome) => setScreen({ name: 'summary', outcome })}
+          unitKey={unitKey}
+          onExit={() => exitTo(unitKey)}
+          onFinish={(outcome) => setScreen({ name: 'summary', outcome, unitKey })}
         />
       );
-    case 'boss':
+    }
+    case 'boss': {
+      const { unitKey } = screen;
       return (
         <Boss
-          unitKey={screen.unitKey}
-          title={content.units.get(screen.unitKey)?.title ?? ''}
-          onExit={home}
-          onFinish={(outcome) => setScreen({ name: 'summary', outcome })}
+          unitKey={unitKey}
+          title={content.units.get(unitKey)?.title ?? ''}
+          onExit={() => exitTo(unitKey)}
+          onFinish={(outcome) => setScreen({ name: 'summary', outcome, unitKey })}
         />
       );
-    case 'summary':
-      return <SessionSummary outcome={screen.outcome} onDone={home} />;
+    }
+    case 'summary': {
+      const { unitKey } = screen;
+      return <SessionSummary outcome={screen.outcome} onDone={() => exitTo(unitKey)} />;
+    }
     case 'league':
       return <League onBack={home} />;
     case 'stats':

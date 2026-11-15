@@ -91,7 +91,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
   useEffect(() => {
     if (!result) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Enter') {
+      if (e.key === 'Enter' && !e.repeat) {
         e.preventDefault();
         next();
       }

@@ -112,7 +112,7 @@ export function Boss({ unitKey, title, onExit, onFinish }: Props) {
   useEffect(() => {
     if (!result) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Enter') {
+      if (e.key === 'Enter' && !e.repeat) {
         e.preventDefault();
         next();
       }

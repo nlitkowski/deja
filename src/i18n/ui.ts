@@ -16,6 +16,8 @@ export const ui = {
   allDoneToday: 'Rien à revoir. À demain !',
   unitSeen: (seen: number, total: number) => `${seen}/${total} découvertes`,
   unitDue: (n: number) => `${n} à réviser`,
+  unitsDone: (done: number, total: number) => `${done}/${total} unités`,
+  modules: 'Modules',
   unitProgressLabel: (seen: number, total: number) => `Découvertes : ${seen} sur ${total}`,
 
   level: (n: number) => `Niv. ${n}`,

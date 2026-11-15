@@ -50,14 +50,13 @@ export function TypingCard({ answers, hint, ctx, locked, onAnswer, prompt }: Pro
     });
   }
 
+  const verify = () => {
+    if (value.trim()) submit(value);
+  };
+
+  // A <div>, not a <form>: iOS Safari offers contact, e-mail or card AutoFill for inputs inside forms.
   return (
-    <form
-      className="typing-card"
-      onSubmit={(e) => {
-        e.preventDefault();
-        if (value.trim()) submit(value);
-      }}
-    >
+    <div className="typing-card">
       <div className="prompt">{prompt(value)}</div>
 
       {hint && (hintShown ? <p className="hint">
@@ -70,6 +69,9 @@ export function TypingCard({ answers, hint, ctx, locked, onAnswer, prompt }: Pro
 
       <input
         ref={input}
+        type="text"
+        inputMode="text"
+        name="deja-answer"
         className="answer-input"
         value={value}
         onChange={(e) => setValue(e.target.value)}
@@ -82,6 +84,13 @@ export function TypingCard({ answers, hint, ctx, locked, onAnswer, prompt }: Pro
         lang="fr"
         aria-label={ui.answerLabel}
         placeholder={ui.typePlaceholder}
+        onKeyDown={(e) => {
+          if (e.key !== 'Enter' || locked || e.nativeEvent.isComposing) return;
+          e.preventDefault();
+          // The session moves on with Enter on window; the press that verifies must not reach it.
+          e.stopPropagation();
+          verify();
+        }}
         onFocus={(e) => e.currentTarget.scrollIntoView({ block: 'center', behavior: 'smooth' })}
       />
       <AccentBar onInsert={insert} disabled={locked} />
@@ -91,11 +100,11 @@ export function TypingCard({ answers, hint, ctx, locked, onAnswer, prompt }: Pro
           <button type="button" className="button secondary" onClick={() => submit('')}>
             {ui.dontKnow}
           </button>
-          <button type="submit" className="button primary" disabled={!value.trim()}>
+          <button type="button" className="button primary" disabled={!value.trim()} onClick={verify}>
             {ui.check}
           </button>
         </div>
       )}
-    </form>
+    </div>
   );
 }

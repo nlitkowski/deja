@@ -1271,7 +1271,7 @@ button {
 
 .tree-sheet {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   padding: 7px 10px;
   border-radius: var(--radius-sm);
@@ -1292,8 +1292,12 @@ button {
   background: var(--surface);
 }
 
+/* A fixed slot, so titles line up whatever the width of each emoji. */
 .tree-icon {
   flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 1.6em;
 }
 
 .tree-label {
@@ -1853,7 +1857,7 @@ html,
 
 .choices {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -1876,7 +1880,15 @@ html,
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
   font-family: var(--font-head);
+  overflow-wrap: anywhere;
+}
+
+/* Press Start glyphs are about twice as wide as the body font, so long options would overflow a phone. */
+[data-palette='pixel'] .choice {
+  font-size: 0.6rem;
+  line-height: 1.6;
 }
 
 .choice:disabled,
@@ -1954,7 +1966,7 @@ html,
 
 .pairs {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -2572,4 +2584,111 @@ button.tree-sheet:disabled {
 [data-palette='pixel'] .swatch,
 [data-palette='pixel'] .mastery-bar {
   border-radius: 0;
+}
+
+/* Home: one tile per pack; the path of units opens on its own screen. */
+
+.pack-tiles-section h2 {
+  font-size: 1.3rem;
+  margin: 24px 0 12px;
+}
+
+.pack-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.pack-tile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: start;
+  gap: 8px;
+  min-width: 0;
+  padding: 14px;
+  border: var(--border-w) solid var(--border);
+  border-top: 4px solid var(--highlight);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pack-tile.locked {
+  border-top-color: var(--border);
+}
+
+.pack-tile.locked .pack-tile-icon {
+  opacity: 0.55;
+}
+
+.pack-tile-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.pack-tile .level {
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: end;
+  align-self: start;
+}
+
+.pack-tile-title,
+.pack-tile .progress,
+.pack-tile .muted {
+  grid-column: 1 / -1;
+}
+
+.pack-tile-title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.pack-tile.more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  border: var(--border-w) dashed var(--border);
+  background: none;
+  box-shadow: none;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+  cursor: default;
+}
+
+[data-palette='pixel'] .pack-tile-title {
+  font-size: 0.5rem;
+  line-height: 1.7;
+}
+
+[data-palette='pixel'] .pack-tile-icon .emoji-pixel {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+[data-palette='pixel'] .pack-tile:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+.pack-screen .top-bar {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pack-screen h1 {
+  margin-bottom: 14px;
 }

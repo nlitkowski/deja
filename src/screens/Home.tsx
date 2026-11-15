@@ -3,7 +3,6 @@ import { Emoji } from '../components/Emoji';
 import { GameBar } from '../components/GameBar';
 import { QuestList } from '../components/QuestList';
 import { SyncBadge } from '../components/SyncBadge';
-import { UnitMap } from '../components/UnitMap';
 import { Icon } from '../components/Icon';
 import { LangSwitch } from '../components/LangSwitch';
 import { content } from '../content/registry';
@@ -23,13 +22,13 @@ interface Props {
   onOpenSheets: () => void;
   onOpenSheet: (key: string) => void;
   onOpenSettings: () => void;
-  onBoss: (unitKey: string) => void;
+  onOpenPack: (packId: string) => void;
   onOpenAchievements: () => void;
   onOpenLeague: () => void;
   onOpenStats: () => void;
 }
 
-export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBoss, onOpenAchievements, onOpenLeague, onOpenStats }: Props) {
+export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onOpenPack, onOpenAchievements, onOpenLeague, onOpenStats }: Props) {
   const progress = useAppStore((s) => s.progress);
   const settings = useAppStore((s) => s.settings);
   const updateSettings = useAppStore((s) => s.updateSettings);
@@ -118,14 +117,45 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onBos
           </button>
         )}
 
-        {exercisePacks.map((pack, i) => (
-          <section key={pack.id} className="pack">
-            <h2>
-              <Emoji char={pack.icon} /> {pack.title} <span className="level">{pack.level}</span>
-            </h2>
-            <UnitMap pack={pack} state={map.get(pack.id)!} onPractice={practice} onBoss={onBoss} more={i === exercisePacks.length - 1} />
-          </section>
-        ))}
+        <section className="pack-tiles-section">
+          <h2>{ui.modules}</h2>
+          <div className="pack-tiles">
+            {exercisePacks.map((pack) => {
+              const state = map.get(pack.id)!;
+              const opened = state.units.filter((u) => u.mastery >= 1).length;
+              const due = pack.unitList
+                .flatMap((u) => u.entryIds)
+                .filter((id) => cards[cardKey(id)] && isDue(cards[cardKey(id)]!, today)).length;
+              return (
+                <button key={pack.id} className={state.locked ? 'pack-tile locked' : 'pack-tile'} onClick={() => onOpenPack(pack.id)}>
+                  <span className="pack-tile-icon">
+                    <Emoji char={pack.icon} />
+                  </span>
+                  <span className="pack-tile-title">{pack.title}</span>
+                  <span className="level">{pack.level}</span>
+                  <span className="progress" aria-hidden>
+                    <span style={{ width: `${(100 * opened) / state.units.length}%` }} />
+                  </span>
+                  <span className="muted small">
+                    {state.locked ? (
+                      <>
+                        <Icon name="lock" /> {ui.locked}
+                      </>
+                    ) : (
+                      <>
+                        {ui.unitsDone(opened, state.units.length)}
+                        {due ? ` · ${ui.unitDue(due)}` : ''}
+                      </>
+                    )}
+                  </span>
+                </button>
+              );
+            })}
+            <p className="pack-tile more">
+              <Icon name="more" /> {ui.moreSoon}
+            </p>
+          </div>
+        </section>
 
         <footer className="disclaimer muted small">
           <p>{ui.disclaimer}</p>
