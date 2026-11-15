@@ -6,7 +6,7 @@ export { achievementStats } from './stats';
 const modules = import.meta.glob<AchievementModule>('./badges/*.ts', { eager: true });
 
 /** Gallery order; a badge file not listed here still counts and is shown after these. */
-const ORDER = ['premiere-seance', 'flamme', 'bonnes-reponses', 'combo', 'sans-faute', 'accents', 'sauveteur', 'oiseau-de-nuit', 'leve-tot', 'maitrise'];
+const ORDER = ['premiere-seance', 'flamme', 'bonnes-reponses', 'combo', 'sans-faute', 'accents', 'sauveteur', 'oiseau-de-nuit', 'leve-tot', 'maitrise', 'premiere-ecoute', 'oreille-fine', 'sans-sous-titres', 'oreille-d-or'];
 const rank = (file: string) => {
   const i = ORDER.indexOf(file.replace(/^.*\/|\.ts$/g, ''));
   return i < 0 ? ORDER.length : i;

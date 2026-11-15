@@ -36,20 +36,24 @@ export function seededRandom(seed: string): () => number {
   };
 }
 
-export function questsFor(today: DayKey): { quest: Quest; period: DayKey }[] {
+/** The draw does not depend on `quiet`, so turning it on swaps listening quests in place and changes nothing else. */
+export function questsFor(today: DayKey, { quiet = false } = {}): { quest: Quest; period: DayKey }[] {
   const week = weekStart(today);
+  const playable = (quest: Quest) => (quiet && quest.quietFallback) || quest;
   return [
     ...shuffle(DAILY_QUESTS, seededRandom(`day:${today}`))
       .slice(0, GAME.quests.daily)
-      .map((quest) => ({ quest, period: today })),
+      .map((quest) => ({ quest: playable(quest), period: today })),
     ...shuffle(WEEKLY_QUESTS, seededRandom(`week:${week}`))
       .slice(0, GAME.quests.weekly)
-      .map((quest) => ({ quest, period: week })),
+      .map((quest) => ({ quest: playable(quest), period: week })),
   ];
 }
 
 export interface DigestContext extends XpContext {
   isTricky: (entryId: string) => boolean;
+  /** Quiet mode: listening quests give way to their written fallback. */
+  quiet?: boolean;
 }
 
 export function questDigest(events: readonly ProgressEvent[], from: DayKey, to: DayKey, ctx: DigestContext): QuestDigest {
@@ -66,7 +70,7 @@ export function questDigest(events: readonly ProgressEvent[], from: DayKey, to: 
   }
   const goalOn = goalResolver(events);
   const days = Array.from({ length: diffDays(from, to) + 1 }, (_, i) => addDays(from, i)).map((day) => ({ day, xp: xpOn.get(day) ?? 0, goal: goalOn(day) }));
-  return { reviews, sessions, xp: days.reduce((sum, d) => sum + d.xp, 0), days, isProduction: ctx.isProduction, isTricky: ctx.isTricky };
+  return { reviews, sessions, xp: days.reduce((sum, d) => sum + d.xp, 0), days, isProduction: ctx.isProduction, exerciseType: (id) => ctx.exerciseType?.(id), isTricky: ctx.isTricky };
 }
 
 export interface QuestStatus {
@@ -83,7 +87,7 @@ export interface QuestStatus {
 export function questStatus(events: readonly ProgressEvent[], today: DayKey, ctx: DigestContext): QuestStatus[] {
   const claimed = new Set(events.flatMap((e) => (e.type === 'quest' ? [`${e.questId}@${e.period}`] : [])));
   const digests = new Map<DayKey, QuestDigest>();
-  return questsFor(today).map(({ quest, period }) => {
+  return questsFor(today, { quiet: ctx.quiet }).map(({ quest, period }) => {
     if (!digests.has(period)) digests.set(period, questDigest(events, period, today, ctx));
     const digest = digests.get(period)!;
     const target = quest.target(digest);

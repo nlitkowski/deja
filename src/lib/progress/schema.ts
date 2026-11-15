@@ -45,7 +45,7 @@ export const EventSchema = z.discriminatedUnion('type', [
     ...base,
     type: z.literal('session'),
     sessionId: z.string(),
-    kind: z.enum(['review', 'unit', 'boss']),
+    kind: z.enum(['review', 'unit', 'boss', 'boss-listening']),
     unitKey: z.string().optional(),
     startedAt: z.string(),
     items: z.number(),

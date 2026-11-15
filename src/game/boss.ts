@@ -75,6 +75,32 @@ export function buildBossQuestions(groups: readonly BossGroup[], count: number, 
   return questions;
 }
 
+/** A listening boss question: an exercise shown with its own view. */
+export interface ListeningQuestion {
+  exerciseId: string;
+  entryIds: string[];
+  type: string;
+  data: unknown;
+}
+
+/** Minimal pairs and gap dictations in turn, each deck shuffled and dealt again once used up. */
+export function buildListeningBossQuestions(
+  decks: readonly (readonly ListeningQuestion[])[],
+  count: number,
+  rng: () => number,
+): ListeningQuestion[] {
+  const playable = decks.filter((d) => d.length);
+  if (!playable.length) return [];
+  const piles = playable.map(() => [] as ListeningQuestion[]);
+  const questions: ListeningQuestion[] = [];
+  for (let i = 0; questions.length < count; i++) {
+    const d = i % playable.length;
+    if (!piles[d]!.length) piles[d] = shuffle(playable[d]!, rng);
+    questions.push(piles[d]!.pop()!);
+  }
+  return questions;
+}
+
 export interface BossRun {
   /** Index of the question being asked. */
   index: number;

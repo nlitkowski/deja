@@ -13,6 +13,12 @@ export interface AchievementStats {
   earlySessions: number;
   defeatedBosses: ReadonlySet<string>;
   goldenUnits: number;
+  listeningCorrect: number;
+  /** Full dictations answered with every word right, accents included. */
+  cleanDictations: number;
+  /** Completed sessions with enough listening answers and not one replay or slower play. */
+  cleanListeningSessions: number;
+  goldenListeningUnits: number;
 }
 
 export interface Achievement {

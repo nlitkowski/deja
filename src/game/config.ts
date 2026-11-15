@@ -3,6 +3,8 @@ export const GAME = {
   xp: {
     production: 10,
     recognition: 4,
+    /** Exercise types worth more than their kind's base (a full dictation is the hardest typing). */
+    byType: { dictee: 12 } as Readonly<Record<string, number>>,
     noHint: 1.2,
     nearMiss: 0.5,
     /** Multiplier from this many correct answers in a row (this answer included). */
@@ -51,6 +53,10 @@ export const GAME = {
   },
   /** A boss without its own config in the unit file. */
   boss: { questions: 10, lives: 3, secondsPerQuestion: 12 },
+  /** Optional listening boss: minimal pairs and gap dictations, open at the unit's listening mastery `bossFrom`. */
+  listeningBoss: { questions: 10, lives: 3, secondsPerQuestion: 25 },
+  /** Sans sous-titres: a session with at least this many listening answers, none replayed. */
+  cleanListeningMin: 5,
   /** The combo counter shows from this many correct answers in a row. */
   comboVisibleFrom: 3,
   /** Listening and speaking: separate cards, each opened by the skill before it (read → hear → speak). */

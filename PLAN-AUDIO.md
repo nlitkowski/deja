@@ -134,7 +134,14 @@ Testy:
 - diff dyktanda: pominięte, nadmiarowe i przestawione słowa;
 - homofon w `paires-minimales` przerywa walidację pakietu.
 
-## Etap A5 — Gamifikacja słuchania
+## Etap A5 — Gamifikacja słuchania ✅
+
+> Zrobione: XP według typu (`GAME.xp.byType`, `XpContext.exerciseType`), tor słuchania w `mapState` (`listening: { started, mastery, golden, boss }`), boss ze słuchu (`buildListeningBoss`, ten sam ekran `Boss` z widokami typów ćwiczeń, `GAME.listeningBoss`), 4 odznaki i 2 questy dzienne. Odstępstwa:
+> - wskaźnik 🎧 i węzeł 👂 bossa pojawiają się dopiero, gdy jednostka ma pierwszą kartę `listening`, żeby mapa nie pokazywała zer osobie, która nie słucha;
+> - quest ze słuchem ma `quietFallback` (odpowiednik pisemny), podstawiany na tym samym miejscu, gdy tryb cichy jest włączony teraz (ustawienie, nie historia dnia). Losowanie od trybu nie zależy;
+> - „Sans sous-titres”: ukończona sesja z co najmniej `GAME.cleanListeningMin` (5) odpowiedziami ze słuchu, żadna z `replays`;
+> - boss ze słuchu daje ten sam bonus za wygraną co zwykły, ale nie ma osobnej odznaki.
+
 
 - **XP:**
   - `dictee` 12 (najtrudniejsze), `dictee-trous` 10, recognition 4;

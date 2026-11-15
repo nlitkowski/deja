@@ -12,7 +12,7 @@ interface Props {
   packId: string;
   onBack: () => void;
   onPractice: (unitKey: string) => void;
-  onBoss: (unitKey: string) => void;
+  onBoss: (unitKey: string, listening?: boolean) => void;
   onOpenSheet: (key: string) => void;
 }
 

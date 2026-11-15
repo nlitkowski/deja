@@ -8,6 +8,8 @@ import { entryMastery } from './mastery';
 export interface XpContext {
   /** Whether the exercise is typed (production) rather than chosen. */
   isProduction: (exerciseId: string) => boolean;
+  /** The exercise's type, for types with their own base XP; omitted = only production vs recognition. */
+  exerciseType?: (exerciseId: string) => string | undefined;
 }
 
 export interface AnswerXp {
@@ -27,7 +29,9 @@ export const allMastered = (entryIds: readonly string[], cards: Readonly<Record<
 /** `mastered`: every entry of the answer was at mastery 5 before it, so it is worth less. */
 export function answerXp(event: ReviewEvent, ctx: XpContext, mastered = false): AnswerXp {
   if (!event.correct) return { total: 0, combo: 0 };
-  let xp = (event.production ?? ctx.isProduction(event.exerciseId)) ? GAME.xp.production : GAME.xp.recognition;
+  // An explicit `production` (a boss asking about an exercise its own way) overrides the type's base.
+  const type = event.production === undefined ? ctx.exerciseType?.(event.exerciseId) : undefined;
+  let xp = (type && GAME.xp.byType[type]) || ((event.production ?? ctx.isProduction(event.exerciseId)) ? GAME.xp.production : GAME.xp.recognition);
   if (!event.hintUsed) xp *= GAME.xp.noHint;
   if (event.nearMiss) xp *= GAME.xp.nearMiss;
   if (mastered) xp *= GAME.xp.masteredMultiplier;

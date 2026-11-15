@@ -39,7 +39,7 @@ export interface ReviewEvent extends EventBase {
 
 export const reviewSkill = (event: ReviewEvent): Skill => event.skill ?? 'written';
 
-export type SessionKind = 'review' | 'unit' | 'boss';
+export type SessionKind = 'review' | 'unit' | 'boss' | 'boss-listening';
 
 /** Written when a session is completed (not when it is left early). */
 export interface SessionEvent extends EventBase {

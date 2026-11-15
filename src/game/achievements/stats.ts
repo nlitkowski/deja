@@ -1,5 +1,5 @@
 import type { DayKey } from '../../lib/date';
-import type { ProgressEvent } from '../../lib/progress/events';
+import { reviewSkill, type ProgressEvent } from '../../lib/progress/events';
 import { compareEvents } from '../../lib/progress/fold';
 import { cardKey, type SrsCard } from '../../lib/srs';
 import { GAME } from '../config';
@@ -33,7 +33,13 @@ export function achievementStats(events: readonly ProgressEvent[], { cards, unit
     earlySessions: 0,
     defeatedBosses: defeatedBosses(events),
     goldenUnits: units.filter((u) => u.entryIds.length && u.entryIds.every((id) => entryMastery(cards[cardKey(id)]) === 5)).length,
+    listeningCorrect: 0,
+    cleanDictations: 0,
+    cleanListeningSessions: 0,
+    goldenListeningUnits: units.filter((u) => u.entryIds.length && u.entryIds.every((id) => entryMastery(cards[cardKey(id, 'listening')]) === 5)).length,
   };
+  const completed = new Set(sorted.flatMap((e) => (e.type === 'session' ? [e.sessionId] : [])));
+  const listeningBySession = new Map<string, { answers: number; replayed: boolean }>();
 
   let accentRun = 0;
   const wrongInARow = new Map<string, number>();
@@ -51,6 +57,14 @@ export function achievementStats(events: readonly ProgressEvent[], { cards, unit
       stats.correct += 1;
       stats.maxCombo = Math.max(stats.maxCombo, (e.comboBefore ?? 0) + 1);
     }
+    if (reviewSkill(e) === 'listening') {
+      if (e.correct) stats.listeningCorrect += 1;
+      if (e.correct && !e.nearMiss && xp.exerciseType?.(e.exerciseId) === 'dictee') stats.cleanDictations += 1;
+      if (e.sessionId) {
+        const s = listeningBySession.get(e.sessionId) ?? { answers: 0, replayed: false };
+        listeningBySession.set(e.sessionId, { answers: s.answers + 1, replayed: s.replayed || !!e.replays });
+      }
+    }
     accentRun = e.correct && !e.nearMiss ? accentRun + 1 : 0;
     stats.accentRun = Math.max(stats.accentRun, accentRun);
 
@@ -62,6 +76,9 @@ export function achievementStats(events: readonly ProgressEvent[], { cards, unit
         wrongInARow.set(id, 0);
       }
     }
+  }
+  for (const [id, s] of listeningBySession) {
+    if (completed.has(id) && !s.replayed && s.answers >= GAME.cleanListeningMin) stats.cleanListeningSessions += 1;
   }
   return stats;
 }

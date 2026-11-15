@@ -2,7 +2,7 @@ import { content } from './content/registry';
 import type { Exercise } from './content/schema';
 import { gapSentences, labelOf } from './exercises/gapSentences';
 import type { GenCtx } from './exercises/types';
-import { autoBossGroups, buildBossQuestions, type BossGroup, type BossQuestion } from './game/boss';
+import { autoBossGroups, buildBossQuestions, buildListeningBossQuestions, type BossGroup, type BossQuestion, type ListeningQuestion } from './game/boss';
 import { GAME } from './game/config';
 
 export interface Boss {
@@ -36,4 +36,21 @@ export function buildBoss(unitKey: string, rng: () => number = Math.random): Bos
     sentences: Object.fromEntries(ids.map((id) => [id, gapSentences(id, ctx)])),
   }));
   return { questions: buildBossQuestions(groups, config.questions, rng), lives: config.lives, secondsPerQuestion: config.secondsPerQuestion };
+}
+
+export interface ListeningBoss {
+  questions: ListeningQuestion[];
+  lives: number;
+  secondsPerQuestion: number;
+}
+
+/** The unit's optional listening boss: its minimal pairs and gap dictations, in turn. */
+export function buildListeningBoss(unitKey: string, rng: () => number = Math.random): ListeningBoss | undefined {
+  if (!content.units.has(unitKey)) return undefined;
+  const of = (type: string) =>
+    [...content.exercises.values()]
+      .filter((ex) => ex.unitId === unitKey && ex.type === type)
+      .map(({ id, entryIds, type, data }) => ({ exerciseId: id, entryIds, type, data }));
+  const { questions, lives, secondsPerQuestion } = GAME.listeningBoss;
+  return { questions: buildListeningBossQuestions([of('paires-minimales'), of('dictee-trous')], questions, rng), lives, secondsPerQuestion };
 }

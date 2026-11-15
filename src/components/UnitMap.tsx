@@ -29,7 +29,7 @@ interface Props {
   pack: Pack;
   state: PackState;
   onPractice: (unitKey: string) => void;
-  onBoss: (unitKey: string) => void;
+  onBoss: (unitKey: string, listening?: boolean) => void;
   /** Continue the path to a "more modules coming" marker; set on the last pack. */
   more?: boolean;
 }
@@ -87,6 +87,17 @@ export function UnitMap({ pack, state, onPractice, onBoss, more }: Props) {
                       </span>
                     )}
                   </button>
+                  {u.listening.started && u.listening.boss && (
+                    <button
+                      className={`map-node boss-node listening-boss${step.x > 50 ? ' on-left' : ''}${u.listening.boss.unlocked ? '' : ' locked'}${u.listening.boss.defeated ? ' defeated' : ''}`}
+                      disabled={!u.listening.boss.unlocked}
+                      onClick={() => onBoss(unit.key, true)}
+                      aria-label={u.listening.boss.unlocked ? ui.listeningBossLabel(unit.title) : ui.listeningBossLocked(unit.title)}
+                      title={u.listening.boss.unlocked ? ui.listeningBossLabel(unit.title) : ui.listeningBossLocked(unit.title)}
+                    >
+                      <Emoji char="👂" />
+                    </button>
+                  )}
                   {u.boss.defeated && <span className="map-caption small">{ui.bossDefeated}</span>}
                 </li>
               );
@@ -123,6 +134,12 @@ export function UnitMap({ pack, state, onPractice, onBoss, more }: Props) {
                     {due ? ` · ${ui.unitDue(due)}` : ''}
                   </span>
                   {u.golden && <span className="mastered-badge small">{ui.mastered}</span>}
+                  {u.listening.started && (
+                    <span className="listening-level small" role="img" aria-label={ui.listeningLevel(u.listening.mastery)}>
+                      <Icon name="headphones" /> {u.listening.mastery}/5
+                    </span>
+                  )}
+                  {u.listening.golden && <span className="mastered-badge small">{ui.goldenEar}</span>}
                 </span>
               </li>
             );

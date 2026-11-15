@@ -23,7 +23,7 @@ import { useTheme } from './theme';
 type Screen =
   | { name: 'home' }
   | { name: 'session'; title: string; items: SessionItem[]; unitKey?: string }
-  | { name: 'boss'; unitKey: string }
+  | { name: 'boss'; unitKey: string; listening?: boolean }
   | { name: 'pack'; packId: string }
   | { name: 'summary'; outcome: SessionOutcome; unitKey?: string }
   | { name: 'sheets' }
@@ -79,7 +79,7 @@ export function App() {
           packId={screen.packId}
           onBack={home}
           onPractice={(unitKey) => startSession(content.units.get(unitKey)?.title ?? '', unitSession(unitKey), unitKey)}
-          onBoss={(unitKey) => setScreen({ name: 'boss', unitKey })}
+          onBoss={(unitKey, listening) => setScreen({ name: 'boss', unitKey, listening })}
           onOpenSheet={(key) => setScreen({ name: 'sheet', key })}
         />
       );
@@ -96,10 +96,11 @@ export function App() {
       );
     }
     case 'boss': {
-      const { unitKey } = screen;
+      const { unitKey, listening } = screen;
       return (
         <Boss
           unitKey={unitKey}
+          listening={listening}
           title={content.units.get(unitKey)?.title ?? ''}
           onExit={() => exitTo(unitKey)}
           onFinish={(outcome) => setScreen({ name: 'summary', outcome, unitKey })}

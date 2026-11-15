@@ -24,19 +24,28 @@ export function useGame() {
   }, [log, today]);
 }
 
+const listeningBossUnits = new Set(
+  [...content.exercises.values()].filter((ex) => ex.type === 'paires-minimales' || ex.type === 'dictee-trous').map((ex) => ex.unitId),
+);
+
 const mapPacks: MapPack[] = content.packs
   .filter((p) => p.unitList.length)
   .map((p) => ({
     id: p.id,
     requires: p.requires,
-    units: p.unitList.map((u) => ({ key: u.key, optional: u.optional, entryIds: u.entryIds.filter((id) => !content.entries.get(id)?.deprecated) })),
+    units: p.unitList.map((u) => ({
+      key: u.key,
+      optional: u.optional,
+      entryIds: u.entryIds.filter((id) => !content.entries.get(id)?.deprecated),
+      listeningBoss: listeningBossUnits.has(u.key),
+    })),
   }));
 
 /** Locks, mastery and bosses of every unit, by pack id. */
 export function useMapState() {
   const cards = useAppStore((s) => s.progress.cards);
   const log = useAppStore((s) => s.log);
-  return useMemo(() => mapState(mapPacks, cards, defeatedBosses(log)), [cards, log]);
+  return useMemo(() => mapState(mapPacks, cards, defeatedBosses(log), defeatedBosses(log, 'boss-listening')), [cards, log]);
 }
 
 /** Unit key → whether it is still locked on the map. */
@@ -64,8 +73,9 @@ const questContext = { ...xpContext, isTricky: (entryId: string) => (content.ent
 
 export function useQuests() {
   const log = useAppStore((s) => s.log);
+  const quiet = useAppStore((s) => s.settings.quiet);
   const today = dayKey(new Date());
-  return useMemo(() => questStatus(log, today, questContext), [log, today]);
+  return useMemo(() => questStatus(log, today, { ...questContext, quiet }), [log, today, quiet]);
 }
 
 export function useLeague() {

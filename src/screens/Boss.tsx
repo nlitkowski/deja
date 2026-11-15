@@ -1,16 +1,15 @@
 import { useCallback, useEffect, useState } from 'react';
-import { buildBoss } from '../bosses';
+import { buildBoss, buildListeningBoss } from '../bosses';
 import { Emoji } from '../components/Emoji';
 import { Icon } from '../components/Icon';
-import { GapFillView } from '../exercises/gap-fill/View';
-import { MultipleChoiceView } from '../exercises/multiple-choice/View';
+import { exerciseTypes, isProduction } from '../exercises/registry';
 import { accentPairs } from '../content/registry';
 import { bossAnswer, startBoss } from '../game/boss';
 import { answerXp, allMastered } from '../game/xp';
 import { ui } from '../i18n/ui';
 import { dayKey } from '../lib/date';
 import { newEventId } from '../lib/progress/events';
-import { cardKey, isDue, type AnswerResult } from '../lib/srs';
+import { cardKey, isDue, type AnswerResult, type Skill } from '../lib/srs';
 import { sfx } from '../sfx';
 import { useAppStore } from '../state/appStore';
 import { xpContext } from '../xpContext';
@@ -19,15 +18,60 @@ import type { SessionOutcome } from './Session';
 interface Props {
   unitKey: string;
   title: string;
+  /** The optional listening boss instead of the unit's boss. */
+  listening?: boolean;
   onExit: () => void;
   onFinish: (outcome: SessionOutcome) => void;
 }
 
 const AUTO_ADVANCE_MS = 900;
 
-/** A session with lives and a clock per question: choices between confusables and typed gaps. */
-export function Boss({ unitKey, title, onExit, onFinish }: Props) {
-  const [boss] = useState(() => buildBoss(unitKey));
+/** One question, shown with the view of an exercise type. */
+interface Asked {
+  exerciseId: string;
+  entryIds: string[];
+  type: string;
+  data: unknown;
+  production: boolean;
+  skill: Skill;
+  expected?: string;
+}
+
+interface Round {
+  questions: Asked[];
+  lives: number;
+  secondsPerQuestion: number;
+}
+
+function writtenRound(unitKey: string): Round | undefined {
+  const boss = buildBoss(unitKey);
+  if (!boss) return undefined;
+  const questions = boss.questions.map((q): Asked => {
+    const base = { exerciseId: q.exerciseId, entryIds: [q.entryId], skill: 'written' as const, expected: q.answers[0], production: q.kind === 'typed' };
+    return q.kind === 'choice'
+      ? { ...base, type: 'multiple-choice', data: { sentence: q.sentence, answer: q.answers[0]!, options: q.options!, pl: q.pl, clue: q.clue } }
+      : { ...base, type: 'gap-fill', data: { sentence: q.sentence, answers: q.answers, pl: q.pl, clue: q.clue } };
+  });
+  return { ...boss, questions };
+}
+
+function listeningRound(unitKey: string): Round | undefined {
+  const boss = buildListeningBoss(unitKey);
+  if (!boss) return undefined;
+  const questions = boss.questions.map(
+    (q): Asked => ({
+      ...q,
+      production: isProduction(q.type),
+      skill: 'listening',
+      expected: (q.data as { answer?: string }).answer,
+    }),
+  );
+  return { ...boss, questions };
+}
+
+/** A session with lives and a clock per question: choices between confusables and typed gaps, or minimal pairs and gap dictations. */
+export function Boss({ unitKey, title, listening = false, onExit, onFinish }: Props) {
+  const [boss] = useState(() => (listening ? listeningRound(unitKey) : writtenRound(unitKey)));
   const [session] = useState(() => ({ id: newEventId(), startedAt: new Date().toISOString() }));
   const [run, setRun] = useState(() => startBoss(boss?.lives ?? 0));
   const [result, setResult] = useState<AnswerResult>();
@@ -47,7 +91,7 @@ export function Boss({ unitKey, title, onExit, onFinish }: Props) {
     const defeated = !!run.defeated;
     recordSession({
       sessionId: session.id,
-      kind: 'boss',
+      kind: listening ? 'boss-listening' : 'boss',
       unitKey,
       startedAt: session.startedAt,
       items: run.correct + run.mistakes,
@@ -57,7 +101,7 @@ export function Boss({ unitKey, title, onExit, onFinish }: Props) {
       defeated,
     });
     onFinish({ sessionId: session.id, title, answered: run.correct + run.mistakes, correct: run.correct, nearMiss: 0, entriesReviewed: run.correct + run.mistakes, boss: { defeated } });
-  }, [run, combo.max, recordSession, session, unitKey, title, onFinish]);
+  }, [run, combo.max, recordSession, session, unitKey, title, onFinish, listening]);
 
   const next = useCallback(() => {
     if (run.defeated !== undefined) return finish();
@@ -68,19 +112,21 @@ export function Boss({ unitKey, title, onExit, onFinish }: Props) {
     if (!question || result) return;
     setResult(r);
     const cards = useAppStore.getState().progress.cards;
-    const card = cards[cardKey(question.entryId)];
-    const typed = question.kind === 'typed';
+    const { skill, production, entryIds } = question;
+    const today = dayKey(new Date());
     const event = recordAnswer({
       exerciseId: question.exerciseId,
-      entryIds: [question.entryId],
+      entryIds,
       // Choosing never schedules a card as "easy", as in sessions.
-      result: typed ? r : { ...r, grade: r.correct ? 'good' : 'again' },
-      early: !!card && !isDue(card, dayKey(new Date())),
+      result: production ? r : { ...r, grade: r.correct ? 'good' : 'again' },
+      early: entryIds.every((id) => !!cards[cardKey(id, skill)] && !isDue(cards[cardKey(id, skill)]!, today)),
       sessionId: session.id,
       comboBefore: combo.now,
-      production: typed,
+      // A written boss asks about one exercise either way, so it says which; a listening exercise always asks its own way.
+      production: skill === 'written' ? production : undefined,
+      skill,
     });
-    const xp = answerXp(event, xpContext, allMastered([question.entryId], cards)).total;
+    const xp = answerXp(event, xpContext, allMastered(entryIds, cards, skill)).total;
     setGain(xp ? { xp, key: run.index } : undefined);
     const streak = r.correct ? combo.now + 1 : 0;
     setCombo({ now: streak, max: Math.max(combo.max, streak) });
@@ -101,7 +147,7 @@ export function Boss({ unitKey, title, onExit, onFinish }: Props) {
   useEffect(() => {
     if (result || !question || !boss) return;
     const timer = window.setTimeout(
-      () => handleAnswer({ correct: false, nearMiss: false, hintUsed: false, timeMs: boss.secondsPerQuestion * 1000, expected: question.answers[0] }),
+      () => handleAnswer({ correct: false, nearMiss: false, hintUsed: false, timeMs: boss.secondsPerQuestion * 1000, expected: question.expected }),
       boss.secondsPerQuestion * 1000,
     );
     return () => window.clearTimeout(timer);
@@ -140,6 +186,8 @@ export function Boss({ unitKey, title, onExit, onFinish }: Props) {
   const tone = result ? (result.correct ? 'ok' : 'bad') : '';
   const timedOut = result && !result.correct && result.given === undefined;
   const lives = boss.lives;
+  const View = exerciseTypes.get(question.type)!.View;
+  const expected = result?.expected ?? question.expected;
 
   return (
     <main className="screen session boss">
@@ -148,7 +196,7 @@ export function Boss({ unitKey, title, onExit, onFinish }: Props) {
           <Icon name="close" />
         </button>
         <p className="boss-title">
-          <Emoji char="🐉" /> {ui.bossOf(title)}
+          <Emoji char={listening ? '👂' : '🐉'} /> {listening ? ui.listeningBossOf(title) : ui.bossOf(title)}
         </p>
         <span className="lives" role="img" aria-label={ui.livesLabel(run.lives)}>
           {Array.from({ length: lives }, (_, i) => (
@@ -172,31 +220,15 @@ export function Boss({ unitKey, title, onExit, onFinish }: Props) {
             {ui.xpGain(gain.xp)}
           </span>
         )}
-        {question.kind === 'choice' ? (
-          <MultipleChoiceView
-            key={shown}
-            data={{ sentence: question.sentence, answer: question.answers[0]!, options: question.options!, pl: question.pl, clue: question.clue }}
-            ctx={ctx}
-            locked={!!result}
-            onAnswer={handleAnswer}
-          />
-        ) : (
-          <GapFillView
-            key={shown}
-            data={{ sentence: question.sentence, answers: question.answers, pl: question.pl, clue: question.clue }}
-            ctx={ctx}
-            locked={!!result}
-            onAnswer={handleAnswer}
-          />
-        )}
+        <View key={shown} data={question.data} ctx={ctx} locked={!!result} onAnswer={handleAnswer} />
       </section>
 
       {result && (
         <section className={`feedback ${tone}`} role="status">
           <p className="feedback-title">{result.correct ? ui.correct : timedOut ? ui.timeUp : ui.wrong}</p>
-          {!result.correct && (
+          {!result.correct && expected && (
             <p>
-              {ui.correctAnswer} <strong lang="fr">{question.answers[0]}</strong>
+              {ui.correctAnswer} <strong lang="fr">{expected}</strong>
             </p>
           )}
           <button className="button primary" onClick={next} autoFocus={!result.correct}>

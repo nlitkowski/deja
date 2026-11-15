@@ -1,5 +1,5 @@
-import type { ProgressEvent } from '../lib/progress/events';
-import { cardKey, type SrsCard } from '../lib/srs';
+import type { ProgressEvent, SessionKind } from '../lib/progress/events';
+import { cardKey, type Skill, type SrsCard } from '../lib/srs';
 import { GAME } from './config';
 import { entryMastery, unitMastery, type Mastery } from './mastery';
 
@@ -9,6 +9,8 @@ export interface MapUnit {
   entryIds: readonly string[];
   /** Does not gate the next unit nor the pack's completion. */
   optional?: boolean;
+  /** Has the minimal pairs or gap dictations a listening boss is made of. */
+  listeningBoss?: boolean;
 }
 
 export interface MapPack {
@@ -26,6 +28,16 @@ export interface UnitState {
   /** Every entry at mastery 5. */
   golden: boolean;
   boss: { unlocked: boolean; defeated: boolean };
+  /** The second track: never gates anything on the map. */
+  listening: {
+    /** Some entry has a listening card. */
+    started: boolean;
+    mastery: Mastery;
+    /** Every entry at listening mastery 5: Oreille d'or. */
+    golden: boolean;
+    /** Absent when the unit has nothing to build a listening boss from. */
+    boss?: { unlocked: boolean; defeated: boolean };
+  };
 }
 
 export interface PackState {
@@ -44,18 +56,26 @@ export function gatingUnit<U extends { optional?: boolean }>(units: readonly U[]
   return undefined;
 }
 
-export function defeatedBosses(events: readonly ProgressEvent[]): Set<string> {
+export function defeatedBosses(events: readonly ProgressEvent[], kind: SessionKind = 'boss'): Set<string> {
   const out = new Set<string>();
-  for (const e of events) if (e.type === 'session' && e.kind === 'boss' && e.defeated && e.unitKey) out.add(e.unitKey);
+  for (const e of events) if (e.type === 'session' && e.kind === kind && e.defeated && e.unitKey) out.add(e.unitKey);
   return out;
 }
+
+const goldenIn = (entryIds: readonly string[], cards: Readonly<Record<string, SrsCard>>, skill: Skill = 'written') =>
+  entryIds.length > 0 && entryIds.every((id) => entryMastery(cards[cardKey(id, skill)]) === 5);
 
 /**
  * The map's locks. A unit opens once the one before it has every entry seen (mastery ≥ 1); its boss
  * once the unit reaches mastery 2. A pack with `requires` opens once those packs are complete.
  * Optional units are skipped: the unit after one waits for the last required unit before it.
  */
-export function mapState(packs: readonly MapPack[], cards: Readonly<Record<string, SrsCard>>, defeated: ReadonlySet<string>): Map<string, PackState> {
+export function mapState(
+  packs: readonly MapPack[],
+  cards: Readonly<Record<string, SrsCard>>,
+  defeated: ReadonlySet<string>,
+  defeatedListening: ReadonlySet<string> = new Set(),
+): Map<string, PackState> {
   const mastery = new Map(packs.flatMap((p) => p.units.map((u) => [u.key, unitMastery(u.entryIds, cards)] as const)));
   const complete = new Map(packs.map((p) => [p.id, p.units.every((u) => u.optional || mastery.get(u.key)! >= GAME.mastery.unlockNext)]));
 
@@ -73,11 +93,22 @@ export function mapState(packs: readonly MapPack[], cards: Readonly<Record<strin
           seen: unit.entryIds.filter((id) => cards[cardKey(id)]).length,
           total: unit.entryIds.length,
           locked: unitLocked,
-          golden: unit.entryIds.length > 0 && unit.entryIds.every((id) => entryMastery(cards[cardKey(id)]) === 5),
+          golden: goldenIn(unit.entryIds, cards),
           boss: { unlocked: !unitLocked && m >= GAME.mastery.bossFrom, defeated: defeated.has(unit.key) },
+          listening: listeningState(unit, cards, unitLocked, defeatedListening),
         };
       });
       return [pack.id, { id: pack.id, locked, missing, complete: complete.get(pack.id)!, units }];
     }),
   );
+}
+
+function listeningState(unit: MapUnit, cards: Readonly<Record<string, SrsCard>>, unitLocked: boolean, defeated: ReadonlySet<string>): UnitState['listening'] {
+  const mastery = unitMastery(unit.entryIds, cards, 'listening');
+  return {
+    started: unit.entryIds.some((id) => cards[cardKey(id, 'listening')]),
+    mastery,
+    golden: goldenIn(unit.entryIds, cards, 'listening'),
+    boss: unit.listeningBoss ? { unlocked: !unitLocked && mastery >= GAME.mastery.bossFrom, defeated: defeated.has(unit.key) } : undefined,
+  };
 }
