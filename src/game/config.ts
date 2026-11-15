@@ -66,6 +66,18 @@ export const GAME = {
   boss: { questions: 10, lives: 3, secondsPerQuestion: 12 },
   /** Optional listening boss: minimal pairs and gap dictations, open at the unit's listening mastery `bossFrom`. */
   listeningBoss: { questions: 10, lives: 3, secondsPerQuestion: 25 },
+  /**
+   * Which listening exercises a card gets, by the mastery of its listening card: its rung and those below,
+   * never above. A dictation counts on the lowest rung its length fits.
+   */
+  listeningLadder: [
+    { fromMastery: 0, types: ['ecoute-sens', 'paires-minimales'] },
+    { fromMastery: 1, types: ['dictee-trous'] },
+    { fromMastery: 2, types: ['dictee'], maxWords: 5 },
+    { fromMastery: 3, types: ['dictee'], maxWords: 8 },
+  ] as readonly { fromMastery: number; types: readonly string[]; maxWords?: number }[],
+  /** From this rung up, the highest type available comes this often; lower ones fill the rest, so it is not all dictations. */
+  listeningTop: { fromRung: 2, share: 0.6 },
   /** Sans sous-titres: a session with at least this many listening answers, none replayed. */
   cleanListeningMin: 5,
   /** The combo counter shows from this many correct answers in a row. */

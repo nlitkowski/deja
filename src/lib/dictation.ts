@@ -3,6 +3,7 @@ import { normalize, pairKey, stripAccents } from './answer';
 /**
  * `ok` and `accent` count as written; `accent` is a near miss unless it turns the word into another
  * one (ou → où), which is `wrong`. `missing` words were not typed, `extra` ones were never said.
+ * `wrong`, `missing` and `extra` are mistakes.
  */
 export type DiffKind = 'ok' | 'accent' | 'wrong' | 'missing' | 'extra';
 
@@ -18,8 +19,8 @@ export interface DictationCheck {
   parts: DiffPart[];
 }
 
-// Case and punctuation never decide a dictation: phone keyboards make both a chore. Hyphens stay (dix-sept).
-const PUNCT = /[.,;:!?…«»"()]/g;
+// Case and punctuation never decide a dictation: phone keyboards make both a chore.
+const PUNCT = /[.,;:!?…«»"()/]/g;
 
 interface Word {
   raw: string;
@@ -27,18 +28,27 @@ interface Word {
   loose: string;
 }
 
+// A hyphen splits like a space (dix-sept = dix sept); the half before it keeps the hyphen for display.
 function words(text: string): Word[] {
   return text
     .normalize('NFC')
     .replace(PUNCT, ' ')
     .split(/\s+/)
-    .map((raw) => ({ raw, key: normalize(raw) }))
+    .flatMap((w) => w.split(/(?<=-)/))
+    .map((raw) => ({ raw, key: normalize(raw.replace(/-+$/, '')) }))
     .filter((w) => w.key)
     .map((w) => ({ ...w, loose: stripAccents(w.key) }));
 }
 
-/** Word-by-word comparison of a typed dictation with the sentence that was read. */
-export function checkDictation(given: string, expected: string, pairSet: ReadonlySet<string> = new Set()): DictationCheck {
+const MISTAKES: ReadonlySet<DiffKind> = new Set(['wrong', 'missing', 'extra']);
+
+/**
+ * Word-by-word comparison of a typed dictation with the sentence that was read. A mistake in a `key` word
+ * (the trained entry) fails it; one mistake elsewhere is a near miss, two fail.
+ */
+
+export function checkDictation(given: string, expected: string, pairSet: ReadonlySet<string> = new Set(), key = ''): DictationCheck {
+  const keyWords = new Set(words(key).map((w) => w.loose));
   const e = words(expected);
   const g = words(given);
 
@@ -82,6 +92,8 @@ export function checkDictation(given: string, expected: string, pairSet: Readonl
   }
   flush();
 
-  const correct = parts.length > 0 && parts.every((p) => p.kind === 'ok' || p.kind === 'accent');
-  return { correct, nearMiss: correct && parts.some((p) => p.kind === 'accent'), parts };
+  const mistakes = parts.filter((p) => MISTAKES.has(p.kind));
+  const inKey = mistakes.some((p) => p.expected !== undefined && keyWords.has(stripAccents(normalize(p.expected.replace(/-+$/, '')))));
+  const correct = parts.some((p) => !MISTAKES.has(p.kind)) && !inKey && mistakes.length <= 1;
+  return { correct, nearMiss: correct && (mistakes.length > 0 || parts.some((p) => p.kind === 'accent')), parts };
 }

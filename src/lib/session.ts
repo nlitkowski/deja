@@ -50,7 +50,17 @@ export interface OtherSkill {
   newAllowed: number;
   /** Most of the session this skill may take. */
   share: number;
+  /**
+   * Chooses the card's exercise instead of the usual production/recognition draw; undefined leaves the card out.
+   * With it, recognition is open to new cards too: the picker decides what a card is ready for.
+   */
+  pick?: Picker;
 }
+
+export type Picker = (candidates: readonly SessionExercise[], entryId: string, used: ReadonlySet<string>, rng: () => number) => SessionExercise | undefined;
+
+/** Chooses the retry of a failed item from the other exercises of its skill. */
+export type RetryPicker = (candidates: readonly SessionExercise[], failed: SessionItem, rng: () => number) => SessionExercise | undefined;
 
 export const SESSION = {
   maxItems: 18,
@@ -129,13 +139,13 @@ export function buildSession(input: BuildSessionInput): SessionItem[] {
   const used = new Set<string>();
 
   /** Due cards of a skill first (oldest first), then new ones. */
-  function candidates(skill: Skill, ready: (id: string) => boolean, allowedNew: number) {
+  function candidates(skill: Skill, ready: (id: string) => boolean, allowedNew: number, anyKind = false) {
     const card = (id: string) => srs[cardKey(id, skill)];
     // Recognition only revisits what the learner already produced correctly: never for new cards
     // or after a mistake, so choosing an answer never displaces typing it.
     const known = (id: string) => (card(id)?.reps ?? 0) > 0;
     const byEntry = indexExercisesByEntry(
-      exercises.filter((ex) => skillOf(ex.type) === skill && (isProduction(ex.type) || ex.entryIds.every(known))),
+      exercises.filter((ex) => skillOf(ex.type) === skill && (anyKind || isProduction(ex.type) || ex.entryIds.every(known))),
     );
     const usable = entries.filter((e) => !e.deprecated && byEntry.has(e.id) && ready(e.id));
     const due = shuffle(
@@ -150,10 +160,17 @@ export function buildSession(input: BuildSessionInput): SessionItem[] {
     return { byEntry, chosen: [...due, ...fresh].map((e) => ({ id: e.id, early: false })), notDue };
   }
 
-  function toItems(skill: Skill, byEntry: Map<string, SessionExercise[]>, chosen: readonly { id: string; early: boolean }[]): SessionItem[] {
+  function toItems(
+    skill: Skill,
+    byEntry: Map<string, SessionExercise[]>,
+    chosen: readonly { id: string; early: boolean }[],
+    limit = Infinity,
+    pick?: Picker,
+  ): SessionItem[] {
     const items: SessionItem[] = [];
     for (const { id, early } of chosen) {
-      const ex = pickExercise(byEntry.get(id)!, used, isProduction, recognitionShare, rng);
+      if (items.length >= limit) break;
+      const ex = pick ? pick(byEntry.get(id)!, id, used, rng) : pickExercise(byEntry.get(id)!, used, isProduction, recognitionShare, rng);
       if (!ex) continue;
       used.add(ex.id);
       items.push({ exerciseId: ex.id, entryId: id, skill, early, attempt: 1 });
@@ -161,9 +178,9 @@ export function buildSession(input: BuildSessionInput): SessionItem[] {
     return items;
   }
 
-  const others = otherSkills.flatMap(({ skill, requires, newAllowed: allowedNew, share }) => {
-    const { byEntry, chosen } = candidates(skill, (id) => !!srs[cardKey(id, requires)], allowedNew);
-    return toItems(skill, byEntry, chosen.slice(0, Math.floor(maxItems * share)));
+  const others = otherSkills.flatMap(({ skill, requires, newAllowed: allowedNew, share, pick }) => {
+    const { byEntry, chosen } = candidates(skill, (id) => !!srs[cardKey(id, requires)], allowedNew, !!pick);
+    return toItems(skill, byEntry, chosen, Math.floor(maxItems * share), pick);
   });
 
   const written = candidates('written', () => true, newAllowed);
@@ -182,9 +199,10 @@ export function requeue(
   candidates: readonly SessionExercise[],
   isProduction: (type: string) => boolean,
   rng: () => number = Math.random,
+  pick?: RetryPicker,
 ): SessionItem[] {
   if (failed.attempt >= SESSION.maxAttempts) return [...queue];
-  const ex = pickExercise(candidates, new Set([failed.exerciseId]), isProduction, 0, rng);
+  const ex = pick ? pick(candidates, failed, rng) : pickExercise(candidates, new Set([failed.exerciseId]), isProduction, 0, rng);
   const item: SessionItem = {
     exerciseId: ex?.id ?? failed.exerciseId,
     entryId: failed.entryId,

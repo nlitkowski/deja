@@ -7,6 +7,7 @@ import { Segmented } from './Segmented';
 
 export function AudioCard() {
   const readAfter = useAppStore((s) => s.settings.readAfter);
+  const slowFirst = useAppStore((s) => s.settings.slowFirst);
   const set = useAppStore((s) => s.updateSettings);
   const [bytes, setBytes] = useState<number>();
 
@@ -27,6 +28,11 @@ export function AudioCard() {
         onChange={(value) => set({ readAfter: value })}
       />
       <p className="muted small">{ui.readAfterHint}</p>
+      <label className="toggle">
+        <input type="checkbox" checked={slowFirst} onChange={(e) => set({ slowFirst: e.target.checked })} />
+        <span>{ui.slowFirst}</span>
+      </label>
+      <p className="muted small">{ui.slowFirstHint}</p>
       {bytes !== undefined && (
         <div className="audio-download">
           <span className="small">{bytes ? ui.audioStorage(ui.fileSize(bytes)) : ui.audioStorageEmpty}</span>

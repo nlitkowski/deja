@@ -31,6 +31,7 @@ const SettingsSchema = z.object({
   navCollapsed: z.boolean().optional().catch(undefined),
   readAfter: z.enum(READ_AFTER).optional().catch(undefined),
   quiet: z.boolean().optional().catch(undefined),
+  slowFirst: z.boolean().optional().catch(undefined),
 });
 
 const BackupSchema = z.object({

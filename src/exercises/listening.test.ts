@@ -48,7 +48,10 @@ describe('listening exercises generated from content', () => {
   });
 
   it('dictée: short sentences from gap-fills and examples, never skipped, ambiguous or read differently', () => {
-    expect(of('dictee', 'a').map((ex) => ex.data)).toEqual([{ text: 'Je vais à Paris.' }, { text: 'Je vais à Lyon.' }]);
+    expect(of('dictee', 'a').map((ex) => ex.data)).toEqual([
+      { text: 'Je vais à Paris.', key: 'à' },
+      { text: 'Je vais à Lyon.', key: 'a' },
+    ]);
   });
 
   it('écoute-sens: Polish meanings of other entries of the unit as distractors, the same on every load', () => {

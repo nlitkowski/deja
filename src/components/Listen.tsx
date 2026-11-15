@@ -3,14 +3,15 @@ import { play, usePlayer } from '../audio/player';
 import { ui } from '../i18n/ui';
 import { Icon } from './Icon';
 
-/** The prompt of a listening exercise: plays once on its own, then again (or slower) on demand. */
-export function Listen({ text, onReplay }: { text: string; onReplay: () => void }) {
+/** The prompt of a listening exercise: plays once on its own (`slow`ly for a new card), then again (or slower) on demand. */
+export function Listen({ text, slow = false, onReplay }: { text: string; slow?: boolean; onReplay: () => void }) {
   const player = usePlayer();
   const active = player.text === text ? player.status : null;
   const failed = player.failed.has(text);
 
   useEffect(() => {
-    void play(text);
+    void play(text, { slow });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- only the first play is slow
   }, [text]);
 
   const again = (slow: boolean) => {

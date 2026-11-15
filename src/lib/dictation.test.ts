@@ -15,7 +15,7 @@ describe('checkDictation', () => {
   it('marks a missing accent as a near miss, unless it makes another word', () => {
     expect(kinds('Je vais a Paris', 'Je vais à Paris.')).toEqual(['ok:Je/Je', 'ok:vais/vais', 'accent:à/a', 'ok:Paris/Paris']);
     const pairs = buildPairSet([['ou', 'où']]);
-    const check = checkDictation('Tu habites ou ?', 'Tu habites où ?', pairs);
+    const check = checkDictation('Tu habites ou ?', 'Tu habites où ?', pairs, 'où');
     expect(check.correct).toBe(false);
     expect(check.parts[2]).toEqual({ kind: 'wrong', expected: 'où', given: 'ou' });
   });
@@ -36,6 +36,18 @@ describe('checkDictation', () => {
     const check = checkDictation('Il pleut aujourd’hui beaucoup', "Il pleut beaucoup aujourd'hui.");
     expect(check.correct).toBe(false);
     expect(check.parts.map((p) => p.kind).sort()).toEqual(['extra', 'missing', 'ok', 'ok', 'ok']);
+  });
+
+  it('lets one mistake outside the trained words pass as a near miss, but not two', () => {
+    expect(checkDictation('Je vais à Pari', 'Je vais à Paris.', new Set(), 'à')).toMatchObject({ correct: true, nearMiss: true });
+    expect(checkDictation('Je vas à Pari', 'Je vais à Paris.', new Set(), 'à')).toMatchObject({ correct: false });
+    expect(checkDictation('Je vais au Paris', 'Je vais à Paris.', new Set(), 'à')).toMatchObject({ correct: false });
+    expect(checkDictation('Je vais Paris', 'Je vais à Paris.', new Set(), 'à')).toMatchObject({ correct: false });
+  });
+
+  it('ignores apostrophes, a hyphen typed as a space and double spaces, not a split elision', () => {
+    expect(checkDictation('J’ai  dix sept ans', "J'ai dix-sept ans.", new Set(), 'dix-sept')).toMatchObject({ correct: true, nearMiss: false });
+    expect(checkDictation('je ai faim', "J'ai faim.", new Set(), 'faim')).toMatchObject({ correct: false });
   });
 
   it('fails an empty answer', () => {

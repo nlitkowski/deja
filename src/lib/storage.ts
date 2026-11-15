@@ -25,6 +25,8 @@ export interface Settings {
   readAfter: ReadAfter;
   /** Quiet mode (tram): no listening or speaking cards, nothing read aloud by itself. */
   quiet: boolean;
+  /** A new listening card plays its sentence slowly the first time. */
+  slowFirst: boolean;
 }
 
 export type DailyGoal = 100 | 300 | 600;
@@ -67,7 +69,7 @@ export interface LoadedState {
 }
 
 export function defaultSettings(): Settings {
-  return { dailyGoal: 300, sound: true, vibration: true, helpLang: 'pl', colorMode: 'system', palette: 'classic', navCollapsed: false, readAfter: 'auto', quiet: false };
+  return { dailyGoal: 300, sound: true, vibration: true, helpLang: 'pl', colorMode: 'system', palette: 'classic', navCollapsed: false, readAfter: 'auto', quiet: false, slowFirst: true };
 }
 
 export function defaultState(): SavedState {

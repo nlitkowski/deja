@@ -6,7 +6,7 @@ import { shuffle } from '../../lib/session';
 import type { ViewProps } from '../types';
 import type { EcouteSensData } from '.';
 
-export function EcouteSensView({ data, locked, onAnswer }: ViewProps<EcouteSensData>) {
+export function EcouteSensView({ data, ctx, locked, onAnswer }: ViewProps<EcouteSensData>) {
   const [options] = useState(() => shuffle(data.options, Math.random));
   const [started] = useState(() => performance.now());
   const [chosen, setChosen] = useState<string>();
@@ -28,7 +28,7 @@ export function EcouteSensView({ data, locked, onAnswer }: ViewProps<EcouteSensD
 
   return (
     <div className="choice-card">
-      <Listen text={data.audio} onReplay={() => replays.current++} />
+      <Listen text={data.audio} slow={ctx.slowFirst} onReplay={() => replays.current++} />
       <p className="muted">{ui.chooseMeaning}</p>
       <ChoiceList options={options} answer={data.answer} chosen={chosen} locked={locked} lang="pl" onChoose={choose} />
     </div>

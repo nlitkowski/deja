@@ -9,6 +9,8 @@ export type { AnswerResult };
 export interface ExerciseContext {
   accentPairs: Set<string>;
   helpLang: HelpLang;
+  /** A new listening card: its sentence plays slowly the first time. */
+  slowFirst?: boolean;
 }
 
 export interface ViewProps<D> {

@@ -20,6 +20,7 @@ import { cardKey, isDue, type AnswerResult } from '../lib/srs';
 import { sfx } from '../sfx';
 import { useAppStore } from '../state/appStore';
 import { xpContext } from '../xpContext';
+import { listeningRetry } from '../sessions';
 
 export interface SessionOutcome {
   sessionId: string;
@@ -59,12 +60,11 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
   const [comboBreak, setComboBreak] = useState<{ combo: number; key: number }>();
   const [gain, setGain] = useState<{ xp: number; key: number }>();
 
-  const { helpLang, vibration, sound, readAfter } = useAppStore((s) => s.settings);
+  const { helpLang, vibration, sound, readAfter, slowFirst } = useAppStore((s) => s.settings);
   const player = usePlayer();
   const { quiet } = useQuiet();
   const recordAnswer = useAppStore((s) => s.recordAnswer);
   const recordSession = useAppStore((s) => s.recordSession);
-  const ctx: ExerciseContext = useMemo(() => ({ accentPairs, helpLang }), [helpLang]);
   const byEntry = useMemo(
     () => indexExercisesByEntry([...content.exercises.values()].filter((ex) => supportsHelpLang(ex.type, helpLang))),
     [helpLang],
@@ -74,6 +74,13 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
   const exercise = item && content.exercises.get(item.exerciseId);
   const type = exercise && exerciseTypes.get(exercise.type);
   const entry = item && content.entries.get(item.entryId);
+  // Decided when the card comes up (not subscribed): answering creates the card, and the view must not change then.
+  const newListening = !!item && item.skill === 'listening' && !useAppStore.getState().progress.cards[cardKey(item.entryId, 'listening')];
+  const ctx: ExerciseContext = useMemo(
+    () => ({ accentPairs, helpLang, slowFirst: slowFirst && newListening }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- recomputed per card, see newListening
+    [helpLang, slowFirst, index],
+  );
   const sentence = exercise && readAfter !== 'never' ? exerciseAudioText(exercise) : undefined;
   // A correct answer moves on by itself, but only once the sentence being read has finished.
   const reading = !!sentence && player.text === sentence && !!player.status;
@@ -140,7 +147,11 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
     const slip = !r.correct || r.nearMiss;
     if (readAfter === 'auto' && slip && !quiet && sentence && item.skill === 'written') void play(sentence);
     if (vibration) vibrate(r.correct ? 15 : [30, 40, 30]);
-    if (!r.correct) setQueue((q) => requeue(q, index, item, (byEntry.get(item.entryId) ?? []).filter((ex) => skillOf(ex.type) === item.skill), isProduction));
+    if (!r.correct) {
+      const candidates = (byEntry.get(item.entryId) ?? []).filter((ex) => skillOf(ex.type) === item.skill);
+      const retry = item.skill === 'listening' ? listeningRetry(useAppStore.getState().progress.cards) : undefined;
+      setQueue((q) => requeue(q, index, item, candidates, isProduction, Math.random, retry));
+    }
 
     const recognition = !isProduction(exercise.type);
     const today = dayKey(new Date());

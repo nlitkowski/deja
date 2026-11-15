@@ -1,9 +1,14 @@
+import { knownSentence, sentenceEntries } from './audio/sentenceEntries';
 import { allEntries, content } from './content/registry';
+import { dictationWords, type DicteeData } from './exercises/dictee';
 import { isProduction, skillOf, supportsHelpLang } from './exercises/registry';
 import { GAME } from './game/config';
+import { ladderPicker, ladderRetry, rungOf } from './game/listeningLadder';
+import { skillMastery } from './game/mastery';
 import { dayKey } from './lib/date';
 import { newIntroducedOn, type ProgressState } from './lib/progress/fold';
-import { buildSession, type OtherSkill, type SessionItem } from './lib/session';
+import { buildSession, type OtherSkill, type RetryPicker, type SessionExercise, type SessionItem } from './lib/session';
+import { cardKey, type SrsCard } from './lib/srs';
 import type { Settings } from './lib/storage';
 
 export const NEW_PER_DAY = GAME.newPerDay;
@@ -13,12 +18,33 @@ function usableExercises(settings: Settings) {
   return [...content.exercises.values()].filter((ex) => supportsHelpLang(ex.type, settings.helpLang));
 }
 
+let sentences: Map<string, Set<string>> | undefined;
+
+/** A listening exercise's rung; a full dictation only from sentences whose other entries were all seen in writing. */
+function listeningRung(cards: Readonly<Record<string, SrsCard>>) {
+  return (ex: SessionExercise) => {
+    if (ex.type !== 'dictee') return rungOf(ex.type);
+    const { text } = content.exercises.get(ex.id)!.data as DicteeData;
+    sentences ??= sentenceEntries(content.exercises.values(), content.entries.values());
+    return knownSentence(text, ex.entryIds, sentences, (id) => !!cards[cardKey(id, 'written')]) ? rungOf('dictee', dictationWords(text)) : -1;
+  };
+}
+
+export const listeningRetry = (cards: Readonly<Record<string, SrsCard>>): RetryPicker => ladderRetry(listeningRung(cards));
+
 /** Listening and speaking cards for a review, unless quiet mode leaves out everything with sound. */
 function otherSkills(progress: ProgressState, today: string, quiet: boolean): OtherSkill[] {
   if (quiet) return [];
+  const listening = ladderPicker((id) => skillMastery(progress.cards, id, 'listening'), listeningRung(progress.cards));
   return (['listening', 'speaking'] as const).map((skill) => {
     const { requires, newPerDay, sessionShare } = GAME.skills[skill];
-    return { skill, requires, share: sessionShare, newAllowed: Math.max(0, newPerDay - newIntroducedOn(progress, today, skill)) };
+    return {
+      skill,
+      requires,
+      share: sessionShare,
+      newAllowed: Math.max(0, newPerDay - newIntroducedOn(progress, today, skill)),
+      ...(skill === 'listening' ? { pick: listening } : {}),
+    };
   });
 }
 

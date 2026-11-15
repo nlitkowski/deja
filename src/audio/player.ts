@@ -169,6 +169,29 @@ export async function play(text: string, { slow = false } = {}): Promise<void> {
   }
 }
 
+/** Resolves once `text` stops playing: it ended, failed, or something else started. */
+function finished(text: string): Promise<void> {
+  return new Promise((resolve) => {
+    const check = () => {
+      if (state.text === text) return;
+      listeners.delete(check);
+      resolve();
+    };
+    listeners.add(check);
+    check();
+  });
+}
+
+/** Plays the texts one after another; anything else played or stopped meanwhile ends the sequence. */
+export async function playInTurn(texts: readonly string[]): Promise<void> {
+  for (const text of texts) {
+    await play(text);
+    const mine = request;
+    await finished(text);
+    if (mine !== request) return;
+  }
+}
+
 const subscribe = (listener: () => void) => {
   listeners.add(listener);
   return () => listeners.delete(listener);

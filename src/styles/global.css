@@ -891,6 +891,34 @@ button {
   text-decoration: none;
 }
 
+.dictation-shape {
+  margin: 0.25em 0 0;
+  color: var(--muted);
+  font-size: 1.25rem;
+  letter-spacing: 0.15em;
+  word-spacing: 0.4em;
+}
+
+.pair-replay {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0.75em 0 0;
+}
+
+.pair-side {
+  padding: 0.15em 0.6em;
+  border: var(--border-w) solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.pair-side.playing {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
 .audio-download {
   display: flex;
   flex-wrap: wrap;
