@@ -32,16 +32,28 @@ export async function isCached(text: string): Promise<boolean> {
   return !!(await (await openCache())?.match(await audioUrl(text)));
 }
 
+/** Texts whose recording does not exist (404): never asked for again until the app reloads. */
+const absent = new Set<string>();
+
+const httpError = (status: number) => Object.assign(new Error(`audio ${status}`), { status });
+
 /** The recording, from the cache or the network (then cached). */
 export async function fetchAudio(text: string): Promise<Blob> {
+  if (absent.has(text)) throw httpError(404);
   const url = await audioUrl(text);
   const cache = await openCache();
   const hit = await cache?.match(url);
   if (hit) return hit.blob();
   const res = await fetch(url, { mode: 'cors' });
-  if (!res.ok) throw Object.assign(new Error(`audio ${res.status}`), { status: res.status });
+  if (res.status === 404) absent.add(text);
+  if (!res.ok) throw httpError(res.status);
   await cache?.put(url, res.clone()).catch(() => undefined);
   return res.blob();
+}
+
+export async function cachedSize(text: string): Promise<number> {
+  const hit = await (await openCache())?.match(await audioUrl(text));
+  return Number(hit?.headers.get('content-length')) || (await hit?.blob())?.size || 0;
 }
 
 export async function cachedBytes(): Promise<number> {

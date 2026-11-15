@@ -66,7 +66,7 @@ Rozszerz schemat Zod i dopisz opis do `content/_template/README.md`.
 
 **Hosting:** bucket Cloudflare R2 (`deja-audio`), wystawiony pod własną domeną `deja-audio.litkowski.com`.
 - Nagłówek `Cache-Control: public, max-age=31536000, immutable`, bo pliki są nazwane hashem.
-- CORS na bucket dla originów aplikacji (potrzebny do Cache API przy pobieraniu offline).
+- CORS na bucket dla originów aplikacji (potrzebny do Cache API przy pobieraniu offline). Na produkcji `Access-Control-Allow-Origin: *` ustawia też stała reguła Cloudflare (Transform Rule) dla `deja-audio.litkowski.com`: polityka bucketu dodaje nagłówek tylko do żądań z `Origin`, a brzeg mógłby zapisać w cache odpowiedź bez niego. Reguły cache, CORS i limitu żądań są opisane w `README.md` („Nagrania”).
 - Nagrania **nie trafiają do repo**.
 
 **Skrypt `scripts/tts.ts`:**

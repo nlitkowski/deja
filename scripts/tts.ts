@@ -7,6 +7,7 @@
  *   npm run tts -- --prune [--yes] list (and with --yes delete) recordings the content no longer uses
  *
  * Keys come from the environment or .dev.vars: AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY.
+ * --prune --yes also purges the deleted files from the edge cache with CLOUDFLARE_ZONE_ID and CLOUDFLARE_PURGE_TOKEN (Zone › Cache Purge).
  * `--rpm <n>` caps synthesis requests per minute (default 18: Azure's free tier allows 20).
  */
 import { createHash } from 'node:crypto';
@@ -19,6 +20,7 @@ import { loadPacks, type ContentFiles } from '../src/content/loader';
 import { exerciseTypeInfo } from '../src/exercises/logic';
 import { azureTts } from './tts/azure';
 import type { TtsProvider } from './tts/provider';
+import { purgeUrls } from './tts/purge';
 import { r2Bucket } from './tts/r2';
 
 const CONFIG = 'content/_audio/config.json';
@@ -178,6 +180,19 @@ async function prune(wanted: { key: string }[], config: AudioConfig, manifest: M
   }
   saveManifest(manifest);
   console.log(`Deleted ${unused.length}.`);
+  if (unused.length) await purge(unused.map((name) => `${config.baseUrl}/${name}`));
+}
+
+async function purge(urls: string[]) {
+  const zoneId = process.env.CLOUDFLARE_ZONE_ID;
+  const token = process.env.CLOUDFLARE_PURGE_TOKEN;
+  if (!zoneId || !token) {
+    console.warn('\nCLOUDFLARE_ZONE_ID / CLOUDFLARE_PURGE_TOKEN not set: the edge keeps serving the deleted files until its TTL. Purge these URLs in the dashboard:');
+    for (const url of urls) console.warn(`  ${url}`);
+    return;
+  }
+  await purgeUrls({ zoneId, token }, urls);
+  console.log(`Purged ${urls.length} URL(s) from the edge cache.`);
 }
 
 async function main() {

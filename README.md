@@ -52,6 +52,25 @@ W przeglądarce:
 - Aplikację da się zainstalować (PWA) i manifest ma `scope` oraz `start_url` równe `/`.
 - Po pierwszym wejściu działa offline: w DevTools → Network → Offline odśwież stronę i przejdź sesję powtórki.
 
+## Nagrania
+
+Pliki MP3 generuje `npm run tts` (TTS Azure, opis w `scripts/tts.ts`) do bucketu R2 `deja-audio`, serwowanego pod `https://deja-audio.litkowski.com`. Nazwa pliku to hash tekstu i głosu, więc plik nigdy się nie zmienia (`Cache-Control: public, max-age=31536000, immutable`). Aplikacja trzyma pobrane pliki w Cache API.
+
+Ustawienia w panelu Cloudflare (strefa `litkowski.com`, host `deja-audio.litkowski.com`):
+
+1. **Cache Rule** „audio: cache everything”: Hostname equals `deja-audio.litkowski.com` → Eligible for cache, Edge TTL 1 miesiąc (ignoruj Cache-Control), Browser TTL: respect origin.
+2. **Transform Rule** (Modify response header) dla tego hosta: set static `Access-Control-Allow-Origin: *`. Polityka CORS bucketu dodaje nagłówek tylko do żądań z `Origin`, a brzeg mógłby zapisać w cache odpowiedź bez niego. Pliki są publiczne i bez ciasteczek, więc `*` jest bezpieczne.
+3. **Rate limiting** dla tego hosta, np. 300 żądań na minutę z jednego IP → block na minutę. Pobieranie audio pakietu w aplikacji idzie po 4 pliki naraz, a po `429` czeka coraz dłużej (1 s, 2 s, 4 s… do 30 s) i wznawia od miejsca przerwy.
+4. **Alert zużycia** R2 (operacje klasy B i miejsce): Notifications → Billing.
+
+Sprawdzenie (dwa razy, za drugim razem `cf-cache-status: HIT` i `access-control-allow-origin: *`):
+
+```bash
+curl -sI https://deja-audio.litkowski.com/5cb37b5836b06d2a0e6c94f2d872b973.mp3
+```
+
+`npm run tts -- --prune --yes` usuwa z R2 nagrania, których treść już nie używa, i czyści je z cache brzegu, jeśli w `.dev.vars` są `CLOUDFLARE_ZONE_ID` i `CLOUDFLARE_PURGE_TOKEN` (token z uprawnieniem Zone → Cache Purge). Bez nich wypisuje adresy do wyczyszczenia ręcznie. Przy dodawaniu plików purge nie jest potrzebny, bo nowe pliki mają nowe nazwy.
+
 ## Przeniesienie postępu
 
 Dane w przeglądarce są osobne dla każdego adresu. Postęp z innego adresu przenosi się plikiem: Réglages → „Sauvegarde” → **Exporter** na starym adresie, **Importer un fichier** na nowym. Import scala zdarzenia po `id`, więc powtórzony import niczego nie dubluje.

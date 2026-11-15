@@ -179,6 +179,10 @@ export const ui = {
   clearAudio: 'Vider',
   downloadAudio: 'Télécharger l’audio',
   downloadingAudio: (done: number, total: number) => `Téléchargement… ${done}/${total}`,
+  resumeAudio: 'Reprendre le téléchargement',
+  audioAlready: (cached: number, total: number) => `${cached}/${total} déjà hors ligne`,
+  audioRetryIn: (seconds: number) => `reprise dans ${seconds} s`,
+  audioInterrupted: 'Téléchargement en pause : trop de demandes. Reprends un peu plus tard, rien n’est perdu.',
   audioReady: (size: string) => `Audio hors ligne · ${size}`,
   audioPartly: (missing: number) => `${missing} enregistrement${missing > 1 ? 's' : ''} indisponible${missing > 1 ? 's' : ''} pour l’instant. Réessaie plus tard.`,
   fileSize: (bytes: number) =>

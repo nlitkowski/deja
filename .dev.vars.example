@@ -8,3 +8,8 @@ AZURE_SPEECH_REGION=westeurope
 R2_ACCOUNT_ID=
 R2_ACCESS_KEY_ID=
 R2_SECRET_ACCESS_KEY=
+
+# Optional: lets `npm run tts -- --prune --yes` purge deleted recordings from the edge cache
+# (zone litkowski.com: Overview › Zone ID; API token with Zone › Cache Purge on that zone)
+CLOUDFLARE_ZONE_ID=
+CLOUDFLARE_PURGE_TOKEN=
