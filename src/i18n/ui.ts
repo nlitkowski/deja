@@ -173,7 +173,7 @@ export const ui = {
   chooseWhatYouHear: 'Qu’est-ce que tu entends ?',
   readAfterLabel: 'Lire la phrase après la réponse',
   readAfterNames: { auto: 'Auto', manual: 'Sur demande', never: 'Jamais' },
-  readAfterHint: '« Auto » lit la phrase dès que tu as répondu. Maintiens le haut-parleur pour l’écouter plus lentement.',
+  readAfterHint: '« Auto » lit la phrase après une erreur ou un accent oublié. Maintiens le haut-parleur pour l’écouter plus lentement.',
   audioStorage: (size: string) => `Audio hors ligne : ${size}`,
   audioStorageEmpty: 'Aucun audio hors ligne.',
   clearAudio: 'Vider',
