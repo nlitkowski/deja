@@ -7,14 +7,14 @@
       "id": "u08-pc-avoir",
       "fr": "le passé composé avec avoir",
       "pl": "czas przeszły passé composé z avoir",
-      "def": "avoir au présent + participe passé : -er → -é, -ir → -i",
+      "def": "avoir au présent + participe passé en -i, -is ou -u : dormi, appris, voulu",
       "examples": [
-        { "fr": "Hier, j'ai marché une heure.", "pl": "Wczoraj spacerowałem godzinę." },
-        { "fr": "Nous avons bien dormi.", "pl": "Dobrze spaliśmy." }
+        { "fr": "Nous avons bien dormi.", "pl": "Dobrze spaliśmy." },
+        { "fr": "Elle a appris le français.", "pl": "Nauczyła się francuskiego." }
       ],
       "tip": {
-        "pl": "avoir w czasie teraźniejszym + imiesłów: manger → mangé, finir → fini",
-        "fr": "avoir au présent + participe passé : manger → mangé, finir → fini"
+        "pl": "dormir → dormi, finir → fini, apprendre → appris, vouloir → voulu, pouvoir → pu (imiesłowy na -é poznałeś w unité 7)",
+        "fr": "dormir → dormi, finir → fini, apprendre → appris, vouloir → voulu, pouvoir → pu (les participes en -é : unité 7)"
       },
       "confusables": ["u08-pc-etre"],
       "tags": ["grammaire"]
@@ -47,20 +47,22 @@
         "pl": "ne … pas otacza czasownik posiłkowy avoir, imiesłów stoi po pas",
         "fr": "ne … pas entoure l'auxiliaire avoir ; le participe vient après pas"
       },
-      "tags": ["grammaire"]
+      "tags": ["grammaire"],
+      "deprecated": true,
+      "replacedBy": "u07-pc-negation"
     },
     {
       "id": "u08-pc-etre",
-      "fr": "le passé composé avec être",
-      "pl": "passé composé z être",
-      "def": "être au présent + participe passé, qui s'accorde avec le sujet (aller, venir, tomber, rester…)",
+      "fr": "je suis allé(e)",
+      "pl": "poszedłem / poszłam, byłem / byłam (aller w passé composé)",
+      "def": "aller au passé composé : je suis allé(e), tu es allé(e), il est allé, elle est allée…",
       "examples": [
         { "fr": "Je suis allé chez le médecin.", "pl": "Poszedłem do lekarza." },
-        { "fr": "Léa est tombée à vélo.", "pl": "Lea spadła z roweru." }
+        { "fr": "Elle est allée à la pharmacie.", "pl": "Poszła do apteki." }
       ],
       "tip": {
-        "pl": "imiesłów zgadza się z podmiotem: +e w rodzaju żeńskim, +s w liczbie mnogiej",
-        "fr": "le participe s'accorde avec le sujet : +e au féminin, +s au pluriel"
+        "pl": "aller łączy się z être, nie z avoir; allé dostaje +e dla kobiety i +s w liczbie mnogiej (pełną regułę poznasz w unité 9)",
+        "fr": "aller va avec être, pas avec avoir ; allé prend +e au féminin et +s au pluriel (la règle complète : unité 9)"
       },
       "confusables": ["u08-pc-avoir", "u09-pc-etre-voyage"],
       "tags": ["grammaire"]
@@ -98,16 +100,16 @@
     },
     {
       "id": "u08-il-faut",
-      "fr": "il faut / il ne faut pas / il est interdit de",
-      "pl": "trzeba / nie wolno / zabrania się",
-      "def": "il faut + infinitif : obligation générale ; il ne faut pas, il est interdit de + infinitif : interdiction",
+      "fr": "il faut / il ne faut pas + infinitif",
+      "pl": "trzeba / nie wolno",
+      "def": "il faut + infinitif : c'est nécessaire ; il ne faut pas + infinitif : c'est interdit",
       "examples": [
         { "fr": "Il faut boire beaucoup d'eau.", "pl": "Trzeba pić dużo wody." },
-        { "fr": "Il est interdit de fumer ici.", "pl": "Tu nie wolno palić." }
+        { "fr": "Il ne faut pas fumer ici.", "pl": "Tu nie wolno palić." }
       ],
       "tip": {
-        "pl": "il faut się nie odmienia (nie mówi się „je faut”); po interdit jest de",
-        "fr": "il faut ne change jamais (pas « je faut ») ; après interdit, on met de"
+        "pl": "zawsze il faut (nigdy „je faut”) + bezokolicznik; przeczenie: il ne faut pas = zakaz",
+        "fr": "toujours il faut (jamais « je faut ») + infinitif ; à la forme négative, il ne faut pas = interdiction"
       },
       "confusables": ["u08-devoir"],
       "tags": ["grammaire"]
@@ -125,6 +127,24 @@
         "pl": "po conseiller zawsze de + bezokolicznik; przed samogłoską d'",
         "fr": "après conseiller, toujours de + infinitif ; devant une voyelle : d'"
       },
+      "tags": ["grammaire"],
+      "deprecated": true,
+      "replacedBy": "u08-conseil"
+    },
+    {
+      "id": "u08-conseil",
+      "fr": "Bois de l'eau ! / Tu peux marcher.",
+      "pl": "dawanie rady: tryb rozkazujący, tu peux / vous pouvez + bezokolicznik",
+      "def": "pour donner un conseil : l'impératif (Bois ! Dormez !) ou tu peux / vous pouvez + infinitif",
+      "examples": [
+        { "fr": "Tu as mal à la gorge ? Bois du thé !", "pl": "Boli cię gardło? Pij herbatę!" },
+        { "fr": "Vous pouvez faire du yoga.", "pl": "Może pan uprawiać jogę." }
+      ],
+      "tip": {
+        "pl": "tryb rozkazujący bez podmiotu (bois, buvez) albo tu peux / vous pouvez + bezokolicznik, np. tu peux dormir",
+        "fr": "l'impératif sans sujet (bois, buvez) ou tu peux / vous pouvez + infinitif, par exemple tu peux dormir"
+      },
+      "confusables": ["u08-devoir"],
       "tags": ["grammaire"]
     },
     {
@@ -145,18 +165,17 @@
     { "id": "u08-dos", "fr": "le dos", "pl": "plecy", "def": "la partie arrière du corps", "examples": [{ "fr": "J'ai mal au dos.", "pl": "Bolą mnie plecy." }], "tags": ["vocabulaire"] },
     { "id": "u08-gorge", "fr": "la gorge", "pl": "gardło", "def": "l'intérieur du cou", "examples": [{ "fr": "J'ai mal à la gorge.", "pl": "Boli mnie gardło." }], "tags": ["vocabulaire"] },
     { "id": "u08-ventre", "fr": "le ventre", "pl": "brzuch", "def": "la partie du corps où va la nourriture", "examples": [{ "fr": "Il a mal au ventre.", "pl": "Boli go brzuch." }], "tags": ["vocabulaire"] },
-    { "id": "u08-jambe", "fr": "une jambe", "pl": "noga", "def": "on marche avec les deux jambes", "examples": [{ "fr": "Elle s'est cassé la jambe.", "pl": "Złamała nogę." }], "tags": ["vocabulaire"] },
+    { "id": "u08-jambe", "fr": "une jambe", "pl": "noga", "def": "on marche avec les deux jambes", "examples": [{ "fr": "J'ai mal à la jambe.", "pl": "Boli mnie noga." }], "tags": ["vocabulaire"] },
     { "id": "u08-fievre", "fr": "la fièvre", "pl": "gorączka", "def": "la température du corps est trop haute", "examples": [{ "fr": "J'ai de la fièvre.", "pl": "Mam gorączkę." }], "tags": ["vocabulaire"] },
     { "id": "u08-rhume", "fr": "un rhume", "pl": "katar, przeziębienie", "def": "une petite maladie : on éternue, le nez coule", "examples": [{ "fr": "J'ai un rhume.", "pl": "Jestem przeziębiony." }], "tags": ["vocabulaire"] },
     { "id": "u08-medicament", "fr": "un médicament", "pl": "lek", "def": "un produit pour soigner une maladie", "examples": [{ "fr": "Prenez ce médicament le soir.", "pl": "Proszę brać ten lek wieczorem." }], "tags": ["vocabulaire"] },
-    { "id": "u08-ordonnance", "fr": "une ordonnance", "pl": "recepta", "def": "le papier du médecin pour acheter des médicaments", "examples": [{ "fr": "Le médecin écrit une ordonnance.", "pl": "Lekarz wypisuje receptę." }], "tags": ["vocabulaire"] },
+    { "id": "u08-sirop", "fr": "le sirop", "pl": "syrop (lek)", "def": "un médicament liquide, par exemple contre la toux", "examples": [{ "fr": "Je prends du sirop pour la toux.", "pl": "Biorę syrop na kaszel." }], "tip": { "pl": "le sirop = syrop (rodzaj męski); końcowe p jest nieme", "fr": "le sirop est masculin ; le p final ne se prononce pas" }, "tags": ["vocabulaire"] },
+    { "id": "u08-ordonnance", "fr": "une ordonnance", "pl": "recepta", "def": "le papier du médecin pour acheter des médicaments", "examples": [{ "fr": "Le médecin écrit une ordonnance.", "pl": "Lekarz wypisuje receptę." }], "tags": ["vocabulaire"], "deprecated": true },
     { "id": "u08-pharmacie", "fr": "une pharmacie", "pl": "apteka", "def": "le magasin où on achète des médicaments", "examples": [{ "fr": "La pharmacie est ouverte.", "pl": "Apteka jest otwarta." }], "tags": ["vocabulaire"] },
     { "id": "u08-rendez-vous", "fr": "un rendez-vous", "pl": "wizyta (umówiona)", "def": "une heure fixée pour voir quelqu'un, par exemple le médecin", "examples": [{ "fr": "J'ai un rendez-vous chez le dentiste.", "pl": "Mam wizytę u dentysty." }], "tags": ["vocabulaire"] },
     { "id": "u08-salle-de-sport", "fr": "une salle de sport", "pl": "siłownia, klub fitness", "def": "un lieu avec des machines et des cours pour faire du sport", "examples": [{ "fr": "Je vais à la salle de sport le lundi.", "pl": "Chodzę na siłownię w poniedziałki." }], "tags": ["vocabulaire"] }
   ],
   "exercises": [
-    { "id": "u08-pc-avoir-1", "type": "gap-fill", "entryIds": ["u08-pc-avoir"], "data": { "sentence": "Hier, j'___ une heure dans le parc. (marcher)", "answers": ["ai marché"], "pl": "Wczoraj spacerowałem godzinę w parku." } },
-    { "id": "u08-pc-avoir-2", "type": "gap-fill", "entryIds": ["u08-pc-avoir"], "data": { "sentence": "Tu ___ des fruits ce matin ? (manger)", "answers": ["as mangé"], "pl": "Jadłeś dziś rano owoce?" } },
     { "id": "u08-pc-avoir-3", "type": "gap-fill", "entryIds": ["u08-pc-avoir"], "data": { "sentence": "Nous ___ dix heures cette nuit. (dormir)", "answers": ["avons dormi"], "pl": "Spaliśmy tej nocy dziesięć godzin." } },
     { "id": "u08-pc-avoir-4", "type": "gap-fill", "entryIds": ["u08-pc-avoir"], "data": { "sentence": "Elles ___ le cours de yoga à 19 heures. (finir)", "answers": ["ont fini"], "pl": "Skończyły zajęcia jogi o 19." } },
 
@@ -168,36 +187,28 @@
     { "id": "u08-part-6", "type": "gap-fill", "entryIds": ["u08-participes-irreguliers"], "data": { "sentence": "Ils ont ___ rester au lit. (devoir)", "answers": ["dû"], "pl": "Musieli zostać w łóżku.", "hint": { "pl": "z akcentem", "fr": "avec un accent" } } },
     { "id": "u08-part-7", "type": "gap-fill", "entryIds": ["u08-participes-irreguliers"], "data": { "sentence": "Nous avons ___ malades toute la semaine. (être)", "answers": ["été"], "pl": "Chorowaliśmy przez cały tydzień." } },
 
-    { "id": "u08-neg-1", "type": "gap-fill", "entryIds": ["u08-pc-negation"], "data": { "sentence": "Je ___ bien dormi cette nuit. (avoir – négation)", "answers": ["n'ai pas"], "pl": "Nie spałem dobrze tej nocy." } },
-    { "id": "u08-neg-2", "type": "gap-fill", "entryIds": ["u08-pc-negation"], "data": { "sentence": "Il ___ bu de café aujourd'hui. (avoir – négation)", "answers": ["n'a pas"], "pl": "Dziś nie pił kawy." } },
-    { "id": "u08-neg-3", "type": "gap-fill", "entryIds": ["u08-pc-negation"], "data": { "sentence": "Nous ___ pu venir au match. (avoir – négation)", "answers": ["n'avons pas"], "pl": "Nie mogliśmy przyjść na mecz." } },
+    { "id": "u08-neg-2", "type": "gap-fill", "entryIds": ["u08-participes-irreguliers"], "data": { "sentence": "Il n'a pas ___ de café aujourd'hui. (boire)", "answers": ["bu"], "pl": "Dziś nie pił kawy." } },
+    { "id": "u08-neg-3", "type": "gap-fill", "entryIds": ["u08-participes-irreguliers"], "data": { "sentence": "Nous n'avons pas ___ venir au match. (pouvoir)", "answers": ["pu"], "pl": "Nie mogliśmy przyjść na mecz." } },
 
-    { "id": "u08-pc-etre-1", "type": "gap-fill", "entryIds": ["u08-pc-etre"], "data": { "sentence": "Léa ___ à vélo. (tomber)", "answers": ["est tombée"], "pl": "Lea spadła z roweru." } },
-    { "id": "u08-pc-etre-2", "type": "gap-fill", "entryIds": ["u08-pc-etre"], "data": { "sentence": "Mes parents ___ à la maison. (rester)", "answers": ["sont restés"], "pl": "Moi rodzice zostali w domu." } },
     { "id": "u08-pc-etre-3", "type": "gap-fill", "entryIds": ["u08-pc-etre"], "data": { "sentence": "Hier, Marc et moi, nous ___ à la piscine. (aller)", "answers": ["sommes allés"], "pl": "Wczoraj Marek i ja poszliśmy na basen." } },
-    { "id": "u08-pc-etre-4", "type": "gap-fill", "entryIds": ["u08-pc-etre"], "data": { "sentence": "Mes amies ___ en retard au cours de danse. (arriver)", "answers": ["sont arrivées"], "pl": "Moje przyjaciółki spóźniły się na zajęcia tańca." } },
     { "id": "u08-pc-etre-5", "type": "gap-fill", "entryIds": ["u08-pc-etre"], "data": { "sentence": "Anne, tu ___ chez le médecin ce matin ? (aller)", "answers": ["es allée"], "pl": "Anno, byłaś dziś rano u lekarza?" } },
 
     { "id": "u08-y-1", "type": "gap-fill", "entryIds": ["u08-pronom-y"], "data": { "sentence": "Tu vas à la piscine ? — Oui, j'___ vais le samedi.", "answers": ["y"], "pl": "Chodzisz na basen? — Tak, chodzę w soboty.", "clue": "(un pronom remplace le lieu)" } },
     { "id": "u08-y-2", "type": "gap-fill", "entryIds": ["u08-pronom-y"], "data": { "sentence": "Vous allez chez le dentiste ? — Non, nous n'___ allons pas.", "answers": ["y"], "pl": "Idziecie do dentysty? — Nie, nie idziemy.", "clue": "(un pronom remplace le lieu)" } },
-    { "id": "u08-y-3", "type": "gap-fill", "entryIds": ["u08-pronom-y"], "data": { "sentence": "Paul est à l'hôpital ? — Oui, il ___ est depuis lundi.", "answers": ["y"], "pl": "Paul jest w szpitalu? — Tak, jest tam od poniedziałku.", "clue": "(un pronom remplace le lieu)" } },
-    { "id": "u08-y-4", "type": "gap-fill", "entryIds": ["u08-pronom-y"], "data": { "sentence": "Le cabinet médical ? J'___ suis allée hier.", "answers": ["y"], "pl": "Gabinet lekarski? Byłam tam wczoraj.", "clue": "(un pronom remplace le lieu)" } },
+    { "id": "u08-y-3", "type": "gap-fill", "entryIds": ["u08-pronom-y"], "data": { "sentence": "Paul est à la salle de sport ? — Oui, il ___ est avec Marc.", "answers": ["y"], "pl": "Paul jest na siłowni? — Tak, jest tam z Markiem.", "clue": "(un pronom remplace le lieu)" } },
+    { "id": "u08-y-4", "type": "gap-fill", "entryIds": ["u08-pronom-y"], "data": { "sentence": "La pharmacie ? J'___ suis allée hier.", "answers": ["y"], "pl": "Apteka? Byłam tam wczoraj.", "clue": "(un pronom remplace le lieu)" } },
     { "id": "u08-y-5", "type": "gap-fill", "entryIds": ["u08-pronom-y"], "data": { "sentence": "La pharmacie est encore ouverte, ___ ! (aller – tu)", "answers": ["vas-y"], "pl": "Apteka jest jeszcze otwarta, idź tam!", "hint": { "pl": "forma tu + -s przed y", "fr": "forme tu + -s devant y" } } },
 
     { "id": "u08-devoir-1", "type": "gap-fill", "entryIds": ["u08-devoir"], "data": { "sentence": "Je ___ prendre ce sirop le soir. (devoir)", "answers": ["dois"], "pl": "Muszę brać ten syrop wieczorem." } },
     { "id": "u08-devoir-2", "type": "gap-fill", "entryIds": ["u08-devoir"], "data": { "sentence": "Elle a de la fièvre, elle ___ rester au lit. (devoir)", "answers": ["doit"], "pl": "Ma gorączkę, musi zostać w łóżku." } },
     { "id": "u08-devoir-3", "type": "gap-fill", "entryIds": ["u08-devoir"], "data": { "sentence": "Vous ___ boire beaucoup d'eau. (devoir)", "answers": ["devez"], "pl": "Musi pan pić dużo wody." } },
     { "id": "u08-devoir-4", "type": "gap-fill", "entryIds": ["u08-devoir"], "data": { "sentence": "Les sportifs ___ bien dormir. (devoir)", "answers": ["doivent"], "pl": "Sportowcy muszą dobrze spać." } },
-    { "id": "u08-devoir-5", "type": "gap-fill", "entryIds": ["u08-devoir"], "data": { "sentence": "Nous ___ faire une prise de sang demain. (devoir)", "answers": ["devons"], "pl": "Jutro musimy zrobić badanie krwi." } },
+    { "id": "u08-devoir-5", "type": "gap-fill", "entryIds": ["u08-devoir"], "data": { "sentence": "Nous ___ aller chez le médecin demain. (devoir)", "answers": ["devons"], "pl": "Jutro musimy iść do lekarza." } },
 
     { "id": "u08-faut-1", "type": "gap-fill", "entryIds": ["u08-il-faut"], "data": { "sentence": "Pour être en forme, ___ dormir huit heures. (falloir)", "answers": ["il faut"], "pl": "Żeby być w formie, trzeba spać osiem godzin." } },
     { "id": "u08-faut-2", "type": "gap-fill", "entryIds": ["u08-il-faut"], "data": { "sentence": "Attention ! Il ne ___ pas courir au bord de la piscine. (falloir)", "answers": ["faut"], "pl": "Uwaga! Nie wolno biegać przy basenie." } },
-    { "id": "u08-faut-3", "type": "gap-fill", "entryIds": ["u08-il-faut"], "data": { "sentence": "Il est interdit ___ fumer dans l'hôpital.", "answers": ["de"], "pl": "W szpitalu nie wolno palić.", "clue": "(préposition avant l'infinitif)" } },
     { "id": "u08-faut-4", "type": "gap-fill", "entryIds": ["u08-il-faut"], "data": { "sentence": "___ manger des fruits et des légumes tous les jours. (falloir)", "answers": ["il faut"], "pl": "Trzeba jeść owoce i warzywa codziennie." } },
 
-    { "id": "u08-conseil-1", "type": "gap-fill", "entryIds": ["u08-conseiller-de"], "data": { "sentence": "Je te conseille ___ marcher tous les jours.", "answers": ["de"], "pl": "Radzę ci chodzić codziennie.", "clue": "(préposition avant l'infinitif)" } },
-    { "id": "u08-conseil-2", "type": "gap-fill", "entryIds": ["u08-conseiller-de"], "data": { "sentence": "Je vous conseille ___ arrêter le sucre.", "answers": ["d'"], "pl": "Radzę panu odstawić cukier.", "clue": "(préposition avant l'infinitif)", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
-    { "id": "u08-conseil-3", "type": "gap-fill", "entryIds": ["u08-conseiller-de"], "data": { "sentence": "Tu as mal au dos ? Je te ___ de faire du yoga. (conseiller)", "answers": ["conseille"], "pl": "Bolą cię plecy? Radzę ci uprawiać jogę." } },
 
     { "id": "u08-boire-1", "type": "gap-fill", "entryIds": ["u08-boire"], "data": { "sentence": "Je ___ deux litres d'eau par jour. (boire)", "answers": ["bois"], "pl": "Piję dwa litry wody dziennie." } },
     { "id": "u08-boire-2", "type": "gap-fill", "entryIds": ["u08-boire"], "data": { "sentence": "Vous ___ du thé ou du café ? (boire)", "answers": ["buvez"], "pl": "Pije pan herbatę czy kawę?" } },
@@ -210,16 +221,14 @@
     { "id": "u08-gorge-2", "type": "translate-pl-fr", "entryIds": ["u08-gorge"], "data": { "pl": "gardło", "answers": ["la gorge", "une gorge"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u08-ventre-1", "type": "gap-fill", "entryIds": ["u08-ventre"], "data": { "sentence": "Il a trop mangé, il a mal au ___.", "answers": ["ventre"], "pl": "Za dużo zjadł, boli go brzuch.", "clue": "(la partie du corps où va la nourriture)" } },
     { "id": "u08-ventre-2", "type": "translate-pl-fr", "entryIds": ["u08-ventre"], "data": { "pl": "brzuch", "answers": ["le ventre", "un ventre"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u08-jambe-1", "type": "gap-fill", "entryIds": ["u08-jambe"], "data": { "sentence": "Elle s'est cassé la ___ au ski.", "answers": ["jambe"], "pl": "Złamała nogę na nartach.", "clue": "(on marche avec)" } },
+    { "id": "u08-jambe-1", "type": "gap-fill", "entryIds": ["u08-jambe"], "data": { "sentence": "J'ai mal à la ___ droite, je ne peux pas courir.", "answers": ["jambe"], "pl": "Boli mnie prawa noga, nie mogę biegać.", "clue": "(on marche avec)" } },
     { "id": "u08-jambe-2", "type": "translate-pl-fr", "entryIds": ["u08-jambe"], "data": { "pl": "noga", "answers": ["une jambe", "la jambe"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u08-fievre-1", "type": "gap-fill", "entryIds": ["u08-fievre"], "data": { "sentence": "Il a 39 de ___, il reste au lit.", "answers": ["fièvre"], "pl": "Ma 39 stopni gorączki, zostaje w łóżku.", "clue": "(la température du corps est trop haute)" } },
     { "id": "u08-fievre-2", "type": "translate-pl-fr", "entryIds": ["u08-fievre"], "data": { "pl": "gorączka", "answers": ["la fièvre", "une fièvre", "de la fièvre"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u08-rhume-1", "type": "gap-fill", "entryIds": ["u08-rhume"], "data": { "sentence": "J'ai un ___ : j'éternue et j'ai le nez qui coule.", "answers": ["rhume"], "pl": "Jestem przeziębiony: kicham i cieknie mi z nosa.", "clue": "(une petite maladie de l'hiver)" } },
     { "id": "u08-rhume-2", "type": "translate-pl-fr", "entryIds": ["u08-rhume"], "data": { "pl": "katar, przeziębienie", "answers": ["un rhume", "le rhume"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u08-medicament-1", "type": "gap-fill", "entryIds": ["u08-medicament"], "data": { "sentence": "Prenez ce ___ trois fois par jour.", "answers": ["médicament", "comprimé", "sirop"], "pl": "Proszę brać ten lek trzy razy dziennie.", "clue": "(un produit pour soigner)" } },
+    { "id": "u08-medicament-1", "type": "gap-fill", "entryIds": ["u08-medicament"], "data": { "sentence": "Prenez ce ___ trois fois par jour.", "answers": ["médicament", "sirop"], "pl": "Proszę brać ten lek trzy razy dziennie.", "clue": "(un produit pour soigner)" } },
     { "id": "u08-medicament-2", "type": "translate-pl-fr", "entryIds": ["u08-medicament"], "data": { "pl": "lek", "answers": ["un médicament", "le médicament"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u08-ordonnance-1", "type": "gap-fill", "entryIds": ["u08-ordonnance"], "data": { "sentence": "Le médecin écrit une ___ pour la pharmacie.", "answers": ["ordonnance"], "pl": "Lekarz wypisuje receptę do apteki.", "clue": "(le papier pour acheter des médicaments)" } },
-    { "id": "u08-ordonnance-2", "type": "translate-pl-fr", "entryIds": ["u08-ordonnance"], "data": { "pl": "recepta", "answers": ["une ordonnance", "l'ordonnance"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u08-pharmacie-1", "type": "gap-fill", "entryIds": ["u08-pharmacie"], "data": { "sentence": "J'achète mon sirop à la ___ en face de chez moi.", "answers": ["pharmacie"], "pl": "Kupuję syrop w aptece naprzeciwko mojego domu.", "clue": "(le magasin des médicaments)" } },
     { "id": "u08-pharmacie-2", "type": "translate-pl-fr", "entryIds": ["u08-pharmacie"], "data": { "pl": "apteka", "answers": ["une pharmacie", "la pharmacie"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u08-rdv-1", "type": "gap-fill", "entryIds": ["u08-rendez-vous"], "data": { "sentence": "J'ai un ___ chez le dentiste à 15 heures.", "answers": ["rendez-vous"], "pl": "Mam wizytę u dentysty o 15.", "clue": "(une heure fixée pour voir le médecin)" } },
@@ -229,12 +238,11 @@
 
     { "id": "u08-pc-avoir-5", "type": "translate-pl-fr", "entryIds": ["u08-pc-avoir"], "data": { "pl": "dobrze spaliśmy", "answers": ["nous avons bien dormi", "on a bien dormi"], "hint": { "pl": "passé composé z avoir", "fr": "passé composé avec avoir" } } },
     { "id": "u08-part-8", "type": "translate-pl-fr", "entryIds": ["u08-participes-irreguliers"], "data": { "pl": "wziąłem lek", "answers": ["j'ai pris un médicament", "j'ai pris le médicament", "j'ai pris mon médicament"], "hint": { "pl": "passé composé od prendre", "fr": "passé composé de prendre" } } },
-    { "id": "u08-neg-4", "type": "translate-pl-fr", "entryIds": ["u08-pc-negation"], "data": { "pl": "on nie pił kawy", "answers": ["il n'a pas bu de café", "il n'a pas pris de café"], "hint": { "pl": "passé composé z przeczeniem", "fr": "passé composé à la forme négative" } } },
+    { "id": "u08-neg-4", "type": "translate-pl-fr", "entryIds": ["u08-participes-irreguliers"], "data": { "pl": "on nie pił kawy", "answers": ["il n'a pas bu de café", "il n'a pas pris de café"], "hint": { "pl": "passé composé z przeczeniem", "fr": "passé composé à la forme négative" } } },
     { "id": "u08-pc-etre-6", "type": "translate-pl-fr", "entryIds": ["u08-pc-etre"], "data": { "pl": "ona poszła do lekarza", "answers": ["elle est allée chez le médecin", "elle est allée chez le docteur"], "hint": { "pl": "passé composé z être, zgoda imiesłowu", "fr": "passé composé avec être, accord du participe" } } },
     { "id": "u08-y-6", "type": "translate-pl-fr", "entryIds": ["u08-pronom-y"], "data": { "pl": "idę tam jutro", "answers": ["j'y vais demain", "demain j'y vais"], "hint": { "pl": "zaimek y zamiast „tam”", "fr": "le pronom y remplace le lieu" } } },
     { "id": "u08-devoir-6", "type": "translate-pl-fr", "entryIds": ["u08-devoir"], "data": { "pl": "muszę pracować", "answers": ["je dois travailler"], "hint": { "pl": "czasownik devoir", "fr": "le verbe devoir" } } },
     { "id": "u08-faut-5", "type": "translate-pl-fr", "entryIds": ["u08-il-faut"], "data": { "pl": "trzeba dużo spać", "answers": ["il faut beaucoup dormir", "il faut dormir beaucoup"], "hint": { "pl": "forma bezosobowa", "fr": "forme impersonnelle" } } },
-    { "id": "u08-conseil-4", "type": "translate-pl-fr", "entryIds": ["u08-conseiller-de"], "data": { "pl": "radzę ci pić wodę", "answers": ["je te conseille de boire de l'eau"], "hint": { "pl": "conseiller + ? + bezokolicznik", "fr": "conseiller + ? + infinitif" } } },
     { "id": "u08-boire-5", "type": "translate-pl-fr", "entryIds": ["u08-boire"], "data": { "pl": "pijemy herbatę", "answers": ["nous buvons du thé", "on boit du thé"], "hint": { "pl": "czas teraźniejszy, forma nous", "fr": "présent, forme nous" } } },
 
     { "id": "u08-dos-3", "type": "gap-fill", "entryIds": ["u08-dos"], "data": { "sentence": "En randonnée, je porte mon sac sur le ___.", "answers": ["dos"], "pl": "Na wędrówce noszę plecak na plecach.", "clue": "(la partie arrière du corps)" } },
@@ -243,16 +251,61 @@
     { "id": "u08-jambe-3", "type": "gap-fill", "entryIds": ["u08-jambe"], "data": { "sentence": "Il court tous les jours, il a des ___ très fortes.", "answers": ["jambes"], "pl": "Biega codziennie, ma bardzo silne nogi.", "clue": "(on marche avec elles)" } },
     { "id": "u08-fievre-3", "type": "gap-fill", "entryIds": ["u08-fievre"], "data": { "sentence": "Tu es tout chaud, tu as de la ___ ?", "answers": ["fièvre"], "pl": "Jesteś cały rozpalony, masz gorączkę?", "clue": "(la température du corps est trop haute)" } },
     { "id": "u08-rhume-3", "type": "gap-fill", "entryIds": ["u08-rhume"], "data": { "sentence": "En hiver, les enfants ont souvent un ___.", "answers": ["rhume"], "pl": "Zimą dzieci często są przeziębione.", "clue": "(on éternue, le nez coule)" } },
-    { "id": "u08-medicament-3", "type": "gap-fill", "entryIds": ["u08-medicament"], "data": { "sentence": "Le pharmacien me donne un ___ contre la fièvre.", "answers": ["médicament", "comprimé", "sirop"], "pl": "Farmaceuta daje mi lek na gorączkę.", "clue": "(un produit pour soigner)" } },
-    { "id": "u08-ordonnance-3", "type": "gap-fill", "entryIds": ["u08-ordonnance"], "data": { "sentence": "Pour acheter ce médicament, il faut une ___ du médecin.", "answers": ["ordonnance"], "pl": "Żeby kupić ten lek, potrzebna jest recepta od lekarza.", "clue": "(le papier écrit par le médecin)" } },
+    { "id": "u08-medicament-3", "type": "gap-fill", "entryIds": ["u08-medicament"], "data": { "sentence": "Le pharmacien me donne un ___ contre la fièvre.", "answers": ["médicament", "sirop"], "pl": "Farmaceuta daje mi lek na gorączkę.", "clue": "(un produit pour soigner)" } },
     { "id": "u08-pharmacie-3", "type": "gap-fill", "entryIds": ["u08-pharmacie"], "data": { "sentence": "Je vais à la ___ avec mon ordonnance.", "answers": ["pharmacie"], "pl": "Idę do apteki z receptą.", "clue": "(on y achète des médicaments)" } },
     { "id": "u08-rdv-3", "type": "gap-fill", "entryIds": ["u08-rendez-vous"], "data": { "sentence": "Je voudrais prendre ___ avec le docteur Martin.", "answers": ["rendez-vous"], "pl": "Chciałbym umówić się na wizytę u doktora Martina.", "clue": "(une heure fixée pour voir le médecin)" } },
-    { "id": "u08-salle-3", "type": "gap-fill", "entryIds": ["u08-salle-de-sport"], "data": { "sentence": "Après le travail, elle fait du vélo dans une ___ près du bureau.", "answers": ["salle de sport", "salle de gym"], "pl": "Po pracy jeździ na rowerku na siłowni blisko biura.", "clue": "(un lieu avec des machines pour faire du sport)" } }
+    { "id": "u08-salle-3", "type": "gap-fill", "entryIds": ["u08-salle-de-sport"], "data": { "sentence": "Après le travail, elle fait du vélo dans une ___ près du bureau.", "answers": ["salle de sport", "salle de gym"], "pl": "Po pracy jeździ na rowerku na siłowni blisko biura.", "clue": "(un lieu avec des machines pour faire du sport)" } },
+    { "id": "u08-pc-avoir-6", "type": "gap-fill", "entryIds": ["u08-pc-avoir"], "data": { "sentence": "Elle ___ le français en France. (apprendre)", "answers": ["a appris"], "pl": "Nauczyła się francuskiego we Francji." } },
+    { "id": "u08-pc-avoir-7", "type": "gap-fill", "entryIds": ["u08-pc-avoir"], "data": { "sentence": "Ils ___ courir sous la pluie. (vouloir)", "answers": ["ont voulu"], "pl": "Chcieli biegać w deszczu." } },
+    { "id": "u08-pc-etre-7", "type": "gap-fill", "entryIds": ["u08-pc-etre"], "data": { "sentence": "Hier soir, je ___ à la salle de sport. (aller)", "answers": ["suis allé", "suis allée"], "pl": "Wczoraj wieczorem poszedłem na siłownię." } },
+
+    { "id": "u07-part-3", "type": "gap-fill", "entryIds": ["u08-participes-irreguliers"], "data": { "sentence": "Tu as ___ les clés où ? (mettre)", "answers": ["mis"], "pl": "Gdzie położyłeś klucze?" } },
+    { "id": "u07-part-7", "type": "translate-pl-fr", "entryIds": ["u08-participes-irreguliers"], "data": { "pl": "zrobiłem zakupy", "answers": ["j'ai fait les courses", "j'ai fait des courses"], "hint": { "pl": "passé composé", "fr": "passé composé" } } },
+    { "id": "u07-faut-2", "type": "gap-fill", "entryIds": ["u08-il-faut"], "data": { "sentence": "Il ___ respecter le calme après 22 heures.", "answers": ["faut"], "pl": "Po 22 trzeba zachować ciszę." } },
+    { "id": "u07-faut-4", "type": "gap-fill", "entryIds": ["u08-il-faut"], "data": { "sentence": "___ pas fumer dans l'escalier.", "answers": ["il ne faut"], "pl": "Nie wolno palić na klatce schodowej.", "clue": "(ce n'est pas permis)" } },
+    { "id": "u07-faut-5", "type": "translate-pl-fr", "entryIds": ["u08-il-faut"], "data": { "pl": "trzeba zamknąć drzwi", "answers": ["il faut fermer la porte"] } },
+
+    { "id": "u08-cons-1", "type": "gap-fill", "entryIds": ["u08-conseil"], "data": { "sentence": "Tu as mal au dos ? Tu ___ faire du yoga. (pouvoir)", "answers": ["peux"], "pl": "Bolą cię plecy? Możesz uprawiać jogę.", "clue": "(un conseil)" } },
+    { "id": "u08-cons-2", "type": "gap-fill", "entryIds": ["u08-conseil"], "data": { "sentence": "Vous avez de la fièvre ? Vous ___ rester au lit. (pouvoir)", "answers": ["pouvez"], "pl": "Ma pan gorączkę? Może pan zostać w łóżku.", "clue": "(un conseil)" } },
+    { "id": "u08-cons-3", "type": "gap-fill", "entryIds": ["u08-conseil"], "data": { "sentence": "Tu as un rhume ? ___ beaucoup d'eau ! (boire – impératif, tu)", "answers": ["Bois"], "pl": "Masz katar? Pij dużo wody!" } },
+    { "id": "u08-cons-4", "type": "gap-fill", "entryIds": ["u08-conseil"], "data": { "sentence": "Vous êtes fatigué ? ___ huit heures par nuit ! (dormir – impératif, vous)", "answers": ["Dormez"], "pl": "Jest pan zmęczony? Proszę spać osiem godzin na dobę!" } },
+    { "id": "u08-cons-5", "type": "translate-pl-fr", "entryIds": ["u08-conseil"], "data": { "pl": "możesz iść do lekarza", "answers": ["tu peux aller chez le médecin", "tu peux aller chez le docteur"], "hint": { "pl": "tu peux + bezokolicznik", "fr": "tu peux + infinitif" } } },
+
+    { "id": "u08-sirop-1", "type": "gap-fill", "entryIds": ["u08-sirop"], "data": { "sentence": "Tu tousses ? Prends ce ___, il est bon pour la gorge.", "answers": ["sirop"], "pl": "Kaszlesz? Weź ten syrop, jest dobry na gardło.", "clue": "(un médicament liquide)" } },
+    { "id": "u08-sirop-2", "type": "translate-pl-fr", "entryIds": ["u08-sirop"], "data": { "pl": "syrop (lek)", "answers": ["le sirop", "un sirop", "du sirop"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u08-sirop-3", "type": "gap-fill", "entryIds": ["u08-sirop"], "data": { "sentence": "J'achète un ___ contre la toux à la pharmacie.", "answers": ["sirop"], "pl": "Kupuję w aptece syrop na kaszel.", "clue": "(un médicament liquide)" } },
+
+    { "id": "mp-boire-voir", "type": "paires-minimales", "entryIds": ["u08-boire"], "data": { "pair": ["Je vais boire.", "Je vais voir."] } },
+    { "id": "mp-bois-vois", "type": "paires-minimales", "entryIds": ["u08-boire"], "data": { "pair": ["Tu bois ?", "Tu vois ?"] } }
   ],
   "boss": {
     "groups": [["u08-participes-irreguliers"], ["u08-pc-etre"], ["u08-pronom-y"], ["u08-devoir"], ["u08-boire"]],
     "questions": 10,
     "lives": 3,
     "secondsPerQuestion": 12
+  },
+  "retiredExercises": {
+    "gap-fill": [
+      "u08-pc-avoir-1",
+      "u08-pc-avoir-2",
+      "u08-neg-1",
+      "u08-faut-3",
+      "u08-conseil-1",
+      "u08-conseil-2",
+      "u08-conseil-3",
+      "u08-ordonnance-1",
+      "u08-ordonnance-3",
+      "u07-part-1",
+      "u07-part-2",
+      "u07-part-4",
+      "u07-part-5",
+      "u07-part-6",
+      "u07-faut-1",
+      "u07-faut-3"
+    ],
+    "translate-pl-fr": [
+      "u08-conseil-4",
+      "u08-ordonnance-2"
+    ]
   }
 }

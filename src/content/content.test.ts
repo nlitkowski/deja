@@ -158,6 +158,41 @@ describe('content packs', () => {
     if (oversized.length) console.warn(['Za duże jednostki (cel: do 25 wpisów i 110 ćwiczeń):', ...oversized].join('\n'));
   });
 
+  it('Édito A1 units have 60–110 exercises', () => {
+    const edito = disk.packs.find((p) => p.id === 'edito-a1')!;
+    const outside = edito.unitList.filter((u) => u.exerciseIds.length < 60 || u.exerciseIds.length > 110).map((u) => `${u.key}: ${u.exerciseIds.length}`);
+    expect(outside).toEqual([]);
+  });
+
+  it('no text is double-encoded UTF-8 (’ read as â€™)', () => {
+    const files = { ...contentFiles.packs, ...contentFiles.units, ...contentFiles.sheets, '/content/_audio/manifest.json': manifest };
+    const broken = Object.entries(files)
+      .filter(([, json]) => /â[\u0080-\u009f]|â€/.test(JSON.stringify(json)))
+      .map(([file]) => file);
+    expect(broken).toEqual([]);
+  });
+
+  it('a pack has no two active vocabulary entries for the same word', () => {
+    const word = (fr: string) =>
+      fr
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/\p{M}/gu, '')
+        .replace(/[’']/g, "'")
+        .replace(/^(le|la|les|un|une|des|du|de la|l')\s*/, '')
+        .trim();
+    const seen = new Map<string, string>();
+    const duplicates: string[] = [];
+    for (const e of disk.entries.values()) {
+      if (e.deprecated || !isVocabulary(e.id)) continue;
+      const key = `${e.packId}:${word(e.fr)}`;
+      const other = seen.get(key);
+      if (other) duplicates.push(`${other} = ${e.id}`);
+      else seen.set(key, e.id);
+    }
+    expect(duplicates).toEqual([]);
+  });
+
   it('every icon is a single character, without ZWJ sequences or variation selectors (they break in 8-bit)', () => {
     const icons = [
       ...disk.packs.map((p) => [p.id, p.icon]),

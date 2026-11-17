@@ -31,7 +31,7 @@
         "pl": "po polsku « jem chleb », po francusku je mange du pain; du (r. m.), de la (r. ż.), de l' (samogłoska), des (l. mn.)",
         "fr": "du (masculin), de la (féminin), de l' (voyelle), des (pluriel) ; après manger, boire, prendre, acheter, vouloir, il y a"
       },
-      "confusables": ["u03-aimer-le-manger-du", "u03-quantite", "a1-connecteurs/contr-du-des"],
+      "confusables": ["u03-quantite", "u03-pas-de", "a1-connecteurs/contr-du-des"],
       "tags": ["grammaire"]
     },
     {
@@ -48,22 +48,56 @@
         "fr": "le goût (aimer, adorer, détester) → le, la, les ; une quantité qu'on mange, boit, achète → du, de la, des"
       },
       "confusables": ["u03-partitifs", "u02-un-ou-le"],
-      "tags": ["grammaire"]
+      "tags": ["grammaire"],
+      "deprecated": true,
+      "replacedBy": "u03-partitifs"
     },
     {
       "id": "u03-quantite",
-      "fr": "beaucoup de, un kilo de, pas de…",
+      "fr": "un kilo de, un peu de, beaucoup de…",
       "pl": "wyrażenia ilości + de",
-      "def": "après une quantité : seulement de ou d', sans article : un kilo de pommes, pas de lait",
+      "def": "après une quantité : seulement de ou d', sans article : un kilo de pommes, beaucoup de fruits",
       "examples": [
         { "fr": "Je voudrais un kilo de tomates.", "pl": "Poproszę kilogram pomidorów." },
-        { "fr": "Il n'y a pas de lait.", "pl": "Nie ma mleka." }
+        { "fr": "Il y a beaucoup de fruits au marché.", "pl": "Na targu jest dużo owoców." }
       ],
       "tip": {
         "pl": "po ilości samo de / d', bez rodzajnika: beaucoup de pommes (nie « beaucoup des pommes »)",
         "fr": "après une quantité, seulement de / d' : beaucoup de pommes, pas « beaucoup des pommes »"
       },
-      "confusables": ["u03-partitifs", "u02-negation-de"],
+      "confusables": ["u03-partitifs", "u03-pas-de"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u03-pas-de",
+      "fr": "pas de / pas d'",
+      "pl": "nie … (żadnego) – przeczenie przy ilości",
+      "def": "après la négation, du, de la, des, un, une deviennent de ou d' : je ne mange pas de viande",
+      "examples": [
+        { "fr": "Je ne mange pas de viande.", "pl": "Nie jem mięsa." },
+        { "fr": "Il n'y a pas d'œufs dans le frigo.", "pl": "W lodówce nie ma jajek." }
+      ],
+      "tip": {
+        "pl": "po przeczeniu du / de la / des / un / une → de; przed samogłoską d' (pas d'eau)",
+        "fr": "après ne… pas, du / de la / des / un / une → de ; d' devant une voyelle (pas d'eau)"
+      },
+      "confusables": ["u03-partitifs", "u03-quantite"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u03-a-le-lieu",
+      "fr": "au marché, à la boulangerie, à l'épicerie, chez le boucher",
+      "pl": "à + rodzajnik przed miejscem; chez + osoba",
+      "def": "à + le = au, à + la = à la, à + l' = à l', à + les = aux ; chez + une personne",
+      "examples": [
+        { "fr": "Le samedi, je vais au marché.", "pl": "W soboty chodzę na targ." },
+        { "fr": "Elle achète du pain à la boulangerie, puis elle va chez le boucher.", "pl": "Kupuje chleb w piekarni, a potem idzie do rzeźnika." }
+      ],
+      "tip": {
+        "pl": "à + le = au, à + les = aux; z la i l' bez zmian; do osoby: chez (chez le boucher = à la boucherie)",
+        "fr": "à + le = au, à + les = aux ; pas de changement avec la et l' ; pour une personne : chez (chez le boucher = à la boucherie)"
+      },
+      "confusables": ["u03-partitifs", "a1-connecteurs/contr-au-aux"],
       "tags": ["grammaire"]
     },
     {
@@ -114,7 +148,8 @@
     { "id": "u03-boulangerie", "fr": "une boulangerie", "pl": "piekarnia", "def": "le magasin où on achète le pain", "examples": [{ "fr": "J'achète une baguette à la boulangerie.", "pl": "Kupuję bagietkę w piekarni." }], "tags": ["vocabulaire"] },
     { "id": "u03-boucherie", "fr": "une boucherie", "pl": "sklep mięsny", "def": "le magasin où on achète la viande", "examples": [{ "fr": "La boucherie est fermée le lundi.", "pl": "Sklep mięsny jest zamknięty w poniedziałki." }], "tags": ["vocabulaire"] },
     { "id": "u03-pomme-de-terre", "fr": "une pomme de terre", "pl": "ziemniak", "def": "un légume : on fait les frites avec", "examples": [{ "fr": "Un kilo de pommes de terre, s'il vous plaît.", "pl": "Poproszę kilogram ziemniaków." }], "tags": ["vocabulaire"] },
-    { "id": "u03-oignon", "fr": "un oignon", "pl": "cebula", "def": "un légume qui fait pleurer", "examples": [{ "fr": "Je coupe un oignon pour la soupe.", "pl": "Kroję cebulę do zupy." }], "tags": ["vocabulaire"] },
+    { "id": "u03-oignon", "fr": "un oignon", "pl": "cebula", "def": "un légume qui fait pleurer", "examples": [{ "fr": "Je coupe un oignon pour la soupe.", "pl": "Kroję cebulę do zupy." }], "tags": ["vocabulaire"], "deprecated": true },
+    { "id": "u03-courgette", "fr": "une courgette", "pl": "cukinia", "def": "un long légume vert ; on le mange cuit, en soupe ou à la poêle", "examples": [{ "fr": "Au marché, j'achète deux courgettes et des tomates.", "pl": "Na targu kupuję dwie cukinie i pomidory." }], "tip": { "pl": "rodzaj żeński: une courgette, tak jak po polsku cukinia", "fr": "c'est un mot féminin : une courgette" }, "tags": ["vocabulaire"] },
     { "id": "u03-oeuf", "fr": "un œuf", "pl": "jajko", "def": "la poule le donne ; on fait une omelette avec", "examples": [{ "fr": "Il y a des œufs dans le frigo.", "pl": "W lodówce są jajka." }], "tags": ["vocabulaire"] },
     { "id": "u03-poisson", "fr": "le poisson", "pl": "ryba", "def": "il vit dans l'eau ; on l'achète à la poissonnerie", "examples": [{ "fr": "Le vendredi, je mange du poisson.", "pl": "W piątki jem rybę." }], "tags": ["vocabulaire"] },
     { "id": "u03-fromage", "fr": "le fromage", "pl": "ser", "def": "il est fait avec du lait : le camembert, le brie…", "examples": [{ "fr": "J'adore le fromage français.", "pl": "Uwielbiam francuskie sery." }], "tags": ["vocabulaire"] },
@@ -124,7 +159,7 @@
   ],
   "exercises": [
     { "id": "u03-pluriel-1", "type": "gap-fill", "entryIds": ["u03-pluriel"], "data": { "sentence": "Je voudrais deux ___, s'il vous plaît. (gâteau)", "answers": ["gâteaux"], "pl": "Poproszę dwa ciastka." } },
-    { "id": "u03-pluriel-2", "type": "gap-fill", "entryIds": ["u03-pluriel"], "data": { "sentence": "Il y a beaucoup d'___ à la ferme. (animal)", "answers": ["animaux"], "pl": "W gospodarstwie jest dużo zwierząt." } },
+    { "id": "u03-pluriel-2", "type": "gap-fill", "entryIds": ["u03-pluriel"], "data": { "sentence": "J'ai deux ___ : un chien et un chat. (animal)", "answers": ["animaux"], "pl": "Mam dwa zwierzęta: psa i kota." } },
     { "id": "u03-pluriel-3", "type": "gap-fill", "entryIds": ["u03-pluriel"], "data": { "sentence": "J'achète trois ___. (ananas)", "answers": ["ananas"], "pl": "Kupuję trzy ananasy.", "hint": { "pl": "zakończenie -s: bez zmian", "fr": "finale en -s : pas de changement" } } },
     { "id": "u03-pluriel-4", "type": "gap-fill", "entryIds": ["u03-pluriel"], "data": { "sentence": "Les ___ sont très bonnes cette semaine. (tomate)", "answers": ["tomates"], "pl": "Pomidory są w tym tygodniu bardzo dobre." } },
     { "id": "u03-pluriel-5", "type": "gap-fill", "entryIds": ["u03-pluriel"], "data": { "sentence": "Mon père lit deux ___ par jour. (journal)", "answers": ["journaux"], "pl": "Mój tata czyta dwie gazety dziennie." } },
@@ -134,21 +169,18 @@
     { "id": "u03-partitif-2", "type": "gap-fill", "entryIds": ["u03-partitifs"], "data": { "sentence": "Tu veux ___ eau ?", "answers": ["de l'"], "pl": "Chcesz wody?", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
     { "id": "u03-partitif-3", "type": "gap-fill", "entryIds": ["u03-partitifs"], "data": { "sentence": "Elle achète ___ viande pour le dîner.", "answers": ["de la"], "pl": "Ona kupuje mięso na kolację." } },
     { "id": "u03-partitif-4", "type": "gap-fill", "entryIds": ["u03-partitifs"], "data": { "sentence": "Il y a ___ œufs dans le frigo.", "answers": ["des"], "pl": "W lodówce są jajka." } },
-    { "id": "u03-partitif-5", "type": "gap-fill", "entryIds": ["u03-partitifs"], "data": { "sentence": "Le matin, nous buvons ___ jus d'orange.", "answers": ["du"], "pl": "Rano pijemy sok pomarańczowy." } },
+    { "id": "u03-partitif-5", "type": "gap-fill", "entryIds": ["u03-partitifs"], "data": { "sentence": "Le matin, nous buvons ___ jus de fruits.", "answers": ["du"], "pl": "Rano pijemy sok owocowy." } },
     { "id": "u03-partitif-6", "type": "gap-fill", "entryIds": ["u03-partitifs"], "data": { "sentence": "Je mets ___ huile d'olive dans la salade.", "answers": ["de l'"], "pl": "Dodaję oliwy z oliwek do sałatki." } },
 
-    { "id": "u03-aimer-du-1", "type": "gap-fill", "entryIds": ["u03-aimer-le-manger-du"], "data": { "sentence": "J'aime ___ fromage, surtout le camembert.", "answers": ["le"], "pl": "Lubię ser, zwłaszcza camembert." } },
-    { "id": "u03-aimer-du-2", "type": "gap-fill", "entryIds": ["u03-aimer-le-manger-du"], "data": { "sentence": "Je n'aime pas ___ poisson.", "answers": ["le"], "pl": "Nie lubię ryb." } },
-    { "id": "u03-aimer-du-3", "type": "gap-fill", "entryIds": ["u03-aimer-le-manger-du"], "data": { "sentence": "Le matin, je bois ___ café.", "answers": ["du"], "pl": "Rano piję kawę." } },
-    { "id": "u03-aimer-du-4", "type": "gap-fill", "entryIds": ["u03-aimer-le-manger-du"], "data": { "sentence": "Les enfants adorent ___ chocolat.", "answers": ["le"], "pl": "Dzieci uwielbiają czekoladę." } },
-    { "id": "u03-aimer-du-5", "type": "gap-fill", "entryIds": ["u03-aimer-le-manger-du", "u03-partitifs"], "data": { "sentence": "Ce soir, nous mangeons ___ soupe.", "answers": ["de la", "une"], "pl": "Dziś wieczorem jemy zupę." } },
+    { "id": "u03-aimer-du-3", "type": "gap-fill", "entryIds": ["u03-partitifs"], "data": { "sentence": "J'aime le café : le matin, je bois ___ café.", "answers": ["du"], "pl": "Lubię kawę: rano piję kawę.", "hint": { "pl": "piję trochę kawy, nie kawę w ogóle", "fr": "une quantité de café, pas le café en général" } } },
+    { "id": "u03-aimer-du-5", "type": "gap-fill", "entryIds": ["u03-partitifs"], "data": { "sentence": "Ce soir, nous mangeons ___ soupe.", "answers": ["de la", "une"], "pl": "Dziś wieczorem jemy zupę." } },
 
     { "id": "u03-quantite-1", "type": "gap-fill", "entryIds": ["u03-quantite"], "data": { "sentence": "Je voudrais un kilo ___ pommes de terre.", "answers": ["de"], "pl": "Poproszę kilogram ziemniaków." } },
     { "id": "u03-quantite-2", "type": "gap-fill", "entryIds": ["u03-quantite"], "data": { "sentence": "Une bouteille ___ eau minérale, s'il vous plaît.", "answers": ["d'"], "pl": "Poproszę butelkę wody mineralnej.", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
-    { "id": "u03-quantite-3", "type": "gap-fill", "entryIds": ["u03-quantite"], "data": { "sentence": "Il y a ___ monde au marché le samedi.", "answers": ["beaucoup de", "trop de"], "pl": "W soboty na targu jest dużo ludzi.", "clue": "(une grande quantité)" } },
+    { "id": "u03-quantite-3", "type": "gap-fill", "entryIds": ["u03-quantite"], "data": { "sentence": "Il y a ___ monde au marché le samedi.", "answers": ["beaucoup de"], "pl": "W soboty na targu jest dużo ludzi.", "clue": "(une grande quantité)" } },
     { "id": "u03-quantite-4", "type": "gap-fill", "entryIds": ["u03-quantite"], "data": { "sentence": "Je prends un peu ___ sucre dans mon café.", "answers": ["de"], "pl": "Słodzę kawę odrobiną cukru." } },
-    { "id": "u03-quantite-5", "type": "gap-fill", "entryIds": ["u03-quantite"], "data": { "sentence": "Quatre ___ de jambon, s'il vous plaît.", "answers": ["tranches"], "pl": "Poproszę cztery plasterki szynki.", "clue": "(des morceaux fins)" } },
-    { "id": "u03-quantite-6", "type": "gap-fill", "entryIds": ["u03-quantite", "u02-negation-de"], "data": { "sentence": "Oh non, il n'y a pas ___ lait !", "answers": ["de"], "pl": "O nie, nie ma mleka!" } },
+    { "id": "u03-quantite-5", "type": "gap-fill", "entryIds": ["u03-quantite"], "data": { "sentence": "Pour le petit-déjeuner, j'achète un ___ de confiture.", "answers": ["pot"], "pl": "Na śniadanie kupuję słoik dżemu.", "clue": "(un petit récipient en verre)" } },
+    { "id": "u03-quantite-6", "type": "gap-fill", "entryIds": ["u03-pas-de"], "data": { "sentence": "Oh non, il n'y a pas ___ lait !", "answers": ["de"], "pl": "O nie, nie ma mleka!" } },
 
     { "id": "u03-ir-1", "type": "gap-fill", "entryIds": ["u03-verbes-ir"], "data": { "sentence": "Qu'est-ce que tu ___ comme dessert ? (choisir)", "answers": ["choisis"], "pl": "Co wybierasz na deser?" } },
     { "id": "u03-ir-2", "type": "gap-fill", "entryIds": ["u03-verbes-ir"], "data": { "sentence": "Nous ___ le dîner à neuf heures. (finir)", "answers": ["finissons"], "pl": "Kończymy kolację o dziewiątej." } },
@@ -176,8 +208,6 @@
     { "id": "u03-boucherie-2", "type": "translate-pl-fr", "entryIds": ["u03-boucherie"], "data": { "pl": "sklep mięsny", "answers": ["une boucherie", "la boucherie"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u03-pomme-de-terre-1", "type": "gap-fill", "entryIds": ["u03-pomme-de-terre"], "data": { "sentence": "Pour faire des frites, j'achète un kilo de ___.", "answers": ["pommes de terre"], "pl": "Żeby zrobić frytki, kupuję kilogram ziemniaków.", "clue": "(un légume)" } },
     { "id": "u03-pomme-de-terre-2", "type": "translate-pl-fr", "entryIds": ["u03-pomme-de-terre"], "data": { "pl": "ziemniak", "answers": ["une pomme de terre", "la pomme de terre"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u03-oignon-1", "type": "gap-fill", "entryIds": ["u03-oignon"], "data": { "sentence": "Pour la soupe, coupe un ___ et deux carottes.", "answers": ["oignon"], "pl": "Do zupy pokrój cebulę i dwie marchewki.", "clue": "(un légume qui fait pleurer)" } },
-    { "id": "u03-oignon-2", "type": "translate-pl-fr", "entryIds": ["u03-oignon"], "data": { "pl": "cebula", "answers": ["un oignon", "l'oignon"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u03-oeuf-1", "type": "gap-fill", "entryIds": ["u03-oeuf"], "data": { "sentence": "Pour une omelette, il faut trois ___.", "answers": ["œufs", "oeufs"], "pl": "Na omlet potrzeba trzech jajek.", "clue": "(la poule les donne)" } },
     { "id": "u03-oeuf-2", "type": "translate-pl-fr", "entryIds": ["u03-oeuf"], "data": { "pl": "jajko", "answers": ["un œuf", "l'œuf", "un oeuf", "l'oeuf"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u03-poisson-1", "type": "gap-fill", "entryIds": ["u03-poisson"], "data": { "sentence": "Le vendredi, nous mangeons du ___.", "answers": ["poisson"], "pl": "W piątki jemy rybę.", "clue": "(il vit dans l'eau)" } },
@@ -193,28 +223,56 @@
 
     { "id": "u03-pluriel-7", "type": "translate-pl-fr", "entryIds": ["u03-pluriel"], "data": { "pl": "dwa zamki", "answers": ["deux châteaux"], "hint": { "pl": "un château; -eau → -eaux", "fr": "un château ; -eau → -eaux" } } },
     { "id": "u03-partitif-7", "type": "translate-pl-fr", "entryIds": ["u03-partitifs"], "data": { "pl": "piję wodę", "answers": ["je bois de l'eau"], "hint": { "pl": "nieokreślona ilość: rodzajnik cząstkowy", "fr": "quantité non précise : article partitif" } } },
-    { "id": "u03-aimer-du-6", "type": "translate-pl-fr", "entryIds": ["u03-aimer-le-manger-du"], "data": { "pl": "nie lubię ryb", "answers": ["je n'aime pas le poisson", "j'aime pas le poisson"], "hint": { "pl": "po aimer: rodzajnik określony", "fr": "après aimer : article défini" } } },
     { "id": "u03-quantite-7", "type": "translate-pl-fr", "entryIds": ["u03-quantite"], "data": { "pl": "kilogram pomidorów", "answers": ["un kilo de tomates", "un kilogramme de tomates"] } },
     { "id": "u03-ir-6", "type": "translate-pl-fr", "entryIds": ["u03-verbes-ir"], "data": { "pl": "kończymy o szóstej", "answers": ["nous finissons à six heures", "nous finissons à 6 heures", "nous finissons à 6h", "on finit à six heures", "on finit à 6 heures", "on finit à 6h"] } },
     { "id": "u03-apm-7", "type": "translate-pl-fr", "entryIds": ["u03-acheter-payer-manger"], "data": { "pl": "kupujesz jabłka?", "answers": ["tu achètes des pommes", "est-ce que tu achètes des pommes", "achètes-tu des pommes"] } },
     { "id": "u03-af-7", "type": "translate-pl-fr", "entryIds": ["u03-aller-faire"], "data": { "pl": "czy robicie zakupy?", "answers": ["vous faites les courses", "est-ce que vous faites les courses", "faites-vous les courses"], "hint": { "pl": "faire les courses, forma vous", "fr": "faire les courses, avec vous" } } },
 
     { "id": "u03-boulangerie-3", "type": "gap-fill", "entryIds": ["u03-boulangerie"], "data": { "sentence": "La ___ ouvre à sept heures : le pain est encore chaud !", "answers": ["boulangerie"], "pl": "Piekarnia otwiera się o siódmej: chleb jest jeszcze ciepły!", "clue": "(on y achète des croissants)" } },
-    { "id": "u03-boucherie-3", "type": "gap-fill", "entryIds": ["u03-boucherie"], "data": { "sentence": "J'achète du poulet et du bœuf à la ___.", "answers": ["boucherie"], "pl": "Kupuję kurczaka i wołowinę w sklepie mięsnym.", "clue": "(le magasin du boucher)" } },
+    { "id": "u03-boucherie-3", "type": "gap-fill", "entryIds": ["u03-boucherie"], "data": { "sentence": "J'achète un poulet et de la viande à la ___.", "answers": ["boucherie"], "pl": "Kupuję kurczaka i mięso w sklepie mięsnym.", "clue": "(le magasin du boucher)" } },
     { "id": "u03-pomme-de-terre-3", "type": "gap-fill", "entryIds": ["u03-pomme-de-terre"], "data": { "sentence": "Je mange le poisson avec des ___ et de la salade.", "answers": ["pommes de terre"], "pl": "Jem rybę z ziemniakami i sałatką.", "clue": "(un légume pour faire des frites)" } },
-    { "id": "u03-oignon-3", "type": "gap-fill", "entryIds": ["u03-oignon"], "data": { "sentence": "La soupe à l'___, c'est très bon en hiver.", "answers": ["oignon"], "pl": "Zupa cebulowa jest bardzo dobra zimą.", "clue": "(un légume qui fait pleurer)" } },
     { "id": "u03-oeuf-3", "type": "gap-fill", "entryIds": ["u03-oeuf"], "data": { "sentence": "Le matin, je mange deux ___ avec du pain.", "answers": ["œufs", "oeufs"], "pl": "Rano jem dwa jajka z chlebem.", "clue": "(la poule les donne)" } },
-    { "id": "u03-poisson-3", "type": "gap-fill", "entryIds": ["u03-poisson"], "data": { "sentence": "Je n'aime pas la viande, je préfère le ___.", "answers": ["poisson"], "pl": "Nie lubię mięsa, wolę ryby.", "clue": "(il vit dans l'eau)" } },
+    { "id": "u03-poisson-3", "type": "gap-fill", "entryIds": ["u03-poisson"], "data": { "sentence": "Je ne mange pas de viande, je mange du ___.", "answers": ["poisson"], "pl": "Nie jem mięsa, jem ryby.", "clue": "(il vit dans l'eau)" } },
     { "id": "u03-fromage-3", "type": "gap-fill", "entryIds": ["u03-fromage"], "data": { "sentence": "Le brie et le camembert sont des ___ français.", "answers": ["fromages"], "pl": "Brie i camembert to francuskie sery." } },
     { "id": "u03-addition-3", "type": "gap-fill", "entryIds": ["u03-addition"], "data": { "sentence": "Le repas est fini : le serveur apporte l'___.", "answers": ["addition"], "pl": "Posiłek skończony: kelner przynosi rachunek.", "clue": "(le prix à payer)" } },
     { "id": "u03-assiette-3", "type": "gap-fill", "entryIds": ["u03-assiette"], "data": { "sentence": "Mets les ___ et les verres sur la table, s'il te plaît.", "answers": ["assiettes"], "pl": "Połóż talerze i szklanki na stole, proszę.", "clue": "(on y met la nourriture)" } },
     { "id": "u03-fourchette-3", "type": "gap-fill", "entryIds": ["u03-fourchette"], "data": { "sentence": "Je n'ai pas de ___ pour manger mes pâtes !", "answers": ["fourchette"], "pl": "Nie mam widelca, żeby zjeść makaron!", "clue": "(elle va avec le couteau)" } },
-    { "id": "mp-du-deux", "type": "paires-minimales", "entryIds": ["u03-partitifs"], "data": { "pair": ["Je prends du café.", "Je prends deux cafés."] } }
+    { "id": "mp-du-deux", "type": "paires-minimales", "entryIds": ["u03-partitifs"], "data": { "pair": ["Je prends du café.", "Je prends deux cafés."] } },
+
+    { "id": "u03-quantite-8", "type": "gap-fill", "entryIds": ["u03-quantite"], "data": { "sentence": "Au marché, j'achète un ___ de cerises.", "answers": ["panier"], "pl": "Na targu kupuję koszyk czereśni.", "clue": "(on le porte au bras, pour les fruits)" } },
+    { "id": "u03-quantite-9", "type": "gap-fill", "entryIds": ["u03-quantite"], "data": { "sentence": "Un ___ de pâtes et un kilo de tomates, s'il vous plaît.", "answers": ["paquet"], "pl": "Poproszę paczkę makaronu i kilogram pomidorów.", "clue": "(en papier ou en plastique, au supermarché)" } },
+    { "id": "u03-quantite-10", "type": "gap-fill", "entryIds": ["u03-quantite"], "data": { "sentence": "J'achète une ___ de six œufs.", "answers": ["boîte"], "pl": "Kupuję opakowanie sześciu jajek.", "clue": "(un emballage en carton)" } },
+    { "id": "u03-quantite-11", "type": "translate-pl-fr", "entryIds": ["u03-quantite"], "data": { "pl": "dużo owoców", "answers": ["beaucoup de fruits"], "hint": { "pl": "po ilości samo de", "fr": "après une quantité : seulement de" } } },
+    { "id": "u03-quantite-12", "type": "translate-pl-fr", "entryIds": ["u03-quantite"], "data": { "pl": "butelka wina", "answers": ["une bouteille de vin"] } },
+
+    { "id": "u02-neg-1", "type": "gap-fill", "entryIds": ["u03-pas-de"], "data": { "sentence": "Je ne mange pas ___ viande.", "answers": ["de"], "pl": "Nie jem mięsa.", "hint": { "pl": "przeczenie: de la → de", "fr": "négation : de la → de" } } },
+    { "id": "u02-neg-2", "type": "gap-fill", "entryIds": ["u03-pas-de"], "data": { "sentence": "Il n'achète pas ___ œufs.", "answers": ["d'"], "pl": "On nie kupuje jajek.", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
+    { "id": "u02-neg-3", "type": "gap-fill", "entryIds": ["u03-pas-de"], "data": { "sentence": "Nous ne prenons pas ___ dessert, merci.", "answers": ["de"], "pl": "Nie bierzemy deseru, dziękujemy." } },
+    { "id": "u02-neg-4", "type": "gap-fill", "entryIds": ["u03-pas-de"], "data": { "sentence": "Désolé, il n'y a pas ___ croissants aujourd'hui.", "answers": ["de"], "pl": "Przykro mi, dziś nie ma rogalików." } },
+    { "id": "u02-neg-5", "type": "translate-pl-fr", "entryIds": ["u03-pas-de"], "data": { "pl": "nie mam chleba", "answers": ["je n'ai pas de pain", "j'ai pas de pain"], "hint": { "pl": "po przeczeniu samo de", "fr": "après la négation : de" } } },
+    { "id": "u03-pas-de-1", "type": "translate-pl-fr", "entryIds": ["u03-pas-de"], "data": { "pl": "ona nie pije wody", "answers": ["elle ne boit pas d'eau", "elle boit pas d'eau"], "hint": { "pl": "przed samogłoską d'", "fr": "d' devant une voyelle" } } },
+
+    { "id": "u03-lieu-1", "type": "gap-fill", "entryIds": ["u03-a-le-lieu"], "data": { "sentence": "Le samedi matin, je vais ___ marché.", "answers": ["au"], "pl": "W sobotę rano chodzę na targ.", "hint": { "pl": "à + le", "fr": "à + le" } } },
+    { "id": "u03-lieu-2", "type": "gap-fill", "entryIds": ["u03-a-le-lieu"], "data": { "sentence": "Tu vas ___ boulangerie ? Prends une baguette !", "answers": ["à la"], "pl": "Idziesz do piekarni? Weź bagietkę!", "hint": { "pl": "à + la", "fr": "à + la" } } },
+    { "id": "u03-lieu-3", "type": "gap-fill", "entryIds": ["u03-a-le-lieu"], "data": { "sentence": "Elle achète du riz et du sucre ___ épicerie.", "answers": ["à l'"], "pl": "Ona kupuje ryż i cukier w sklepie spożywczym.", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
+    { "id": "u03-lieu-4", "type": "gap-fill", "entryIds": ["u03-a-le-lieu"], "data": { "sentence": "Pour la viande, je vais ___ boucher.", "answers": ["chez le"], "pl": "Po mięso chodzę do rzeźnika.", "hint": { "pl": "do osoby, nie do sklepu", "fr": "une personne, pas un magasin" } } },
+    { "id": "u03-lieu-5", "type": "translate-pl-fr", "entryIds": ["u03-a-le-lieu"], "data": { "pl": "idziemy do sklepu spożywczego", "answers": ["nous allons à l'épicerie", "on va à l'épicerie"], "hint": { "pl": "à + l'", "fr": "à + l'" } } },
+
+    { "id": "u03-courgette-1", "type": "gap-fill", "entryIds": ["u03-courgette"], "data": { "sentence": "Pour la soupe, j'achète deux ___ et des pommes de terre.", "answers": ["courgettes"], "pl": "Do zupy kupuję dwie cukinie i ziemniaki.", "clue": "(un long légume vert)" } },
+    { "id": "u03-courgette-2", "type": "translate-pl-fr", "entryIds": ["u03-courgette"], "data": { "pl": "cukinia", "answers": ["une courgette", "la courgette"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u03-courgette-3", "type": "gap-fill", "entryIds": ["u03-courgette"], "data": { "sentence": "Ce soir, on mange du poisson avec des ___ et du riz.", "answers": ["courgettes"], "pl": "Dziś wieczorem jemy rybę z cukinią i ryżem.", "clue": "(un légume vert, long)" } },
+
+    { "id": "mp-rue-roue", "type": "paires-minimales", "entryIds": ["u03-a-le-lieu"], "data": { "pair": ["C'est la rue.", "C'est la roue."] } },
+    { "id": "mp-dessus-dessous", "type": "paires-minimales", "entryIds": ["u03-a-le-lieu"], "data": { "pair": ["Le prix est dessus.", "Le prix est dessous."] } }
   ],
   "boss": {
-    "groups": [["u03-partitifs", "u03-quantite"], ["u03-verbes-ir"], ["u03-acheter-payer-manger"], ["u03-aller-faire"]],
+    "groups": [["u03-partitifs", "u03-quantite", "u03-pas-de"], ["u03-a-le-lieu"], ["u03-verbes-ir"], ["u03-acheter-payer-manger"], ["u03-aller-faire"]],
     "questions": 10,
     "lives": 3,
     "secondsPerQuestion": 12
+  },
+  "retiredExercises": {
+    "gap-fill": ["u03-aimer-du-1", "u03-aimer-du-2", "u03-aimer-du-4", "u03-oignon-1", "u03-oignon-3"],
+    "translate-pl-fr": ["u03-aimer-du-6", "u03-oignon-2"]
   }
 }

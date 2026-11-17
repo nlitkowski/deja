@@ -4,8 +4,8 @@
   "title": "Qu'est-ce qu'on mange ?",
   "icon": "🥖",
   "summary": {
-    "pl": "Zakupy spożywcze, ceny i restauracja: liczba mnoga rzeczowników, przyimki miejsca, rodzajnik cząstkowy, określanie ilości, czasowniki na -ir, acheter, payer, manger, aller i faire.",
-    "fr": "Les courses, les prix et le restaurant : le pluriel des noms, les prépositions de lieu, les partitifs, la quantité, les verbes en -ir, acheter, payer, manger, aller et faire."
+    "pl": "Zakupy spożywcze, ceny i restauracja: liczba mnoga rzeczowników, à + rodzajnik przed miejscem (au marché, à la boulangerie), rodzajnik cząstkowy, określanie ilości i pas de, czasowniki na -ir, acheter, payer, manger, aller i faire.",
+    "fr": "Les courses, les prix et le restaurant : le pluriel des noms, à + article devant un lieu (au marché, à la boulangerie), les partitifs, la quantité et pas de, les verbes en -ir, acheter, payer, manger, aller et faire."
   },
   "sections": [
     {
@@ -33,7 +33,7 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "Je voudrais **des** tomate**s** et **des** oignon**s**.", "pl": "Poproszę pomidory i cebulę." },
+            { "fr": "Je voudrais **des** tomate**s** et **des** courgette**s**.", "pl": "Poproszę pomidory i cukinie." },
             { "fr": "Les gâte**aux** sont délicieux.", "pl": "Ciasta są pyszne." }
           ]
         },
@@ -48,46 +48,47 @@
     },
     {
       "kind": "grammar",
-      "title": "Les prépositions de lieu",
+      "title": "Les prépositions de lieu : au, à la, à l', aux, chez",
       "blocks": [
         {
-          "type": "words",
-          "items": [
-            { "fr": "sur", "pl": "na", "def": "en haut, avec contact" },
-            { "fr": "sous", "pl": "pod", "def": "en bas" },
-            { "fr": "dans", "pl": "w", "def": "à l'intérieur" },
-            { "fr": "devant", "pl": "przed", "def": "à l'avant" },
-            { "fr": "derrière", "pl": "za", "def": "le contraire de devant" },
-            { "fr": "entre … et …", "pl": "między … a …", "def": "au milieu de deux choses" },
-            { "fr": "à côté de", "pl": "obok", "def": "tout près, sur le côté" },
-            { "fr": "en face de", "pl": "naprzeciwko", "def": "de l'autre côté" },
-            { "fr": "près de", "pl": "blisko, niedaleko", "def": "à petite distance" },
-            { "fr": "loin de", "pl": "daleko od", "def": "à grande distance" }
+          "type": "rule",
+          "text": {
+            "pl": "Gdzie idę albo gdzie robię zakupy: **à + rodzajnik + miejsce**. Przyimek **à** łączy się z **le** i **les**:\n**à + le = au**: je vais **au** marché\n**à + la = à la**: je vais **à la** boulangerie\n**à + l' = à l'**: je vais **à l'**épicerie\n**à + les = aux**: je vais **aux** Halles",
+            "fr": "Pour dire où on va ou où on fait les courses : **à + article + lieu**. **à** se combine avec **le** et **les** :\n**à + le = au** : je vais **au** marché\n**à + la = à la** : je vais **à la** boulangerie\n**à + l' = à l'** : je vais **à l'**épicerie\n**à + les = aux** : je vais **aux** Halles"
+          }
+        },
+        {
+          "type": "table",
+          "head": ["", "+ lieu", "exemple"],
+          "rows": [
+            ["à + le", "**au**", "**au** marché, **au** supermarché"],
+            ["à + la", "**à la**", "**à la** boulangerie, **à la** boucherie"],
+            ["à + l'", "**à l'**", "**à l'**épicerie"],
+            ["à + les", "**aux**", "**aux** Halles (le marché couvert)"],
+            ["chez + personne", "**chez le / la**", "**chez le** boucher, **chez la** fromagère"]
           ]
         },
         {
           "type": "rule",
           "text": {
-            "pl": "Przyimki z **de** łączą się z rodzajnikiem:\n**de + le = du**: à côté **du** marché\n**de + la = de la**: près **de la** boulangerie\n**de + l' = de l'**: en face **de l'**école\n**de + les = des**: loin **des** magasins",
-            "fr": "Les prépositions avec **de** se combinent avec l'article :\n**de + le = du** : à côté **du** marché\n**de + la = de la** : près **de la** boulangerie\n**de + l' = de l'** : en face **de l'**école\n**de + les = des** : loin **des** magasins"
+            "pl": "Do **osoby** (sprzedawcy) idziemy z **chez**: je vais **chez le** boucher = je vais **à la** boucherie.",
+            "fr": "Pour aller chez une **personne** (le commerçant), on dit **chez** : je vais **chez le** boucher = je vais **à la** boucherie."
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "Le pain est **sur** la table.", "pl": "Chleb jest na stole." },
-            { "fr": "Le lait est **dans** le frigo.", "pl": "Mleko jest w lodówce." },
-            { "fr": "Le chat dort **sous** la chaise.", "pl": "Kot śpi pod krzesłem." },
-            { "fr": "La pharmacie est **entre** la banque **et** le café.", "pl": "Apteka jest między bankiem a kawiarnią." },
-            { "fr": "La boucherie est **en face de la** poste.", "pl": "Sklep mięsny jest naprzeciwko poczty." },
-            { "fr": "Le supermarché est **à côté du** parking.", "pl": "Supermarket jest obok parkingu." }
+            { "fr": "Le samedi, je fais les courses **au** marché.", "pl": "W soboty robię zakupy na targu." },
+            { "fr": "Tu vas **à la** boulangerie ? Prends une baguette !", "pl": "Idziesz do piekarni? Weź bagietkę!" },
+            { "fr": "J'achète du riz **à l'**épicerie.", "pl": "Kupuję ryż w sklepie spożywczym." },
+            { "fr": "Pour la viande, je vais **chez le** boucher.", "pl": "Po mięso chodzę do rzeźnika." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Nie mów « à côté de le marché » – tylko **à côté du marché**.\n**sur, sous, dans, devant, derrière** łączą się bezpośrednio z rzeczownikiem, bez **de**: devant la gare (nie « devant de la gare »).",
-            "fr": "On ne dit pas « à côté de le marché », on dit **à côté du marché**.\n**sur, sous, dans, devant, derrière** : pas de **de** après : devant la gare."
+            "pl": "Nie mów « à le marché » ani « à les Halles » – tylko **au** marché, **aux** Halles.\n**chez** tylko z osobą: **chez le** boulanger, ale **à la** boulangerie (nie « chez la boulangerie »).\nW unité 7 poznasz przyimki położenia: sur, sous, devant, derrière, à côté de…",
+            "fr": "On ne dit pas « à le marché », on dit **au** marché, **aux** Halles.\n**chez** + personne seulement : **chez le** boulanger, mais **à la** boulangerie.\nDans l'unité 7, tu vas découvrir sur, sous, devant, derrière, à côté de…"
           }
         }
       ]
@@ -117,7 +118,7 @@
           "type": "examples",
           "items": [
             { "fr": "Au petit-déjeuner, je mange **du** pain avec **de la** confiture.", "pl": "Na śniadanie jem chleb z dżemem." },
-            { "fr": "Tu veux **de l'**eau ou **du** jus d'orange ?", "pl": "Chcesz wody czy soku pomarańczowego?" },
+            { "fr": "Tu veux **de l'**eau ou **du** jus de fruits ?", "pl": "Chcesz wody czy soku owocowego?" },
             { "fr": "Il y a **des** œufs dans le frigo.", "pl": "W lodówce są jajka." },
             { "fr": "J'aime **le** fromage, alors j'achète **du** fromage.", "pl": "Lubię ser, więc kupuję ser." }
           ]
@@ -125,8 +126,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "Po przeczeniu: **du, de la, de l', des** → **de / d'**: je ne mange pas **de** viande, il ne boit pas **d'**alcool.",
-            "fr": "À la forme négative : **du, de la, de l', des** → **de / d'** : je ne mange pas **de** viande, il ne boit pas **d'**alcool."
+            "pl": "Po przeczeniu: **du, de la, de l', des** → **de / d'**: je ne mange pas **de** viande, il ne boit pas **d'**eau. Więcej w ramce o ilości (**pas de**).",
+            "fr": "À la forme négative : **du, de la, de l', des** → **de / d'** : je ne mange pas **de** viande, il ne boit pas **d'**eau. Voir aussi la quantité (**pas de**)."
           }
         },
         {
@@ -145,8 +146,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "Po wyrażeniu ilości stawiamy tylko **de / d'**, bez rodzajnika: beaucoup **de** fruits, un kilo **de** pommes, une bouteille **d'**eau.",
-            "fr": "Après une expression de quantité, on met seulement **de / d'**, sans article : beaucoup **de** fruits, un kilo **de** pommes, une bouteille **d'**eau."
+            "pl": "Po wyrażeniu ilości stawiamy tylko **de / d'**, bez rodzajnika: beaucoup **de** fruits, un kilo **de** pommes, une bouteille **d'**eau.\nTak samo po przeczeniu: je n'ai **pas de** pain, il n'y a **pas d'**œufs.",
+            "fr": "Après une expression de quantité, on met seulement **de / d'**, sans article : beaucoup **de** fruits, un kilo **de** pommes, une bouteille **d'**eau.\nC'est la même chose après la négation : je n'ai **pas de** pain, il n'y a **pas d'**œufs."
           }
         },
         {
@@ -155,9 +156,7 @@
           "items": [
             { "fr": "pas de / d'", "pl": "ani trochę, wcale", "def": "zéro" },
             { "fr": "un peu de / d'", "pl": "trochę", "def": "une petite quantité" },
-            { "fr": "assez de / d'", "pl": "wystarczająco", "def": "la bonne quantité" },
-            { "fr": "beaucoup de / d'", "pl": "dużo", "def": "une grande quantité" },
-            { "fr": "trop de / d'", "pl": "za dużo", "def": "plus que nécessaire" }
+            { "fr": "beaucoup de / d'", "pl": "dużo", "def": "une grande quantité" }
           ]
         },
         {
@@ -165,16 +164,11 @@
           "title": { "pl": "Ilość dokładna", "fr": "Une quantité précise" },
           "items": [
             { "fr": "un kilo de", "pl": "kilogram", "def": "1 000 grammes" },
-            { "fr": "un demi-kilo / 500 grammes de", "pl": "pół kilo / 50 deko" },
-            { "fr": "cent grammes de", "pl": "10 deko, 100 gramów" },
-            { "fr": "un litre de", "pl": "litr" },
+            { "fr": "un panier de", "pl": "koszyk", "def": "pour porter les fruits et les légumes" },
             { "fr": "une bouteille de", "pl": "butelka" },
             { "fr": "un paquet de", "pl": "paczka, opakowanie" },
             { "fr": "une boîte de", "pl": "puszka, pudełko" },
-            { "fr": "un pot de", "pl": "słoik, kubek (np. jogurtu)" },
-            { "fr": "une tranche de", "pl": "plasterek", "def": "un morceau fin (jambon, pain)" },
-            { "fr": "un morceau de", "pl": "kawałek" },
-            { "fr": "une douzaine de", "pl": "tuzin", "def": "12" }
+            { "fr": "un pot de", "pl": "słoik, kubek (np. jogurtu)" }
           ]
         },
         {
@@ -183,7 +177,7 @@
             { "fr": "Je voudrais **un kilo de** pommes de terre.", "pl": "Poproszę kilogram ziemniaków." },
             { "fr": "Il y a **beaucoup de** monde au marché.", "pl": "Na targu jest dużo ludzi." },
             { "fr": "Je prends **un peu de** sucre dans mon café.", "pl": "Biorę trochę cukru do kawy." },
-            { "fr": "Quatre **tranches de** jambon, s'il vous plaît.", "pl": "Poproszę cztery plasterki szynki." },
+            { "fr": "Un **panier de** cerises et **un pot de** confiture, s'il vous plaît.", "pl": "Poproszę koszyk czereśni i słoik dżemu." },
             { "fr": "Il n'y a **pas de** lait !", "pl": "Nie ma mleka!" }
           ]
         },
@@ -215,8 +209,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "Końcówki: **-is, -is, -it, -issons, -issez, -issent**. W liczbie mnogiej pojawia się **-iss-**.\nTak samo: grossir (tyć), maigrir (chudnąć), réussir (udać się).",
-            "fr": "Les finales : **-is, -is, -it, -issons, -issez, -issent**. Au pluriel, on ajoute **-iss-**.\nMême modèle : grossir, maigrir, réussir."
+            "pl": "Końcówki: **-is, -is, -it, -issons, -issez, -issent**. W liczbie mnogiej pojawia się **-iss-**.\nTak samo: réussir (udać się).",
+            "fr": "Les finales : **-is, -is, -it, -issons, -issez, -issent**. Au pluriel, on ajoute **-iss-**.\nMême modèle : réussir."
           }
         },
         {
@@ -301,9 +295,7 @@
           "type": "words",
           "items": [
             { "fr": "la boulangerie – le boulanger / la boulangère", "pl": "piekarnia – piekarz", "def": "le pain, la baguette, les croissants" },
-            { "fr": "la pâtisserie – le pâtissier / la pâtissière", "pl": "cukiernia – cukiernik", "def": "les gâteaux, les tartes" },
             { "fr": "la boucherie – le boucher / la bouchère", "pl": "sklep mięsny – rzeźnik", "def": "la viande : le bœuf, le poulet" },
-            { "fr": "la charcuterie – le charcutier / la charcutière", "pl": "wędliny – wędliniarz", "def": "le jambon, le saucisson" },
             { "fr": "la poissonnerie – le poissonnier / la poissonnière", "pl": "sklep rybny – sprzedawca ryb", "def": "le poisson, les crevettes" },
             { "fr": "la fromagerie – le fromager / la fromagère", "pl": "sklep z serami – serowar, sprzedawca serów", "def": "le fromage" },
             { "fr": "l'épicerie (f.) – l'épicier / l'épicière", "pl": "sklep spożywczy – sklepikarz", "def": "un petit magasin d'alimentation" },
@@ -323,13 +315,15 @@
           "items": [
             { "fr": "une pomme", "pl": "jabłko" },
             { "fr": "une poire", "pl": "gruszka" },
-            { "fr": "une banane", "pl": "banan" },
-            { "fr": "une orange", "pl": "pomarańcza" },
             { "fr": "une fraise", "pl": "truskawka" },
+            { "fr": "un abricot", "pl": "morela" },
+            { "fr": "une cerise", "pl": "czereśnia, wiśnia" },
+            { "fr": "une pêche", "pl": "brzoskwinia" },
             { "fr": "une tomate", "pl": "pomidor" },
-            { "fr": "une carotte", "pl": "marchewka" },
             { "fr": "une pomme de terre", "pl": "ziemniak", "def": "on fait les frites avec" },
-            { "fr": "un oignon", "pl": "cebula" },
+            { "fr": "les haricots verts (m.)", "pl": "fasolka szparagowa" },
+            { "fr": "un poivron", "pl": "papryka" },
+            { "fr": "une courgette", "pl": "cukinia", "def": "un long légume vert" },
             { "fr": "une salade", "pl": "sałata; sałatka" }
           ]
         },
@@ -339,19 +333,22 @@
           "items": [
             { "fr": "la viande", "pl": "mięso" },
             { "fr": "le poulet", "pl": "kurczak" },
-            { "fr": "le bœuf", "pl": "wołowina" },
-            { "fr": "le jambon", "pl": "szynka" },
             { "fr": "le poisson", "pl": "ryba" },
             { "fr": "un œuf", "pl": "jajko" },
             { "fr": "le lait", "pl": "mleko" },
             { "fr": "le beurre", "pl": "masło" },
             { "fr": "le fromage", "pl": "ser" },
+            { "fr": "le fromage de chèvre", "pl": "ser kozi" },
+            { "fr": "la crème", "pl": "śmietana" },
             { "fr": "un yaourt", "pl": "jogurt" },
             { "fr": "le pain", "pl": "chleb" },
+            { "fr": "les viennoiseries (f.)", "pl": "wypieki maślane (croissant, pain au chocolat)", "def": "les croissants, les pains au chocolat…" },
+            { "fr": "la farine", "pl": "mąka" },
             { "fr": "le riz", "pl": "ryż" },
             { "fr": "les pâtes (f.)", "pl": "makaron" },
             { "fr": "le sucre", "pl": "cukier" },
             { "fr": "le sel", "pl": "sól" },
+            { "fr": "le poivre", "pl": "pieprz" },
             { "fr": "l'huile (f.)", "pl": "olej, oliwa" }
           ]
         },
@@ -359,12 +356,13 @@
           "type": "words",
           "title": { "pl": "Napoje", "fr": "Les boissons" },
           "items": [
-            { "fr": "l'eau (f.) plate / gazeuse", "pl": "woda niegazowana / gazowana" },
-            { "fr": "un jus d'orange", "pl": "sok pomarańczowy" },
+            { "fr": "l'eau (f.)", "pl": "woda" },
+            { "fr": "un jus de fruits", "pl": "sok owocowy" },
+            { "fr": "un soda", "pl": "napój gazowany (np. cola)" },
             { "fr": "un café", "pl": "kawa", "def": "un petit café noir" },
+            { "fr": "un café crème", "pl": "kawa ze spienionym mlekiem", "def": "un café avec du lait chaud" },
             { "fr": "un thé", "pl": "herbata" },
-            { "fr": "le vin (rouge, blanc)", "pl": "wino (czerwone, białe)" },
-            { "fr": "une bière", "pl": "piwo" }
+            { "fr": "le vin (rouge, blanc)", "pl": "wino (czerwone, białe)" }
           ]
         },
         {
@@ -396,12 +394,14 @@
           "items": [
             { "fr": "la carte", "pl": "karta dań", "def": "la liste des plats" },
             { "fr": "le menu", "pl": "zestaw (np. przystawka + danie główne)", "def": "un repas complet à prix fixe" },
+            { "fr": "la formule", "pl": "zestaw (np. danie + deser)", "def": "deux plats à prix fixe, souvent à midi" },
+            { "fr": "commander", "pl": "zamawiać", "def": "demander un plat au serveur" },
+            { "fr": "le chef / la cheffe", "pl": "szef kuchni", "def": "la personne qui fait la cuisine au restaurant" },
             { "fr": "une entrée", "pl": "przystawka", "def": "le premier plat" },
             { "fr": "un plat (principal)", "pl": "danie główne" },
             { "fr": "un dessert", "pl": "deser", "def": "le plat sucré à la fin" },
             { "fr": "le plat du jour", "pl": "danie dnia" },
-            { "fr": "l'addition (f.)", "pl": "rachunek", "def": "le papier avec le prix à payer" },
-            { "fr": "un pourboire", "pl": "napiwek", "def": "un peu d'argent pour le serveur" }
+            { "fr": "l'addition (f.)", "pl": "rachunek", "def": "le papier avec le prix à payer" }
           ]
         },
         {
@@ -411,9 +411,13 @@
             { "fr": "une soupe", "pl": "zupa" },
             { "fr": "une omelette", "pl": "omlet" },
             { "fr": "un steak-frites", "pl": "stek z frytkami" },
-            { "fr": "un poulet rôti", "pl": "pieczony kurczak" },
+            { "fr": "une quiche", "pl": "quiche (tarta wytrawna)" },
+            { "fr": "un magret de canard", "pl": "pierś z kaczki" },
+            { "fr": "une blanquette de veau", "pl": "potrawka z cielęciny w białym sosie" },
             { "fr": "une tarte aux pommes", "pl": "tarta z jabłkami" },
             { "fr": "une mousse au chocolat", "pl": "mus czekoladowy" },
+            { "fr": "un gâteau", "pl": "ciasto" },
+            { "fr": "un riz au lait", "pl": "ryż na mleku (deser)" },
             { "fr": "une glace", "pl": "lody" }
           ]
         },
@@ -423,12 +427,9 @@
           "items": [
             { "fr": "une assiette", "pl": "talerz" },
             { "fr": "un verre", "pl": "szklanka, kieliszek" },
-            { "fr": "une tasse", "pl": "filiżanka" },
-            { "fr": "un bol", "pl": "miska" },
             { "fr": "une fourchette", "pl": "widelec" },
             { "fr": "un couteau", "pl": "nóż" },
             { "fr": "une cuillère", "pl": "łyżka" },
-            { "fr": "une serviette", "pl": "serwetka" },
             { "fr": "une carafe (d'eau)", "pl": "karafka (wody)", "def": "pour servir l'eau à table" }
           ]
         }
@@ -442,12 +443,10 @@
           "type": "words",
           "items": [
             { "fr": "un prix", "pl": "cena" },
-            { "fr": "un euro / un centime", "pl": "euro / cent", "def": "1 € = 100 centimes" },
-            { "fr": "payer en espèces / en liquide", "pl": "płacić gotówką", "def": "avec des billets et des pièces" },
+            { "fr": "un euro", "pl": "euro" },
+            { "fr": "payer en espèces", "pl": "płacić gotówką", "def": "avec des billets et des pièces" },
             { "fr": "payer par carte (bancaire)", "pl": "płacić kartą" },
-            { "fr": "payer sans contact", "pl": "płacić zbliżeniowo" },
-            { "fr": "payer par chèque", "pl": "płacić czekiem" },
-            { "fr": "la monnaie", "pl": "reszta; drobne", "def": "l'argent qu'on rend, les petites pièces" },
+            { "fr": "la carte bancaire / la carte bleue", "pl": "karta płatnicza", "def": "on paie avec elle au magasin" },
             { "fr": "cher / chère", "pl": "drogi / droga" },
             { "fr": "pas cher", "pl": "tani", "def": "le contraire de cher" }
           ]
@@ -510,7 +509,7 @@
             { "fr": "Une table pour deux, s'il vous plaît.", "pl": "Poproszę stolik dla dwóch osób." },
             { "fr": "La carte, s'il vous plaît.", "pl": "Poproszę kartę." },
             { "fr": "Qu'est-ce que vous me conseillez ?", "pl": "Co mi pan / pani poleca?" },
-            { "fr": "En entrée, je voudrais une soupe, et comme plat, le poulet rôti.", "pl": "Na przystawkę poproszę zupę, a jako danie główne pieczonego kurczaka." },
+            { "fr": "En entrée, je voudrais une soupe, et comme plat, la blanquette de veau.", "pl": "Na przystawkę poproszę zupę, a jako danie główne potrawkę z cielęciny." },
             { "fr": "Une carafe d'eau, s'il vous plaît.", "pl": "Poproszę karafkę wody." },
             { "fr": "L'addition, s'il vous plaît !", "pl": "Poproszę rachunek!" }
           ]

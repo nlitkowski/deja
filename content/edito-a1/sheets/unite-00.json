@@ -25,30 +25,24 @@
           "items": [
             { "fr": "un café", "pl": "kawa; kawiarnia", "def": "une boisson, et l'endroit où on la boit" },
             { "fr": "un restaurant", "pl": "restauracja", "def": "on y mange" },
-            { "fr": "un hôtel", "pl": "hotel", "def": "on y dort en voyage" },
             { "fr": "un cinéma", "pl": "kino", "def": "on y regarde des films" },
-            { "fr": "un théâtre", "pl": "teatr", "def": "on y regarde une pièce" },
-            { "fr": "un musée", "pl": "muzeum", "def": "on y regarde des tableaux" },
-            { "fr": "une banque", "pl": "bank", "def": "on y garde son argent" },
-            { "fr": "une université", "pl": "uniwersytet", "def": "on y fait des études" },
-            { "fr": "un hôpital", "pl": "szpital", "def": "on y soigne les malades" }
+            { "fr": "les toilettes", "pl": "toaleta", "def": "toujours au pluriel en français" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Transport i jedzenie", "fr": "Le transport et la nourriture" },
           "items": [
-            { "fr": "un taxi", "pl": "taksówka", "def": "une voiture avec un chauffeur" },
-            { "fr": "un tramway (le tram)", "pl": "tramwaj", "def": "un train électrique en ville" },
+            { "fr": "un train", "pl": "pociąg", "def": "il roule sur des rails, de ville en ville" },
             { "fr": "le chocolat", "pl": "czekolada", "def": "un aliment sucré et brun" },
-            { "fr": "une banane", "pl": "banan", "def": "un fruit jaune" }
+            { "fr": "un croissant", "pl": "rogalik (croissant)", "def": "on le mange le matin, avec un café" }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Rodzaj nie zgadza się z polskim: **le** chocolat (czekolada), **le** taxi (taksówka), **la** banque (bank), **la** banane (banan), **l'**université (uniwersytet).\nKońcówki są często nieme: restauran(t), chocola(t). Akcenty są częścią pisowni: caf**é**, h**ô**tel, th**éâ**tre.",
-            "fr": "Le genre est souvent différent du polonais : **le** chocolat, **le** taxi, **la** banque, **la** banane, **l'**université.\nLes lettres finales sont souvent muettes : restauran(t), chocola(t). Les accents font partie de l'orthographe : caf**é**, h**ô**tel, th**éâ**tre."
+            "pl": "Rodzaj nie zgadza się z polskim: **le** chocolat (czekolada), **le** café (kawa), **le** restaurant (restauracja). **Les** toilettes są zawsze w liczbie mnogiej.\nKońcówki są często nieme: restauran(t), chocola(t), croissan(t). Akcenty są częścią pisowni: caf**é**, cin**é**ma.",
+            "fr": "Le genre est souvent différent du polonais : **le** chocolat, **le** café, **le** restaurant. **Les** toilettes sont toujours au pluriel.\nLes lettres finales sont souvent muettes : restauran(t), chocola(t), croissan(t). Les accents font partie de l'orthographe : caf**é**, cin**é**ma."
           }
         }
       ]
@@ -191,7 +185,7 @@
           "title": { "pl": "Znaki przy literach", "fr": "Les accents et la cédille" },
           "head": ["", "nom", "exemple"],
           "rows": [
-            ["é", "e accent aigu", "café, université"],
+            ["é", "e accent aigu", "café, cinéma"],
             ["è", "e accent grave", "très, mère"],
             ["ê", "e accent circonflexe", "fenêtre, être"],
             ["ç", "c cédille", "ça, français"]
@@ -237,8 +231,8 @@
         {
           "type": "warning",
           "text": {
-            "pl": "Pary, które łatwo pomylić: **deux** (2) i **douze** (12), **treize** (13) i **trente** (30), **six** (6) i **dix** (10).\nW **six** i **dix** końcowe x: nieme przed spółgłoską (six livres), [s] na końcu (j'en ai six), [z] przed samogłoską (six ans).",
-            "fr": "Attention aux paires : **deux** (2) et **douze** (12), **treize** (13) et **trente** (30), **six** (6) et **dix** (10).\nDans **six** et **dix**, le x est muet devant une consonne, se dit [s] à la fin et [z] devant une voyelle."
+            "pl": "Pary, które łatwo pomylić: **deux** (2) i **douze** (12), **treize** (13) i **trente** (30), **six** (6) i **dix** (10).",
+            "fr": "Attention aux paires : **deux** (2) et **douze** (12), **treize** (13) et **trente** (30), **six** (6) et **dix** (10)."
           }
         }
       ]
@@ -250,63 +244,19 @@
         {
           "type": "rule",
           "text": {
-            "pl": "Przed samogłoską albo niemym h wymawiamy ostatnią spółgłoskę liczby i łączymy ją z następnym słowem:\n**un** → [n]: un‿an\n**deux, trois, six, dix** → [z]: deux‿euros, trois‿heures, six‿ans, dix‿euros",
-            "fr": "Devant une voyelle ou un h muet, on prononce la consonne finale du nombre avec le mot suivant :\n**un** → [n] : un‿an\n**deux, trois, six, dix** → [z] : deux‿euros, trois‿heures, six‿ans, dix‿euros"
+            "pl": "Przed słowem **euro** wymawiamy ostatnią spółgłoskę liczby i łączymy ją z następnym słowem:\n**un** → [n]: un‿euro\n**deux, trois, six, dix** → [z]: deux‿euros, trois‿euros, six‿euros, dix‿euros",
+            "fr": "Devant le mot **euro**, on prononce la consonne finale du nombre avec le mot suivant :\n**un** → [n] : un‿euro\n**deux, trois, six, dix** → [z] : deux‿euros, trois‿euros, six‿euros, dix‿euros"
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "J'ai un‿an de plus que toi.", "pl": "Jestem o rok starszy od ciebie." },
+            { "fr": "Le croissant ? Un‿euro.", "pl": "Rogalik? Jedno euro." },
             { "fr": "Ça fait deux‿euros.", "pl": "To kosztuje dwa euro." },
-            { "fr": "Le train part à trois‿heures.", "pl": "Pociąg odjeżdża o trzeciej." },
-            { "fr": "Mon fils a six‿ans.", "pl": "Mój syn ma sześć lat." }
+            { "fr": "Un café et un croissant : trois‿euros, s'il vous plaît.", "pl": "Kawa i rogalik: trzy euro, poproszę." },
+            { "fr": "Le chocolat ? Six‿euros.", "pl": "Czekolada? Sześć euro." },
+            { "fr": "Dix‿euros, s'il vous plaît.", "pl": "Dziesięć euro, poproszę." }
           ]
-        },
-        {
-          "type": "rule",
-          "text": {
-            "pl": "**neuf** → [v] tylko przed « ans » i « heures »: neuf‿ans, neuf‿heures (w innych przypadkach zwykłe [f]: neuf euros)\n**vingt** → [t] przed samogłoską: vingt‿ans, vingt‿euros",
-            "fr": "**neuf** → [v] seulement devant « ans » et « heures » : neuf‿ans, neuf‿heures (sinon [f] : neuf euros)\n**vingt** → [t] devant une voyelle : vingt‿ans, vingt‿euros"
-          }
-        },
-        {
-          "type": "examples",
-          "items": [
-            { "fr": "Ma nièce a neuf‿ans.", "pl": "Moja siostrzenica ma dziewięć lat." },
-            { "fr": "Le magasin ouvre à neuf‿heures.", "pl": "Sklep otwiera się o dziewiątej." },
-            { "fr": "Mon cousin a vingt‿ans demain.", "pl": "Mój kuzyn kończy jutro dwadzieścia lat." }
-          ]
-        },
-        {
-          "type": "rule",
-          "text": {
-            "pl": "**six** i **dix** mają trzy wymowy: same, na końcu zdania [sis] / [dis]; przed samogłoską [z]; przed spółgłoską bez końcówki [si] / [di].",
-            "fr": "**six** et **dix** se prononcent de trois façons : seuls, en fin de phrase [sis] / [dis] ; devant une voyelle [z] ; devant une consonne, sans la finale [si] / [di]."
-          }
-        },
-        {
-          "type": "table",
-          "head": ["", "seul", "devant une voyelle", "devant une consonne"],
-          "rows": [
-            ["six", "six [sis]", "six‿amis [siz]", "si(x) chats [si]"],
-            ["dix", "dix [dis]", "dix‿euros [diz]", "di(x) minutes [di]"]
-          ]
-        },
-        {
-          "type": "examples",
-          "items": [
-            { "fr": "– Tu as combien de cousins ? – Six.", "pl": "– Ilu masz kuzynów? – Sześciu." },
-            { "fr": "Le bus passe toutes les dix minutes.", "pl": "Autobus jeździ co dziesięć minut." },
-            { "fr": "Il y a dix‿élèves dans la classe.", "pl": "W klasie jest dziesięcioro uczniów." }
-          ]
-        },
-        {
-          "type": "warning",
-          "text": {
-            "pl": "Przed spółgłoską nie ma łączenia: deu(x) livres, si(x) personnes.",
-            "fr": "Devant une consonne, pas de liaison : deu(x) livres, si(x) personnes."
-          }
         }
       ]
     },
@@ -445,7 +395,7 @@
           "items": [
             { "fr": "Un thé, s'il vous plaît.", "pl": "Poproszę herbatę." },
             { "fr": "Tu m'aides, s'il te plaît ?", "pl": "Pomożesz mi, proszę?" },
-            { "fr": "Excusez-moi, monsieur, où est la banque ?", "pl": "Przepraszam pana, gdzie jest bank?" },
+            { "fr": "Excusez-moi, monsieur, où sont les toilettes ?", "pl": "Przepraszam pana, gdzie są toalety?" },
             { "fr": "Pardon ? Vous pouvez répéter ?", "pl": "Słucham? Może pan / pani powtórzyć?" }
           ]
         }

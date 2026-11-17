@@ -10,7 +10,7 @@
       "def": "pour une chose nouvelle ou pas précise : un frère, une sœur, des enfants",
       "examples": [
         { "fr": "J'ai un frère et une sœur.", "pl": "Mam brata i siostrę." },
-        { "fr": "Il y a des cafés dans ma rue.", "pl": "Na mojej ulicy są kawiarnie." }
+        { "fr": "Il y a des restaurants dans ma rue.", "pl": "Na mojej ulicy są restauracje." }
       ],
       "tip": {
         "pl": "un (r. męski), une (r. żeński), des (liczba mnoga); używamy, gdy mówimy o czymś nowym, jednym z wielu",
@@ -23,16 +23,16 @@
       "id": "u02-un-ou-le",
       "fr": "un ou le ?",
       "pl": "rodzajnik nieokreślony czy określony?",
-      "def": "un, une, des : chose nouvelle ; le, la, les : chose connue, unique, ou après aimer, adorer, détester, préférer",
+      "def": "un, une, des : chose nouvelle ; le, la, les : chose connue, unique, ou après aimer, adorer, détester",
       "examples": [
-        { "fr": "Il y a un parc. Le parc est grand.", "pl": "Jest park. Ten park jest duży." },
-        { "fr": "Elle adore les chats.", "pl": "Ona uwielbia koty." }
+        { "fr": "Il y a un cinéma. Le cinéma est grand.", "pl": "Jest kino. To kino jest duże." },
+        { "fr": "Elle adore la musique.", "pl": "Ona uwielbia muzykę." }
       ],
       "tip": {
-        "pl": "po czasownikach upodobań (aimer, adorer, détester, préférer) zawsze le, la, les: j'aime le sport",
-        "fr": "après les verbes de goût (aimer, adorer, détester, préférer), toujours le, la, les : j'aime le sport"
+        "pl": "po czasownikach upodobań (aimer, adorer, détester) zawsze le, la, les: j'aime le sport",
+        "fr": "après les verbes de goût (aimer, adorer, détester), toujours le, la, les : j'aime le sport"
       },
-      "confusables": ["u02-articles-indefinis", "u03-aimer-le-manger-du"],
+      "confusables": ["u02-articles-indefinis", "u03-partitifs"],
       "tags": ["grammaire"]
     },
     {
@@ -49,7 +49,9 @@
         "fr": "un / une / des → de après la négation ; d' devant une voyelle"
       },
       "confusables": ["u03-quantite"],
-      "tags": ["grammaire"]
+      "tags": ["grammaire"],
+      "deprecated": true,
+      "replacedBy": "u03-pas-de"
     },
     {
       "id": "u02-verbes-er",
@@ -80,7 +82,9 @@
         "fr": "é → è avec je, tu, il, ils (préfère) ; nous et vous gardent é"
       },
       "confusables": ["u02-verbes-er"],
-      "tags": ["grammaire"]
+      "tags": ["grammaire"],
+      "deprecated": true,
+      "replacedBy": "u09-preferer"
     },
     {
       "id": "u02-habiter",
@@ -89,7 +93,7 @@
       "def": "j'habite, tu habites, il habite, nous habitons, vous habitez, ils habitent",
       "examples": [
         { "fr": "J'habite à Poznań.", "pl": "Mieszkam w Poznaniu." },
-        { "fr": "Ils habitent à la campagne.", "pl": "Mieszkają na wsi." }
+        { "fr": "Ils habitent à Nice.", "pl": "Mieszkają w Nicei." }
       ],
       "tip": {
         "pl": "h jest nieme: j'habite (nie « je habite »), łączenie: nous_habitons",
@@ -131,12 +135,12 @@
     },
     {
       "id": "u02-professions-feminin",
-      "fr": "étudiant / étudiante, vendeur / vendeuse",
+      "fr": "étudiant / étudiante, coiffeur / coiffeuse",
       "pl": "zawody w rodzaju żeńskim",
-      "def": "+ e (avocate), -ien → -ienne, -er → -ère, -eur → -euse, -teur → -trice",
+      "def": "+ e (étudiante), -ien → -ienne, -er → -ère, -eur → -euse, -teur → -trice",
       "examples": [
-        { "fr": "Ma mère est pharmacienne.", "pl": "Moja mama jest farmaceutką." },
-        { "fr": "Je suis vendeuse.", "pl": "Jestem sprzedawczynią." }
+        { "fr": "Ma mère est informaticienne.", "pl": "Moja mama jest informatyczką." },
+        { "fr": "Je suis coiffeuse.", "pl": "Jestem fryzjerką." }
       ],
       "tip": {
         "pl": "-ien → -ienne, -er → -ère, -eur → -euse, -teur → -trice; po être zawód bez rodzajnika: elle est infirmière",
@@ -151,42 +155,35 @@
     { "id": "u02-fille", "fr": "une fille", "pl": "córka; dziewczyna", "def": "l'enfant fille d'un père et d'une mère", "examples": [{ "fr": "Leur fille s'appelle Emma.", "pl": "Ich córka ma na imię Emma." }], "tags": ["vocabulaire"] },
     { "id": "u02-oncle", "fr": "un oncle", "pl": "wujek", "def": "le frère de mon père ou de ma mère", "examples": [{ "fr": "Mon oncle habite au Canada.", "pl": "Mój wujek mieszka w Kanadzie." }], "tags": ["vocabulaire"] },
     { "id": "u02-tante", "fr": "une tante", "pl": "ciocia", "def": "la sœur de mon père ou de ma mère", "examples": [{ "fr": "Ma tante est infirmière.", "pl": "Moja ciocia jest pielęgniarką." }], "tags": ["vocabulaire"] },
-    { "id": "u02-grands-parents", "fr": "les grands-parents", "pl": "dziadkowie", "def": "le grand-père et la grand-mère", "examples": [{ "fr": "Mes grands-parents habitent à la campagne.", "pl": "Moi dziadkowie mieszkają na wsi." }], "tags": ["vocabulaire"] },
+    { "id": "u02-grands-parents", "fr": "les grands-parents", "pl": "dziadkowie", "def": "le grand-père et la grand-mère", "examples": [{ "fr": "Mes grands-parents habitent à Nice.", "pl": "Moi dziadkowie mieszkają w Nicei." }], "tags": ["vocabulaire"] },
     { "id": "u02-appartement", "fr": "un appartement", "pl": "mieszkanie", "def": "un logement dans un immeuble", "examples": [{ "fr": "J'habite dans un petit appartement.", "pl": "Mieszkam w małym mieszkaniu." }], "tags": ["vocabulaire"] },
-    { "id": "u02-voisin", "fr": "un voisin / une voisine", "pl": "sąsiad / sąsiadka", "def": "une personne qui habite à côté de chez moi", "examples": [{ "fr": "Ma voisine est très sympa.", "pl": "Moja sąsiadka jest bardzo miła." }], "tags": ["vocabulaire"] }
+    { "id": "u02-voisin", "fr": "un voisin / une voisine", "pl": "sąsiad / sąsiadka", "def": "une personne qui habite à côté de chez moi", "examples": [{ "fr": "Ma voisine est très sympa.", "pl": "Moja sąsiadka jest bardzo miła." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u07-voisin" },
+    { "id": "u02-cousin", "fr": "le cousin, la cousine", "pl": "kuzyn / kuzynka", "def": "l'enfant de mon oncle ou de ma tante", "examples": [{ "fr": "Mon cousin habite à Lyon.", "pl": "Mój kuzyn mieszka w Lyonie." }], "tip": { "pl": "cousin: n nieme (samogłoska nosowa), cousine: słychać n", "fr": "cousin : le n ne se prononce pas (voyelle nasale) ; cousine : on entend le n" }, "tags": ["vocabulaire"] }
   ],
   "exercises": [
     { "id": "u02-indef-1", "type": "gap-fill", "entryIds": ["u02-articles-indefinis"], "data": { "sentence": "J'ai ___ frère et deux sœurs.", "answers": ["un"], "pl": "Mam brata i dwie siostry." } },
-    { "id": "u02-indef-2", "type": "gap-fill", "entryIds": ["u02-articles-indefinis"], "data": { "sentence": "Dans ma rue, il y a ___ boulangerie.", "answers": ["une"], "pl": "Na mojej ulicy jest piekarnia." } },
+    { "id": "u02-indef-2", "type": "gap-fill", "entryIds": ["u02-articles-indefinis"], "data": { "sentence": "Dans ma ville, il y a ___ université.", "answers": ["une"], "pl": "W moim mieście jest uniwersytet." } },
     { "id": "u02-indef-3", "type": "gap-fill", "entryIds": ["u02-articles-indefinis"], "data": { "sentence": "Elle a ___ cousins à Lille.", "answers": ["des"], "pl": "Ona ma kuzynów w Lille." } },
-    { "id": "u02-indef-4", "type": "gap-fill", "entryIds": ["u02-articles-indefinis"], "data": { "sentence": "Il y a ___ parc près de chez moi.", "answers": ["un"], "pl": "Niedaleko mnie jest park." } },
+    { "id": "u02-indef-4", "type": "gap-fill", "entryIds": ["u02-articles-indefinis"], "data": { "sentence": "Il y a ___ cinéma près de chez moi.", "answers": ["un"], "pl": "Niedaleko mnie jest kino." } },
 
-    { "id": "u02-unle-1", "type": "gap-fill", "entryIds": ["u02-un-ou-le"], "data": { "sentence": "J'ai un chien. ___ chien s'appelle Rex.", "answers": ["le", "mon"], "pl": "Mam psa. Pies wabi się Rex." } },
-    { "id": "u02-unle-2", "type": "gap-fill", "entryIds": ["u02-un-ou-le"], "data": { "sentence": "Elle adore ___ chats.", "answers": ["les"], "pl": "Ona uwielbia koty.", "hint": { "pl": "po adorer: rodzajnik określony", "fr": "après adorer : article défini" } } },
+    { "id": "u02-unle-1", "type": "gap-fill", "entryIds": ["u02-un-ou-le"], "data": { "sentence": "Il y a un cinéma dans ma rue. ___ cinéma est très grand.", "answers": ["Le"], "pl": "Na mojej ulicy jest kino. To kino jest bardzo duże." } },
+    { "id": "u02-unle-2", "type": "gap-fill", "entryIds": ["u02-un-ou-le"], "data": { "sentence": "Elle adore ___ musique.", "answers": ["la"], "pl": "Ona uwielbia muzykę.", "hint": { "pl": "po adorer: rodzajnik określony", "fr": "après adorer : article défini" } } },
     { "id": "u02-unle-3", "type": "gap-fill", "entryIds": ["u02-un-ou-le"], "data": { "sentence": "Je déteste ___ football.", "answers": ["le"], "pl": "Nienawidzę piłki nożnej." } },
     { "id": "u02-unle-4", "type": "gap-fill", "entryIds": ["u02-un-ou-le"], "data": { "sentence": "C'est ___ mère de Léa.", "answers": ["la"], "pl": "To jest mama Léi." } },
-    { "id": "u02-unle-5", "type": "gap-fill", "entryIds": ["u02-un-ou-le", "u02-articles-indefinis"], "data": { "sentence": "Dans mon quartier, il y a ___ piscine.", "answers": ["une"], "pl": "W mojej dzielnicy jest basen." } },
+    { "id": "u02-unle-5", "type": "gap-fill", "entryIds": ["u02-un-ou-le", "u02-articles-indefinis"], "data": { "sentence": "Dans mon quartier, il y a ___ restaurant italien.", "answers": ["un"], "pl": "W mojej dzielnicy jest włoska restauracja." } },
 
-    { "id": "u02-neg-1", "type": "gap-fill", "entryIds": ["u02-negation-de"], "data": { "sentence": "Je n'ai pas ___ frère.", "answers": ["de"], "pl": "Nie mam brata." } },
-    { "id": "u02-neg-2", "type": "gap-fill", "entryIds": ["u02-negation-de"], "data": { "sentence": "Il n'a pas ___ enfants.", "answers": ["d'"], "pl": "On nie ma dzieci.", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
-    { "id": "u02-neg-3", "type": "gap-fill", "entryIds": ["u02-negation-de"], "data": { "sentence": "Nous n'avons pas ___ voiture.", "answers": ["de"], "pl": "Nie mamy samochodu." } },
-    { "id": "u02-neg-4", "type": "gap-fill", "entryIds": ["u02-negation-de"], "data": { "sentence": "Dans mon village, il n'y a pas ___ cinéma.", "answers": ["de"], "pl": "W mojej wsi nie ma kina." } },
 
     { "id": "u02-er-1", "type": "gap-fill", "entryIds": ["u02-verbes-er"], "data": { "sentence": "Tu ___ le football ? (aimer)", "answers": ["aimes"], "pl": "Lubisz piłkę nożną?" } },
     { "id": "u02-er-2", "type": "gap-fill", "entryIds": ["u02-verbes-er"], "data": { "sentence": "Nous ___ la musique classique. (adorer)", "answers": ["adorons"], "pl": "Uwielbiamy muzykę klasyczną." } },
     { "id": "u02-er-3", "type": "gap-fill", "entryIds": ["u02-verbes-er"], "data": { "sentence": "Mes parents ___ la ville. (détester)", "answers": ["détestent"], "pl": "Moi rodzice nie znoszą miasta." } },
-    { "id": "u02-er-4", "type": "gap-fill", "entryIds": ["u02-verbes-er"], "data": { "sentence": "Vous ___ dans un bureau ? (travailler)", "answers": ["travaillez"], "pl": "Pracuje pan w biurze?" } },
-    { "id": "u02-er-5", "type": "gap-fill", "entryIds": ["u02-verbes-er"], "data": { "sentence": "J'___ la radio le matin. (écouter)", "answers": ["écoute"], "pl": "Rano słucham radia." } },
-    { "id": "u02-er-6", "type": "gap-fill", "entryIds": ["u02-verbes-er"], "data": { "sentence": "Elle ___ la télé le soir. (regarder)", "answers": ["regarde"], "pl": "Ona wieczorem ogląda telewizję." } },
+    { "id": "u02-er-4", "type": "gap-fill", "entryIds": ["u02-verbes-er"], "data": { "sentence": "Vous ___ dans un restaurant ? (travailler)", "answers": ["travaillez"], "pl": "Pracuje pan w restauracji?" } },
+    { "id": "u02-er-5", "type": "gap-fill", "entryIds": ["u02-verbes-er"], "data": { "sentence": "J'___ de la musique le soir. (écouter)", "answers": ["écoute"], "pl": "Wieczorem słucham muzyki." } },
+    { "id": "u02-er-6", "type": "gap-fill", "entryIds": ["u02-verbes-er"], "data": { "sentence": "Elle ___ un film avec sa sœur. (regarder)", "answers": ["regarde"], "pl": "Ona ogląda film ze swoją siostrą." } },
 
-    { "id": "u02-preferer-1", "type": "gap-fill", "entryIds": ["u02-preferer"], "data": { "sentence": "Je ___ la mer. (préférer)", "answers": ["préfère"], "pl": "Wolę morze." } },
-    { "id": "u02-preferer-2", "type": "gap-fill", "entryIds": ["u02-preferer"], "data": { "sentence": "Nous ___ la montagne. (préférer)", "answers": ["préférons"], "pl": "Wolimy góry." } },
-    { "id": "u02-preferer-3", "type": "gap-fill", "entryIds": ["u02-preferer"], "data": { "sentence": "Mes enfants ___ les jeux vidéo. (préférer)", "answers": ["préfèrent"], "pl": "Moje dzieci wolą gry wideo." } },
-    { "id": "u02-preferer-4", "type": "gap-fill", "entryIds": ["u02-preferer"], "data": { "sentence": "Vous ___ le thé ou le café ? (préférer)", "answers": ["préférez"], "pl": "Woli pan herbatę czy kawę?" } },
 
     { "id": "u02-habiter-1", "type": "gap-fill", "entryIds": ["u02-habiter"], "data": { "sentence": "___ à Poznań, dans un petit appartement. (habiter – je)", "answers": ["j'habite"], "pl": "Mieszkam w Poznaniu, w małym mieszkaniu.", "hint": { "pl": "h jest nieme", "fr": "le h est muet" } } },
     { "id": "u02-habiter-2", "type": "gap-fill", "entryIds": ["u02-habiter"], "data": { "sentence": "Nous ___ dans le centre. (habiter)", "answers": ["habitons"], "pl": "Mieszkamy w centrum." } },
-    { "id": "u02-habiter-3", "type": "gap-fill", "entryIds": ["u02-habiter"], "data": { "sentence": "Mes grands-parents ___ à la campagne. (habiter)", "answers": ["habitent"], "pl": "Moi dziadkowie mieszkają na wsi." } },
+    { "id": "u02-habiter-3", "type": "gap-fill", "entryIds": ["u02-habiter"], "data": { "sentence": "Mes grands-parents ___ à Nice. (habiter)", "answers": ["habitent"], "pl": "Moi dziadkowie mieszkają w Nicei." } },
     { "id": "u02-habiter-4", "type": "gap-fill", "entryIds": ["u02-habiter"], "data": { "sentence": "Vous ___ où ? (habiter)", "answers": ["habitez"], "pl": "Gdzie pan mieszka?" } },
 
     { "id": "u02-poss-1", "type": "gap-fill", "entryIds": ["u02-possessifs-mon"], "data": { "sentence": "Je te présente ___ sœur, Clara.", "answers": ["ma"], "pl": "Przedstawiam ci moją siostrę, Clarę.", "clue": "(à moi)" } },
@@ -198,15 +195,15 @@
     { "id": "u02-notre-1", "type": "gap-fill", "entryIds": ["u02-possessifs-notre"], "data": { "sentence": "Nous habitons avec ___ grands-parents.", "answers": ["nos"], "pl": "Mieszkamy z naszymi dziadkami.", "clue": "(à nous)" } },
     { "id": "u02-notre-2", "type": "gap-fill", "entryIds": ["u02-possessifs-notre"], "data": { "sentence": "Les enfants jouent avec ___ amis.", "answers": ["leurs"], "pl": "Dzieci bawią się ze swoimi przyjaciółmi.", "clue": "(les amis des enfants)" } },
     { "id": "u02-notre-3", "type": "gap-fill", "entryIds": ["u02-possessifs-notre"], "data": { "sentence": "Vous aimez ___ quartier ?", "answers": ["votre"], "pl": "Lubi pan swoją dzielnicę?", "clue": "(à vous)" } },
-    { "id": "u02-notre-4", "type": "gap-fill", "entryIds": ["u02-possessifs-notre"], "data": { "sentence": "Mes voisins adorent ___ chien.", "answers": ["leur"], "pl": "Moi sąsiedzi uwielbiają swojego psa.", "clue": "(le chien des voisins)" } },
-    { "id": "u02-notre-5", "type": "gap-fill", "entryIds": ["u02-possessifs-notre"], "data": { "sentence": "Voici ___ maison : elle est petite mais jolie.", "answers": ["notre"], "pl": "Oto nasz dom: jest mały, ale ładny.", "clue": "(à nous)" } },
+    { "id": "u02-notre-4", "type": "gap-fill", "entryIds": ["u02-possessifs-notre"], "data": { "sentence": "Mes grands-parents adorent ___ petit-fils.", "answers": ["leur"], "pl": "Moi dziadkowie uwielbiają swojego wnuka.", "clue": "(le petit-fils des grands-parents)" } },
+    { "id": "u02-notre-5", "type": "gap-fill", "entryIds": ["u02-possessifs-notre"], "data": { "sentence": "Voici ___ maison : elle est petite mais très sympa.", "answers": ["notre"], "pl": "Oto nasz dom: jest mały, ale bardzo przyjemny.", "clue": "(à nous)" } },
 
-    { "id": "u02-prof-1", "type": "gap-fill", "entryIds": ["u02-professions-feminin"], "data": { "sentence": "Ma mère est ___. (pharmacien)", "answers": ["pharmacienne"], "pl": "Moja mama jest farmaceutką." } },
-    { "id": "u02-prof-2", "type": "gap-fill", "entryIds": ["u02-professions-feminin"], "data": { "sentence": "Ma sœur est ___ dans un hôpital. (infirmier)", "answers": ["infirmière"], "pl": "Moja siostra jest pielęgniarką w szpitalu." } },
-    { "id": "u02-prof-3", "type": "gap-fill", "entryIds": ["u02-professions-feminin"], "data": { "sentence": "Elle est ___ dans un magasin de vêtements. (vendeur)", "answers": ["vendeuse"], "pl": "Ona jest sprzedawczynią w sklepie odzieżowym." } },
+    { "id": "u02-prof-1", "type": "gap-fill", "entryIds": ["u02-professions-feminin"], "data": { "sentence": "Ma mère est ___. (informaticien)", "answers": ["informaticienne"], "pl": "Moja mama jest informatyczką." } },
+    { "id": "u02-prof-2", "type": "gap-fill", "entryIds": ["u02-professions-feminin"], "data": { "sentence": "Ma sœur est ___ à Lyon. (infirmier)", "answers": ["infirmière"], "pl": "Moja siostra jest pielęgniarką w Lyonie." } },
+    { "id": "u02-prof-3", "type": "gap-fill", "entryIds": ["u02-professions-feminin"], "data": { "sentence": "Mon amie Julie est ___. (coiffeur)", "answers": ["coiffeuse"], "pl": "Moja przyjaciółka Julie jest fryzjerką." } },
     { "id": "u02-prof-4", "type": "gap-fill", "entryIds": ["u02-professions-feminin"], "data": { "sentence": "Juliette Binoche est une ___ célèbre. (acteur)", "answers": ["actrice"], "pl": "Juliette Binoche to słynna aktorka." } },
-    { "id": "u02-prof-5", "type": "gap-fill", "entryIds": ["u02-professions-feminin"], "data": { "sentence": "Léa est ___ en droit. (étudiant)", "answers": ["étudiante"], "pl": "Léa jest studentką prawa." } },
-    { "id": "u02-prof-6", "type": "gap-fill", "entryIds": ["u02-professions-feminin"], "data": { "sentence": "Ma tante est ___. (journaliste)", "answers": ["journaliste"], "pl": "Moja ciocia jest dziennikarką.", "hint": { "pl": "zakończenie -e: bez zmian", "fr": "finale en -e : pas de changement" } } },
+    { "id": "u02-prof-5", "type": "gap-fill", "entryIds": ["u02-professions-feminin"], "data": { "sentence": "Léa est ___ à l'université de Lyon. (étudiant)", "answers": ["étudiante"], "pl": "Léa jest studentką na uniwersytecie w Lyonie." } },
+    { "id": "u02-prof-6", "type": "gap-fill", "entryIds": ["u02-professions-feminin"], "data": { "sentence": "Ma tante est ___. (fleuriste)", "answers": ["fleuriste"], "pl": "Moja ciocia jest kwiaciarką.", "hint": { "pl": "zakończenie -e: bez zmian", "fr": "finale en -e : pas de changement" } } },
 
     { "id": "u02-parents-1", "type": "gap-fill", "entryIds": ["u02-parents"], "data": { "sentence": "J'habite encore chez mes ___.", "answers": ["parents"], "pl": "Wciąż mieszkam u rodziców.", "clue": "(mon père et ma mère)" } },
     { "id": "u02-parents-2", "type": "translate-pl-fr", "entryIds": ["u02-parents"], "data": { "pl": "rodzice", "answers": ["les parents", "des parents"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
@@ -224,16 +221,12 @@
     { "id": "u02-tante-2", "type": "translate-pl-fr", "entryIds": ["u02-tante"], "data": { "pl": "ciocia", "answers": ["une tante", "la tante"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u02-grands-parents-1", "type": "gap-fill", "entryIds": ["u02-grands-parents"], "data": { "sentence": "Le dimanche, je déjeune chez mes ___.", "answers": ["grands-parents"], "pl": "W niedziele jem obiad u dziadków.", "clue": "(mon grand-père et ma grand-mère)" } },
     { "id": "u02-grands-parents-2", "type": "translate-pl-fr", "entryIds": ["u02-grands-parents"], "data": { "pl": "dziadkowie", "answers": ["les grands-parents", "des grands-parents"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u02-appartement-1", "type": "gap-fill", "entryIds": ["u02-appartement"], "data": { "sentence": "J'habite dans un ___ au troisième étage.", "answers": ["appartement"], "pl": "Mieszkam w mieszkaniu na trzecim piętrze.", "clue": "(un logement dans un immeuble)" } },
+    { "id": "u02-appartement-1", "type": "gap-fill", "entryIds": ["u02-appartement"], "data": { "sentence": "Nous habitons dans un grand ___ à Paris.", "answers": ["appartement"], "pl": "Mieszkamy w dużym mieszkaniu w Paryżu.", "clue": "(un logement dans un immeuble)" } },
     { "id": "u02-appartement-2", "type": "translate-pl-fr", "entryIds": ["u02-appartement"], "data": { "pl": "mieszkanie", "answers": ["un appartement", "l'appartement"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u02-voisin-1", "type": "gap-fill", "entryIds": ["u02-voisin"], "data": { "sentence": "Mon ___ du troisième étage est très sympa.", "answers": ["voisin"], "pl": "Mój sąsiad z trzeciego piętra jest bardzo miły.", "clue": "(il habite dans mon immeuble)" } },
-    { "id": "u02-voisin-2", "type": "translate-pl-fr", "entryIds": ["u02-voisin"], "data": { "pl": "sąsiad", "answers": ["un voisin", "le voisin"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
 
     { "id": "u02-indef-5", "type": "translate-pl-fr", "entryIds": ["u02-articles-indefinis"], "data": { "pl": "mam brata i siostrę", "answers": ["j'ai un frère et une sœur", "j'ai un frère et une soeur"] } },
-    { "id": "u02-unle-6", "type": "translate-pl-fr", "entryIds": ["u02-un-ou-le"], "data": { "pl": "uwielbiam koty", "answers": ["j'adore les chats"], "hint": { "pl": "po adorer: rodzajnik określony", "fr": "après adorer : article défini" } } },
-    { "id": "u02-neg-5", "type": "translate-pl-fr", "entryIds": ["u02-negation-de"], "data": { "pl": "nie mam samochodu", "answers": ["je n'ai pas de voiture"] } },
+    { "id": "u02-unle-6", "type": "translate-pl-fr", "entryIds": ["u02-un-ou-le"], "data": { "pl": "uwielbiam kino", "answers": ["j'adore le cinéma"], "hint": { "pl": "po adorer: rodzajnik określony", "fr": "après adorer : article défini" } } },
     { "id": "u02-er-7", "type": "translate-pl-fr", "entryIds": ["u02-verbes-er"], "data": { "pl": "oni pracują w Lyonie", "answers": ["ils travaillent à Lyon"], "hint": { "pl": "ils + travailler", "fr": "ils + travailler" } } },
-    { "id": "u02-preferer-5", "type": "translate-pl-fr", "entryIds": ["u02-preferer"], "data": { "pl": "wolę herbatę", "answers": ["je préfère le thé"] } },
     { "id": "u02-habiter-5", "type": "translate-pl-fr", "entryIds": ["u02-habiter"], "data": { "pl": "mieszkam w Poznaniu", "answers": ["j'habite à Poznań", "j'habite à Poznan"] } },
     { "id": "u02-poss-6", "type": "translate-pl-fr", "entryIds": ["u02-possessifs-mon"], "data": { "pl": "moja przyjaciółka", "answers": ["mon amie"], "hint": { "pl": "une amie, przed samogłoską", "fr": "une amie, devant une voyelle" } } },
     { "id": "u02-notre-6", "type": "translate-pl-fr", "entryIds": ["u02-possessifs-notre"], "data": { "pl": "ich dzieci", "answers": ["leurs enfants"] } },
@@ -242,13 +235,16 @@
     { "id": "u02-parents-3", "type": "gap-fill", "entryIds": ["u02-parents"], "data": { "sentence": "Mes ___ ont deux enfants : mon frère et moi.", "answers": ["parents"], "pl": "Moi rodzice mają dwoje dzieci: mojego brata i mnie.", "clue": "(mon père et ma mère)" } },
     { "id": "u02-frere-3", "type": "gap-fill", "entryIds": ["u02-frere"], "data": { "sentence": "Ma sœur et mon ___ sont étudiants.", "answers": ["frère"], "pl": "Moja siostra i mój brat są studentami.", "clue": "(le fils de mes parents)" } },
     { "id": "u02-soeur-3", "type": "gap-fill", "entryIds": ["u02-soeur"], "data": { "sentence": "Léa est la ___ de Tom : ils ont les mêmes parents.", "answers": ["sœur", "soeur"], "pl": "Léa jest siostrą Toma: mają tych samych rodziców." } },
-    { "id": "u02-fils-3", "type": "gap-fill", "entryIds": ["u02-fils"], "data": { "sentence": "Mon ___ a cinq ans, il va à l'école.", "answers": ["fils"], "pl": "Mój syn ma pięć lat, chodzi do szkoły.", "clue": "(mon enfant, un garçon)" } },
+    { "id": "u02-fils-3", "type": "gap-fill", "entryIds": ["u02-fils"], "data": { "sentence": "Mon ___ a cinq ans, il adore le football.", "answers": ["fils"], "pl": "Mój syn ma pięć lat, uwielbia piłkę nożną.", "clue": "(mon enfant, un garçon)" } },
     { "id": "u02-fille-3", "type": "gap-fill", "entryIds": ["u02-fille"], "data": { "sentence": "Ma ___ Zoé a dix ans et elle adore le piano.", "answers": ["fille"], "pl": "Moja córka Zoé ma dziesięć lat i uwielbia pianino.", "clue": "(mon enfant)" } },
     { "id": "u02-oncle-3", "type": "gap-fill", "entryIds": ["u02-oncle"], "data": { "sentence": "Le frère de mon père, c'est mon ___.", "answers": ["oncle"], "pl": "Brat mojego taty to mój wujek." } },
     { "id": "u02-tante-3", "type": "gap-fill", "entryIds": ["u02-tante"], "data": { "sentence": "Ma ___ Sophie est la femme de mon oncle.", "answers": ["tante"], "pl": "Moja ciocia Sophie jest żoną mojego wujka." } },
     { "id": "u02-grands-parents-3", "type": "gap-fill", "entryIds": ["u02-grands-parents"], "data": { "sentence": "Mes ___ ont quatre petits-enfants.", "answers": ["grands-parents"], "pl": "Moi dziadkowie mają czworo wnucząt.", "clue": "(le père et la mère de mes parents)" } },
-    { "id": "u02-appartement-3", "type": "gap-fill", "entryIds": ["u02-appartement"], "data": { "sentence": "Notre ___ a trois pièces et un balcon.", "answers": ["appartement"], "pl": "Nasze mieszkanie ma trzy pokoje i balkon.", "clue": "(un logement dans un immeuble)" } },
-    { "id": "u02-voisin-3", "type": "gap-fill", "entryIds": ["u02-voisin"], "data": { "sentence": "Ma ___ habite à côté de chez moi, elle est très gentille.", "answers": ["voisine"], "pl": "Moja sąsiadka mieszka obok mnie, jest bardzo miła.", "clue": "(une femme de mon immeuble)" } },
+    { "id": "u02-appartement-3", "type": "gap-fill", "entryIds": ["u02-appartement"], "data": { "sentence": "Notre ___ est petit, mais il est près de la plage.", "answers": ["appartement"], "pl": "Nasze mieszkanie jest małe, ale jest blisko plaży.", "clue": "(un logement dans un immeuble)" } },
+    { "id": "u02-cousin-1", "type": "gap-fill", "entryIds": ["u02-cousin"], "data": { "sentence": "Le fils de mon oncle, c'est mon ___.", "answers": ["cousin"], "pl": "Syn mojego wujka to mój kuzyn." } },
+    { "id": "u02-cousin-2", "type": "translate-pl-fr", "entryIds": ["u02-cousin"], "data": { "pl": "kuzynka", "answers": ["une cousine", "la cousine"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u02-cousin-3", "type": "gap-fill", "entryIds": ["u02-cousin"], "data": { "sentence": "Ma ___ Emma est la fille de ma tante.", "answers": ["cousine"], "pl": "Moja kuzynka Emma jest córką mojej cioci.", "clue": "(une fille, l'enfant de ma tante)" } },
+    { "id": "u02-cousin-4", "type": "translate-pl-fr", "entryIds": ["u02-cousin"], "data": { "pl": "kuzyn", "answers": ["un cousin", "le cousin"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "mp-son-ses", "type": "paires-minimales", "entryIds": ["u02-possessifs-mon"], "data": { "pair": ["Je cherche son livre.", "Je cherche ses livres."] } },
     { "id": "mp-mon-mes", "type": "paires-minimales", "entryIds": ["u02-possessifs-mon"], "data": { "pair": ["Voici mon ami.", "Voici mes amis."] } }
   ],
@@ -257,5 +253,9 @@
     "questions": 10,
     "lives": 3,
     "secondsPerQuestion": 12
+  },
+  "retiredExercises": {
+    "gap-fill": ["u02-preferer-1", "u02-preferer-2", "u02-preferer-3", "u02-preferer-4", "u02-voisin-1", "u02-voisin-3"],
+    "translate-pl-fr": ["u02-preferer-5", "u02-voisin-2"]
   }
 }

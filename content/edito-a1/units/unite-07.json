@@ -16,7 +16,6 @@
         "pl": "ai, as, a, avons, avez, ont + imiesłów; czasowniki na -er: -er → -é (trouver → trouvé)",
         "fr": "ai, as, a, avons, avez, ont + participe passé ; verbes en -er : -er → -é (trouver → trouvé)"
       },
-      "confusables": ["u07-participes"],
       "tags": ["grammaire"]
     },
     {
@@ -33,7 +32,9 @@
         "fr": "faire → fait, prendre → pris, mettre → mis, voir → vu, avoir → eu, être → été"
       },
       "confusables": ["u07-pc-avoir"],
-      "tags": ["grammaire"]
+      "tags": ["grammaire"],
+      "deprecated": true,
+      "replacedBy": "u08-participes-irreguliers"
     },
     {
       "id": "u07-pc-negation",
@@ -42,7 +43,7 @@
       "def": "la négation est autour de avoir : ne (n') + avoir + pas + participe passé",
       "examples": [
         { "fr": "Tu n'as pas fermé la porte !", "pl": "Nie zamknąłeś drzwi!" },
-        { "fr": "Ils n'ont pas payé le loyer.", "pl": "Nie zapłacili czynszu." }
+        { "fr": "Ils n'ont pas réparé l'ascenseur.", "pl": "Nie naprawili windy." }
       ],
       "tip": {
         "pl": "n'ai pas, n'as pas, n'a pas, n'avons pas, n'avez pas, n'ont pas + imiesłów (nie: je n'ai réparé pas)",
@@ -67,16 +68,16 @@
     },
     {
       "id": "u07-lieu-maison",
-      "fr": "au fond de, à gauche de, à droite de, au premier étage",
-      "pl": "w głębi, na lewo od, na prawo od, na pierwszym piętrze",
+      "fr": "à gauche de, à droite de, au premier étage, au rez-de-chaussée",
+      "pl": "na lewo od, na prawo od, na pierwszym piętrze, na parterze",
       "def": "pour situer une pièce dans un logement ou un immeuble",
       "examples": [
-        { "fr": "La salle de bains est au fond du couloir.", "pl": "Łazienka jest na końcu korytarza." },
+        { "fr": "La salle de bains est à droite de la chambre.", "pl": "Łazienka jest na prawo od sypialni." },
         { "fr": "J'habite au premier étage.", "pl": "Mieszkam na pierwszym piętrze." }
       ],
       "tip": {
-        "pl": "piętro: au premier étage, au rez-de-chaussée (nie sur); de + le = du: au fond du couloir",
-        "fr": "étage : au premier étage, au rez-de-chaussée (pas sur) ; de + le = du : au fond du couloir"
+        "pl": "piętro: au premier étage, au rez-de-chaussée (nie sur); de + le = du: à gauche du salon",
+        "fr": "étage : au premier étage, au rez-de-chaussée (pas sur) ; de + le = du : à gauche du salon"
       },
       "confusables": ["a1-connecteurs/expr-a-cote-de", "a1-connecteurs/expr-en-face-de"],
       "tags": ["grammaire"]
@@ -95,11 +96,13 @@
         "fr": "toujours il faut (jamais « je faut ») + infinitif ; négation : il ne faut pas"
       },
       "confusables": ["u07-interdiction"],
-      "tags": ["grammaire"]
+      "tags": ["grammaire"],
+      "deprecated": true,
+      "replacedBy": "u08-il-faut"
     },
     {
       "id": "u07-interdiction",
-      "fr": "il est interdit de / défense de / ne pas + infinitif",
+      "fr": "il est interdit de / défense de / interdiction de / ne pas + infinitif",
       "pl": "zakaz",
       "def": "pour dire que ce n'est pas permis, souvent dans un règlement ou sur un panneau",
       "examples": [
@@ -107,10 +110,26 @@
         { "fr": "Ne pas jeter de papiers.", "pl": "Nie wyrzucać papierów." }
       ],
       "tip": {
-        "pl": "il est interdit de / défense de + bezokolicznik; przy bezokoliczniku ne pas stoją razem: ne pas fumer",
-        "fr": "il est interdit de / défense de + infinitif ; devant l'infinitif, ne pas sont ensemble : ne pas fumer"
+        "pl": "il est interdit de / défense de / interdiction de + bezokolicznik; przy bezokoliczniku ne pas stoją razem: ne pas fumer",
+        "fr": "il est interdit de / défense de / interdiction de + infinitif ; devant l'infinitif, ne pas sont ensemble : ne pas fumer"
       },
-      "confusables": ["u07-il-faut"],
+      "confusables": ["u07-merci-de"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u07-merci-de",
+      "fr": "merci de / prière de + infinitif",
+      "pl": "uprzejmie prosimy (o…), prosimy (nie)…",
+      "def": "une demande polie, souvent dans un règlement d'immeuble : merci de fermer la porte",
+      "examples": [
+        { "fr": "Merci de fermer la porte de l'immeuble.", "pl": "Prosimy zamykać drzwi do budynku." },
+        { "fr": "Prière de ne pas marcher sur la pelouse.", "pl": "Prosimy nie chodzić po trawniku." }
+      ],
+      "tip": {
+        "pl": "merci de / prière de + bezokolicznik; zakaz: merci de ne pas + bezokolicznik (ne pas razem)",
+        "fr": "merci de / prière de + infinitif ; pour interdire : merci de ne pas + infinitif (ne pas ensemble)"
+      },
+      "confusables": ["u07-interdiction"],
       "tags": ["grammaire"]
     },
     {
@@ -119,7 +138,7 @@
       "pl": "go, ją, je (zaimki dopełnienia bliższego)",
       "def": "le pronom remplace un nom après le verbe, sans préposition ; il se place avant le verbe",
       "examples": [
-        { "fr": "Tu connais la gardienne ? — Oui, je la connais.", "pl": "Znasz dozorczynię? — Tak, znam ją." },
+        { "fr": "Tu connais la voisine ? — Oui, je la connais.", "pl": "Znasz sąsiadkę? — Tak, znam ją." },
         { "fr": "Les poubelles ? On les sort le mardi.", "pl": "Śmieci? Wystawiamy je we wtorki." }
       ],
       "tip": {
@@ -145,14 +164,15 @@
     },
     { "id": "u07-chambre", "fr": "une chambre", "pl": "sypialnia, pokój", "def": "la pièce où on dort", "examples": [{ "fr": "Ma chambre est petite mais calme.", "pl": "Mój pokój jest mały, ale cichy." }], "tags": ["vocabulaire"] },
     { "id": "u07-salle-de-bains", "fr": "une salle de bains", "pl": "łazienka", "def": "la pièce où on se lave", "examples": [{ "fr": "Il y a une fuite dans la salle de bains.", "pl": "W łazience jest przeciek." }], "tags": ["vocabulaire"] },
-    { "id": "u07-immeuble", "fr": "un immeuble", "pl": "budynek, blok", "def": "un grand bâtiment avec des appartements", "examples": [{ "fr": "J'habite dans un vieil immeuble.", "pl": "Mieszkam w starym budynku." }], "tags": ["vocabulaire"] },
+    { "id": "u07-immeuble", "fr": "un immeuble", "pl": "budynek, blok", "def": "un grand bâtiment avec des appartements", "examples": [{ "fr": "J'habite dans un grand immeuble.", "pl": "Mieszkam w dużym budynku." }], "tags": ["vocabulaire"] },
     { "id": "u07-ascenseur", "fr": "un ascenseur", "pl": "winda", "def": "il monte et descend les étages", "examples": [{ "fr": "L'ascenseur est en panne.", "pl": "Winda jest zepsuta." }], "tags": ["vocabulaire"] },
-    { "id": "u07-loyer", "fr": "un loyer", "pl": "czynsz (najmu)", "def": "l'argent qu'on paie chaque mois au propriétaire", "examples": [{ "fr": "Le loyer est de 650 euros.", "pl": "Czynsz wynosi 650 euro." }], "tags": ["vocabulaire"] },
+    { "id": "u07-loyer", "fr": "un loyer", "pl": "czynsz (najmu)", "def": "l'argent qu'on paie chaque mois au propriétaire", "examples": [{ "fr": "Le loyer est de 650 euros.", "pl": "Czynsz wynosi 650 euro." }], "tags": ["vocabulaire"], "deprecated": true },
+    { "id": "u07-balcon", "fr": "un balcon", "pl": "balkon", "def": "une petite terrasse devant une fenêtre, en haut d'un immeuble", "examples": [{ "fr": "Il y a des plantes sur le balcon.", "pl": "Na balkonie są rośliny." }], "tip": { "pl": "rodzaj męski: le balcon; na balkonie = sur le balcon", "fr": "masculin : le balcon ; on est sur le balcon" }, "tags": ["vocabulaire"] },
     { "id": "u07-voisin", "fr": "un voisin / une voisine", "pl": "sąsiad / sąsiadka", "def": "une personne qui habite tout près de chez nous", "examples": [{ "fr": "Ma voisine est très gentille.", "pl": "Moja sąsiadka jest bardzo miła." }], "tags": ["vocabulaire"] },
     { "id": "u07-canape", "fr": "un canapé", "pl": "kanapa", "def": "un grand siège pour deux ou trois personnes", "examples": [{ "fr": "Le canapé est en face de la télévision.", "pl": "Kanapa stoi naprzeciwko telewizora." }], "tags": ["vocabulaire"] },
     { "id": "u07-armoire", "fr": "une armoire", "pl": "szafa", "def": "un grand meuble pour ranger les vêtements", "examples": [{ "fr": "Mes pulls sont dans l'armoire.", "pl": "Moje swetry są w szafie." }], "tags": ["vocabulaire"] },
     { "id": "u07-lave-linge", "fr": "un lave-linge", "pl": "pralka", "def": "une machine pour laver les vêtements", "examples": [{ "fr": "Le lave-linge ne marche pas.", "pl": "Pralka nie działa." }], "tags": ["vocabulaire"] },
-    { "id": "u07-fuite", "fr": "une fuite (d'eau)", "pl": "przeciek, wyciek (wody)", "def": "l'eau sort là où elle ne doit pas sortir", "examples": [{ "fr": "Il y a une fuite sous l'évier.", "pl": "Pod zlewem jest przeciek." }], "tags": ["vocabulaire"] },
+    { "id": "u07-fuite", "fr": "une fuite (d'eau)", "pl": "przeciek, wyciek (wody)", "def": "l'eau sort là où elle ne doit pas sortir", "examples": [{ "fr": "Il y a une fuite dans la cuisine.", "pl": "W kuchni jest przeciek." }], "tags": ["vocabulaire"] },
     { "id": "u07-plombier", "fr": "un plombier", "pl": "hydraulik", "def": "il répare les problèmes d'eau", "examples": [{ "fr": "J'ai appelé le plombier ce matin.", "pl": "Dziś rano zadzwoniłem po hydraulika." }], "tags": ["vocabulaire"] }
   ],
   "exercises": [
@@ -160,54 +180,50 @@
     { "id": "u07-pc-2", "type": "gap-fill", "entryIds": ["u07-pc-avoir"], "data": { "sentence": "Nous ___ le plombier ce matin. (appeler)", "answers": ["avons appelé"], "pl": "Dziś rano zadzwoniliśmy po hydraulika." } },
     { "id": "u07-pc-3", "type": "gap-fill", "entryIds": ["u07-pc-avoir"], "data": { "sentence": "Tu ___ la porte ? (fermer)", "answers": ["as fermé"], "pl": "Zamknąłeś drzwi?" } },
     { "id": "u07-pc-4", "type": "gap-fill", "entryIds": ["u07-pc-avoir"], "data": { "sentence": "Ils ___ dans un petit studio. (habiter)", "answers": ["ont habité"], "pl": "Mieszkali w małej kawalerce." } },
-    { "id": "u07-pc-5", "type": "gap-fill", "entryIds": ["u07-pc-avoir"], "data": { "sentence": "Vous ___ le loyer ? (payer)", "answers": ["avez payé"], "pl": "Zapłaciliście czynsz?" } },
+    { "id": "u07-pc-5", "type": "gap-fill", "entryIds": ["u07-pc-avoir"], "data": { "sentence": "Vous ___ le salon ? (décorer)", "answers": ["avez décoré"], "pl": "Udekorowaliście salon?" } },
     { "id": "u07-pc-6", "type": "gap-fill", "entryIds": ["u07-pc-avoir"], "data": { "sentence": "Elle ___ son bureau ce week-end. (ranger)", "answers": ["a rangé"], "pl": "W ten weekend posprzątała swój gabinet." } },
 
-    { "id": "u07-part-1", "type": "gap-fill", "entryIds": ["u07-participes"], "data": { "sentence": "Les voisins ont ___ une fête samedi. (faire)", "answers": ["fait"], "pl": "Sąsiedzi zrobili imprezę w sobotę." } },
-    { "id": "u07-part-2", "type": "gap-fill", "entryIds": ["u07-participes"], "data": { "sentence": "J'ai ___ le bus ce matin. (prendre)", "answers": ["pris"], "pl": "Dziś rano pojechałem autobusem." } },
-    { "id": "u07-part-3", "type": "gap-fill", "entryIds": ["u07-participes"], "data": { "sentence": "Tu as ___ les clés où ? (mettre)", "answers": ["mis"], "pl": "Gdzie położyłeś klucze?" } },
-    { "id": "u07-part-4", "type": "gap-fill", "entryIds": ["u07-participes"], "data": { "sentence": "Nous avons ___ un bel appartement. (voir)", "answers": ["vu"], "pl": "Widzieliśmy ładne mieszkanie." } },
-    { "id": "u07-part-5", "type": "gap-fill", "entryIds": ["u07-participes"], "data": { "sentence": "Il a ___ un problème avec le chauffage. (avoir)", "answers": ["eu"], "pl": "Miał problem z ogrzewaniem." } },
-    { "id": "u07-part-6", "type": "gap-fill", "entryIds": ["u07-participes"], "data": { "sentence": "Le déménagement a ___ difficile. (être)", "answers": ["été"], "pl": "Przeprowadzka była trudna." } },
 
     { "id": "u07-neg-1", "type": "gap-fill", "entryIds": ["u07-pc-negation"], "data": { "sentence": "Je ___ réparé le frigo.", "answers": ["n'ai pas"], "pl": "Nie naprawiłem lodówki.", "clue": "(négation)" } },
     { "id": "u07-neg-2", "type": "gap-fill", "entryIds": ["u07-pc-negation"], "data": { "sentence": "Tu ___ fermé la porte !", "answers": ["n'as pas"], "pl": "Nie zamknąłeś drzwi!", "clue": "(négation)" } },
-    { "id": "u07-neg-3", "type": "gap-fill", "entryIds": ["u07-pc-negation"], "data": { "sentence": "Nous ___ vu le gardien aujourd'hui.", "answers": ["n'avons pas"], "pl": "Nie widzieliśmy dziś dozorcy.", "clue": "(négation)" } },
-    { "id": "u07-neg-4", "type": "gap-fill", "entryIds": ["u07-pc-negation"], "data": { "sentence": "Ils ___ payé le loyer.", "answers": ["n'ont pas"], "pl": "Nie zapłacili czynszu.", "clue": "(négation)" } },
+    { "id": "u07-neg-3", "type": "gap-fill", "entryIds": ["u07-pc-negation"], "data": { "sentence": "Nous ___ visité l'appartement.", "answers": ["n'avons pas"], "pl": "Nie obejrzeliśmy mieszkania.", "clue": "(négation)" } },
+    { "id": "u07-neg-4", "type": "gap-fill", "entryIds": ["u07-pc-negation"], "data": { "sentence": "Ils ___ réparé l'ascenseur.", "answers": ["n'ont pas"], "pl": "Nie naprawili windy.", "clue": "(négation)" } },
 
     { "id": "u07-temps-1", "type": "gap-fill", "entryIds": ["u07-temps-passe"], "data": { "sentence": "J'ai visité l'appartement ___ deux jours.", "answers": ["il y a"], "pl": "Obejrzałem mieszkanie dwa dni temu." } },
     { "id": "u07-temps-2", "type": "gap-fill", "entryIds": ["u07-temps-passe"], "data": { "sentence": "La semaine ___, nous avons acheté un canapé.", "answers": ["dernière"], "pl": "W zeszłym tygodniu kupiliśmy kanapę." } },
-    { "id": "u07-temps-3", "type": "gap-fill", "entryIds": ["u07-temps-passe"], "data": { "sentence": "___, j'ai appelé le propriétaire.", "answers": ["hier"], "pl": "Wczoraj zadzwoniłem do właściciela.", "clue": "(le jour avant aujourd'hui)" } },
+    { "id": "u07-temps-3", "type": "gap-fill", "entryIds": ["u07-temps-passe"], "data": { "sentence": "___, j'ai appelé le plombier.", "answers": ["hier"], "pl": "Wczoraj zadzwoniłem po hydraulika.", "clue": "(le jour avant aujourd'hui)" } },
     { "id": "u07-temps-4", "type": "gap-fill", "entryIds": ["u07-temps-passe"], "data": { "sentence": "Le mois ___, ils ont changé la porte.", "answers": ["dernier"], "pl": "W zeszłym miesiącu wymienili drzwi." } },
 
-    { "id": "u07-lieu-1", "type": "gap-fill", "entryIds": ["u07-lieu-maison"], "data": { "sentence": "La salle de bains est ___ du couloir.", "answers": ["au fond"], "pl": "Łazienka jest na końcu korytarza.", "clue": "(tout au bout)" } },
     { "id": "u07-lieu-2", "type": "gap-fill", "entryIds": ["u07-lieu-maison"], "data": { "sentence": "Ma chambre est ___ étage.", "answers": ["au premier", "au 1er"], "pl": "Mój pokój jest na pierwszym piętrze.", "clue": "(niveau 1)" } },
     { "id": "u07-lieu-3", "type": "gap-fill", "entryIds": ["u07-lieu-maison"], "data": { "sentence": "La cuisine est ___ de l'entrée.", "answers": ["à gauche"], "pl": "Kuchnia jest na lewo od przedpokoju.", "clue": "(←)" } },
-    { "id": "u07-lieu-4", "type": "gap-fill", "entryIds": ["u07-lieu-maison"], "data": { "sentence": "Le gardien habite ___.", "answers": ["au rez-de-chaussée"], "pl": "Dozorca mieszka na parterze.", "clue": "(au niveau de la rue)" } },
+    { "id": "u07-lieu-4", "type": "gap-fill", "entryIds": ["u07-lieu-maison"], "data": { "sentence": "Le local à vélos est ___.", "answers": ["au rez-de-chaussée"], "pl": "Rowerownia jest na parterze.", "clue": "(au niveau de la rue)" } },
     { "id": "u07-lieu-5", "type": "gap-fill", "entryIds": ["u07-lieu-maison"], "data": { "sentence": "Le bureau est ___ du salon.", "answers": ["à droite"], "pl": "Gabinet jest na prawo od salonu.", "clue": "(→)" } },
 
-    { "id": "u07-faut-1", "type": "gap-fill", "entryIds": ["u07-il-faut"], "data": { "sentence": "___ fermer la porte de l'immeuble le soir.", "answers": ["il faut"], "pl": "Wieczorem trzeba zamykać drzwi do budynku.", "clue": "(c'est nécessaire)" } },
-    { "id": "u07-faut-2", "type": "gap-fill", "entryIds": ["u07-il-faut"], "data": { "sentence": "Il ___ respecter le calme après 22 heures.", "answers": ["faut"], "pl": "Po 22 trzeba zachować ciszę." } },
-    { "id": "u07-faut-3", "type": "gap-fill", "entryIds": ["u07-il-faut"], "data": { "sentence": "Il ne ___ pas laisser les vélos dans l'entrée.", "answers": ["faut"], "pl": "Nie wolno zostawiać rowerów w holu." } },
-    { "id": "u07-faut-4", "type": "gap-fill", "entryIds": ["u07-il-faut"], "data": { "sentence": "___ pas fumer dans l'escalier.", "answers": ["il ne faut"], "pl": "Nie wolno palić na klatce schodowej.", "clue": "(ce n'est pas permis)" } },
 
     { "id": "u07-interdit-1", "type": "gap-fill", "entryIds": ["u07-interdiction"], "data": { "sentence": "Il est ___ de fumer dans l'immeuble.", "answers": ["interdit"], "pl": "W budynku zabrania się palić." } },
     { "id": "u07-interdit-2", "type": "gap-fill", "entryIds": ["u07-interdiction"], "data": { "sentence": "Il est interdit ___ laisser les poubelles dans l'entrée.", "answers": ["de"], "pl": "Zabrania się zostawiać śmieci w holu." } },
     { "id": "u07-interdit-3", "type": "gap-fill", "entryIds": ["u07-interdiction"], "data": { "sentence": "___ jeter de papiers dans l'escalier.", "answers": ["ne pas"], "pl": "Nie wyrzucać papierów na schodach.", "clue": "(règlement : ce n'est pas permis)" } },
     { "id": "u07-interdit-4", "type": "gap-fill", "entryIds": ["u07-interdiction"], "data": { "sentence": "___ d'entrer.", "answers": ["défense", "interdiction"], "pl": "Wstęp wzbroniony.", "clue": "(sur un panneau)" } },
 
+    { "id": "u07-interdit-6", "type": "gap-fill", "entryIds": ["u07-interdiction"], "data": { "sentence": "Interdiction ___ fumer dans le hall.", "answers": ["de"], "pl": "Zakaz palenia w holu." } },
+
+    { "id": "u07-merci-1", "type": "gap-fill", "entryIds": ["u07-merci-de"], "data": { "sentence": "___ de fermer la porte de l'immeuble.", "answers": ["merci", "prière"], "pl": "Prosimy zamykać drzwi do budynku.", "clue": "(une demande polie dans un règlement)" } },
+    { "id": "u07-merci-2", "type": "gap-fill", "entryIds": ["u07-merci-de"], "data": { "sentence": "Merci ___ laisser les vélos dans le local à vélos.", "answers": ["de"], "pl": "Prosimy zostawiać rowery w rowerowni." } },
+    { "id": "u07-merci-3", "type": "gap-fill", "entryIds": ["u07-merci-de"], "data": { "sentence": "Prière de ne pas ___ sur la pelouse.", "answers": ["marcher"], "pl": "Prosimy nie chodzić po trawniku.", "clue": "(aller à pied)" } },
+    { "id": "u07-merci-4", "type": "translate-pl-fr", "entryIds": ["u07-merci-de"], "data": { "pl": "prosimy zamykać drzwi", "answers": ["merci de fermer la porte", "prière de fermer la porte"], "hint": { "pl": "regulamin: merci de…", "fr": "règlement : merci de…" } } },
+
     { "id": "u07-cod-1", "type": "gap-fill", "entryIds": ["u07-cod"], "data": { "sentence": "Tu vois le voisin ? — Oui, je ___ vois.", "answers": ["le"], "pl": "Widzisz sąsiada? — Tak, widzę go." } },
-    { "id": "u07-cod-2", "type": "gap-fill", "entryIds": ["u07-cod"], "data": { "sentence": "Tu connais la gardienne ? — Oui, je ___ connais bien.", "answers": ["la"], "pl": "Znasz dozorczynię? — Tak, dobrze ją znam." } },
+    { "id": "u07-cod-2", "type": "gap-fill", "entryIds": ["u07-cod"], "data": { "sentence": "Tu connais la voisine ? — Oui, je ___ connais bien.", "answers": ["la"], "pl": "Znasz sąsiadkę? — Tak, dobrze ją znam." } },
     { "id": "u07-cod-3", "type": "gap-fill", "entryIds": ["u07-cod"], "data": { "sentence": "Où sont les poubelles ? — On ___ sort le mardi.", "answers": ["les"], "pl": "Gdzie są śmieci? — Wystawiamy je we wtorki." } },
-    { "id": "u07-cod-4", "type": "gap-fill", "entryIds": ["u07-cod"], "data": { "sentence": "Le frigo ? Je ne ___ répare pas, j'appelle un réparateur.", "answers": ["le"], "pl": "Lodówka? Nie naprawiam jej, dzwonię po serwisanta." } },
+    { "id": "u07-cod-4", "type": "gap-fill", "entryIds": ["u07-cod"], "data": { "sentence": "Le frigo ? Je ne ___ répare pas, j'appelle un professionnel.", "answers": ["le"], "pl": "Lodówka? Nie naprawiam jej, dzwonię po fachowca." } },
     { "id": "u07-cod-5", "type": "gap-fill", "entryIds": ["u07-cod"], "data": { "sentence": "Les clés ? Je vais ___ chercher.", "answers": ["les"], "pl": "Klucze? Poszukam ich." } },
-    { "id": "u07-cod-6", "type": "gap-fill", "entryIds": ["u07-cod"], "data": { "sentence": "La machine à laver est en panne. Le technicien va ___ réparer demain.", "answers": ["la"], "pl": "Pralka jest zepsuta. Technik naprawi ją jutro." } },
+    { "id": "u07-cod-6", "type": "gap-fill", "entryIds": ["u07-cod"], "data": { "sentence": "La machine à laver est en panne. Mon voisin va ___ réparer demain.", "answers": ["la"], "pl": "Pralka jest zepsuta. Mój sąsiad naprawi ją jutro." } },
 
     { "id": "u07-connaitre-1", "type": "gap-fill", "entryIds": ["u07-connaitre"], "data": { "sentence": "Vous ___ vos voisins ? (connaître)", "answers": ["connaissez"], "pl": "Znacie swoich sąsiadów?" } },
     { "id": "u07-connaitre-2", "type": "gap-fill", "entryIds": ["u07-connaitre"], "data": { "sentence": "Elle ___ un bon plombier. (connaître)", "answers": ["connaît", "connait"], "pl": "Ona zna dobrego hydraulika." } },
     { "id": "u07-connaitre-3", "type": "gap-fill", "entryIds": ["u07-connaitre"], "data": { "sentence": "Nous ne ___ pas encore le quartier. (connaître)", "answers": ["connaissons"], "pl": "Jeszcze nie znamy dzielnicy." } },
     { "id": "u07-connaitre-4", "type": "gap-fill", "entryIds": ["u07-connaitre"], "data": { "sentence": "Je ___ bien cette ville. (connaître)", "answers": ["connais"], "pl": "Dobrze znam to miasto." } },
-    { "id": "u07-connaitre-5", "type": "gap-fill", "entryIds": ["u07-connaitre"], "data": { "sentence": "Ils ___ le propriétaire. (connaître)", "answers": ["connaissent"], "pl": "Oni znają właściciela." } },
+    { "id": "u07-connaitre-5", "type": "gap-fill", "entryIds": ["u07-connaitre"], "data": { "sentence": "Ils ___ la voisine du premier étage. (connaître)", "answers": ["connaissent"], "pl": "Oni znają sąsiadkę z pierwszego piętra." } },
 
     { "id": "u07-chambre-1", "type": "gap-fill", "entryIds": ["u07-chambre"], "data": { "sentence": "Il y a un grand lit dans la ___.", "answers": ["chambre"], "pl": "W sypialni jest duże łóżko.", "clue": "(la pièce où on dort)" } },
     { "id": "u07-chambre-2", "type": "translate-pl-fr", "entryIds": ["u07-chambre"], "data": { "pl": "sypialnia, pokój", "answers": ["une chambre", "la chambre"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
@@ -217,8 +233,8 @@
     { "id": "u07-immeuble-2", "type": "translate-pl-fr", "entryIds": ["u07-immeuble"], "data": { "pl": "budynek, blok", "answers": ["un immeuble", "l'immeuble"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u07-ascenseur-1", "type": "gap-fill", "entryIds": ["u07-ascenseur"], "data": { "sentence": "J'habite au cinquième étage, je prends l'___.", "answers": ["ascenseur"], "pl": "Mieszkam na piątym piętrze, jeżdżę windą.", "clue": "(il monte et descend les étages)" } },
     { "id": "u07-ascenseur-2", "type": "translate-pl-fr", "entryIds": ["u07-ascenseur"], "data": { "pl": "winda", "answers": ["un ascenseur", "l'ascenseur"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u07-loyer-1", "type": "gap-fill", "entryIds": ["u07-loyer"], "data": { "sentence": "Le ___ est de 700 euros par mois.", "answers": ["loyer"], "pl": "Czynsz wynosi 700 euro miesięcznie.", "clue": "(l'argent qu'on paie chaque mois au propriétaire)" } },
-    { "id": "u07-loyer-2", "type": "translate-pl-fr", "entryIds": ["u07-loyer"], "data": { "pl": "czynsz (najmu)", "answers": ["un loyer", "le loyer"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u07-balcon-1", "type": "gap-fill", "entryIds": ["u07-balcon"], "data": { "sentence": "Il fait beau : on mange sur le ___.", "answers": ["balcon"], "pl": "Jest ładnie: jemy na balkonie.", "clue": "(une petite terrasse devant une fenêtre)" } },
+    { "id": "u07-balcon-2", "type": "translate-pl-fr", "entryIds": ["u07-balcon"], "data": { "pl": "balkon", "answers": ["un balcon", "le balcon"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u07-voisin-1", "type": "gap-fill", "entryIds": ["u07-voisin"], "data": { "sentence": "Mon ___ fait souvent du bruit le soir.", "answers": ["voisin"], "pl": "Mój sąsiad często hałasuje wieczorem.", "clue": "(il habite tout près de chez moi)" } },
     { "id": "u07-voisin-2", "type": "translate-pl-fr", "entryIds": ["u07-voisin"], "data": { "pl": "sąsiad", "answers": ["un voisin", "le voisin"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u07-canape-1", "type": "gap-fill", "entryIds": ["u07-canape"], "data": { "sentence": "On regarde la télé, assis sur le ___.", "answers": ["canapé"], "pl": "Oglądamy telewizję, siedząc na kanapie.", "clue": "(un grand siège pour deux ou trois personnes)" } },
@@ -229,36 +245,41 @@
     { "id": "u07-lave-linge-2", "type": "translate-pl-fr", "entryIds": ["u07-lave-linge"], "data": { "pl": "pralka", "answers": ["un lave-linge", "le lave-linge", "une machine à laver", "la machine à laver"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u07-fuite-1", "type": "gap-fill", "entryIds": ["u07-fuite"], "data": { "sentence": "Il y a une ___ d'eau dans la cuisine.", "answers": ["fuite"], "pl": "W kuchni jest wyciek wody.", "clue": "(l'eau sort là où elle ne doit pas sortir)" } },
     { "id": "u07-fuite-2", "type": "translate-pl-fr", "entryIds": ["u07-fuite"], "data": { "pl": "przeciek, wyciek (wody)", "answers": ["une fuite", "la fuite", "une fuite d'eau"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u07-plombier-1", "type": "gap-fill", "entryIds": ["u07-plombier"], "data": { "sentence": "L'évier est bouché : j'appelle le ___.", "answers": ["plombier"], "pl": "Zlew jest zatkany: dzwonię po hydraulika.", "clue": "(il répare les problèmes d'eau)" } },
+    { "id": "u07-plombier-1", "type": "gap-fill", "entryIds": ["u07-plombier"], "data": { "sentence": "Il y a de l'eau sous le lave-linge : j'appelle le ___.", "answers": ["plombier"], "pl": "Pod pralką jest woda: dzwonię po hydraulika.", "clue": "(il répare les problèmes d'eau)" } },
     { "id": "u07-plombier-2", "type": "translate-pl-fr", "entryIds": ["u07-plombier"], "data": { "pl": "hydraulik", "answers": ["un plombier", "le plombier"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
 
     { "id": "u07-pc-7", "type": "translate-pl-fr", "entryIds": ["u07-pc-avoir"], "data": { "pl": "zadzwoniłem do mamy", "answers": ["j'ai appelé ma mère", "j'ai appelé maman", "j'ai téléphoné à ma mère", "j'ai téléphoné à maman"], "hint": { "pl": "passé composé", "fr": "passé composé" } } },
-    { "id": "u07-part-7", "type": "translate-pl-fr", "entryIds": ["u07-participes"], "data": { "pl": "zrobiłem zakupy", "answers": ["j'ai fait les courses", "j'ai fait des courses"], "hint": { "pl": "passé composé", "fr": "passé composé" } } },
-    { "id": "u07-neg-5", "type": "translate-pl-fr", "entryIds": ["u07-pc-negation"], "data": { "pl": "nie zapłaciłem czynszu", "answers": ["je n'ai pas payé le loyer", "je n'ai pas payé mon loyer"], "hint": { "pl": "passé composé", "fr": "passé composé" } } },
+    { "id": "u07-neg-5", "type": "translate-pl-fr", "entryIds": ["u07-pc-negation"], "data": { "pl": "nie zamknąłem okna", "answers": ["je n'ai pas fermé la fenêtre"], "hint": { "pl": "passé composé", "fr": "passé composé" } } },
     { "id": "u07-temps-5", "type": "translate-pl-fr", "entryIds": ["u07-temps-passe"], "data": { "pl": "dwa dni temu", "answers": ["il y a deux jours", "il y a 2 jours"] } },
+    { "id": "u07-lieu-7", "type": "gap-fill", "entryIds": ["u07-lieu-maison"], "data": { "sentence": "La lampe est à côté ___ canapé.", "answers": ["du"], "pl": "Lampa stoi obok kanapy.", "hint": { "pl": "de + le", "fr": "de + le" } } },
+    { "id": "u07-lieu-8", "type": "gap-fill", "entryIds": ["u07-lieu-maison"], "data": { "sentence": "La télévision est ___ le canapé et la fenêtre.", "answers": ["entre"], "pl": "Telewizor stoi między kanapą a oknem.", "clue": "(au milieu de deux choses)" } },
     { "id": "u07-lieu-6", "type": "translate-pl-fr", "entryIds": ["u07-lieu-maison"], "data": { "pl": "na pierwszym piętrze", "answers": ["au premier étage", "au 1er étage"] } },
-    { "id": "u07-faut-5", "type": "translate-pl-fr", "entryIds": ["u07-il-faut"], "data": { "pl": "trzeba zamknąć drzwi", "answers": ["il faut fermer la porte"] } },
     { "id": "u07-interdit-5", "type": "translate-pl-fr", "entryIds": ["u07-interdiction"], "data": { "pl": "zabrania się palić", "answers": ["il est interdit de fumer", "défense de fumer", "interdiction de fumer"], "hint": { "pl": "il est interdit de…", "fr": "il est interdit de…" } } },
     { "id": "u07-cod-7", "type": "translate-pl-fr", "entryIds": ["u07-cod"], "data": { "pl": "znam go", "answers": ["je le connais"] } },
     { "id": "u07-connaitre-6", "type": "translate-pl-fr", "entryIds": ["u07-connaitre"], "data": { "pl": "znacie moich sąsiadów?", "answers": ["vous connaissez mes voisins ?", "est-ce que vous connaissez mes voisins ?", "connaissez-vous mes voisins ?"] } },
 
     { "id": "u07-chambre-3", "type": "gap-fill", "entryIds": ["u07-chambre"], "data": { "sentence": "Notre appartement a deux ___ et un salon.", "answers": ["chambres"], "pl": "Nasze mieszkanie ma dwie sypialnie i salon.", "clue": "(les pièces où on dort)" } },
     { "id": "u07-salle-de-bains-3", "type": "gap-fill", "entryIds": ["u07-salle-de-bains"], "data": { "sentence": "Je me lave les dents dans la ___.", "answers": ["salle de bains", "salle de bain"], "pl": "Myję zęby w łazience.", "clue": "(la pièce où on se lave)" } },
-    { "id": "u07-immeuble-3", "type": "gap-fill", "entryIds": ["u07-immeuble"], "data": { "sentence": "Cet ___ a un ascenseur et un gardien.", "answers": ["immeuble"], "pl": "Ten budynek ma windę i dozorcę.", "clue": "(un grand bâtiment avec des appartements)" } },
+    { "id": "u07-immeuble-3", "type": "gap-fill", "entryIds": ["u07-immeuble"], "data": { "sentence": "Cet ___ a un ascenseur et un local à vélos.", "answers": ["immeuble"], "pl": "Ten budynek ma windę i rowerownię.", "clue": "(un grand bâtiment avec des appartements)" } },
     { "id": "u07-ascenseur-3", "type": "gap-fill", "entryIds": ["u07-ascenseur"], "data": { "sentence": "L'___ est en panne : je monte à pied.", "answers": ["ascenseur"], "pl": "Winda jest zepsuta: wchodzę pieszo.", "clue": "(il monte et descend les étages)" } },
-    { "id": "u07-loyer-3", "type": "gap-fill", "entryIds": ["u07-loyer"], "data": { "sentence": "Je paie mon ___ le premier jour du mois.", "answers": ["loyer"], "pl": "Płacę czynsz pierwszego dnia miesiąca.", "clue": "(l'argent pour le propriétaire)" } },
+    { "id": "u07-balcon-3", "type": "gap-fill", "entryIds": ["u07-balcon"], "data": { "sentence": "Mon appartement est au troisième étage, avec un petit ___.", "answers": ["balcon"], "pl": "Moje mieszkanie jest na trzecim piętrze, z małym balkonem.", "clue": "(on peut sortir dehors, en haut)" } },
     { "id": "u07-voisin-3", "type": "gap-fill", "entryIds": ["u07-voisin"], "data": { "sentence": "Ma ___ du troisième étage est très gentille.", "answers": ["voisine"], "pl": "Moja sąsiadka z trzeciego piętra jest bardzo miła.", "clue": "(elle habite tout près de chez moi)" } },
     { "id": "u07-canape-3", "type": "gap-fill", "entryIds": ["u07-canape"], "data": { "sentence": "Ce soir, mon ami dort sur le ___ du salon.", "answers": ["canapé"], "pl": "Dziś wieczorem mój przyjaciel śpi na kanapie w salonie.", "clue": "(un grand siège pour deux ou trois personnes)" } },
     { "id": "u07-armoire-3", "type": "gap-fill", "entryIds": ["u07-armoire"], "data": { "sentence": "Je range mes pulls dans l'___ de la chambre.", "answers": ["armoire"], "pl": "Chowam swetry do szafy w sypialni.", "clue": "(un grand meuble pour les vêtements)" } },
     { "id": "u07-lave-linge-3", "type": "gap-fill", "entryIds": ["u07-lave-linge"], "data": { "sentence": "Je mets les vêtements sales dans le ___.", "answers": ["lave-linge"], "pl": "Wkładam brudne ubrania do pralki.", "clue": "(une machine pour laver les vêtements)" } },
-    { "id": "u07-fuite-3", "type": "gap-fill", "entryIds": ["u07-fuite"], "data": { "sentence": "Le plombier répare la ___ sous l'évier.", "answers": ["fuite"], "pl": "Hydraulik naprawia przeciek pod zlewem.", "clue": "(l'eau sort là où elle ne doit pas sortir)" } },
+    { "id": "u07-fuite-3", "type": "gap-fill", "entryIds": ["u07-fuite"], "data": { "sentence": "Le plombier répare la ___ dans la salle de bains.", "answers": ["fuite"], "pl": "Hydraulik naprawia przeciek w łazience.", "clue": "(l'eau sort là où elle ne doit pas sortir)" } },
     { "id": "u07-plombier-3", "type": "gap-fill", "entryIds": ["u07-plombier"], "data": { "sentence": "Le ___ vient demain pour réparer la douche.", "answers": ["plombier"], "pl": "Hydraulik przyjdzie jutro naprawić prysznic.", "clue": "(il répare les problèmes d'eau)" } },
+    { "id": "mp-les-lait", "type": "paires-minimales", "entryIds": ["u07-cod"], "data": { "pair": ["Je dis « les ».", "Je dis « lait »."] } },
     { "id": "mp-fais-fait", "type": "paires-minimales", "entryIds": ["u07-pc-avoir"], "data": { "pair": ["Je fais les courses.", "J'ai fait les courses."] } }
   ],
   "boss": {
-    "groups": [["u07-pc-avoir", "u07-participes"], ["u07-pc-negation"], ["u07-cod"], ["u07-connaitre"]],
+    "groups": [["u07-pc-avoir", "u07-pc-negation"], ["u07-interdiction", "u07-merci-de"], ["u07-cod"], ["u07-connaitre"]],
     "questions": 10,
     "lives": 3,
     "secondsPerQuestion": 12
+  },
+  "retiredExercises": {
+    "gap-fill": ["u07-lieu-1", "u07-loyer-1", "u07-loyer-3"],
+    "translate-pl-fr": ["u07-loyer-2"]
   }
 }

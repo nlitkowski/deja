@@ -15,8 +15,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**C'est** + rodzajnik + rzeczownik: c'est **un** musée, c'est **une** amie.\n**Il / Elle est** + przymiotnik albo zawód **bez rodzajnika**: il est grand, elle est médecin.",
-            "fr": "**C'est** + article + nom : c'est **un** musée, c'est **une** amie.\n**Il / Elle est** + adjectif ou profession **sans article** : il est grand, elle est médecin."
+            "pl": "**C'est** + rodzajnik + rzeczownik: c'est **un** musée, c'est **une** amie.\n**Il / Elle est** + przymiotnik albo zawód **bez rodzajnika**: il est grand, elle est professeure.",
+            "fr": "**C'est** + article + nom : c'est **un** musée, c'est **une** amie.\n**Il / Elle est** + adjectif ou profession **sans article** : il est grand, elle est professeure."
           }
         },
         {
@@ -25,7 +25,7 @@
           "rows": [
             ["c'est **un** quartier animé", "il est **animé**"],
             ["c'est **une** belle place", "elle est **belle**"],
-            ["c'est **un** médecin", "il est **médecin**"],
+            ["c'est **un** professeur", "il est **professeur**"],
             ["ce sont **des** monuments célèbres", "ils sont **célèbres**"]
           ]
         },
@@ -39,8 +39,8 @@
         {
           "type": "warning",
           "text": {
-            "pl": "Nie mów « il est un médecin ». Poprawnie: **c'est un médecin** albo **il est médecin**.",
-            "fr": "On ne dit pas « il est un médecin ». On dit **c'est un médecin** ou **il est médecin**."
+            "pl": "Nie mów « il est un professeur ». Poprawnie: **c'est un professeur** albo **il est professeur**.",
+            "fr": "On ne dit pas « il est un professeur ». On dit **c'est un professeur** ou **il est professeur**."
           }
         }
       ]
@@ -192,10 +192,12 @@
           "items": [
             { "fr": "une rue", "pl": "ulica", "def": "voie dans une ville" },
             { "fr": "une avenue / un boulevard", "pl": "aleja / bulwar", "def": "grande rue large" },
+            { "fr": "r. / av. / bd (boul.)", "pl": "ul. / al. / bulw. (skróty na planie)", "def": "rue / avenue / boulevard" },
             { "fr": "une place", "pl": "plac", "def": "espace ouvert entre les bâtiments" },
             { "fr": "un pont", "pl": "most", "def": "il passe au-dessus d'une rivière" },
-            { "fr": "un carrefour", "pl": "skrzyżowanie", "def": "là où deux rues se croisent" },
-            { "fr": "un feu (rouge)", "pl": "światła (sygnalizacja)", "def": "rouge = stop, vert = on passe" },
+            { "fr": "un fleuve", "pl": "rzeka (wpadająca do morza)", "def": "une grande rivière, comme la Seine" },
+            { "fr": "un quai", "pl": "nabrzeże, bulwar nad rzeką", "def": "la rue au bord du fleuve" },
+            { "fr": "une fontaine", "pl": "fontanna", "def": "de l'eau qui sort au milieu d'une place" },
             { "fr": "le centre-ville", "pl": "centrum miasta", "def": "le cœur de la ville" },
             { "fr": "un quartier", "pl": "dzielnica", "def": "une partie de la ville" },
             { "fr": "la banlieue", "pl": "przedmieścia", "def": "les petites villes autour d'une grande ville" }
@@ -206,11 +208,16 @@
           "title": { "pl": "Budynki i zabytki", "fr": "Les bâtiments et les monuments" },
           "items": [
             { "fr": "une gare", "pl": "dworzec", "def": "on y prend le train" },
+            { "fr": "un bâtiment", "pl": "budynek", "def": "une construction : une maison, une école, une gare…" },
             { "fr": "une mairie", "pl": "ratusz, urząd miasta", "def": "le bâtiment du maire" },
+            { "fr": "une poste", "pl": "poczta", "def": "on y envoie des lettres" },
+            { "fr": "une banque", "pl": "bank", "def": "on y met son argent" },
+            { "fr": "un commissariat", "pl": "komisariat (policji)", "def": "le bâtiment de la police" },
+            { "fr": "une école", "pl": "szkoła", "def": "les enfants y apprennent" },
+            { "fr": "un théâtre", "pl": "teatr", "def": "on y regarde une pièce" },
             { "fr": "un musée", "pl": "muzeum", "def": "on y regarde des œuvres d'art" },
             { "fr": "une église", "pl": "kościół", "def": "bâtiment religieux" },
             { "fr": "une bibliothèque", "pl": "biblioteka", "def": "on y emprunte des livres" },
-            { "fr": "un hôpital", "pl": "szpital", "def": "on y soigne les malades" },
             { "fr": "un parc / un jardin", "pl": "park / ogród", "def": "espace vert" }
           ]
         },
@@ -219,8 +226,7 @@
           "title": { "pl": "Ludzie", "fr": "Les personnes" },
           "items": [
             { "fr": "un habitant / une habitante", "pl": "mieszkaniec / mieszkanka", "def": "personne qui habite dans la ville" },
-            { "fr": "un touriste / une touriste", "pl": "turysta / turystka", "def": "personne qui visite la ville" },
-            { "fr": "un passant / une passante", "pl": "przechodzień", "def": "personne qui marche dans la rue" }
+            { "fr": "un touriste / une touriste", "pl": "turysta / turystka", "def": "personne qui visite la ville" }
           ]
         }
       ]
@@ -237,19 +243,23 @@
             { "fr": "le tramway", "pl": "tramwaj" },
             { "fr": "le train", "pl": "pociąg" },
             { "fr": "le vélo", "pl": "rower" },
+            { "fr": "la trottinette", "pl": "hulajnoga", "def": "on dit : à trottinette" },
+            { "fr": "le covoiturage", "pl": "wspólne przejazdy (carpooling)", "def": "plusieurs personnes voyagent dans la même voiture" },
+            { "fr": "les transports en commun", "pl": "komunikacja miejska", "def": "le bus, le métro, le tramway, le train" },
             { "fr": "un arrêt (de bus)", "pl": "przystanek (autobusowy)", "def": "là où le bus s'arrête" },
             { "fr": "une station (de métro)", "pl": "stacja (metra)", "def": "là où le métro s'arrête" },
             { "fr": "une ligne", "pl": "linia", "def": "le trajet d'un bus ou d'un métro (ligne 4)" },
-            { "fr": "une correspondance", "pl": "przesiadka", "def": "on change de ligne" },
             { "fr": "un ticket", "pl": "bilet (komunikacji miejskiej)", "def": "on le paie pour voyager" },
+            { "fr": "une carte de transport", "pl": "karta miejska, bilet okresowy", "def": "une carte pour prendre le bus et le métro tout le mois" },
+            { "fr": "un itinéraire", "pl": "trasa (przejazdu)", "def": "le chemin pour aller d'un endroit à un autre" },
             { "fr": "un plan (de la ville)", "pl": "plan (miasta)", "def": "une carte de la ville" }
           ]
         },
         {
           "type": "rule",
           "text": {
-            "pl": "**en** + pojazd, w którym siedzisz: en bus, en métro, en voiture.\n**à** + gdy jesteś na czymś albo idziesz: à vélo, à pied.",
-            "fr": "**en** + véhicule fermé : en bus, en métro, en voiture.\n**à** + quand on est dessus ou qu'on marche : à vélo, à pied."
+            "pl": "**en** + pojazd, w którym siedzisz: en bus, en métro, en voiture.\n**à** + gdy jesteś na czymś albo idziesz: à vélo, à trottinette, à pied.",
+            "fr": "**en** + véhicule fermé : en bus, en métro, en voiture.\n**à** + quand on est dessus ou qu'on marche : à vélo, à trottinette, à pied."
           }
         }
       ]
@@ -270,14 +280,16 @@
             ["2 000", "deux mille"],
             ["10 000", "dix mille"],
             ["1 000 000", "un million"],
-            ["1 000 000 000", "un milliard"]
+            ["2 000 000", "deux million**s**"],
+            ["1 000 000 000", "un milliard"],
+            ["2 000 000 000", "deux milliard**s**"]
           ]
         },
         {
           "type": "rule",
           "text": {
-            "pl": "**cent** dostaje **-s** tylko jako pełna setka na końcu: deux cent**s**, ale deux cent cinquante.\n**mille** nigdy nie ma **-s**: trois mille.",
-            "fr": "**cent** prend un **-s** seulement à la fin du nombre : deux cent**s**, mais deux cent cinquante.\n**mille** ne prend jamais de **-s** : trois mille."
+            "pl": "**cent** dostaje **-s** tylko jako pełna setka na końcu: deux cent**s**, ale deux cent cinquante.\n**mille** nigdy nie ma **-s**: trois mille.\n**million** i **milliard** to rzeczowniki, więc w liczbie mnogiej mają **-s**: deux million**s**, trois milliard**s**.",
+            "fr": "**cent** prend un **-s** seulement à la fin du nombre : deux cent**s**, mais deux cent cinquante.\n**mille** ne prend jamais de **-s** : trois mille.\n**million** et **milliard** sont des noms : ils prennent un **-s** au pluriel : deux million**s**, trois milliard**s**."
           }
         }
       ]

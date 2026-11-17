@@ -4,8 +4,8 @@
   "title": "Bonnes vacances !",
   "icon": "🌴",
   "summary": {
-    "pl": "Wakacje, podróże i przyroda: porównania, przyimki przed nazwami miast i krajów, passé composé z être, c'était / il y avait / il faisait, wyrażanie preferencji.",
-    "fr": "Les vacances, les voyages et la nature : la comparaison, les prépositions devant les villes et les pays, le passé composé avec être, c'était / il y avait / il faisait, la préférence."
+    "pl": "Wakacje, podróże i przyroda: porównania, skąd? de / du / des przed nazwami miast i krajów, passé composé z être, c'était / il y avait / il faisait, wyrażanie preferencji.",
+    "fr": "Les vacances, les voyages et la nature : la comparaison, d'où ? de / du / des devant les villes et les pays, le passé composé avec être, c'était / il y avait / il faisait, la préférence."
   },
   "sections": [
     {
@@ -57,40 +57,40 @@
     },
     {
       "kind": "grammar",
-      "title": "Les prépositions avec les villes et les pays",
+      "title": "Venir de : de, du, des + ville, pays",
       "blocks": [
         {
           "type": "rule",
           "text": {
-            "pl": "Gdzie? / Dokąd? → **à** + miasto, **en** + kraj rodzaju żeńskiego (zwykle na **-e**) albo zaczynający się od samogłoski, **au** + kraj rodzaju męskiego, **aux** + kraj w liczbie mnogiej.\nSkąd? → **de / d'** + miasto lub kraj żeński, **du** + kraj męski, **des** + liczba mnoga.",
-            "fr": "Où ? → **à** + ville, **en** + pays féminin (souvent en **-e**) ou pays qui commence par une voyelle, **au** + pays masculin, **aux** + pays pluriel.\nD'où ? → **de / d'** + ville ou pays féminin, **du** + pays masculin, **des** + pays pluriel."
+            "pl": "W unité 1 poznałeś: gdzie? / dokąd? → **à** + miasto, **en** + kraj żeński, **au** + kraj męski, **aux** + liczba mnoga.\nSkąd? (po **venir**, **arriver**, **revenir**) → **de** + miasto lub kraj żeński, **d'** przed samogłoską, **du** + kraj męski, **des** + liczba mnoga.",
+            "fr": "Dans l'unité 1 : où ? → **à** + ville, **en** + pays féminin, **au** + pays masculin, **aux** + pays pluriel.\nD'où ? (après **venir**, **arriver**, **revenir**) → **de** + ville ou pays féminin, **d'** devant une voyelle, **du** + pays masculin, **des** + pays pluriel."
           }
         },
         {
           "type": "table",
-          "head": ["", "aller, habiter, être…", "venir, rentrer, arriver…"],
+          "head": ["", "aller, habiter, être…", "venir, arriver, revenir…"],
           "rows": [
-            ["ville", "**à** Rome", "**de** Rome / **d'**Athènes"],
+            ["ville", "**à** Lyon", "**de** Lyon / **d'**Amsterdam"],
             ["la France, la Pologne", "**en** France", "**de** France"],
-            ["l'Italie, l'Iran", "**en** Italie", "**d'**Italie"],
-            ["le Portugal, le Japon", "**au** Portugal", "**du** Portugal"],
+            ["l'Algérie, l'Inde", "**en** Algérie", "**d'**Algérie"],
+            ["le Japon, le Canada", "**au** Japon", "**du** Japon"],
             ["les États-Unis, les Pays-Bas", "**aux** États-Unis", "**des** États-Unis"]
           ]
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "Je viens **de** Pologne, mais j'habite **en** Espagne.", "pl": "Pochodzę z Polski, ale mieszkam w Hiszpanii." },
-            { "fr": "Cet été, nous allons **au** Canada.", "pl": "Tego lata jedziemy do Kanady." },
+            { "fr": "Je viens **de** Pologne, mais j'habite **en** France.", "pl": "Pochodzę z Polski, ale mieszkam we Francji." },
+            { "fr": "Mon ami revient **du** Canada samedi.", "pl": "Mój przyjaciel wraca z Kanady w sobotę." },
             { "fr": "Elle arrive **des** Pays-Bas demain.", "pl": "Ona przyjeżdża jutro z Holandii." },
-            { "fr": "Ils passent une semaine **à** Lisbonne.", "pl": "Spędzają tydzień w Lizbonie." }
+            { "fr": "Karim vient **d'**Algérie.", "pl": "Karim pochodzi z Algierii." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Po polsku „w Polsce” i „do Polski” to różne formy, a po francusku jedna: **en Pologne**. „Z Polski” to **de Pologne** (bez rodzajnika).\nWyjątki: **le Mexique**, **le Cambodge** są rodzaju męskiego mimo **-e** → **au** Mexique.",
-            "fr": "Une seule forme pour « où » et « vers où » : **en Pologne**. Pour l'origine : **de Pologne** (sans article).\nExceptions : **le Mexique**, **le Cambodge** sont masculins → **au** Mexique."
+            "pl": "Z krajem żeńskim bez rodzajnika: **de** Pologne, **de** France (nie « de la France »).\nUwaga na **le Mexique**: rodzaj męski mimo **-e** → **du** Mexique.",
+            "fr": "Avec un pays féminin, pas d'article : **de** Pologne, **de** France (pas « de la France »).\nAttention : **le Mexique** est masculin → **du** Mexique."
           }
         }
       ]
@@ -102,8 +102,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "Czasowniki podróży: **aller, venir, partir, arriver, rester, rentrer, sortir, monter, descendre** tworzą passé composé z **être**.\nImiesłów zgadza się z podmiotem: +**e** (rodzaj żeński), +**s** (liczba mnoga).",
-            "fr": "Les verbes du voyage **aller, venir, partir, arriver, rester, rentrer, sortir, monter, descendre** forment le passé composé avec **être**.\nLe participe s'accorde avec le sujet : +**e** au féminin, +**s** au pluriel."
+            "pl": "W unité 8 poznałeś **je suis allé(e)**. Tak samo tworzą passé composé z **être** inne czasowniki ruchu: **venir, partir, arriver, rester, rentrer, sortir, monter, descendre, tomber**.\nImiesłów zgadza się z podmiotem: +**e** (rodzaj żeński), +**s** (liczba mnoga).",
+            "fr": "Dans l'unité 8 : **je suis allé(e)**. Les autres verbes de mouvement **venir, partir, arriver, rester, rentrer, sortir, monter, descendre, tomber** forment aussi le passé composé avec **être**.\nLe participe s'accorde avec le sujet : +**e** au féminin, +**s** au pluriel."
           }
         },
         {
@@ -124,7 +124,8 @@
             { "fr": "L'été dernier, je **suis allée** en Croatie.", "pl": "Zeszłego lata pojechałam do Chorwacji." },
             { "fr": "Nous **sommes partis** le 2 août et nous **sommes rentrés** le 20.", "pl": "Wyjechaliśmy 2 sierpnia i wróciliśmy 20." },
             { "fr": "Le train **est arrivé** à Nice à midi.", "pl": "Pociąg przyjechał do Nicei w południe." },
-            { "fr": "Mes amies **sont restées** une semaine à la montagne.", "pl": "Moje przyjaciółki zostały tydzień w górach." }
+            { "fr": "Mes amies **sont restées** une semaine à la montagne.", "pl": "Moje przyjaciółki zostały tydzień w górach." },
+            { "fr": "Léa **est tombée** à vélo.", "pl": "Lea spadła z roweru." }
           ]
         },
         {
@@ -238,10 +239,10 @@
             { "fr": "un hôtel", "pl": "hotel" },
             { "fr": "un camping", "pl": "kemping, pole namiotowe", "def": "on dort sous une tente" },
             { "fr": "une tente", "pl": "namiot" },
-            { "fr": "une auberge de jeunesse", "pl": "schronisko młodzieżowe, hostel", "def": "hébergement pas cher pour les jeunes" },
             { "fr": "une chambre d'hôtes", "pl": "pokój gościnny (u gospodarzy)", "def": "on dort chez un habitant" },
-            { "fr": "un gîte", "pl": "dom wakacyjny na wsi", "def": "maison de vacances à louer" },
-            { "fr": "une location", "pl": "wynajem, wynajmowane mieszkanie", "def": "un appartement qu'on loue" }
+            { "fr": "une location", "pl": "wynajem, wynajmowane mieszkanie", "def": "un appartement qu'on loue" },
+            { "fr": "l'échange d'appartements / de maisons", "pl": "zamiana mieszkań / domów", "def": "on habite chez quelqu'un, il habite chez nous" },
+            { "fr": "une ferme", "pl": "gospodarstwo, farma", "def": "une maison à la campagne, avec des animaux" }
           ]
         },
         {
@@ -250,9 +251,13 @@
           "items": [
             { "fr": "réserver", "pl": "zarezerwować" },
             { "fr": "une chambre simple / double", "pl": "pokój jednoosobowy / dwuosobowy" },
+            { "fr": "une chambre familiale", "pl": "pokój rodzinny", "def": "pour les parents et les enfants" },
+            { "fr": "un lit simple / double / bébé", "pl": "łóżko pojedyncze / podwójne / łóżeczko dziecięce" },
+            { "fr": "l'arrivée / le départ", "pl": "przyjazd / wyjazd" },
+            { "fr": "un parking", "pl": "parking" },
+            { "fr": "animaux acceptés", "pl": "zwierzęta mile widziane", "def": "on peut venir avec son chien ou son chat" },
             { "fr": "une nuit", "pl": "noc (nocleg)" },
             { "fr": "le petit-déjeuner compris", "pl": "śniadanie wliczone w cenę", "def": "on ne paie pas en plus" },
-            { "fr": "la réception", "pl": "recepcja", "def": "on y arrive et on y paie" },
             { "fr": "la clé", "pl": "klucz" },
             { "fr": "complet / complète", "pl": "pełny, brak miejsc", "def": "il n'y a plus de chambre" },
             { "fr": "libre", "pl": "wolny" }
@@ -266,17 +271,17 @@
             { "fr": "le train", "pl": "pociąg" },
             { "fr": "la voiture", "pl": "samochód" },
             { "fr": "le bateau", "pl": "statek, łódź" },
-            { "fr": "le car", "pl": "autokar", "def": "bus pour aller d'une ville à une autre" },
+            { "fr": "le van", "pl": "van, kamper", "def": "une petite maison sur roues" },
             { "fr": "le vélo", "pl": "rower" },
             { "fr": "un billet", "pl": "bilet (na pociąg, samolot)" },
-            { "fr": "une valise", "pl": "walizka" }
+            { "fr": "un aéroport", "pl": "lotnisko", "def": "les avions partent et arrivent ici" }
           ]
         },
         {
           "type": "rule",
           "text": {
-            "pl": "**en** + pojazd zamknięty: en avion, en train, en voiture, en bateau, en car.\n**à** + gdy jesteś na czymś albo idziesz: à vélo, à pied.",
-            "fr": "**en** + véhicule fermé : en avion, en train, en voiture, en bateau, en car.\n**à** + quand on est dessus ou qu'on marche : à vélo, à pied."
+            "pl": "**en** + pojazd zamknięty: en avion, en train, en voiture, en bateau, en van.\n**à** + gdy jesteś na czymś albo idziesz: à vélo, à pied.",
+            "fr": "**en** + véhicule fermé : en avion, en train, en voiture, en bateau, en van.\n**à** + quand on est dessus ou qu'on marche : à vélo, à pied."
           }
         },
         {
@@ -286,9 +291,13 @@
             { "fr": "se baigner", "pl": "kąpać się (w morzu, jeziorze)", "def": "aller dans l'eau" },
             { "fr": "bronzer", "pl": "opalać się", "def": "rester au soleil" },
             { "fr": "visiter un musée", "pl": "zwiedzać muzeum" },
+            { "fr": "visiter un village", "pl": "zwiedzać wioskę" },
+            { "fr": "prendre des photos", "pl": "robić zdjęcia" },
+            { "fr": "goûter la cuisine locale", "pl": "próbować lokalnej kuchni" },
+            { "fr": "faire du surf", "pl": "surfować" },
+            { "fr": "faire du bateau", "pl": "pływać łódką" },
             { "fr": "faire du ski", "pl": "jeździć na nartach" },
             { "fr": "faire de la plongée", "pl": "nurkować", "def": "nager sous l'eau" },
-            { "fr": "faire du camping", "pl": "biwakować" },
             { "fr": "se reposer", "pl": "odpoczywać" }
           ]
         }
@@ -305,9 +314,8 @@
             { "fr": "une forêt", "pl": "las", "def": "beaucoup d'arbres" },
             { "fr": "un lac", "pl": "jezioro" },
             { "fr": "une rivière", "pl": "rzeka" },
-            { "fr": "une colline", "pl": "wzgórze", "def": "petite montagne" },
-            { "fr": "une vallée", "pl": "dolina", "def": "entre deux montagnes" },
             { "fr": "un champ", "pl": "pole", "def": "on y cultive du blé, du maïs" },
+            { "fr": "un chemin", "pl": "ścieżka, droga", "def": "une petite route à pied, dans la nature" },
             { "fr": "un paysage", "pl": "krajobraz", "def": "ce qu'on voit dans la nature" }
           ]
         },
@@ -329,9 +337,11 @@
             { "fr": "un poisson", "pl": "ryba" },
             { "fr": "une vache", "pl": "krowa" },
             { "fr": "un cheval / des chevaux", "pl": "koń / konie" },
-            { "fr": "un mouton", "pl": "owca" },
             { "fr": "un lapin", "pl": "królik" },
-            { "fr": "un ours", "pl": "niedźwiedź" }
+            { "fr": "un canard", "pl": "kaczka" },
+            { "fr": "une poule", "pl": "kura" },
+            { "fr": "un chat", "pl": "kot" },
+            { "fr": "un chien", "pl": "pies" }
           ]
         },
         {
@@ -340,10 +350,7 @@
           "items": [
             { "fr": "se promener", "pl": "spacerować" },
             { "fr": "faire une randonnée", "pl": "wybrać się na wędrówkę", "def": "une longue promenade à pied" },
-            { "fr": "pique-niquer", "pl": "urządzić piknik", "def": "manger dehors, dans l'herbe" },
-            { "fr": "faire du kayak", "pl": "pływać kajakiem" },
-            { "fr": "observer les oiseaux", "pl": "obserwować ptaki" },
-            { "fr": "cueillir des fleurs", "pl": "zbierać kwiaty" }
+            { "fr": "pique-niquer", "pl": "urządzić piknik", "def": "manger dehors, dans l'herbe" }
           ]
         },
         {
@@ -353,8 +360,7 @@
             { "fr": "magnifique", "pl": "wspaniały", "def": "très beau" },
             { "fr": "sauvage", "pl": "dziki", "def": "sans maisons, sans routes" },
             { "fr": "calme", "pl": "spokojny" },
-            { "fr": "vert(e)", "pl": "zielony" },
-            { "fr": "ensoleillé(e)", "pl": "słoneczny", "def": "avec beaucoup de soleil" }
+            { "fr": "vert(e)", "pl": "zielony" }
           ]
         }
       ]
@@ -376,7 +382,7 @@
         },
         {
           "type": "examples",
-          "title": { "pl": "Recepcja", "fr": "La réception" },
+          "title": { "pl": "Hotel", "fr": "L'hôtel" },
           "items": [
             { "fr": "Pour combien de personnes ?", "pl": "Dla ilu osób?" },
             { "fr": "C'est à quel nom ?", "pl": "Na jakie nazwisko?" },
@@ -396,10 +402,10 @@
           "items": [
             { "fr": "C'est une ville ancienne et très animée.", "pl": "To stare i bardzo tętniące życiem miasto." },
             { "fr": "Il y a beaucoup de monuments et de musées.", "pl": "Jest tam dużo zabytków i muzeów." },
-            { "fr": "Le Portugal est plus petit que l'Espagne.", "pl": "Portugalia jest mniejsza niż Hiszpania." },
+            { "fr": "La Belgique est plus petite que la France.", "pl": "Belgia jest mniejsza niż Francja." },
             { "fr": "En été, il fait chaud et il y a beaucoup de touristes.", "pl": "Latem jest gorąco i jest dużo turystów." },
             { "fr": "C'est un paysage sauvage, avec des lacs et des forêts.", "pl": "To dziki krajobraz z jeziorami i lasami." },
-            { "fr": "On peut se baigner, faire du kayak et se promener.", "pl": "Można się kąpać, pływać kajakiem i spacerować." }
+            { "fr": "On peut se baigner, faire du bateau et se promener.", "pl": "Można się kąpać, pływać łódką i spacerować." }
           ]
         }
       ]

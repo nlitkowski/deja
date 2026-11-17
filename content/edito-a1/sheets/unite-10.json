@@ -4,19 +4,19 @@
   "title": "Au travail !",
   "icon": "💼",
   "summary": {
-    "pl": "Studia, praca i kompetencje: zaimki dopełnienia me, te, nous, vous, czas trwania (depuis, il y a, pendant), encore / toujours / ne… plus, zaimki względne qui i que, stopniowanie intensywności.",
-    "fr": "Les études, le travail et les compétences : les pronoms COD me, te, nous, vous, la durée (depuis, il y a, pendant), encore / toujours / ne… plus, les pronoms relatifs qui et que, l'intensité."
+    "pl": "Studia i praca: zaimki dopełnienia me, te, nous, vous, czas trwania (pendant, longtemps), ciągłość (toujours), zaimki względne qui i que, intensywność (un peu, assez, très, beaucoup, trop).",
+    "fr": "Les études et le travail : les pronoms COD me, te, nous, vous, la durée (pendant, longtemps), la continuité (toujours), les pronoms relatifs qui et que, l'intensité (un peu, assez, très, beaucoup, trop)."
   },
   "sections": [
     {
       "kind": "grammar",
-      "title": "Les pronoms COD",
+      "title": "Les pronoms COD me, te, nous, vous",
       "blocks": [
         {
           "type": "rule",
           "text": {
-            "pl": "Zaimek dopełnienia bliższego (COD) zastępuje osobę lub rzecz bez przyimka i stoi **przed czasownikiem**: Le directeur **nous** attend.\nPrzed samogłoską: **me** → **m'**, **te** → **t'**, **le / la** → **l'**.",
-            "fr": "Le pronom COD remplace une personne ou une chose sans préposition. Il se place **avant le verbe** : Le directeur **nous** attend.\nDevant une voyelle : **me** → **m'**, **te** → **t'**, **le / la** → **l'**."
+            "pl": "Zaimek dopełnienia bliższego (COD) zastępuje osobę bez przyimka i stoi **przed czasownikiem**: Le directeur **nous** attend.\nPrzed samogłoską: **me** → **m'**, **te** → **t'**.\nW unité 7 poznałeś **le / la / l' / les**.",
+            "fr": "Le pronom COD remplace une personne sans préposition. Il se place **avant le verbe** : Le directeur **nous** attend.\nDevant une voyelle : **me** → **m'**, **te** → **t'**.\nDans l'unité 7 : **le / la / l' / les**."
           }
         },
         {
@@ -25,97 +25,61 @@
           "rows": [
             ["je", "**me / m'**", "Ma collègue **m'**aide."],
             ["tu", "**te / t'**", "Je **te** comprends."],
-            ["il", "le / l'", "Ce client, je **le** connais."],
-            ["elle", "la / l'", "La réunion ? Je **la** prépare."],
             ["nous", "**nous**", "Le chef **nous** écoute."],
-            ["vous", "**vous**", "Je **vous** attends à 9 h."],
-            ["ils / elles", "les", "Mes collègues, je **les** vois tous les jours."]
+            ["vous", "**vous**", "Je **vous** attends à 9 h."]
           ]
         },
         {
-          "type": "table",
-          "title": { "pl": "Miejsce zaimka", "fr": "La place du pronom" },
-          "head": ["", "exemple"],
-          "rows": [
-            ["négation", "Il **ne m'**appelle **pas**."],
-            ["verbe + infinitif", "Je vais **vous** aider."],
-            ["impératif (+)", "Appelle-**moi** ! Aidez-**nous** !"],
-            ["impératif (−)", "**Ne m'**appelle **pas** !"]
+          "type": "examples",
+          "items": [
+            { "fr": "Paul ne **me** comprend pas.", "pl": "Paweł mnie nie rozumie." },
+            { "fr": "Tu as un problème ? Je **t'**appelle ce soir.", "pl": "Masz problem? Zadzwonię do ciebie wieczorem." },
+            { "fr": "Vous avez beaucoup de travail ? Je vais **vous** aider.", "pl": "Macie dużo pracy? Pomogę wam." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Po polsku zaimek stoi po czasowniku („rozumiem cię”), po francusku **przed**: je **te** comprends.\nUwaga na czasowniki z innym przypadkiem w polszczyźnie: **aider** qqn (pomagać komuś), **attendre** qqn (czekać na kogoś), **appeler** qqn (dzwonić do kogoś): je **t'**aide, je **vous** attends, je **t'**appelle.",
-            "fr": "Le pronom est **avant** le verbe : je **te** comprends.\nAvec **aider**, **attendre**, **appeler**, **écouter**, on utilise un COD : je **t'**aide, je **vous** attends, je **t'**appelle."
+            "pl": "Po polsku zaimek stoi po czasowniku („rozumiem cię”), po francusku **przed**: je **te** comprends. Z przeczeniem: il **ne m'**appelle **pas**.\nUwaga na czasowniki z innym przypadkiem w polszczyźnie: **aider** qqn (pomagać komuś), **attendre** qqn (czekać na kogoś), **appeler** qqn (dzwonić do kogoś): je **t'**aide, je **vous** attends, je **t'**appelle.",
+            "fr": "Le pronom est **avant** le verbe : je **te** comprends. Avec la négation : il **ne m'**appelle **pas**.\nAvec **aider**, **attendre**, **appeler**, **écouter**, on utilise un COD : je **t'**aide, je **vous** attends, je **t'**appelle."
           }
         }
       ]
     },
     {
       "kind": "grammar",
-      "title": "La durée : depuis, il y a, pendant",
+      "title": "La durée et la continuité : pendant, longtemps, toujours",
       "blocks": [
         {
           "type": "rule",
           "text": {
-            "pl": "**depuis** + czas teraźniejszy: czynność trwa nadal („od”).\n**il y a** + passé composé: moment w przeszłości („temu”).\n**pendant**: zamknięty okres („przez”).",
-            "fr": "**depuis** + présent : l'action continue aujourd'hui.\n**il y a** + passé composé : un moment précis dans le passé.\n**pendant** : une durée terminée (ou limitée)."
+            "pl": "**pendant** + czas: jak długo trwała czynność („przez”): pendant six mois.\n**longtemps** = „długo”, stoi sam, bez rzeczownika: la réunion a duré **longtemps**.\n**toujours** = „nadal, wciąż”: czynność trwa dalej: il travaille **toujours** ici.",
+            "fr": "**pendant** + durée : combien de temps dure l'action : pendant six mois.\n**longtemps** = pendant beaucoup de temps, sans nom : la réunion a duré **longtemps**.\n**toujours** : l'action continue aujourd'hui : il travaille **toujours** ici."
           }
         },
         {
           "type": "table",
           "head": ["", "exemple"],
           "rows": [
-            ["depuis + durée", "Je travaille ici **depuis** trois ans."],
-            ["depuis + date", "Il est au chômage **depuis** janvier."],
-            ["il y a", "J'ai fini mes études **il y a** deux ans."],
-            ["pendant", "J'ai fait un stage **pendant** six mois."]
+            ["pendant + durée", "J'ai fait un stage **pendant** six mois."],
+            ["longtemps", "Tu as habité **longtemps** à Paris ?"],
+            ["toujours", "Tu travailles **toujours** chez Renault ?"]
           ]
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "Elle étudie le droit **depuis** 2023.", "pl": "Ona studiuje prawo od 2023 roku." },
-            { "fr": "Nous avons commencé le projet **il y a** une semaine.", "pl": "Zaczęliśmy projekt tydzień temu." },
             { "fr": "Il a travaillé à Londres **pendant** cinq ans.", "pl": "Pracował w Londynie przez pięć lat." },
-            { "fr": "Tu es étudiant **depuis** combien de temps ?", "pl": "Od jak dawna jesteś studentem?" }
+            { "fr": "Ce matin, nous avons travaillé **pendant** trois heures.", "pl": "Dziś rano pracowaliśmy przez trzy godziny." },
+            { "fr": "La réunion a duré **longtemps**.", "pl": "Zebranie trwało długo." },
+            { "fr": "Elle est **toujours** étudiante ? — Oui, elle finit son master en juin.", "pl": "Ona nadal jest studentką? — Tak, kończy studia magisterskie w czerwcu." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "„Pracuję tu od trzech lat” – czynność trwa, więc czas **teraźniejszy**: je **travaille** ici depuis trois ans (nie « j'ai travaillé depuis »).\n**Il y a** + czas = „temu”, nie „jest”.",
-            "fr": "L'action continue : on utilise le **présent** avec **depuis** : je **travaille** ici depuis trois ans.\n**Il y a** + durée indique un moment passé."
-          }
-        }
-      ]
-    },
-    {
-      "kind": "grammar",
-      "title": "Encore, toujours, ne… plus",
-      "blocks": [
-        {
-          "type": "rule",
-          "text": {
-            "pl": "**encore** / **toujours** = „wciąż, nadal” (czynność trwa).\n**ne** + czasownik + **plus** = „już nie” (czynność się skończyła).",
-            "fr": "**encore** / **toujours** : l'action continue.\n**ne** + verbe + **plus** : l'action est terminée."
-          }
-        },
-        {
-          "type": "examples",
-          "items": [
-            { "fr": "Tu travailles **encore** chez Renault ?", "pl": "Nadal pracujesz w Renault?" },
-            { "fr": "Oui, j'y travaille **toujours**.", "pl": "Tak, wciąż tam pracuję." },
-            { "fr": "Non, je **n'**y travaille **plus**.", "pl": "Nie, już tam nie pracuję." },
-            { "fr": "Elle **n'**est **plus** étudiante, elle est ingénieure.", "pl": "Ona nie jest już studentką, jest inżynierką." }
-          ]
-        },
-        {
-          "type": "warning",
-          "text": {
-            "pl": "**toujours** znaczy też „zawsze” – sens wynika z kontekstu.\nNie mów « je ne travaille pas plus ». Poprawnie: **je ne travaille plus** (bez **pas**).",
-            "fr": "**toujours** peut aussi signifier « tout le temps ».\nOn ne dit pas « je ne travaille pas plus ». On dit **je ne travaille plus** (sans **pas**)."
+            "pl": "**pendant** wymaga określenia czasu (pendant deux heures), a **longtemps** stoi samo: elle a dormi **longtemps**.\n**toujours** znaczy też „zawsze” (unité 4): je prends **toujours** le métro. Sens wynika z kontekstu.",
+            "fr": "**pendant** + une durée (pendant deux heures) ; **longtemps** s'utilise seul : elle a dormi **longtemps**.\n**toujours** peut aussi signifier « tout le temps » (unité 4) : je prends **toujours** le métro."
           }
         }
       ]
@@ -134,9 +98,9 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "J'ai un patron **qui** est très sympa.", "pl": "Mam szefa, który jest bardzo sympatyczny." },
-            { "fr": "C'est une entreprise **qui** recrute des stagiaires.", "pl": "To firma, która rekrutuje stażystów." },
-            { "fr": "Le cours **que** je préfère, c'est l'histoire.", "pl": "Zajęcia, które najbardziej lubię, to historia." },
+            { "fr": "J'ai une directrice **qui** est très sympa.", "pl": "Mam dyrektorkę, która jest bardzo sympatyczna." },
+            { "fr": "C'est une entreprise **qui** cherche des informaticiens.", "pl": "To firma, która szuka informatyków." },
+            { "fr": "Le métier **que** je préfère, c'est libraire.", "pl": "Zawód, który najbardziej lubię, to księgarz." },
             { "fr": "Voici le rapport **qu'**on doit lire.", "pl": "Oto raport, który musimy przeczytać." }
           ]
         },
@@ -160,21 +124,20 @@
             { "fr": "assez", "pl": "dość, wystarczająco", "def": "ce qu'il faut" },
             { "fr": "très", "pl": "bardzo (+ przymiotnik)", "def": "+ adjectif ou adverbe" },
             { "fr": "beaucoup", "pl": "bardzo, dużo (+ czasownik)", "def": "+ verbe ; beaucoup de + nom" },
-            { "fr": "vraiment", "pl": "naprawdę", "def": "pour insister" },
             { "fr": "trop", "pl": "za, zbyt", "def": "plus que nécessaire (négatif)" }
           ]
         },
         {
           "type": "rule",
           "text": {
-            "pl": "**très / trop / assez / un peu / vraiment** + przymiotnik: c'est **très** intéressant.\n**beaucoup** po czasowniku: je travaille **beaucoup**. Z rzeczownikiem: **beaucoup de** travail, **trop de** réunions.",
-            "fr": "**très / trop / assez / un peu / vraiment** + adjectif : c'est **très** intéressant.\n**beaucoup** après le verbe : je travaille **beaucoup**. Avec un nom : **beaucoup de** travail, **trop de** réunions."
+            "pl": "**très / trop / assez / un peu** + przymiotnik: c'est **très** intéressant.\n**beaucoup** po czasowniku: je travaille **beaucoup**. Z rzeczownikiem: **beaucoup de** travail, **trop de** réunions.",
+            "fr": "**très / trop / assez / un peu** + adjectif : c'est **très** intéressant.\n**beaucoup** après le verbe : je travaille **beaucoup**. Avec un nom : **beaucoup de** travail, **trop de** réunions."
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "Mon travail est **vraiment** intéressant.", "pl": "Moja praca jest naprawdę ciekawa." },
+            { "fr": "Mon travail est **très** intéressant.", "pl": "Moja praca jest bardzo ciekawa." },
             { "fr": "Le salaire n'est pas **assez** élevé.", "pl": "Pensja nie jest wystarczająco wysoka." },
             { "fr": "Le bureau est **trop** loin de chez moi.", "pl": "Biuro jest za daleko od mojego domu." },
             { "fr": "Je suis **un peu** stressé avant l'examen.", "pl": "Jestem trochę zestresowany przed egzaminem." },
@@ -201,9 +164,10 @@
             { "fr": "un campus", "pl": "kampus", "def": "le terrain et les bâtiments de l'université" },
             { "fr": "un amphithéâtre (un amphi)", "pl": "aula wykładowa", "def": "grande salle pour les cours" },
             { "fr": "une salle de cours", "pl": "sala zajęć" },
-            { "fr": "la bibliothèque universitaire (la BU)", "pl": "biblioteka uniwersytecka" },
             { "fr": "le restaurant universitaire (le resto U)", "pl": "stołówka studencka" },
-            { "fr": "une résidence universitaire", "pl": "akademik", "def": "les étudiants y habitent" }
+            { "fr": "une résidence universitaire", "pl": "akademik", "def": "les étudiants y habitent" },
+            { "fr": "un logement étudiant", "pl": "mieszkanie studenckie" },
+            { "fr": "le secrétariat", "pl": "sekretariat, dziekanat", "def": "le bureau où on s'inscrit et où on pose des questions" }
           ]
         },
         {
@@ -211,6 +175,9 @@
           "title": { "pl": "Studia", "fr": "Les études" },
           "items": [
             { "fr": "s'inscrire à l'université", "pl": "zapisać się na studia" },
+            { "fr": "faire des études", "pl": "studiować" },
+            { "fr": "faire un stage", "pl": "odbywać staż" },
+            { "fr": "une formation", "pl": "kurs, szkolenie; wykształcenie", "def": "des cours pour apprendre un métier" },
             { "fr": "une licence", "pl": "licencjat", "def": "diplôme après trois ans d'études" },
             { "fr": "un master", "pl": "studia magisterskie", "def": "deux ans après la licence" },
             { "fr": "un doctorat", "pl": "doktorat" },
@@ -218,8 +185,7 @@
             { "fr": "un cours", "pl": "zajęcia, wykład" },
             { "fr": "un examen", "pl": "egzamin" },
             { "fr": "une note", "pl": "ocena", "def": "par exemple 15 sur 20" },
-            { "fr": "réussir / rater un examen", "pl": "zdać / oblać egzamin" },
-            { "fr": "un semestre", "pl": "semestr" }
+            { "fr": "réussir un examen", "pl": "zdać egzamin" }
           ]
         },
         {
@@ -228,8 +194,7 @@
           "items": [
             { "fr": "un étudiant / une étudiante", "pl": "student / studentka" },
             { "fr": "un professeur / une professeure", "pl": "wykładowca / wykładowczyni, profesor" },
-            { "fr": "un enseignant / une enseignante", "pl": "nauczyciel / nauczycielka", "def": "personne qui donne des cours" },
-            { "fr": "un camarade / une camarade", "pl": "kolega / koleżanka z roku" }
+            { "fr": "un enseignant / une enseignante", "pl": "nauczyciel / nauczycielka", "def": "personne qui donne des cours" }
           ]
         },
         {
@@ -237,14 +202,11 @@
           "title": { "pl": "Kierunki", "fr": "Les disciplines" },
           "items": [
             { "fr": "le droit", "pl": "prawo" },
-            { "fr": "la médecine", "pl": "medycyna" },
             { "fr": "l'économie", "pl": "ekonomia" },
             { "fr": "l'informatique", "pl": "informatyka" },
-            { "fr": "les langues", "pl": "języki" },
-            { "fr": "l'histoire", "pl": "historia" },
-            { "fr": "les mathématiques (les maths)", "pl": "matematyka" },
-            { "fr": "la biologie", "pl": "biologia" },
-            { "fr": "le commerce", "pl": "handel" }
+            { "fr": "les lettres", "pl": "filologia, nauki humanistyczne", "def": "la littérature et les langues" },
+            { "fr": "les sciences", "pl": "nauki ścisłe i przyrodnicze" },
+            { "fr": "les mathématiques (les maths)", "pl": "matematyka" }
           ]
         }
       ]
@@ -259,39 +221,42 @@
           "items": [
             { "fr": "une entreprise", "pl": "firma, przedsiębiorstwo" },
             { "fr": "un bureau", "pl": "biuro" },
-            { "fr": "une usine", "pl": "fabryka", "def": "on y fabrique des produits" },
-            { "fr": "un magasin", "pl": "sklep" },
             { "fr": "un contrat", "pl": "umowa" },
             { "fr": "un salaire", "pl": "pensja", "def": "l'argent qu'on gagne chaque mois" },
             { "fr": "un stage", "pl": "staż, praktyki", "def": "travail pour apprendre, pendant les études" },
-            { "fr": "à temps plein / à temps partiel", "pl": "na pełen etat / na część etatu" },
-            { "fr": "le télétravail", "pl": "praca zdalna", "def": "on travaille à la maison" },
-            { "fr": "être au chômage", "pl": "być bezrobotnym", "def": "ne pas avoir de travail" }
+            { "fr": "le poste", "pl": "stanowisko", "def": "le travail qu'on a dans l'entreprise" },
+            { "fr": "les horaires", "pl": "godziny pracy", "def": "les heures où on commence et où on finit" },
+            { "fr": "la pause-déjeuner", "pl": "przerwa obiadowa" },
+            { "fr": "la machine à café", "pl": "ekspres do kawy" },
+            { "fr": "le restaurant d'entreprise", "pl": "stołówka firmowa" },
+            { "fr": "le télétravail", "pl": "praca zdalna", "def": "on travaille à la maison" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Zawody", "fr": "Les professions" },
           "items": [
-            { "fr": "un ingénieur / une ingénieure", "pl": "inżynier / inżynierka" },
-            { "fr": "un / une comptable", "pl": "księgowy / księgowa", "def": "il s'occupe de l'argent de l'entreprise" },
-            { "fr": "un développeur / une développeuse", "pl": "programista / programistka" },
-            { "fr": "un vendeur / une vendeuse", "pl": "sprzedawca / sprzedawczyni" },
-            { "fr": "un serveur / une serveuse", "pl": "kelner / kelnerka" },
-            { "fr": "un avocat / une avocate", "pl": "adwokat / adwokatka" },
-            { "fr": "un / une secrétaire", "pl": "sekretarz / sekretarka" }
+            { "fr": "un agriculteur / une agricultrice", "pl": "rolnik / rolniczka" },
+            { "fr": "un / une artiste", "pl": "artysta / artystka" },
+            { "fr": "un boucher / une bouchère", "pl": "rzeźnik / rzeźniczka" },
+            { "fr": "un chauffeur / une chauffeuse", "pl": "kierowca" },
+            { "fr": "un comédien / une comédienne", "pl": "aktor / aktorka" },
+            { "fr": "un danseur / une danseuse", "pl": "tancerz / tancerka" },
+            { "fr": "un / une libraire", "pl": "księgarz / księgarka", "def": "il vend des livres" },
+            { "fr": "un / une photographe", "pl": "fotograf / fotografka" },
+            { "fr": "un policier / une policière", "pl": "policjant / policjantka" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Zadania", "fr": "Les tâches" },
           "items": [
-            { "fr": "répondre au téléphone", "pl": "odbierać telefony" },
-            { "fr": "envoyer des mails", "pl": "wysyłać maile" },
-            { "fr": "organiser une réunion", "pl": "organizować spotkanie" },
-            { "fr": "accueillir les clients", "pl": "przyjmować klientów", "def": "dire bonjour, aider les clients" },
-            { "fr": "gérer une équipe", "pl": "zarządzać zespołem", "def": "diriger un groupe de personnes" },
-            { "fr": "écrire un rapport", "pl": "pisać raport" }
+            { "fr": "communiquer", "pl": "komunikować się" },
+            { "fr": "écrire un mail", "pl": "pisać maila" },
+            { "fr": "lire un rapport", "pl": "czytać raport" },
+            { "fr": "s'organiser", "pl": "organizować się, planować swoją pracę" },
+            { "fr": "préparer une réunion", "pl": "przygotowywać zebranie" },
+            { "fr": "travailler sur un dossier", "pl": "pracować nad sprawą (projektem)" }
           ]
         },
         {
@@ -311,10 +276,10 @@
           "title": { "pl": "Osoby", "fr": "Les personnes" },
           "items": [
             { "fr": "un / une collègue", "pl": "współpracownik / współpracowniczka" },
-            { "fr": "un patron / une patronne", "pl": "szef / szefowa", "def": "la personne qui dirige l'entreprise" },
-            { "fr": "un employé / une employée", "pl": "pracownik / pracownica" },
-            { "fr": "un client / une cliente", "pl": "klient / klientka" },
-            { "fr": "un / une stagiaire", "pl": "stażysta / stażystka", "def": "personne qui fait un stage" }
+            { "fr": "un directeur / une directrice", "pl": "dyrektor / dyrektorka", "def": "la personne qui dirige l'entreprise" },
+            { "fr": "un chef / une cheffe", "pl": "szef / szefowa" },
+            { "fr": "un / une responsable", "pl": "kierownik / kierowniczka, osoba odpowiedzialna" },
+            { "fr": "l'équipe", "pl": "zespół" }
           ]
         }
       ]
@@ -338,17 +303,17 @@
           "title": { "pl": "Praca", "fr": "Le métier" },
           "items": [
             { "fr": "Qu'est-ce que vous faites dans la vie ?", "pl": "Czym się pan / pani zajmuje?" },
-            { "fr": "Je suis comptable dans une entreprise de transport.", "pl": "Jestem księgowym w firmie transportowej." },
-            { "fr": "Je travaille comme vendeuse dans un magasin de sport.", "pl": "Pracuję jako sprzedawczyni w sklepie sportowym." },
-            { "fr": "Je travaille chez Airbus depuis 2021.", "pl": "Pracuję w Airbusie od 2021 roku." },
+            { "fr": "Je suis photographe dans une entreprise de transport.", "pl": "Jestem fotografem w firmie transportowej." },
+            { "fr": "Je travaille comme libraire dans une petite librairie.", "pl": "Pracuję jako księgarka w małej księgarni." },
+            { "fr": "J'ai travaillé chez Airbus pendant quatre ans.", "pl": "Pracowałem w Airbusie przez cztery lata." },
             { "fr": "Je fais du télétravail deux jours par semaine.", "pl": "Pracuję zdalnie dwa dni w tygodniu." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Przed zawodem po **être** nie ma rodzajnika: je suis **comptable** (nie « je suis un comptable »).\n**chez** + nazwa firmy: je travaille **chez** Renault.",
-            "fr": "Après **être**, pas d'article devant la profession : je suis **comptable**.\n**chez** + nom de l'entreprise : je travaille **chez** Renault."
+            "pl": "Przed zawodem po **être** nie ma rodzajnika: je suis **photographe** (nie « je suis un photographe »).\n**chez** + nazwa firmy: je travaille **chez** Renault.",
+            "fr": "Après **être**, pas d'article devant la profession : je suis **photographe**.\n**chez** + nom de l'entreprise : je travaille **chez** Renault."
           }
         }
       ]
@@ -372,7 +337,7 @@
           "type": "examples",
           "title": { "pl": "Plany zawodowe", "fr": "Le projet professionnel" },
           "items": [
-            { "fr": "Plus tard, je voudrais devenir médecin.", "pl": "W przyszłości chciałbym / chciałabym zostać lekarzem." },
+            { "fr": "Plus tard, je voudrais devenir policier.", "pl": "W przyszłości chciałbym zostać policjantem." },
             { "fr": "Mon projet, c'est de travailler à l'étranger.", "pl": "Moim planem jest praca za granicą." },
             { "fr": "Je vais faire un stage cet été.", "pl": "Tego lata zrobię staż." },
             { "fr": "J'aimerais créer mon entreprise.", "pl": "Chciałbym / chciałabym założyć własną firmę." }

@@ -80,9 +80,6 @@
             { "fr": "tous les jours", "pl": "codziennie", "def": "chaque jour" },
             { "fr": "tous les lundis = le lundi", "pl": "w każdy poniedziałek, w poniedziałki" },
             { "fr": "tous les matins / tous les soirs", "pl": "każdego ranka / każdego wieczoru" },
-            { "fr": "toutes les semaines", "pl": "co tydzień" },
-            { "fr": "une fois par semaine", "pl": "raz w tygodniu" },
-            { "fr": "deux fois par mois", "pl": "dwa razy w miesiącu" },
             { "fr": "souvent", "pl": "często", "def": "beaucoup de fois" },
             { "fr": "parfois / de temps en temps", "pl": "czasami / od czasu do czasu", "def": "pas souvent, mais pas jamais" },
             { "fr": "rarement", "pl": "rzadko", "def": "presque jamais" },
@@ -92,14 +89,14 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**tous les** + rzeczownik męski, **toutes les** + rzeczownik żeński: tous les jours, toutes les semaines.\n**le** + dzień tygodnia = co tydzień w ten dzień: **le** samedi, je fais du sport.",
-            "fr": "**tous les** + nom masculin, **toutes les** + nom féminin : tous les jours, toutes les semaines.\n**le** + jour = chaque semaine ce jour-là : **le** samedi, je fais du sport."
+            "pl": "**tous les** + **jours** albo dzień tygodnia w liczbie mnogiej: tous les jours, tous les jeudis.\n**le** + dzień tygodnia = co tydzień w ten dzień: **le** samedi, je fais du sport.",
+            "fr": "**tous les** + **jours** ou un jour au pluriel : tous les jours, tous les jeudis.\n**le** + jour = chaque semaine ce jour-là : **le** samedi, je fais du sport."
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "Je fais les courses **une fois par semaine**.", "pl": "Robię zakupy raz w tygodniu." },
+            { "fr": "Je fais **parfois** la cuisine le soir.", "pl": "Czasami gotuję wieczorem." },
             { "fr": "Il va **rarement** au théâtre.", "pl": "On rzadko chodzi do teatru." },
             { "fr": "**Le mercredi**, les enfants n'ont pas école.", "pl": "W środy dzieci nie mają szkoły." },
             { "fr": "Nous **ne** sortons **jamais** le lundi soir.", "pl": "Nigdy nie wychodzimy w poniedziałek wieczorem." }
@@ -244,6 +241,7 @@
           "head": ["", "langue courante", "heure officielle"],
           "rows": [
             ["8 h 00", "huit heures", "huit heures"],
+            ["9 h 05", "neuf heures **cinq**", "neuf heures cinq"],
             ["8 h 15", "huit heures **et quart**", "huit heures quinze"],
             ["8 h 30", "huit heures **et demie**", "huit heures trente"],
             ["8 h 45", "neuf heures **moins le quart**", "huit heures quarante-cinq"],
@@ -289,6 +287,10 @@
           "items": [
             { "fr": "prendre le petit-déjeuner", "pl": "jeść śniadanie", "def": "le repas du matin" },
             { "fr": "aller au travail / à l'école", "pl": "iść do pracy / do szkoły" },
+            { "fr": "se brosser les dents", "pl": "myć zęby" },
+            { "fr": "se coiffer", "pl": "czesać się", "def": "mettre ses cheveux en ordre" },
+            { "fr": "se préparer", "pl": "szykować się", "def": "se laver, s'habiller… avant de sortir" },
+            { "fr": "s'occuper des enfants", "pl": "zajmować się dziećmi" },
             { "fr": "commencer / finir le travail", "pl": "zaczynać / kończyć pracę" },
             { "fr": "déjeuner", "pl": "jeść obiad (w południe)", "def": "manger à midi" },
             { "fr": "rentrer (à la maison)", "pl": "wracać (do domu)", "def": "revenir chez soi" },
@@ -304,9 +306,9 @@
             { "fr": "faire la vaisselle", "pl": "zmywać naczynia", "def": "laver les assiettes et les verres" },
             { "fr": "faire les courses", "pl": "robić zakupy", "def": "acheter à manger" },
             { "fr": "faire la lessive", "pl": "robić pranie", "def": "laver les vêtements" },
-            { "fr": "passer l'aspirateur", "pl": "odkurzać" },
-            { "fr": "ranger", "pl": "sprzątać, porządkować", "def": "mettre chaque chose à sa place" },
-            { "fr": "sortir le chien", "pl": "wyprowadzać psa" }
+            { "fr": "faire à manger", "pl": "robić jedzenie, gotować", "def": "préparer un repas" },
+            { "fr": "faire du bricolage / bricoler", "pl": "majsterkować", "def": "réparer ou fabriquer des choses à la maison" },
+            { "fr": "faire du jardinage / jardiner", "pl": "pracować w ogrodzie", "def": "s'occuper des plantes et des fleurs" }
           ]
         },
         {
@@ -317,8 +319,12 @@
             { "fr": "aller à un concert", "pl": "iść na koncert", "def": "écouter de la musique en direct" },
             { "fr": "voir une exposition", "pl": "zobaczyć wystawę", "def": "regarder des œuvres dans un musée" },
             { "fr": "aller au restaurant", "pl": "iść do restauracji" },
-            { "fr": "boire un verre", "pl": "iść na drinka, na kawę", "def": "prendre une boisson dans un café" },
-            { "fr": "faire du sport", "pl": "uprawiać sport" },
+            { "fr": "aller au musée", "pl": "iść do muzeum" },
+            { "fr": "aller à un cours de dessin", "pl": "chodzić na lekcje rysunku", "def": "apprendre à dessiner avec un professeur" },
+            { "fr": "faire du sport / faire du jogging", "pl": "uprawiać sport / biegać", "def": "jogging : courir dans la rue ou au parc" },
+            { "fr": "écouter la radio", "pl": "słuchać radia" },
+            { "fr": "regarder la télévision", "pl": "oglądać telewizję" },
+            { "fr": "surfer sur Internet", "pl": "surfować po internecie", "def": "regarder des sites sur Internet" },
             { "fr": "regarder une série", "pl": "oglądać serial" },
             { "fr": "lire / jouer à des jeux vidéo", "pl": "czytać / grać w gry wideo" },
             { "fr": "voir des amis", "pl": "spotykać się z przyjaciółmi" }
@@ -344,13 +350,15 @@
             { "fr": "grand / grande", "pl": "wysoki" },
             { "fr": "petit / petite", "pl": "niski" },
             { "fr": "mince", "pl": "szczupły", "def": "pas gros" },
-            { "fr": "jeune / âgé, âgée", "pl": "młody / starszy" },
+            { "fr": "gros / grosse", "pl": "gruby", "def": "le contraire de mince" },
+            { "fr": "jeune", "pl": "młody" },
             { "fr": "beau / belle", "pl": "przystojny / piękna" },
             { "fr": "les cheveux blonds / bruns / roux", "pl": "jasne / ciemne / rude włosy" },
-            { "fr": "les cheveux courts / longs / frisés", "pl": "krótkie / długie / kręcone włosy" },
-            { "fr": "les yeux bleus / verts / marron", "pl": "niebieskie / zielone / brązowe oczy" },
-            { "fr": "une barbe / une moustache", "pl": "broda / wąsy" },
-            { "fr": "porter des lunettes", "pl": "nosić okulary" }
+            { "fr": "les cheveux blancs / gris / châtains", "pl": "białe / siwe / kasztanowe włosy" },
+            { "fr": "les cheveux courts / longs / frisés / raides", "pl": "krótkie / długie / kręcone / proste włosy" },
+            { "fr": "être chauve", "pl": "być łysym", "def": "ne pas avoir de cheveux" },
+            { "fr": "les yeux bleus / verts / marron / noirs", "pl": "niebieskie / zielone / brązowe / czarne oczy" },
+            { "fr": "une barbe / une moustache", "pl": "broda / wąsy" }
           ]
         },
         {
@@ -365,8 +373,12 @@
             { "fr": "bavard / bavarde", "pl": "gadatliwy", "def": "il parle beaucoup" },
             { "fr": "sérieux / sérieuse", "pl": "poważny, solidny" },
             { "fr": "généreux / généreuse", "pl": "hojny", "def": "il aime donner" },
-            { "fr": "curieux / curieuse", "pl": "ciekawy (świata)", "def": "il veut tout savoir" },
-            { "fr": "dynamique", "pl": "energiczny", "def": "plein d'énergie" }
+            { "fr": "dynamique", "pl": "energiczny", "def": "plein d'énergie" },
+            { "fr": "courageux / courageuse", "pl": "odważny", "def": "il n'a pas peur" },
+            { "fr": "intelligent / intelligente", "pl": "inteligentny" },
+            { "fr": "méchant / méchante", "pl": "złośliwy, niemiły", "def": "le contraire de gentil" },
+            { "fr": "sociable", "pl": "towarzyski", "def": "il aime être avec les autres" },
+            { "fr": "stressé / stressée", "pl": "zestresowany", "def": "le contraire de calme" }
           ]
         },
         {
@@ -395,7 +407,7 @@
           "items": [
             { "fr": "Tu veux aller au cinéma ce soir ?", "pl": "Chcesz iść dziś wieczorem do kina?" },
             { "fr": "Ça te dit de voir une exposition samedi ?", "pl": "Masz ochotę zobaczyć wystawę w sobotę?" },
-            { "fr": "On va boire un verre après le travail ?", "pl": "Idziemy na drinka po pracy?" },
+            { "fr": "On va au musée dimanche ?", "pl": "Idziemy w niedzielę do muzeum?" },
             { "fr": "On se retrouve à quelle heure ? Et où ?", "pl": "O której się spotykamy? I gdzie?" }
           ]
         },
