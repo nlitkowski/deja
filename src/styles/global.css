@@ -3095,6 +3095,30 @@ button.tree-sheet:disabled {
   margin: 0;
 }
 
+.signin-nudge {
+  margin: 12px 0;
+  padding: 14px 16px;
+  background: var(--near-bg);
+  border-radius: var(--radius);
+  border: var(--border-w) solid var(--border);
+}
+
+.signin-nudge h2 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+
+.signin-nudge p {
+  margin: 0 0 10px;
+}
+
+.signin-nudge-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
 .tomorrow {
   text-align: center;
 }

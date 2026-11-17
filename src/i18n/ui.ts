@@ -111,6 +111,14 @@ export const ui = {
   account: 'Compte',
   accountHint: 'Connecte-toi pour retrouver ta progression sur tous tes appareils. Seule ton adresse e-mail est enregistrée. Sans compte, tout reste sur cet appareil.',
   signInGoogle: 'Se connecter avec Google',
+  signInNudgeTitle: 'Garde ta progression',
+  signInNudge:
+    'Sans compte, ta progression n’existe que sur cet appareil : un changement de téléphone ou un nettoyage du navigateur, et elle disparaît. Connecte-toi pour la sauvegarder et la retrouver partout.',
+  signInNudgeTitlePl: 'Zachowaj swoje postępy.',
+  signInNudgePl:
+    'Bez konta postępy są zapisane tylko na tym urządzeniu: zmiana telefonu albo wyczyszczenie danych przeglądarki i znikną. Zaloguj się, żeby je zachować i mieć je na każdym urządzeniu.',
+  inPolish: 'Po polsku',
+  later: 'Plus tard',
   signedInAs: (email: string) => `Compte : ${email}`,
   syncState: (status: 'syncing' | 'synced' | 'pending' | 'offline', pending: number) => {
     const items = `${pending} élément${pending > 1 ? 's' : ''} de progression`;

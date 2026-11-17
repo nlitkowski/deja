@@ -3,6 +3,7 @@ import { Emoji } from '../components/Emoji';
 import { GameBar } from '../components/GameBar';
 import { LevelNotice } from '../components/LevelNotice';
 import { QuestList } from '../components/QuestList';
+import { SignInNudge } from '../components/SignInNudge';
 import { SyncBadge } from '../components/SyncBadge';
 import { Icon } from '../components/Icon';
 import { LangSwitch } from '../components/LangSwitch';
@@ -79,7 +80,7 @@ export function Home({ onStart, onOpenSheets, onOpenSheet, onOpenSettings, onOpe
 
         <GameBar />
         <LevelNotice />
-
+        <SignInNudge />
         <section className="review-card">
           <div>
             <p className="big-number">{dueCount}</p>
