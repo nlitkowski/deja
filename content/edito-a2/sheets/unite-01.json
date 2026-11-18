@@ -26,19 +26,22 @@
           "rows": [
             ["-er : travailler", "-**é** : travaill**é**", "nous avons travaillé"],
             ["-ir : finir, choisir", "-**i** : fin**i**, chois**i**", "elle a choisi"],
-            ["-re : attendre, vendre", "-**u** : attend**u**, vend**u**", "tu as attendu"]
+            ["-re : attendre, vendre", "-**u** : attend**u**, vend**u**", "tu as attendu"],
+            ["lire", "**lu**", "elle a lu un livre"],
+            ["perdre", "perd**u**", "j'ai perdu mon téléphone"],
+            ["vouloir", "**voulu**", "nous avons voulu partir"]
           ]
         },
         {
           "type": "table",
           "title": { "pl": "Nieregularne imiesłowy", "fr": "Les participes irréguliers" },
-          "head": ["-u", "-is / -it", "autres"],
+          "head": ["-u", "-is / -it / -ert", "autres"],
           "rows": [
-            ["avoir → **eu**", "prendre → **pris**", "être → **été**"],
-            ["voir → **vu**", "mettre → **mis**", "faire → **fait**"],
-            ["lire → **lu**", "dire → **dit**", "ouvrir → **ouvert**"],
-            ["pouvoir → **pu**, vouloir → **voulu**", "écrire → **écrit**", "naître → **né**"],
-            ["connaître → **connu**, recevoir → **reçu**", "apprendre → **appris**", "mourir → **mort**"]
+            ["avoir → **eu**", "mettre → **mis**", "être → **été**"],
+            ["devoir → **dû**", "prendre → **pris**", "faire → **fait**"],
+            ["recevoir → **reçu**", "dire → **dit**", "naître → **né**"],
+            ["(ob)tenir → (ob)**tenu**", "écrire → **écrit**", "mourir → **mort**"],
+            ["(de)venir → (de)**venu**", "ouvrir → **ouvert**", "vivre → **vécu**"]
           ]
         }
       ]
@@ -50,8 +53,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "Większość czasowników: **avoir**.\n**Être**: czasowniki ruchu i zmiany stanu (aller, venir, arriver, partir, entrer, sortir, monter, descendre, tomber, rester, naître, mourir, devenir, revenir, rentrer) i **wszystkie czasowniki zwrotne**.",
-            "fr": "La plupart des verbes : **avoir**.\n**Être** : les verbes de mouvement et de changement d'état (aller, venir, arriver, partir, entrer, sortir, monter, descendre, tomber, rester, naître, mourir, devenir, revenir, rentrer) et **tous les verbes pronominaux**."
+            "pl": "Większość czasowników: **avoir**.\n**Être**: 17 czasowników ruchu i zmiany stanu (aller, arriver, descendre, devenir, entrer, monter, mourir, naître, partir, passer, rentrer, rester, retourner, revenir, sortir, tomber, venir) i **wszystkie czasowniki zwrotne**.",
+            "fr": "La plupart des verbes : **avoir**.\n**Être** : 17 verbes de mouvement et de changement d'état (aller, arriver, descendre, devenir, entrer, monter, mourir, naître, partir, passer, rentrer, rester, retourner, revenir, sortir, tomber, venir) et **tous les verbes pronominaux**."
           }
         },
         {
@@ -77,7 +80,7 @@
           "type": "examples",
           "items": [
             { "fr": "Je **suis né** à Lille et j'**ai grandi** à Lyon.", "pl": "Urodziłem się w Lille i dorastałem w Lyonie." },
-            { "fr": "Après son bac, elle **est partie** à Montréal.", "pl": "Po maturze wyjechała do Montrealu." },
+            { "fr": "Après ses études, elle **est partie** à Montréal.", "pl": "Po studiach wyjechała do Montrealu." },
             { "fr": "Ils **se sont rencontrés** à l'université.", "pl": "Poznali się na studiach." },
             { "fr": "Nous **nous sommes installés** à Bordeaux en 2019.", "pl": "Zamieszkaliśmy w Bordeaux w 2019 roku." }
           ]
@@ -85,8 +88,8 @@
         {
           "type": "warning",
           "text": {
-            "pl": "**Être** i **avoir** same tworzą passé composé z **avoir**: j'**ai été** comédien, j'**ai eu** un enfant (nie « je suis été »).",
-            "fr": "**Être** et **avoir** se conjuguent eux-mêmes avec **avoir** : j'**ai été** comédien, j'**ai eu** un enfant (pas « je suis été »)."
+            "pl": "**Être** i **avoir** same tworzą passé composé z **avoir**: j'**ai été** acteur, j'**ai eu** un enfant (nie « je suis été »).",
+            "fr": "**Être** et **avoir** se conjuguent eux-mêmes avec **avoir** : j'**ai été** acteur, j'**ai eu** un enfant (pas « je suis été »)."
           }
         }
       ]
@@ -125,8 +128,8 @@
         {
           "type": "text",
           "text": {
-            "pl": "**Rien** i **personne** mogą być podmiotem – wtedy stoją na początku, a **ne** zostaje: **Personne n'**est venu. **Rien n'**a changé.",
-            "fr": "**Rien** et **personne** peuvent être sujets : ils se placent au début et on garde **ne** : **Personne n'**est venu. **Rien n'**a changé."
+            "pl": "**Personne** może być podmiotem – wtedy stoi na początku, a **ne** zostaje: **Personne n'**est venu à la fête.",
+            "fr": "**Personne** peut être sujet : il se place au début et on garde **ne** : **Personne n'**est venu à la fête."
           }
         },
         {
@@ -174,8 +177,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**avoir l'intention de** + bezokolicznik (mieć zamiar)\n**compter** + bezokolicznik (zamierzać)\n**penser** + bezokolicznik (myśleć o…, planować)\n**avoir envie de** + bezokolicznik (mieć ochotę)",
-            "fr": "**avoir l'intention de** + infinitif\n**compter** + infinitif\n**penser** + infinitif\n**avoir envie de** + infinitif"
+            "pl": "**avoir l'intention de** + bezokolicznik (mieć zamiar)\n**compter** + bezokolicznik (zamierzać)\n**penser** + bezokolicznik (myśleć o…, planować)\n**C'est décidé !** (postanowione!)",
+            "fr": "**avoir l'intention de** + infinitif\n**compter** + infinitif\n**penser** + infinitif\n**C'est décidé !**"
           }
         },
         {
@@ -184,7 +187,7 @@
             { "fr": "J'**ai l'intention de** reprendre mes études.", "pl": "Mam zamiar wrócić na studia." },
             { "fr": "Nous **comptons** acheter une maison à la campagne.", "pl": "Zamierzamy kupić dom na wsi." },
             { "fr": "Elle **pense** devenir comédienne.", "pl": "Myśli o tym, żeby zostać aktorką." },
-            { "fr": "Tu **as envie de** changer de vie ?", "pl": "Masz ochotę zmienić swoje życie?" }
+            { "fr": "**C'est décidé !** Je pars à Lyon en septembre.", "pl": "Postanowione! We wrześniu wyjeżdżam do Lyonu." }
           ]
         },
         {
@@ -202,43 +205,62 @@
       "blocks": [
         {
           "type": "words",
+          "title": { "pl": "Żyć", "fr": "Vivre" },
+          "items": [
+            { "fr": "avoir un coup de foudre", "pl": "zakochać się od pierwszego wejrzenia", "def": "tomber amoureux tout de suite" },
+            { "fr": "avoir un enfant", "pl": "mieć dziecko" },
+            { "fr": "déménager", "pl": "przeprowadzić się", "def": "changer de logement ou de ville" },
+            { "fr": "grandir", "pl": "dorastać", "def": "devenir grand, adulte" },
+            { "fr": "naître", "pl": "urodzić się", "def": "arriver au monde" },
+            { "fr": "être célibataire / en couple", "pl": "być singlem / w związku" },
+            { "fr": "faire connaissance", "pl": "zawrzeć znajomość", "def": "rencontrer quelqu'un pour la première fois" },
+            { "fr": "rencontrer quelqu'un / se rencontrer", "pl": "poznać kogoś / poznać się" },
+            { "fr": "se faire des ami(e)s", "pl": "zaprzyjaźnić się, znaleźć przyjaciół" },
+            { "fr": "se marier (avec)", "pl": "pobrać się (z)" },
+            { "fr": "se séparer (de)", "pl": "rozstać się (z)" },
+            { "fr": "s'installer", "pl": "zamieszkać, osiedlić się", "def": "commencer à habiter dans un lieu" },
+            { "fr": "tomber amoureux / amoureuse (de)", "pl": "zakochać się (w)" }
+          ]
+        },
+        {
+          "type": "words",
           "title": { "pl": "Życie prywatne", "fr": "La vie personnelle" },
           "items": [
-            { "fr": "une naissance / naître", "pl": "narodziny / urodzić się", "def": "arriver au monde" },
-            { "fr": "grandir", "pl": "dorastać", "def": "devenir grand, adulte" },
-            { "fr": "une rencontre / rencontrer", "pl": "spotkanie / poznać", "def": "voir quelqu'un pour la première fois" },
-            { "fr": "un mariage / se marier", "pl": "ślub / pobrać się", "def": "s'unir officiellement" },
-            { "fr": "un divorce / divorcer", "pl": "rozwód / rozwieść się", "def": "la fin d'un mariage" },
-            { "fr": "un déménagement / déménager", "pl": "przeprowadzka / przeprowadzić się", "def": "changer de logement" },
-            { "fr": "s'installer", "pl": "zamieszkać, osiedlić się", "def": "commencer à habiter dans un lieu" }
+            { "fr": "un / une célibataire", "pl": "singiel / singielka", "def": "une personne qui vit seule" },
+            { "fr": "un conjoint / une conjointe", "pl": "małżonek / partner, partnerka" },
+            { "fr": "un couple", "pl": "para" },
+            { "fr": "un enfant", "pl": "dziecko" },
+            { "fr": "une femme", "pl": "żona; kobieta" },
+            { "fr": "un mari", "pl": "mąż" },
+            { "fr": "un / une meilleur(e) ami(e)", "pl": "najlepszy przyjaciel / najlepsza przyjaciółka" },
+            { "fr": "une rencontre", "pl": "spotkanie, poznanie kogoś" },
+            { "fr": "la vie de famille", "pl": "życie rodzinne" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Szkoła i praca", "fr": "Le parcours scolaire et professionnel" },
           "items": [
-            { "fr": "passer / avoir le bac", "pl": "zdawać / zdać maturę", "def": "l'examen à la fin du lycée" },
-            { "fr": "faire des études de…", "pl": "studiować…", "def": "aller à l'université" },
-            { "fr": "un diplôme", "pl": "dyplom", "def": "le papier officiel à la fin des études" },
-            { "fr": "une formation", "pl": "szkolenie, kurs zawodowy", "def": "des cours pour apprendre un métier" },
-            { "fr": "un stage", "pl": "staż, praktyki", "def": "une période de travail pour apprendre" },
-            { "fr": "une carrière", "pl": "kariera", "def": "toute la vie professionnelle" },
-            { "fr": "changer de métier", "pl": "zmienić zawód", "def": "faire un autre travail" },
-            { "fr": "être / partir à la retraite", "pl": "być na / przejść na emeryturę", "def": "arrêter de travailler à cause de l'âge" }
+            { "fr": "chercher du travail", "pl": "szukać pracy" },
+            { "fr": "devenir trader / écrivain(e) / humoriste", "pl": "zostać traderem / pisarzem (pisarką) / komikiem (komiczką)" },
+            { "fr": "faire / finir ses études", "pl": "studiować / skończyć studia" },
+            { "fr": "faire un séjour Erasmus / partir en Erasmus", "pl": "wyjechać na Erasmusa" },
+            { "fr": "faire un stage", "pl": "odbyć staż, praktyki", "def": "travailler dans une entreprise pour apprendre un métier" },
+            { "fr": "obtenir un diplôme", "pl": "zdobyć dyplom" },
+            { "fr": "travailler dans une entreprise", "pl": "pracować w firmie" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Zawody artystyczne", "fr": "Les professions artistiques" },
           "items": [
-            { "fr": "un comédien / une comédienne", "pl": "aktor / aktorka", "def": "il joue au théâtre ou au cinéma" },
-            { "fr": "un réalisateur / une réalisatrice", "pl": "reżyser filmowy", "def": "il fait des films" },
-            { "fr": "un chanteur / une chanteuse", "pl": "piosenkarz / piosenkarka", "def": "il chante" },
-            { "fr": "un musicien / une musicienne", "pl": "muzyk", "def": "il joue d'un instrument" },
-            { "fr": "un danseur / une danseuse", "pl": "tancerz / tancerka", "def": "il danse sur scène" },
-            { "fr": "un peintre", "pl": "malarz / malarka", "def": "il fait des tableaux" },
-            { "fr": "un écrivain / une écrivaine", "pl": "pisarz / pisarka", "def": "il écrit des livres" },
-            { "fr": "un / une photographe", "pl": "fotograf", "def": "il prend des photos" }
+            { "fr": "un acteur / une actrice", "pl": "aktor / aktorka", "def": "il joue un rôle au théâtre ou au cinéma" },
+            { "fr": "un chanteur / une chanteuse", "pl": "piosenkarz / piosenkarka" },
+            { "fr": "un compositeur / une compositrice", "pl": "kompozytor / kompozytorka", "def": "il écrit de la musique" },
+            { "fr": "un écrivain / une écrivaine", "pl": "pisarz / pisarka" },
+            { "fr": "un / une interprète", "pl": "wykonawca / wykonawczyni; tłumacz ustny" },
+            { "fr": "un musicien / une musicienne", "pl": "muzyk" },
+            { "fr": "un / une scénariste", "pl": "scenarzysta / scenarzystka", "def": "il écrit l'histoire d'un film" }
           ]
         }
       ]
@@ -251,32 +273,71 @@
           "type": "words",
           "title": { "pl": "Miejsca kultury", "fr": "Les lieux culturels" },
           "items": [
-            { "fr": "un théâtre", "pl": "teatr" },
-            { "fr": "une salle de concert", "pl": "sala koncertowa" },
-            { "fr": "un musée / une exposition", "pl": "muzeum / wystawa" },
-            { "fr": "une galerie (d'art)", "pl": "galeria (sztuki)" },
-            { "fr": "un festival", "pl": "festiwal" },
-            { "fr": "une médiathèque", "pl": "mediateka, biblioteka", "def": "on y emprunte des livres, des films, de la musique" }
+            { "fr": "un château", "pl": "zamek" },
+            { "fr": "un cinéma", "pl": "kino" },
+            { "fr": "un cirque", "pl": "cyrk" },
+            { "fr": "un monument", "pl": "zabytek, pomnik" },
+            { "fr": "un musée", "pl": "muzeum" },
+            { "fr": "un théâtre", "pl": "teatr" }
           ]
         },
         {
           "type": "words",
-          "title": { "pl": "Na zewnątrz i w domu", "fr": "Dehors et à l'intérieur" },
+          "title": { "pl": "Wyjścia", "fr": "Sortir" },
           "items": [
-            { "fr": "une balade / se balader", "pl": "spacer / spacerować", "def": "une petite promenade" },
-            { "fr": "une randonnée", "pl": "wędrówka (piesza)", "def": "une longue marche dans la nature" },
-            { "fr": "faire du vélo / de l'escalade", "pl": "jeździć na rowerze / wspinać się" },
-            { "fr": "faire un pique-nique", "pl": "urządzić piknik", "def": "manger dehors, dans l'herbe" },
-            { "fr": "un jeu de société", "pl": "gra planszowa", "def": "un jeu à plusieurs, avec un plateau ou des cartes" },
-            { "fr": "un jeu vidéo", "pl": "gra wideo" },
-            { "fr": "faire de la cuisine / du bricolage", "pl": "gotować / majsterkować" }
+            { "fr": "aller au cirque / à un concert / à un festival", "pl": "iść do cyrku / na koncert / na festiwal" },
+            { "fr": "faire une balade = une promenade", "pl": "iść na spacer" },
+            { "fr": "faire une visite (guidée)", "pl": "zwiedzać (z przewodnikiem)" },
+            { "fr": "visiter une exposition / un monument / un musée", "pl": "zwiedzać wystawę / zabytek / muzeum" },
+            { "fr": "voir une pièce de théâtre / un spectacle", "pl": "obejrzeć sztukę teatralną / spektakl" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Na świeżym powietrzu", "fr": "Le plein air" },
+          "items": [
+            { "fr": "l'accrobranche (m.)", "pl": "park linowy" },
+            { "fr": "le canoë (kayak)", "pl": "kajak" },
+            { "fr": "l'escalade (f.)", "pl": "wspinaczka" },
+            { "fr": "le foot(ball)", "pl": "piłka nożna" },
+            { "fr": "le jardinage", "pl": "ogrodnictwo" },
+            { "fr": "le (stand-up) paddle", "pl": "paddleboard" },
+            { "fr": "la randonnée", "pl": "wędrówka (piesza)" },
+            { "fr": "les sports aquatiques / nautiques", "pl": "sporty wodne" },
+            { "fr": "le vélo", "pl": "rower" },
+            { "fr": "la via ferrata", "pl": "via ferrata" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "W domu", "fr": "À l'intérieur" },
+          "items": [
+            { "fr": "le bricolage", "pl": "majsterkowanie" },
+            { "fr": "les jeux de société", "pl": "gry planszowe" },
+            { "fr": "les jeux vidéo", "pl": "gry wideo" },
+            { "fr": "le judo", "pl": "judo" },
+            { "fr": "la peinture", "pl": "malarstwo" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Uprawiać zajęcie", "fr": "Pratiquer une activité" },
+          "items": [
+            { "fr": "bricoler, jardiner", "pl": "majsterkować, uprawiać ogródek" },
+            { "fr": "être amateur / amatrice ≠ professionnel(le)", "pl": "być amatorem ≠ zawodowcem" },
+            { "fr": "faire du vélo / de l'escalade / de l'accrobranche", "pl": "jeździć na rowerze / wspinać się / chodzić do parku linowego" },
+            { "fr": "faire une compétition de…", "pl": "brać udział w zawodach w…" },
+            { "fr": "faire une randonnée / une via ferrata", "pl": "iść na wędrówkę / na via ferratę" },
+            { "fr": "jouer au / faire du foot, jouer aux jeux vidéo", "pl": "grać w piłkę, grać w gry wideo" },
+            { "fr": "peindre / faire un tableau", "pl": "malować / namalować obraz" },
+            { "fr": "regarder une série / un match", "pl": "oglądać serial / mecz" }
           ]
         },
         {
           "type": "rule",
           "text": {
-            "pl": "**sortir** = wyjść z domu dla rozrywki: sortir au restaurant, sortir avec des amis, sortir le soir.\n**jouer à** + gra (jouer **aux** cartes), **jouer de** + instrument (jouer **du** piano), **faire de** + sport (faire **de la** natation).",
-            "fr": "**sortir** = quitter la maison pour se divertir : sortir au restaurant, sortir avec des amis, sortir le soir.\n**jouer à** + jeu (jouer **aux** cartes), **jouer de** + instrument (jouer **du** piano), **faire de** + sport (faire **de la** natation)."
+            "pl": "**jouer à** + gra lub sport (jouer **aux** jeux vidéo, jouer **au** foot).\n**faire de** + zajęcie (faire **du** vélo, faire **de l'**escalade, faire **de la** peinture).",
+            "fr": "**jouer à** + jeu ou sport (jouer **aux** jeux vidéo, jouer **au** foot).\n**faire de** + activité (faire **du** vélo, faire **de l'**escalade, faire **de la** peinture)."
           }
         }
       ]
@@ -288,11 +349,12 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "Je suis né(e) en 1998 à Cracovie.", "pl": "Urodziłem / urodziłam się w 1998 roku w Krakowie." },
-            { "fr": "J'ai fait des études d'architecture.", "pl": "Studiowałem / studiowałam architekturę." },
-            { "fr": "Après mon diplôme, j'ai fait un stage à Paris.", "pl": "Po dyplomie odbyłem / odbyłam staż w Paryżu." },
-            { "fr": "Il y a deux ans, j'ai changé de métier.", "pl": "Dwa lata temu zmieniłem / zmieniłam zawód." },
-            { "fr": "Je travaille comme graphiste depuis 2022.", "pl": "Pracuję jako grafik od 2022 roku." }
+            { "fr": "Je suis né(e) à Cracovie en 1998.", "pl": "Urodziłem / urodziłam się w Krakowie w 1998 roku." },
+            { "fr": "Mon frère est né aux États-Unis.", "pl": "Mój brat urodził się w Stanach Zjednoczonych." },
+            { "fr": "J'ai grandi en Bretagne.", "pl": "Dorastałem / dorastałam w Bretanii." },
+            { "fr": "Je suis venu(e) ici en 2019.", "pl": "Przyjechałem / przyjechałam tu w 2019 roku." },
+            { "fr": "J'ai fait mes études à Poznań.", "pl": "Studiowałem / studiowałam w Poznaniu." },
+            { "fr": "Je suis devenu(e) écrivain(e).", "pl": "Zostałem pisarzem / zostałam pisarką." }
           ]
         }
       ]
@@ -303,18 +365,19 @@
       "blocks": [
         {
           "type": "table",
-          "head": ["+ +", "+", "–", "– –"],
+          "head": ["j'aime", "je n'aime pas"],
           "rows": [
-            ["J'adore…", "J'aime bien…", "Je n'aime pas trop…", "Je déteste…"],
-            ["Je suis fan de…", "Ça me plaît.", "Ça ne me plaît pas.", "J'ai horreur de…"],
-            ["Je suis passionné(e) de…", "Je m'intéresse à…", "Ça ne m'intéresse pas.", "Je ne supporte pas…"]
+            ["J'adore…", "Je n'aime pas trop…"],
+            ["J'aime bien… / Je suis fan de…", "Je ne suis pas fan de…"],
+            ["Ma passion, c'est…", "Ce n'est pas du tout mon truc."]
           ]
         },
         {
           "type": "examples",
           "items": [
             { "fr": "Je suis fan de jazz, je vais souvent en concert.", "pl": "Jestem fanem / fanką jazzu, często chodzę na koncerty." },
-            { "fr": "J'ai horreur de la foule.", "pl": "Nie znoszę tłumu." }
+            { "fr": "Ma passion, c'est la randonnée.", "pl": "Moją pasją jest wędrowanie." },
+            { "fr": "Le football, ce n'est pas du tout mon truc.", "pl": "Piłka nożna to zupełnie nie moja bajka." }
           ]
         }
       ]
@@ -327,9 +390,10 @@
           "type": "examples",
           "title": { "pl": "Proponować", "fr": "Proposer" },
           "items": [
-            { "fr": "Ça te dit d'aller au théâtre samedi ?", "pl": "Masz ochotę pójść w sobotę do teatru?" },
-            { "fr": "Tu es libre ce soir ? On pourrait aller au cinéma.", "pl": "Masz dziś wieczorem czas? Moglibyśmy pójść do kina." },
-            { "fr": "Et si on faisait une balade ?", "pl": "Może pójdziemy na spacer?" }
+            { "fr": "Ça te dit d'aller au musée dimanche ?", "pl": "Masz ochotę pójść w niedzielę do muzeum?" },
+            { "fr": "Tu es libre samedi soir ?", "pl": "Jesteś wolny / wolna w sobotę wieczorem?" },
+            { "fr": "On se retrouve chez moi à 19 h ?", "pl": "Spotkamy się u mnie o 19?" },
+            { "fr": "Ça te va ? / C'est bon pour toi ?", "pl": "Pasuje ci? / Jest okej?" }
           ]
         },
         {
@@ -337,17 +401,17 @@
           "title": { "pl": "Przyjąć", "fr": "Accepter" },
           "items": [
             { "fr": "Avec plaisir !", "pl": "Z przyjemnością!" },
-            { "fr": "Bonne idée, je suis partant(e) !", "pl": "Dobry pomysł, wchodzę w to!" },
-            { "fr": "D'accord, on se retrouve où ?", "pl": "Dobrze, gdzie się spotkamy?" }
+            { "fr": "OK ! / D'accord !", "pl": "Okej! / Zgoda!" },
+            { "fr": "Ça marche ! / Ça me va !", "pl": "Pasuje! / Mnie pasuje!" }
           ]
         },
         {
           "type": "examples",
           "title": { "pl": "Odmówić", "fr": "Refuser" },
           "items": [
-            { "fr": "Désolé(e), je ne peux pas, je travaille.", "pl": "Przykro mi, nie mogę, pracuję." },
-            { "fr": "C'est gentil, mais je ne suis pas libre.", "pl": "To miłe, ale nie mam czasu." },
-            { "fr": "Une autre fois, peut-être ?", "pl": "Może innym razem?" }
+            { "fr": "Je suis désolé(e), mais je ne peux pas.", "pl": "Przykro mi, ale nie mogę." },
+            { "fr": "Je m'excuse, mais je ne peux pas venir.", "pl": "Przepraszam, ale nie mogę przyjść." },
+            { "fr": "Ce n'est pas possible samedi.", "pl": "W sobotę to niemożliwe." }
           ]
         }
       ]
