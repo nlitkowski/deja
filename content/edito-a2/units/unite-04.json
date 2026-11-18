@@ -16,7 +16,7 @@
         "pl": "même zgadza się w liczbie z rzeczownikiem (le même, la même, les mêmes); porównanie wprowadza que",
         "fr": "même s'accorde en nombre avec le nom (le même, la même, les mêmes) ; la comparaison se fait avec que"
       },
-      "confusables": ["u04-comme", "u04-pareil-identique"],
+      "confusables": ["u04-aussi-autant", "u04-pareil-identique"],
       "tags": ["grammaire"]
     },
     {
@@ -33,22 +33,41 @@
         "fr": "comme + nom ou pronom tonique (moi, toi, lui…) ; on ne dit pas « comme que »"
       },
       "confusables": ["u04-le-meme", "a1-connecteurs/conj-comme"],
+      "tags": ["grammaire"],
+      "deprecated": true,
+      "replacedBy": "u04-aussi-autant"
+    },
+    {
+      "id": "u04-aussi-autant",
+      "fr": "aussi… que / autant (de)… que : l'égalité",
+      "pl": "tak samo… jak / tyle samo… co",
+      "def": "comparer deux personnes ou deux choses sans différence : aussi + adjectif ou adverbe, autant (de) + nom ou verbe",
+      "examples": [
+        { "fr": "Léa est aussi grande que son frère.", "pl": "Léa jest tak samo wysoka jak jej brat." },
+        { "fr": "Il a autant d'amis que moi.", "pl": "Ma tyle samo przyjaciół co ja." },
+        { "fr": "Je travaille autant que toi.", "pl": "Pracuję tyle samo co ty." }
+      ],
+      "tip": {
+        "pl": "aussi + przymiotnik / przysłówek; autant de + rzeczownik; autant przy czasowniku; porównanie wprowadza que",
+        "fr": "aussi + adjectif / adverbe ; autant de + nom ; autant avec un verbe ; la comparaison se fait avec que"
+      },
+      "confusables": ["u04-le-meme", "u04-pareil-identique"],
       "tags": ["grammaire"]
     },
     {
       "id": "u04-pareil-identique",
-      "fr": "pareil(le)(s) / identique(s) (à)",
-      "pl": "taki sam / identyczny (jak)",
-      "def": "deux choses ou deux personnes sans différence",
+      "fr": "pareil(le)(s)",
+      "pl": "taki sam, jednakowy",
+      "def": "égal, identique : deux choses ou deux personnes sans différence",
       "examples": [
         { "fr": "Nos deux robes sont pareilles !", "pl": "Nasze dwie sukienki są takie same!" },
-        { "fr": "Ton sac est identique au mien.", "pl": "Twoja torebka jest identyczna jak moja." }
+        { "fr": "Ces deux frères ne sont pas du tout pareils.", "pl": "Ci dwaj bracia wcale nie są tacy sami." }
       ],
       "tip": {
-        "pl": "to przymiotniki: zgadzają się z rzeczownikiem (pareil, pareille, pareils, pareilles); identique à + rzeczownik (à + le → au)",
-        "fr": "ce sont des adjectifs : ils s'accordent (pareil, pareille, pareils, pareilles) ; identique à + nom (à + le → au)"
+        "pl": "pareil to przymiotnik: zgadza się z rzeczownikiem (pareil, pareille, pareils, pareilles)",
+        "fr": "pareil est un adjectif : il s'accorde avec le nom (pareil, pareille, pareils, pareilles)"
       },
-      "confusables": ["u04-le-meme"],
+      "confusables": ["u04-le-meme", "u04-aussi-autant"],
       "tags": ["grammaire"]
     },
     {
@@ -58,14 +77,14 @@
       "def": "avoir la même apparence ou le même caractère que quelqu'un",
       "examples": [
         { "fr": "Tu ressembles beaucoup à ta mère.", "pl": "Jesteś bardzo podobna do mamy." },
-        { "fr": "Les deux sœurs se ressemblent comme deux gouttes d'eau.", "pl": "Te dwie siostry są podobne jak dwie krople wody." }
+        { "fr": "Les deux sœurs se ressemblent beaucoup.", "pl": "Te dwie siostry są bardzo do siebie podobne." }
       ],
       "tip": {
         "pl": "ressembler à kogoś (à + le → au); o dwóch osobach: se ressembler (ils se ressemblent)",
         "fr": "ressembler à quelqu'un (à + le → au) ; pour deux personnes : se ressembler (ils se ressemblent)"
       },
       "confusables": ["u04-pareil-identique"],
-      "tags": ["grammaire"]
+      "tags": ["vocabulaire"]
     },
     {
       "id": "u04-chaque",
@@ -85,16 +104,17 @@
     },
     {
       "id": "u04-tout",
-      "fr": "tout / toute / tous / toutes + déterminant + nom",
-      "pl": "cały / cała / wszyscy / wszystkie",
-      "def": "la totalité ; s'accorde avec le nom et se place avant l'article",
+      "fr": "tout / toute / tous / toutes + déterminant + nom ; tout (pronom neutre)",
+      "pl": "cały / cała / wszyscy / wszystkie ; tout = wszystko",
+      "def": "la totalité ; s'accorde avec le nom et se place avant l'article ; tout seul (sans nom) = toutes les choses, invariable",
       "examples": [
         { "fr": "Il a plu toute la journée.", "pl": "Padało przez cały dzień." },
-        { "fr": "Toutes mes amies ont les cheveux longs.", "pl": "Wszystkie moje przyjaciółki mają długie włosy." }
+        { "fr": "Toutes mes amies ont les cheveux longs.", "pl": "Wszystkie moje przyjaciółki mają długie włosy." },
+        { "fr": "Tout va bien, merci.", "pl": "Wszystko w porządku, dziękuję." }
       ],
       "tip": {
-        "pl": "tout le, toute la, tous les, toutes les (+ mes, ces…); tous les jours = każdego dnia (jak chaque jour)",
-        "fr": "tout le, toute la, tous les, toutes les (+ mes, ces…) ; tous les jours = chaque jour"
+        "pl": "tout le, toute la, tous les, toutes les (+ mes, ces…); tous les jours = każdego dnia (jak chaque jour); tout bez rzeczownika = wszystko, nieodmienny: tout va bien",
+        "fr": "tout le, toute la, tous les, toutes les (+ mes, ces…) ; tous les jours = chaque jour ; tout sans nom = toutes les choses, invariable : tout va bien"
       },
       "confusables": ["u04-chaque"],
       "tags": ["grammaire"]
@@ -106,7 +126,7 @@
       "def": "remplace un adjectif possessif + nom : mon sac → le mien",
       "examples": [
         { "fr": "Ce n'est pas ton manteau, c'est le mien.", "pl": "To nie twój płaszcz, to mój." },
-        { "fr": "J'ai oublié mes lunettes. Tu peux me prêter les tiennes ?", "pl": "Zapomniałam okularów. Możesz mi pożyczyć swoje?" }
+        { "fr": "J'ai oublié mes lunettes. Tu peux me donner les tiennes ?", "pl": "Zapomniałam okularów. Możesz mi dać swoje?" }
       ],
       "tip": {
         "pl": "rodzaj i liczba zależą od przedmiotu, nie od właściciela: son sac (jej torebka) → le sien; sa robe → la sienne",
@@ -122,7 +142,7 @@
       "def": "remplace notre / votre / leur + nom : notre maison → la nôtre",
       "examples": [
         { "fr": "Votre appartement est grand ; le nôtre est plus petit.", "pl": "Wasze mieszkanie jest duże; nasze jest mniejsze." },
-        { "fr": "Nos enfants sont calmes, mais les leurs sont très bavards !", "pl": "Nasze dzieci są spokojne, ale ich są bardzo gadatliwe!" }
+        { "fr": "Nos enfants sont calmes, mais les leurs sont très bruyants !", "pl": "Nasze dzieci są spokojne, ale ich są bardzo hałaśliwe!" }
       ],
       "tip": {
         "pl": "nôtre, vôtre z daszkiem (notre maison → la nôtre); leur nie ma formy żeńskiej: le leur, la leur, les leurs",
@@ -131,16 +151,86 @@
       "confusables": ["u04-le-mien"],
       "tags": ["grammaire"]
     },
-    { "id": "u04-visage", "fr": "un visage", "pl": "twarz", "def": "le devant de la tête : les yeux, le nez, la bouche", "examples": [{ "fr": "Elle a un visage rond et souriant.", "pl": "Ma okrągłą, uśmiechniętą twarz." }], "tags": ["vocabulaire"] },
-    { "id": "u04-joue", "fr": "une joue", "pl": "policzek", "def": "une partie du visage, sous les yeux, à côté du nez", "examples": [{ "fr": "Il a les joues rouges à cause du froid.", "pl": "Ma czerwone policzki z zimna." }], "tags": ["vocabulaire"] },
+    { "id": "u04-visage", "fr": "un visage", "pl": "twarz", "def": "le devant de la tête : les yeux, le nez, la bouche", "examples": [{ "fr": "Elle a un visage rond et un joli sourire.", "pl": "Ma okrągłą twarz i ładny uśmiech." }], "tags": ["vocabulaire"] },
+    { "id": "u04-joue", "fr": "une joue", "pl": "policzek", "def": "une partie du visage, sous les yeux, à côté du nez", "examples": [{ "fr": "Il a les joues rouges à cause du froid.", "pl": "Ma czerwone policzki z zimna." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u04-fossette" },
     { "id": "u04-menton", "fr": "un menton", "pl": "podbródek", "def": "la partie du visage sous la bouche", "examples": [{ "fr": "Il a une petite barbe sur le menton.", "pl": "Ma małą bródkę na podbródku." }], "tags": ["vocabulaire"] },
-    { "id": "u04-taches-rousseur", "fr": "des taches de rousseur", "pl": "piegi", "def": "des petits points marron sur la peau", "examples": [{ "fr": "Elle a les cheveux roux et des taches de rousseur.", "pl": "Ma rude włosy i piegi." }], "tags": ["vocabulaire"] },
-    { "id": "u04-taille", "fr": "la taille", "pl": "wzrost", "def": "la hauteur d'une personne", "examples": [{ "fr": "Il est de taille moyenne.", "pl": "Jest średniego wzrostu." }], "tags": ["vocabulaire"] },
-    { "id": "u04-qualite", "fr": "une qualité", "pl": "zaleta", "def": "un trait de caractère positif", "examples": [{ "fr": "La patience est sa plus grande qualité.", "pl": "Cierpliwość to jej największa zaleta." }], "tags": ["vocabulaire"] },
+    { "id": "u04-taches-rousseur", "fr": "des taches de rousseur", "pl": "piegi", "def": "des petits points marron sur la peau", "examples": [{ "fr": "Elle a les cheveux roux et des taches de rousseur.", "pl": "Ma rude włosy i piegi." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u04-chauve" },
+    { "id": "u04-taille", "fr": "être de grande / petite taille", "pl": "być wysokim / niskim, wzrost", "def": "la hauteur d'une personne : être de grande taille = être grand", "examples": [{ "fr": "Elle est de petite taille.", "pl": "Jest niskiego wzrostu." }], "tags": ["vocabulaire"] },
+    { "id": "u04-qualite", "fr": "une qualité", "pl": "zaleta", "def": "un trait de caractère positif", "examples": [{ "fr": "Sa plus grande qualité, c'est qu'il est honnête.", "pl": "Jego największa zaleta to uczciwość." }], "tags": ["vocabulaire"] },
     { "id": "u04-defaut", "fr": "un défaut", "pl": "wada", "def": "un trait de caractère négatif", "examples": [{ "fr": "Son seul défaut, c'est qu'il est toujours en retard.", "pl": "Jego jedyna wada to to, że zawsze się spóźnia." }], "tags": ["vocabulaire"] },
-    { "id": "u04-gentillesse", "fr": "la gentillesse", "pl": "życzliwość, uprzejmość", "def": "la qualité d'une personne aimable", "examples": [{ "fr": "Merci pour ta gentillesse.", "pl": "Dziękuję za twoją życzliwość." }], "tags": ["vocabulaire"] },
-    { "id": "u04-paresse", "fr": "la paresse", "pl": "lenistwo", "def": "le défaut d'une personne qui n'aime pas faire d'efforts", "examples": [{ "fr": "Il ne range jamais sa chambre : c'est de la paresse !", "pl": "Nigdy nie sprząta swojego pokoju: to lenistwo!" }], "tags": ["vocabulaire"] },
-    { "id": "u04-jalousie", "fr": "la jalousie", "pl": "zazdrość", "def": "le sentiment d'une personne qui veut ce que l'autre a", "examples": [{ "fr": "La jalousie est un grand défaut.", "pl": "Zazdrość to duża wada." }], "tags": ["vocabulaire"] }
+    { "id": "u04-gentillesse", "fr": "la gentillesse", "pl": "życzliwość, uprzejmość", "def": "la qualité d'une personne aimable", "examples": [{ "fr": "Merci pour ta gentillesse.", "pl": "Dziękuję za twoją życzliwość." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u04-chaleureux" },
+    { "id": "u04-paresse", "fr": "la paresse", "pl": "lenistwo", "def": "le défaut d'une personne qui n'aime pas faire d'efforts", "examples": [{ "fr": "Il ne range jamais sa chambre : c'est de la paresse !", "pl": "Nigdy nie sprząta swojego pokoju: to lenistwo!" }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u04-paresseux" },
+    { "id": "u04-jalousie", "fr": "la jalousie", "pl": "zazdrość", "def": "le sentiment d'une personne qui veut ce que l'autre a", "examples": [{ "fr": "La jalousie est un grand défaut.", "pl": "Zazdrość to duża wada." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u04-envieux" },
+    {
+      "id": "u04-fossette",
+      "fr": "une fossette",
+      "pl": "dołek (w policzku)",
+      "def": "un petit creux dans le visage quand on sourit",
+      "examples": [
+        { "fr": "Quand elle sourit, elle a une fossette.", "pl": "Kiedy się uśmiecha, ma dołek w policzku." }
+      ],
+      "tip": {
+        "pl": "une fossette = dołek, który widać przy uśmiechu; rodzaj żeński",
+        "fr": "une fossette se voit quand on sourit ; elle est féminine"
+      },
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u04-chauve",
+      "fr": "chauve, dégarni",
+      "pl": "łysy, z przerzedzonymi włosami",
+      "def": "sans cheveux, ou avec très peu de cheveux",
+      "examples": [
+        { "fr": "Mon oncle est chauve depuis longtemps.", "pl": "Mój wujek jest łysy od dawna." }
+      ],
+      "tip": {
+        "pl": "chauve = bez włosów; dégarni = z małą ilością włosów (np. na czole)",
+        "fr": "chauve = sans cheveux ; dégarni = avec peu de cheveux (surtout sur le front)"
+      },
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u04-chaleureux",
+      "fr": "chaleureux, chaleureuse",
+      "pl": "serdeczny, ciepły (w kontakcie)",
+      "def": "gentil et agréable avec les autres",
+      "examples": [
+        { "fr": "Ma voisine est très chaleureuse : elle me parle toujours avec le sourire.", "pl": "Moja sąsiadka jest bardzo serdeczna: zawsze rozmawia ze mną z uśmiechem." }
+      ],
+      "tip": {
+        "pl": "chaleureux → chaleureuse (żeńska forma na -euse)",
+        "fr": "chaleureux → chaleureuse (le féminin se termine en -euse)"
+      },
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u04-paresseux",
+      "fr": "paresseux, paresseuse",
+      "pl": "leniwy, leniwa",
+      "def": "qui n'aime pas faire d'efforts",
+      "examples": [
+        { "fr": "Il est paresseux : il reste toujours devant la télé.", "pl": "Jest leniwy: zawsze siedzi przed telewizorem." }
+      ],
+      "tip": {
+        "pl": "paresseux → paresseuse (żeńska forma na -euse)",
+        "fr": "paresseux → paresseuse (le féminin se termine en -euse)"
+      },
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u04-envieux",
+      "fr": "envieux, envieuse",
+      "pl": "zazdrosny (o to, co mają inni)",
+      "def": "qui veut ce que les autres ont",
+      "examples": [
+        { "fr": "Il est envieux : il veut toujours la voiture de son voisin.", "pl": "Jest zazdrosny: zawsze chce samochodu sąsiada." }
+      ],
+      "tip": {
+        "pl": "envieux → envieuse (żeńska forma na -euse)",
+        "fr": "envieux → envieuse (le féminin se termine en -euse)"
+      },
+      "tags": ["vocabulaire"]
+    }
   ],
   "exercises": [
     { "id": "u04-meme-1", "type": "gap-fill", "entryIds": ["u04-le-meme"], "data": { "sentence": "Nous avons ___ yeux que notre mère.", "answers": ["les mêmes"], "pl": "Mamy takie same oczy jak nasza mama." } },
@@ -148,83 +238,92 @@
     { "id": "u04-meme-3", "type": "gap-fill", "entryIds": ["u04-le-meme"], "data": { "sentence": "Il porte ___ pull que la semaine dernière.", "answers": ["le même"], "pl": "Ma na sobie ten sam sweter co w zeszłym tygodniu." } },
     { "id": "u04-meme-4", "type": "gap-fill", "entryIds": ["u04-le-meme"], "data": { "sentence": "Les deux frères ont ___ sourire.", "answers": ["le même"], "pl": "Obaj bracia mają taki sam uśmiech." } },
 
-    { "id": "u04-comme-1", "type": "gap-fill", "entryIds": ["u04-comme"], "data": { "sentence": "Il a les cheveux bouclés ___ son père.", "answers": ["comme"], "pl": "Ma kręcone włosy jak jego tata.", "clue": "(de la même manière que)" } },
-    { "id": "u04-comme-2", "type": "gap-fill", "entryIds": ["u04-comme"], "data": { "sentence": "___ toi, j'adore les vêtements vintage.", "answers": ["comme"], "pl": "Tak jak ty, uwielbiam ubrania vintage.", "clue": "(de la même manière que)" } },
-    { "id": "u04-comme-3", "type": "gap-fill", "entryIds": ["u04-comme"], "data": { "sentence": "Elle est têtue ___ une mule !", "answers": ["comme"], "pl": "Jest uparta jak osioł!", "clue": "(expression : de la même manière que)" } },
+    { "id": "u04-aussi-1", "type": "gap-fill", "entryIds": ["u04-aussi-autant"], "data": { "sentence": "Léa est ___ grande que son frère.", "answers": ["aussi"], "pl": "Léa jest tak samo wysoka jak jej brat.", "clue": "(=)" } },
+    { "id": "u04-aussi-2", "type": "gap-fill", "entryIds": ["u04-aussi-autant"], "data": { "sentence": "Il a ___ cousins que moi.", "answers": ["autant de"], "pl": "Ma tyle samo kuzynów co ja.", "clue": "(=)" } },
+    { "id": "u04-aussi-3", "type": "gap-fill", "entryIds": ["u04-aussi-autant"], "data": { "sentence": "Je travaille ___ que mon frère.", "answers": ["autant"], "pl": "Pracuję tyle samo co mój brat.", "clue": "(=)", "hint": { "pl": "z czasownikiem: nie aussi", "fr": "avec un verbe : pas aussi" } } },
+    { "id": "u04-aussi-4", "type": "gap-fill", "entryIds": ["u04-aussi-autant"], "data": { "sentence": "Ma sœur parle ___ vite que moi.", "answers": ["aussi"], "pl": "Moja siostra mówi tak samo szybko jak ja.", "clue": "(=)" } },
 
     { "id": "u04-pareil-1", "type": "gap-fill", "entryIds": ["u04-pareil-identique"], "data": { "sentence": "Nos deux robes sont ___ ! (pareil)", "answers": ["pareilles"], "pl": "Nasze dwie sukienki są takie same!" } },
     { "id": "u04-pareil-2", "type": "gap-fill", "entryIds": ["u04-pareil-identique"], "data": { "sentence": "Ces deux frères ne sont pas ___ : l'un est calme, l'autre est bavard. (pareil)", "answers": ["pareils"], "pl": "Ci dwaj bracia nie są tacy sami: jeden jest spokojny, drugi gadatliwy." } },
-    { "id": "u04-pareil-3", "type": "gap-fill", "entryIds": ["u04-pareil-identique"], "data": { "sentence": "Leurs chemises sont ___ : même couleur, même taille. (identique)", "answers": ["identiques"], "pl": "Ich koszule są identyczne: ten sam kolor, ten sam rozmiar." } },
-    { "id": "u04-pareil-4", "type": "gap-fill", "entryIds": ["u04-pareil-identique"], "data": { "sentence": "Ton sac est identique ___ mien.", "answers": ["au"], "pl": "Twoja torebka jest identyczna jak moja.", "hint": { "pl": "à + le", "fr": "à + le" } } },
-
-    { "id": "u04-ressembler-1", "type": "gap-fill", "entryIds": ["u04-ressembler"], "data": { "sentence": "Tu ___ beaucoup à ta mère. (ressembler)", "answers": ["ressembles"], "pl": "Jesteś bardzo podobna do mamy." } },
-    { "id": "u04-ressembler-2", "type": "gap-fill", "entryIds": ["u04-ressembler"], "data": { "sentence": "Les deux sœurs se ___ comme deux gouttes d'eau. (ressembler)", "answers": ["ressemblent"], "pl": "Te dwie siostry są podobne jak dwie krople wody." } },
-    { "id": "u04-ressembler-3", "type": "gap-fill", "entryIds": ["u04-ressembler"], "data": { "sentence": "Léo ressemble ___ père de Max.", "answers": ["au"], "pl": "Léo jest podobny do ojca Maxa.", "hint": { "pl": "à + le", "fr": "à + le" } } },
-    { "id": "u04-ressembler-4", "type": "gap-fill", "entryIds": ["u04-ressembler"], "data": { "sentence": "Mon frère et moi, nous nous ___ un peu. (ressembler)", "answers": ["ressemblons"], "pl": "Mój brat i ja jesteśmy trochę do siebie podobni." } },
+    { "id": "u04-pareil-3", "type": "gap-fill", "entryIds": ["u04-pareil-identique"], "data": { "sentence": "Leurs chemises sont ___ : même couleur, même taille. (pareil)", "answers": ["pareilles"], "pl": "Ich koszule są takie same: ten sam kolor, ten sam rozmiar." } },
+    { "id": "u04-pareil-4", "type": "gap-fill", "entryIds": ["u04-pareil-identique"], "data": { "sentence": "Mon pull et ton pull sont ___ ! (pareil)", "answers": ["pareils"], "pl": "Mój sweter i twój sweter są takie same!" } },
 
     { "id": "u04-chaque-1", "type": "gap-fill", "entryIds": ["u04-chaque"], "data": { "sentence": "___ matin, il met une heure à se coiffer.", "answers": ["chaque"], "pl": "Każdego ranka czesze się przez godzinę.", "clue": "(+ nom singulier)" } },
     { "id": "u04-chaque-2", "type": "gap-fill", "entryIds": ["u04-chaque"], "data": { "sentence": "___ semaine, je vais chez le coiffeur.", "answers": ["chaque"], "pl": "Co tydzień chodzę do fryzjera.", "clue": "(+ nom singulier)" } },
     { "id": "u04-chaque-3", "type": "gap-fill", "entryIds": ["u04-chaque"], "data": { "sentence": "Dans cette famille, ___ enfant a un caractère différent.", "answers": ["chaque"], "pl": "W tej rodzinie każde dziecko ma inny charakter.", "clue": "(un par un)" } },
 
-    { "id": "u04-tout-1", "type": "gap-fill", "entryIds": ["u04-tout"], "data": { "sentence": "Elle a lu ___ les magazines de mode.", "answers": ["tous"], "pl": "Przeczytała wszystkie magazyny o modzie." } },
+    { "id": "u04-tout-1", "type": "gap-fill", "entryIds": ["u04-tout"], "data": { "sentence": "Elle a lu ___ les livres de son frère.", "answers": ["tous"], "pl": "Przeczytała wszystkie książki swojego brata." } },
     { "id": "u04-tout-2", "type": "gap-fill", "entryIds": ["u04-tout"], "data": { "sentence": "Il a plu ___ la journée.", "answers": ["toute"], "pl": "Padało przez cały dzień." } },
     { "id": "u04-tout-3", "type": "gap-fill", "entryIds": ["u04-tout"], "data": { "sentence": "___ mes amies ont les cheveux longs.", "answers": ["toutes"], "pl": "Wszystkie moje przyjaciółki mają długie włosy." } },
-    { "id": "u04-tout-4", "type": "gap-fill", "entryIds": ["u04-tout"], "data": { "sentence": "Il a passé ___ le week-end devant son miroir.", "answers": ["tout"], "pl": "Spędził cały weekend przed lustrem." } },
+    { "id": "u04-tout-4", "type": "gap-fill", "entryIds": ["u04-tout"], "data": { "sentence": "Il a passé ___ le week-end devant la télé.", "answers": ["tout"], "pl": "Spędził cały weekend przed telewizorem." } },
     { "id": "u04-tout-5", "type": "gap-fill", "entryIds": ["u04-tout"], "data": { "sentence": "Je fais du sport ___ les semaines.", "answers": ["toutes"], "pl": "Uprawiam sport co tydzień." } },
+    { "id": "u04-tout-7", "type": "gap-fill", "entryIds": ["u04-tout"], "data": { "sentence": "Elle a ___ compris : le cours était très clair.", "answers": ["tout"], "pl": "Ona wszystko zrozumiała: lekcja była bardzo jasna.", "clue": "(pronom neutre : toutes les choses)" } },
 
     { "id": "u04-mien-1", "type": "gap-fill", "entryIds": ["u04-le-mien"], "data": { "sentence": "Ce n'est pas ton manteau, c'est ___. (à moi)", "answers": ["le mien"], "pl": "To nie twój płaszcz, to mój." } },
-    { "id": "u04-mien-2", "type": "gap-fill", "entryIds": ["u04-le-mien"], "data": { "sentence": "J'ai oublié mes lunettes. Tu peux me prêter ___ ? (à toi)", "answers": ["les tiennes"], "pl": "Zapomniałam okularów. Możesz mi pożyczyć swoje?" } },
+    { "id": "u04-mien-2", "type": "gap-fill", "entryIds": ["u04-le-mien"], "data": { "sentence": "J'ai oublié mes lunettes. Tu peux me donner ___ ? (à toi)", "answers": ["les tiennes"], "pl": "Zapomniałam okularów. Możesz mi dać swoje?" } },
     { "id": "u04-mien-3", "type": "gap-fill", "entryIds": ["u04-le-mien"], "data": { "sentence": "Ma sœur est blonde. Et ___, elle est comment ? (à toi)", "answers": ["la tienne"], "pl": "Moja siostra jest blondynką. A twoja, jak wygląda?" } },
-    { "id": "u04-mien-4", "type": "gap-fill", "entryIds": ["u04-le-mien"], "data": { "sentence": "J'ai perdu ma clé, mais Léa a ___ : elle peut ouvrir. (à elle)", "answers": ["la sienne"], "pl": "Zgubiłam klucz, ale Léa ma swój: może otworzyć." } },
-    { "id": "u04-mien-5", "type": "gap-fill", "entryIds": ["u04-le-mien"], "data": { "sentence": "Mes parents sont sévères. Et ___ ? (à toi)", "answers": ["les tiens"], "pl": "Moi rodzice są surowi. A twoi?" } },
+    { "id": "u04-mien-4", "type": "gap-fill", "entryIds": ["u04-le-mien"], "data": { "sentence": "J'ai oublié mon téléphone, mais Léa a ___ : elle peut appeler. (à elle)", "answers": ["le sien"], "pl": "Zapomniałam telefonu, ale Léa ma swój: może zadzwonić." } },
+    { "id": "u04-mien-5", "type": "gap-fill", "entryIds": ["u04-le-mien"], "data": { "sentence": "Mes parents sont gentils. Et ___ ? (à toi)", "answers": ["les tiens"], "pl": "Moi rodzice są mili. A twoi?" } },
 
     { "id": "u04-notre-1", "type": "gap-fill", "entryIds": ["u04-le-notre"], "data": { "sentence": "Votre appartement est grand ; ___ est plus petit. (à nous)", "answers": ["le nôtre"], "pl": "Wasze mieszkanie jest duże; nasze jest mniejsze." } },
-    { "id": "u04-notre-2", "type": "gap-fill", "entryIds": ["u04-le-notre"], "data": { "sentence": "Nos enfants sont calmes, mais ___ sont très bavards ! (à eux)", "answers": ["les leurs"], "pl": "Nasze dzieci są spokojne, ale ich są bardzo gadatliwe!" } },
+    { "id": "u04-notre-2", "type": "gap-fill", "entryIds": ["u04-le-notre"], "data": { "sentence": "Nos enfants sont calmes, mais ___ sont très bruyants ! (à eux)", "answers": ["les leurs"], "pl": "Nasze dzieci są spokojne, ale ich są bardzo hałaśliwe!" } },
     { "id": "u04-notre-3", "type": "gap-fill", "entryIds": ["u04-le-notre"], "data": { "sentence": "C'est notre voiture ou ___ ? (à vous)", "answers": ["la vôtre"], "pl": "To nasz samochód czy wasz?" } },
-    { "id": "u04-notre-4", "type": "gap-fill", "entryIds": ["u04-le-notre"], "data": { "sentence": "Notre maison est ancienne, ___ est moderne. (à eux)", "answers": ["la leur"], "pl": "Nasz dom jest stary, ich jest nowoczesny." } },
+    { "id": "u04-notre-4", "type": "gap-fill", "entryIds": ["u04-le-notre"], "data": { "sentence": "Notre maison est ancienne, ___ est neuve. (à eux)", "answers": ["la leur"], "pl": "Nasz dom jest stary, ich jest nowy." } },
 
-    { "id": "u04-visage-1", "type": "gap-fill", "entryIds": ["u04-visage"], "data": { "sentence": "Elle a un ___ rond et souriant.", "answers": ["visage"], "pl": "Ma okrągłą, uśmiechniętą twarz.", "clue": "(le devant de la tête)" } },
+    { "id": "u04-ressembler-1", "type": "gap-fill", "entryIds": ["u04-ressembler"], "data": { "sentence": "Tu ___ beaucoup à ta mère. (ressembler)", "answers": ["ressembles"], "pl": "Jesteś bardzo podobna do mamy." } },
+    { "id": "u04-ressembler-2", "type": "gap-fill", "entryIds": ["u04-ressembler"], "data": { "sentence": "Les deux sœurs se ___ beaucoup. (ressembler)", "answers": ["ressemblent"], "pl": "Te dwie siostry są bardzo do siebie podobne." } },
+    { "id": "u04-ressembler-3", "type": "gap-fill", "entryIds": ["u04-ressembler"], "data": { "sentence": "Léo ressemble ___ père de Max.", "answers": ["au"], "pl": "Léo jest podobny do ojca Maxa.", "hint": { "pl": "à + le", "fr": "à + le" } } },
+    { "id": "u04-ressembler-4", "type": "gap-fill", "entryIds": ["u04-ressembler"], "data": { "sentence": "Mon frère et moi, nous nous ___ un peu. (ressembler)", "answers": ["ressemblons"], "pl": "Mój brat i ja jesteśmy trochę do siebie podobni." } },
+    { "id": "u04-ressembler-5", "type": "translate-pl-fr", "entryIds": ["u04-ressembler"], "data": { "pl": "jesteś podobny do ojca", "answers": ["tu ressembles à ton père", "tu ressembles à ton papa"], "hint": { "pl": "forma tu", "fr": "avec tu" } } },
+    { "id": "u04-visage-1", "type": "gap-fill", "entryIds": ["u04-visage"], "data": { "sentence": "Elle a un ___ rond et un joli sourire.", "answers": ["visage"], "pl": "Ma okrągłą twarz i ładny uśmiech.", "clue": "(le devant de la tête)" } },
     { "id": "u04-visage-2", "type": "translate-pl-fr", "entryIds": ["u04-visage"], "data": { "pl": "twarz", "answers": ["un visage", "le visage"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u04-joue-1", "type": "gap-fill", "entryIds": ["u04-joue"], "data": { "sentence": "En France, on se fait la bise sur les deux ___.", "answers": ["joues"], "pl": "We Francji całuje się na powitanie w oba policzki.", "clue": "(parties du visage sous les yeux)" } },
-    { "id": "u04-joue-2", "type": "translate-pl-fr", "entryIds": ["u04-joue"], "data": { "pl": "policzek", "answers": ["une joue", "la joue"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-visage-3", "type": "gap-fill", "entryIds": ["u04-visage"], "data": { "sentence": "Chaque matin, il se lave le ___ à l'eau froide.", "answers": ["visage"], "pl": "Co rano myje twarz zimną wodą.", "clue": "(les yeux, le nez, la bouche)" } },
     { "id": "u04-menton-1", "type": "gap-fill", "entryIds": ["u04-menton"], "data": { "sentence": "Il a une petite barbe sur le ___.", "answers": ["menton"], "pl": "Ma małą bródkę na podbródku.", "clue": "(sous la bouche)" } },
     { "id": "u04-menton-2", "type": "translate-pl-fr", "entryIds": ["u04-menton"], "data": { "pl": "podbródek", "answers": ["un menton", "le menton"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u04-taches-rousseur-1", "type": "gap-fill", "entryIds": ["u04-taches-rousseur"], "data": { "sentence": "Elle a les cheveux roux et des ___ de rousseur.", "answers": ["taches"], "pl": "Ma rude włosy i piegi.", "clue": "(petits points sur la peau)" } },
-    { "id": "u04-taches-rousseur-2", "type": "translate-pl-fr", "entryIds": ["u04-taches-rousseur"], "data": { "pl": "piegi", "answers": ["des taches de rousseur", "les taches de rousseur"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u04-taille-1", "type": "gap-fill", "entryIds": ["u04-taille"], "data": { "sentence": "Il n'est ni grand ni petit : il est de ___ moyenne.", "answers": ["taille"], "pl": "Nie jest ani wysoki, ani niski: jest średniego wzrostu.", "clue": "(la hauteur d'une personne)" } },
-    { "id": "u04-taille-2", "type": "translate-pl-fr", "entryIds": ["u04-taille"], "data": { "pl": "wzrost", "answers": ["la taille", "une taille"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u04-qualite-1", "type": "gap-fill", "entryIds": ["u04-qualite"], "data": { "sentence": "La patience est sa plus grande ___.", "answers": ["qualité"], "pl": "Cierpliwość to jej największa zaleta.", "clue": "(trait de caractère positif)" } },
+    { "id": "u04-menton-3", "type": "gap-fill", "entryIds": ["u04-menton"], "data": { "sentence": "Il réfléchit, la main sous le ___.", "answers": ["menton"], "pl": "Zastanawia się z ręką pod brodą.", "clue": "(sous la bouche)" } },
+    { "id": "u04-taille-1", "type": "gap-fill", "entryIds": ["u04-taille"], "data": { "sentence": "Mon frère est de grande ___ : il mesure 1,90 m.", "answers": ["taille"], "pl": "Mój brat jest wysokiego wzrostu: ma 1,90 m.", "clue": "(la hauteur d'une personne)" } },
+    { "id": "u04-taille-2", "type": "translate-pl-fr", "entryIds": ["u04-taille"], "data": { "pl": "jest niskiego wzrostu", "answers": ["il est de petite taille", "elle est de petite taille"] } },
+    { "id": "u04-taille-3", "type": "gap-fill", "entryIds": ["u04-taille"], "data": { "sentence": "Quelle est ta ___ ? – Je mesure un mètre soixante-dix.", "answers": ["taille"], "pl": "Ile masz wzrostu? – Mam metr siedemdziesiąt.", "clue": "(combien tu mesures)" } },
+    { "id": "u04-qualite-1", "type": "gap-fill", "entryIds": ["u04-qualite"], "data": { "sentence": "Sa plus grande ___, c'est qu'il est honnête.", "answers": ["qualité"], "pl": "Jego największa zaleta to uczciwość.", "clue": "(trait de caractère positif)" } },
     { "id": "u04-qualite-2", "type": "translate-pl-fr", "entryIds": ["u04-qualite"], "data": { "pl": "zaleta", "answers": ["une qualité", "la qualité"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-qualite-3", "type": "gap-fill", "entryIds": ["u04-qualite"], "data": { "sentence": "Il a beaucoup de ___ : il est honnête, curieux et discret.", "answers": ["qualités"], "pl": "Ma wiele zalet: jest uczciwy, ciekawy świata i dyskretny.", "clue": "(traits de caractère positifs)" } },
     { "id": "u04-defaut-1", "type": "gap-fill", "entryIds": ["u04-defaut"], "data": { "sentence": "Son seul ___, c'est qu'il est toujours en retard.", "answers": ["défaut"], "pl": "Jego jedyna wada to to, że zawsze się spóźnia.", "clue": "(trait de caractère négatif)" } },
     { "id": "u04-defaut-2", "type": "translate-pl-fr", "entryIds": ["u04-defaut"], "data": { "pl": "wada", "answers": ["un défaut", "le défaut"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u04-gentillesse-1", "type": "gap-fill", "entryIds": ["u04-gentillesse"], "data": { "sentence": "Merci pour ta ___ : tu m'as beaucoup aidé.", "answers": ["gentillesse"], "pl": "Dziękuję za twoją życzliwość: bardzo mi pomogłeś.", "clue": "(qualité d'une personne aimable)" } },
-    { "id": "u04-gentillesse-2", "type": "translate-pl-fr", "entryIds": ["u04-gentillesse"], "data": { "pl": "życzliwość, uprzejmość", "answers": ["la gentillesse"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u04-paresse-1", "type": "gap-fill", "entryIds": ["u04-paresse"], "data": { "sentence": "Il ne range jamais sa chambre : c'est de la ___ !", "answers": ["paresse"], "pl": "Nigdy nie sprząta swojego pokoju: to lenistwo!", "clue": "(défaut : pas envie de faire d'efforts)" } },
-    { "id": "u04-paresse-2", "type": "translate-pl-fr", "entryIds": ["u04-paresse"], "data": { "pl": "lenistwo", "answers": ["la paresse"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u04-jalousie-1", "type": "gap-fill", "entryIds": ["u04-jalousie"], "data": { "sentence": "Quand son frère reçoit un cadeau, elle est verte de ___.", "answers": ["jalousie"], "pl": "Kiedy jej brat dostaje prezent, ona zielenieje z zazdrości.", "clue": "(elle veut ce que l'autre a)" } },
-    { "id": "u04-jalousie-2", "type": "translate-pl-fr", "entryIds": ["u04-jalousie"], "data": { "pl": "zazdrość", "answers": ["la jalousie"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u04-visage-3", "type": "gap-fill", "entryIds": ["u04-visage"], "data": { "sentence": "Chaque matin, il se lave le ___ à l'eau froide.", "answers": ["visage"], "pl": "Co rano myje twarz zimną wodą.", "clue": "(les yeux, le nez, la bouche)" } },
-    { "id": "u04-joue-3", "type": "gap-fill", "entryIds": ["u04-joue"], "data": { "sentence": "Le bébé a de grosses ___ roses.", "answers": ["joues"], "pl": "Niemowlę ma duże różowe policzki.", "clue": "(sous les yeux, à côté du nez)" } },
-    { "id": "u04-menton-3", "type": "gap-fill", "entryIds": ["u04-menton"], "data": { "sentence": "Il réfléchit, la main sous le ___.", "answers": ["menton"], "pl": "Zastanawia się z ręką pod brodą.", "clue": "(sous la bouche)" } },
-    { "id": "u04-taches-rousseur-3", "type": "gap-fill", "entryIds": ["u04-taches-rousseur"], "data": { "sentence": "Au soleil, elle a encore plus de taches de ___ sur le nez.", "answers": ["rousseur"], "pl": "Na słońcu ma jeszcze więcej piegów na nosie.", "clue": "(petits points marron sur la peau)" } },
-    { "id": "u04-taille-3", "type": "gap-fill", "entryIds": ["u04-taille"], "data": { "sentence": "Quelle est ta ___ ? – Je mesure un mètre soixante-dix.", "answers": ["taille"], "pl": "Ile masz wzrostu? – Mam metr siedemdziesiąt.", "clue": "(combien tu mesures)" } },
-    { "id": "u04-qualite-3", "type": "gap-fill", "entryIds": ["u04-qualite"], "data": { "sentence": "Il a beaucoup de ___ : il est drôle, généreux et patient.", "answers": ["qualités"], "pl": "Ma wiele zalet: jest zabawny, hojny i cierpliwy.", "clue": "(traits de caractère positifs)" } },
     { "id": "u04-defaut-3", "type": "gap-fill", "entryIds": ["u04-defaut"], "data": { "sentence": "Personne n'est parfait : tout le monde a des ___.", "answers": ["défauts"], "pl": "Nikt nie jest doskonały: każdy ma wady.", "clue": "(traits de caractère négatifs)" } },
-    { "id": "u04-gentillesse-3", "type": "gap-fill", "entryIds": ["u04-gentillesse"], "data": { "sentence": "Elle aide toujours ses voisins : tout le quartier connaît sa ___.", "answers": ["gentillesse"], "pl": "Zawsze pomaga sąsiadom: cała dzielnica zna jej życzliwość.", "clue": "(elle est très aimable)" } },
-    { "id": "u04-paresse-3", "type": "gap-fill", "entryIds": ["u04-paresse"], "data": { "sentence": "Je n'ai pas fait de sport ce matin, par ___.", "answers": ["paresse"], "pl": "Nie ćwiczyłem dziś rano, z lenistwa.", "clue": "(je n'avais pas envie de faire d'effort)" } },
-    { "id": "u04-jalousie-3", "type": "gap-fill", "entryIds": ["u04-jalousie"], "data": { "sentence": "Il regarde la nouvelle voiture de son voisin avec ___.", "answers": ["jalousie"], "pl": "Patrzy z zazdrością na nowy samochód sąsiada.", "clue": "(il veut avoir la même chose)" } },
+    { "id": "u04-fossette-1", "type": "gap-fill", "entryIds": ["u04-fossette"], "data": { "sentence": "Quand il sourit, on voit sa petite ___.", "answers": ["fossette"], "pl": "Kiedy się uśmiecha, widać jego mały dołek.", "clue": "(petit creux quand on sourit)" } },
+    { "id": "u04-fossette-2", "type": "translate-pl-fr", "entryIds": ["u04-fossette"], "data": { "pl": "dołek (w policzku)", "answers": ["une fossette", "la fossette"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-fossette-3", "type": "gap-fill", "entryIds": ["u04-fossette"], "data": { "sentence": "Ma sœur a une ___ quand elle sourit.", "answers": ["fossette"], "pl": "Moja siostra ma dołek, kiedy się uśmiecha.", "clue": "(petit creux dans le visage)" } },
+    { "id": "u04-chauve-1", "type": "gap-fill", "entryIds": ["u04-chauve"], "data": { "sentence": "Mon oncle n'a plus de cheveux : il est ___.", "answers": ["chauve"], "pl": "Mój wujek nie ma już włosów: jest łysy.", "clue": "(sans cheveux)" } },
+    { "id": "u04-chauve-2", "type": "translate-pl-fr", "entryIds": ["u04-chauve"], "data": { "pl": "łysy", "answers": ["chauve", "il est chauve"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-chauve-3", "type": "gap-fill", "entryIds": ["u04-chauve"], "data": { "sentence": "Mon père a perdu beaucoup de cheveux : il est un peu ___.", "answers": ["dégarni", "chauve"], "pl": "Mój tata stracił dużo włosów: jest trochę łysiejący.", "clue": "(avec peu de cheveux)" } },
+    { "id": "u04-chaleureux-1", "type": "gap-fill", "entryIds": ["u04-chaleureux"], "data": { "sentence": "Ma voisine est très ___ : elle me parle toujours avec un grand sourire. (chaleureux)", "answers": ["chaleureuse"], "pl": "Moja sąsiadka jest bardzo serdeczna: zawsze rozmawia ze mną z wielkim uśmiechem.", "clue": "(gentille et agréable)" } },
+    { "id": "u04-chaleureux-2", "type": "translate-pl-fr", "entryIds": ["u04-chaleureux"], "data": { "pl": "serdeczny, ciepły (w kontakcie)", "answers": ["chaleureux", "chaleureuse", "il est chaleureux", "elle est chaleureuse"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-chaleureux-3", "type": "gap-fill", "entryIds": ["u04-chaleureux"], "data": { "sentence": "Mes voisins sont très ___ : ils sont toujours gentils avec nous. (chaleureux)", "answers": ["chaleureux"], "pl": "Moi sąsiedzi są bardzo serdeczni: zawsze są dla nas mili.", "clue": "(gentils et agréables)" } },
+    { "id": "u04-paresseux-1", "type": "gap-fill", "entryIds": ["u04-paresseux"], "data": { "sentence": "Elle est ___ : elle dort jusqu'à midi. (paresseux)", "answers": ["paresseuse"], "pl": "Jest leniwa: śpi do południa.", "clue": "(elle n'aime pas faire d'efforts)" } },
+    { "id": "u04-paresseux-2", "type": "translate-pl-fr", "entryIds": ["u04-paresseux"], "data": { "pl": "leniwy, leniwa", "answers": ["paresseux", "paresseuse", "il est paresseux", "elle est paresseuse"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-paresseux-3", "type": "gap-fill", "entryIds": ["u04-paresseux"], "data": { "sentence": "Mon frère est trop ___ pour faire du sport. (paresseux)", "answers": ["paresseux"], "pl": "Mój brat jest za leniwy, żeby uprawiać sport.", "clue": "(il n'aime pas faire d'efforts)" } },
+    { "id": "u04-envieux-1", "type": "gap-fill", "entryIds": ["u04-envieux"], "data": { "sentence": "Il est ___ : il veut toujours la voiture de son voisin. (envieux)", "answers": ["envieux"], "pl": "Jest zazdrosny: zawsze chce samochodu sąsiada.", "clue": "(il veut ce que les autres ont)" } },
+    { "id": "u04-envieux-2", "type": "translate-pl-fr", "entryIds": ["u04-envieux"], "data": { "pl": "zazdrosny (o to, co mają inni)", "answers": ["envieux", "envieuse", "il est envieux", "elle est envieuse"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u04-envieux-3", "type": "gap-fill", "entryIds": ["u04-envieux"], "data": { "sentence": "Elle est ___ de mes vacances : elle veut partir aussi. (envieux)", "answers": ["envieuse"], "pl": "Jest zazdrosna o moje wakacje: też chce wyjechać.", "clue": "(elle veut ce que les autres ont)" } },
 
     { "id": "u04-meme-5", "type": "translate-pl-fr", "entryIds": ["u04-le-meme"], "data": { "pl": "mamy ten sam samochód", "answers": ["nous avons la même voiture", "on a la même voiture"] } },
-    { "id": "u04-comme-4", "type": "translate-pl-fr", "entryIds": ["u04-comme"], "data": { "pl": "jestem wysoki jak mój tata", "answers": ["je suis grand comme mon père", "je suis grand comme mon papa"] } },
-    { "id": "u04-pareil-5", "type": "translate-pl-fr", "entryIds": ["u04-pareil-identique"], "data": { "pl": "nasze buty są takie same", "answers": ["nos chaussures sont pareilles", "nos chaussures sont identiques"] } },
-    { "id": "u04-ressembler-5", "type": "translate-pl-fr", "entryIds": ["u04-ressembler"], "data": { "pl": "jesteś podobny do ojca", "answers": ["tu ressembles à ton père", "tu ressembles à ton papa"], "hint": { "pl": "forma tu", "fr": "avec tu" } } },
+    { "id": "u04-pareil-5", "type": "translate-pl-fr", "entryIds": ["u04-pareil-identique"], "data": { "pl": "nasze buty są takie same", "answers": ["nos chaussures sont pareilles"] } },
     { "id": "u04-chaque-4", "type": "translate-pl-fr", "entryIds": ["u04-chaque"], "data": { "pl": "każdy student", "answers": ["chaque étudiant"], "hint": { "pl": "rodzaj męski", "fr": "au masculin" } } },
     { "id": "u04-tout-6", "type": "translate-pl-fr", "entryIds": ["u04-tout"], "data": { "pl": "cała rodzina", "answers": ["toute la famille"] } },
     { "id": "u04-mien-6", "type": "translate-pl-fr", "entryIds": ["u04-le-mien"], "data": { "pl": "twój pokój jest większy niż mój", "answers": ["ta chambre est plus grande que la mienne", "ta pièce est plus grande que la mienne"], "hint": { "pl": "forma tu; zaimek dzierżawczy zamiast « mój pokój »", "fr": "avec tu ; un pronom possessif à la place de « ma chambre »" } } },
-    { "id": "u04-notre-5", "type": "translate-pl-fr", "entryIds": ["u04-le-notre"], "data": { "pl": "nasz dom jest mniejszy niż ich", "answers": ["notre maison est plus petite que la leur"] } }
+    { "id": "u04-notre-5", "type": "translate-pl-fr", "entryIds": ["u04-le-notre"], "data": { "pl": "nasz dom jest mniejszy niż ich", "answers": ["notre maison est plus petite que la leur"] } },
+    { "id": "u04-aussi-5", "type": "translate-pl-fr", "entryIds": ["u04-aussi-autant"], "data": { "pl": "mam tyle samo przyjaciół co ty", "answers": ["j'ai autant d'amis que toi"] } },
+    { "id": "u04-tout-8", "type": "translate-pl-fr", "entryIds": ["u04-tout"], "data": { "pl": "wszystko w porządku", "answers": ["tout va bien", "tout est bien"] } },
+    { "id": "mp-beau-bon", "type": "paires-minimales", "entryIds": ["u04-le-meme"], "data": { "pair": ["C'est beau.", "C'est bon."] } },
+    { "id": "mp-fait-fin", "type": "paires-minimales", "entryIds": ["u04-aussi-autant"], "data": { "pair": ["C'est fait.", "C'est fin."] } },
+    { "id": "mp-la-lent", "type": "paires-minimales", "entryIds": ["u04-chaque"], "data": { "pair": ["Il est là.", "Il est lent."] } }
   ],
+  "retiredExercises": {
+    "gap-fill": ["u04-comme-1", "u04-comme-2", "u04-comme-3", "u04-joue-1", "u04-joue-3", "u04-taches-rousseur-1", "u04-taches-rousseur-3", "u04-gentillesse-1", "u04-gentillesse-3", "u04-paresse-1", "u04-paresse-3", "u04-jalousie-1", "u04-jalousie-3"],
+    "translate-pl-fr": ["u04-comme-4", "u04-joue-2", "u04-taches-rousseur-2", "u04-gentillesse-2", "u04-paresse-2", "u04-jalousie-2"]
+  },
   "boss": {
-    "groups": [["u04-le-meme"], ["u04-tout"], ["u04-le-mien", "u04-le-notre"], ["u04-ressembler"]],
+    "groups": [["u04-le-meme", "u04-aussi-autant"], ["u04-tout"], ["u04-le-mien", "u04-le-notre"], ["u04-pareil-identique"]],
     "questions": 10,
     "lives": 3,
     "secondsPerQuestion": 12

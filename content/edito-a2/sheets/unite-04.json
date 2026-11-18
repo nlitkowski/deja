@@ -4,8 +4,8 @@
   "title": "Tous pareils, tous différents",
   "icon": "👥",
   "summary": {
-    "pl": "Wygląd i charakter: porównanie równości (le même, comme, pareil, identique, ressembler à), chaque i tout, zaimki dzierżawcze (le mien, le nôtre…), portret fizyczny, komplementy, opis charakteru.",
-    "fr": "L'apparence et le caractère : l'équivalence (le même, comme, pareil, identique, ressembler à), chaque et tout, les pronoms possessifs (le mien, le nôtre…), le portrait physique, les compliments, le caractère."
+    "pl": "Wygląd i charakter: porównanie równości (aussi, autant, le même, pareil), chaque i tout, zaimki dzierżawcze (le mien, le nôtre…), portret fizyczny, komplementy, opis charakteru.",
+    "fr": "L'apparence et le caractère : l'équivalence (aussi, autant, le même, pareil), chaque et tout, les pronoms possessifs (le mien, le nôtre…), le portrait physique, les compliments, le caractère."
   },
   "sections": [
     {
@@ -16,34 +16,34 @@
           "type": "table",
           "head": ["Forme", "Exemple"],
           "rows": [
+            ["**aussi** + adjectif / adverbe (+ **que**)", "Léa est **aussi** grande **que** son frère."],
+            ["**autant de** + nom (+ **que**)", "Il a **autant d'**amis **que** moi."],
+            ["verbe + **autant** (+ **que**)", "Je travaille **autant que** toi."],
             ["**le / la / les même(s)** + nom (+ **que**)", "Tu as **la même** veste **que** moi."],
-            ["**comme** + nom / pronom tonique", "Il est blond **comme** son père. **Comme** toi, j'aime le vintage."],
-            ["**pareil(le)(s)**", "Nos robes sont **pareilles**."],
-            ["**identique(s) à**", "Ton sac est **identique au** mien."],
-            ["**ressembler à** / **se ressembler**", "Tu **ressembles à** ta mère. Les jumelles **se ressemblent**."]
+            ["**pareil(le)(s)**", "Nos robes sont **pareilles**."]
           ]
         },
         {
           "type": "rule",
           "text": {
-            "pl": "**même**, **pareil** i **identique** zgadzają się z rzeczownikiem: les mêm**es** yeux, des chemises pareil**les**, identique**s**.\nPo **à** pamiętaj o ściągnięciu: ressembler **au** père, identique **aux** autres.",
-            "fr": "**même**, **pareil** et **identique** s'accordent avec le nom : les mêm**es** yeux, des chemises pareil**les**, identique**s**.\nAprès **à**, attention à la contraction : ressembler **au** père, identique **aux** autres."
+            "pl": "**aussi** stoi przed przymiotnikiem lub przysłówkiem, **autant de** przed rzeczownikiem, **autant** przy czasowniku; po nich **que** (jak / co).\n**même** i **pareil** zgadzają się z rzeczownikiem: les mêm**es** yeux, des chemises pareil**les**. **pareil(le)** = taki sam (égal, identique).",
+            "fr": "**aussi** se place devant un adjectif ou un adverbe, **autant de** devant un nom, **autant** avec un verbe ; ils sont suivis de **que**.\n**même** et **pareil** s'accordent avec le nom : les mêm**es** yeux, des chemises pareil**les**. **pareil(le)** = égal, identique."
           }
         },
         {
           "type": "examples",
           "items": [
             { "fr": "Nous avons **les mêmes** yeux **que** notre mère.", "pl": "Mamy takie same oczy jak nasza mama." },
-            { "fr": "Elle est têtue **comme** une mule !", "pl": "Jest uparta jak osioł!" },
-            { "fr": "Les deux sœurs **se ressemblent** comme deux gouttes d'eau.", "pl": "Te dwie siostry są podobne jak dwie krople wody." },
+            { "fr": "Elle est **aussi** têtue **que** son frère.", "pl": "Jest tak samo uparta jak jej brat." },
+            { "fr": "Il a **autant d'**amis **que** moi.", "pl": "Ma tyle samo przyjaciół co ja." },
             { "fr": "Ces deux frères ne sont pas du tout **pareils**.", "pl": "Ci dwaj bracia wcale nie są tacy sami." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "**que** po **le même**, ale nie po **comme**: « comme que » jest błędem.\n**ressembler à** + osoba, nie dopełnienie bliższe: il **lui** ressemble (nie « il le ressemble »).",
-            "fr": "**que** après **le même**, mais jamais après **comme** : « comme que » est une erreur.\n**ressembler à** + personne : il **lui** ressemble (pas « il le ressemble »)."
+            "pl": "Równość: **aussi** + przymiotnik / przysłówek, **autant de** + rzeczownik, **autant** przy czasowniku. Nie mów « il travaille aussi que moi ».\n**que** po **le même** wprowadza porównanie: la même veste **que** moi.",
+            "fr": "L'égalité : **aussi** + adjectif / adverbe, **autant de** + nom, **autant** avec un verbe. On ne dit pas « il travaille aussi que moi ».\n**que** après **le même** introduit la comparaison : la même veste **que** moi."
           }
         }
       ]
@@ -64,8 +64,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**chaque** + rzeczownik w liczbie pojedynczej, bez rodzajnika, forma się nie zmienia: chaque matin, chaque personne.\n**tout** + rodzajnik / mes / ces… + rzeczownik; zgadza się z rzeczownikiem: tout le, toute la, tous les, toutes les.",
-            "fr": "**chaque** + nom singulier, sans article, invariable : chaque matin, chaque personne.\n**tout** + article / mes / ces… + nom ; il s'accorde avec le nom : tout le, toute la, tous les, toutes les."
+            "pl": "**chaque** + rzeczownik w liczbie pojedynczej, bez rodzajnika, forma się nie zmienia: chaque matin, chaque personne.\n**tout** + rodzajnik / mes / ces… + rzeczownik; zgadza się z rzeczownikiem: tout le, toute la, tous les, toutes les.\n**tout** bez rzeczownika = **wszystko** (zaimek, nieodmienny): Tout va bien. J'ai tout compris.",
+            "fr": "**chaque** + nom singulier, sans article, invariable : chaque matin, chaque personne.\n**tout** + article / mes / ces… + nom ; il s'accorde avec le nom : tout le, toute la, tous les, toutes les.\n**tout** sans nom = **toutes les choses** (pronom neutre, invariable) : Tout va bien. J'ai tout compris."
           }
         },
         {
@@ -73,7 +73,8 @@
           "items": [
             { "fr": "**Chaque** matin, il met une heure à se coiffer.", "pl": "Każdego ranka czesze się przez godzinę." },
             { "fr": "Il a plu **toute** la journée.", "pl": "Padało przez cały dzień." },
-            { "fr": "Elle lit **tous** les magazines de mode.", "pl": "Czyta wszystkie magazyny o modzie." }
+            { "fr": "Elle lit **tous** les livres de son frère.", "pl": "Czyta wszystkie książki swojego brata." },
+            { "fr": "**Tout** va bien, merci.", "pl": "Wszystko w porządku, dziękuję." }
           ]
         },
         {
@@ -112,16 +113,16 @@
           "type": "examples",
           "items": [
             { "fr": "Ce n'est pas ton manteau, c'est **le mien**.", "pl": "To nie twój płaszcz, to mój." },
-            { "fr": "Paul a oublié sa veste ; je lui prête **la mienne**.", "pl": "Paul zapomniał kurtki; pożyczam mu swoją." },
+            { "fr": "Paul a oublié sa veste ; je lui donne **la mienne**.", "pl": "Paul zapomniał kurtki; daję mu swoją." },
             { "fr": "Votre appartement est grand ; **le nôtre** est plus petit.", "pl": "Wasze mieszkanie jest duże; nasze jest mniejsze." },
-            { "fr": "Je pense souvent à mes parents. Tu penses **aux tiens** ?", "pl": "Często myślę o moich rodzicach. Myślisz o swoich?" }
+            { "fr": "Mes parents habitent à Lyon. Où habitent **les tiens** ?", "pl": "Moi rodzice mieszkają w Lyonie. Gdzie mieszkają twoi?" }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Przymiotnik **notre / votre** bez daszka, zaimek **le nôtre / le vôtre** z daszkiem.\n**leur** nie ma formy żeńskiej („leure” nie istnieje).\n**le / les** łączą się z **à** i **de**: au mien, aux tiens, du nôtre, des leurs.",
-            "fr": "L'adjectif **notre / votre** n'a pas d'accent, le pronom **le nôtre / le vôtre** en a un.\n**leur** n'a pas de féminin (« leure » n'existe pas).\n**le / les** se contractent avec **à** et **de** : au mien, aux tiens, du nôtre, des leurs."
+            "pl": "Przymiotnik **notre / votre** bez daszka, zaimek **le nôtre / le vôtre** z daszkiem.\n**leur** nie ma formy żeńskiej („leure” nie istnieje).",
+            "fr": "L'adjectif **notre / votre** n'a pas d'accent, le pronom **le nôtre / le vôtre** en a un.\n**leur** n'a pas de féminin (« leure » n'existe pas)."
           }
         }
       ]
@@ -134,48 +135,58 @@
           "type": "words",
           "title": { "pl": "Głowa i twarz", "fr": "La tête et le visage" },
           "items": [
-            { "fr": "le visage rond / ovale / carré", "pl": "okrągła / owalna / kwadratowa twarz", "def": "la forme du visage" },
-            { "fr": "le front", "pl": "czoło", "def": "au-dessus des yeux" },
-            { "fr": "les joues (f)", "pl": "policzki", "def": "de chaque côté du nez" },
+            { "fr": "un visage", "pl": "twarz", "def": "le devant de la tête : les yeux, le nez, la bouche" },
+            { "fr": "barbu", "pl": "brodaty", "def": "avec de la barbe" },
+            { "fr": "chauve / dégarni", "pl": "łysy / z przerzedzonymi włosami", "def": "sans cheveux / avec peu de cheveux" },
+            { "fr": "les cheveux gris / bruns / longs / courts", "pl": "włosy siwe / brązowe / długie / krótkie", "def": "la couleur et la longueur des cheveux" },
+            { "fr": "une fossette", "pl": "dołek (w policzku)", "def": "un petit creux quand on sourit" },
             { "fr": "le menton", "pl": "podbródek", "def": "sous la bouche" },
-            { "fr": "les sourcils (m)", "pl": "brwi", "def": "les poils au-dessus des yeux" },
-            { "fr": "les lèvres (f)", "pl": "usta, wargi", "def": "les bords de la bouche" },
-            { "fr": "des taches de rousseur", "pl": "piegi", "def": "petits points marron sur la peau" },
-            { "fr": "les cheveux raides / bouclés / frisés", "pl": "włosy proste / kręcone / kędzierzawe", "def": "la forme des cheveux" },
-            { "fr": "chauve", "pl": "łysy", "def": "sans cheveux" }
+            { "fr": "le sourire", "pl": "uśmiech", "def": "l'expression du visage quand on est content" }
           ]
         },
         {
           "type": "words",
-          "title": { "pl": "Sylwetka", "fr": "Le corps" },
+          "title": { "pl": "Sylwetka", "fr": "Le corps et la silhouette" },
           "items": [
-            { "fr": "la taille", "pl": "wzrost", "def": "la hauteur d'une personne" },
-            { "fr": "de taille moyenne", "pl": "średniego wzrostu", "def": "ni grand ni petit" },
-            { "fr": "mince / maigre", "pl": "szczupły / chudy", "def": "pas gros / trop mince" },
-            { "fr": "rond / costaud", "pl": "pulchny / krzepki", "def": "un peu gros / fort et musclé" },
-            { "fr": "les épaules (f)", "pl": "ramiona, barki", "def": "entre le cou et les bras" },
-            { "fr": "avoir l'air (fatigué, sympa…)", "pl": "wyglądać (na zmęczonego, sympatycznego…)", "def": "sembler" }
+            { "fr": "âgé(e) = vieux / vieille (fam.) ≠ jeune", "pl": "w podeszłym wieku = stary (pot.) ≠ młody", "def": "qui a beaucoup d'années" },
+            { "fr": "corpulent(e) / costaud(e)", "pl": "dobrze zbudowany / krzepki", "def": "grand et fort" },
+            { "fr": "rond(e) / fort(e)", "pl": "pulchny / silny, tęgi", "def": "un peu gros / avec beaucoup de force" },
+            { "fr": "musclé(e)", "pl": "umięśniony", "def": "avec de gros muscles" },
+            { "fr": "sec / sèche", "pl": "chudy, szczupły (mince)", "def": "très mince, sans graisse" },
+            { "fr": "être de grande / petite taille", "pl": "być wysokim / niskim", "def": "être grand / petit" },
+            { "fr": "faire du 44 = faire une taille 44", "pl": "nosić rozmiar 44", "def": "la taille des vêtements" },
+            { "fr": "mesurer 1,60 m", "pl": "mieć 1,60 m wzrostu", "def": "la hauteur de la personne" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Wygląd", "fr": "L'apparence" },
+          "items": [
+            { "fr": "avoir bonne / mauvaise mine", "pl": "wyglądać zdrowo / niezdrowo", "def": "avoir l'air en forme / fatigué" },
+            { "fr": "avoir un corps (im)parfait", "pl": "mieć (nie)idealne ciało", "def": "un corps comme on le rêve / pas comme on le rêve" },
+            { "fr": "les canons / les critères de beauté (m.)", "pl": "kanony / kryteria piękna", "def": "les idées de la société sur la beauté" },
+            { "fr": "être / se sentir bien dans sa peau", "pl": "czuć się dobrze w swojej skórze", "def": "être à l'aise avec soi-même" },
+            { "fr": "rendre beau / belle", "pl": "czynić pięknym / piękną", "def": "donner de la beauté" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Podobieństwo", "fr": "La ressemblance" },
           "items": [
-            { "fr": "des jumeaux / des jumelles", "pl": "bliźniacy / bliźniaczki", "def": "deux enfants nés le même jour de la même mère" },
             { "fr": "ressembler à / se ressembler", "pl": "być podobnym do / być do siebie podobnym", "def": "avoir la même apparence" },
-            { "fr": "la ressemblance", "pl": "podobieństwo", "def": "ce qui est pareil" },
-            { "fr": "avoir un air de famille", "pl": "być rodzinnie podobnym", "def": "se ressembler un peu, comme dans une famille" }
+            { "fr": "avoir la tête de l'emploi", "pl": "wyglądać jak do roli", "def": "avoir l'apparence qui va avec le métier" },
+            { "fr": "être le sosie de…", "pl": "być sobowtórem…", "def": "ressembler à quelqu'un de très près" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Moda", "fr": "La mode" },
           "items": [
-            { "fr": "un look / un style", "pl": "wygląd, styl", "def": "la manière de s'habiller" },
-            { "fr": "être à la mode / démodé", "pl": "być modnym / niemodnym", "def": "suivre / ne plus suivre la mode" },
-            { "fr": "élégant(e) / décontracté(e)", "pl": "elegancki / swobodny", "def": "chic / simple et confortable" },
-            { "fr": "une coiffure", "pl": "fryzura", "def": "la manière d'arranger les cheveux" },
-            { "fr": "un tatouage / un piercing", "pl": "tatuaż / kolczyk (piercing)", "def": "un dessin sur la peau / un bijou dans la peau" }
+            { "fr": "un créateur / une créatrice", "pl": "projektant / projektantka", "def": "il ou elle invente des vêtements" },
+            { "fr": "défiler", "pl": "iść na wybiegu", "def": "marcher devant le public pour montrer des vêtements" },
+            { "fr": "un mannequin", "pl": "model / modelka", "def": "il ou elle présente des vêtements" },
+            { "fr": "porter des vêtements", "pl": "nosić ubrania", "def": "avoir des vêtements sur soi" },
+            { "fr": "poser", "pl": "pozować", "def": "rester immobile pour une photo" }
           ]
         }
       ]
@@ -189,12 +200,20 @@
           "title": { "pl": "Zalety", "fr": "Les qualités" },
           "items": [
             { "fr": "une qualité", "pl": "zaleta", "def": "un trait de caractère positif" },
-            { "fr": "patient(e)", "pl": "cierpliwy", "def": "il sait attendre" },
+            { "fr": "chaleureux / chaleureuse", "pl": "serdeczny", "def": "gentil et agréable avec les autres" },
+            { "fr": "curieux / curieuse", "pl": "ciekawy świata", "def": "il veut tout savoir" },
+            { "fr": "discret / discrète", "pl": "dyskretny", "def": "il ne parle pas trop de lui" },
+            { "fr": "doux / douce", "pl": "łagodny", "def": "gentil et calme" },
+            { "fr": "extraverti(e)", "pl": "otwarty na ludzi, towarzyski", "def": "il parle facilement aux autres" },
+            { "fr": "fidèle", "pl": "wierny", "def": "il reste toujours avec ses amis" },
             { "fr": "honnête", "pl": "uczciwy", "def": "il dit la vérité" },
+            { "fr": "indépendant(e)", "pl": "niezależny", "def": "il aime décider seul" },
             { "fr": "optimiste", "pl": "optymistyczny", "def": "il voit le bon côté des choses" },
-            { "fr": "ouvert(e)", "pl": "otwarty", "def": "il accepte les idées différentes" },
-            { "fr": "drôle / plein(e) d'humour", "pl": "zabawny / z poczuciem humoru", "def": "il fait rire" },
-            { "fr": "la gentillesse", "pl": "życzliwość", "def": "la qualité d'une personne aimable" }
+            { "fr": "ordonné(e)", "pl": "zorganizowany, porządny", "def": "il range ses affaires" },
+            { "fr": "prudent(e)", "pl": "ostrożny", "def": "il fait attention au danger" },
+            { "fr": "réfléchi(e)", "pl": "rozważny", "def": "il pense avant d'agir" },
+            { "fr": "spontané(e)", "pl": "spontaniczny", "def": "il agit sans trop réfléchir" },
+            { "fr": "travailleur / travailleuse", "pl": "pracowity", "def": "il travaille beaucoup" }
           ]
         },
         {
@@ -202,55 +221,73 @@
           "title": { "pl": "Wady", "fr": "Les défauts" },
           "items": [
             { "fr": "un défaut", "pl": "wada", "def": "un trait de caractère négatif" },
-            { "fr": "têtu(e)", "pl": "uparty", "def": "il ne change jamais d'avis" },
-            { "fr": "paresseux / paresseuse", "pl": "leniwy / leniwa", "def": "il n'aime pas faire d'efforts" },
-            { "fr": "jaloux / jalouse", "pl": "zazdrosny / zazdrosna", "def": "il veut ce que les autres ont" },
-            { "fr": "égoïste", "pl": "samolubny", "def": "il pense seulement à lui" },
-            { "fr": "impatient(e)", "pl": "niecierpliwy", "def": "il ne sait pas attendre" },
-            { "fr": "susceptible", "pl": "drażliwy, przewrażliwiony", "def": "il se vexe facilement" }
+            { "fr": "autoritaire", "pl": "apodyktyczny", "def": "il aime donner des ordres" },
+            { "fr": "bruyant(e)", "pl": "hałaśliwy", "def": "il fait beaucoup de bruit" },
+            { "fr": "cruel / cruelle", "pl": "okrutny", "def": "il aime faire du mal" },
+            { "fr": "envieux / envieuse", "pl": "zazdrosny (o to, co mają inni)", "def": "il veut ce que les autres ont" },
+            { "fr": "inquiet / inquiète", "pl": "niespokojny, zatroskany", "def": "il a peur que quelque chose arrive" },
+            { "fr": "maniaque (de l'ordre, de la propreté)", "pl": "pedantyczny (na punkcie porządku, czystości)", "def": "il aime que tout soit parfait" },
+            { "fr": "menteur / menteuse", "pl": "kłamca", "def": "il ne dit pas la vérité" },
+            { "fr": "paresseux / paresseuse", "pl": "leniwy", "def": "il n'aime pas faire d'efforts" },
+            { "fr": "pessimiste", "pl": "pesymistyczny", "def": "il voit le mauvais côté des choses" },
+            { "fr": "peureux / peureuse", "pl": "strachliwy", "def": "il a peur de tout" },
+            { "fr": "prétentieux / prétentieuse", "pl": "zarozumiały", "def": "il se croit meilleur que les autres" },
+            { "fr": "sans gêne", "pl": "bezczelny, bez skrępowania", "def": "il ne pense pas aux autres" },
+            { "fr": "stupide", "pl": "głupi", "def": "pas intelligent" },
+            { "fr": "superficiel / superficielle", "pl": "powierzchowny", "def": "il s'intéresse seulement à l'apparence" },
+            { "fr": "têtu(e)", "pl": "uparty", "def": "il ne change jamais d'avis" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Wyrażenia", "fr": "Les expressions" },
           "items": [
-            { "fr": "avoir bon / mauvais caractère", "pl": "mieć dobry / trudny charakter", "def": "être facile / difficile à vivre" },
-            { "fr": "avoir un cœur d'or", "pl": "mieć złote serce", "def": "être très généreux et gentil" },
-            { "fr": "avoir la tête sur les épaules", "pl": "mieć głowę na karku", "def": "être raisonnable" },
-            { "fr": "être têtu comme une mule", "pl": "być upartym jak osioł", "def": "être très têtu" },
-            { "fr": "être bavard comme une pie", "pl": "gadać jak najęty", "def": "parler beaucoup" }
+            { "fr": "avoir des yeux de lynx", "pl": "mieć sokole oko", "def": "voir très bien, même de loin" },
+            { "fr": "avoir une mémoire d'éléphant", "pl": "mieć świetną pamięć", "def": "se souvenir de tout" },
+            { "fr": "être têtu(e) comme une mule / un âne", "pl": "być upartym jak osioł", "def": "être très têtu" }
           ]
         },
         {
           "type": "rule",
           "text": {
-            "pl": "Przymiotniki na **-eux** → **-euse**: paresseux → paresseuse, généreux → généreuse.\n**jaloux** → **jalouse**. Przymiotniki na **-e** się nie zmieniają: honnête, égoïste.",
-            "fr": "Les adjectifs en **-eux** → **-euse** : paresseux → paresseuse, généreux → généreuse.\n**jaloux** → **jalouse**. Les adjectifs en **-e** ne changent pas : honnête, égoïste."
+            "pl": "Przymiotniki na **-eux** → **-euse**: chaleureux → chaleureuse, paresseux → paresseuse, envieux → envieuse.\nNa **-eur** → **-euse**: menteur → menteuse, travailleur → travailleuse.\nNa **-et** → **-ète**: discret → discrète, inquiet → inquiète. **doux** → **douce**.\nPrzymiotniki na **-e** się nie zmieniają: honnête, stupide, optimiste, pessimiste. **sans gêne** jest niezmienne.",
+            "fr": "Les adjectifs en **-eux** → **-euse** : chaleureux → chaleureuse, paresseux → paresseuse, envieux → envieuse.\nEn **-eur** → **-euse** : menteur → menteuse, travailleur → travailleuse.\nEn **-et** → **-ète** : discret → discrète, inquiet → inquiète. **doux** → **douce**.\nLes adjectifs en **-e** ne changent pas : honnête, stupide, optimiste, pessimiste. **sans gêne** est invariable."
           }
         }
       ]
     },
     {
       "kind": "phrases",
-      "title": "Faire un portrait",
+      "title": "Faire le portrait physique",
       "blocks": [
         {
           "type": "examples",
-          "title": { "pl": "Portret fizyczny", "fr": "Le portrait physique" },
+          "title": { "pl": "Portrait physique", "fr": "Le portrait physique" },
           "items": [
-            { "fr": "Elle est de taille moyenne, mince, avec les cheveux bouclés.", "pl": "Jest średniego wzrostu, szczupła, ma kręcone włosy." },
-            { "fr": "Il a le visage carré et une petite barbe.", "pl": "Ma kwadratową twarz i małą bródkę." },
-            { "fr": "Elle a l'air sérieuse, mais elle est très drôle.", "pl": "Wygląda na poważną, ale jest bardzo zabawna." },
+            { "fr": "Elle a les cheveux blonds et longs.", "pl": "Ma długie blond włosy." },
+            { "fr": "Il a les cheveux gris et courts.", "pl": "Ma krótkie siwe włosy." },
+            { "fr": "Il fait une taille 44 : il est grand et costaud.", "pl": "Nosi rozmiar 44: jest wysoki i krzepki." },
+            { "fr": "Elle mesure 1,55 m : elle est petite et sèche.", "pl": "Ma 1,55 m wzrostu: jest niska i szczupła." },
+            { "fr": "Elle porte des vêtements de couleur claire.", "pl": "Nosi ubrania w jasnych kolorach." },
             { "fr": "Il ressemble à son père : ils ont les mêmes yeux.", "pl": "Jest podobny do ojca: mają takie same oczy." }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Parler du caractère",
+      "blocks": [
         {
           "type": "examples",
-          "title": { "pl": "Charakter", "fr": "Le caractère" },
+          "title": { "pl": "Opisać charakter", "fr": "Décrire le caractère" },
           "items": [
-            { "fr": "Il a bon caractère : il est patient et toujours de bonne humeur.", "pl": "Ma dobry charakter: jest cierpliwy i zawsze w dobrym humorze." },
-            { "fr": "Sa plus grande qualité, c'est sa gentillesse.", "pl": "Jej największą zaletą jest życzliwość." },
-            { "fr": "Son défaut ? Il est un peu têtu.", "pl": "Jego wada? Jest trochę uparty." }
+            { "fr": "Il est du genre extraverti : il parle à tout le monde.", "pl": "Jest typem otwartego człowieka: rozmawia ze wszystkimi." },
+            { "fr": "Elle est d'un naturel timide.", "pl": "Z natury jest nieśmiała." },
+            { "fr": "Elle est douée pour la communication.", "pl": "Ma talent do komunikacji." },
+            { "fr": "C'est quelqu'un de discret.", "pl": "To dyskretna osoba." },
+            { "fr": "C'est une personne sociable.", "pl": "To osoba towarzyska." },
+            { "fr": "Mon frère est têtu : il ne change jamais d'avis.", "pl": "Mój brat jest uparty: nigdy nie zmienia zdania." }
           ]
         }
       ]
@@ -262,19 +299,12 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "Elle te va très bien, cette robe !", "pl": "Bardzo ci pasuje ta sukienka!" },
-            { "fr": "J'adore ta nouvelle coiffure !", "pl": "Uwielbiam twoją nową fryzurę!" },
-            { "fr": "Tu es superbe aujourd'hui !", "pl": "Wyglądasz dziś wspaniale!" },
-            { "fr": "Tu as très bon goût.", "pl": "Masz bardzo dobry gust." },
+            { "fr": "Vous êtes une fée !", "pl": "Jest pani prawdziwą wróżką!" },
+            { "fr": "Tu es trop forte !", "pl": "Jesteś świetna!" },
+            { "fr": "Vous êtes la chance de ma journée.", "pl": "Jest pan szczęściem mojego dnia." },
+            { "fr": "Cette couleur te donne bonne mine.", "pl": "Ten kolor dobrze na tobie wygląda (dodaje ci zdrowego wyglądu)." },
             { "fr": "— Merci, c'est gentil !", "pl": "— Dziękuję, to miłe!" }
           ]
-        },
-        {
-          "type": "text",
-          "text": {
-            "pl": "**aller à quelqu'un** = pasować komuś: ce pull **te va** bien, ces lunettes **lui vont** bien.",
-            "fr": "**aller à quelqu'un** = être bien sur quelqu'un : ce pull **te va** bien, ces lunettes **lui vont** bien."
-          }
         }
       ]
     }
