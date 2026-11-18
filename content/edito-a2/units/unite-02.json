@@ -66,64 +66,49 @@
     },
     {
       "id": "u02-imparfait-emploi",
-      "fr": "imparfait ou passé composé ?",
-      "pl": "imparfait czy passé composé?",
-      "def": "imparfait : habitude, description, décor ; passé composé : action unique et terminée",
+      "fr": "l'imparfait : emploi (description, habitude)",
+      "pl": "imparfait: użycie (opis, zwyczaj)",
+      "def": "imparfait : décrire une scène, parler d'une habitude du passé (à cette époque, souvent, chaque jour, parfois…)",
       "examples": [
         { "fr": "Chaque été, nous allions à la mer.", "pl": "Każdego lata jeździliśmy nad morze." },
-        { "fr": "Il pleuvait quand nous sommes sortis.", "pl": "Padało, kiedy wyszliśmy." }
+        { "fr": "À cette époque, la maison était petite et le jardin était grand.", "pl": "W tamtych czasach dom był mały, a ogród duży." }
       ],
       "tip": {
-        "pl": "imparfait = jak było, co się powtarzało (tło); passé composé = co się wydarzyło jeden raz (akcja)",
-        "fr": "imparfait = comment c'était, ce qu'on faisait souvent (le décor) ; passé composé = ce qui s'est passé une fois (l'action)"
+        "pl": "imparfait = jak było (opis) i co robiło się regularnie (zwyczaj): souvent, chaque jour, parfois, toujours",
+        "fr": "imparfait = comment c'était (description) et ce qu'on faisait régulièrement (habitude) : souvent, chaque jour, parfois, toujours"
       },
-      "confusables": ["u01-pc-avoir", "u01-pc-etre"],
+      "confusables": ["u02-imparfait-formation"],
       "tags": ["grammaire"]
     },
     {
       "id": "u02-pronom-y",
       "fr": "le pronom y",
-      "pl": "zaimek y (tam; o tym)",
-      "def": "y remplace à / en / chez + lieu, ou à + chose : j'y vais, j'y pense",
+      "pl": "zaimek y (tam)",
+      "def": "y remplace à / sur / sous / dans + lieu : j'y vais, il y est",
       "examples": [
         { "fr": "Tu vas à la mer ? – Oui, j'y vais en juillet.", "pl": "Jedziesz nad morze? – Tak, jadę tam w lipcu." },
-        { "fr": "Tu penses à ton voyage ? – Oui, j'y pense souvent.", "pl": "Myślisz o swojej podróży? – Tak, często o niej myślę." }
+        { "fr": "Tes clés sont dans le sac ? – Oui, elles y sont.", "pl": "Twoje klucze są w torbie? – Tak, są tam." }
       ],
       "tip": {
         "pl": "y stoi przed czasownikiem, w passé composé przed posiłkowym: j'y suis allé, je n'y suis jamais allé",
         "fr": "y se place avant le verbe, au passé composé avant l'auxiliaire : j'y suis allé, je n'y suis jamais allé"
       },
-      "confusables": ["u02-pronom-en-quantite", "u02-pronom-en-de"],
+      "confusables": ["u02-pronom-en-de", "u02-ici-la-bas"],
       "tags": ["grammaire"]
     },
-    {
-      "id": "u02-pronom-en-quantite",
-      "fr": "le pronom en (quantité)",
-      "pl": "zaimek en (ilość)",
-      "def": "en remplace du / de la / des / un / beaucoup de + nom : j'en ai trois",
-      "examples": [
-        { "fr": "Tu as des photos ? – Oui, j'en ai beaucoup.", "pl": "Masz zdjęcia? – Tak, mam ich dużo." },
-        { "fr": "Tu as un appareil photo ? – Non, je n'en ai pas.", "pl": "Masz aparat? – Nie, nie mam." }
-      ],
-      "tip": {
-        "pl": "liczba lub ilość zostaje na końcu: j'en ai deux, j'en veux un peu",
-        "fr": "le nombre ou la quantité reste à la fin : j'en ai deux, j'en veux un peu"
-      },
-      "confusables": ["u02-pronom-y"],
-      "tags": ["grammaire"]
-    },
+    { "id": "u02-pronom-en-quantite", "fr": "le pronom en (quantité)", "pl": "zaimek en (ilość)", "def": "en remplace du / de la / des / un / beaucoup de + nom : j'en ai trois", "examples": [{ "fr": "Tu as des photos ? – Oui, j'en ai beaucoup.", "pl": "Masz zdjęcia? – Tak, mam ich dużo." }, { "fr": "Tu as un appareil photo ? – Non, je n'en ai pas.", "pl": "Masz aparat? – Nie, nie mam." }], "tip": { "pl": "liczba lub ilość zostaje na końcu: j'en ai deux, j'en veux un peu", "fr": "le nombre ou la quantité reste à la fin : j'en ai deux, j'en veux un peu" }, "confusables": ["u02-pronom-y"], "tags": ["grammaire"], "deprecated": true, "replacedBy": "u02-pronom-en-de" },
     {
       "id": "u02-pronom-en-de",
-      "fr": "le pronom en (de + lieu / chose)",
-      "pl": "zaimek en (stamtąd; o tym)",
-      "def": "en remplace de + lieu ou de + chose : j'en viens, je m'en souviens",
+      "fr": "le pronom en (de + lieu)",
+      "pl": "zaimek en (stamtąd)",
+      "def": "en remplace de + lieu : j'en viens, il en sort",
       "examples": [
-        { "fr": "Tu te souviens de cette plage ? – Oui, je m'en souviens.", "pl": "Pamiętasz tę plażę? – Tak, pamiętam ją." },
-        { "fr": "Tu reviens de la montagne ? – Oui, j'en reviens.", "pl": "Wracasz z gór? – Tak, właśnie stamtąd wracam." }
+        { "fr": "Tu reviens du port ? – Oui, j'en reviens.", "pl": "Wracasz z portu? – Tak, stamtąd wracam." },
+        { "fr": "Elle sort du chalet ? – Oui, elle en sort.", "pl": "Wychodzi z domku? – Tak, wychodzi stamtąd." }
       ],
       "tip": {
-        "pl": "czasowniki z de: se souvenir de, parler de, revenir de → en; z à (penser à, aller à) → y",
-        "fr": "verbes avec de : se souvenir de, parler de, revenir de → en ; avec à (penser à, aller à) → y"
+        "pl": "venir / revenir / partir / sortir + de + miejsce → en: j'en viens, ils en partent; z à / sur / sous / dans → y",
+        "fr": "venir / revenir / partir / sortir + de + lieu → en : j'en viens, ils en partent ; avec à / sur / sous / dans → y"
       },
       "confusables": ["u02-pronom-y"],
       "tags": ["grammaire"]
@@ -132,14 +117,14 @@
       "id": "u02-place-adjectif",
       "fr": "la place de l'adjectif",
       "pl": "miejsce przymiotnika",
-      "def": "en général après le nom (couleur, nationalité, forme) ; avant : beau, joli, bon, mauvais, grand, petit, jeune, vieux, nouveau",
+      "def": "en général après le nom (couleur, nationalité, forme) ; avant le nom : bon, gros, grand, petit, vieux ; avant le nom aussi pour insister : un magnifique paysage",
       "examples": [
         { "fr": "une vieille maison blanche", "pl": "stary biały dom" },
-        { "fr": "un bel été", "pl": "piękne lato" }
+        { "fr": "un bon souvenir", "pl": "dobre wspomnienie" }
       ],
       "tip": {
-        "pl": "większość przymiotników stoi PO rzeczowniku; krótkie i częste (beau, bon, grand, petit…) PRZED; przed samogłoską: bel, nouvel, vieil",
-        "fr": "la plupart des adjectifs se placent APRÈS le nom ; les adjectifs courts et fréquents (beau, bon, grand, petit…) AVANT ; devant une voyelle : bel, nouvel, vieil"
+        "pl": "większość przymiotników stoi PO rzeczowniku; krótkie (bon, gros, grand, petit, vieux) PRZED; przed rzeczownikiem także dla podkreślenia: un magnifique paysage",
+        "fr": "la plupart des adjectifs se placent APRÈS le nom ; les adjectifs courts (bon, gros, grand, petit, vieux) AVANT ; avant le nom aussi pour insister : un magnifique paysage"
       },
       "confusables": ["u02-adjectif-sens"],
       "tags": ["grammaire"]
@@ -148,14 +133,14 @@
       "id": "u02-adjectif-sens",
       "fr": "adjectif : le sens change avec la place",
       "pl": "przymiotnik: znaczenie zależy od miejsca",
-      "def": "un ancien professeur (= avant) / une table ancienne (= très vieille) ; un restaurant cher (= prix) / ma chère amie (= aimée)",
+      "def": "mon propre appartement (= à moi) / une chemise propre (= lavée)",
       "examples": [
-        { "fr": "J'ai revu mon ancien professeur.", "pl": "Spotkałem znowu mojego byłego nauczyciela." },
-        { "fr": "Elle collectionne les meubles anciens.", "pl": "Ona kolekcjonuje stare meble." }
+        { "fr": "J'ai maintenant ma propre chambre.", "pl": "Mam teraz własny pokój." },
+        { "fr": "Elle porte une chemise propre.", "pl": "Ma na sobie czystą koszulę." }
       ],
       "tip": {
-        "pl": "ancien przed = były, po = stary, zabytkowy; cher przed = drogi (kochany), po = drogi (kosztowny)",
-        "fr": "ancien avant = d'avant, après = très vieux ; cher avant = qu'on aime, après = qui coûte beaucoup"
+        "pl": "propre przed rzeczownikiem = własny (mon propre appartement), po rzeczowniku = czysty (une chemise propre)",
+        "fr": "propre avant le nom = à soi (mon propre appartement), après le nom = lavé (une chemise propre)"
       },
       "confusables": ["u02-place-adjectif"],
       "tags": ["grammaire"]
@@ -164,110 +149,182 @@
     { "id": "u02-memoire", "fr": "la mémoire", "pl": "pamięć", "def": "la capacité de se souvenir", "examples": [{ "fr": "Ma grand-mère a une très bonne mémoire.", "pl": "Moja babcia ma bardzo dobrą pamięć." }], "tags": ["vocabulaire"] },
     { "id": "u02-odeur", "fr": "une odeur", "pl": "zapach", "def": "ce qu'on sent avec le nez", "examples": [{ "fr": "L'odeur du pain chaud me rappelle mon enfance.", "pl": "Zapach ciepłego chleba przypomina mi dzieciństwo." }], "tags": ["vocabulaire"] },
     { "id": "u02-paysage", "fr": "un paysage", "pl": "krajobraz", "def": "ce qu'on voit d'un endroit : la nature, les montagnes, la mer…", "examples": [{ "fr": "Le paysage de la Bretagne est magnifique.", "pl": "Krajobraz Bretanii jest przepiękny." }], "tags": ["vocabulaire"] },
-    { "id": "u02-vague", "fr": "une vague", "pl": "fala", "def": "l'eau de la mer qui monte et arrive sur la plage", "examples": [{ "fr": "Les enfants sautaient dans les vagues.", "pl": "Dzieci skakały przez fale." }], "tags": ["vocabulaire"] },
+    { "id": "u02-vague", "fr": "une vague", "pl": "fala", "def": "l'eau de la mer qui monte et arrive sur la plage", "examples": [{ "fr": "Les enfants sautaient dans les vagues.", "pl": "Dzieci skakały przez fale." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u02-dune" },
     { "id": "u02-sable", "fr": "le sable", "pl": "piasek", "def": "la plage en est couverte", "examples": [{ "fr": "On faisait des châteaux de sable.", "pl": "Budowaliśmy zamki z piasku." }], "tags": ["vocabulaire"] },
-    { "id": "u02-falaise", "fr": "une falaise", "pl": "klif", "def": "un mur de roche très haut au bord de la mer", "examples": [{ "fr": "Les falaises d'Étretat sont célèbres.", "pl": "Klify w Étretat są słynne." }], "tags": ["vocabulaire"] },
+    { "id": "u02-falaise", "fr": "une falaise", "pl": "klif", "def": "un mur de roche très haut au bord de la mer", "examples": [{ "fr": "Les falaises d'Étretat sont célèbres.", "pl": "Klify w Étretat są słynne." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u02-cote" },
     { "id": "u02-sommet", "fr": "un sommet", "pl": "szczyt", "def": "le point le plus haut d'une montagne", "examples": [{ "fr": "Nous sommes montés jusqu'au sommet.", "pl": "Weszliśmy aż na szczyt." }], "tags": ["vocabulaire"] },
-    { "id": "u02-brouillard", "fr": "le brouillard", "pl": "mgła", "def": "un nuage près du sol : on ne voit pas loin", "examples": [{ "fr": "Ce matin, il y a du brouillard.", "pl": "Dziś rano jest mgła." }], "tags": ["vocabulaire"] },
-    { "id": "u02-averse", "fr": "une averse", "pl": "przelotny deszcz, ulewa", "def": "une pluie forte et courte", "examples": [{ "fr": "Attention, il y aura des averses cet après-midi.", "pl": "Uwaga, po południu będą przelotne opady." }], "tags": ["vocabulaire"] }
+    { "id": "u02-brouillard", "fr": "le brouillard", "pl": "mgła", "def": "un nuage près du sol : on ne voit pas loin", "examples": [{ "fr": "Ce matin, il y a du brouillard.", "pl": "Dziś rano jest mgła." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u02-canicule" },
+    { "id": "u02-averse", "fr": "une averse", "pl": "przelotny deszcz, ulewa", "def": "une pluie forte et courte", "examples": [{ "fr": "Attention, il y aura des averses cet après-midi.", "pl": "Uwaga, po południu będą przelotne opady." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u02-orage" },
+    {
+      "id": "u02-ici-la-bas",
+      "fr": "ici / là / là-bas",
+      "pl": "tutaj / tam / tam daleko",
+      "def": "ici = près de moi ; là = un peu plus loin ; là-bas = loin ; pour un lieu déjà cité : y ou là-bas",
+      "examples": [{ "fr": "Je suis ici, mais mes amis sont là-bas.", "pl": "Jestem tutaj, ale moi przyjaciele są tam, daleko." }],
+      "tip": {
+        "pl": "j'y vais = je vais là-bas; ici = blisko mnie, là-bas = daleko",
+        "fr": "j'y vais = je vais là-bas ; ici = près de moi, là-bas = loin"
+      },
+      "confusables": ["u02-pronom-y"],
+      "tags": ["grammaire"]
+    },
+    {
+      "id": "u02-dune",
+      "fr": "une dune",
+      "pl": "wydma",
+      "def": "du sable en forme de petite montagne, au bord de la mer",
+      "examples": [{ "fr": "Nous avons marché sur les dunes jusqu'à la plage.", "pl": "Szliśmy po wydmach aż do plaży." }],
+      "tip": {
+        "pl": "une dune (rodzaj żeński): les dunes",
+        "fr": "une dune (féminin) : les dunes"
+      },
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u02-cote",
+      "fr": "la côte",
+      "pl": "wybrzeże",
+      "def": "la terre au bord de la mer",
+      "examples": [{ "fr": "Nous roulons le long de la côte, avec la mer à gauche.", "pl": "Jedziemy wzdłuż wybrzeża, morze mamy po lewej." }],
+      "tip": {
+        "pl": "la côte = wybrzeże; une côte (de bœuf) to coś innego",
+        "fr": "la côte = la terre au bord de la mer"
+      },
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u02-canicule",
+      "fr": "la canicule",
+      "pl": "upał (fala upałów)",
+      "def": "une longue période où il fait très chaud",
+      "examples": [{ "fr": "Pendant la canicule, il faisait trente-huit degrés.", "pl": "Podczas fali upałów było trzydzieści osiem stopni." }],
+      "tip": {
+        "pl": "la canicule = wyjątkowo gorący okres; la chaleur = ciepło, upał",
+        "fr": "la canicule = une période exceptionnelle ; la chaleur = quand il fait très chaud"
+      },
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u02-orage",
+      "fr": "un orage",
+      "pl": "burza",
+      "def": "un mauvais temps avec beaucoup de pluie et de vent",
+      "examples": [{ "fr": "Il y a un orage ce soir : prends ton parapluie.", "pl": "Dziś wieczorem będzie burza: weź parasol." }],
+      "tip": {
+        "pl": "un orage = burza; une averse = przelotny deszcz",
+        "fr": "un orage = pluie forte et vent ; ne pas confondre avec la simple pluie"
+      },
+      "tags": ["vocabulaire"]
+    }
   ],
   "exercises": [
-    { "id": "u02-impf-1", "type": "gap-fill", "entryIds": ["u02-imparfait-formation"], "data": { "sentence": "Quand j'étais petit, nous ___ dans un petit village. (habiter)", "answers": ["habitions"], "pl": "Kiedy byłem mały, mieszkaliśmy w małej wiosce." } },
-    { "id": "u02-impf-2", "type": "gap-fill", "entryIds": ["u02-imparfait-formation"], "data": { "sentence": "Mon grand-père ___ une vieille voiture rouge. (avoir)", "answers": ["avait"], "pl": "Mój dziadek miał stary czerwony samochód." } },
-    { "id": "u02-impf-3", "type": "gap-fill", "entryIds": ["u02-imparfait-formation"], "data": { "sentence": "Avant, tu ___ beaucoup de romans. (lire)", "answers": ["lisais"], "pl": "Kiedyś czytałeś / czytałaś dużo powieści." } },
-    { "id": "u02-impf-4", "type": "gap-fill", "entryIds": ["u02-imparfait-formation"], "data": { "sentence": "Les enfants ___ leurs devoirs après le goûter. (finir)", "answers": ["finissaient"], "pl": "Dzieci kończyły lekcje po podwieczorku.", "hint": { "pl": "nous finissons → finiss-", "fr": "nous finissons → finiss-" } } },
-    { "id": "u02-impf-5", "type": "gap-fill", "entryIds": ["u02-imparfait-formation"], "data": { "sentence": "Vous ___ le bus pour aller à l'école ? (prendre)", "answers": ["preniez"], "pl": "Jeździliście autobusem do szkoły?" } },
+    { "id": "u02-impf-1", "type": "gap-fill", "entryIds": ["u02-imparfait-formation"], "data": { "sentence": "Quand j'étais petit, nous ___ dans un petit village. (habiter)", "answers": ["habitions"], "pl": "Kiedy byłem mały, mieszkaliśmy w małej wiosce.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-impf-2", "type": "gap-fill", "entryIds": ["u02-imparfait-formation"], "data": { "sentence": "Mon grand-père ___ une vieille voiture rouge. (avoir)", "answers": ["avait"], "pl": "Mój dziadek miał stary czerwony samochód.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-impf-3", "type": "gap-fill", "entryIds": ["u02-imparfait-formation"], "data": { "sentence": "Avant, tu ___ beaucoup de livres. (lire)", "answers": ["lisais"], "pl": "Kiedyś czytałeś / czytałaś dużo książek.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-impf-4", "type": "gap-fill", "entryIds": ["u02-imparfait-formation"], "data": { "sentence": "Les enfants ___ leurs devoirs après le goûter. (finir)", "answers": ["finissaient"], "pl": "Dzieci kończyły lekcje po podwieczorku.", "hint": { "pl": "imparfait; nous finissons → finiss-", "fr": "à l'imparfait ; nous finissons → finiss-" } } },
+    { "id": "u02-impf-5", "type": "gap-fill", "entryIds": ["u02-imparfait-formation"], "data": { "sentence": "Vous ___ le bus pour aller à l'école ? (prendre)", "answers": ["preniez"], "pl": "Jeździliście autobusem do szkoły?", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
 
-    { "id": "u02-gc-1", "type": "gap-fill", "entryIds": ["u02-imparfait-ger-cer"], "data": { "sentence": "À cette époque, je ___ d'école chaque année. (changer)", "answers": ["changeais"], "pl": "W tamtym czasie co roku zmieniałem / zmieniałam szkołę." } },
-    { "id": "u02-gc-2", "type": "gap-fill", "entryIds": ["u02-imparfait-ger-cer"], "data": { "sentence": "Le samedi, nous ___ toujours par une balade. (commencer)", "answers": ["commencions"], "pl": "W soboty zawsze zaczynaliśmy od spaceru.", "hint": { "pl": "przed -i- bez ç", "fr": "devant -i-, pas de ç" } } },
-    { "id": "u02-gc-3", "type": "gap-fill", "entryIds": ["u02-imparfait-ger-cer"], "data": { "sentence": "Elle ___ une glace sur la plage tous les jours. (manger)", "answers": ["mangeait"], "pl": "Codziennie jadła lody na plaży." } },
-    { "id": "u02-gc-4", "type": "gap-fill", "entryIds": ["u02-imparfait-ger-cer"], "data": { "sentence": "Mes parents ___ beaucoup pour leur travail. (voyager)", "answers": ["voyageaient"], "pl": "Moi rodzice dużo podróżowali w pracy." } },
+    { "id": "u02-gc-1", "type": "gap-fill", "entryIds": ["u02-imparfait-ger-cer"], "data": { "sentence": "À cette époque, je ___ d'école chaque année. (changer)", "answers": ["changeais"], "pl": "W tamtym czasie co roku zmieniałem / zmieniałam szkołę.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-gc-2", "type": "gap-fill", "entryIds": ["u02-imparfait-ger-cer"], "data": { "sentence": "Le samedi, nous ___ toujours par une balade. (commencer)", "answers": ["commencions"], "pl": "W soboty zawsze zaczynaliśmy od spaceru.", "hint": { "pl": "imparfait; przed -i- bez ç", "fr": "à l'imparfait ; devant -i-, pas de ç" } } },
+    { "id": "u02-gc-3", "type": "gap-fill", "entryIds": ["u02-imparfait-ger-cer"], "data": { "sentence": "Elle ___ une glace sur la plage tous les jours. (manger)", "answers": ["mangeait"], "pl": "Codziennie jadła lody na plaży.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-gc-4", "type": "gap-fill", "entryIds": ["u02-imparfait-ger-cer"], "data": { "sentence": "Mes parents ___ beaucoup pour leur travail. (voyager)", "answers": ["voyageaient"], "pl": "Moi rodzice dużo podróżowali w pracy.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
 
     { "id": "u02-etre-1", "type": "gap-fill", "entryIds": ["u02-imparfait-etre"], "data": { "sentence": "Quand ___ enfant, j'adorais la neige. (être – je)", "answers": ["j'étais"], "pl": "Kiedy byłem dzieckiem, uwielbiałem śnieg." } },
-    { "id": "u02-etre-2", "type": "gap-fill", "entryIds": ["u02-imparfait-etre"], "data": { "sentence": "Nous ___ très heureux dans cette maison. (être)", "answers": ["étions"], "pl": "Byliśmy bardzo szczęśliwi w tym domu." } },
-    { "id": "u02-etre-3", "type": "gap-fill", "entryIds": ["u02-imparfait-etre"], "data": { "sentence": "La plage ___ magnifique ce jour-là. (être)", "answers": ["était"], "pl": "Plaża była tego dnia przepiękna." } },
-    { "id": "u02-etre-4", "type": "gap-fill", "entryIds": ["u02-imparfait-etre"], "data": { "sentence": "Vous ___ où pendant l'été 2010 ? (être)", "answers": ["étiez"], "pl": "Gdzie byliście latem 2010 roku?" } },
+    { "id": "u02-etre-2", "type": "gap-fill", "entryIds": ["u02-imparfait-etre"], "data": { "sentence": "Nous ___ très heureux dans cette maison. (être)", "answers": ["étions"], "pl": "Byliśmy bardzo szczęśliwi w tym domu.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-etre-3", "type": "gap-fill", "entryIds": ["u02-imparfait-etre"], "data": { "sentence": "La plage ___ magnifique ce jour-là. (être)", "answers": ["était"], "pl": "Plaża była tego dnia przepiękna.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-etre-4", "type": "gap-fill", "entryIds": ["u02-imparfait-etre"], "data": { "sentence": "Vous ___ où pendant l'été 2010 ? (être)", "answers": ["étiez"], "pl": "Gdzie byliście latem 2010 roku?", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
 
-    { "id": "u02-pron-1", "type": "gap-fill", "entryIds": ["u02-imparfait-pronominaux"], "data": { "sentence": "Avant, je ___ toujours à vélo. (se déplacer)", "answers": ["me déplaçais"], "pl": "Kiedyś zawsze poruszałem / poruszałam się rowerem.", "hint": { "pl": "c → ç przed -a-", "fr": "c → ç devant -a-" } } },
-    { "id": "u02-pron-2", "type": "gap-fill", "entryIds": ["u02-imparfait-pronominaux"], "data": { "sentence": "En vacances, nous ___ à 7 heures. (se lever)", "answers": ["nous levions"], "pl": "Na wakacjach wstawaliśmy o 7." } },
-    { "id": "u02-pron-3", "type": "gap-fill", "entryIds": ["u02-imparfait-pronominaux"], "data": { "sentence": "Le dimanche, mes cousins ___ dans la rivière. (se baigner)", "answers": ["se baignaient"], "pl": "W niedziele moi kuzyni kąpali się w rzece." } },
+    { "id": "u02-pron-1", "type": "gap-fill", "entryIds": ["u02-imparfait-pronominaux"], "data": { "sentence": "Avant, je ___ toujours à vélo. (se déplacer)", "answers": ["me déplaçais"], "pl": "Kiedyś zawsze poruszałem / poruszałam się rowerem.", "hint": { "pl": "imparfait; c → ç przed -a-", "fr": "à l'imparfait ; c → ç devant -a-" } } },
+    { "id": "u02-pron-2", "type": "gap-fill", "entryIds": ["u02-imparfait-pronominaux"], "data": { "sentence": "En vacances, nous ___ à 7 heures. (se lever)", "answers": ["nous levions"], "pl": "Na wakacjach wstawaliśmy o 7.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-pron-3", "type": "gap-fill", "entryIds": ["u02-imparfait-pronominaux"], "data": { "sentence": "Le dimanche, mes cousins ___ dans le lac. (se baigner)", "answers": ["se baignaient"], "pl": "W niedziele moi kuzyni kąpali się w jeziorze.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
 
-    { "id": "u02-emploi-1", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "Quand j'étais petite, j'___ chez ma grand-mère tous les étés. (aller)", "answers": ["allais"], "pl": "Kiedy byłam mała, jeździłam co lato do babci." } },
-    { "id": "u02-emploi-2", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "Hier, il ___ beau, alors nous sommes allés à la plage. (faire)", "answers": ["faisait"], "pl": "Wczoraj była ładna pogoda, więc poszliśmy na plażę." } },
-    { "id": "u02-emploi-3", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "Un jour, ___ mon portefeuille sur la plage. (perdre – je)", "answers": ["j'ai perdu"], "pl": "Pewnego dnia zgubiłem / zgubiłam portfel na plaży.", "hint": { "pl": "jednorazowe wydarzenie", "fr": "une action unique" } } },
-    { "id": "u02-emploi-4", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "Il pleuvait quand nous ___ de la maison. (sortir)", "answers": ["sommes sortis", "sommes sorties"], "pl": "Padało, kiedy wyszliśmy z domu." } },
-    { "id": "u02-emploi-5", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "La maison ___ grande et il y avait un jardin. (être)", "answers": ["était"], "pl": "Dom był duży i był tam ogród.", "hint": { "pl": "opis", "fr": "une description" } } },
+    { "id": "u02-emploi-1", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "Quand j'étais petite, j'___ chez ma grand-mère tous les étés. (aller)", "answers": ["allais"], "pl": "Kiedy byłam mała, jeździłam co lato do babci.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-emploi-2", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "À cette époque, il ___ souvent froid en hiver. (faire)", "answers": ["faisait"], "pl": "W tamtych czasach zimą często było zimno.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-emploi-3", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "Toutes les semaines, nous ___ chez nos grands-parents. (aller)", "answers": ["allions"], "pl": "Co tydzień jeździliśmy do dziadków.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-emploi-4", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "Après l'école, nous ___ souvent dans la prairie. (jouer)", "answers": ["jouions"], "pl": "Po szkole często bawiliśmy się na łące.", "hint": { "pl": "imparfait", "fr": "à l'imparfait" } } },
+    { "id": "u02-emploi-5", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "La maison ___ grande et il y avait un jardin. (être)", "answers": ["était"], "pl": "Dom był duży i był tam ogród.", "hint": { "pl": "imparfait; opis", "fr": "à l'imparfait ; une description" } } },
 
     { "id": "u02-y-1", "type": "gap-fill", "entryIds": ["u02-pronom-y"], "data": { "sentence": "Tu vas à la mer cet été ? – Oui, nous ___ allons en juillet.", "answers": ["y"], "pl": "Jedziesz nad morze tego lata? – Tak, jedziemy tam w lipcu." } },
     { "id": "u02-y-2", "type": "gap-fill", "entryIds": ["u02-pronom-y"], "data": { "sentence": "Elle est déjà allée à Biarritz ? – Oui, elle ___ est allée deux fois.", "answers": ["y"], "pl": "Była już w Biarritz? – Tak, była tam dwa razy." } },
-    { "id": "u02-y-3", "type": "gap-fill", "entryIds": ["u02-pronom-y"], "data": { "sentence": "Tu penses à tes vacances ? – Oui, ___ pense tout le temps !", "answers": ["j'y"], "pl": "Myślisz o wakacjach? – Tak, myślę o nich cały czas!" } },
-    { "id": "u02-y-4", "type": "gap-fill", "entryIds": ["u02-pronom-y"], "data": { "sentence": "Tu t'intéresses à la photo ? – Oui, je ___ intéresse beaucoup.", "answers": ["m'y"], "pl": "Interesujesz się fotografią? – Tak, bardzo się nią interesuję.", "hint": { "pl": "s'intéresser à", "fr": "s'intéresser à" } } },
+    { "id": "u02-y-3", "type": "gap-fill", "entryIds": ["u02-pronom-y"], "data": { "sentence": "Tes clés sont dans la voiture ? – Oui, elles ___ sont.", "answers": ["y"], "pl": "Twoje klucze są w samochodzie? – Tak, są tam." } },
+    { "id": "u02-y-4", "type": "gap-fill", "entryIds": ["u02-pronom-y"], "data": { "sentence": "Tes lunettes sont sur la plage ? – Oui, je les ___ ai laissées.", "answers": ["y"], "pl": "Twoje okulary są na plaży? – Tak, tam je zostawiłem." } },
 
-    { "id": "u02-enq-1", "type": "gap-fill", "entryIds": ["u02-pronom-en-quantite"], "data": { "sentence": "Tu as des photos de ton enfance ? – Oui, j'___ ai beaucoup.", "answers": ["en"], "pl": "Masz zdjęcia z dzieciństwa? – Tak, mam ich dużo." } },
-    { "id": "u02-enq-2", "type": "gap-fill", "entryIds": ["u02-pronom-en-quantite"], "data": { "sentence": "Vous voulez du gâteau ? – Oui, j'___ veux bien un peu.", "answers": ["en"], "pl": "Chce pan / pani ciasta? – Tak, chętnie trochę." } },
-    { "id": "u02-enq-3", "type": "gap-fill", "entryIds": ["u02-pronom-en-quantite", "u02-pronom-y"], "data": { "sentence": "Il y a des montagnes en Bretagne ? – Non, il n'y ___ a pas.", "answers": ["en"], "pl": "Czy w Bretanii są góry? – Nie, nie ma." } },
-    { "id": "u02-enq-4", "type": "gap-fill", "entryIds": ["u02-pronom-en-quantite"], "data": { "sentence": "Tu as combien de frères ? – J'___ ai deux.", "answers": ["en"], "pl": "Ilu masz braci? – Mam dwóch." } },
 
-    { "id": "u02-ende-1", "type": "gap-fill", "entryIds": ["u02-pronom-en-de"], "data": { "sentence": "Tu te souviens de cette plage ? – Oui, je m'___ souviens très bien.", "answers": ["en"], "pl": "Pamiętasz tę plażę? – Tak, bardzo dobrze ją pamiętam." } },
+    { "id": "u02-ende-1", "type": "gap-fill", "entryIds": ["u02-pronom-en-de"], "data": { "sentence": "Tu viens du port ? – Oui, j'___ viens.", "answers": ["en"], "pl": "Przychodzisz z portu? – Tak, stamtąd przychodzę." } },
     { "id": "u02-ende-2", "type": "gap-fill", "entryIds": ["u02-pronom-en-de"], "data": { "sentence": "Tu reviens de la plage ? – Oui, j'___ reviens à l'instant.", "answers": ["en"], "pl": "Wracasz z plaży? – Tak, właśnie stamtąd wracam." } },
-    { "id": "u02-ende-3", "type": "gap-fill", "entryIds": ["u02-pronom-en-de", "u02-pronom-y"], "data": { "sentence": "Il parle souvent de son enfance ? – Oui, il ___ parle souvent.", "answers": ["en"], "pl": "Czy on często mówi o swoim dzieciństwie? – Tak, często o nim mówi." } },
+    { "id": "u02-ende-3", "type": "gap-fill", "entryIds": ["u02-pronom-en-de", "u02-pronom-y"], "data": { "sentence": "Elle sort du musée à 18 heures ? – Oui, elle ___ sort à 18 heures.", "answers": ["en"], "pl": "Wychodzi z muzeum o 18? – Tak, wychodzi stamtąd o 18." } },
 
     { "id": "u02-place-1", "type": "gap-fill", "entryIds": ["u02-place-adjectif"], "data": { "sentence": "Mes grands-parents habitaient dans ___. (une maison – vieille)", "answers": ["une vieille maison"], "pl": "Moi dziadkowie mieszkali w starym domu." } },
     { "id": "u02-place-2", "type": "gap-fill", "entryIds": ["u02-place-adjectif"], "data": { "sentence": "Ce jour-là, il portait ___. (un pull – rouge)", "answers": ["un pull rouge"], "pl": "Tego dnia miał na sobie czerwony sweter." } },
     { "id": "u02-place-3", "type": "gap-fill", "entryIds": ["u02-place-adjectif"], "data": { "sentence": "Hier soir, nous avons vu ___. (un film – italien)", "answers": ["un film italien"], "pl": "Wczoraj wieczorem obejrzeliśmy włoski film." } },
-    { "id": "u02-place-4", "type": "gap-fill", "entryIds": ["u02-place-adjectif"], "data": { "sentence": "Nous avons passé un ___ été en Corse. (beau)", "answers": ["bel"], "pl": "Spędziliśmy piękne lato na Korsyce.", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
+    { "id": "u02-place-4", "type": "gap-fill", "entryIds": ["u02-place-adjectif"], "data": { "sentence": "J'ai de ___ souvenirs de cette plage. (bon)", "answers": ["bons"], "pl": "Mam dobre wspomnienia z tej plaży.", "hint": { "pl": "de + przymiotnik w liczbie mnogiej przed rzeczownikiem", "fr": "de + adjectif pluriel avant le nom" } } },
     { "id": "u02-place-5", "type": "gap-fill", "entryIds": ["u02-place-adjectif"], "data": { "sentence": "J'ai ___ de ce voyage. (un souvenir – bon)", "answers": ["un bon souvenir"], "pl": "Mam dobre wspomnienie z tej podróży." } },
 
-    { "id": "u02-sens-1", "type": "gap-fill", "entryIds": ["u02-adjectif-sens"], "data": { "sentence": "Hier, j'ai rencontré ___ de piano : il m'a reconnu ! (mon professeur – ancien)", "answers": ["mon ancien professeur"], "pl": "Wczoraj spotkałem mojego byłego nauczyciela gry na pianinie: poznał mnie!", "clue": "(avant, il m'enseignait le piano)" } },
-    { "id": "u02-sens-2", "type": "gap-fill", "entryIds": ["u02-adjectif-sens"], "data": { "sentence": "Dans son salon, il y a ___ du XVIIIe siècle. (une table – ancienne)", "answers": ["une table ancienne"], "pl": "W jej salonie stoi stary stół z XVIII wieku.", "clue": "(très vieille)" } },
-    { "id": "u02-sens-3", "type": "gap-fill", "entryIds": ["u02-adjectif-sens"], "data": { "sentence": "On a mangé dans ___ : 80 euros par personne ! (un restaurant – cher)", "answers": ["un restaurant cher"], "pl": "Jedliśmy w drogiej restauracji: 80 euro za osobę!", "clue": "(qui coûte beaucoup)" } },
+    { "id": "u02-sens-1", "type": "gap-fill", "entryIds": ["u02-adjectif-sens"], "data": { "sentence": "Après dix ans, j'ai maintenant ___ ! (un appartement – propre ; à moi)", "answers": ["mon propre appartement"], "pl": "Po dziesięciu latach mam wreszcie własne mieszkanie!", "clue": "(à moi, pas à un autre)" } },
+    { "id": "u02-sens-2", "type": "gap-fill", "entryIds": ["u02-adjectif-sens"], "data": { "sentence": "Pour la fête, il porte ___. (une chemise – propre)", "answers": ["une chemise propre"], "pl": "Na przyjęcie ma na sobie czystą koszulę.", "clue": "(on vient de la laver)" } },
+    { "id": "u02-sens-3", "type": "gap-fill", "entryIds": ["u02-adjectif-sens"], "data": { "sentence": "Chaque enfant raconte ___ de la fête. (son souvenir – propre ; à lui)", "answers": ["son propre souvenir"], "pl": "Każde dziecko opowiada swoje własne wspomnienie z przyjęcia.", "clue": "(à lui, pas à un autre)" } },
 
-    { "id": "u02-souvenir-1", "type": "gap-fill", "entryIds": ["u02-souvenir"], "data": { "sentence": "J'ai un très bon ___ de mes vacances en Grèce.", "answers": ["souvenir"], "pl": "Mam bardzo dobre wspomnienie z wakacji w Grecji.", "clue": "(une image du passé)" } },
+    { "id": "u02-souvenir-1", "type": "gap-fill", "entryIds": ["u02-souvenir"], "data": { "sentence": "J'ai un très bon ___ de mes vacances en Grèce.", "answers": ["souvenir"], "pl": "Mam bardzo dobre wspomnienie z wakacji w Grecji.", "clue": "(ce qu'on garde du passé)" } },
     { "id": "u02-souvenir-2", "type": "translate-pl-fr", "entryIds": ["u02-souvenir"], "data": { "pl": "wspomnienie", "answers": ["un souvenir", "le souvenir"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u02-memoire-1", "type": "gap-fill", "entryIds": ["u02-memoire"], "data": { "sentence": "Je n'ai pas de ___ : j'oublie tout !", "answers": ["mémoire"], "pl": "Nie mam pamięci: wszystko zapominam!", "clue": "(la capacité de se souvenir)" } },
     { "id": "u02-memoire-2", "type": "translate-pl-fr", "entryIds": ["u02-memoire"], "data": { "pl": "pamięć", "answers": ["la mémoire", "une mémoire"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u02-odeur-1", "type": "gap-fill", "entryIds": ["u02-odeur"], "data": { "sentence": "J'adore l'___ des croissants le matin.", "answers": ["odeur"], "pl": "Uwielbiam zapach rogalików rano.", "clue": "(on la sent avec le nez)" } },
     { "id": "u02-odeur-2", "type": "translate-pl-fr", "entryIds": ["u02-odeur"], "data": { "pl": "zapach", "answers": ["une odeur", "l'odeur"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u02-paysage-1", "type": "gap-fill", "entryIds": ["u02-paysage"], "data": { "sentence": "Du sommet, on voit un ___ magnifique : la mer et les montagnes.", "answers": ["paysage", "panorama"], "pl": "Ze szczytu widać przepiękny krajobraz: morze i góry.", "clue": "(ce qu'on voit d'un endroit)" } },
+    { "id": "u02-paysage-1", "type": "gap-fill", "entryIds": ["u02-paysage"], "data": { "sentence": "Du sommet, on voit un ___ magnifique : la mer et les montagnes.", "answers": ["paysage"], "pl": "Ze szczytu widać przepiękny krajobraz: morze i góry.", "clue": "(ce qu'on voit d'un endroit)" } },
     { "id": "u02-paysage-2", "type": "translate-pl-fr", "entryIds": ["u02-paysage"], "data": { "pl": "krajobraz", "answers": ["un paysage", "le paysage"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u02-vague-1", "type": "gap-fill", "entryIds": ["u02-vague"], "data": { "sentence": "Il y a du vent, les ___ sont très hautes aujourd'hui.", "answers": ["vagues"], "pl": "Wieje wiatr, fale są dziś bardzo wysokie.", "clue": "(l'eau de la mer qui monte)" } },
-    { "id": "u02-vague-2", "type": "translate-pl-fr", "entryIds": ["u02-vague"], "data": { "pl": "fala", "answers": ["une vague", "la vague"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u02-sable-1", "type": "gap-fill", "entryIds": ["u02-sable"], "data": { "sentence": "Les enfants jouaient dans le ___ toute la journée.", "answers": ["sable"], "pl": "Dzieci cały dzień bawiły się w piasku.", "clue": "(il couvre la plage)" } },
     { "id": "u02-sable-2", "type": "translate-pl-fr", "entryIds": ["u02-sable"], "data": { "pl": "piasek", "answers": ["le sable", "du sable"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u02-falaise-1", "type": "gap-fill", "entryIds": ["u02-falaise"], "data": { "sentence": "Ne marchez pas trop près du bord de la ___ !", "answers": ["falaise"], "pl": "Nie chodźcie zbyt blisko krawędzi klifu!", "clue": "(un mur de roche au bord de la mer)" } },
-    { "id": "u02-falaise-2", "type": "translate-pl-fr", "entryIds": ["u02-falaise"], "data": { "pl": "klif", "answers": ["une falaise", "la falaise"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u02-sommet-1", "type": "gap-fill", "entryIds": ["u02-sommet"], "data": { "sentence": "Après quatre heures de marche, nous sommes arrivés au ___.", "answers": ["sommet"], "pl": "Po czterech godzinach marszu dotarliśmy na szczyt.", "clue": "(le point le plus haut de la montagne)" } },
     { "id": "u02-sommet-2", "type": "translate-pl-fr", "entryIds": ["u02-sommet"], "data": { "pl": "szczyt (góry)", "answers": ["un sommet", "le sommet"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u02-brouillard-1", "type": "gap-fill", "entryIds": ["u02-brouillard"], "data": { "sentence": "Il y a du ___ : on ne voit pas la route.", "answers": ["brouillard"], "pl": "Jest mgła: nie widać drogi.", "clue": "(un nuage près du sol)" } },
-    { "id": "u02-brouillard-2", "type": "translate-pl-fr", "entryIds": ["u02-brouillard"], "data": { "pl": "mgła", "answers": ["le brouillard", "du brouillard"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u02-averse-1", "type": "gap-fill", "entryIds": ["u02-averse"], "data": { "sentence": "On a pris une ___ en rentrant : nous étions mouillés !", "answers": ["averse"], "pl": "Złapała nas ulewa w drodze powrotnej: byliśmy przemoczeni!", "clue": "(une pluie forte et courte)" } },
-    { "id": "u02-averse-2", "type": "translate-pl-fr", "entryIds": ["u02-averse"], "data": { "pl": "przelotny deszcz, ulewa", "answers": ["une averse", "l'averse"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u02-souvenir-3", "type": "gap-fill", "entryIds": ["u02-souvenir"], "data": { "sentence": "J'ai rapporté un petit ___ de Venise pour ma mère.", "answers": ["souvenir"], "pl": "Przywiozłem mamie małą pamiątkę z Wenecji.", "clue": "(un objet rapporté de voyage)" } },
-    { "id": "u02-memoire-3", "type": "gap-fill", "entryIds": ["u02-memoire"], "data": { "sentence": "Mon grand-père a quatre-vingt-dix ans, mais il a une excellente ___.", "answers": ["mémoire"], "pl": "Mój dziadek ma dziewięćdziesiąt lat, ale ma doskonałą pamięć.", "clue": "(il se souvient de tout)" } },
+    { "id": "u02-memoire-3", "type": "gap-fill", "entryIds": ["u02-memoire"], "data": { "sentence": "Mon grand-père a quatre-vingt-dix ans, mais il a une très bonne ___.", "answers": ["mémoire"], "pl": "Mój dziadek ma dziewięćdziesiąt lat, ale ma doskonałą pamięć.", "clue": "(il se souvient de tout)" } },
     { "id": "u02-odeur-3", "type": "gap-fill", "entryIds": ["u02-odeur"], "data": { "sentence": "Quelle mauvaise ___ ! Tu as oublié le poisson dans la poubelle ?", "answers": ["odeur"], "pl": "Co za brzydki zapach! Zapomniałeś ryby w koszu?", "clue": "(ce qu'on sent avec le nez)" } },
-    { "id": "u02-paysage-3", "type": "gap-fill", "entryIds": ["u02-paysage"], "data": { "sentence": "Dans le train, je regardais le ___ par la fenêtre.", "answers": ["paysage"], "pl": "W pociągu patrzyłem przez okno na krajobraz.", "clue": "(la nature, les champs, les villages qu'on voit)" } },
-    { "id": "u02-vague-3", "type": "gap-fill", "entryIds": ["u02-vague"], "data": { "sentence": "Le surfeur attend une grande ___.", "answers": ["vague"], "pl": "Surfer czeka na dużą falę.", "clue": "(l'eau de la mer qui monte)" } },
+    { "id": "u02-paysage-3", "type": "gap-fill", "entryIds": ["u02-paysage"], "data": { "sentence": "Dans le train, je regardais le ___ par la fenêtre.", "answers": ["paysage"], "pl": "W pociągu patrzyłem przez okno na krajobraz.", "clue": "(la mer, les montagnes, les champs qu'on voit)" } },
     { "id": "u02-sable-3", "type": "gap-fill", "entryIds": ["u02-sable"], "data": { "sentence": "À midi, le ___ est très chaud : mets tes chaussures !", "answers": ["sable"], "pl": "W południe piasek jest bardzo gorący: załóż buty!", "clue": "(on le trouve sur la plage)" } },
-    { "id": "u02-falaise-3", "type": "gap-fill", "entryIds": ["u02-falaise"], "data": { "sentence": "Du haut de la ___, on voit la mer et les bateaux.", "answers": ["falaise"], "pl": "Z góry klifu widać morze i statki.", "clue": "(un mur de roche au bord de la mer)" } },
     { "id": "u02-sommet-3", "type": "gap-fill", "entryIds": ["u02-sommet"], "data": { "sentence": "Le ___ du mont Blanc est à 4805 mètres.", "answers": ["sommet"], "pl": "Szczyt Mont Blanc znajduje się na wysokości 4805 metrów.", "clue": "(le point le plus haut)" } },
-    { "id": "u02-brouillard-3", "type": "gap-fill", "entryIds": ["u02-brouillard"], "data": { "sentence": "Roule doucement : il y a un épais ___ ce matin.", "answers": ["brouillard"], "pl": "Jedź powoli: dziś rano jest gęsta mgła.", "clue": "(on ne voit pas loin)" } },
-    { "id": "u02-averse-3", "type": "gap-fill", "entryIds": ["u02-averse"], "data": { "sentence": "Prends ton parapluie : la météo annonce des ___ cet après-midi.", "answers": ["averses"], "pl": "Weź parasol: prognoza zapowiada przelotne opady po południu.", "clue": "(pluies fortes et courtes)" } },
 
     { "id": "u02-impf-6", "type": "translate-pl-fr", "entryIds": ["u02-imparfait-formation"], "data": { "pl": "mieszkaliśmy na wsi", "answers": ["nous habitions à la campagne", "on habitait à la campagne", "nous vivions à la campagne", "on vivait à la campagne"], "hint": { "pl": "imparfait (opis przeszłości)", "fr": "à l'imparfait (description du passé)" } } },
     { "id": "u02-gc-5", "type": "translate-pl-fr", "entryIds": ["u02-imparfait-ger-cer"], "data": { "pl": "codziennie jadłem jabłko", "answers": ["je mangeais une pomme tous les jours", "tous les jours je mangeais une pomme", "je mangeais une pomme chaque jour", "chaque jour je mangeais une pomme"], "hint": { "pl": "imparfait (zwyczaj)", "fr": "à l'imparfait (habitude)" } } },
     { "id": "u02-etre-5", "type": "translate-pl-fr", "entryIds": ["u02-imparfait-etre"], "data": { "pl": "byłam szczęśliwa", "answers": ["j'étais heureuse", "j'étais contente"], "hint": { "pl": "imparfait (opis stanu)", "fr": "à l'imparfait (description)" } } },
     { "id": "u02-pron-4", "type": "translate-pl-fr", "entryIds": ["u02-imparfait-pronominaux"], "data": { "pl": "wstawałem wcześnie", "answers": ["je me levais tôt", "je me levais de bonne heure"], "hint": { "pl": "imparfait (zwyczaj)", "fr": "à l'imparfait (habitude)" } } },
-    { "id": "u02-emploi-6", "type": "translate-pl-fr", "entryIds": ["u02-imparfait-emploi"], "data": { "pl": "padało kiedy wyszedłem", "answers": ["il pleuvait quand je suis sorti", "il pleuvait lorsque je suis sorti"], "hint": { "pl": "tło: imparfait; jednorazowa akcja: passé composé", "fr": "le décor : imparfait ; l'action unique : passé composé" } } },
+    { "id": "u02-emploi-6", "type": "translate-pl-fr", "entryIds": ["u02-imparfait-emploi"], "data": { "pl": "często chodziłem na plażę", "answers": ["j'allais souvent à la plage", "souvent j'allais à la plage"], "hint": { "pl": "imparfait (zwyczaj)", "fr": "à l'imparfait (habitude)" } } },
     { "id": "u02-y-5", "type": "translate-pl-fr", "entryIds": ["u02-pronom-y"], "data": { "pl": "jadę tam jutro", "answers": ["j'y vais demain", "demain j'y vais"], "hint": { "pl": "zastąp « tam » zaimkiem", "fr": "remplace le lieu par un pronom" } } },
-    { "id": "u02-enq-5", "type": "translate-pl-fr", "entryIds": ["u02-pronom-en-quantite"], "data": { "pl": "mam ich trzy", "answers": ["j'en ai trois"], "hint": { "pl": "o rzeczach; użyj zaimka", "fr": "pour des choses ; utilise un pronom" } } },
-    { "id": "u02-ende-4", "type": "translate-pl-fr", "entryIds": ["u02-pronom-en-de"], "data": { "pl": "pamiętam to", "answers": ["je m'en souviens", "je m'en rappelle"], "hint": { "pl": "se souvenir de + zaimek", "fr": "se souvenir de + pronom" } } },
+    { "id": "u02-ende-4", "type": "translate-pl-fr", "entryIds": ["u02-pronom-en-de"], "data": { "pl": "wracam stamtąd", "answers": ["j'en reviens"], "hint": { "pl": "revenir de + miejsce → en", "fr": "revenir de + lieu → en" } } },
     { "id": "u02-place-6", "type": "translate-pl-fr", "entryIds": ["u02-place-adjectif"], "data": { "pl": "mały czerwony samochód", "answers": ["une petite voiture rouge", "la petite voiture rouge"] } },
-    { "id": "u02-sens-4", "type": "translate-pl-fr", "entryIds": ["u02-adjectif-sens"], "data": { "pl": "mój były szef", "answers": ["mon ancien chef", "mon ancien patron"] } }
+    { "id": "u02-sens-4", "type": "translate-pl-fr", "entryIds": ["u02-adjectif-sens"], "data": { "pl": "mój własny samochód", "answers": ["ma propre voiture"] } },
+    { "id": "u02-emploi-7", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "Quand j'étais jeune, je lisais ___ les jours. (chaque / tous)", "answers": ["tous"], "pl": "Kiedy byłem młody, czytałem codziennie.", "clue": "(= chaque jour)" } },
+    { "id": "u02-emploi-8", "type": "gap-fill", "entryIds": ["u02-imparfait-emploi"], "data": { "sentence": "Mon père était souvent fatigué, mais ___ il jouait avec nous. (de temps en temps)", "answers": ["parfois", "de temps en temps"], "pl": "Mój tata był często zmęczony, ale czasami bawił się z nami.", "clue": "(pas souvent)" } },
+    { "id": "u02-y-6", "type": "gap-fill", "entryIds": ["u02-pronom-y"], "data": { "sentence": "Le chat dort sous le lit ? – Oui, il ___ dort souvent.", "answers": ["y"], "pl": "Kot śpi pod łóżkiem? – Tak, często tam śpi." } },
+    { "id": "u02-ende-5", "type": "gap-fill", "entryIds": ["u02-pronom-en-de"], "data": { "sentence": "Ils partent de la gare à 8 heures ? – Oui, ils ___ partent à 8 heures.", "answers": ["en"], "pl": "Wyjeżdżają z dworca o 8? – Tak, wyjeżdżają stamtąd o 8." } },
+    { "id": "u02-ici-la-bas-1", "type": "gap-fill", "entryIds": ["u02-ici-la-bas"], "data": { "sentence": "Viens ___, près de moi !", "answers": ["ici"], "pl": "Chodź tutaj, blisko mnie!", "clue": "(près de moi)" } },
+    { "id": "u02-ici-la-bas-2", "type": "gap-fill", "entryIds": ["u02-ici-la-bas"], "data": { "sentence": "Regarde, ___-bas, il y a une île !", "answers": ["là"], "pl": "Patrz, tam daleko jest wyspa!", "clue": "(loin de moi)" } },
+    { "id": "u02-ici-la-bas-3", "type": "gap-fill", "entryIds": ["u02-ici-la-bas"], "data": { "sentence": "Tu habites à Nantes ? – Non, mais mes parents ___ habitent.", "answers": ["y"], "pl": "Mieszkasz w Nantes? – Nie, ale moi rodzice tam mieszkają." } },
+    { "id": "u02-ici-la-bas-4", "type": "translate-pl-fr", "entryIds": ["u02-ici-la-bas"], "data": { "pl": "tam, daleko", "answers": ["là-bas"], "hint": { "pl": "jedno słowo z łącznikiem", "fr": "un mot avec un trait d'union" } } },
+    { "id": "u02-place-7", "type": "gap-fill", "entryIds": ["u02-place-adjectif"], "data": { "sentence": "Regarde, c'est ___ ! (un paysage – magnifique ; on insiste)", "answers": ["un magnifique paysage"], "pl": "Patrz, co za wspaniały krajobraz!", "hint": { "pl": "przymiotnik przed rzeczownikiem, dla podkreślenia", "fr": "adjectif avant le nom, pour insister" } } },
+    { "id": "u02-dune-1", "type": "gap-fill", "entryIds": ["u02-dune"], "data": { "sentence": "Derrière la plage, il y a de grandes ___.", "answers": ["dunes"], "pl": "Za plażą są duże wydmy.", "clue": "(du sable en forme de petite montagne)" } },
+    { "id": "u02-dune-2", "type": "translate-pl-fr", "entryIds": ["u02-dune"], "data": { "pl": "wydma", "answers": ["une dune", "la dune"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u02-dune-3", "type": "gap-fill", "entryIds": ["u02-dune"], "data": { "sentence": "Les enfants montent sur la ___ pour voir la mer.", "answers": ["dune"], "pl": "Dzieci wchodzą na wydmę, żeby zobaczyć morze.", "clue": "(du sable au bord de la mer)" } },
+    { "id": "u02-cote-1", "type": "gap-fill", "entryIds": ["u02-cote"], "data": { "sentence": "Nous avons roulé le long de la ___, avec la mer à gauche.", "answers": ["côte"], "pl": "Jechaliśmy wzdłuż wybrzeża, morze mając po lewej.", "clue": "(la terre au bord de la mer)" } },
+    { "id": "u02-cote-2", "type": "translate-pl-fr", "entryIds": ["u02-cote"], "data": { "pl": "wybrzeże", "answers": ["la côte", "une côte"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u02-cote-3", "type": "gap-fill", "entryIds": ["u02-cote"], "data": { "sentence": "Cette ___ est très belle : il y a des plages et des ports.", "answers": ["côte"], "pl": "To wybrzeże jest bardzo piękne: są plaże i porty.", "clue": "(au bord de la mer)" } },
+    { "id": "u02-canicule-1", "type": "gap-fill", "entryIds": ["u02-canicule"], "data": { "sentence": "Il fait 38 degrés depuis une semaine : c'est la ___ !", "answers": ["canicule"], "pl": "Od tygodnia jest 38 stopni: to fala upałów!", "clue": "(il fait très chaud, très longtemps)" } },
+    { "id": "u02-canicule-2", "type": "translate-pl-fr", "entryIds": ["u02-canicule"], "data": { "pl": "fala upałów", "answers": ["la canicule", "une canicule"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u02-canicule-3", "type": "gap-fill", "entryIds": ["u02-canicule"], "data": { "sentence": "Pendant la ___ de juillet, il faisait trop chaud pour sortir.", "answers": ["canicule"], "pl": "Podczas lipcowej fali upałów było zbyt gorąco, żeby wychodzić.", "clue": "(très forte chaleur)" } },
+    { "id": "u02-orage-1", "type": "gap-fill", "entryIds": ["u02-orage"], "data": { "sentence": "Il y a un ___ ce soir : prends ton parapluie !", "answers": ["orage"], "pl": "Dziś wieczorem będzie burza: weź parasol!", "clue": "(pluie forte et vent)" } },
+    { "id": "u02-orage-2", "type": "translate-pl-fr", "entryIds": ["u02-orage"], "data": { "pl": "burza", "answers": ["un orage", "l'orage"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u02-orage-3", "type": "gap-fill", "entryIds": ["u02-orage"], "data": { "sentence": "Pendant l'___, nous sommes restés dans le chalet.", "answers": ["orage"], "pl": "Podczas burzy zostaliśmy w domku.", "clue": "(pluie forte et vent)" } },
+
+    { "id": "mp-ont-sont-deux", "type": "paires-minimales", "entryIds": ["u02-imparfait-etre"], "data": { "pair": ["Ils ont deux enfants.", "Ils sont deux enfants."] } },
+    { "id": "mp-elles-ont-sont", "type": "paires-minimales", "entryIds": ["u02-imparfait-etre"], "data": { "pair": ["Elles ont fini.", "Elles sont finies."] } }
   ],
   "boss": {
-    "groups": [["u02-imparfait-formation"], ["u02-imparfait-etre"], ["u02-imparfait-emploi"], ["u02-pronom-y", "u02-pronom-en-quantite"]],
+    "groups": [["u02-imparfait-formation"], ["u02-imparfait-etre"], ["u02-imparfait-emploi"], ["u02-pronom-y", "u02-pronom-en-de"]],
     "questions": 10,
     "lives": 3,
     "secondsPerQuestion": 12
+  },
+  "retiredExercises": {
+    "gap-fill": ["u02-enq-1", "u02-enq-2", "u02-enq-3", "u02-enq-4", "u02-vague-1", "u02-vague-3", "u02-falaise-1", "u02-falaise-3", "u02-brouillard-1", "u02-brouillard-3", "u02-averse-1", "u02-averse-3"],
+    "translate-pl-fr": ["u02-enq-5", "u02-vague-2", "u02-falaise-2", "u02-brouillard-2", "u02-averse-2"]
   }
 }
