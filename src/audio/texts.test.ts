@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
 import { loadPacks } from '../content/loader';
 import { exerciseTypeInfo } from '../exercises/logic';
-import { audioKey, audioKeyAsync, voiceFor, type AudioConfig } from './manifest';
+import { audioKey, audioKeyAsync, KEPT_HASH, voiceFor, type AudioConfig } from './manifest';
 import { collectAudioTexts, exerciseAudioText, isSentence, normalizeText, spoken } from './texts';
 
 const sha256 = (s: string) => createHash('sha256').update(s).digest('hex');
@@ -121,9 +121,17 @@ describe('recording keys', () => {
 
   it('are the same when the browser computes them', async () => {
     const subtle = async (t: string) => Buffer.from(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t))).toString('hex');
-    for (const text of ['Bonjour.', "J'habite en France.", 'Tu veux du café ou du thé ?']) {
-      expect(await audioKeyAsync(config, text, subtle)).toBe(audioKey(config.provider, voiceFor(config, text, sha256), text, sha256));
-    }
+    const withKept: AudioConfig = { ...config, kept: { voices: ['old'], texts: { [sha256('Bonjour.').slice(0, KEPT_HASH)]: 0 } } };
+    for (const c of [config, withKept])
+      for (const text of ['Bonjour.', "J'habite en France.", 'Tu veux du café ou du thé ?']) {
+        expect(await audioKeyAsync(c, text, subtle)).toBe(audioKey(c.provider, voiceFor(c, text, sha256), text, sha256));
+      }
+  });
+
+  it('keep the voice a text was recorded with after the voices change', () => {
+    const kept: AudioConfig = { ...config, voices: ['n'], kept: { voices: ['f', 'm'], texts: { [sha256('Bonjour.').slice(0, KEPT_HASH)]: 1 } } };
+    expect(voiceFor(kept, 'Bonjour.', sha256)).toBe('m');
+    expect(voiceFor(kept, 'Salut.', sha256)).toBe('n');
   });
 });
 

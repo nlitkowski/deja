@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from 'react';
-import config from '../../content/_audio/config.json';
-import { audioKeyAsync, type AudioConfig } from './manifest';
+import { audioConfig as config } from './config';
+import { audioKeyAsync } from './manifest';
 
 /**
  * Plays recorded sentences. Files are fetched (CORS) and kept in the Cache API, then played from a blob:
@@ -16,7 +16,7 @@ const urls = new Map<string, Promise<string>>();
 
 export function audioUrl(text: string): Promise<string> {
   let url = urls.get(text);
-  if (!url) urls.set(text, (url = audioKeyAsync(config as AudioConfig, text, sha256).then((key) => `${config.baseUrl}/${key}.mp3`)));
+  if (!url) urls.set(text, (url = audioKeyAsync(config, text, sha256).then((key) => `${config.baseUrl}/${key}.mp3`)));
   return url;
 }
 

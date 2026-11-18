@@ -5,6 +5,8 @@
  *   npm run tts -- --dry-run       count new texts and characters, send nothing
  *   npm run tts -- --sample 20     record 20 random sentences in candidate voices to .audio-sample/ (no upload)
  *   npm run tts -- --prune [--yes] list (and with --yes delete) recordings the content no longer uses
+ *   npm run tts -- --keep-voices   before changing `voices` in config.json: every recorded text keeps its voice and file
+ *                                  (content/_audio/kept-voices.json); later runs drop entries the content no longer needs
  *
  * Keys come from the environment or .dev.vars: AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY.
  * --prune --yes also purges the deleted files from the edge cache with CLOUDFLARE_ZONE_ID and CLOUDFLARE_PURGE_TOKEN (Zone › Cache Purge).
@@ -14,7 +16,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseArgs } from 'node:util';
-import { audioKey, voiceFor, type AudioConfig, type Manifest } from '../src/audio/manifest';
+import { audioKey, KEPT_HASH, newVoice, voiceFor, type AudioConfig, type KeptVoices, type Manifest } from '../src/audio/manifest';
 import { collectAudioTexts, type AudioText } from '../src/audio/texts';
 import { loadPacks, type ContentFiles } from '../src/content/loader';
 import { exerciseTypeInfo } from '../src/exercises/logic';
@@ -25,6 +27,7 @@ import { r2Bucket } from './tts/r2';
 
 const CONFIG = 'content/_audio/config.json';
 const MANIFEST = 'content/_audio/manifest.json';
+const KEPT = 'content/_audio/kept-voices.json';
 const SAMPLE_DIR = '.audio-sample';
 const PARALLEL = 4;
 const SAMPLE_VOICES = [
@@ -42,6 +45,7 @@ const { values: args } = parseArgs({
     sample: { type: 'string' },
     voices: { type: 'string' },
     prune: { type: 'boolean' },
+    'keep-voices': { type: 'boolean' },
     yes: { type: 'boolean' },
     rpm: { type: 'string', default: '18' },
   },
@@ -195,9 +199,42 @@ async function purge(urls: string[]) {
   console.log(`Purged ${urls.length} URL(s) from the edge cache.`);
 }
 
+const saveKept = (kept: KeptVoices) => {
+  const texts = Object.fromEntries(Object.entries(kept.texts).sort(([a], [b]) => (a < b ? -1 : 1)));
+  writeFileSync(KEPT, JSON.stringify({ voices: kept.voices, texts }, null, 1) + '\n');
+};
+
+/** Every text recorded under the current voices keeps its voice once `voices` changes. */
+function keepVoices(texts: AudioText[], config: AudioConfig, manifest: Manifest) {
+  const kept: KeptVoices = { voices: [...(config.kept?.voices ?? [])], texts: { ...config.kept?.texts } };
+  let added = 0;
+  for (const t of texts) {
+    const voice = voiceFor(config, t.text, sha256);
+    if (!manifest[audioKey(config.provider, voice, t.text, sha256)]) continue;
+    if (!kept.voices.includes(voice)) kept.voices.push(voice);
+    const hash = sha256(t.text).slice(0, KEPT_HASH);
+    if (kept.texts[hash] === undefined) added++;
+    kept.texts[hash] = kept.voices.indexOf(voice);
+  }
+  saveKept(kept);
+  console.log(`${added} recorded text(s) keep their voice (${KEPT}). Now change voices in ${CONFIG}.`);
+}
+
+/** Drops kept voices for texts the content no longer has, or that the current voices would give anyway. */
+function tidyKept(texts: AudioText[], config: AudioConfig) {
+  const kept = config.kept;
+  if (!kept) return;
+  const needed = new Map(texts.map((t) => { const h = sha256(t.text); return [h.slice(0, KEPT_HASH), h] as const; }));
+  const entries = Object.entries(kept.texts).filter(([short, i]) => {
+    const full = needed.get(short);
+    return full !== undefined && kept.voices[i] !== newVoice(config, full);
+  });
+  if (entries.length !== Object.keys(kept.texts).length) saveKept({ voices: kept.voices, texts: Object.fromEntries(entries) });
+}
+
 async function main() {
   loadEnv();
-  const config = readJson<AudioConfig>(CONFIG);
+  const config: AudioConfig = { ...readJson<AudioConfig>(CONFIG), kept: existsSync(KEPT) ? readJson<KeptVoices>(KEPT) : undefined };
   const texts = collectAudioTexts(loadContent());
 
   if (args.sample) return sample(texts, config, Number(args.sample));
@@ -209,6 +246,8 @@ async function main() {
   }
 
   const manifest = readJson<Manifest>(MANIFEST);
+  if (args['keep-voices']) return keepVoices(texts, config, manifest);
+  if (!args['dry-run']) tidyKept(texts, config);
   const wanted = texts.map((t) => {
     const voice = voiceFor(config, t.text, sha256);
     return { ...t, voice, key: audioKey(config.provider, voice, t.text, sha256) };

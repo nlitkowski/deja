@@ -9,7 +9,17 @@ export interface AudioConfig {
   format: string;
   /** Voices taking turns by the text's hash; empty until voices are chosen. */
   voices: string[];
+  /** Texts recorded before `voices` changed keep their voice, and so their file. */
+  kept?: KeptVoices;
 }
+
+/** `content/_audio/kept-voices.json`: an index into `voices` by the first `KEPT_HASH` hex digits of the text's hash. */
+export interface KeptVoices {
+  voices: string[];
+  texts: Record<string, number>;
+}
+
+export const KEPT_HASH = 12;
 
 export interface ManifestItem {
   text: string;
@@ -25,9 +35,14 @@ export type Sha256 = (text: string) => string;
 export type AsyncSha256 = (text: string) => Promise<string>;
 
 /** A sentence always gets the same voice, and the voices alternate across sentences. */
-const pickVoice = (config: AudioConfig, textHash: string): string => {
+export const newVoice = (config: AudioConfig, textHash: string): string => {
   if (!config.voices.length) throw new Error('content/_audio/config.json: no voices chosen yet');
   return config.voices[parseInt(textHash.slice(0, 8), 16) % config.voices.length]!;
+};
+
+const pickVoice = (config: AudioConfig, textHash: string): string => {
+  const kept = config.kept?.texts[textHash.slice(0, KEPT_HASH)];
+  return kept === undefined ? newVoice(config, textHash) : config.kept!.voices[kept]!;
 };
 
 const keyInput = (provider: string, voice: string, text: string) => `${provider}\n${voice}\n${text}`;

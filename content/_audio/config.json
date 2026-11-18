@@ -5,11 +5,7 @@
   "bucket": "deja-audio",
   "baseUrl": "https://deja-audio.litkowski.com",
   "voices": [
-    "fr-FR-DeniseNeural",
     "fr-FR-VivienneMultilingualNeural",
-    "fr-FR-BrigitteNeural",
-    "fr-FR-HenriNeural",
-    "fr-FR-RemyMultilingualNeural",
-    "fr-FR-AlainNeural"
+    "fr-FR-RemyMultilingualNeural"
   ]
 }
