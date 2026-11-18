@@ -92,8 +92,8 @@
           "type": "examples",
           "items": [
             { "fr": "Je **suis allé** chez le médecin ce matin.", "pl": "Rano poszedłem do lekarza." },
-            { "fr": "Léa **est allée** à la pharmacie.", "pl": "Léa poszła do apteki." },
-            { "fr": "Hier, nous **sommes allés** à la piscine.", "pl": "Wczoraj poszliśmy na basen." }
+            { "fr": "Léa **est allée** chez le médecin.", "pl": "Léa poszła do lekarza." },
+            { "fr": "Hier, nous **sommes allés** chez le dentiste.", "pl": "Wczoraj poszliśmy do dentysty." }
           ]
         },
         {
@@ -112,8 +112,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**y** zastępuje **miejsce** (à, au, en, dans, chez… + miejsce). Po polsku: „tam”.\nStoi **przed czasownikiem**: Tu vas à la piscine ? — Oui, j'**y** vais.",
-            "fr": "**y** remplace **un lieu** (à, au, en, dans, chez… + lieu).\nIl se place **avant le verbe** : Tu vas à la piscine ? — Oui, j'**y** vais."
+            "pl": "**y** zastępuje **miejsce** (à, au, en, dans, chez… + miejsce). Po polsku: „tam”.\nStoi **przed czasownikiem**: Tu vas à la pharmacie ? — Oui, j'**y** vais.",
+            "fr": "**y** remplace **un lieu** (à, au, en, dans, chez… + lieu).\nIl se place **avant le verbe** : Tu vas à la pharmacie ? — Oui, j'**y** vais."
           }
         },
         {
@@ -133,7 +133,7 @@
             { "fr": "Tu vas à la salle de sport ? — Oui, j'**y** vais le lundi.", "pl": "Chodzisz na siłownię? — Tak, chodzę tam w poniedziałki." },
             { "fr": "Tu es à la pharmacie ? — Oui, j'**y** suis.", "pl": "Jesteś w aptece? — Tak, jestem (tam)." },
             { "fr": "Vous allez chez le dentiste ? — Non, nous **n'y** allons **pas**.", "pl": "Idziecie do dentysty? — Nie, nie idziemy." },
-            { "fr": "La pharmacie est ouverte, vas-**y** !", "pl": "Apteka jest otwarta, idź tam!" }
+            { "fr": "La pharmacie est en face, vas-**y** !", "pl": "Apteka jest naprzeciwko, idź tam!" }
           ]
         },
         {
@@ -172,10 +172,10 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "Je **dois** prendre ce médicament le matin.", "pl": "Muszę brać ten lek rano." },
+            { "fr": "Je **dois** prendre ce sirop le matin.", "pl": "Muszę brać ten syrop rano." },
             { "fr": "**Il faut** boire beaucoup d'eau.", "pl": "Trzeba pić dużo wody." },
             { "fr": "Tu **ne dois pas** fumer.", "pl": "Nie wolno ci palić." },
-            { "fr": "**Il ne faut pas** courir au bord de la piscine.", "pl": "Nie wolno biegać przy basenie." }
+            { "fr": "**Il ne faut pas** manger dans le vestiaire.", "pl": "W szatni nie wolno jeść." }
           ]
         },
         {
@@ -246,15 +246,15 @@
           "type": "rule",
           "text": {
             "pl": "**boire** + rodzajnik cząstkowy: boire **du** café, **de la** limonade, **de l'**eau.\nW przeczeniu: **pas de**: je ne bois **pas de** café.",
-            "fr": "**boire** + article partitif : boire **du** café, **de la** limonade, **de l'**eau.\nÀ la forme négative : **pas de** : je ne bois **pas de** café."
+            "fr": "**boire** + article partitif : boire **du** café, **du** soda, **de l'**eau.\nÀ la forme négative : **pas de** : je ne bois **pas de** café."
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "Je bois deux litres d'eau par jour.", "pl": "Piję dwa litry wody dziennie." },
+            { "fr": "Je bois une bouteille d'eau par jour.", "pl": "Piję butelkę wody dziennie." },
             { "fr": "Vous buvez du thé ou du café ?", "pl": "Pije pan / pani herbatę czy kawę?" },
-            { "fr": "Les sportifs ne boivent pas d'alcool.", "pl": "Sportowcy nie piją alkoholu." }
+            { "fr": "Les enfants ne boivent pas de café.", "pl": "Dzieci nie piją kawy." }
           ]
         },
         {
@@ -274,21 +274,26 @@
           "type": "words",
           "title": { "pl": "Części ciała", "fr": "Les parties du corps" },
           "items": [
-            { "fr": "la tête", "pl": "głowa" },
-            { "fr": "un œil / les yeux", "pl": "oko / oczy" },
-            { "fr": "une oreille", "pl": "ucho" },
-            { "fr": "le nez", "pl": "nos" },
-            { "fr": "la bouche", "pl": "usta" },
-            { "fr": "une dent", "pl": "ząb" },
-            { "fr": "la gorge", "pl": "gardło", "def": "derrière la bouche" },
-            { "fr": "une épaule", "pl": "ramię (bark)" },
             { "fr": "le bras", "pl": "ręka (ramię)" },
-            { "fr": "la main", "pl": "dłoń" },
             { "fr": "le dos", "pl": "plecy" },
-            { "fr": "le ventre", "pl": "brzuch" },
-            { "fr": "la jambe", "pl": "noga" },
             { "fr": "le genou / les genoux", "pl": "kolano / kolana" },
-            { "fr": "le pied", "pl": "stopa" }
+            { "fr": "la gorge", "pl": "gardło", "def": "derrière la bouche" },
+            { "fr": "la jambe", "pl": "noga" },
+            { "fr": "la main", "pl": "dłoń" },
+            { "fr": "le pied", "pl": "stopa" },
+            { "fr": "la tête", "pl": "głowa" },
+            { "fr": "le ventre", "pl": "brzuch" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Twarz", "fr": "Le visage" },
+          "items": [
+            { "fr": "la bouche", "pl": "usta" },
+            { "fr": "la dent", "pl": "ząb" },
+            { "fr": "le nez", "pl": "nos" },
+            { "fr": "l'œil / les yeux", "pl": "oko / oczy" },
+            { "fr": "l'oreille", "pl": "ucho" }
           ]
         },
         {
@@ -297,29 +302,22 @@
           "head": ["à + le = au", "à + la", "à + l'", "à + les = aux"],
           "rows": [
             ["j'ai mal **au** ventre", "j'ai mal **à la** tête", "j'ai mal **à l'**oreille", "j'ai mal **aux** dents"],
-            ["j'ai mal **au** dos", "j'ai mal **à la** gorge", "j'ai mal **à l'**épaule", "j'ai mal **aux** yeux"],
-            ["j'ai mal **au** pied", "j'ai mal **à la** jambe", "j'ai mal **à l'**œil", "j'ai mal **aux** pieds"]
+            ["j'ai mal **au** dos", "j'ai mal **à la** gorge", "j'ai mal **à l'**œil", "j'ai mal **aux** yeux"],
+            ["j'ai mal **au** pied", "j'ai mal **à la** jambe", "j'ai mal **à l'**oreille droite", "j'ai mal **aux** pieds"]
           ]
         },
         {
           "type": "warning",
-          "text": {
-            "pl": "„Boli mnie głowa” to **j'ai mal à la tête**: podmiotem jest „ja”, a przed częścią ciała stoi rodzajnik, nie zaimek dzierżawczy (nie « j'ai mal à ma tête »).",
-            "fr": "On dit **j'ai mal à la tête** : avec un article, pas avec un possessif (pas « j'ai mal à ma tête »)."
-          }
+          "text": { "pl": "„Boli mnie głowa” to **j'ai mal à la tête**: podmiotem jest „ja”, a przed częścią ciała stoi rodzajnik, nie zaimek dzierżawczy (nie « j'ai mal à ma tête »).", "fr": "On dit **j'ai mal à la tête** : avec un article, pas avec un possessif (pas « j'ai mal à ma tête »)." }
         },
         {
           "type": "words",
           "title": { "pl": "Wzrost i waga", "fr": "La taille et le poids" },
           "items": [
-            { "fr": "la taille", "pl": "wzrost", "def": "combien on mesure (1,75 m)" },
             { "fr": "mesurer", "pl": "mierzyć (mieć … wzrostu)", "def": "je mesure 1,75 m" },
             { "fr": "le mètre", "pl": "metr", "def": "1 m = 100 cm" },
-            { "fr": "le poids", "pl": "waga (ciała)", "def": "combien on pèse (70 kg)" },
-            { "fr": "le kilo", "pl": "kilogram", "def": "70 kilos = 70 kg" },
             { "fr": "peser", "pl": "ważyć", "def": "je pèse 70 kilos" },
-            { "fr": "grand(e) / petit(e)", "pl": "wysoki / niski" },
-            { "fr": "mince / gros (grosse)", "pl": "szczupły / gruby" }
+            { "fr": "le kilo", "pl": "kilogram", "def": "70 kilos = 70 kg" }
           ]
         }
       ]
@@ -330,47 +328,38 @@
       "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Objawy i choroby", "fr": "Les symptômes et les maladies" },
+          "title": { "pl": "Objawy i choroby", "fr": "Les symptômes, les maladies" },
           "items": [
-            { "fr": "être malade", "pl": "być chorym", "def": "ne pas être en bonne santé" },
-            { "fr": "avoir de la fièvre", "pl": "mieć gorączkę", "def": "la température est à 39 °C" },
-            { "fr": "tousser / la toux", "pl": "kaszleć / kaszel" },
-            { "fr": "être fatigué(e)", "pl": "być zmęczonym" },
-            { "fr": "un rhume", "pl": "katar, przeziębienie", "def": "le nez coule" },
+            { "fr": "la fièvre", "pl": "gorączka", "def": "la température est à 39 °C" },
             { "fr": "la grippe", "pl": "grypa", "def": "maladie avec fièvre, en hiver" },
-            { "fr": "se casser la jambe", "pl": "złamać nogę" }
+            { "fr": "malade", "pl": "chory" },
+            { "fr": "le rhume", "pl": "katar, przeziębienie" },
+            { "fr": "tousser", "pl": "kaszleć" },
+            { "fr": "la toux", "pl": "kaszel" }
           ]
         },
         {
           "type": "words",
-          "title": { "pl": "Miejsca", "fr": "Les lieux" },
+          "title": { "pl": "Miejsca, leki, badania", "fr": "Les lieux, les médicaments, les examens" },
           "items": [
-            { "fr": "un hôpital", "pl": "szpital" },
-            { "fr": "une pharmacie", "pl": "apteka", "def": "on y achète des médicaments" },
-            { "fr": "une visite à domicile", "pl": "wizyta domowa (lekarza)", "def": "le médecin vient chez le malade" }
-          ]
-        },
-        {
-          "type": "words",
-          "title": { "pl": "Leki i badania", "fr": "Les médicaments et les examens" },
-          "items": [
-            { "fr": "un médicament", "pl": "lek" },
-            { "fr": "un sirop", "pl": "syrop", "def": "médicament liquide" },
-            { "fr": "le paracétamol", "pl": "paracetamol", "def": "un médicament contre la fièvre" },
-            { "fr": "la vitamine C", "pl": "witamina C" },
-            { "fr": "un rendez-vous", "pl": "wizyta (umówiona)" },
-            { "fr": "une radio", "pl": "prześwietlenie, RTG", "def": "photo de l'intérieur du corps" },
-            { "fr": "un certificat médical", "pl": "zaświadczenie lekarskie", "def": "papier du médecin : vous pouvez faire du sport" }
+            { "fr": "l'hôpital", "pl": "szpital" },
+            { "fr": "la pharmacie", "pl": "apteka", "def": "on y achète du sirop, du paracétamol…" },
+            { "fr": "le paracétamol", "pl": "paracetamol", "def": "contre la fièvre" },
+            { "fr": "la radio", "pl": "prześwietlenie, RTG", "def": "photo de l'intérieur du corps" },
+            { "fr": "le sirop", "pl": "syrop", "def": "médicament liquide" },
+            { "fr": "la visite à domicile", "pl": "wizyta domowa (lekarza)", "def": "le médecin vient chez le malade" },
+            { "fr": "la vitamine C", "pl": "witamina C" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Zawody medyczne", "fr": "Les professions médicales" },
           "items": [
-            { "fr": "un médecin / un docteur", "pl": "lekarz", "def": "il soigne les malades" },
-            { "fr": "un infirmier / une infirmière", "pl": "pielęgniarz / pielęgniarka" },
-            { "fr": "un / une dentiste", "pl": "dentysta / dentystka", "def": "il soigne les dents" },
-            { "fr": "un pharmacien / une pharmacienne", "pl": "farmaceuta / farmaceutka" }
+            { "fr": "le dentiste", "pl": "dentysta", "def": "il soigne les dents" },
+            { "fr": "le / la docteur(e)", "pl": "lekarz / lekarka (doktor)" },
+            { "fr": "le médecin", "pl": "lekarz" },
+            { "fr": "l'infirmier / l'infirmière", "pl": "pielęgniarz / pielęgniarka" },
+            { "fr": "le pharmacien / la pharmacienne", "pl": "farmaceuta / farmaceutka" }
           ]
         }
       ]
@@ -381,30 +370,19 @@
       "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Pozytywne", "fr": "Positives" },
+          "title": { "pl": "Emocje", "fr": "Les émotions" },
           "items": [
             { "fr": "content(e)", "pl": "zadowolony" },
-            { "fr": "heureux / heureuse", "pl": "szczęśliwy" },
-            { "fr": "calme", "pl": "spokojny" }
-          ]
-        },
-        {
-          "type": "words",
-          "title": { "pl": "Negatywne", "fr": "Négatives" },
-          "items": [
-            { "fr": "triste", "pl": "smutny" },
-            { "fr": "malheureux / malheureuse", "pl": "nieszczęśliwy", "def": "le contraire de heureux" },
             { "fr": "fatigué(e)", "pl": "zmęczony" },
+            { "fr": "heureux, heureuse ≠ malheureux, malheureuse", "pl": "szczęśliwy ≠ nieszczęśliwy" },
+            { "fr": "inquiet, inquiète", "pl": "zaniepokojony", "def": "on pense à un problème" },
             { "fr": "stressé(e)", "pl": "zestresowany" },
-            { "fr": "inquiet / inquiète", "pl": "zaniepokojony", "def": "on pense à un problème" }
+            { "fr": "triste", "pl": "smutny" }
           ]
         },
         {
           "type": "rule",
-          "text": {
-            "pl": "Emocje wyrażamy przez **être** + przymiotnik: je suis **triste**, elle est **contente**.",
-            "fr": "On exprime une émotion avec **être** + adjectif : je suis **triste**, elle est **contente**."
-          }
+          "text": { "pl": "Emocje wyrażamy przez **être** + przymiotnik: je suis **triste**, elle est **contente**.", "fr": "On exprime une émotion avec **être** + adjectif : je suis **triste**, elle est **contente**." }
         }
       ]
     },
@@ -416,14 +394,24 @@
           "type": "words",
           "title": { "pl": "Siłownia", "fr": "La salle de sport" },
           "items": [
-            { "fr": "une salle de sport", "pl": "siłownia, klub fitness", "def": "on y fait du sport" },
-            { "fr": "l'activité physique", "pl": "aktywność fizyczna", "def": "bouger, faire du sport" },
-            { "fr": "un appareil de sport", "pl": "urządzenie do ćwiczeń", "def": "une machine de la salle de sport" },
-            { "fr": "un vestiaire", "pl": "szatnia", "def": "on y change de vêtements" },
+            { "fr": "l'activité physique", "pl": "aktywność fizyczna" },
+            { "fr": "l'appareil de sport", "pl": "urządzenie do ćwiczeń" },
+            { "fr": "le certificat médical", "pl": "zaświadczenie lekarskie", "def": "papier du médecin pour faire du sport" },
+            { "fr": "le coach", "pl": "trener" },
             { "fr": "la douche", "pl": "prysznic" },
+            { "fr": "le maillot de bain", "pl": "kostium kąpielowy" },
             { "fr": "le sauna", "pl": "sauna" },
-            { "fr": "la serviette de bain", "pl": "ręcznik kąpielowy", "def": "en Belgique : un essuie ; en Suisse : un linge" },
-            { "fr": "un coach / une coach", "pl": "trener / trenerka" }
+            { "fr": "la serviette de bain", "pl": "ręcznik kąpielowy", "def": "en Belgique : l'essuie ; en Suisse : le linge" },
+            { "fr": "le vestiaire", "pl": "szatnia", "def": "on y change de vêtements" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Odżywianie", "fr": "L'alimentation" },
+          "items": [
+            { "fr": "l'alimentation saine", "pl": "zdrowe odżywianie" },
+            { "fr": "la calorie", "pl": "kaloria" },
+            { "fr": "le produit gras / salé / sucré", "pl": "produkt tłusty / słony / słodki" }
           ]
         },
         {
@@ -431,116 +419,98 @@
           "title": { "pl": "Sporty", "fr": "Les sports" },
           "items": [
             { "fr": "la corde à sauter", "pl": "skakanka" },
+            { "fr": "la course à pied", "pl": "bieganie" },
             { "fr": "la gymnastique", "pl": "gimnastyka" },
             { "fr": "le judo", "pl": "judo" },
-            { "fr": "la marche rapide", "pl": "szybki marsz" },
+            { "fr": "la marche (rapide)", "pl": "(szybki) marsz" },
+            { "fr": "la musculation", "pl": "ćwiczenia siłowe" },
+            { "fr": "la natation", "pl": "pływanie" },
             { "fr": "le rugby", "pl": "rugby" },
-            { "fr": "le volley", "pl": "siatkówka" },
+            { "fr": "le tennis", "pl": "tenis" },
+            { "fr": "le volley(-ball)", "pl": "siatkówka" },
             { "fr": "le yoga", "pl": "joga" }
           ]
         },
         {
-          "type": "table",
-          "title": { "pl": "Faire du / jouer au", "fr": "Faire du / jouer au" },
-          "head": ["faire de + sport", "jouer à + jeu, sport de ballon"],
-          "rows": [
-            ["faire **du** vélo", "jouer **au** football"],
-            ["faire **du** yoga", "jouer **au** tennis"],
-            ["faire **de la** natation", "jouer **au** basket"],
-            ["faire **de la** musculation", "jouer **à la** pétanque"],
-            ["faire **de la** course à pied", "jouer **aux** cartes"],
-            ["faire **de l'**escalade", "jouer **aux** échecs"]
+          "type": "rule",
+          "text": { "pl": "Uprawiać sport: **faire du** judo / yoga, **faire de la** natation / musculation. Gry z piłką: **jouer au** tennis / rugby / volley.", "fr": "Pour un sport : **faire du** judo / yoga, **faire de la** natation / musculation. Pour un jeu de ballon : **jouer au** tennis / rugby / volley." }
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Le poids et la taille",
+      "blocks": [
+        {
+          "type": "examples",
+          "title": { "pl": "Waga", "fr": "Le poids" },
+          "items": [
+            { "fr": "Quel est votre poids ? / Vous pesez combien ?", "pl": "Ile pan / pani waży?" },
+            { "fr": "Je pèse 60 kg (soixante kilos).", "pl": "Ważę 60 kilogramów." }
           ]
         },
         {
-          "type": "warning",
-          "text": {
-            "pl": "„Grać w tenisa” to **jouer au tennis** (nie « jouer le tennis »). „Uprawiać sport” to **faire du sport**.",
-            "fr": "On dit **jouer au tennis** (pas « jouer le tennis ») et **faire du sport**."
-          }
-        },
-        {
-          "type": "words",
-          "title": { "pl": "Odżywianie", "fr": "L'alimentation" },
+          "type": "examples",
+          "title": { "pl": "Wzrost", "fr": "La taille" },
           "items": [
-            { "fr": "l'alimentation saine", "pl": "zdrowe odżywianie", "def": "manger des fruits, des légumes, peu de sucre" },
-            { "fr": "les fruits et les légumes", "pl": "owoce i warzywa" },
-            { "fr": "le sucre", "pl": "cukier" },
-            { "fr": "la calorie", "pl": "kaloria" },
-            { "fr": "gras / grasse", "pl": "tłusty" },
-            { "fr": "salé(e)", "pl": "słony" },
-            { "fr": "sucré(e)", "pl": "słodki" }
+            { "fr": "Quelle est votre taille ? / Vous mesurez combien ?", "pl": "Ile ma pan / pani wzrostu?" },
+            { "fr": "Je mesure 1,68 m (1 mètre 68).", "pl": "Mam 1,68 m wzrostu." }
           ]
         }
       ]
     },
     {
       "kind": "phrases",
-      "title": "Chez le médecin",
+      "title": "Parler de sa santé",
       "blocks": [
         {
           "type": "examples",
           "title": { "pl": "Lekarz", "fr": "Le médecin" },
           "items": [
-            { "fr": "Qu'est-ce qui ne va pas ?", "pl": "Co panu / pani dolega?" },
-            { "fr": "Vous avez mal où ?", "pl": "Gdzie pana / panią boli?" },
-            { "fr": "Vous avez de la fièvre ?", "pl": "Ma pan / pani gorączkę?" },
-            { "fr": "Vous mesurez combien ? Vous pesez combien ?", "pl": "Ile ma pan / pani wzrostu? Ile pan / pani waży?" },
-            { "fr": "Prenez ce sirop trois fois par jour.", "pl": "Proszę brać ten syrop trzy razy dziennie." },
-            { "fr": "Reposez-vous bien !", "pl": "Proszę dużo odpoczywać!" }
+            { "fr": "Qu'est-ce qui vous arrive ?", "pl": "Co się panu / pani stało?" },
+            { "fr": "Vous vous sentez comment ?", "pl": "Jak się pan / pani czuje?" },
+            { "fr": "Vous avez encore de la fièvre ?", "pl": "Ma pan / pani jeszcze gorączkę?" }
           ]
         },
         {
           "type": "examples",
-          "title": { "pl": "Pacjent", "fr": "Le patient" },
+          "title": { "pl": "Chory", "fr": "Le malade" },
           "items": [
-            { "fr": "Je ne me sens pas bien.", "pl": "Źle się czuję." },
-            { "fr": "J'ai mal à la gorge depuis trois jours.", "pl": "Od trzech dni boli mnie gardło." },
-            { "fr": "Je tousse beaucoup la nuit.", "pl": "W nocy dużo kaszlę." },
-            { "fr": "Je mesure 1,70 m (un mètre soixante-dix).", "pl": "Mam 1,70 m wzrostu." },
-            { "fr": "Je pèse 65 kilos.", "pl": "Ważę 65 kilogramów." },
-            { "fr": "Je voudrais prendre rendez-vous avec le docteur Martin.", "pl": "Chciałbym / chciałabym umówić się na wizytę u doktora Martina." }
+            { "fr": "Je suis malade.", "pl": "Jestem chory / chora." },
+            { "fr": "J'ai un rhume.", "pl": "Mam katar." },
+            { "fr": "J'ai mal à la gorge / à l'oreille / au dos / aux dents.", "pl": "Boli mnie gardło / ucho / plecy / bolą mnie zęby." },
+            { "fr": "J'ai 39 °C.", "pl": "Mam 39 stopni (gorączki)." }
           ]
         }
       ]
     },
     {
       "kind": "phrases",
-      "title": "Émotions, accord et désaccord",
+      "title": "L'accord et le désaccord",
       "blocks": [
         {
           "type": "examples",
-          "title": { "pl": "Pozytywne emocje", "fr": "Une émotion positive" },
+          "title": { "pl": "Zgoda ≠ niezgoda", "fr": "L'accord ≠ le désaccord" },
           "items": [
-            { "fr": "Super ! Génial !", "pl": "Super! Świetnie!" },
-            { "fr": "Quelle bonne nouvelle !", "pl": "Co za dobra wiadomość!" },
-            { "fr": "Je suis tellement content(e) !", "pl": "Tak się cieszę!" }
+            { "fr": "Tu as raison. ≠ Tu as tort.", "pl": "Masz rację. ≠ Nie masz racji." },
+            { "fr": "C'est vrai. ≠ C'est faux.", "pl": "To prawda. ≠ To nieprawda." },
+            { "fr": "Je suis d'accord (avec toi). ≠ Je ne suis pas d'accord.", "pl": "Zgadzam się (z tobą). ≠ Nie zgadzam się." }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Pour donner un conseil",
+      "blocks": [
         {
           "type": "examples",
-          "title": { "pl": "Negatywne emocje", "fr": "Une émotion négative" },
+          "title": { "pl": "Rada", "fr": "Le conseil" },
           "items": [
-            { "fr": "Oh non ! C'est dommage !", "pl": "O nie! Szkoda!" },
-            { "fr": "C'est nul !", "pl": "To beznadziejne!" }
-          ]
-        },
-        {
-          "type": "examples",
-          "title": { "pl": "Zgoda", "fr": "L'accord" },
-          "items": [
-            { "fr": "Je suis d'accord avec toi.", "pl": "Zgadzam się z tobą." },
-            { "fr": "Tu as raison.", "pl": "Masz rację." },
-            { "fr": "Bien sûr ! / Exactement !", "pl": "Oczywiście! / Właśnie!" }
-          ]
-        },
-        {
-          "type": "examples",
-          "title": { "pl": "Niezgoda", "fr": "Le désaccord" },
-          "items": [
-            { "fr": "Je ne suis pas d'accord.", "pl": "Nie zgadzam się." },
-            { "fr": "Tu as tort.", "pl": "Nie masz racji." },
-            { "fr": "Pas du tout ! Moi, je pense que le sport, c'est important.", "pl": "Wcale nie! Ja uważam, że sport jest ważny." }
+            { "fr": "Bois de l'eau !", "pl": "Pij wodę!" },
+            { "fr": "Dormez huit heures par nuit !", "pl": "Proszę spać osiem godzin na dobę!" },
+            { "fr": "Tu peux faire du yoga.", "pl": "Możesz uprawiać jogę." },
+            { "fr": "Vous pouvez prendre du paracétamol.", "pl": "Może pan / pani wziąć paracetamol." }
           ]
         }
       ]

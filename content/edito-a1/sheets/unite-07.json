@@ -15,20 +15,20 @@
         {
           "type": "rule",
           "text": {
-            "pl": "Passé composé = czas przeszły (zrobiłem, zrobiłam). Budowa: **avoir** w czasie teraźniejszym + **imiesłów** (participe passé).\nCzasowniki na **-er**: **-er → -é**: trouver → trouv**é**, appeler → appel**é**.",
-            "fr": "Le passé composé = une action finie dans le passé. Formation : **avoir** au présent + **participe passé**.\nVerbes en **-er** : **-er → -é** : trouver → trouv**é**, appeler → appel**é**."
+            "pl": "Passé composé = czas przeszły (zrobiłem, zrobiłam). Budowa: **avoir** w czasie teraźniejszym + **imiesłów** (participe passé).\nCzasowniki na **-er**: **-er → -é**: réparer → répar**é**, regarder → regard**é**.",
+            "fr": "Le passé composé = une action finie dans le passé. Formation : **avoir** au présent + **participe passé**.\nVerbes en **-er** : **-er → -é** : réparer → répar**é**, regarder → regard**é**."
           }
         },
         {
           "type": "table",
-          "head": ["", "trouver", "négation"],
+          "head": ["", "réparer", "négation"],
           "rows": [
-            ["je / j'", "**ai** trouvé", "je **n'ai pas** trouvé"],
-            ["tu", "**as** trouvé", "tu **n'as pas** trouvé"],
-            ["il / elle / on", "**a** trouvé", "il **n'a pas** trouvé"],
-            ["nous", "**avons** trouvé", "nous **n'avons pas** trouvé"],
-            ["vous", "**avez** trouvé", "vous **n'avez pas** trouvé"],
-            ["ils / elles", "**ont** trouvé", "ils **n'ont pas** trouvé"]
+            ["je / j'", "**ai** réparé", "je **n'ai pas** réparé"],
+            ["tu", "**as** réparé", "tu **n'as pas** réparé"],
+            ["il / elle / on", "**a** réparé", "il **n'a pas** réparé"],
+            ["nous", "**avons** réparé", "nous **n'avons pas** réparé"],
+            ["vous", "**avez** réparé", "vous **n'avez pas** réparé"],
+            ["ils / elles", "**ont** réparé", "ils **n'ont pas** réparé"]
           ]
         },
         {
@@ -41,17 +41,17 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "Hier, j'**ai trouvé** un appartement.", "pl": "Wczoraj znalazłem / znalazłam mieszkanie." },
-            { "fr": "Nous **avons appelé** le plombier ce matin.", "pl": "Dziś rano zadzwoniliśmy po hydraulika." },
+            { "fr": "Hier, j'**ai réparé** la lampe.", "pl": "Wczoraj naprawiłem / naprawiłam lampę." },
+            { "fr": "Nous **avons déménagé** il y a deux semaines.", "pl": "Przeprowadziliśmy się dwa tygodnie temu." },
             { "fr": "La semaine dernière, nous **avons décoré** le salon.", "pl": "W zeszłym tygodniu udekorowaliśmy salon." },
-            { "fr": "Tu **n'as pas fermé** la porte !", "pl": "Nie zamknąłeś / nie zamknęłaś drzwi!" }
+            { "fr": "Tu **n'as pas regardé** la télévision ?", "pl": "Nie oglądałeś / nie oglądałaś telewizji?" }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Nie zapominaj o **avoir**: nie « je trouvé », tylko **j'ai trouvé**.\nPrzeczenie otacza **avoir**, nie imiesłów: **je n'ai pas** réparé (nie « je n'ai réparé pas »).",
-            "fr": "N'oubliez pas **avoir** : on ne dit pas « je trouvé », on dit **j'ai trouvé**.\nLa négation est autour de **avoir** : **je n'ai pas** réparé (pas « je n'ai réparé pas »)."
+            "pl": "Nie zapominaj o **avoir**: nie « je réparé », tylko **j'ai réparé**.\nPrzeczenie otacza **avoir**, nie imiesłów: **je n'ai pas** réparé (nie « je n'ai réparé pas »).",
+            "fr": "N'oubliez pas **avoir** : on ne dit pas « je réparé », on dit **j'ai réparé**.\nLa négation est autour de **avoir** : **je n'ai pas** réparé (pas « je n'ai réparé pas »)."
           }
         }
       ]
@@ -63,31 +63,30 @@
         {
           "type": "words",
           "items": [
-            { "fr": "dans", "pl": "w", "def": "à l'intérieur : dans la cuisine" },
             { "fr": "sur / sous", "pl": "na / pod", "def": "sur la table, sous le lit" },
             { "fr": "devant / derrière", "pl": "przed / za", "def": "devant la fenêtre, derrière la porte" },
             { "fr": "entre", "pl": "między", "def": "entre le lit et l'armoire" },
-            { "fr": "à gauche de / à droite de", "pl": "na lewo od / na prawo od" },
-            { "fr": "à côté de", "pl": "obok", "def": "tout près" },
-            { "fr": "en face de", "pl": "naprzeciwko" },
-            { "fr": "au rez-de-chaussée", "pl": "na parterze", "def": "le niveau de la rue" },
+            { "fr": "à gauche (de) / à droite (de)", "pl": "na lewo (od) / na prawo (od)" },
+            { "fr": "à côté (de)", "pl": "obok", "def": "à côté du lit" },
+            { "fr": "en face (de)", "pl": "naprzeciwko", "def": "en face de la télévision" },
+            { "fr": "au rez-de-chaussée", "pl": "na parterze" },
             { "fr": "au premier / au deuxième étage", "pl": "na pierwszym / drugim piętrze" }
           ]
         },
         {
           "type": "rule",
           "text": {
-            "pl": "Po **de** i **à** pamiętaj o ściągnięciach: **de + le = du**, **de + les = des**, **à + le = au**.\nà côté **du** canapé, en face **des** toilettes, à gauche **du** salon.",
-            "fr": "Après **de** et **à**, attention aux contractions : **de + le = du**, **de + les = des**, **à + le = au**.\nà côté **du** canapé, en face **des** toilettes, à gauche **du** salon."
+            "pl": "Po **de** pamiętaj o ściągnięciu: **de + le = du**, **de + les = des**.\nà côté **du** canapé, en face **des** toilettes, à gauche **du** salon.",
+            "fr": "Après **de**, attention à la contraction : **de + le = du**, **de + les = des**.\nà côté **du** canapé, en face **des** toilettes, à gauche **du** salon."
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "Le local à vélos est **au rez-de-chaussée**, **derrière** l'immeuble.", "pl": "Rowerownia jest na parterze, za budynkiem." },
-            { "fr": "Ma chambre est **au premier étage**, **à droite de** l'escalier.", "pl": "Mój pokój jest na pierwszym piętrze, na prawo od schodów." },
+            { "fr": "Le local à vélos est **au rez-de-chaussée**, **à côté de** l'escalier.", "pl": "Rowerownia jest na parterze, obok schodów." },
+            { "fr": "Ma chambre est **au premier étage**, **à droite de** la salle de bains.", "pl": "Mój pokój jest na pierwszym piętrze, na prawo od łazienki." },
             { "fr": "Le canapé est **en face de** la télévision.", "pl": "Kanapa stoi naprzeciwko telewizora." },
-            { "fr": "Les clés sont **sur** la table, **à côté du** téléphone.", "pl": "Klucze są na stole, obok telefonu." }
+            { "fr": "La lampe est **sur** la table, **à côté du** canapé.", "pl": "Lampa stoi na stole, obok kanapy." }
           ]
         },
         {
@@ -107,9 +106,9 @@
           "type": "table",
           "head": ["", "obligation", "interdiction"],
           "rows": [
-            ["merci de / prière de", "**Merci de** fermer la porte.", "**Prière de ne pas** fumer."],
-            ["impératif", "**Fermez** la porte !", "**Ne fumez pas** !"],
-            ["infinitif", "**Fermer** la porte.", "**Ne pas fumer.**"],
+            ["merci de / prière de", "**Merci de** sortir les poubelles.", "**Prière de ne pas** fumer."],
+            ["impératif", "**Sortez** les poubelles le mardi !", "**Ne fumez pas** !"],
+            ["infinitif", "**Sortir** les poubelles le mardi.", "**Ne pas fumer.**"],
             ["interdit", "—", "**Il est interdit de** fumer."],
             ["défense de / interdiction de", "—", "**Défense de** fumer. **Interdiction de** fumer."]
           ]
@@ -123,22 +122,21 @@
         },
         {
           "type": "examples",
-          "title": { "pl": "Regulamin budynku", "fr": "Un règlement intérieur" },
+          "title": { "pl": "Regulamin osiedla", "fr": "Le règlement de la résidence" },
           "items": [
-            { "fr": "**Merci de** laisser les vélos dans le local à vélos.", "pl": "Prosimy zostawiać rowery w rowerowni." },
+            { "fr": "L'ascenseur est en panne : **merci de** prendre l'escalier.", "pl": "Winda jest zepsuta: prosimy korzystać ze schodów." },
             { "fr": "**Prière de ne pas** marcher sur la pelouse.", "pl": "Prosimy nie chodzić po trawniku." },
-            { "fr": "**Il est interdit de** laisser les poubelles dans le hall.", "pl": "Zabrania się zostawiać śmieci w holu." },
+            { "fr": "**Il est interdit de** manger dans l'ascenseur.", "pl": "Zabrania się jeść w windzie." },
             { "fr": "**Interdiction de** fumer dans la résidence.", "pl": "Zakaz palenia na terenie osiedla." },
-            { "fr": "**Ne pas** jeter de papiers dans l'escalier.", "pl": "Nie wyrzucać papierów na schodach." },
-            { "fr": "**Fermez** la porte de l'immeuble, s'il vous plaît.", "pl": "Proszę zamykać drzwi do budynku." },
-            { "fr": "**Défense d'**entrer.", "pl": "Wstęp wzbroniony." }
+            { "fr": "**Ne pas** jouer dans le hall.", "pl": "Nie bawić się w holu." },
+            { "fr": "**Mettez** les vélos dans le local à vélos, s'il vous plaît.", "pl": "Prosimy wstawiać rowery do rowerowni." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Przed bezokolicznikiem **ne pas** stoją razem: **Ne pas fumer**, Merci de **ne pas** fumer (nie « Ne fumer pas »).\nPo **de** przed samogłoską: **d'**: Défense **d'**entrer.",
-            "fr": "Devant un infinitif, **ne pas** sont ensemble : **Ne pas fumer**, Merci de **ne pas** fumer (pas « Ne fumer pas »).\nDevant une voyelle, **de** devient **d'** : Défense **d'**entrer."
+            "pl": "Przed bezokolicznikiem **ne pas** stoją razem: **Ne pas fumer**, Merci de **ne pas** fumer (nie « Ne fumer pas »).",
+            "fr": "Devant un infinitif, **ne pas** sont ensemble : **Ne pas fumer**, Merci de **ne pas** fumer (pas « Ne fumer pas »)."
           }
         }
       ]
@@ -159,9 +157,9 @@
           "head": ["", "affirmation", "négation", "+ infinitif"],
           "rows": [
             ["le frigo", "je **le** répare", "je **ne le** répare **pas**", "je vais **le** réparer"],
-            ["la porte", "je **la** ferme", "je **ne la** ferme **pas**", "je vais **la** fermer"],
+            ["la télévision", "je **la** regarde", "je **ne la** regarde **pas**", "je vais **la** regarder"],
             ["l'appartement", "je **l'**aime", "je **ne l'**aime **pas**", "je vais **l'**acheter"],
-            ["les clés", "je **les** cherche", "je **ne les** cherche **pas**", "je vais **les** chercher"]
+            ["les poubelles", "je **les** sors", "je **ne les** sors **pas**", "je vais **les** sortir"]
           ]
         },
         {
@@ -169,14 +167,14 @@
           "items": [
             { "fr": "Tu connais la voisine ? — Oui, je **la** connais bien.", "pl": "Znasz sąsiadkę? — Tak, dobrze ją znam." },
             { "fr": "Où sont les poubelles ? — On **les** sort le mardi.", "pl": "Gdzie są śmieci? — Wystawiamy je we wtorki." },
-            { "fr": "Le lave-linge ne marche pas. Le technicien va **le** réparer demain.", "pl": "Pralka nie działa. Technik naprawi ją jutro." }
+            { "fr": "Le lave-linge ne marche pas. Mon voisin va **le** réparer demain.", "pl": "Pralka nie działa. Mój sąsiad naprawi ją jutro." }
           ]
         },
         {
           "type": "warning",
           "text": {
             "pl": "Po polsku « widzę **go** », po francusku zaimek **przed** czasownikiem: **je le vois** (nie « je vois le »).\nRodzaj zależy od francuskiego rzeczownika: le frigo → **le**, nawet jeśli po polsku « lodówka » to ona.",
-            "fr": "Le pronom est **avant** le verbe : **je le vois** (pas « je vois le »).\nLe genre vient du nom français : le frigo → **le**, la machine → **la**."
+            "fr": "Le pronom est **avant** le verbe : **je le vois** (pas « je vois le »).\nLe genre vient du nom français : le frigo → **le**, la télévision → **la**."
           }
         }
       ]
@@ -200,15 +198,15 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**connaître** + osoba, miejsce, rzecz = znać: je **connais** un bon plombier, tu **connais** ce quartier ?\nImiesłów: **connu** (j'ai connu).",
-            "fr": "**connaître** + une personne, un lieu, une chose : je **connais** un bon plombier, tu **connais** ce quartier ?\nParticipe passé : **connu** (j'ai connu)."
+            "pl": "**connaître** + osoba, miejsce = znać: je **connais** un bon plombier, tu **connais** ce quartier ?",
+            "fr": "**connaître** + une personne, un lieu : je **connais** un bon plombier, tu **connais** ce quartier ?"
           }
         },
         {
           "type": "examples",
           "items": [
             { "fr": "Vous **connaissez** vos voisins ?", "pl": "Znacie swoich sąsiadów?" },
-            { "fr": "Elle **connaît** un électricien pas cher.", "pl": "Ona zna niedrogiego elektryka." },
+            { "fr": "Elle **connaît** un bon électricien.", "pl": "Ona zna dobrego elektryka." },
             { "fr": "Nous ne **connaissons** pas encore la ville.", "pl": "Jeszcze nie znamy miasta." }
           ]
         },
@@ -223,125 +221,133 @@
     },
     {
       "kind": "vocabulary",
-      "title": "Le logement et l'immeuble",
+      "title": "Le logement et les pièces",
       "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Pomieszczenia", "fr": "Les pièces" },
+          "title": { "pl": "Mieszkanie", "fr": "Le logement" },
           "items": [
-            { "fr": "l'entrée (f)", "pl": "przedpokój, wejście", "def": "là où on entre dans l'appartement" },
-            { "fr": "le couloir", "pl": "korytarz", "def": "passage entre les pièces" },
-            { "fr": "le salon / le séjour", "pl": "salon, pokój dzienny", "def": "pièce pour se reposer et recevoir" },
-            { "fr": "la salle à manger", "pl": "jadalnia", "def": "pièce pour les repas" },
-            { "fr": "la cuisine", "pl": "kuchnia", "def": "pièce pour préparer les repas" },
-            { "fr": "la chambre", "pl": "sypialnia, pokój", "def": "pièce pour dormir" },
-            { "fr": "la salle de bains", "pl": "łazienka", "def": "pièce avec la douche" },
-            { "fr": "les toilettes (f) / les WC (m)", "pl": "toaleta" },
-            { "fr": "le bureau", "pl": "gabinet; biurko", "def": "pièce pour travailler" },
-            { "fr": "le balcon / la terrasse", "pl": "balkon / taras" },
-            { "fr": "le jardin", "pl": "ogród", "def": "un espace avec de l'herbe et des fleurs, devant ou derrière la maison" },
+            { "fr": "déménager", "pl": "przeprowadzać się", "def": "changer de logement" },
+            { "fr": "la maison", "pl": "dom" },
+            { "fr": "la pièce", "pl": "pokój, pomieszczenie", "def": "une partie du logement : la chambre, le salon…" },
+            { "fr": "l'étage (m)", "pl": "piętro" },
+            { "fr": "le rez-de-chaussée", "pl": "parter", "def": "le niveau de la rue" },
             { "fr": "la fenêtre", "pl": "okno" },
-            { "fr": "la surface", "pl": "powierzchnia", "def": "la taille du logement en mètres carrés : 45 m²" },
-            { "fr": "déménager", "pl": "przeprowadzać się", "def": "quitter son logement pour aller habiter ailleurs" }
+            { "fr": "le jardin", "pl": "ogród" },
+            { "fr": "la terrasse", "pl": "taras" },
+            { "fr": "la surface", "pl": "powierzchnia", "def": "la taille du logement en mètres carrés : 45 m²" }
           ]
         },
         {
           "type": "words",
-          "title": { "pl": "Budynek", "fr": "L'immeuble" },
+          "title": { "pl": "Pomieszczenia", "fr": "Les pièces" },
           "items": [
-            { "fr": "un immeuble", "pl": "budynek, blok", "def": "grand bâtiment avec des appartements" },
-            { "fr": "une résidence", "pl": "osiedle, zespół budynków", "def": "un ou plusieurs immeubles avec un jardin commun" },
-            { "fr": "un appartement / une maison", "pl": "mieszkanie / dom" },
-            { "fr": "un studio", "pl": "kawalerka", "def": "appartement d'une seule pièce" },
-            { "fr": "la porte (d'entrée)", "pl": "drzwi (wejściowe)" },
-            { "fr": "le hall", "pl": "hol (wejściowy)", "def": "la grande entrée de l'immeuble" },
-            { "fr": "l'étage (m) / le rez-de-chaussée", "pl": "piętro / parter" },
-            { "fr": "l'escalier (m)", "pl": "schody" },
-            { "fr": "l'ascenseur (m)", "pl": "winda" },
-            { "fr": "le local à vélos", "pl": "rowerownia", "def": "une pièce de l'immeuble pour laisser les vélos" },
-            { "fr": "le local à poubelles", "pl": "śmietnik, pomieszczenie na śmieci", "def": "une pièce de l'immeuble pour les poubelles" },
-            { "fr": "la pelouse", "pl": "trawnik", "def": "l'herbe courte d'un jardin" },
-            { "fr": "le / la voisin(e)", "pl": "sąsiad / sąsiadka", "def": "personne qui habite à côté" }
+            { "fr": "la chambre", "pl": "sypialnia, pokój", "def": "la pièce pour dormir" },
+            { "fr": "la cuisine", "pl": "kuchnia" },
+            { "fr": "la salle à manger", "pl": "jadalnia", "def": "la pièce pour manger" },
+            { "fr": "la salle de bains", "pl": "łazienka", "def": "la pièce pour se doucher" },
+            { "fr": "le salon", "pl": "salon, pokój dzienny" },
+            { "fr": "les toilettes (f)", "pl": "toaleta" }
           ]
         }
       ]
     },
     {
       "kind": "vocabulary",
-      "title": "Les meubles et l'équipement",
+      "title": "Les meubles et la décoration",
       "blocks": [
         {
           "type": "words",
           "title": { "pl": "Meble", "fr": "Les meubles" },
           "items": [
-            { "fr": "un lit", "pl": "łóżko", "def": "on dort dedans" },
-            { "fr": "une armoire", "pl": "szafa", "def": "on y range les vêtements" },
-            { "fr": "un canapé", "pl": "kanapa", "def": "grand siège pour plusieurs personnes" },
-            { "fr": "un fauteuil", "pl": "fotel", "def": "siège confortable pour une personne" },
-            { "fr": "une table / une chaise", "pl": "stół / krzesło" },
-            { "fr": "une table basse", "pl": "stolik (kawowy)", "def": "une petite table devant le canapé" },
-            { "fr": "un bureau", "pl": "biurko", "def": "table pour travailler" }
+            { "fr": "l'armoire (f)", "pl": "szafa", "def": "on y met les vêtements" },
+            { "fr": "le bureau", "pl": "biurko" },
+            { "fr": "le canapé", "pl": "kanapa" },
+            { "fr": "la chaise", "pl": "krzesło" },
+            { "fr": "le fauteuil", "pl": "fotel" },
+            { "fr": "le lit", "pl": "łóżko" },
+            { "fr": "la table (basse)", "pl": "stół (stolik kawowy)" }
           ]
         },
         {
           "type": "words",
-          "title": { "pl": "AGD i wyposażenie", "fr": "L'électroménager et l'équipement" },
+          "title": { "pl": "AGD", "fr": "L'électroménager" },
           "items": [
-            { "fr": "un réfrigérateur (un frigo)", "pl": "lodówka", "def": "il garde les aliments au froid" },
-            { "fr": "une cuisinière", "pl": "kuchenka", "def": "on y fait cuire les repas" },
-            { "fr": "un four / un four à micro-ondes", "pl": "piekarnik / mikrofalówka", "def": "pour cuire ou chauffer" },
-            { "fr": "un lave-linge", "pl": "pralka", "def": "machine pour laver les vêtements" },
-            { "fr": "une douche", "pl": "prysznic" },
-            { "fr": "une télévision", "pl": "telewizor; telewizja" }
+            { "fr": "la cuisinière", "pl": "kuchenka" },
+            { "fr": "le four (à micro-ondes)", "pl": "piekarnik (mikrofalówka)" },
+            { "fr": "le lave-linge", "pl": "pralka" },
+            { "fr": "le réfrigérateur / le frigo (fam.)", "pl": "lodówka" }
           ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "pl": "Pralka: we Francji **le lave-linge** albo **une machine à laver**, w Belgii **une lessiveuse**, w Québecu **une laveuse**.",
+            "fr": "En France, on dit **le lave-linge** ou **une machine à laver**. En Belgique, on dit **une lessiveuse** et au Québec, **une laveuse**."
+          }
         },
         {
           "type": "words",
           "title": { "pl": "Przedmioty i dekoracja", "fr": "Les objets et la décoration" },
           "items": [
-            { "fr": "décorer", "pl": "dekorować, urządzać", "def": "rendre une pièce plus belle" },
-            { "fr": "une lampe", "pl": "lampa" },
-            { "fr": "un tapis", "pl": "dywan", "def": "on le met par terre" },
-            { "fr": "un tableau", "pl": "obraz", "def": "une peinture sur le mur" },
-            { "fr": "une plante", "pl": "roślina" },
-            { "fr": "un aquarium", "pl": "akwarium", "def": "une boîte en verre avec de l'eau et des poissons" }
+            { "fr": "l'aquarium (m)", "pl": "akwarium" },
+            { "fr": "décorer", "pl": "dekorować, urządzać" },
+            { "fr": "la lampe", "pl": "lampa" },
+            { "fr": "la plante", "pl": "roślina" },
+            { "fr": "le tableau", "pl": "obraz" },
+            { "fr": "le tapis", "pl": "dywan" },
+            { "fr": "la télévision", "pl": "telewizor; telewizja" }
           ]
         }
       ]
     },
     {
       "kind": "vocabulary",
-      "title": "Les réparations",
+      "title": "L'immeuble",
       "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Problemy", "fr": "Les problèmes" },
+          "title": { "pl": "Budynek", "fr": "L'immeuble" },
           "items": [
-            { "fr": "une fuite (d'eau)", "pl": "przeciek, wyciek (wody)", "def": "l'eau coule où il ne faut pas" },
-            { "fr": "être en panne", "pl": "być zepsutym (o urządzeniu)", "def": "la machine ne marche pas" },
-            { "fr": "marcher / fonctionner", "pl": "działać (o urządzeniu)", "def": "Le four ne marche pas. = Le four ne fonctionne pas." },
-            { "fr": "le bruit", "pl": "hałas", "def": "un son fort et désagréable" }
+            { "fr": "l'appartement (m)", "pl": "mieszkanie" },
+            { "fr": "l'ascenseur (m)", "pl": "winda" },
+            { "fr": "le balcon", "pl": "balkon" },
+            { "fr": "le couloir", "pl": "korytarz" },
+            { "fr": "l'escalier (m)", "pl": "schody" },
+            { "fr": "le hall", "pl": "hol (wejściowy)" },
+            { "fr": "le local à poubelles", "pl": "śmietnik, pomieszczenie na śmieci" },
+            { "fr": "le local à vélos", "pl": "rowerownia" },
+            { "fr": "la pelouse", "pl": "trawnik" },
+            { "fr": "la porte (d'entrée)", "pl": "drzwi (wejściowe)" },
+            { "fr": "la résidence", "pl": "osiedle, zespół budynków" },
+            { "fr": "le voisin / la voisine", "pl": "sąsiad / sąsiadka" }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "Les problèmes et les professionnels",
+      "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Rozwiązania", "fr": "Les solutions" },
+          "title": { "pl": "Problemy, awarie i rozwiązania", "fr": "Les problèmes, les pannes et les solutions" },
           "items": [
-            { "fr": "réparer", "pl": "naprawiać", "def": "remettre en bon état" },
-            { "fr": "changer", "pl": "wymieniać", "def": "mettre un nouvel objet" },
-            { "fr": "appeler un professionnel", "pl": "wezwać fachowca" },
-            { "fr": "prendre rendez-vous", "pl": "umówić się (na wizytę)" }
+            { "fr": "la fuite d'eau", "pl": "przeciek, wyciek wody" },
+            { "fr": "être en panne", "pl": "być zepsutym (o urządzeniu)" },
+            { "fr": "fonctionner / marcher", "pl": "działać (o urządzeniu)", "def": "Le four ne marche pas. = Le four ne fonctionne pas." },
+            { "fr": "réparer", "pl": "naprawiać" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Fachowcy", "fr": "Les professionnels" },
           "items": [
-            { "fr": "un plombier", "pl": "hydraulik", "def": "il répare l'eau, les tuyaux" },
-            { "fr": "un électricien / une électricienne", "pl": "elektryk", "def": "il répare les lampes et les prises" },
-            { "fr": "un serrurier", "pl": "ślusarz", "def": "il répare les serrures et les portes" },
-            { "fr": "un peintre", "pl": "malarz (pokojowy)", "def": "il peint les murs" },
-            { "fr": "un informaticien / une informaticienne", "pl": "informatyk / informatyczka", "def": "il répare les ordinateurs" }
+            { "fr": "l'électricien / l'électricienne", "pl": "elektryk" },
+            { "fr": "l'informaticien / l'informaticienne", "pl": "informatyk / informatyczka" },
+            { "fr": "le peintre", "pl": "malarz (pokojowy)" },
+            { "fr": "le plombier", "pl": "hydraulik" },
+            { "fr": "le serrurier", "pl": "ślusarz" }
           ]
         }
       ]
@@ -353,12 +359,10 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "Bonjour, j'appelle pour l'annonce de l'appartement.", "pl": "Dzień dobry, dzwonię w sprawie ogłoszenia o mieszkaniu." },
-            { "fr": "Quelle est la surface ? Il fait combien de mètres carrés ?", "pl": "Jaka jest powierzchnia? Ile ma metrów kwadratowych?" },
+            { "fr": "Quelle est la surface ?", "pl": "Jaka jest powierzchnia?" },
+            { "fr": "La maison fait 100 m².", "pl": "Dom ma 100 m²." },
             { "fr": "Il y a combien de pièces ?", "pl": "Ile jest pokoi?" },
-            { "fr": "C'est à quel étage ? Il y a un ascenseur ?", "pl": "Na którym to piętrze? Jest winda?" },
-            { "fr": "Il y a un balcon ou une terrasse ?", "pl": "Jest balkon albo taras?" },
-            { "fr": "Je peux le visiter quand ?", "pl": "Kiedy mogę je obejrzeć?" }
+            { "fr": "Il y a un jardin ?", "pl": "Jest ogród?" }
           ]
         }
       ]
@@ -371,22 +375,19 @@
           "type": "examples",
           "title": { "pl": "Przeprosiny w wiadomości", "fr": "S'excuser dans un message" },
           "items": [
-            { "fr": "Chers voisins, excusez-moi pour le bruit samedi soir.", "pl": "Drodzy sąsiedzi, przepraszam za hałas w sobotę wieczorem." },
-            { "fr": "Je suis désolé(e), j'ai organisé une fête pour mon anniversaire.", "pl": "Przykro mi, zorganizowałem / zorganizowałam imprezę urodzinową." },
-            { "fr": "Pardon, j'ai oublié de fermer la porte de l'immeuble.", "pl": "Przepraszam, zapomniałem / zapomniałam zamknąć drzwi do budynku." },
-            { "fr": "Ça ne va pas recommencer. Bonne journée !", "pl": "To się nie powtórzy. Miłego dnia!" }
+            { "fr": "Désolé(e) pour la fuite d'eau !", "pl": "Przepraszam za przeciek!" },
+            { "fr": "Excusez-moi pour la fête samedi soir.", "pl": "Przepraszam za imprezę w sobotę wieczorem." },
+            { "fr": "Pardon d'avance pour la fête !", "pl": "Z góry przepraszam za imprezę!" }
           ]
         },
         {
           "type": "examples",
-          "title": { "pl": "Problem w domu", "fr": "Un problème à la maison" },
+          "title": { "pl": "Problem w domu", "fr": "Expliquer un problème domestique" },
           "items": [
-            { "fr": "Il y a une fuite dans la salle de bains.", "pl": "W łazience jest przeciek." },
-            { "fr": "Le lave-linge est en panne.", "pl": "Pralka jest zepsuta." },
-            { "fr": "La télévision ne fonctionne pas.", "pl": "Telewizor nie działa." },
-            { "fr": "Le four ne marche pas, je ne peux pas faire le gâteau !", "pl": "Piekarnik nie działa, nie mogę upiec ciasta!" },
-            { "fr": "Vous pouvez venir quand ? Demain matin, c'est possible ?", "pl": "Kiedy może pan / pani przyjść? Czy jutro rano jest możliwe?" },
-            { "fr": "Ça coûte combien, la réparation ?", "pl": "Ile kosztuje naprawa?" }
+            { "fr": "Il y a une fuite d'eau dans la salle de bains.", "pl": "W łazience jest przeciek." },
+            { "fr": "Le four ne fonctionne pas.", "pl": "Piekarnik nie działa." },
+            { "fr": "La télévision ne marche pas.", "pl": "Telewizor nie działa." },
+            { "fr": "Le lave-linge est en panne.", "pl": "Pralka jest zepsuta." }
           ]
         }
       ]

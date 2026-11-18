@@ -89,7 +89,7 @@
       "def": "une action proche dans le futur : je vais acheter",
       "examples": [
         { "fr": "Demain, il va faire beau.", "pl": "Jutro będzie ładna pogoda." },
-        { "fr": "Ce soir, nous allons sortir.", "pl": "Dziś wieczorem wychodzimy." }
+        { "fr": "Ce soir, nous allons manger au restaurant.", "pl": "Dziś wieczorem zjemy w restauracji." }
       ],
       "tip": {
         "pl": "aller w czasie teraźniejszym (vais, vas, va, allons, allez, vont) + bezokolicznik, bez przyimka",
@@ -102,14 +102,14 @@
       "id": "u05-vendre",
       "fr": "vendre",
       "pl": "sprzedawać",
-      "def": "je vends, il vend, nous vendons, ils vendent (comme attendre, répondre, entendre)",
+      "def": "je vends, il vend, nous vendons, ils vendent",
       "examples": [
-        { "fr": "Ils vendent des vêtements d'occasion.", "pl": "Oni sprzedają używane ubrania." },
-        { "fr": "J'attends le bus.", "pl": "Czekam na autobus." }
+        { "fr": "Ils vendent des vêtements au marché.", "pl": "Oni sprzedają ubrania na targu." },
+        { "fr": "Je vends mon vélo.", "pl": "Sprzedaję swój rower." }
       ],
       "tip": {
-        "pl": "il vend – bez dodatkowego -t; tak samo attendre, répondre, entendre",
-        "fr": "il vend – pas de -t en plus ; même modèle : attendre, répondre, entendre"
+        "pl": "il vend – bez dodatkowego -t; d słychać tylko w liczbie mnogiej (nous vendons, ils vendent)",
+        "fr": "il vend – pas de -t en plus ; on entend le d seulement au pluriel (nous vendons, ils vendent)"
       },
       "tags": ["grammaire"]
     },
@@ -132,9 +132,9 @@
       "id": "u05-venir",
       "fr": "venir",
       "pl": "przychodzić, przyjeżdżać",
-      "def": "je viens, il vient, nous venons, ils viennent ; venir de = l'origine",
+      "def": "je viens, il vient, nous venons, ils viennent",
       "examples": [
-        { "fr": "Je viens de Pologne.", "pl": "Pochodzę z Polski." },
+        { "fr": "Je viens avec toi au cinéma.", "pl": "Idę z tobą do kina." },
         { "fr": "Vous venez avec nous ?", "pl": "Idziecie z nami?" }
       ],
       "tip": {
@@ -144,7 +144,7 @@
       "tags": ["grammaire"]
     },
     { "id": "u05-pantalon", "fr": "un pantalon", "pl": "spodnie", "def": "vêtement long pour les jambes", "examples": [{ "fr": "Mon pantalon est noir.", "pl": "Moje spodnie są czarne." }], "tags": ["vocabulaire"] },
-    { "id": "u05-jupe", "fr": "une jupe", "pl": "spódnica", "def": "vêtement de femme, de la taille aux genoux ou plus bas", "examples": [{ "fr": "Elle porte une jupe courte.", "pl": "Ona nosi krótką spódnicę." }], "tags": ["vocabulaire"] },
+    { "id": "u05-jupe", "fr": "une jupe", "pl": "spódnica", "def": "vêtement de femme, de la taille aux genoux ou plus bas", "examples": [{ "fr": "Elle porte une jupe noire.", "pl": "Ona nosi czarną spódnicę." }], "tags": ["vocabulaire"] },
     { "id": "u05-robe", "fr": "une robe", "pl": "sukienka", "def": "vêtement de femme d'une seule pièce", "examples": [{ "fr": "Cette robe te va très bien.", "pl": "Bardzo ci dobrze w tej sukience." }], "tags": ["vocabulaire"] },
     { "id": "u05-chemise", "fr": "une chemise", "pl": "koszula", "def": "vêtement avec des boutons et un col", "examples": [{ "fr": "Il porte une chemise bleue.", "pl": "On ma na sobie niebieską koszulę." }], "tags": ["vocabulaire"] },
     { "id": "u05-pull", "fr": "un pull", "pl": "sweter", "def": "vêtement chaud pour le haut du corps", "examples": [{ "fr": "J'ai un pull en laine.", "pl": "Mam wełniany sweter." }], "tags": ["vocabulaire"] },
@@ -152,28 +152,29 @@
     { "id": "u05-chaussures", "fr": "des chaussures", "pl": "buty", "def": "on les met aux pieds", "examples": [{ "fr": "Ces chaussures sont trop petites.", "pl": "Te buty są za małe." }], "tags": ["vocabulaire"] },
     { "id": "u05-echarpe", "fr": "une écharpe", "pl": "szalik", "def": "on la met autour du cou quand il fait froid", "examples": [{ "fr": "Prends ton écharpe, il fait froid !", "pl": "Weź szalik, jest zimno!" }], "tags": ["vocabulaire"], "deprecated": true },
     { "id": "u05-cravate", "fr": "une cravate", "pl": "krawat", "def": "accessoire long qu'on met autour du cou, avec une chemise", "examples": [{ "fr": "Pour le travail, il met une cravate bleue.", "pl": "Do pracy zakłada niebieski krawat." }], "tip": { "pl": "rodzaj żeński: une cravate, choć « krawat » jest męski", "fr": "féminin : une cravate, cette cravate" }, "tags": ["vocabulaire"] },
-    { "id": "u05-parapluie", "fr": "un parapluie", "pl": "parasol (od deszczu)", "def": "il protège de la pluie", "examples": [{ "fr": "Il pleut, j'ouvre mon parapluie.", "pl": "Pada deszcz, otwieram parasol." }], "tags": ["vocabulaire"] },
+    { "id": "u05-parapluie", "fr": "un parapluie", "pl": "parasol (od deszczu)", "def": "il protège de la pluie", "examples": [{ "fr": "Il pleut, je prends mon parapluie.", "pl": "Pada deszcz, biorę parasol." }], "tags": ["vocabulaire"] },
     { "id": "u05-portefeuille", "fr": "un portefeuille", "pl": "portfel", "def": "petit objet pour l'argent et les cartes", "examples": [{ "fr": "Mon portefeuille est dans mon sac.", "pl": "Mój portfel jest w torebce." }], "tags": ["vocabulaire"] },
-    { "id": "u05-valise", "fr": "une valise", "pl": "walizka", "def": "grand sac pour mettre ses vêtements quand on part en voyage", "examples": [{ "fr": "Ma valise est très lourde.", "pl": "Moja walizka jest bardzo ciężka." }], "tip": { "pl": "rodzaj żeński: une valise, ma valise", "fr": "féminin : une valise, ma valise" }, "tags": ["vocabulaire"] }
+    { "id": "u05-valise", "fr": "une valise", "pl": "walizka", "def": "grand sac pour mettre ses vêtements quand on va dans une autre ville", "examples": [{ "fr": "Ma valise est très lourde.", "pl": "Moja walizka jest bardzo ciężka." }], "tip": { "pl": "rodzaj żeński: une valise, ma valise", "fr": "féminin : une valise, ma valise" }, "tags": ["vocabulaire"] }
   ],
   "exercises": [
     { "id": "u05-fem-1", "type": "gap-fill", "entryIds": ["u05-adj-feminin"], "data": { "sentence": "Elle porte une chemise ___. (blanc)", "answers": ["blanche"], "pl": "Ona ma na sobie białą koszulę." } },
     { "id": "u05-fem-7", "type": "gap-fill", "entryIds": ["u05-adj-feminin"], "data": { "sentence": "Cette robe noire est très ___. (simple)", "answers": ["simple"], "pl": "Ta czarna sukienka jest bardzo prosta.", "hint": { "pl": "przymiotnik na -e się nie zmienia", "fr": "un adjectif en -e ne change pas" } } },
     { "id": "u05-fem-3", "type": "gap-fill", "entryIds": ["u05-adj-feminin"], "data": { "sentence": "Cette jupe est trop ___. (long)", "answers": ["longue"], "pl": "Ta spódnica jest za długa." } },
-    { "id": "u05-fem-4", "type": "gap-fill", "entryIds": ["u05-adj-feminin"], "data": { "sentence": "C'est une ___ idée ! (bon)", "answers": ["bonne"], "pl": "To dobry pomysł!" } },
+    { "id": "u05-fem-4", "type": "gap-fill", "entryIds": ["u05-adj-feminin"], "data": { "sentence": "C'est une ___ baguette ! (bon)", "answers": ["bonne"], "pl": "To dobra bagietka!" } },
     { "id": "u05-fem-8", "type": "gap-fill", "entryIds": ["u05-adj-feminin"], "data": { "sentence": "Ma chemise est ___. (vert)", "answers": ["verte"], "pl": "Moja koszula jest zielona." } },
     { "id": "u05-bnv-4", "type": "gap-fill", "entryIds": ["u05-adj-feminin"], "data": { "sentence": "C'est une ___ robe ! (beau)", "answers": ["belle"], "pl": "To piękna sukienka!" } },
 
-    { "id": "u05-plur-1", "type": "gap-fill", "entryIds": ["u05-adj-pluriel"], "data": { "sentence": "J'adore ces chaussures ___. (noir)", "answers": ["noires"], "pl": "Uwielbiam te czarne buty." } },
+    { "id": "u05-plur-1", "type": "gap-fill", "entryIds": ["u05-adj-pluriel"], "data": { "sentence": "J'aime ces chaussures ___. (noir)", "answers": ["noires"], "pl": "Podobają mi się te czarne buty." } },
     { "id": "u05-plur-7", "type": "gap-fill", "entryIds": ["u05-adj-pluriel"], "data": { "sentence": "Il porte des pantalons ___ pour le travail. (élégant)", "answers": ["élégants"], "pl": "Do pracy nosi eleganckie spodnie." } },
-    { "id": "u05-plur-3", "type": "gap-fill", "entryIds": ["u05-adj-pluriel"], "data": { "sentence": "Elle achète des bottes ___. (marron)", "answers": ["marron"], "pl": "Ona kupuje brązowe kozaki." } },
+    { "id": "u05-plur-8", "type": "gap-fill", "entryIds": ["u05-adj-pluriel"], "data": { "sentence": "Il achète deux chemises ___. (blanc)", "answers": ["blanches"], "pl": "On kupuje dwie białe koszule.", "hint": { "pl": "rodzaj żeński i liczba mnoga", "fr": "féminin et pluriel" } } },
+    { "id": "u05-plur-9", "type": "gap-fill", "entryIds": ["u05-adj-pluriel"], "data": { "sentence": "Ces robes sont trop ___. (long)", "answers": ["longues"], "pl": "Te sukienki są za długie." } },
     { "id": "u05-plur-4", "type": "gap-fill", "entryIds": ["u05-adj-pluriel"], "data": { "sentence": "J'ai deux sacs ___. (gris)", "answers": ["gris"], "pl": "Mam dwie szare torby." } },
     { "id": "u05-plur-5", "type": "gap-fill", "entryIds": ["u05-adj-pluriel"], "data": { "sentence": "Ces pulls sont très ___. (beau)", "answers": ["beaux"], "pl": "Te swetry są bardzo ładne." } },
 
     { "id": "u05-place-1", "type": "gap-fill", "entryIds": ["u05-adj-place"], "data": { "sentence": "Elle porte une ___. (robe / rouge)", "answers": ["robe rouge"], "pl": "Ona ma na sobie czerwoną sukienkę." } },
     { "id": "u05-place-2", "type": "gap-fill", "entryIds": ["u05-adj-place"], "data": { "sentence": "Je cherche un ___. (sac / petit)", "answers": ["petit sac"], "pl": "Szukam małej torby." } },
     { "id": "u05-place-3", "type": "gap-fill", "entryIds": ["u05-adj-place"], "data": { "sentence": "C'est une ___. (veste / verte)", "answers": ["veste verte"], "pl": "To zielona marynarka." } },
-    { "id": "u05-place-4", "type": "gap-fill", "entryIds": ["u05-adj-place"], "data": { "sentence": "Ils ont une ___. (maison / jolie)", "answers": ["jolie maison"], "pl": "Mają ładny dom." } },
+    { "id": "u05-place-4", "type": "gap-fill", "entryIds": ["u05-adj-place"], "data": { "sentence": "Elle a une ___. (valise / jolie)", "answers": ["jolie valise"], "pl": "Ona ma ładną walizkę." } },
     { "id": "u05-place-7", "type": "gap-fill", "entryIds": ["u05-adj-place"], "data": { "sentence": "Il porte un ___. (chapeau / beau)", "answers": ["beau chapeau"], "pl": "On ma na sobie ładny kapelusz." } },
 
     { "id": "u05-dem-1", "type": "gap-fill", "entryIds": ["u05-demonstratif"], "data": { "sentence": "Combien coûte ___ manteau ?", "answers": ["ce"], "pl": "Ile kosztuje ten płaszcz?" } },
@@ -183,14 +184,14 @@
     { "id": "u05-dem-5", "type": "gap-fill", "entryIds": ["u05-demonstratif"], "data": { "sentence": "___ été, je vais à la mer.", "answers": ["cet"], "pl": "Tego lata jadę nad morze." } },
 
     { "id": "u05-futur-1", "type": "gap-fill", "entryIds": ["u05-futur-proche"], "data": { "sentence": "Demain, je ___ acheter des baskets. (aller)", "answers": ["vais"], "pl": "Jutro kupię adidasy." } },
-    { "id": "u05-futur-2", "type": "gap-fill", "entryIds": ["u05-futur-proche"], "data": { "sentence": "Ce soir, nous ___ sortir avec des amis. (aller)", "answers": ["allons"], "pl": "Dziś wieczorem wychodzimy z przyjaciółmi." } },
+    { "id": "u05-futur-2", "type": "gap-fill", "entryIds": ["u05-futur-proche"], "data": { "sentence": "Ce soir, nous ___ manger au restaurant avec des amis. (aller)", "answers": ["allons"], "pl": "Dziś wieczorem zjemy w restauracji z przyjaciółmi." } },
     { "id": "u05-futur-3", "type": "gap-fill", "entryIds": ["u05-futur-proche"], "data": { "sentence": "Ils ___ vendre leur vélo. (aller)", "answers": ["vont"], "pl": "Oni sprzedadzą swój rower." } },
     { "id": "u05-futur-4", "type": "gap-fill", "entryIds": ["u05-futur-proche"], "data": { "sentence": "Ce week-end, il ___ faire beau. (aller)", "answers": ["va"], "pl": "W ten weekend będzie ładna pogoda." } },
-    { "id": "u05-futur-5", "type": "gap-fill", "entryIds": ["u05-futur-proche"], "data": { "sentence": "Vous ___ essayer cette veste ? (aller)", "answers": ["allez"], "pl": "Przymierzy pan / pani tę marynarkę?" } },
+    { "id": "u05-futur-5", "type": "gap-fill", "entryIds": ["u05-futur-proche"], "data": { "sentence": "Vous ___ acheter cette veste ? (aller)", "answers": ["allez"], "pl": "Kupi pan / pani tę marynarkę?" } },
 
-    { "id": "u05-vendre-1", "type": "gap-fill", "entryIds": ["u05-vendre"], "data": { "sentence": "Ils ___ des vêtements d'occasion. (vendre)", "answers": ["vendent"], "pl": "Oni sprzedają używane ubrania." } },
+    { "id": "u05-vendre-1", "type": "gap-fill", "entryIds": ["u05-vendre"], "data": { "sentence": "Ils ___ des vêtements au marché. (vendre)", "answers": ["vendent"], "pl": "Oni sprzedają ubrania na targu." } },
     { "id": "u05-vendre-2", "type": "gap-fill", "entryIds": ["u05-vendre"], "data": { "sentence": "Elle ___ son vélo. (vendre)", "answers": ["vend"], "pl": "Ona sprzedaje swój rower." } },
-    { "id": "u05-vendre-3", "type": "gap-fill", "entryIds": ["u05-vendre"], "data": { "sentence": "J'___ le bus devant le magasin. (attendre)", "answers": ["attends"], "pl": "Czekam na autobus przed sklepem." } },
+    { "id": "u05-vendre-3", "type": "gap-fill", "entryIds": ["u05-vendre"], "data": { "sentence": "Tu ___ ton ordinateur ? (vendre)", "answers": ["vends"], "pl": "Sprzedajesz swój komputer?" } },
     { "id": "u05-vendre-4", "type": "gap-fill", "entryIds": ["u05-vendre"], "data": { "sentence": "Nous ___ notre appartement. (vendre)", "answers": ["vendons"], "pl": "Sprzedajemy nasze mieszkanie." } },
 
     { "id": "u05-mettre-1", "type": "gap-fill", "entryIds": ["u05-mettre"], "data": { "sentence": "Il fait froid : je ___ un pull. (mettre)", "answers": ["mets"], "pl": "Jest zimno: zakładam sweter." } },
@@ -198,9 +199,9 @@
     { "id": "u05-mettre-3", "type": "gap-fill", "entryIds": ["u05-mettre"], "data": { "sentence": "Elles ___ souvent des robes longues. (mettre)", "answers": ["mettent"], "pl": "One często zakładają długie sukienki." } },
     { "id": "u05-mettre-4", "type": "gap-fill", "entryIds": ["u05-mettre"], "data": { "sentence": "Il ___ ses clés dans son sac. (mettre)", "answers": ["met"], "pl": "On wkłada klucze do torby." } },
 
-    { "id": "u05-venir-1", "type": "gap-fill", "entryIds": ["u05-venir"], "data": { "sentence": "Je ___ de Pologne. (venir)", "answers": ["viens"], "pl": "Pochodzę z Polski." } },
-    { "id": "u05-venir-2", "type": "gap-fill", "entryIds": ["u05-venir"], "data": { "sentence": "Ils ___ avec nous au magasin ? (venir)", "answers": ["viennent"], "pl": "Oni idą z nami do sklepu?" } },
-    { "id": "u05-venir-3", "type": "gap-fill", "entryIds": ["u05-venir"], "data": { "sentence": "Vous ___ d'où ? (venir)", "answers": ["venez"], "pl": "Skąd pochodzicie?" } },
+    { "id": "u05-venir-1", "type": "gap-fill", "entryIds": ["u05-venir"], "data": { "sentence": "Je ___ avec toi au cinéma. (venir)", "answers": ["viens"], "pl": "Idę z tobą do kina." } },
+    { "id": "u05-venir-2", "type": "gap-fill", "entryIds": ["u05-venir"], "data": { "sentence": "Ils ___ avec nous au marché ? (venir)", "answers": ["viennent"], "pl": "Oni idą z nami na targ?" } },
+    { "id": "u05-venir-3", "type": "gap-fill", "entryIds": ["u05-venir"], "data": { "sentence": "Vous ___ ce soir ? (venir)", "answers": ["venez"], "pl": "Przyjdziecie dziś wieczorem?" } },
     { "id": "u05-venir-4", "type": "gap-fill", "entryIds": ["u05-venir"], "data": { "sentence": "Elle ___ à la fête ce soir ? (venir)", "answers": ["vient"], "pl": "Ona przyjdzie dziś wieczorem na imprezę?" } },
 
     { "id": "u05-pantalon-1", "type": "gap-fill", "entryIds": ["u05-pantalon"], "data": { "sentence": "Il porte un ___ gris et une chemise blanche.", "answers": ["pantalon", "jean"], "pl": "On ma na sobie szare spodnie i białą koszulę.", "clue": "(vêtement long pour les jambes)" } },
@@ -209,7 +210,7 @@
     { "id": "u05-jupe-2", "type": "translate-pl-fr", "entryIds": ["u05-jupe"], "data": { "pl": "spódnica", "answers": ["une jupe", "la jupe"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u05-robe-1", "type": "gap-fill", "entryIds": ["u05-robe"], "data": { "sentence": "Pour le mariage, elle porte une belle ___ bleue.", "answers": ["robe"], "pl": "Na ślub zakłada piękną niebieską sukienkę.", "clue": "(vêtement de femme d'une seule pièce)" } },
     { "id": "u05-robe-2", "type": "translate-pl-fr", "entryIds": ["u05-robe"], "data": { "pl": "sukienka", "answers": ["une robe", "la robe"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u05-chemise-1", "type": "gap-fill", "entryIds": ["u05-chemise"], "data": { "sentence": "Il met une ___ blanche pour aller au bureau.", "answers": ["chemise"], "pl": "Do biura zakłada białą koszulę.", "clue": "(vêtement avec des boutons et un col)" } },
+    { "id": "u05-chemise-1", "type": "gap-fill", "entryIds": ["u05-chemise"], "data": { "sentence": "Il met une ___ blanche pour aller au travail.", "answers": ["chemise"], "pl": "Do pracy zakłada białą koszulę.", "clue": "(vêtement avec des boutons et un col)" } },
     { "id": "u05-chemise-2", "type": "translate-pl-fr", "entryIds": ["u05-chemise"], "data": { "pl": "koszula", "answers": ["une chemise", "la chemise"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u05-pull-1", "type": "gap-fill", "entryIds": ["u05-pull"], "data": { "sentence": "Il fait froid, mets un ___ en laine !", "answers": ["pull", "pull-over"], "pl": "Jest zimno, załóż wełniany sweter!", "clue": "(vêtement chaud pour le haut du corps)" } },
     { "id": "u05-pull-2", "type": "translate-pl-fr", "entryIds": ["u05-pull"], "data": { "pl": "sweter", "answers": ["un pull", "le pull", "un pull-over", "le pull-over"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
@@ -222,7 +223,7 @@
     { "id": "u05-cravate-3", "type": "gap-fill", "entryIds": ["u05-cravate"], "data": { "sentence": "Avec ce costume gris, je mets une ___ rouge ?", "answers": ["cravate"], "pl": "Do tego szarego garnituru założyć czerwony krawat?", "clue": "(accessoire long pour aller avec une chemise)" } },
     { "id": "u05-parapluie-1", "type": "gap-fill", "entryIds": ["u05-parapluie"], "data": { "sentence": "Il pleut, prends un ___ !", "answers": ["parapluie"], "pl": "Pada deszcz, weź parasol!", "clue": "(il protège de la pluie)" } },
     { "id": "u05-parapluie-2", "type": "translate-pl-fr", "entryIds": ["u05-parapluie"], "data": { "pl": "parasol (od deszczu)", "answers": ["un parapluie", "le parapluie"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u05-portefeuille-1", "type": "gap-fill", "entryIds": ["u05-portefeuille"], "data": { "sentence": "Mon argent et ma carte sont dans mon ___.", "answers": ["portefeuille"], "pl": "Moje pieniądze i karta są w portfelu.", "clue": "(petit objet pour l'argent et les cartes)" } },
+    { "id": "u05-portefeuille-1", "type": "gap-fill", "entryIds": ["u05-portefeuille"], "data": { "sentence": "Ma carte bancaire est dans mon ___.", "answers": ["portefeuille"], "pl": "Moja karta płatnicza jest w portfelu.", "clue": "(petit objet pour l'argent et les cartes)" } },
     { "id": "u05-portefeuille-2", "type": "translate-pl-fr", "entryIds": ["u05-portefeuille"], "data": { "pl": "portfel", "answers": ["un portefeuille", "le portefeuille"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
 
     { "id": "u05-fem-6", "type": "translate-pl-fr", "entryIds": ["u05-adj-feminin"], "data": { "pl": "długa spódnica", "answers": ["une jupe longue", "la jupe longue"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
@@ -233,20 +234,20 @@
     { "id": "u05-futur-6", "type": "translate-pl-fr", "entryIds": ["u05-futur-proche"], "data": { "pl": "kupię sukienkę", "answers": ["je vais acheter une robe", "je vais acheter la robe"], "hint": { "pl": "czas przyszły bliski (aller + bezokolicznik)", "fr": "futur proche (aller + infinitif)" } } },
     { "id": "u05-vendre-5", "type": "translate-pl-fr", "entryIds": ["u05-vendre"], "data": { "pl": "sprzedajemy nasz samochód", "answers": ["nous vendons notre voiture", "on vend notre voiture"] } },
     { "id": "u05-mettre-5", "type": "translate-pl-fr", "entryIds": ["u05-mettre"], "data": { "pl": "on zakłada płaszcz", "answers": ["il met son manteau", "il met un manteau", "il met le manteau"] } },
-    { "id": "u05-venir-5", "type": "translate-pl-fr", "entryIds": ["u05-venir"], "data": { "pl": "oni pochodzą z Polski", "answers": ["ils viennent de Pologne"] } },
+    { "id": "u05-venir-5", "type": "translate-pl-fr", "entryIds": ["u05-venir"], "data": { "pl": "oni przychodzą jutro", "answers": ["ils viennent demain", "demain, ils viennent"] } },
 
     { "id": "u05-pantalon-3", "type": "gap-fill", "entryIds": ["u05-pantalon"], "data": { "sentence": "Pour le travail, il met un ___ noir et une veste.", "answers": ["pantalon", "jean"], "pl": "Do pracy zakłada czarne spodnie i marynarkę.", "clue": "(vêtement long pour les jambes)" } },
-    { "id": "u05-jupe-3", "type": "gap-fill", "entryIds": ["u05-jupe"], "data": { "sentence": "Elle met une ___ courte avec des bottes.", "answers": ["jupe"], "pl": "Ona zakłada krótką spódnicę i kozaki.", "clue": "(vêtement de femme, de la taille aux genoux)" } },
+    { "id": "u05-jupe-3", "type": "gap-fill", "entryIds": ["u05-jupe"], "data": { "sentence": "Elle met une ___ noire avec des bottes.", "answers": ["jupe"], "pl": "Ona zakłada czarną spódnicę i kozaki.", "clue": "(vêtement de femme, de la taille aux genoux)" } },
     { "id": "u05-robe-3", "type": "gap-fill", "entryIds": ["u05-robe"], "data": { "sentence": "Pour la fête, elle choisit une ___ rouge très élégante.", "answers": ["robe"], "pl": "Na imprezę wybiera bardzo elegancką czerwoną sukienkę.", "clue": "(vêtement de femme d'une seule pièce)" } },
     { "id": "u05-chemise-3", "type": "gap-fill", "entryIds": ["u05-chemise"], "data": { "sentence": "Avec sa cravate, il porte une ___ bleue.", "answers": ["chemise"], "pl": "Do krawata nosi niebieską koszulę.", "clue": "(vêtement avec des boutons et un col)" } },
     { "id": "u05-pull-3", "type": "gap-fill", "entryIds": ["u05-pull"], "data": { "sentence": "Ce ___ en laine est très chaud.", "answers": ["pull", "pull-over"], "pl": "Ten wełniany sweter jest bardzo ciepły.", "clue": "(vêtement chaud pour le haut du corps)" } },
     { "id": "u05-manteau-3", "type": "gap-fill", "entryIds": ["u05-manteau"], "data": { "sentence": "Il neige : mets ton ___ !", "answers": ["manteau"], "pl": "Pada śnieg: załóż płaszcz!", "clue": "(vêtement chaud et long pour sortir en hiver)" } },
-    { "id": "u05-chaussures-3", "type": "gap-fill", "entryIds": ["u05-chaussures"], "data": { "sentence": "J'achète des ___ pour courir.", "answers": ["chaussures", "baskets"], "pl": "Kupuję buty do biegania.", "clue": "(on les met aux pieds)" } },
-    { "id": "u05-parapluie-3", "type": "gap-fill", "entryIds": ["u05-parapluie"], "data": { "sentence": "Le ciel est gris : n'oublie pas ton ___ !", "answers": ["parapluie"], "pl": "Niebo jest szare: nie zapomnij parasola!", "clue": "(il protège de la pluie)" } },
-    { "id": "u05-portefeuille-3", "type": "gap-fill", "entryIds": ["u05-portefeuille"], "data": { "sentence": "Je ne trouve pas mon ___ : mes cartes sont dedans !", "answers": ["portefeuille"], "pl": "Nie mogę znaleźć portfela: są w nim moje karty!", "clue": "(petit objet pour l'argent et les cartes)" } },
-    { "id": "u05-valise-1", "type": "gap-fill", "entryIds": ["u05-valise"], "data": { "sentence": "Je pars demain : je mets mes vêtements dans ma ___.", "answers": ["valise"], "pl": "Wyjeżdżam jutro: wkładam ubrania do walizki.", "clue": "(grand sac pour mettre ses vêtements quand on part en voyage)" } },
+    { "id": "u05-chaussures-3", "type": "gap-fill", "entryIds": ["u05-chaussures"], "data": { "sentence": "J'achète des ___ pour faire du sport.", "answers": ["chaussures", "baskets"], "pl": "Kupuję buty do uprawiania sportu.", "clue": "(on les met aux pieds)" } },
+    { "id": "u05-parapluie-3", "type": "gap-fill", "entryIds": ["u05-parapluie"], "data": { "sentence": "Il va pleuvoir : prends ton ___ !", "answers": ["parapluie"], "pl": "Będzie padać: weź parasol!", "clue": "(il protège de la pluie)" } },
+    { "id": "u05-portefeuille-3", "type": "gap-fill", "entryIds": ["u05-portefeuille"], "data": { "sentence": "Je ne trouve pas mon ___ avec ma carte bancaire !", "answers": ["portefeuille"], "pl": "Nie mogę znaleźć portfela z kartą płatniczą!", "clue": "(petit objet pour l'argent et les cartes)" } },
+    { "id": "u05-valise-1", "type": "gap-fill", "entryIds": ["u05-valise"], "data": { "sentence": "Demain, je vais à Paris : je mets mes vêtements dans ma ___.", "answers": ["valise"], "pl": "Jutro jadę do Paryża: wkładam ubrania do walizki.", "clue": "(grand sac pour mettre ses vêtements)" } },
     { "id": "u05-valise-2", "type": "translate-pl-fr", "entryIds": ["u05-valise"], "data": { "pl": "walizka", "answers": ["une valise", "la valise"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u05-valise-3", "type": "gap-fill", "entryIds": ["u05-valise"], "data": { "sentence": "Ta ___ est très lourde : qu'est-ce que tu mets dedans ?", "answers": ["valise"], "pl": "Twoja walizka jest bardzo ciężka: co do niej wkładasz?", "clue": "(on la prend pour partir en voyage)" } },
+    { "id": "u05-valise-3", "type": "gap-fill", "entryIds": ["u05-valise"], "data": { "sentence": "Ma ___ est très lourde : il y a beaucoup de vêtements !", "answers": ["valise"], "pl": "Moja walizka jest bardzo ciężka: jest w niej dużo ubrań!", "clue": "(grand sac pour mettre ses vêtements)" } },
     { "id": "mp-ce-ces", "type": "paires-minimales", "entryIds": ["u05-demonstratif"], "data": { "pair": ["Je voudrais ce pull.", "Je voudrais ces pulls."] } },
     { "id": "mp-a-va", "type": "paires-minimales", "entryIds": ["u05-futur-proche"], "data": { "pair": ["Il a mangé.", "Il va manger."] } },
     { "id": "mp-choux-joues", "type": "paires-minimales", "entryIds": ["u05-adj-pluriel"], "data": { "pair": ["Les choux sont rouges.", "Les joues sont rouges."] } }
@@ -262,6 +263,7 @@
       "u05-fem-2",
       "u05-fem-5",
       "u05-plur-2",
+      "u05-plur-3",
       "u05-bnv-1",
       "u05-bnv-2",
       "u05-bnv-3",

@@ -15,18 +15,18 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**C'est** + rodzajnik + rzeczownik: c'est **un** musée, c'est **une** amie.\n**Il / Elle est** + przymiotnik albo zawód **bez rodzajnika**: il est grand, elle est professeure.",
-            "fr": "**C'est** + article + nom : c'est **un** musée, c'est **une** amie.\n**Il / Elle est** + adjectif ou profession **sans article** : il est grand, elle est professeure."
+            "pl": "**C'est** + rodzajnik + rzeczownik: c'est **un** musée, c'est **une** amie.\n**Il / Elle est** + przymiotnik albo zawód **bez rodzajnika**: il est français, elle est professeure.",
+            "fr": "**C'est** + article + nom : c'est **un** musée, c'est **une** amie.\n**Il / Elle est** + adjectif ou profession **sans article** : il est français, elle est professeure."
           }
         },
         {
           "type": "table",
           "head": ["C'est… / Ce sont…", "Il / Elle est… / Ils sont…"],
           "rows": [
-            ["c'est **un** quartier animé", "il est **animé**"],
-            ["c'est **une** belle place", "elle est **belle**"],
+            ["c'est **un** ami", "il est **français**"],
+            ["c'est **une** amie", "elle est **française**"],
             ["c'est **un** professeur", "il est **professeur**"],
-            ["ce sont **des** monuments célèbres", "ils sont **célèbres**"]
+            ["ce sont **des** touristes", "ils sont **italiens**"]
           ]
         },
         {
@@ -60,24 +60,21 @@
         {
           "type": "rule",
           "text": {
-            "pl": "Przysłówek stoi **po czasowniku**: je prends **souvent** le bus.\n**Jamais** wymaga **ne** przed czasownikiem: je **ne** prends **jamais** le taxi.",
-            "fr": "L'adverbe se place **après le verbe** : je prends **souvent** le bus.\n**Jamais** demande **ne** avant le verbe : je **ne** prends **jamais** le taxi."
+            "pl": "Przysłówek stoi **po czasowniku**: je prends **souvent** le bus.\n**Jamais** wymaga **ne** przed czasownikiem: je **ne** prends **jamais** le tramway.",
+            "fr": "L'adverbe se place **après le verbe** : je prends **souvent** le bus.\n**Jamais** demande **ne** avant le verbe : je **ne** prends **jamais** le tramway."
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "Je vais **toujours** au travail à vélo.", "pl": "Zawsze jeżdżę do pracy rowerem." },
+            { "fr": "Je vais **toujours** au marché à vélo.", "pl": "Zawsze jeżdżę na targ rowerem." },
             { "fr": "Elle prend **souvent** le métro.", "pl": "Ona często jeździ metrem." },
             { "fr": "Nous **n'**allons **jamais** au centre-ville en voiture.", "pl": "Nigdy nie jeździmy do centrum samochodem." }
           ]
         },
         {
           "type": "warning",
-          "text": {
-            "pl": "Przed samogłoską **ne** → **n'**: il **n'**est **jamais** en retard.",
-            "fr": "Devant une voyelle, **ne** devient **n'** : il **n'**est **jamais** en retard."
-          }
+          "text": { "pl": "Przed samogłoską **ne** → **n'**: il **n'**est **jamais** en retard.", "fr": "Devant une voyelle, **ne** devient **n'** : il **n'**est **jamais** en retard." }
         }
       ]
     },
@@ -111,8 +108,8 @@
         {
           "type": "text",
           "text": {
-            "pl": "Przeczenie: **ne** + czasownik + **pas**: **Ne** traversez **pas** ici ! **Ne** prends **pas** le taxi, c'est cher !",
-            "fr": "La négation : **ne** + verbe + **pas** : **Ne** traversez **pas** ici ! **Ne** prends **pas** le taxi, c'est cher !"
+            "pl": "Przeczenie: **ne** + czasownik + **pas**: **Ne** tournez **pas** à gauche ! **Ne** prends **pas** le bus, prends le métro !",
+            "fr": "La négation : **ne** + verbe + **pas** : **Ne** tournez **pas** à gauche ! **Ne** prends **pas** le bus, prends le métro !"
           }
         }
       ]
@@ -134,11 +131,11 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "Je prends le métro **pour** aller au travail.", "pl": "Jeżdżę metrem, żeby dostać się do pracy." },
-            { "fr": "J'aime mon quartier **parce qu'**il est calme.", "pl": "Lubię swoją dzielnicę, bo jest spokojna." },
-            { "fr": "La gare est loin, **mais** le bus est direct.", "pl": "Dworzec jest daleko, ale autobus jedzie bezpośrednio." },
-            { "fr": "Je visite la ville **avec** un guide.", "pl": "Zwiedzam miasto z przewodnikiem." },
-            { "fr": "On peut aller au musée **sans** ticket le dimanche.", "pl": "W niedzielę można wejść do muzeum bez biletu." }
+            { "fr": "Je prends le tramway **pour** aller au musée.", "pl": "Jadę tramwajem, żeby dostać się do muzeum." },
+            { "fr": "J'aime mon quartier **parce qu'**il y a un parc.", "pl": "Lubię swoją dzielnicę, bo jest w niej park." },
+            { "fr": "Il y a une banque, **mais** il n'y a pas de poste.", "pl": "Jest bank, ale nie ma poczty." },
+            { "fr": "Je vais au théâtre **avec** mon frère.", "pl": "Idę do teatru z bratem." },
+            { "fr": "Un café **sans** sucre, s'il vous plaît.", "pl": "Poproszę kawę bez cukru." }
           ]
         },
         {
@@ -169,15 +166,15 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**prendre** + środek transportu: prendre le bus, le métro, un taxi.\nTak samo odmieniają się **apprendre** (uczyć się) i **comprendre** (rozumieć).",
-            "fr": "**prendre** + moyen de transport : prendre le bus, le métro, un taxi.\n**Apprendre** et **comprendre** se conjuguent de la même façon."
+            "pl": "**prendre** + środek transportu: prendre le bus, le métro, le tramway.\nTak samo odmieniają się **apprendre** (uczyć się) i **comprendre** (rozumieć).",
+            "fr": "**prendre** + moyen de transport : prendre le bus, le métro, le tramway.\n**Apprendre** et **comprendre** se conjuguent de la même façon."
           }
         },
         {
           "type": "examples",
           "items": [
             { "fr": "Vous prenez le bus ou le tramway ?", "pl": "Jedziecie autobusem czy tramwajem?" },
-            { "fr": "Ils prennent un taxi pour aller à la gare.", "pl": "Biorą taksówkę, żeby dojechać na dworzec." }
+            { "fr": "Ils prennent le train pour aller à Lyon.", "pl": "Jadą pociągiem do Lyonu." }
           ]
         }
       ]
@@ -188,45 +185,62 @@
       "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Ulice i miejsca", "fr": "Les voies et les lieux" },
+          "title": { "pl": "Ulice i drogi", "fr": "Les voies" },
           "items": [
-            { "fr": "une rue", "pl": "ulica", "def": "voie dans une ville" },
-            { "fr": "une avenue / un boulevard", "pl": "aleja / bulwar", "def": "grande rue large" },
-            { "fr": "r. / av. / bd (boul.)", "pl": "ul. / al. / bulw. (skróty na planie)", "def": "rue / avenue / boulevard" },
-            { "fr": "une place", "pl": "plac", "def": "espace ouvert entre les bâtiments" },
-            { "fr": "un pont", "pl": "most", "def": "il passe au-dessus d'une rivière" },
-            { "fr": "un fleuve", "pl": "rzeka (wpadająca do morza)", "def": "une grande rivière, comme la Seine" },
-            { "fr": "un quai", "pl": "nabrzeże, bulwar nad rzeką", "def": "la rue au bord du fleuve" },
-            { "fr": "une fontaine", "pl": "fontanna", "def": "de l'eau qui sort au milieu d'une place" },
-            { "fr": "le centre-ville", "pl": "centrum miasta", "def": "le cœur de la ville" },
-            { "fr": "un quartier", "pl": "dzielnica", "def": "une partie de la ville" },
-            { "fr": "la banlieue", "pl": "przedmieścia", "def": "les petites villes autour d'une grande ville" }
+            { "fr": "l'avenue (av.)", "pl": "aleja", "def": "une grande rue large" },
+            { "fr": "le boulevard (bd / boul.)", "pl": "bulwar", "def": "une grande rue large, souvent avec des arbres" },
+            { "fr": "le fleuve", "pl": "rzeka (wpadająca do morza)", "def": "une grande rivière, comme la Seine" },
+            { "fr": "la place", "pl": "plac", "def": "un espace ouvert entre les bâtiments" },
+            { "fr": "le pont", "pl": "most", "def": "il passe au-dessus d'un fleuve" },
+            { "fr": "le quai", "pl": "nabrzeże, bulwar nad rzeką", "def": "la rue au bord du fleuve" },
+            { "fr": "la rue (r.)", "pl": "ulica", "def": "une voie dans une ville" }
           ]
         },
         {
           "type": "words",
-          "title": { "pl": "Budynki i zabytki", "fr": "Les bâtiments et les monuments" },
+          "title": { "pl": "Części miasta", "fr": "Les parties de la ville" },
           "items": [
-            { "fr": "une gare", "pl": "dworzec", "def": "on y prend le train" },
-            { "fr": "un bâtiment", "pl": "budynek", "def": "une construction : une maison, une école, une gare…" },
-            { "fr": "une mairie", "pl": "ratusz, urząd miasta", "def": "le bâtiment du maire" },
-            { "fr": "une poste", "pl": "poczta", "def": "on y envoie des lettres" },
-            { "fr": "une banque", "pl": "bank", "def": "on y met son argent" },
-            { "fr": "un commissariat", "pl": "komisariat (policji)", "def": "le bâtiment de la police" },
-            { "fr": "une école", "pl": "szkoła", "def": "les enfants y apprennent" },
-            { "fr": "un théâtre", "pl": "teatr", "def": "on y regarde une pièce" },
-            { "fr": "un musée", "pl": "muzeum", "def": "on y regarde des œuvres d'art" },
-            { "fr": "une église", "pl": "kościół", "def": "bâtiment religieux" },
-            { "fr": "une bibliothèque", "pl": "biblioteka", "def": "on y emprunte des livres" },
-            { "fr": "un parc / un jardin", "pl": "park / ogród", "def": "espace vert" }
+            { "fr": "la banlieue", "pl": "przedmieścia", "def": "les petites villes autour d'une grande ville" },
+            { "fr": "le centre-ville", "pl": "centrum miasta", "def": "le cœur de la ville" },
+            { "fr": "le quartier", "pl": "dzielnica", "def": "une partie de la ville" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Miejsca i zabytki", "fr": "Les lieux, les monuments" },
+          "items": [
+            { "fr": "la banque", "pl": "bank", "def": "on y met son argent" },
+            { "fr": "le bâtiment", "pl": "budynek", "def": "une construction : une école, une gare…" },
+            { "fr": "la bibliothèque", "pl": "biblioteka", "def": "on y emprunte des livres" },
+            { "fr": "le commissariat", "pl": "komisariat (policji)", "def": "le bâtiment de la police" },
+            { "fr": "l'école", "pl": "szkoła", "def": "les enfants y apprennent" },
+            { "fr": "l'église", "pl": "kościół", "def": "un bâtiment religieux" },
+            { "fr": "la fontaine", "pl": "fontanna", "def": "de l'eau qui sort au milieu d'une place" },
+            { "fr": "la gare", "pl": "dworzec", "def": "on y prend le train" },
+            { "fr": "le jardin", "pl": "ogród", "def": "un espace vert avec des fleurs" },
+            { "fr": "la mairie", "pl": "ratusz, urząd miasta", "def": "le bâtiment du maire" },
+            { "fr": "le musée", "pl": "muzeum", "def": "on y regarde des œuvres d'art" },
+            { "fr": "le parc", "pl": "park", "def": "un grand espace vert" },
+            { "fr": "la poste", "pl": "poczta", "def": "on y envoie des lettres" },
+            { "fr": "le théâtre", "pl": "teatr", "def": "on y regarde une pièce" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Ludzie", "fr": "Les personnes" },
           "items": [
-            { "fr": "un habitant / une habitante", "pl": "mieszkaniec / mieszkanka", "def": "personne qui habite dans la ville" },
-            { "fr": "un touriste / une touriste", "pl": "turysta / turystka", "def": "personne qui visite la ville" }
+            { "fr": "les habitants", "pl": "mieszkańcy", "def": "les personnes qui habitent dans la ville" },
+            { "fr": "les touristes", "pl": "turyści", "def": "les personnes qui visitent la ville" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Au fait ! Plan miasta", "fr": "Au fait ! Le plan" },
+          "items": [
+            { "fr": "le plan", "pl": "plan (miasta)", "def": "une carte de la ville" },
+            { "fr": "r. = rue", "pl": "ul. = ulica" },
+            { "fr": "bd / boul. = boulevard", "pl": "bulw. = bulwar" },
+            { "fr": "av. = avenue", "pl": "al. = aleja" }
           ]
         }
       ]
@@ -237,22 +251,18 @@
       "blocks": [
         {
           "type": "words",
+          "title": { "pl": "Środki transportu", "fr": "Les transports" },
           "items": [
-            { "fr": "le bus", "pl": "autobus" },
-            { "fr": "le métro", "pl": "metro" },
-            { "fr": "le tramway", "pl": "tramwaj" },
-            { "fr": "le train", "pl": "pociąg" },
-            { "fr": "le vélo", "pl": "rower" },
-            { "fr": "la trottinette", "pl": "hulajnoga", "def": "on dit : à trottinette" },
+            { "fr": "à pied", "pl": "pieszo" },
+            { "fr": "à trottinette", "pl": "hulajnogą" },
+            { "fr": "à vélo", "pl": "rowerem" },
+            { "fr": "en bus", "pl": "autobusem" },
+            { "fr": "en métro", "pl": "metrem" },
+            { "fr": "en train", "pl": "pociągiem" },
+            { "fr": "en tramway", "pl": "tramwajem" },
+            { "fr": "en voiture", "pl": "samochodem" },
             { "fr": "le covoiturage", "pl": "wspólne przejazdy (carpooling)", "def": "plusieurs personnes voyagent dans la même voiture" },
-            { "fr": "les transports en commun", "pl": "komunikacja miejska", "def": "le bus, le métro, le tramway, le train" },
-            { "fr": "un arrêt (de bus)", "pl": "przystanek (autobusowy)", "def": "là où le bus s'arrête" },
-            { "fr": "une station (de métro)", "pl": "stacja (metra)", "def": "là où le métro s'arrête" },
-            { "fr": "une ligne", "pl": "linia", "def": "le trajet d'un bus ou d'un métro (ligne 4)" },
-            { "fr": "un ticket", "pl": "bilet (komunikacji miejskiej)", "def": "on le paie pour voyager" },
-            { "fr": "une carte de transport", "pl": "karta miejska, bilet okresowy", "def": "une carte pour prendre le bus et le métro tout le mois" },
-            { "fr": "un itinéraire", "pl": "trasa (przejazdu)", "def": "le chemin pour aller d'un endroit à un autre" },
-            { "fr": "un plan (de la ville)", "pl": "plan (miasta)", "def": "une carte de la ville" }
+            { "fr": "les transports en commun", "pl": "komunikacja miejska", "def": "le bus, le métro, le tramway, le train" }
           ]
         },
         {
@@ -261,6 +271,18 @@
             "pl": "**en** + pojazd, w którym siedzisz: en bus, en métro, en voiture.\n**à** + gdy jesteś na czymś albo idziesz: à vélo, à trottinette, à pied.",
             "fr": "**en** + véhicule fermé : en bus, en métro, en voiture.\n**à** + quand on est dessus ou qu'on marche : à vélo, à trottinette, à pied."
           }
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Poruszanie się po mieście", "fr": "Se déplacer" },
+          "items": [
+            { "fr": "l'arrêt (de bus)", "pl": "przystanek (autobusowy)", "def": "là où le bus s'arrête" },
+            { "fr": "la carte de transport", "pl": "karta miejska, bilet okresowy", "def": "une carte pour prendre le bus et le métro tout le mois" },
+            { "fr": "l'itinéraire", "pl": "trasa (przejazdu)", "def": "le chemin pour aller d'un endroit à un autre" },
+            { "fr": "la ligne", "pl": "linia", "def": "le trajet d'un bus ou d'un métro (ligne 4)" },
+            { "fr": "la station (de métro)", "pl": "stacja (metra)", "def": "là où le métro s'arrête" },
+            { "fr": "le ticket", "pl": "bilet (komunikacji miejskiej)", "def": "on le paie pour prendre le bus ou le métro" }
+          ]
         }
       ]
     },
@@ -302,42 +324,27 @@
           "type": "examples",
           "title": { "pl": "Pytanie", "fr": "Demander" },
           "items": [
-            { "fr": "Excusez-moi, où est la gare, s'il vous plaît ?", "pl": "Przepraszam, gdzie jest dworzec?" },
-            { "fr": "Pour aller au musée, s'il vous plaît ?", "pl": "Jak dojść do muzeum?" },
-            { "fr": "C'est loin ?", "pl": "Czy to daleko?" }
+            { "fr": "Excusez-moi, on cherche la gare.", "pl": "Przepraszam, szukamy dworca." },
+            { "fr": "Où est l'arrêt de bus, s'il vous plaît ?", "pl": "Gdzie jest przystanek autobusowy?" }
           ]
         },
         {
           "type": "examples",
-          "title": { "pl": "Odpowiedź", "fr": "Répondre" },
+          "title": { "pl": "Odpowiedź", "fr": "Indiquer le chemin" },
           "items": [
-            { "fr": "Allez tout droit.", "pl": "Proszę iść prosto." },
             { "fr": "Tournez à gauche / à droite.", "pl": "Proszę skręcić w lewo / w prawo." },
-            { "fr": "Prenez la deuxième rue à droite.", "pl": "Proszę skręcić w drugą ulicę w prawo." },
-            { "fr": "Traversez la place / le pont.", "pl": "Proszę przejść przez plac / most." },
-            { "fr": "C'est au bout de la rue.", "pl": "To na końcu ulicy." },
-            { "fr": "C'est à cinq minutes à pied.", "pl": "To pięć minut pieszo." }
-          ]
-        }
-      ]
-    },
-    {
-      "kind": "phrases",
-      "title": "Présenter sa ville, se déplacer",
-      "blocks": [
-        {
-          "type": "examples",
-          "items": [
-            { "fr": "J'habite dans un quartier calme / animé.", "pl": "Mieszkam w spokojnej / tętniącej życiem dzielnicy." },
-            { "fr": "Dans mon quartier, il y a un marché et beaucoup de cafés.", "pl": "W mojej dzielnicy jest targ i dużo kawiarni." },
-            { "fr": "C'est une ville historique, avec de beaux monuments.", "pl": "To historyczne miasto z pięknymi zabytkami." },
-            { "fr": "Prenez la ligne 4, direction Porte de Clignancourt.", "pl": "Proszę wsiąść do linii 4 w kierunku Porte de Clignancourt." },
-            { "fr": "Changez à Châtelet et descendez à Opéra.", "pl": "Proszę się przesiąść na Châtelet i wysiąść na Opéra." },
-            { "fr": "Un ticket, s'il vous plaît.", "pl": "Poproszę jeden bilet." }
+            { "fr": "Prenez à gauche / à droite.", "pl": "Proszę skręcić w lewo / w prawo." },
+            { "fr": "Continuez tout droit.", "pl": "Proszę iść dalej prosto." },
+            { "fr": "Prenez la première / deuxième / troisième rue à droite.", "pl": "Proszę skręcić w pierwszą / drugą / trzecią ulicę w prawo." }
           ]
         }
       ]
     }
   ],
-  "practice": ["edito-a1/unite-04", "a1-connecteurs/01-prepositions", "a1-connecteurs/02-conjunctions", "a1-connecteurs/04-expressions"]
+  "practice": [
+    "edito-a1/unite-04",
+    "a1-connecteurs/01-prepositions",
+    "a1-connecteurs/02-conjunctions",
+    "a1-connecteurs/04-expressions"
+  ]
 }

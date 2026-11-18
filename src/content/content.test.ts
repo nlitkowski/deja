@@ -1,10 +1,12 @@
 import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
-import audioConfig from '../../content/_audio/config.json';
 import manifest from '../../content/_audio/manifest.json';
-import { audioKey, voiceFor, type AudioConfig, type Manifest } from '../audio/manifest';
+import { audioConfig } from '../audio/config';
+import { audioKey, voiceFor, type Manifest } from '../audio/manifest';
 import { collectAudioTexts } from '../audio/texts';
 import { buildBoss } from '../bosses';
+import { GAP } from '../exercises/gap-fill';
+import { checkAnswer, normalize } from '../lib/answer';
 import { exerciseTypeInfo, isProduction, supportsHelpLang } from '../exercises/registry';
 import { mapState } from '../game/map';
 import { loadPacks } from './loader';
@@ -158,10 +160,24 @@ describe('content packs', () => {
     if (oversized.length) console.warn(['Za duże jednostki (cel: do 25 wpisów i 110 ćwiczeń):', ...oversized].join('\n'));
   });
 
-  it('Édito A1 units have 60–110 exercises', () => {
-    const edito = disk.packs.find((p) => p.id === 'edito-a1')!;
-    const outside = edito.unitList.filter((u) => u.exerciseIds.length < 60 || u.exerciseIds.length > 110).map((u) => `${u.key}: ${u.exerciseIds.length}`);
+  const editoUnits = () => disk.packs.filter((p) => p.id.startsWith('edito-')).flatMap((p) => p.unitList);
+
+  it('Édito units have 60–110 exercises', () => {
+    const outside = editoUnits().filter((u) => u.exerciseIds.length < 60 || u.exerciseIds.length > 110).map((u) => `${u.key}: ${u.exerciseIds.length}`);
     expect(outside).toEqual([]);
+  });
+
+  it('Édito A2 units have at least 2 minimal pairs', () => {
+    const few = disk.packs
+      .find((p) => p.id === 'edito-a2')!
+      .unitList.filter((u) => u.exerciseIds.filter((id) => disk.exercises.get(id)?.type === 'paires-minimales').length < 2)
+      .map((u) => u.key);
+    expect(few).toEqual([]);
+  });
+
+  it('boss groups name only active entries', () => {
+    const stale = [...disk.units.values()].flatMap((u) => (u.boss?.groups.flat() ?? []).filter((id) => disk.entries.get(id)?.deprecated).map((id) => `${u.key}: ${id}`));
+    expect(stale).toEqual([]);
   });
 
   it('no text is double-encoded UTF-8 (’ read as â€™)', () => {
@@ -345,9 +361,75 @@ describe('generated exercises', () => {
   });
 });
 
+describe('answers', () => {
+  type Typed = { answers: string[]; sentence?: string; pl?: string };
+  const typed = written.filter((ex) => ex.type === 'gap-fill' || ex.type === 'translate-pl-fr');
+  const dataOf = (ex: (typeof written)[number]) => ex.data as Typed;
+  const key = (s: string) => normalize(s).replace(/[,;:]/g, '').replace(/\s+/g, ' ');
+
+  it('no accepted answer repeats another one (commas, digits and spelled-out numbers are already equal)', () => {
+    const repeats = typed.flatMap((ex) => {
+      const { answers } = dataOf(ex);
+      return answers.flatMap((a, i) =>
+        answers.slice(0, i).some((b) => { const c = checkAnswer(a, [b]); return c.correct && !c.nearMiss && !c.note; }) ? [`${ex.id}: ${a}`] : [],
+      );
+    });
+    expect(repeats).toEqual([]);
+  });
+
+  it('a translation with si / quand / lorsque / parce que in the middle also accepts the clauses the other way round', () => {
+    const CONJ = /^(si|s'il|s'ils|quand|lorsque|lorsqu'|parce que|parce qu')/;
+    const oneOrder = typed
+      .filter((ex) => ex.type === 'translate-pl-fr')
+      .filter((ex) => {
+        const answers = dataOf(ex).answers.map(normalize);
+        // "même si" is a connector of its own, and "s'il vous plaît" is no clause.
+        const middle = answers.some(
+          (a) => /(?<!même) (si|s'ils?|quand|lorsque|parce que)(\s|$)|(?<!même) (lorsqu'|parce qu')/u.test(a.replace(/s'il (vous|te) pla[iî]t/g, '')) && !CONJ.test(a),
+        );
+        return middle && !answers.some((a) => CONJ.test(a));
+      })
+      .map((ex) => ex.id);
+    expect(oneOrder).toEqual([]);
+  });
+
+  it('a gap with parce que inside the sentence also takes car, and never at its start or after Pourquoi', () => {
+    const problems = typed
+      .filter((ex) => ex.type === 'gap-fill' && dataOf(ex).answers.some((a) => /^parce qu/.test(normalize(a))))
+      .flatMap((ex) => {
+        const { sentence = '', answers } = dataOf(ex);
+        const before = sentence.split(GAP)[0]!.trim();
+        const opening = !before || /pourquoi\s*\?\s*[—–-]?$/i.test(before) || /[.?!]\s*[—–-]?$/.test(before);
+        const hasCar = answers.some((a) => normalize(a) === 'car');
+        return opening === hasCar ? [`${ex.id}: ${opening ? 'car na początku' : 'brak car'}`] : [];
+      });
+    expect(problems).toEqual([]);
+  });
+
+  it('gap-fill sentences and translation prompts are unique across all packs', () => {
+    const seen = new Map<string, string>();
+    const duplicates: string[] = [];
+    for (const ex of typed) {
+      const { sentence, pl } = dataOf(ex);
+      const text = ex.type === 'gap-fill' ? sentence : pl;
+      if (!text) continue;
+      const k = `${ex.type}:${key(text)}`;
+      const other = seen.get(k);
+      if (other) duplicates.push(`${other} = ${ex.id}`);
+      else seen.set(k, ex.id);
+    }
+    expect(duplicates).toEqual([]);
+  });
+});
+
 describe('audio', () => {
-  const config = audioConfig as AudioConfig;
+  const config = audioConfig;
   const recorded = manifest as Manifest;
+
+  it('no recorded text has a space after an elided word ("qu\' il")', () => {
+    const spaced = collectAudioTexts(content).filter((t) => /[a-z]' [a-zà-ÿ]/i.test(t.text)).map((t) => `${t.text}  ← ${t.sources[0]}`);
+    expect(spaced).toEqual([]);
+  });
 
   // Until voices are chosen there is nothing to record against; from then on every text needs its recording.
   it.skipIf(!config.voices.length)('has a recording in the manifest for every text (npm run tts)', () => {

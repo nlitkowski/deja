@@ -9,7 +9,7 @@
       "pl": "być",
       "def": "je suis, tu es, il est, nous sommes, vous êtes, ils sont",
       "examples": [
-        { "fr": "Je suis étudiante.", "pl": "Jestem studentką." },
+        { "fr": "Je suis polonaise.", "pl": "Jestem Polką." },
         { "fr": "Nous sommes de Cracovie.", "pl": "Jesteśmy z Krakowa." }
       ],
       "tip": {
@@ -26,7 +26,7 @@
       "def": "j'ai, tu as, il a, nous avons, vous avez, ils ont",
       "examples": [
         { "fr": "J'ai vingt ans.", "pl": "Mam dwadzieścia lat." },
-        { "fr": "Ils ont un chat.", "pl": "Oni mają kota." }
+        { "fr": "Ils ont un compte Instagram.", "pl": "Oni mają konto na Instagramie." }
       ],
       "tip": {
         "pl": "wiek wyrażamy przez avoir + ans: j'ai vingt ans (nie « je suis »); je → j' przed samogłoską",
@@ -71,7 +71,7 @@
       "pl": "przymiotniki narodowości (rodzaj i liczba)",
       "def": "féminin : + e (polonaise), -ien → -ienne (italienne) ; pluriel : + s (allemands)",
       "examples": [
-        { "fr": "Marek est polonais, sa femme est française.", "pl": "Marek jest Polakiem, jego żona jest Francuzką." },
+        { "fr": "Marek est polonais, Claire est française.", "pl": "Marek jest Polakiem, Claire jest Francuzką." },
         { "fr": "Elles sont italiennes.", "pl": "One są Włoszkami." }
       ],
       "tip": {
@@ -86,8 +86,8 @@
       "pl": "rodzajniki określone",
       "def": "le + masculin, la + féminin, l' + voyelle ou h muet, les + pluriel",
       "examples": [
-        { "fr": "J'aime la musique et le cinéma.", "pl": "Lubię muzykę i kino." },
-        { "fr": "L'Italie est un beau pays.", "pl": "Włochy to piękny kraj." }
+        { "fr": "Mes loisirs ? La musique et le cinéma.", "pl": "Moje zainteresowania? Muzyka i kino." },
+        { "fr": "L'Italie est un pays.", "pl": "Włochy to kraj." }
       ],
       "tip": {
         "pl": "po polsku nie ma rodzajników, po francusku rzeczownik prawie zawsze go ma; l' przed samogłoską: l'amie",
@@ -102,7 +102,7 @@
       "pl": "jaki, jaka, jakie (pytanie)",
       "def": "quel s'accorde avec le nom : quel âge, quelle nationalité, quels sports, quelles langues",
       "examples": [
-        { "fr": "Quelle est votre adresse ?", "pl": "Jaki jest pana adres?" },
+        { "fr": "Quelle est votre adresse mail ?", "pl": "Jaki jest pana adres e-mail?" },
         { "fr": "Tu as quel âge ?", "pl": "Ile masz lat?" }
       ],
       "tip": {
@@ -117,7 +117,7 @@
       "pl": "w / do + miasto albo kraj",
       "def": "à + ville ; en + pays féminin ; au + pays masculin ; aux + pays pluriel",
       "examples": [
-        { "fr": "J'habite à Lyon, en France.", "pl": "Mieszkam w Lyonie, we Francji." },
+        { "fr": "Je suis à Lyon, en France.", "pl": "Jestem w Lyonie, we Francji." },
         { "fr": "Paul est au Sénégal et Anna est aux Pays-Bas.", "pl": "Paul jest w Senegalu, a Anna w Holandii." }
       ],
       "tip": {
@@ -128,11 +128,11 @@
     },
     { "id": "u01-prenom", "fr": "un prénom", "pl": "imię", "def": "le nom personnel : Anna, Paul, Marc…", "examples": [{ "fr": "Mon prénom est Anna.", "pl": "Mam na imię Anna." }], "tags": ["vocabulaire"] },
     { "id": "u01-nom", "fr": "un nom (de famille)", "pl": "nazwisko", "def": "le nom de toute la famille : Dupont, Kowalski…", "examples": [{ "fr": "Quel est votre nom de famille ?", "pl": "Jak brzmi pana nazwisko?" }], "tags": ["vocabulaire"] },
-    { "id": "u01-adresse", "fr": "une adresse", "pl": "adres", "def": "la rue, le numéro et la ville où on habite", "examples": [{ "fr": "Quelle est ton adresse ?", "pl": "Jaki jest twój adres?" }], "tags": ["vocabulaire"] },
+    { "id": "u01-adresse", "fr": "une adresse", "pl": "adres", "def": "la rue, le numéro et la ville où on habite", "examples": [{ "fr": "Quelle est ton adresse ?", "pl": "Jaki jest twój adres?" }], "tags": ["vocabulaire"], "deprecated": true },
     { "id": "u01-nationalite", "fr": "une nationalité", "pl": "narodowość", "def": "on est polonais, français, italien…", "examples": [{ "fr": "Quelle est votre nationalité ?", "pl": "Jakiej jest pani narodowości?" }], "tags": ["vocabulaire"] },
     { "id": "u01-langue", "fr": "une langue", "pl": "język", "def": "le français, l'anglais, le polonais…", "examples": [{ "fr": "Je parle trois langues.", "pl": "Mówię trzema językami." }], "tags": ["vocabulaire"] },
     { "id": "u01-profession", "fr": "une profession", "pl": "zawód", "def": "le travail de quelqu'un : médecin, professeur…", "examples": [{ "fr": "Quelle est votre profession ?", "pl": "Jaki jest pana zawód?" }], "tags": ["vocabulaire"], "deprecated": true },
-    { "id": "u01-numero", "fr": "un numéro de téléphone", "pl": "numer telefonu", "def": "les chiffres pour appeler quelqu'un", "examples": [{ "fr": "Tu as son numéro de téléphone ?", "pl": "Masz jego numer telefonu?" }], "tags": ["vocabulaire"] },
+    { "id": "u01-numero", "fr": "un numéro de téléphone", "pl": "numer telefonu", "def": "les chiffres pour appeler quelqu'un", "examples": [{ "fr": "Quel est ton numéro de téléphone ?", "pl": "Jaki jest twój numer telefonu?" }], "tags": ["vocabulaire"] },
     { "id": "u01-date-naissance", "fr": "une date de naissance", "pl": "data urodzenia", "def": "le jour, le mois et l'année où on est né", "examples": [{ "fr": "Date de naissance : le 3 mai 1998.", "pl": "Data urodzenia: 3 maja 1998." }], "tags": ["vocabulaire"] },
     { "id": "u01-lecture", "fr": "la lecture", "pl": "czytanie", "def": "l'activité de lire des livres", "examples": [{ "fr": "J'adore la lecture.", "pl": "Uwielbiam czytać." }], "tags": ["vocabulaire"], "deprecated": true },
     { "id": "u01-voyage", "fr": "un voyage", "pl": "podróż", "def": "on part visiter une autre ville ou un autre pays", "examples": [{ "fr": "Mes loisirs ? Les voyages et la musique.", "pl": "Moje zainteresowania? Podróże i muzyka." }], "tags": ["vocabulaire"], "deprecated": true },
@@ -166,17 +166,49 @@
       "fr": "une adresse mail",
       "pl": "adres e-mail",
       "def": "l'adresse pour écrire des messages sur Internet : nom@exemple.fr",
-      "examples": [{ "fr": "Quelle est votre adresse mail ?", "pl": "Jaki jest pana adres e-mail?" }],
+      "examples": [
+        { "fr": "Quelle est votre adresse mail ?", "pl": "Jaki jest pana adres e-mail?" }
+      ],
       "tip": {
         "pl": "@ czytamy « arobase », a kropkę « point »; mówi się też « adresse e-mail »",
         "fr": "@ se dit « arobase » et . se dit « point » ; on dit aussi « adresse e-mail »"
       },
       "confusables": ["u01-adresse"],
       "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u01-pays",
+      "fr": "le pays",
+      "pl": "kraj",
+      "def": "la France, la Pologne, le Japon…",
+      "examples": [
+        { "fr": "Le Sénégal est un pays ; Dakar est une ville.", "pl": "Senegal to kraj; Dakar to miasto." }
+      ],
+      "tip": {
+        "pl": "ta sama forma w liczbie pojedynczej i mnogiej: le pays, les pays; końcowe s nieme",
+        "fr": "même forme au singulier et au pluriel : le pays, les pays ; le s final ne se prononce pas"
+      },
+      "confusables": ["u01-ville"],
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u01-ville",
+      "fr": "la ville",
+      "pl": "miasto",
+      "def": "Paris, Varsovie, Dakar…",
+      "examples": [
+        { "fr": "Varsovie est une ville ; la Pologne est un pays.", "pl": "Warszawa to miasto; Polska to kraj." }
+      ],
+      "tip": {
+        "pl": "rodzaj żeński: la ville; przed nazwą miasta à: à Paris",
+        "fr": "féminin : la ville ; devant le nom d'une ville : à Paris"
+      },
+      "confusables": ["u01-pays"],
+      "tags": ["vocabulaire"]
     }
   ],
   "exercises": [
-    { "id": "u01-etre-1", "type": "gap-fill", "entryIds": ["u01-etre"], "data": { "sentence": "Je ___ étudiante à Varsovie. (être)", "answers": ["suis"], "pl": "Jestem studentką w Warszawie." } },
+    { "id": "u01-etre-1", "type": "gap-fill", "entryIds": ["u01-etre"], "data": { "sentence": "Je ___ à Varsovie, en Pologne. (être)", "answers": ["suis"], "pl": "Jestem w Warszawie, w Polsce." } },
     { "id": "u01-etre-2", "type": "gap-fill", "entryIds": ["u01-etre"], "data": { "sentence": "Vous ___ français ? (être)", "answers": ["êtes"], "pl": "Czy jest pan Francuzem?" } },
     { "id": "u01-etre-3", "type": "gap-fill", "entryIds": ["u01-etre"], "data": { "sentence": "Nous ___ de Cracovie. (être)", "answers": ["sommes"], "pl": "Jesteśmy z Krakowa." } },
     { "id": "u01-etre-4", "type": "gap-fill", "entryIds": ["u01-etre"], "data": { "sentence": "Marco et Giulia ___ italiens. (être)", "answers": ["sont"], "pl": "Marco i Giulia są Włochami." } },
@@ -184,7 +216,7 @@
 
     { "id": "u01-avoir-1", "type": "gap-fill", "entryIds": ["u01-avoir"], "data": { "sentence": "J'___ vingt-deux ans. (avoir)", "answers": ["ai"], "pl": "Mam dwadzieścia dwa lata." } },
     { "id": "u01-avoir-2", "type": "gap-fill", "entryIds": ["u01-avoir"], "data": { "sentence": "Tu ___ quel âge ? (avoir)", "answers": ["as"], "pl": "Ile masz lat?" } },
-    { "id": "u01-avoir-3", "type": "gap-fill", "entryIds": ["u01-avoir"], "data": { "sentence": "Nous ___ un chat et un chien. (avoir)", "answers": ["avons"], "pl": "Mamy kota i psa." } },
+    { "id": "u01-avoir-3", "type": "gap-fill", "entryIds": ["u01-avoir"], "data": { "sentence": "Nous ___ un compte Instagram. (avoir)", "answers": ["avons"], "pl": "Mamy konto na Instagramie." } },
     { "id": "u01-avoir-4", "type": "gap-fill", "entryIds": ["u01-avoir"], "data": { "sentence": "Monsieur et madame Dupont ___ quatre-vingts ans. (avoir)", "answers": ["ont"], "pl": "Państwo Dupont mają osiemdziesiąt lat.", "hint": { "pl": "ils ont, nie ils sont", "fr": "ils ont, pas ils sont" } } },
     { "id": "u01-avoir-5", "type": "gap-fill", "entryIds": ["u01-avoir"], "data": { "sentence": "Vous ___ une adresse mail ? (avoir)", "answers": ["avez"], "pl": "Czy ma pan adres e-mail?" } },
     { "id": "u01-etre-avoir-1", "type": "gap-fill", "entryIds": ["u01-avoir", "u01-etre"], "data": { "sentence": "Elle ___ trente ans.", "answers": ["a"], "pl": "Ona ma trzydzieści lat.", "clue": "(l'âge)" } },
@@ -192,41 +224,39 @@
     { "id": "u01-appeler-1", "type": "gap-fill", "entryIds": ["u01-sappeler"], "data": { "sentence": "Bonjour, je ___ Marta. (s'appeler)", "answers": ["m'appelle"], "pl": "Dzień dobry, nazywam się Marta." } },
     { "id": "u01-appeler-2", "type": "gap-fill", "entryIds": ["u01-sappeler"], "data": { "sentence": "Et toi, comment tu ___ ? (s'appeler)", "answers": ["t'appelles"], "pl": "A ty, jak się nazywasz?" } },
     { "id": "u01-appeler-3", "type": "gap-fill", "entryIds": ["u01-sappeler"], "data": { "sentence": "Nous nous ___ Dupont. (s'appeler)", "answers": ["appelons"], "pl": "Nazywamy się Dupont.", "hint": { "pl": "przy nous jedno l", "fr": "un seul l avec nous" } } },
-    { "id": "u01-appeler-4", "type": "gap-fill", "entryIds": ["u01-sappeler"], "data": { "sentence": "Mes amis ___ Paul et Léa. (s'appeler)", "answers": ["s'appellent"], "pl": "Moi przyjaciele nazywają się Paul i Léa." } },
+    { "id": "u01-appeler-4", "type": "gap-fill", "entryIds": ["u01-sappeler"], "data": { "sentence": "Ils ___ Paul et Léa. (s'appeler)", "answers": ["s'appellent"], "pl": "Nazywają się Paul i Léa." } },
     { "id": "u01-appeler-5", "type": "gap-fill", "entryIds": ["u01-sappeler"], "data": { "sentence": "Vous vous ___ comment ? (s'appeler)", "answers": ["appelez"], "pl": "Jak się pan nazywa?" } },
 
     { "id": "u01-parler-1", "type": "gap-fill", "entryIds": ["u01-parler"], "data": { "sentence": "Je ___ polonais et anglais. (parler)", "answers": ["parle"], "pl": "Mówię po polsku i po angielsku." } },
     { "id": "u01-parler-2", "type": "gap-fill", "entryIds": ["u01-parler"], "data": { "sentence": "Vous ___ français ? (parler)", "answers": ["parlez"], "pl": "Czy mówi pan po francusku?" } },
-    { "id": "u01-parler-3", "type": "gap-fill", "entryIds": ["u01-parler"], "data": { "sentence": "Nous ___ un peu italien. (parler)", "answers": ["parlons"], "pl": "Mówimy trochę po włosku." } },
+    { "id": "u01-parler-3", "type": "gap-fill", "entryIds": ["u01-parler"], "data": { "sentence": "Nous ___ chinois et japonais. (parler)", "answers": ["parlons"], "pl": "Mówimy po chińsku i po japońsku." } },
     { "id": "u01-parler-4", "type": "gap-fill", "entryIds": ["u01-parler"], "data": { "sentence": "Pablo et Lucia ___ espagnol. (parler)", "answers": ["parlent"], "pl": "Pablo i Lucia mówią po hiszpańsku." } },
 
     { "id": "u01-nat-1", "type": "gap-fill", "entryIds": ["u01-nationalites"], "data": { "sentence": "Marek est polonais, Anna est ___ aussi.", "answers": ["polonaise"], "pl": "Marek jest Polakiem, Anna też jest Polką." } },
-    { "id": "u01-nat-2", "type": "gap-fill", "entryIds": ["u01-nationalites"], "data": { "sentence": "Giulia est ___, elle habite à Rome. (italien)", "answers": ["italienne"], "pl": "Giulia jest Włoszką, mieszka w Rzymie.", "hint": { "pl": "-ien → -ienne", "fr": "-ien → -ienne" } } },
+    { "id": "u01-nat-2", "type": "gap-fill", "entryIds": ["u01-nationalites"], "data": { "sentence": "Giulia est ___ ; elle est de Rome. (italien)", "answers": ["italienne"], "pl": "Giulia jest Włoszką; jest z Rzymu.", "hint": { "pl": "-ien → -ienne", "fr": "-ien → -ienne" } } },
     { "id": "u01-nat-3", "type": "gap-fill", "entryIds": ["u01-nationalites"], "data": { "sentence": "Paul et Marc sont ___. (canadien)", "answers": ["canadiens"], "pl": "Paul i Marc są Kanadyjczykami." } },
     { "id": "u01-nat-4", "type": "gap-fill", "entryIds": ["u01-nationalites"], "data": { "sentence": "Anna et Lisa sont ___. (allemand)", "answers": ["allemandes"], "pl": "Anna i Lisa są Niemkami." } },
     { "id": "u01-nat-5", "type": "gap-fill", "entryIds": ["u01-nationalites"], "data": { "sentence": "Sophie est ___. (belge)", "answers": ["belge"], "pl": "Sophie jest Belgijką.", "hint": { "pl": "zakończenie -e: bez zmian", "fr": "finale en -e : pas de changement" } } },
 
-    { "id": "u01-def-1", "type": "gap-fill", "entryIds": ["u01-articles-definis"], "data": { "sentence": "J'aime ___ musique et le sport.", "answers": ["la"], "pl": "Lubię muzykę i sport." } },
-    { "id": "u01-def-2", "type": "gap-fill", "entryIds": ["u01-articles-definis"], "data": { "sentence": "___Espagne est un beau pays.", "answers": ["L'"], "pl": "Hiszpania to piękny kraj.", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
-    { "id": "u01-def-3", "type": "gap-fill", "entryIds": ["u01-articles-definis"], "data": { "sentence": "___ États-Unis sont très grands.", "answers": ["les"], "pl": "Stany Zjednoczone są bardzo duże." } },
-    { "id": "u01-def-4", "type": "gap-fill", "entryIds": ["u01-articles-definis"], "data": { "sentence": "Tu aimes ___ cinéma ?", "answers": ["le"], "pl": "Lubisz kino?" } },
+    { "id": "u01-def-1", "type": "gap-fill", "entryIds": ["u01-articles-definis"], "data": { "sentence": "Mes loisirs ? ___ musique et le sport.", "answers": ["La"], "pl": "Moje zainteresowania? Muzyka i sport." } },
+    { "id": "u01-def-2", "type": "gap-fill", "entryIds": ["u01-articles-definis"], "data": { "sentence": "___Espagne, c'est un pays ; Madrid, c'est une ville.", "answers": ["L'"], "pl": "Hiszpania to kraj; Madryt to miasto.", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
+    { "id": "u01-def-3", "type": "gap-fill", "entryIds": ["u01-articles-definis"], "data": { "sentence": "___ Pays-Bas, c'est un pays ; Amsterdam, c'est une ville.", "answers": ["Les"], "pl": "Holandia to kraj; Amsterdam to miasto.", "hint": { "pl": "kraj w liczbie mnogiej", "fr": "un pays au pluriel" } } },
+    { "id": "u01-def-4", "type": "gap-fill", "entryIds": ["u01-articles-definis"], "data": { "sentence": "Mes loisirs ? ___ cinéma et la musique.", "answers": ["Le"], "pl": "Moje zainteresowania? Kino i muzyka." } },
     { "id": "u01-def-5", "type": "gap-fill", "entryIds": ["u01-articles-definis"], "data": { "sentence": "Quelle est ___adresse de Marie ?", "answers": ["l'"], "pl": "Jaki jest adres Marie?" } },
 
     { "id": "u01-quel-1", "type": "gap-fill", "entryIds": ["u01-quel"], "data": { "sentence": "___ est votre nationalité ?", "answers": ["quelle"], "pl": "Jakiej jest pani narodowości?" } },
     { "id": "u01-quel-2", "type": "gap-fill", "entryIds": ["u01-quel"], "data": { "sentence": "Tu as ___ âge ?", "answers": ["quel"], "pl": "Ile masz lat?" } },
     { "id": "u01-quel-3", "type": "gap-fill", "entryIds": ["u01-quel"], "data": { "sentence": "Vous parlez ___ langues ?", "answers": ["quelles"], "pl": "Jakimi językami pan mówi?" } },
-    { "id": "u01-quel-4", "type": "gap-fill", "entryIds": ["u01-quel"], "data": { "sentence": "___ sports tu aimes ?", "answers": ["quels"], "pl": "Jakie sporty lubisz?" } },
+    { "id": "u01-quel-4", "type": "gap-fill", "entryIds": ["u01-quel"], "data": { "sentence": "___ sont les loisirs de Paul ? – Le sport et l'art.", "answers": ["Quels"], "pl": "Jakie są zainteresowania Paula? – Sport i sztuka." } },
     { "id": "u01-quel-5", "type": "gap-fill", "entryIds": ["u01-quel"], "data": { "sentence": "___ est ton prénom ?", "answers": ["quel"], "pl": "Jak masz na imię?" } },
 
     { "id": "u01-prenom-1", "type": "gap-fill", "entryIds": ["u01-prenom"], "data": { "sentence": "Mon ___ est Anna et mon nom est Kowalska.", "answers": ["prénom"], "pl": "Mam na imię Anna, a na nazwisko Kowalska.", "clue": "(Anna, Paul, Marc…)" } },
     { "id": "u01-prenom-2", "type": "translate-pl-fr", "entryIds": ["u01-prenom"], "data": { "pl": "imię", "answers": ["un prénom", "le prénom"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u01-nom-1", "type": "gap-fill", "entryIds": ["u01-nom"], "data": { "sentence": "Quel est votre ___ de famille ?", "answers": ["nom"], "pl": "Jak brzmi pana nazwisko?", "clue": "(Dupont, Kowalski…)" } },
     { "id": "u01-nom-2", "type": "translate-pl-fr", "entryIds": ["u01-nom"], "data": { "pl": "nazwisko", "answers": ["un nom", "le nom", "un nom de famille", "le nom de famille"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u01-adresse-1", "type": "gap-fill", "entryIds": ["u01-adresse"], "data": { "sentence": "Mon ___ : 12, rue de la Paix, à Lyon.", "answers": ["adresse"], "pl": "Mój adres: 12, rue de la Paix, Lyon.", "clue": "(la rue, le numéro, la ville)" } },
-    { "id": "u01-adresse-2", "type": "translate-pl-fr", "entryIds": ["u01-adresse"], "data": { "pl": "adres", "answers": ["une adresse", "l'adresse"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u01-nationalite-1", "type": "gap-fill", "entryIds": ["u01-nationalite"], "data": { "sentence": "Quelle est votre ___ ? – Je suis polonaise.", "answers": ["nationalité"], "pl": "Jakiej jest pani narodowości? – Jestem Polką." } },
     { "id": "u01-nationalite-2", "type": "translate-pl-fr", "entryIds": ["u01-nationalite"], "data": { "pl": "narodowość", "answers": ["une nationalité", "la nationalité"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u01-langue-1", "type": "gap-fill", "entryIds": ["u01-langue"], "data": { "sentence": "Le polonais est une ___ difficile.", "answers": ["langue"], "pl": "Polski to trudny język.", "clue": "(on la parle)" } },
+    { "id": "u01-langue-1", "type": "gap-fill", "entryIds": ["u01-langue"], "data": { "sentence": "Je parle trois ___ : polonais, anglais et français.", "answers": ["langues"], "pl": "Mówię trzema językami: polskim, angielskim i francuskim.", "clue": "(on les parle)" } },
     { "id": "u01-langue-2", "type": "translate-pl-fr", "entryIds": ["u01-langue"], "data": { "pl": "język (mowa)", "answers": ["une langue", "la langue"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u01-numero-1", "type": "gap-fill", "entryIds": ["u01-numero"], "data": { "sentence": "Mon ___ de téléphone, c'est le 06 12 34 56 78.", "answers": ["numéro"], "pl": "Mój numer telefonu to 06 12 34 56 78.", "clue": "(des chiffres pour appeler)" } },
     { "id": "u01-numero-2", "type": "translate-pl-fr", "entryIds": ["u01-numero"], "data": { "pl": "numer telefonu", "answers": ["un numéro de téléphone", "le numéro de téléphone"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
@@ -234,35 +264,40 @@
     { "id": "u01-date-naissance-2", "type": "translate-pl-fr", "entryIds": ["u01-date-naissance"], "data": { "pl": "data urodzenia", "answers": ["une date de naissance", "la date de naissance"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
 
     { "id": "u01-etre-6", "type": "translate-pl-fr", "entryIds": ["u01-etre"], "data": { "pl": "oni są z Paryża", "answers": ["ils sont de Paris"], "hint": { "pl": "ils + être, nie avoir", "fr": "ils + être, pas avoir" } } },
-    { "id": "u01-avoir-6", "type": "translate-pl-fr", "entryIds": ["u01-avoir"], "data": { "pl": "mam dwadzieścia lat", "answers": ["j'ai vingt ans", "j'ai 20 ans"], "hint": { "pl": "wiek: avoir + ans", "fr": "l'âge : avoir + ans" } } },
+    { "id": "u01-avoir-6", "type": "translate-pl-fr", "entryIds": ["u01-avoir"], "data": { "pl": "mam dwadzieścia lat", "answers": ["j'ai vingt ans"], "hint": { "pl": "wiek: avoir + ans", "fr": "l'âge : avoir + ans" } } },
     { "id": "u01-appeler-6", "type": "translate-pl-fr", "entryIds": ["u01-sappeler"], "data": { "pl": "nazywam się Marta", "answers": ["je m'appelle Marta"] } },
     { "id": "u01-parler-5", "type": "translate-pl-fr", "entryIds": ["u01-parler"], "data": { "pl": "mówimy po francusku", "answers": ["nous parlons français", "on parle français", "nous parlons le français", "on parle le français"] } },
     { "id": "u01-nat-6", "type": "translate-pl-fr", "entryIds": ["u01-nationalites"], "data": { "pl": "ona jest Włoszką", "answers": ["elle est italienne"], "hint": { "pl": "przymiotnik narodowości w r. żeńskim", "fr": "l'adjectif de nationalité au féminin" } } },
-    { "id": "u01-def-6", "type": "translate-pl-fr", "entryIds": ["u01-articles-definis"], "data": { "pl": "lubię muzykę", "answers": ["j'aime la musique"], "hint": { "pl": "z rodzajnikiem określonym", "fr": "avec l'article défini" } } },
+    { "id": "u01-def-6", "type": "translate-pl-fr", "entryIds": ["u01-articles-definis"], "data": { "pl": "muzyka i sport (moje zainteresowania)", "answers": ["la musique et le sport"], "hint": { "pl": "z rodzajnikiem określonym", "fr": "avec l'article défini" } } },
     { "id": "u01-quel-6", "type": "translate-pl-fr", "entryIds": ["u01-quel"], "data": { "pl": "ile masz lat?", "answers": ["tu as quel âge", "quel âge as-tu", "quel âge tu as", "quel âge est-ce que tu as"], "hint": { "pl": "quel + âge, do kolegi (tu)", "fr": "quel + âge, à un ami (tu)" } } },
 
-    { "id": "u01-prenom-3", "type": "gap-fill", "entryIds": ["u01-prenom"], "data": { "sentence": "Claire, c'est son ___ et Dupont, c'est son nom.", "answers": ["prénom"], "pl": "Claire to jej imię, a Dupont to jej nazwisko." } },
+    { "id": "u01-prenom-3", "type": "gap-fill", "entryIds": ["u01-prenom"], "data": { "sentence": "Claire, c'est le ___ et Dupont, c'est le nom.", "answers": ["prénom"], "pl": "Claire to imię, a Dupont to nazwisko." } },
     { "id": "u01-nom-3", "type": "gap-fill", "entryIds": ["u01-nom"], "data": { "sentence": "Paul est mon prénom et Martin est mon ___.", "answers": ["nom"], "pl": "Paul to moje imię, a Martin to moje nazwisko.", "clue": "(le nom de toute la famille)" } },
-    { "id": "u01-adresse-3", "type": "gap-fill", "entryIds": ["u01-adresse"], "data": { "sentence": "Votre ___, s'il vous plaît ? – 8, rue Victor-Hugo, à Lille.", "answers": ["adresse"], "pl": "Pana adres, proszę? – rue Victor-Hugo 8, Lille.", "clue": "(la rue, le numéro et la ville)" } },
-    { "id": "u01-nationalite-3", "type": "gap-fill", "entryIds": ["u01-nationalite"], "data": { "sentence": "Sur le formulaire : nom, prénom, ___ et adresse.", "answers": ["nationalité"], "pl": "Na formularzu: nazwisko, imię, narodowość i adres.", "clue": "(polonaise, française…)" } },
+    { "id": "u01-nationalite-3", "type": "gap-fill", "entryIds": ["u01-nationalite"], "data": { "sentence": "Nom, prénom, ___, date de naissance.", "answers": ["nationalité"], "pl": "Nazwisko, imię, narodowość, data urodzenia.", "clue": "(polonaise, française…)" } },
     { "id": "u01-langue-3", "type": "gap-fill", "entryIds": ["u01-langue"], "data": { "sentence": "Tu parles quelles ___ ? – Polonais et anglais.", "answers": ["langues"], "pl": "Jakimi językami mówisz? – Polskim i angielskim." } },
     { "id": "u01-numero-3", "type": "gap-fill", "entryIds": ["u01-numero"], "data": { "sentence": "Quel est ton ___ de téléphone ? – C'est le 07 21 43 18 30.", "answers": ["numéro"], "pl": "Jaki jest twój numer telefonu? – To 07 21 43 18 30." } },
     { "id": "u01-date-naissance-3", "type": "gap-fill", "entryIds": ["u01-date-naissance"], "data": { "sentence": "Votre ___ de naissance, s'il vous plaît ? – Le 12 juin 2001.", "answers": ["date"], "pl": "Pana data urodzenia, proszę? – 12 czerwca 2001." } },
-    { "id": "u01-a-au-en-aux-1", "type": "gap-fill", "entryIds": ["u01-a-au-en-aux"], "data": { "sentence": "J'habite ___ Varsovie, en Pologne.", "answers": ["à"], "pl": "Mieszkam w Warszawie, w Polsce.", "clue": "(Varsovie est une ville)" } },
-    { "id": "u01-a-au-en-aux-2", "type": "gap-fill", "entryIds": ["u01-a-au-en-aux"], "data": { "sentence": "Mon amie Sofia est ___ Colombie.", "answers": ["en"], "pl": "Moja przyjaciółka Sofia jest w Kolumbii.", "clue": "(la Colombie)" } },
+    { "id": "u01-a-au-en-aux-1", "type": "gap-fill", "entryIds": ["u01-a-au-en-aux"], "data": { "sentence": "Je suis ___ Varsovie, en Pologne.", "answers": ["à"], "pl": "Jestem w Warszawie, w Polsce.", "clue": "(Varsovie est une ville)" } },
+    { "id": "u01-a-au-en-aux-2", "type": "gap-fill", "entryIds": ["u01-a-au-en-aux"], "data": { "sentence": "Sofia est ___ Colombie, à Bogota.", "answers": ["en"], "pl": "Sofia jest w Kolumbii, w Bogocie.", "clue": "(la Colombie)" } },
     { "id": "u01-a-au-en-aux-3", "type": "gap-fill", "entryIds": ["u01-a-au-en-aux"], "data": { "sentence": "Paul est ___ Sénégal, à Dakar.", "answers": ["au"], "pl": "Paul jest w Senegalu, w Dakarze.", "clue": "(le Sénégal)" } },
     { "id": "u01-a-au-en-aux-4", "type": "gap-fill", "entryIds": ["u01-a-au-en-aux"], "data": { "sentence": "Nous sommes ___ Pays-Bas, à Amsterdam.", "answers": ["aux"], "pl": "Jesteśmy w Holandii, w Amsterdamie.", "clue": "(les Pays-Bas)" } },
-    { "id": "u01-a-au-en-aux-5", "type": "gap-fill", "entryIds": ["u01-a-au-en-aux"], "data": { "sentence": "Elle est mexicaine, elle habite ___ Mexique.", "answers": ["au"], "pl": "Ona jest Meksykanką, mieszka w Meksyku.", "hint": { "pl": "le Mexique jest rodzaju męskiego", "fr": "le Mexique est masculin" } } },
-    { "id": "u01-a-au-en-aux-6", "type": "translate-pl-fr", "entryIds": ["u01-a-au-en-aux"], "data": { "pl": "mieszkam w Tunezji", "answers": ["j'habite en Tunisie"], "hint": { "pl": "la Tunisie: kraj żeński", "fr": "la Tunisie : pays féminin" } } },
+    { "id": "u01-a-au-en-aux-5", "type": "gap-fill", "entryIds": ["u01-a-au-en-aux"], "data": { "sentence": "Elle est mexicaine ; elle est ___ Mexique, à Mexico.", "answers": ["au"], "pl": "Ona jest Meksykanką; jest w Meksyku, w mieście Meksyk.", "hint": { "pl": "le Mexique jest rodzaju męskiego", "fr": "le Mexique est masculin" } } },
+    { "id": "u01-a-au-en-aux-6", "type": "translate-pl-fr", "entryIds": ["u01-a-au-en-aux"], "data": { "pl": "jestem w Tunezji", "answers": ["je suis en Tunisie"], "hint": { "pl": "la Tunisie: kraj żeński", "fr": "la Tunisie : pays féminin" } } },
     { "id": "u01-lieu-naissance-1", "type": "gap-fill", "entryIds": ["u01-lieu-naissance"], "data": { "sentence": "Date de naissance : le 4 avril 1995. ___ de naissance : Gdańsk.", "answers": ["Lieu"], "pl": "Data urodzenia: 4 kwietnia 1995. Miejsce urodzenia: Gdańsk.", "clue": "(la ville où on est né)" } },
     { "id": "u01-lieu-naissance-2", "type": "gap-fill", "entryIds": ["u01-lieu-naissance"], "data": { "sentence": "Votre lieu de ___, s'il vous plaît ? – Lyon, en France.", "answers": ["naissance"], "pl": "Pana miejsce urodzenia, proszę? – Lyon, we Francji." } },
     { "id": "u01-lieu-naissance-3", "type": "translate-pl-fr", "entryIds": ["u01-lieu-naissance"], "data": { "pl": "miejsce urodzenia", "answers": ["le lieu de naissance", "un lieu de naissance"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u01-art-1", "type": "gap-fill", "entryIds": ["u01-art"], "data": { "sentence": "Mes loisirs ? Le sport et l'___.", "answers": ["art"], "pl": "Moje zainteresowania? Sport i sztuka.", "clue": "(la peinture, la sculpture…)" } },
-    { "id": "u01-art-2", "type": "gap-fill", "entryIds": ["u01-art"], "data": { "sentence": "Tu aimes ___art ?", "answers": ["l'"], "pl": "Lubisz sztukę?", "clue": "(article défini)" } },
+    { "id": "u01-art-1", "type": "gap-fill", "entryIds": ["u01-art"], "data": { "sentence": "Mes loisirs ? Le cinéma et l'___.", "answers": ["art"], "pl": "Moje zainteresowania? Kino i sztuka.", "clue": "(la peinture, la sculpture…)" } },
+    { "id": "u01-art-2", "type": "gap-fill", "entryIds": ["u01-art"], "data": { "sentence": "Mes loisirs ? Le sport et ___art.", "answers": ["l'"], "pl": "Moje zainteresowania? Sport i sztuka.", "clue": "(article défini)" } },
     { "id": "u01-art-3", "type": "translate-pl-fr", "entryIds": ["u01-art"], "data": { "pl": "sztuka", "answers": ["l'art"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u01-adresse-mail-1", "type": "gap-fill", "entryIds": ["u01-adresse-mail"], "data": { "sentence": "Mon adresse ___ ? C'est anna.nowak@exemple.fr.", "answers": ["mail", "e-mail", "email"], "pl": "Mój adres e-mail? To anna.nowak@exemple.fr.", "clue": "(pour écrire sur Internet)" } },
     { "id": "u01-adresse-mail-2", "type": "gap-fill", "entryIds": ["u01-adresse-mail"], "data": { "sentence": "Dans une adresse mail, @ se dit « ___ ».", "answers": ["arobase"], "pl": "W adresie e-mail @ czyta się « arobase »." } },
     { "id": "u01-adresse-mail-3", "type": "translate-pl-fr", "entryIds": ["u01-adresse-mail"], "data": { "pl": "adres e-mail", "answers": ["une adresse mail", "l'adresse mail", "une adresse e-mail", "l'adresse e-mail", "une adresse email", "l'adresse email"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u01-pays-1", "type": "gap-fill", "entryIds": ["u01-pays"], "data": { "sentence": "Le Sénégal est un ___ ; Dakar est une ville.", "answers": ["pays"], "pl": "Senegal to kraj; Dakar to miasto.", "clue": "(la France, la Chine…)" } },
+    { "id": "u01-pays-2", "type": "gap-fill", "entryIds": ["u01-pays"], "data": { "sentence": "Lieu de naissance – ville : Lyon ; ___ : France.", "answers": ["pays"], "pl": "Miejsce urodzenia – miasto: Lyon; kraj: Francja." } },
+    { "id": "u01-pays-3", "type": "translate-pl-fr", "entryIds": ["u01-pays"], "data": { "pl": "kraj", "answers": ["un pays", "le pays"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u01-ville-1", "type": "gap-fill", "entryIds": ["u01-ville"], "data": { "sentence": "Tunis est une ___ ; la Tunisie est un pays.", "answers": ["ville"], "pl": "Tunis to miasto; Tunezja to kraj.", "clue": "(Paris, Varsovie…)" } },
+    { "id": "u01-ville-2", "type": "gap-fill", "entryIds": ["u01-ville"], "data": { "sentence": "Pays : Pologne ; ___ : Gdańsk.", "answers": ["ville"], "pl": "Kraj: Polska; miasto: Gdańsk." } },
+    { "id": "u01-ville-3", "type": "translate-pl-fr", "entryIds": ["u01-ville"], "data": { "pl": "miasto", "answers": ["une ville", "la ville"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "mp-le-les", "type": "paires-minimales", "entryIds": ["u01-articles-definis"], "data": { "pair": ["Je prends le livre.", "Je prends les livres."] } }
   ],
   "boss": {
@@ -272,7 +307,7 @@
     "secondsPerQuestion": 12
   },
   "retiredExercises": {
-    "gap-fill": ["u01-profession-1", "u01-profession-3", "u01-voyage-1", "u01-voyage-3", "u01-lecture-1", "u01-lecture-3"],
-    "translate-pl-fr": ["u01-profession-2", "u01-voyage-2", "u01-lecture-2"]
+    "gap-fill": ["u01-adresse-1", "u01-adresse-3", "u01-profession-1", "u01-profession-3", "u01-voyage-1", "u01-voyage-3", "u01-lecture-1", "u01-lecture-3"],
+    "translate-pl-fr": ["u01-adresse-2", "u01-profession-2", "u01-voyage-2", "u01-lecture-2"]
   }
 }

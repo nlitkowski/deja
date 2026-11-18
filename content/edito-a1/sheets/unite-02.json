@@ -25,23 +25,23 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**un, une, des**: coś nowego, jedno z wielu, coś nieokreślonego: j'ai **un** frère, il y a **un** cinéma.\n**le, la, l', les**: coś znanego lub jedynego: **le** cinéma est grand, **la** mère de Léa.\nPo czasownikach upodobań (aimer, adorer, détester) zawsze **le, la, l', les**: j'aime **les** chats.",
-            "fr": "**un, une, des** : une chose nouvelle, une parmi d'autres, pas précise : j'ai **un** frère, il y a **un** cinéma.\n**le, la, l', les** : une chose connue ou unique : **le** cinéma est grand, **la** mère de Léa.\nAprès les verbes de goût (aimer, adorer, détester), toujours **le, la, l', les** : j'aime **les** chats."
+            "pl": "**un, une, des**: coś nowego, jedno z wielu, coś nieokreślonego: j'ai **un** frère, il y a **un** festival.\n**le, la, l', les**: coś znanego lub jedynego: **le** festival est en juin, **la** mère de Léa.\nPo czasownikach upodobań (aimer, adorer, détester) zawsze **le, la, l', les**: j'aime **le** sport.",
+            "fr": "**un, une, des** : une chose nouvelle, une parmi d'autres, pas précise : j'ai **un** frère, il y a **un** festival.\n**le, la, l', les** : une chose connue ou unique : **le** festival est en juin, **la** mère de Léa.\nAprès les verbes de goût (aimer, adorer, détester), toujours **le, la, l', les** : j'aime **le** sport."
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "Dans ma rue, il y a **un** restaurant. **Le** restaurant est très bon.", "pl": "Na mojej ulicy jest restauracja. Ta restauracja jest bardzo dobra." },
+            { "fr": "Dans ma rue, il y a **un** restaurant. **Le** restaurant est italien.", "pl": "Na mojej ulicy jest restauracja. Ta restauracja jest włoska." },
             { "fr": "J'ai **des** cousins à Lille.", "pl": "Mam kuzynów w Lille." },
-            { "fr": "Elle adore **le** cinéma, mais elle déteste **les** films d'horreur.", "pl": "Ona uwielbia kino, ale nie znosi horrorów." }
+            { "fr": "Elle adore **le** cinéma, mais elle déteste **le** ski.", "pl": "Ona uwielbia kino, ale nie znosi narciarstwa." }
           ]
         },
         {
           "type": "text",
           "text": {
-            "pl": "Zwrot « je n'ai pas **de** frère » na razie zapamiętaj w całości. Przeczenie **pas de** poznasz w unité 3.",
-            "fr": "Retiens « je n'ai pas **de** frère » comme une expression. Tu vas étudier **pas de** dans l'unité 3."
+            "pl": "Zwrot « je n'ai pas **de** frères et sœurs » na razie zapamiętaj w całości. Przeczenie **pas de** poznasz w unité 3.",
+            "fr": "Retiens « je n'ai pas **de** frères et sœurs » comme une expression. Tu vas étudier **pas de** dans l'unité 3."
           }
         },
         {
@@ -72,25 +72,25 @@
         {
           "type": "rule",
           "text": {
-            "pl": "Końcówki: **-e, -es, -e, -ons, -ez, -ent**. Tak samo: habiter, travailler, écouter, regarder.\nPo czasownikach upodobań: rzeczownik z le/la/les albo bezokolicznik: j'adore **danser**.",
-            "fr": "Les finales : **-e, -es, -e, -ons, -ez, -ent**. Même modèle : habiter, travailler, écouter, regarder.\nAprès les verbes de goût : un nom avec le / la / les ou un infinitif : j'adore **danser**."
+            "pl": "Końcówki: **-e, -es, -e, -ons, -ez, -ent**. Tak samo: habiter, danser, marcher, nager, skier.\nPo czasownikach upodobań: rzeczownik z le/la/les albo bezokolicznik: j'adore **danser**.",
+            "fr": "Les finales : **-e, -es, -e, -ons, -ez, -ent**. Même modèle : habiter, danser, marcher, nager, skier.\nAprès les verbes de goût : un nom avec le / la / les ou un infinitif : j'adore **danser**."
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "J'**adore** la musique classique.", "pl": "Uwielbiam muzykę klasyczną." },
-            { "fr": "Tu **aimes** le football ?", "pl": "Lubisz piłkę nożną?" },
+            { "fr": "J'**adore** la musique.", "pl": "Uwielbiam muzykę." },
+            { "fr": "Tu **aimes** le sport ?", "pl": "Lubisz sport?" },
             { "fr": "Nous **aimons** la mer.", "pl": "Lubimy morze." },
             { "fr": "Mes parents **détestent** la ville.", "pl": "Moi rodzice nie znoszą miasta." },
-            { "fr": "Je **n'aime pas** cuisiner.", "pl": "Nie lubię gotować." }
+            { "fr": "Je **n'aime pas** nager.", "pl": "Nie lubię pływać." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Końcówki **-e, -es, -ent** są nieme: il aime = ils aiment w wymowie. Nie czytaj « -ent »!\nPrzed samogłoską jest wiązanie: ils_aiment [z], nous_adorons [z].",
-            "fr": "Les finales **-e, -es, -ent** ne se prononcent pas : il aime et ils aiment ont le même son.\nDevant une voyelle, on fait la liaison : ils_aiment [z], nous_adorons [z]."
+            "pl": "Końcówki **-e, -es, -ent** są nieme: il aime = ils aiment w wymowie. Nie czytaj « -ent »!\nPrzed samogłoską jest wiązanie: ils_aiment [z], nous_adorons [z].\n**nager**: nous nag**e**ons (e zostaje przed -ons).",
+            "fr": "Les finales **-e, -es, -ent** ne se prononcent pas : il aime et ils aiment ont le même son.\nDevant une voyelle, on fait la liaison : ils_aiment [z], nous_adorons [z].\n**nager** : nous nag**e**ons (on garde le e devant -ons)."
           }
         }
       ]
@@ -114,23 +114,23 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**h** jest nieme, więc **j'**habite i liaison: nous_habitons, ils_habitent.\nPo habiter:\n**à** + miasto: à Lyon\n**en / au / aux** + kraj: en Pologne, au Canada\n**dans** + mieszkanie, dom, dzielnica, ulica: dans un appartement, dans le centre\n**en** ville",
-            "fr": "Le **h** est muet : **j'**habite, nous_habitons, ils_habitent.\nAprès habiter :\n**à** + ville : à Lyon\n**en / au / aux** + pays : en Pologne, au Canada\n**dans** + logement, quartier, rue : dans un appartement, dans le centre\n**en** ville"
+            "pl": "**h** jest nieme, więc **j'**habite i liaison: nous_habitons, ils_habitent.\nPo habiter:\n**à** + miasto: à Lyon\n**en / au / aux** + kraj: en Pologne, au Canada\n**dans** + mieszkanie, dzielnica, ulica: dans un appartement, dans un quartier\n**en** ville",
+            "fr": "Le **h** est muet : **j'**habite, nous_habitons, ils_habitent.\nAprès habiter :\n**à** + ville : à Lyon\n**en / au / aux** + pays : en Pologne, au Canada\n**dans** + logement, quartier, rue : dans un appartement, dans un quartier\n**en** ville"
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "J'**habite** à Poznań, dans un petit appartement.", "pl": "Mieszkam w Poznaniu, w małym mieszkaniu." },
+            { "fr": "J'**habite** à Poznań, dans un appartement.", "pl": "Mieszkam w Poznaniu, w mieszkaniu." },
             { "fr": "Mes grands-parents **habitent** à Nice.", "pl": "Moi dziadkowie mieszkają w Nicei." },
-            { "fr": "Vous **habitez** où ? – Dans le centre, rue Victor Hugo.", "pl": "Gdzie pan / pani mieszka? – W centrum, przy ulicy Victora Hugo." }
+            { "fr": "Vous **habitez** où ? – Rue Victor Hugo.", "pl": "Gdzie pan / pani mieszka? – Przy ulicy Victora Hugo." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Polskie « w mieście » to **en ville**, a « nad morzem » to **au bord de la mer**.",
-            "fr": "On dit **en ville** et **au bord de la mer**."
+            "pl": "Polskie « w mieście » to **en ville**. Przy adresie zwykle bez przyimka: j'habite **rue** Victor Hugo.",
+            "fr": "On dit **en ville**. Avec une adresse, souvent sans préposition : j'habite **rue** Victor Hugo."
           }
         }
       ]
@@ -161,10 +161,10 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "Je te présente **ma** sœur et **mon** frère.", "pl": "Przedstawiam ci moją siostrę i mojego brata." },
-            { "fr": "Julie habite avec **son** copain.", "pl": "Julie mieszka ze swoim chłopakiem." },
+            { "fr": "Voici **ma** sœur et **mon** frère.", "pl": "Oto moja siostra i mój brat." },
+            { "fr": "Julie habite avec **son** petit ami.", "pl": "Julie mieszka ze swoim chłopakiem." },
             { "fr": "Paul adore **sa** grand-mère.", "pl": "Paul uwielbia swoją babcię." },
-            { "fr": "Les enfants jouent avec **leurs** amis.", "pl": "Dzieci bawią się ze swoimi przyjaciółmi." }
+            { "fr": "Les enfants dansent avec **leurs** amis.", "pl": "Dzieci tańczą ze swoimi przyjaciółmi." }
           ]
         },
         {
@@ -204,7 +204,7 @@
           "items": [
             { "fr": "Ma mère est **informaticienne**.", "pl": "Moja mama jest informatyczką." },
             { "fr": "Mon oncle est **acteur** à Paris.", "pl": "Mój wujek jest aktorem w Paryżu." },
-            { "fr": "Tu travailles dans quoi ? – Je suis **coiffeuse**.", "pl": "Czym się zajmujesz? – Jestem fryzjerką." }
+            { "fr": "Tu es étudiante ? – Non, je suis **coiffeuse**.", "pl": "Jesteś studentką? – Nie, jestem fryzjerką." }
           ]
         },
         {
@@ -218,100 +218,42 @@
     },
     {
       "kind": "vocabulary",
-      "title": "La famille",
-      "blocks": [
-        {
-          "type": "words",
-          "title": { "pl": "Członkowie rodziny", "fr": "Les membres de la famille" },
-          "items": [
-            { "fr": "les parents", "pl": "rodzice", "def": "le père et la mère" },
-            { "fr": "le père / la mère", "pl": "ojciec / matka" },
-            { "fr": "le frère / la sœur", "pl": "brat / siostra" },
-            { "fr": "le fils / la fille", "pl": "syn / córka", "def": "l'enfant d'un père ou d'une mère" },
-            { "fr": "les enfants", "pl": "dzieci" },
-            { "fr": "le grand-père / la grand-mère", "pl": "dziadek / babcia", "def": "le père ou la mère d'un parent" },
-            { "fr": "les grands-parents", "pl": "dziadkowie" },
-            { "fr": "le petit-fils / la petite-fille", "pl": "wnuk / wnuczka", "def": "l'enfant d'un fils ou d'une fille" },
-            { "fr": "les petits-enfants", "pl": "wnuki", "def": "les enfants de mes enfants" },
-            { "fr": "l'oncle / la tante", "pl": "wujek / ciocia", "def": "le frère ou la sœur d'un parent" },
-            { "fr": "le neveu / la nièce", "pl": "bratanek, siostrzeniec / bratanica, siostrzenica", "def": "l'enfant de mon frère ou de ma sœur" },
-            { "fr": "le cousin / la cousine", "pl": "kuzyn / kuzynka", "def": "l'enfant d'un oncle ou d'une tante" },
-            { "fr": "le mari / la femme", "pl": "mąż / żona", "def": "la personne avec qui on est marié" },
-            { "fr": "le petit ami / la petite amie", "pl": "chłopak / dziewczyna (partner)", "def": "la personne avec qui on sort, sans être marié" }
-          ]
-        },
-        {
-          "type": "words",
-          "title": { "pl": "Stan cywilny", "fr": "La situation familiale" },
-          "items": [
-            { "fr": "célibataire", "pl": "wolny / wolna, stanu wolnego", "def": "pas marié" },
-            { "fr": "marié / mariée", "pl": "żonaty / zamężna" },
-            { "fr": "avoir des enfants", "pl": "mieć dzieci" },
-            { "fr": "fils unique / fille unique", "pl": "jedynak / jedynaczka", "def": "il n'a pas de frère ni de sœur" }
-          ]
-        },
-        {
-          "type": "warning",
-          "text": {
-            "pl": "**la femme** = kobieta albo żona, **la fille** = dziewczyna albo córka. Znaczenie wynika z kontekstu: **ma** femme = moja żona.",
-            "fr": "**la femme** = une femme ou l'épouse, **la fille** = une jeune fille ou l'enfant. Avec un possessif : **ma** femme = mon épouse."
-          }
-        }
-      ]
-    },
-    {
-      "kind": "vocabulary",
-      "title": "Les professions",
-      "blocks": [
-        {
-          "type": "words",
-          "items": [
-            { "fr": "un acteur / une actrice", "pl": "aktor / aktorka", "def": "il joue dans des films" },
-            { "fr": "un coiffeur / une coiffeuse", "pl": "fryzjer / fryzjerka", "def": "il coupe les cheveux" },
-            { "fr": "un / une fleuriste", "pl": "kwiaciarz / kwiaciarka", "def": "il vend des fleurs" },
-            { "fr": "un informaticien / une informaticienne", "pl": "informatyk / informatyczka", "def": "il travaille avec des ordinateurs" },
-            { "fr": "un professeur / une professeure", "pl": "nauczyciel / nauczycielka", "def": "il enseigne à des élèves" },
-            { "fr": "un infirmier / une infirmière", "pl": "pielęgniarz / pielęgniarka", "def": "il soigne les malades" },
-            { "fr": "un étudiant / une étudiante", "pl": "student / studentka", "def": "il étudie à l'université" }
-          ]
-        }
-      ]
-    },
-    {
-      "kind": "vocabulary",
       "title": "Les lieux et les loisirs",
       "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Gdzie mieszkam", "fr": "Où j'habite" },
+          "title": { "pl": "Miejsca", "fr": "Les lieux" },
           "items": [
-            { "fr": "une ville", "pl": "miasto", "def": "beaucoup d'habitants" },
-            { "fr": "un quartier", "pl": "dzielnica", "def": "une partie de la ville" },
-            { "fr": "la rue", "pl": "ulica" },
-            { "fr": "une maison", "pl": "dom" },
-            { "fr": "un appartement", "pl": "mieszkanie", "def": "un logement dans un grand bâtiment" },
+            { "fr": "l'appartement (m.)", "pl": "mieszkanie", "def": "on habite dedans, dans un quartier, dans une rue" },
             { "fr": "la mer", "pl": "morze" },
-            { "fr": "la plage", "pl": "plaża", "def": "le sable au bord de la mer" }
+            { "fr": "la plage", "pl": "plaża", "def": "on y nage, à côté de la mer" },
+            { "fr": "le quartier", "pl": "dzielnica", "def": "une partie de la ville" },
+            { "fr": "la rue", "pl": "ulica" },
+            { "fr": "l'université (f.)", "pl": "uniwersytet", "def": "les étudiants y vont" }
           ]
         },
         {
           "type": "words",
-          "title": { "pl": "Dokąd chodzę", "fr": "Où je vais" },
-          "items": [
-            { "fr": "l'université (f.)", "pl": "uniwersytet" },
-            { "fr": "le cinéma", "pl": "kino" },
-            { "fr": "le film", "pl": "film" },
-            { "fr": "la place (de cinéma)", "pl": "miejsce (w kinie), bilet", "def": "un siège pour voir un film" },
-            { "fr": "le festival", "pl": "festiwal", "def": "plusieurs jours de musique ou de films" }
-          ]
-        },
-        {
-          "type": "words",
-          "title": { "pl": "Czas wolny", "fr": "Les loisirs" },
+          "title": { "pl": "Muzyka", "fr": "La musique" },
           "items": [
             { "fr": "l'instrument de musique (m.)", "pl": "instrument muzyczny" },
             { "fr": "la guitare", "pl": "gitara" },
-            { "fr": "le piano", "pl": "pianino, fortepian" },
+            { "fr": "le piano", "pl": "pianino, fortepian" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Kino", "fr": "Le cinéma" },
+          "items": [
+            { "fr": "le festival", "pl": "festiwal", "def": "beaucoup de films ou de musique, plusieurs jours" },
+            { "fr": "le film", "pl": "film" },
+            { "fr": "la place (de cinéma)", "pl": "miejsce (w kinie), bilet" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Sport", "fr": "Le sport" },
+          "items": [
             { "fr": "la danse / danser", "pl": "taniec / tańczyć" },
             { "fr": "la marche / marcher", "pl": "chodzenie, spacer / chodzić" },
             { "fr": "la natation / nager", "pl": "pływanie / pływać" },
@@ -321,25 +263,84 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**faire du / de la / de l'** + sport lub zajęcie: faire **du** vélo, faire **de la** natation, faire **du** ski.\n**jouer au / à la / aux** + gra lub sport z piłką: jouer **au** tennis, jouer **aux** cartes.\n**jouer du / de la** + instrument: jouer **du** piano, jouer **de la** guitare.",
-            "fr": "**faire du / de la / de l'** + sport ou activité : faire **du** vélo, faire **de la** natation, faire **du** ski.\n**jouer au / à la / aux** + jeu ou sport de ballon : jouer **au** tennis, jouer **aux** cartes.\n**jouer du / de la** + instrument : jouer **du** piano, jouer **de la** guitare."
+            "pl": "**faire du / de la / de l'** + sport lub zajęcie: faire **de la** danse, faire **de la** natation, faire **du** ski.\n**jouer au / à la / aux** + gra lub sport z piłką: jouer **au** football.\n**jouer du / de la** + instrument: jouer **du** piano, jouer **de la** guitare.",
+            "fr": "**faire du / de la / de l'** + sport ou activité : faire **de la** danse, faire **de la** natation, faire **du** ski.\n**jouer au / à la / aux** + jeu ou sport de ballon : jouer **au** football.\n**jouer du / de la** + instrument : jouer **du** piano, jouer **de la** guitare."
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "Le samedi, je fais **du** sport et je joue **au** football.", "pl": "W soboty uprawiam sport i gram w piłkę nożną." },
+            { "fr": "Je fais **du** ski et **de la** natation.", "pl": "Jeżdżę na nartach i pływam." },
             { "fr": "Ma fille joue **de la** guitare.", "pl": "Moja córka gra na gitarze." },
-            { "fr": "On va **au** cinéma ce soir ?", "pl": "Idziemy dziś wieczorem do kina?" },
-            { "fr": "J'écoute de la musique et je regarde des séries.", "pl": "Słucham muzyki i oglądam seriale." }
+            { "fr": "Mon frère joue **du** piano.", "pl": "Mój brat gra na pianinie." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "**de + le = du**, **à + le = au**, **à + les = aux**. Nie mów « jouer à le tennis » ani « faire de le vélo ».\nPolskie « grać **w** » = jouer **à**, « grać **na** » = jouer **de**.",
-            "fr": "**de + le = du**, **à + le = au**, **à + les = aux**. On ne dit pas « jouer à le tennis » ou « faire de le vélo ».\nUn jeu ou un sport : jouer **à**. Un instrument : jouer **de**."
+            "pl": "**de + le = du**, **à + le = au**, **à + les = aux**. Nie mów « jouer à le football » ani « faire de le ski ».\nPolskie « grać **w** » = jouer **à**, « grać **na** » = jouer **de**.",
+            "fr": "**de + le = du**, **à + le = au**, **à + les = aux**. On ne dit pas « jouer à le football » ou « faire de le ski ».\nUn jeu ou un sport : jouer **à**. Un instrument : jouer **de**."
           }
+        }
+      ]
+    },
+    {
+      "kind": "vocabulary",
+      "title": "La famille et les professions",
+      "blocks": [
+        {
+          "type": "words",
+          "title": { "pl": "Rodzina", "fr": "La famille" },
+          "items": [
+            { "fr": "les grands-parents", "pl": "dziadkowie" },
+            { "fr": "la grand-mère / le grand-père", "pl": "babcia / dziadek", "def": "la mère ou le père d'un parent" },
+            { "fr": "les parents", "pl": "rodzice", "def": "le père et la mère" },
+            { "fr": "la mère (maman) / le père (papa)", "pl": "matka (mama) / ojciec (tata)" },
+            { "fr": "les enfants", "pl": "dzieci" },
+            { "fr": "le fils / la fille", "pl": "syn / córka" },
+            { "fr": "fils unique / fille unique", "pl": "jedynak / jedynaczka", "def": "il n'a pas de frères et sœurs" },
+            { "fr": "le frère", "pl": "brat" },
+            { "fr": "la sœur", "pl": "siostra" },
+            { "fr": "les petits-enfants", "pl": "wnuki", "def": "les enfants de mes enfants" },
+            { "fr": "le petit-fils / la petite-fille", "pl": "wnuk / wnuczka" },
+            { "fr": "l'oncle (m.)", "pl": "wujek", "def": "le frère de mon père ou de ma mère" },
+            { "fr": "la tante", "pl": "ciocia", "def": "la sœur de mon père ou de ma mère" },
+            { "fr": "le cousin / la cousine", "pl": "kuzyn / kuzynka", "def": "l'enfant de mon oncle ou de ma tante" },
+            { "fr": "le neveu", "pl": "bratanek, siostrzeniec", "def": "le fils de mon frère ou de ma sœur" },
+            { "fr": "la nièce", "pl": "bratanica, siostrzenica", "def": "la fille de mon frère ou de ma sœur" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Stan cywilny", "fr": "La situation familiale" },
+          "items": [
+            { "fr": "marié / mariée", "pl": "żonaty / zamężna" },
+            { "fr": "le mariage", "pl": "ślub, małżeństwo" },
+            { "fr": "le mari", "pl": "mąż" },
+            { "fr": "la femme", "pl": "żona; kobieta" },
+            { "fr": "célibataire", "pl": "stanu wolnego", "def": "pas marié" },
+            { "fr": "le petit ami / la petite amie", "pl": "chłopak / dziewczyna (partner)" }
+          ]
+        },
+        {
+          "type": "warning",
+          "text": {
+            "pl": "**la femme** = kobieta albo żona, **la fille** = dziewczyna albo córka. Znaczenie wynika z kontekstu: **ma** femme = moja żona.",
+            "fr": "**la femme** = une femme ou l'épouse, **la fille** = une jeune fille ou l'enfant. Avec un possessif : **ma** femme = mon épouse."
+          }
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Zawody", "fr": "Les professions" },
+          "items": [
+            { "fr": "l'acteur / l'actrice", "pl": "aktor / aktorka", "def": "il joue dans des films" },
+            { "fr": "le coiffeur / la coiffeuse", "pl": "fryzjer / fryzjerka" },
+            { "fr": "l'étudiant / l'étudiante", "pl": "student / studentka", "def": "il va à l'université" },
+            { "fr": "le / la fleuriste", "pl": "kwiaciarz / kwiaciarka" },
+            { "fr": "l'infirmier / l'infirmière", "pl": "pielęgniarz / pielęgniarka" },
+            { "fr": "l'informaticien / l'informaticienne", "pl": "informatyk / informatyczka" },
+            { "fr": "le professeur / la professeure", "pl": "nauczyciel / nauczycielka" }
+          ]
         }
       ]
     },
@@ -350,11 +351,10 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "Tu habites où ? – J'habite à Gdynia, au bord de la mer.", "pl": "Gdzie mieszkasz? – Mieszkam w Gdyni, nad morzem." },
-            { "fr": "J'habite dans une maison près de la plage.", "pl": "Mieszkam w domu blisko plaży." },
-            { "fr": "J'habite dans un appartement, en ville.", "pl": "Mieszkam w mieszkaniu w mieście." },
-            { "fr": "Mon quartier est calme et agréable.", "pl": "Moja dzielnica jest spokojna i przyjemna." },
-            { "fr": "Quelle est ton adresse ? – 8, avenue de la République.", "pl": "Jaki jest twój adres? – Avenue de la République 8." }
+            { "fr": "Tu habites où ? / Où tu habites ?", "pl": "Gdzie mieszkasz?" },
+            { "fr": "J'habite à Gdynia.", "pl": "Mieszkam w Gdyni." },
+            { "fr": "Je suis à Paris, dans le quartier de l'université.", "pl": "Jestem w Paryżu, w dzielnicy uniwersyteckiej." },
+            { "fr": "J'habite dans un appartement, rue Victor Hugo.", "pl": "Mieszkam w mieszkaniu przy ulicy Victora Hugo." }
           ]
         }
       ]
@@ -369,17 +369,16 @@
           "items": [
             { "fr": "J'adore le chocolat !", "pl": "Uwielbiam czekoladę!" },
             { "fr": "J'aime beaucoup le cinéma.", "pl": "Bardzo lubię kino." },
-            { "fr": "J'aime bien les animaux.", "pl": "Lubię zwierzęta." },
+            { "fr": "J'aime bien la musique.", "pl": "Lubię muzykę." },
             { "fr": "Je n'aime pas beaucoup le sport.", "pl": "Niezbyt lubię sport." },
-            { "fr": "Je n'aime pas le froid.", "pl": "Nie lubię zimna." },
-            { "fr": "Je déteste le bruit !", "pl": "Nie znoszę hałasu!" }
+            { "fr": "Je n'aime pas le ski.", "pl": "Nie lubię narciarstwa." },
+            { "fr": "Je déteste nager !", "pl": "Nie znoszę pływać!" }
           ]
         },
         {
           "type": "examples",
           "title": { "pl": "Pytanie i reakcja", "fr": "Demander et réagir" },
           "items": [
-            { "fr": "Qu'est-ce que tu aimes faire le week-end ?", "pl": "Co lubisz robić w weekend?" },
             { "fr": "Tu aimes la mer ? – Oui, j'adore la plage !", "pl": "Lubisz morze? – Tak, uwielbiam plażę!" },
             { "fr": "Moi aussi ! / Moi non plus.", "pl": "Ja też! / Ja też nie." },
             { "fr": "Moi, j'adore danser.", "pl": "Ja uwielbiam tańczyć." }
@@ -388,8 +387,8 @@
         {
           "type": "warning",
           "text": {
-            "pl": "Przeczenie: **ne** + czasownik + **pas**: je **n'**aime **pas**. Odpowiedź na zdanie przeczące: « Je n'aime pas le jazz. – **Moi non plus.** » (nie « moi aussi »).",
-            "fr": "La négation : **ne** + verbe + **pas** : je **n'**aime **pas**. Pour répondre à une phrase négative : « Je n'aime pas le jazz. – **Moi non plus.** »"
+            "pl": "Przeczenie: **ne** + czasownik + **pas**: je **n'**aime **pas**. Odpowiedź na zdanie przeczące: « Je n'aime pas le ski. – **Moi non plus.** » (nie « moi aussi »).",
+            "fr": "La négation : **ne** + verbe + **pas** : je **n'**aime **pas**. Pour répondre à une phrase négative : « Je n'aime pas le ski. – **Moi non plus.** »"
           }
         }
       ]
@@ -401,11 +400,12 @@
         {
           "type": "examples",
           "items": [
+            { "fr": "J'ai un frère. / J'ai une sœur.", "pl": "Mam brata. / Mam siostrę." },
+            { "fr": "Je n'ai pas de frères et sœurs. Je suis fils unique.", "pl": "Nie mam rodzeństwa. Jestem jedynakiem." },
+            { "fr": "Je suis fille unique.", "pl": "Jestem jedynaczką." },
+            { "fr": "Chez moi, nous sommes quatre.", "pl": "W domu jest nas czworo." },
             { "fr": "Voici ma famille : mon mari, Tomasz, et nos deux enfants.", "pl": "Oto moja rodzina: mój mąż Tomasz i nasze dwoje dzieci." },
-            { "fr": "J'ai un frère et une sœur.", "pl": "Mam brata i siostrę." },
-            { "fr": "Je n'ai pas de frère. Je suis fils unique.", "pl": "Nie mam brata. Jestem jedynakiem." },
             { "fr": "Ma sœur a vingt ans, elle est étudiante.", "pl": "Moja siostra ma dwadzieścia lat, jest studentką." },
-            { "fr": "Mes parents habitent à Lublin. Ils sont professeurs.", "pl": "Moi rodzice mieszkają w Lublinie. Są nauczycielami." },
             { "fr": "Tu as des enfants ? – Oui, j'ai une fille.", "pl": "Masz dzieci? – Tak, mam córkę." },
             { "fr": "Il est marié ? – Non, il est célibataire.", "pl": "Czy on jest żonaty? – Nie, jest kawalerem." }
           ]

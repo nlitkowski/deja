@@ -26,7 +26,7 @@
       "def": "le comparatif de bon : on ne dit pas « plus bon »",
       "examples": [
         { "fr": "Ce restaurant est meilleur que l'autre.", "pl": "Ta restauracja jest lepsza niż tamta." },
-        { "fr": "La cuisine italienne est meilleure que la cuisine anglaise.", "pl": "Kuchnia włoska jest lepsza niż angielska." }
+        { "fr": "La cuisine italienne est meilleure que la cuisine allemande.", "pl": "Kuchnia włoska jest lepsza niż niemiecka." }
       ],
       "tip": {
         "pl": "bon → meilleur (nie „plus bon”); odmiana: meilleur, meilleure, meilleurs, meilleures",
@@ -41,7 +41,7 @@
       "pl": "passé composé z être: czasowniki podróży",
       "def": "aller, venir, partir, arriver, rester, rentrer, sortir, monter, descendre, tomber : être + participe accordé avec le sujet",
       "examples": [
-        { "fr": "Je suis allée en Croatie.", "pl": "Pojechałam do Chorwacji." },
+        { "fr": "Je suis allée en Italie.", "pl": "Pojechałam do Włoch." },
         { "fr": "Nous sommes partis le 2 août.", "pl": "Wyjechaliśmy 2 sierpnia." }
       ],
       "tip": {
@@ -57,7 +57,7 @@
       "pl": "to było / był(o), były / była (pogoda)",
       "def": "l'imparfait pour décrire dans le passé : une impression, ce qu'on voyait, le temps",
       "examples": [
-        { "fr": "C'était génial !", "pl": "Było super!" },
+        { "fr": "C'était très joli !", "pl": "Było bardzo ładnie!" },
         { "fr": "Il faisait beau et il y avait du soleil.", "pl": "Była ładna pogoda i świeciło słońce." }
       ],
       "tip": {
@@ -73,7 +73,7 @@
       "def": "je préfère, nous préférons + nom ou infinitif, sans préposition",
       "examples": [
         { "fr": "Je préfère la mer.", "pl": "Wolę morze." },
-        { "fr": "Nous préférons voyager en train.", "pl": "Wolimy podróżować pociągiem." }
+        { "fr": "Nous préférons la campagne.", "pl": "Wolimy wieś." }
       ],
       "tip": {
         "pl": "è w je/tu/il/ils (préfère, préfèrent), é w nous/vous (préférons, préférez)",
@@ -98,39 +98,40 @@
       "tags": ["grammaire"]
     },
     { "id": "u09-mer", "fr": "la mer", "pl": "morze", "def": "une grande étendue d'eau salée", "examples": [{ "fr": "Nous partons à la mer en juillet.", "pl": "W lipcu jedziemy nad morze." }], "tags": ["vocabulaire"] },
-    { "id": "u09-plage", "fr": "une plage", "pl": "plaża", "def": "le sable au bord de la mer", "examples": [{ "fr": "La plage est magnifique.", "pl": "Plaża jest wspaniała." }], "tags": ["vocabulaire"] },
+    { "id": "u09-plage", "fr": "une plage", "pl": "plaża", "def": "le sable au bord de la mer", "examples": [{ "fr": "La plage est très jolie.", "pl": "Plaża jest bardzo ładna." }], "tags": ["vocabulaire"] },
     { "id": "u09-montagne", "fr": "la montagne", "pl": "góry", "def": "un lieu avec des sommets, on y fait du ski", "examples": [{ "fr": "Je préfère la montagne.", "pl": "Wolę góry." }], "tags": ["vocabulaire"] },
     { "id": "u09-ile", "fr": "une île", "pl": "wyspa", "def": "une terre entourée d'eau", "examples": [{ "fr": "La Corse est une île.", "pl": "Korsyka jest wyspą." }], "tags": ["vocabulaire"] },
     { "id": "u09-camping", "fr": "un camping", "pl": "kemping, pole namiotowe", "def": "un terrain où on dort sous la tente", "examples": [{ "fr": "Le camping est près du lac.", "pl": "Kemping jest blisko jeziora." }], "tags": ["vocabulaire"] },
     { "id": "u09-tente", "fr": "une tente", "pl": "namiot", "def": "une petite maison en tissu pour dormir dehors", "examples": [{ "fr": "Nous dormons sous la tente.", "pl": "Śpimy w namiocie." }], "tags": ["vocabulaire"] },
     { "id": "u09-valise", "fr": "une valise", "pl": "walizka", "def": "on y met ses vêtements pour voyager", "examples": [{ "fr": "Ma valise est trop lourde.", "pl": "Moja walizka jest za ciężka." }], "tags": ["vocabulaire"], "deprecated": true },
     { "id": "u09-aeroport", "fr": "un aéroport", "pl": "lotnisko", "def": "le lieu où les avions partent et arrivent", "examples": [{ "fr": "L'aéroport est loin du centre-ville.", "pl": "Lotnisko jest daleko od centrum." }], "tip": { "pl": "rodzaj męski: l'aéroport, un aéroport; „na lotnisko” = à l'aéroport","fr": "masculin : l'aéroport, un aéroport ; on va à l'aéroport" }, "tags": ["vocabulaire"] },
-    { "id": "u09-billet", "fr": "un billet", "pl": "bilet (na pociąg, samolot)", "def": "on l'achète pour prendre le train ou l'avion", "examples": [{ "fr": "J'ai réservé un billet d'avion.", "pl": "Zarezerwowałem bilet lotniczy." }], "tags": ["vocabulaire"] },
+    { "id": "u09-billet", "fr": "un billet", "pl": "bilet (na pociąg, samolot)", "def": "on l'achète pour prendre le train ou l'avion", "examples": [{ "fr": "J'ai réservé un billet d'avion.", "pl": "Zarezerwowałem bilet lotniczy." }], "tags": ["vocabulaire"], "deprecated": true },
+    { "id": "u09-parking", "fr": "un parking", "pl": "parking", "def": "un lieu pour les voitures", "examples": [{ "fr": "Il y a un parking près de l'hôtel.", "pl": "Blisko hotelu jest parking." }], "tip": { "pl": "rodzaj męski: le parking, un parking", "fr": "masculin : le parking, un parking" }, "tags": ["vocabulaire"] },
     { "id": "u09-foret", "fr": "une forêt", "pl": "las", "def": "un lieu avec beaucoup d'arbres", "examples": [{ "fr": "On se promène dans la forêt.", "pl": "Spacerujemy po lesie." }], "tags": ["vocabulaire"] },
     { "id": "u09-lac", "fr": "un lac", "pl": "jezioro", "def": "de l'eau douce entourée de terre", "examples": [{ "fr": "On se baigne dans le lac.", "pl": "Kąpiemy się w jeziorze." }], "tags": ["vocabulaire"] },
-    { "id": "u09-riviere", "fr": "une rivière", "pl": "rzeka", "def": "de l'eau qui coule entre deux rives", "examples": [{ "fr": "La rivière traverse le village.", "pl": "Rzeka przepływa przez wieś." }], "tags": ["vocabulaire"] }
+    { "id": "u09-riviere", "fr": "une rivière", "pl": "rzeka", "def": "de l'eau qui coule entre deux rives", "examples": [{ "fr": "Il y a une rivière près du village.", "pl": "Blisko wioski jest rzeka." }], "tags": ["vocabulaire"] }
   ],
   "exercises": [
     { "id": "u09-comp-1", "type": "gap-fill", "entryIds": ["u09-comparatif"], "data": { "sentence": "Le train est ___ rapide que le bus.", "answers": ["plus"], "pl": "Pociąg jest szybszy niż autobus.", "clue": "(+)" } },
     { "id": "u09-comp-2", "type": "gap-fill", "entryIds": ["u09-comparatif"], "data": { "sentence": "Le camping est ___ cher que l'hôtel.", "answers": ["moins"], "pl": "Kemping jest tańszy niż hotel.", "clue": "(−)" } },
     { "id": "u09-comp-3", "type": "gap-fill", "entryIds": ["u09-comparatif"], "data": { "sentence": "Cette plage est ___ belle que l'autre.", "answers": ["aussi"], "pl": "Ta plaża jest tak samo piękna jak tamta.", "clue": "(=)" } },
-    { "id": "u09-comp-4", "type": "gap-fill", "entryIds": ["u09-comparatif"], "data": { "sentence": "La Grèce est plus chaude ___ la Norvège.", "answers": ["que"], "pl": "W Grecji jest cieplej niż w Norwegii.", "clue": "(mot de la comparaison)" } },
+    { "id": "u09-comp-4", "type": "gap-fill", "entryIds": ["u09-comparatif"], "data": { "sentence": "L'Espagne est plus grande ___ la Suisse.", "answers": ["que"], "pl": "Hiszpania jest większa niż Szwajcaria.", "clue": "(mot de la comparaison)" } },
     { "id": "u09-comp-5", "type": "gap-fill", "entryIds": ["u09-comparatif"], "data": { "sentence": "Les hôtels sont moins chers en mai ___ en août.", "answers": ["qu'"], "pl": "Hotele są tańsze w maju niż w sierpniu.", "clue": "(mot de la comparaison)", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
 
     { "id": "u09-meilleur-1", "type": "gap-fill", "entryIds": ["u09-meilleur"], "data": { "sentence": "Ce restaurant est ___ que l'autre. (bon, +)", "answers": ["meilleur"], "pl": "Ta restauracja jest lepsza niż tamta." } },
-    { "id": "u09-meilleur-2", "type": "gap-fill", "entryIds": ["u09-meilleur"], "data": { "sentence": "La cuisine italienne est ___ que la cuisine anglaise. (bon, +)", "answers": ["meilleure"], "pl": "Kuchnia włoska jest lepsza niż angielska." } },
+    { "id": "u09-meilleur-2", "type": "gap-fill", "entryIds": ["u09-meilleur"], "data": { "sentence": "La cuisine italienne est ___ que la cuisine allemande. (bon, +)", "answers": ["meilleure"], "pl": "Kuchnia włoska jest lepsza niż niemiecka." } },
     { "id": "u09-meilleur-3", "type": "gap-fill", "entryIds": ["u09-meilleur"], "data": { "sentence": "Ces croissants sont ___ que les croissants du supermarché. (bon, +)", "answers": ["meilleurs"], "pl": "Te rogaliki są lepsze niż rogaliki z supermarketu." } },
     { "id": "u09-meilleur-4", "type": "gap-fill", "entryIds": ["u09-meilleur"], "data": { "sentence": "Ici, les glaces sont ___ qu'à la plage. (bon, +)", "answers": ["meilleures"], "pl": "Tutaj lody są lepsze niż na plaży." } },
 
-    { "id": "u09-pc-etre-1", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "L'été dernier, Julie ___ en Croatie. (aller)", "answers": ["est allée"], "pl": "Zeszłego lata Julia pojechała do Chorwacji." } },
-    { "id": "u09-pc-etre-2", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Paul et moi, nous ___ le 2 août. (partir)", "answers": ["sommes partis"], "pl": "Paweł i ja wyjechaliśmy 2 sierpnia." } },
-    { "id": "u09-pc-etre-3", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Le train ___ à Nice à midi. (arriver)", "answers": ["est arrivé"], "pl": "Pociąg przyjechał do Nicei w południe." } },
-    { "id": "u09-pc-etre-4", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Mes amies ___ une semaine à la montagne. (rester)", "answers": ["sont restées"], "pl": "Moje przyjaciółki zostały tydzień w górach." } },
-    { "id": "u09-pc-etre-5", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Les touristes ___ du bateau à 22 heures. (descendre)", "answers": ["sont descendus"], "pl": "Turyści zeszli ze statku o 22." } },
-    { "id": "u09-pc-etre-6", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Ma sœur ___ de vacances hier soir. (rentrer)", "answers": ["est rentrée"], "pl": "Moja siostra wróciła z wakacji wczoraj wieczorem." } },
-    { "id": "u08-pc-etre-1", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Léa ___ à vélo. (tomber)", "answers": ["est tombée"], "pl": "Lea spadła z roweru." } },
-    { "id": "u08-pc-etre-2", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Mes parents ___ à la maison. (rester)", "answers": ["sont restés"], "pl": "Moi rodzice zostali w domu." } },
-    { "id": "u08-pc-etre-4", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Mes amies ___ en retard au cours de danse. (arriver)", "answers": ["sont arrivées"], "pl": "Moje przyjaciółki spóźniły się na zajęcia tańca." } },
+    { "id": "u09-pc-etre-1", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "L'été dernier, Julie ___ en Italie. (aller)", "answers": ["est allée"], "pl": "Zeszłego lata Julia pojechała do Włoch.", "hint": { "pl": "passé composé", "fr": "au passé composé" } } },
+    { "id": "u09-pc-etre-2", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Paul et moi, nous ___ le 2 août. (partir)", "answers": ["sommes partis"], "pl": "Paweł i ja wyjechaliśmy 2 sierpnia.", "hint": { "pl": "passé composé", "fr": "au passé composé" } } },
+    { "id": "u09-pc-etre-3", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Le train ___ à Nice à midi. (arriver)", "answers": ["est arrivé"], "pl": "Pociąg przyjechał do Nicei w południe.", "hint": { "pl": "passé composé", "fr": "au passé composé" } } },
+    { "id": "u09-pc-etre-4", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Mes amies ___ une semaine à la montagne. (rester)", "answers": ["sont restées"], "pl": "Moje przyjaciółki zostały tydzień w górach.", "hint": { "pl": "passé composé", "fr": "au passé composé" } } },
+    { "id": "u09-pc-etre-5", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Les touristes ___ du bateau à 22 heures. (descendre)", "answers": ["sont descendus"], "pl": "Turyści zeszli ze statku o 22.", "hint": { "pl": "passé composé", "fr": "au passé composé" } } },
+    { "id": "u09-pc-etre-6", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Ma sœur ___ de vacances hier soir. (rentrer)", "answers": ["est rentrée"], "pl": "Moja siostra wróciła z wakacji wczoraj wieczorem.", "hint": { "pl": "passé composé", "fr": "au passé composé" } } },
+    { "id": "u08-pc-etre-1", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Léa ___ à vélo. (tomber)", "answers": ["est tombée"], "pl": "Lea spadła z roweru.", "hint": { "pl": "passé composé", "fr": "au passé composé" } } },
+    { "id": "u08-pc-etre-2", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Mes parents ___ à la maison. (rester)", "answers": ["sont restés"], "pl": "Moi rodzice zostali w domu.", "hint": { "pl": "passé composé", "fr": "au passé composé" } } },
+    { "id": "u08-pc-etre-4", "type": "gap-fill", "entryIds": ["u09-pc-etre-voyage"], "data": { "sentence": "Mes amies ___ en retard au cours de danse. (arriver)", "answers": ["sont arrivées"], "pl": "Moje przyjaciółki spóźniły się na zajęcia tańca.", "hint": { "pl": "passé composé", "fr": "au passé composé" } } },
 
     { "id": "u09-pays-1", "type": "gap-fill", "entryIds": ["u09-de-du-des-pays"], "data": { "sentence": "Mon amie Ana vient ___ Brésil.", "answers": ["du"], "pl": "Moja przyjaciółka Ana pochodzi z Brazylii.", "clue": "(le Brésil)" } },
     { "id": "u09-pays-2", "type": "gap-fill", "entryIds": ["u09-de-du-des-pays"], "data": { "sentence": "Nous revenons ___ France samedi.", "answers": ["de"], "pl": "Wracamy z Francji w sobotę.", "clue": "(la France)" } },
@@ -139,12 +140,12 @@
     { "id": "u09-pays-5", "type": "gap-fill", "entryIds": ["u09-de-du-des-pays"], "data": { "sentence": "Karim vient ___ Algérie.", "answers": ["d'"], "pl": "Karim pochodzi z Algierii.", "clue": "(l'Algérie)", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
     { "id": "u09-pays-6", "type": "translate-pl-fr", "entryIds": ["u09-de-du-des-pays"], "data": { "pl": "wracam z Japonii", "answers": ["je reviens du Japon", "je rentre du Japon"], "hint": { "pl": "le Japon: rodzaj męski", "fr": "le Japon : masculin" } } },
 
-    { "id": "u09-cetait-1", "type": "gap-fill", "entryIds": ["u09-cetait"], "data": { "sentence": "Nous sommes allés à Biarritz. ___ génial !", "answers": ["c'était"], "pl": "Pojechaliśmy do Biarritz. Było super!", "clue": "(une impression, au passé)" } },
-    { "id": "u09-cetait-2", "type": "gap-fill", "entryIds": ["u09-cetait"], "data": { "sentence": "___ une piscine à l'hôtel.", "answers": ["il y avait"], "pl": "W hotelu był basen.", "clue": "(ce qu'on voyait, au passé)" } },
+    { "id": "u09-cetait-1", "type": "gap-fill", "entryIds": ["u09-cetait"], "data": { "sentence": "Nous sommes allés à Biarritz. ___ très joli !", "answers": ["c'était"], "pl": "Pojechaliśmy do Biarritz. Było bardzo ładnie!", "clue": "(une impression, au passé)" } },
+    { "id": "u09-cetait-2", "type": "gap-fill", "entryIds": ["u09-cetait"], "data": { "sentence": "___ un parking à l'hôtel.", "answers": ["il y avait"], "pl": "Przy hotelu był parking.", "clue": "(ce qu'on voyait, au passé)" } },
     { "id": "u09-cetait-3", "type": "gap-fill", "entryIds": ["u09-cetait"], "data": { "sentence": "___ beau et chaud : 30 degrés !", "answers": ["il faisait"], "pl": "Było pięknie i ciepło: 30 stopni!", "clue": "(la météo, au passé)" } },
     { "id": "u09-cetait-4", "type": "gap-fill", "entryIds": ["u09-cetait"], "data": { "sentence": "Les vacances ? ___ trop court !", "answers": ["c'était"], "pl": "Wakacje? Były za krótkie!", "clue": "(une impression, au passé)" } },
     { "id": "u09-cetait-5", "type": "gap-fill", "entryIds": ["u09-cetait"], "data": { "sentence": "Sur la plage, ___ beaucoup de touristes.", "answers": ["il y avait"], "pl": "Na plaży było dużo turystów.", "clue": "(ce qu'on voyait, au passé)" } },
-    { "id": "u09-cetait-6", "type": "gap-fill", "entryIds": ["u09-cetait"], "data": { "sentence": "À la montagne, ___ froid la nuit.", "answers": ["il faisait"], "pl": "W górach w nocy było zimno.", "clue": "(la météo, au passé)" } },
+    { "id": "u09-cetait-6", "type": "gap-fill", "entryIds": ["u09-cetait"], "data": { "sentence": "À la montagne, ___ froid le soir.", "answers": ["il faisait"], "pl": "W górach wieczorem było zimno.", "clue": "(la météo, au passé)" } },
 
     { "id": "u09-preferer-1", "type": "gap-fill", "entryIds": ["u09-preferer"], "data": { "sentence": "Tu ___ la mer ou la montagne ? (préférer)", "answers": ["préfères"], "pl": "Wolisz morze czy góry?" } },
     { "id": "u09-preferer-2", "type": "gap-fill", "entryIds": ["u09-preferer"], "data": { "sentence": "Nous ___ partir en juin, c'est plus calme. (préférer)", "answers": ["préférons"], "pl": "Wolimy wyjeżdżać w czerwcu, jest spokojniej." } },
@@ -161,35 +162,35 @@
     { "id": "u09-montagne-2", "type": "translate-pl-fr", "entryIds": ["u09-montagne"], "data": { "pl": "góry", "answers": ["la montagne", "une montagne", "les montagnes"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u09-ile-1", "type": "gap-fill", "entryIds": ["u09-ile"], "data": { "sentence": "La Corse est une grande ___.", "answers": ["île"], "pl": "Korsyka jest dużą wyspą.", "clue": "(une terre entourée d'eau)" } },
     { "id": "u09-ile-2", "type": "translate-pl-fr", "entryIds": ["u09-ile"], "data": { "pl": "wyspa", "answers": ["une île", "l'île"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u09-camping-1", "type": "gap-fill", "entryIds": ["u09-camping"], "data": { "sentence": "Nous passons nos vacances dans un ___ au bord du lac.", "answers": ["camping"], "pl": "Spędzamy wakacje na kempingu nad jeziorem.", "clue": "(un terrain où on dort sous la tente)" } },
+    { "id": "u09-camping-1", "type": "gap-fill", "entryIds": ["u09-camping"], "data": { "sentence": "Nous dormons dans un ___ près du lac.", "answers": ["camping"], "pl": "Śpimy na kempingu blisko jeziora.", "clue": "(un terrain où on dort sous la tente)" } },
     { "id": "u09-camping-2", "type": "translate-pl-fr", "entryIds": ["u09-camping"], "data": { "pl": "kemping, pole namiotowe", "answers": ["un camping", "le camping"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u09-tente-1", "type": "gap-fill", "entryIds": ["u09-tente"], "data": { "sentence": "Au camping, on dort sous une ___.", "answers": ["tente"], "pl": "Na kempingu śpi się w namiocie.", "clue": "(une petite maison en tissu)" } },
     { "id": "u09-tente-2", "type": "translate-pl-fr", "entryIds": ["u09-tente"], "data": { "pl": "namiot", "answers": ["une tente", "la tente"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u09-aeroport-1", "type": "gap-fill", "entryIds": ["u09-aeroport"], "data": { "sentence": "Nous prenons l'avion à l'___ de Nice.", "answers": ["aéroport"], "pl": "Wsiadamy do samolotu na lotnisku w Nicei.", "clue": "(le lieu où on prend l'avion)" } },
     { "id": "u09-aeroport-2", "type": "translate-pl-fr", "entryIds": ["u09-aeroport"], "data": { "pl": "lotnisko", "answers": ["un aéroport", "l'aéroport"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u09-billet-1", "type": "gap-fill", "entryIds": ["u09-billet"], "data": { "sentence": "J'ai acheté un ___ de train pour Marseille.", "answers": ["billet"], "pl": "Kupiłem bilet na pociąg do Marsylii.", "clue": "(on l'achète pour voyager)" } },
-    { "id": "u09-billet-2", "type": "translate-pl-fr", "entryIds": ["u09-billet"], "data": { "pl": "bilet (na pociąg, samolot)", "answers": ["un billet", "le billet", "un billet de train", "un billet d'avion"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u09-parking-1", "type": "gap-fill", "entryIds": ["u09-parking"], "data": { "sentence": "Nous arrivons en voiture. Il y a un ___ à l'hôtel ?", "answers": ["parking"], "pl": "Przyjeżdżamy samochodem. Czy przy hotelu jest parking?", "clue": "(un lieu pour les voitures)" } },
+    { "id": "u09-parking-2", "type": "translate-pl-fr", "entryIds": ["u09-parking"], "data": { "pl": "parking", "answers": ["un parking", "le parking"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u09-foret-1", "type": "gap-fill", "entryIds": ["u09-foret"], "data": { "sentence": "On se promène dans la ___ sous les arbres.", "answers": ["forêt"], "pl": "Spacerujemy po lesie pod drzewami.", "clue": "(un lieu avec beaucoup d'arbres)" } },
     { "id": "u09-foret-2", "type": "translate-pl-fr", "entryIds": ["u09-foret"], "data": { "pl": "las", "answers": ["une forêt", "la forêt"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u09-lac-1", "type": "gap-fill", "entryIds": ["u09-lac"], "data": { "sentence": "Le ___ d'Annecy est très beau.", "answers": ["lac"], "pl": "Jezioro Annecy jest bardzo piękne.", "clue": "(de l'eau douce entourée de terre)" } },
     { "id": "u09-lac-2", "type": "translate-pl-fr", "entryIds": ["u09-lac"], "data": { "pl": "jezioro", "answers": ["un lac", "le lac"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u09-riviere-1", "type": "gap-fill", "entryIds": ["u09-riviere"], "data": { "sentence": "On se promène au bord de la ___.", "answers": ["rivière"], "pl": "Spacerujemy nad rzeką.", "clue": "(de l'eau qui coule entre deux rives)" } },
+    { "id": "u09-riviere-1", "type": "gap-fill", "entryIds": ["u09-riviere"], "data": { "sentence": "On se promène près de la ___.", "answers": ["rivière"], "pl": "Spacerujemy w pobliżu rzeki.", "clue": "(de l'eau qui coule entre deux rives)" } },
     { "id": "u09-riviere-2", "type": "translate-pl-fr", "entryIds": ["u09-riviere"], "data": { "pl": "rzeka", "answers": ["une rivière", "la rivière"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
 
     { "id": "u09-comp-6", "type": "translate-pl-fr", "entryIds": ["u09-comparatif"], "data": { "pl": "morze jest cieplejsze niż jezioro", "answers": ["la mer est plus chaude que le lac"], "hint": { "pl": "stopień wyższy: plus … que", "fr": "comparatif : plus … que" } } },
     { "id": "u09-meilleur-5", "type": "translate-pl-fr", "entryIds": ["u09-meilleur"], "data": { "pl": "ta kawa jest lepsza", "answers": ["ce café est meilleur"], "hint": { "pl": "stopień wyższy od bon", "fr": "comparatif de bon" } } },
     { "id": "u09-pc-etre-7", "type": "translate-pl-fr", "entryIds": ["u09-pc-etre-voyage"], "data": { "pl": "wyjechaliśmy w sierpniu", "answers": ["nous sommes partis en août", "nous sommes parties en août", "on est partis en août", "on est parties en août", "on est parti en août"], "hint": { "pl": "passé composé z être", "fr": "passé composé avec être" } } },
-    { "id": "u09-cetait-7", "type": "translate-pl-fr", "entryIds": ["u09-cetait"], "data": { "pl": "było super", "answers": ["c'était super", "c'était génial"], "hint": { "pl": "wrażenie w przeszłości", "fr": "une impression au passé" } } },
+    { "id": "u09-cetait-7", "type": "translate-pl-fr", "entryIds": ["u09-cetait"], "data": { "pl": "było bardzo ładnie", "answers": ["c'était très joli", "c'était très beau"], "hint": { "pl": "wrażenie w przeszłości", "fr": "une impression au passé" } } },
     { "id": "u09-preferer-6", "type": "translate-pl-fr", "entryIds": ["u09-preferer"], "data": { "pl": "wolę góry", "answers": ["je préfère la montagne", "j'aime mieux la montagne", "je préfère les montagnes"] } },
 
-    { "id": "u09-mer-3", "type": "gap-fill", "entryIds": ["u09-mer"], "data": { "sentence": "Nice est une ville au bord de la ___.", "answers": ["mer"], "pl": "Nicea to miasto nad morzem.", "clue": "(une grande étendue d'eau salée)" } },
-    { "id": "u09-plage-3", "type": "gap-fill", "entryIds": ["u09-plage"], "data": { "sentence": "Les enfants jouent dans le sable de la ___.", "answers": ["plage"], "pl": "Dzieci bawią się w piasku na plaży.", "clue": "(au bord de la mer)" } },
-    { "id": "u09-montagne-3", "type": "gap-fill", "entryIds": ["u09-montagne"], "data": { "sentence": "Le mont Blanc est une très haute ___.", "answers": ["montagne"], "pl": "Mont Blanc to bardzo wysoka góra.", "clue": "(un grand sommet)" } },
+    { "id": "u09-mer-3", "type": "gap-fill", "entryIds": ["u09-mer"], "data": { "sentence": "La ville de Nice est près de la ___.", "answers": ["mer"], "pl": "Nicea leży blisko morza.", "clue": "(une grande étendue d'eau salée)" } },
+    { "id": "u09-plage-3", "type": "gap-fill", "entryIds": ["u09-plage"], "data": { "sentence": "Les enfants jouent sur la ___.", "answers": ["plage"], "pl": "Dzieci bawią się na plaży.", "clue": "(au bord de la mer)" } },
+    { "id": "u09-montagne-3", "type": "gap-fill", "entryIds": ["u09-montagne"], "data": { "sentence": "Le mont Blanc est une très grande ___.", "answers": ["montagne"], "pl": "Mont Blanc to bardzo wielka góra.", "clue": "(un grand sommet)" } },
     { "id": "u09-ile-3", "type": "gap-fill", "entryIds": ["u09-ile"], "data": { "sentence": "Pour aller sur l'___, il faut prendre le bateau.", "answers": ["île"], "pl": "Żeby dostać się na wyspę, trzeba popłynąć statkiem.", "clue": "(une terre entourée d'eau)" } },
     { "id": "u09-camping-3", "type": "gap-fill", "entryIds": ["u09-camping"], "data": { "sentence": "Au ___, nous dormons sous la tente.", "answers": ["camping"], "pl": "Na kempingu śpimy w namiocie.", "clue": "(un terrain pour les vacances en plein air)" } },
     { "id": "u09-tente-3", "type": "gap-fill", "entryIds": ["u09-tente"], "data": { "sentence": "Il pleut, on reste dans la ___ !", "answers": ["tente"], "pl": "Pada, zostajemy w namiocie!", "clue": "(une petite maison en tissu au camping)" } },
     { "id": "u09-aeroport-3", "type": "gap-fill", "entryIds": ["u09-aeroport"], "data": { "sentence": "Mon avion part à 7 heures, je vais à l'___ en bus.", "answers": ["aéroport"], "pl": "Mój samolot odlatuje o 7, jadę na lotnisko autobusem.", "clue": "(les avions partent et arrivent ici)" } },
-    { "id": "u09-billet-3", "type": "gap-fill", "entryIds": ["u09-billet"], "data": { "sentence": "Montrez votre ___ au contrôleur, s'il vous plaît.", "answers": ["billet"], "pl": "Proszę pokazać bilet konduktorowi.", "clue": "(on l'achète pour prendre le train)" } },
+    { "id": "u09-parking-3", "type": "gap-fill", "entryIds": ["u09-parking"], "data": { "sentence": "Ma voiture est au ___ de l'aéroport.", "answers": ["parking"], "pl": "Mój samochód stoi na parkingu na lotnisku.", "clue": "(un lieu pour les voitures)" } },
     { "id": "u09-foret-3", "type": "gap-fill", "entryIds": ["u09-foret"], "data": { "sentence": "Il y a beaucoup d'arbres dans cette ___.", "answers": ["forêt"], "pl": "W tym lesie jest dużo drzew.", "clue": "(un grand lieu vert)" } },
     { "id": "u09-lac-3", "type": "gap-fill", "entryIds": ["u09-lac"], "data": { "sentence": "On fait du bateau sur le ___ près du camping.", "answers": ["lac"], "pl": "Pływamy łódką po jeziorze koło kempingu.", "clue": "(de l'eau douce qui ne coule pas)" } },
     { "id": "u09-riviere-3", "type": "gap-fill", "entryIds": ["u09-riviere"], "data": { "sentence": "Mon grand-père pêche dans la ___ derrière le village.", "answers": ["rivière"], "pl": "Mój dziadek łowi ryby w rzece za wsią.", "clue": "(de l'eau qui coule)" } },
@@ -198,8 +199,8 @@
     { "id": "mp-car-gare", "type": "paires-minimales", "entryIds": ["u09-comparatif"], "data": { "pair": ["Le car est plus loin.", "La gare est plus loin."] } }
   ],
   "retiredExercises": {
-    "gap-fill": ["u09-valise-1", "u09-valise-3"],
-    "translate-pl-fr": ["u09-valise-2"]
+    "gap-fill": ["u09-valise-1", "u09-valise-3", "u09-billet-1", "u09-billet-3"],
+    "translate-pl-fr": ["u09-valise-2", "u09-billet-2"]
   },
   "boss": {
     "groups": [["u09-comparatif", "u09-meilleur"], ["u09-pc-etre-voyage"], ["u09-cetait"], ["u09-preferer"], ["u09-de-du-des-pays"]],

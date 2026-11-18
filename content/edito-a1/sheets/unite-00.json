@@ -4,8 +4,8 @@
   "title": "Bienvenue !",
   "icon": "🎉",
   "summary": {
-    "pl": "Pierwsze kroki: słowa, które już znasz, powitania i pożegnania, tu czy vous, zaimki, alfabet i literowanie, liczby od 0 do 31, dni tygodnia, miesiące i data.",
-    "fr": "Les premiers pas : des mots que tu connais déjà, saluer et prendre congé, tu ou vous, les pronoms, l'alphabet, les nombres de 0 à 31, les jours, les mois et la date."
+    "pl": "Pierwsze kroki: słowa, które już znasz, powitania i pożegnania, tu czy vous, zaimki, alfabet i literowanie, liczby od 0 do 31, dni tygodnia, miesiące, data i święta.",
+    "fr": "Les premiers pas : des mots que tu connais déjà, saluer et prendre congé, tu ou vous, les pronoms, l'alphabet, les nombres de 0 à 31, les jours, les mois, la date et les fêtes."
   },
   "sections": [
     {
@@ -21,28 +21,21 @@
         },
         {
           "type": "words",
-          "title": { "pl": "W mieście", "fr": "En ville" },
+          "title": { "pl": "Słowa, które znasz", "fr": "Mots connus" },
           "items": [
-            { "fr": "un café", "pl": "kawa; kawiarnia", "def": "une boisson, et l'endroit où on la boit" },
-            { "fr": "un restaurant", "pl": "restauracja", "def": "on y mange" },
-            { "fr": "un cinéma", "pl": "kino", "def": "on y regarde des films" },
-            { "fr": "les toilettes", "pl": "toaleta", "def": "toujours au pluriel en français" }
-          ]
-        },
-        {
-          "type": "words",
-          "title": { "pl": "Transport i jedzenie", "fr": "Le transport et la nourriture" },
-          "items": [
-            { "fr": "un train", "pl": "pociąg", "def": "il roule sur des rails, de ville en ville" },
             { "fr": "le chocolat", "pl": "czekolada", "def": "un aliment sucré et brun" },
-            { "fr": "un croissant", "pl": "rogalik (croissant)", "def": "on le mange le matin, avec un café" }
+            { "fr": "le restaurant", "pl": "restauracja", "def": "on y mange" },
+            { "fr": "le cinéma", "pl": "kino", "def": "on y regarde des films" },
+            { "fr": "le croissant", "pl": "rogalik (croissant)", "def": "on le mange le matin" },
+            { "fr": "le train", "pl": "pociąg", "def": "il roule sur des rails, de ville en ville" },
+            { "fr": "les toilettes", "pl": "toaleta", "def": "toujours au pluriel en français" }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Rodzaj nie zgadza się z polskim: **le** chocolat (czekolada), **le** café (kawa), **le** restaurant (restauracja). **Les** toilettes są zawsze w liczbie mnogiej.\nKońcówki są często nieme: restauran(t), chocola(t), croissan(t). Akcenty są częścią pisowni: caf**é**, cin**é**ma.",
-            "fr": "Le genre est souvent différent du polonais : **le** chocolat, **le** café, **le** restaurant. **Les** toilettes sont toujours au pluriel.\nLes lettres finales sont souvent muettes : restauran(t), chocola(t), croissan(t). Les accents font partie de l'orthographe : caf**é**, cin**é**ma."
+            "pl": "Rodzaj nie zgadza się z polskim: **le** chocolat (czekolada), **le** restaurant (restauracja). **Les** toilettes są zawsze w liczbie mnogiej.\nKońcówki są często nieme: restauran(t), chocola(t), croissan(t). Akcenty są częścią pisowni: cin**é**ma.",
+            "fr": "Le genre est souvent différent du polonais : **le** chocolat, **le** restaurant. **Les** toilettes sont toujours au pluriel.\nLes lettres finales sont souvent muettes : restauran(t), chocola(t), croissan(t). Les accents font partie de l'orthographe : cin**é**ma."
           }
         }
       ]
@@ -63,7 +56,7 @@
           "items": [
             { "fr": "Salut Karol ! Tu vas bien ?", "pl": "Cześć Karol! Jak się masz?" },
             { "fr": "Bonjour, madame. Vous allez bien ?", "pl": "Dzień dobry pani. Jak się pani miewa?" },
-            { "fr": "Les enfants, vous êtes prêts ?", "pl": "Dzieci, jesteście gotowe?" }
+            { "fr": "Inès et Mathis, vous allez bien ?", "pl": "Inès i Mathis, dobrze się macie?" }
           ]
         },
         {
@@ -94,8 +87,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "Po francusku zaimek stoi **zawsze** przed czasownikiem, także tam, gdzie po polsku go pomijamy: « Mieszka w Lille » = **Elle** habite à Lille.\n**ils** – grupa mężczyzn albo grupa mieszana, **elles** – same kobiety.",
-            "fr": "En français, le pronom est **toujours** devant le verbe : **Elle** habite à Lille.\n**ils** : un groupe d'hommes ou un groupe mixte ; **elles** : seulement des femmes."
+            "pl": "Po francusku zaimek stoi **zawsze** przed czasownikiem, także tam, gdzie po polsku go pomijamy: « Jest w kinie » = **Elle** est au cinéma.\n**ils** – grupa mężczyzn albo grupa mieszana, **elles** – same kobiety.",
+            "fr": "En français, le pronom est **toujours** devant le verbe : **Elle** est au cinéma.\n**ils** : un groupe d'hommes ou un groupe mixte ; **elles** : seulement des femmes."
           }
         },
         {
@@ -138,14 +131,14 @@
           "items": [
             { "fr": "Bonjour, je m'appelle Igor.", "pl": "Dzień dobry, mam na imię Igor." },
             { "fr": "– Tu t'appelles comment ? – Je m'appelle Chloé.", "pl": "– Jak masz na imię? – Mam na imię Chloé." },
-            { "fr": "Enchantée ! Moi, c'est Margot.", "pl": "Miło mi! Ja jestem Margot." }
+            { "fr": "Bonjour ! Moi, c'est Margot.", "pl": "Dzień dobry! Ja jestem Margot." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Nie gub **m'**: je **m'**appelle, nie « je appelle ». Kobieta mówi **enchantée**, mężczyzna **enchanté** (wymowa ta sama).",
-            "fr": "N'oublie pas **m'** : je **m'**appelle. Une femme dit **enchantée**, un homme **enchanté** (même prononciation)."
+            "pl": "Nie gub **m'**: je **m'**appelle, nie « je appelle ».",
+            "fr": "N'oublie pas **m'** : je **m'**appelle."
           }
         }
       ]
@@ -181,21 +174,10 @@
           }
         },
         {
-          "type": "table",
-          "title": { "pl": "Znaki przy literach", "fr": "Les accents et la cédille" },
-          "head": ["", "nom", "exemple"],
-          "rows": [
-            ["é", "e accent aigu", "café, cinéma"],
-            ["è", "e accent grave", "très, mère"],
-            ["ê", "e accent circonflexe", "fenêtre, être"],
-            ["ç", "c cédille", "ça, français"]
-          ]
-        },
-        {
           "type": "examples",
           "title": { "pl": "Literowanie", "fr": "Épeler" },
           "items": [
-            { "fr": "– Votre nom, ça s'écrit comment ? – N-O-W-A-K.", "pl": "– Jak się pisze pana nazwisko? – N-O-W-A-K." },
+            { "fr": "– Nowak, comment ça s'écrit ? – N-O-W-A-K.", "pl": "– Jak się pisze Nowak? – N-O-W-A-K." },
             { "fr": "Wolski : double vé, o, elle, esse, ka, i.", "pl": "Wolski: W-O-L-S-K-I." },
             { "fr": "Annette, avec deux n et deux t.", "pl": "Annette, przez dwa n i dwa t." },
             { "fr": "Vous pouvez épeler, s'il vous plaît ?", "pl": "Czy może pan / pani przeliterować?" }
@@ -253,7 +235,7 @@
           "items": [
             { "fr": "Le croissant ? Un‿euro.", "pl": "Rogalik? Jedno euro." },
             { "fr": "Ça fait deux‿euros.", "pl": "To kosztuje dwa euro." },
-            { "fr": "Un café et un croissant : trois‿euros, s'il vous plaît.", "pl": "Kawa i rogalik: trzy euro, poproszę." },
+            { "fr": "Trois croissants : trois‿euros, s'il vous plaît.", "pl": "Trzy rogaliki: trzy euro, poproszę." },
             { "fr": "Le chocolat ? Six‿euros.", "pl": "Czekolada? Sześć euro." },
             { "fr": "Dix‿euros, s'il vous plaît.", "pl": "Dziesięć euro, poproszę." }
           ]
@@ -277,7 +259,7 @@
             { "fr": "– On est quel jour aujourd'hui ? – On est mercredi.", "pl": "– Jaki jest dzisiaj dzień? – Środa." },
             { "fr": "Quel jour sommes-nous ?", "pl": "Jaki dziś dzień?" },
             { "fr": "Aujourd'hui, c'est le 9 octobre ; demain, c'est le 10.", "pl": "Dziś jest 9 października, jutro 10." },
-            { "fr": "Mon anniversaire, c'est le premier juin.", "pl": "Moje urodziny są pierwszego czerwca." }
+            { "fr": "La fête du Travail, c'est le premier mai.", "pl": "Święto Pracy jest pierwszego maja." }
           ]
         },
         {
@@ -313,7 +295,8 @@
             { "fr": "janvier, février, mars", "pl": "styczeń, luty, marzec" },
             { "fr": "avril, mai, juin", "pl": "kwiecień, maj, czerwiec" },
             { "fr": "juillet, août, septembre", "pl": "lipiec, sierpień, wrzesień" },
-            { "fr": "octobre, novembre, décembre", "pl": "październik, listopad, grudzień" }
+            { "fr": "octobre, novembre, décembre", "pl": "październik, listopad, grudzień" },
+            { "fr": "le premier (1er)", "pl": "pierwszy (dzień miesiąca)", "def": "le premier mai, pas « le un mai »" }
           ]
         },
         {
@@ -341,10 +324,8 @@
           "type": "words",
           "title": { "pl": "Na powitanie", "fr": "Pour saluer" },
           "items": [
-            { "fr": "bonjour", "pl": "dzień dobry", "def": "le matin et la journée" },
-            { "fr": "bonsoir", "pl": "dobry wieczór", "def": "le soir" },
-            { "fr": "salut (fam.)", "pl": "cześć", "def": "entre amis, aussi pour partir" },
-            { "fr": "madame / monsieur", "pl": "pani / pan", "def": "pour parler poliment à une femme / à un homme" }
+            { "fr": "bonjour (madame, monsieur)", "pl": "dzień dobry (pani, panu)", "def": "avec tout le monde ; madame / monsieur : plus poli" },
+            { "fr": "salut (fam.)", "pl": "cześć", "def": "entre amis, aussi pour partir" }
           ]
         },
         {
@@ -352,19 +333,20 @@
           "title": { "pl": "Na pożegnanie", "fr": "Pour partir" },
           "items": [
             { "fr": "au revoir", "pl": "do widzenia", "def": "poli, avec tout le monde" },
+            { "fr": "salut / à plus / ciao (fam.)", "pl": "cześć / na razie / pa", "def": "entre amis" },
             { "fr": "à bientôt", "pl": "do zobaczenia wkrótce", "def": "on se revoit dans peu de temps" },
             { "fr": "à demain", "pl": "do jutra", "def": "on se revoit le jour suivant" },
-            { "fr": "à plus (fam.)", "pl": "na razie", "def": "entre amis, de « à plus tard »" },
-            { "fr": "ciao (fam.)", "pl": "pa", "def": "entre amis, un mot italien" }
+            { "fr": "bonne journée", "pl": "miłego dnia", "def": "pour partir, le matin ou l'après-midi" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Jak się masz?", "fr": "Ça va ?" },
           "items": [
-            { "fr": "Ça va ? – Ça va (bien).", "pl": "Jak leci? – W porządku (dobrze)." },
-            { "fr": "Tu vas bien ? / Vous allez bien ?", "pl": "Dobrze się czujesz? / Jak się pan / pani miewa?" },
-            { "fr": "Très bien, merci. Et toi ? / Et vous ?", "pl": "Bardzo dobrze, dziękuję. A ty? / A pan / pani?" }
+            { "fr": "Ça va ? – Oui, ça va, et toi ?", "pl": "Jak leci? – W porządku, a u ciebie?" },
+            { "fr": "Ça va bien, merci.", "pl": "Dobrze, dziękuję." },
+            { "fr": "Vous allez bien ? / Tu vas bien ?", "pl": "Jak się pan / pani miewa? / Dobrze się czujesz?" },
+            { "fr": "(Très) bien, merci, et vous ? / et toi ?", "pl": "(Bardzo) dobrze, dziękuję, a pan / pani? / a ty?" }
           ]
         },
         {
@@ -384,17 +366,17 @@
           "type": "words",
           "items": [
             { "fr": "s'il vous plaît / s'il te plaît", "pl": "proszę (prosząc o coś)", "def": "pour demander poliment ; vous / tu" },
-            { "fr": "merci / merci beaucoup", "pl": "dziękuję / bardzo dziękuję", "def": "pour remercier" },
-            { "fr": "de rien", "pl": "nie ma za co", "def": "la réponse à « merci »" },
             { "fr": "pardon", "pl": "przepraszam; słucham?", "def": "pour une petite erreur, ou pour faire répéter" },
-            { "fr": "excusez-moi / excuse-moi", "pl": "przepraszam", "def": "pour appeler quelqu'un ou pour s'excuser ; vous / tu" }
+            { "fr": "excusez-moi / excuse-moi", "pl": "przepraszam", "def": "pour appeler quelqu'un ou pour s'excuser ; vous / tu" },
+            { "fr": "serrer la main", "pl": "podać rękę", "def": "pour saluer une personne inconnue" },
+            { "fr": "faire la bise", "pl": "przywitać się buziakiem w policzek", "def": "pour saluer un ami, la famille" }
           ]
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "Un thé, s'il vous plaît.", "pl": "Poproszę herbatę." },
-            { "fr": "Tu m'aides, s'il te plaît ?", "pl": "Pomożesz mi, proszę?" },
+            { "fr": "Un croissant, s'il vous plaît.", "pl": "Poproszę rogalika." },
+            { "fr": "Tu peux répéter, s'il te plaît ?", "pl": "Możesz powtórzyć, proszę?" },
             { "fr": "Excusez-moi, monsieur, où sont les toilettes ?", "pl": "Przepraszam pana, gdzie są toalety?" },
             { "fr": "Pardon ? Vous pouvez répéter ?", "pl": "Słucham? Może pan / pani powtórzyć?" }
           ]
@@ -410,10 +392,8 @@
           "items": [
             { "fr": "Vous pouvez répéter, s'il vous plaît ?", "pl": "Może pan / pani powtórzyć?" },
             { "fr": "Je ne comprends pas.", "pl": "Nie rozumiem." },
-            { "fr": "Ça s'écrit comment ?", "pl": "Jak to się pisze?" },
+            { "fr": "Comment ça s'écrit ?", "pl": "Jak to się pisze?" },
             { "fr": "Comment on dit « dziękuję » en français ?", "pl": "Jak się mówi « dziękuję » po francusku?" },
-            { "fr": "Qu'est-ce que ça veut dire ?", "pl": "Co to znaczy?" },
-            { "fr": "Vous pouvez parler plus lentement ?", "pl": "Może pan / pani mówić wolniej?" },
             { "fr": "Excusez-moi, je suis en retard.", "pl": "Przepraszam za spóźnienie." }
           ]
         },
@@ -440,22 +420,22 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "On se fait la bise ?", "pl": "Witamy się buziakiem?" },
-            { "fr": "Enchanté, madame. – Enchantée.", "pl": "Miło mi panią poznać. – Mnie również." }
+            { "fr": "On se fait la bise ?", "pl": "Witamy się buziakiem?" }
           ]
         }
       ]
     },
     {
-      "kind": "phrases",
-      "title": "Quelques fêtes françaises",
+      "kind": "vocabulary",
+      "title": "Les fêtes",
       "blocks": [
         {
-          "type": "examples",
+          "type": "words",
           "items": [
-            { "fr": "Le premier mai, c'est la fête du Travail. Les gens offrent du muguet.", "pl": "Pierwszego maja jest Święto Pracy. Ludzie dają sobie konwalie." },
-            { "fr": "Le 21 juin, c'est la fête de la Musique : on joue de la musique dans la rue.", "pl": "21 czerwca jest Święto Muzyki: gra się muzykę na ulicach." },
-            { "fr": "Le 14 juillet, c'est la fête nationale : il y a un défilé et des feux d'artifice.", "pl": "14 lipca jest święto narodowe: jest defilada i fajerwerki." }
+            { "fr": "la fête nationale", "pl": "święto narodowe", "def": "le 14 juillet" },
+            { "fr": "la fête de la Musique", "pl": "Święto Muzyki", "def": "le 21 juin" },
+            { "fr": "la fête du Travail", "pl": "Święto Pracy", "def": "le premier mai" },
+            { "fr": "le Mardi gras", "pl": "ostatki (tłusty wtorek)", "def": "un mardi de février ou de mars" }
           ]
         },
         {

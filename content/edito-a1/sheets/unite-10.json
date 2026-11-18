@@ -33,7 +33,7 @@
           "type": "examples",
           "items": [
             { "fr": "Paul ne **me** comprend pas.", "pl": "Paweł mnie nie rozumie." },
-            { "fr": "Tu as un problème ? Je **t'**appelle ce soir.", "pl": "Masz problem? Zadzwonię do ciebie wieczorem." },
+            { "fr": "Tu es malade ? Je **t'**appelle ce soir.", "pl": "Jesteś chory? Zadzwonię do ciebie wieczorem." },
             { "fr": "Vous avez beaucoup de travail ? Je vais **vous** aider.", "pl": "Macie dużo pracy? Pomogę wam." }
           ]
         },
@@ -53,8 +53,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**pendant** + czas: jak długo trwała czynność („przez”): pendant six mois.\n**longtemps** = „długo”, stoi sam, bez rzeczownika: la réunion a duré **longtemps**.\n**toujours** = „nadal, wciąż”: czynność trwa dalej: il travaille **toujours** ici.",
-            "fr": "**pendant** + durée : combien de temps dure l'action : pendant six mois.\n**longtemps** = pendant beaucoup de temps, sans nom : la réunion a duré **longtemps**.\n**toujours** : l'action continue aujourd'hui : il travaille **toujours** ici."
+            "pl": "**pendant** + czas: jak długo trwała czynność („przez”): pendant six mois.\n**longtemps** = „długo”, stoi sam, bez rzeczownika: j'ai travaillé **longtemps**.\n**toujours** = „nadal, wciąż”: czynność trwa dalej: il travaille **toujours** ici.",
+            "fr": "**pendant** + durée : combien de temps dure l'action : pendant six mois.\n**longtemps** = pendant beaucoup de temps, sans nom : j'ai travaillé **longtemps**.\n**toujours** : l'action continue aujourd'hui : il travaille **toujours** ici."
           }
         },
         {
@@ -69,9 +69,9 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "Il a travaillé à Londres **pendant** cinq ans.", "pl": "Pracował w Londynie przez pięć lat." },
+            { "fr": "Il a travaillé à Paris **pendant** cinq ans.", "pl": "Pracował w Paryżu przez pięć lat." },
             { "fr": "Ce matin, nous avons travaillé **pendant** trois heures.", "pl": "Dziś rano pracowaliśmy przez trzy godziny." },
-            { "fr": "La réunion a duré **longtemps**.", "pl": "Zebranie trwało długo." },
+            { "fr": "J'ai travaillé **longtemps** sur ce dossier.", "pl": "Długo pracowałem nad tą sprawą." },
             { "fr": "Elle est **toujours** étudiante ? — Oui, elle finit son master en juin.", "pl": "Ona nadal jest studentką? — Tak, kończy studia magisterskie w czerwcu." }
           ]
         },
@@ -138,9 +138,9 @@
           "type": "examples",
           "items": [
             { "fr": "Mon travail est **très** intéressant.", "pl": "Moja praca jest bardzo ciekawa." },
-            { "fr": "Le salaire n'est pas **assez** élevé.", "pl": "Pensja nie jest wystarczająco wysoka." },
+            { "fr": "Le bureau n'est pas **assez** grand.", "pl": "Biuro nie jest wystarczająco duże." },
             { "fr": "Le bureau est **trop** loin de chez moi.", "pl": "Biuro jest za daleko od mojego domu." },
-            { "fr": "Je suis **un peu** stressé avant l'examen.", "pl": "Jestem trochę zestresowany przed egzaminem." },
+            { "fr": "Je suis **un peu** stressé avant la réunion.", "pl": "Jestem trochę zestresowany przed zebraniem." },
             { "fr": "J'aime **beaucoup** mes collègues.", "pl": "Bardzo lubię moich współpracowników." }
           ]
         },
@@ -161,40 +161,31 @@
           "type": "words",
           "title": { "pl": "Kampus", "fr": "Le campus" },
           "items": [
-            { "fr": "un campus", "pl": "kampus", "def": "le terrain et les bâtiments de l'université" },
-            { "fr": "un amphithéâtre (un amphi)", "pl": "aula wykładowa", "def": "grande salle pour les cours" },
-            { "fr": "une salle de cours", "pl": "sala zajęć" },
-            { "fr": "le restaurant universitaire (le resto U)", "pl": "stołówka studencka" },
-            { "fr": "une résidence universitaire", "pl": "akademik", "def": "les étudiants y habitent" },
-            { "fr": "un logement étudiant", "pl": "mieszkanie studenckie" },
-            { "fr": "le secrétariat", "pl": "sekretariat, dziekanat", "def": "le bureau où on s'inscrit et où on pose des questions" }
+            { "fr": "l'amphithéâtre / l'amphi", "pl": "aula wykładowa", "def": "une grande salle pour les cours" },
+            { "fr": "la bibliothèque", "pl": "biblioteka" },
+            { "fr": "le logement étudiant", "pl": "mieszkanie studenckie" },
+            { "fr": "le restaurant universitaire / le resto U (fam.)", "pl": "stołówka studencka" },
+            { "fr": "la salle de cours", "pl": "sala zajęć" },
+            { "fr": "le secrétariat", "pl": "sekretariat, dziekanat", "def": "le bureau où on s'inscrit et où on pose des questions" },
+            { "fr": "l'université", "pl": "uniwersytet" }
           ]
         },
         {
           "type": "words",
-          "title": { "pl": "Studia", "fr": "Les études" },
+          "title": { "pl": "Studia i osoby", "fr": "Les études et les personnes" },
           "items": [
-            { "fr": "s'inscrire à l'université", "pl": "zapisać się na studia" },
+            { "fr": "le cours", "pl": "zajęcia, wykład" },
+            { "fr": "le diplôme (la licence, le master, le doctorat)", "pl": "dyplom (licencjat, magisterium, doktorat)" },
+            { "fr": "l'enseignant / l'enseignante", "pl": "nauczyciel / nauczycielka", "def": "une personne qui donne des cours" },
+            { "fr": "l'étudiant / l'étudiante", "pl": "student / studentka" },
+            { "fr": "les études", "pl": "studia" },
+            { "fr": "étudier", "pl": "uczyć się, studiować" },
             { "fr": "faire des études", "pl": "studiować" },
             { "fr": "faire un stage", "pl": "odbywać staż" },
-            { "fr": "une formation", "pl": "kurs, szkolenie; wykształcenie", "def": "des cours pour apprendre un métier" },
-            { "fr": "une licence", "pl": "licencjat", "def": "diplôme après trois ans d'études" },
-            { "fr": "un master", "pl": "studia magisterskie", "def": "deux ans après la licence" },
-            { "fr": "un doctorat", "pl": "doktorat" },
-            { "fr": "un diplôme", "pl": "dyplom" },
-            { "fr": "un cours", "pl": "zajęcia, wykład" },
-            { "fr": "un examen", "pl": "egzamin" },
-            { "fr": "une note", "pl": "ocena", "def": "par exemple 15 sur 20" },
-            { "fr": "réussir un examen", "pl": "zdać egzamin" }
-          ]
-        },
-        {
-          "type": "words",
-          "title": { "pl": "Osoby", "fr": "Les personnes" },
-          "items": [
-            { "fr": "un étudiant / une étudiante", "pl": "student / studentka" },
-            { "fr": "un professeur / une professeure", "pl": "wykładowca / wykładowczyni, profesor" },
-            { "fr": "un enseignant / une enseignante", "pl": "nauczyciel / nauczycielka", "def": "personne qui donne des cours" }
+            { "fr": "la formation", "pl": "kurs, szkolenie; wykształcenie", "def": "des cours pour apprendre un métier" },
+            { "fr": "la note", "pl": "ocena", "def": "par exemple 15 sur 20" },
+            { "fr": "le professeur / la professeure", "pl": "wykładowca / wykładowczyni, profesor" },
+            { "fr": "s'inscrire", "pl": "zapisać się" }
           ]
         },
         {
@@ -204,47 +195,46 @@
             { "fr": "le droit", "pl": "prawo" },
             { "fr": "l'économie", "pl": "ekonomia" },
             { "fr": "l'informatique", "pl": "informatyka" },
-            { "fr": "les lettres", "pl": "filologia, nauki humanistyczne", "def": "la littérature et les langues" },
-            { "fr": "les sciences", "pl": "nauki ścisłe i przyrodnicze" },
-            { "fr": "les mathématiques (les maths)", "pl": "matematyka" }
+            { "fr": "les lettres", "pl": "filologia, nauki humanistyczne" },
+            { "fr": "les mathématiques", "pl": "matematyka" },
+            { "fr": "les sciences", "pl": "nauki ścisłe i przyrodnicze" }
           ]
         }
       ]
     },
     {
       "kind": "vocabulary",
-      "title": "L'entreprise et la vie professionnelle",
+      "title": "Le travail",
       "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Miejsca i warunki pracy", "fr": "Les lieux et les conditions de travail" },
+          "title": { "pl": "Warunki i miejsca pracy", "fr": "Les conditions et les lieux de travail" },
           "items": [
-            { "fr": "une entreprise", "pl": "firma, przedsiębiorstwo" },
-            { "fr": "un bureau", "pl": "biuro" },
-            { "fr": "un contrat", "pl": "umowa" },
-            { "fr": "un salaire", "pl": "pensja", "def": "l'argent qu'on gagne chaque mois" },
-            { "fr": "un stage", "pl": "staż, praktyki", "def": "travail pour apprendre, pendant les études" },
-            { "fr": "le poste", "pl": "stanowisko", "def": "le travail qu'on a dans l'entreprise" },
+            { "fr": "le bureau", "pl": "biuro" },
+            { "fr": "le contrat", "pl": "umowa" },
             { "fr": "les horaires", "pl": "godziny pracy", "def": "les heures où on commence et où on finit" },
-            { "fr": "la pause-déjeuner", "pl": "przerwa obiadowa" },
             { "fr": "la machine à café", "pl": "ekspres do kawy" },
+            { "fr": "la pause-déjeuner", "pl": "przerwa obiadowa" },
+            { "fr": "le poste", "pl": "stanowisko", "def": "le travail qu'on a dans l'entreprise" },
             { "fr": "le restaurant d'entreprise", "pl": "stołówka firmowa" },
-            { "fr": "le télétravail", "pl": "praca zdalna", "def": "on travaille à la maison" }
+            { "fr": "le salaire", "pl": "pensja", "def": "l'argent qu'on gagne chaque mois" },
+            { "fr": "le télétravail / faire du télétravail", "pl": "praca zdalna / pracować zdalnie", "def": "on travaille à la maison" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Zawody", "fr": "Les professions" },
           "items": [
-            { "fr": "un agriculteur / une agricultrice", "pl": "rolnik / rolniczka" },
-            { "fr": "un / une artiste", "pl": "artysta / artystka" },
-            { "fr": "un boucher / une bouchère", "pl": "rzeźnik / rzeźniczka" },
-            { "fr": "un chauffeur / une chauffeuse", "pl": "kierowca" },
-            { "fr": "un comédien / une comédienne", "pl": "aktor / aktorka" },
-            { "fr": "un danseur / une danseuse", "pl": "tancerz / tancerka" },
-            { "fr": "un / une libraire", "pl": "księgarz / księgarka", "def": "il vend des livres" },
-            { "fr": "un / une photographe", "pl": "fotograf / fotografka" },
-            { "fr": "un policier / une policière", "pl": "policjant / policjantka" }
+            { "fr": "l'agriculteur / l'agricultrice", "pl": "rolnik / rolniczka" },
+            { "fr": "l'artiste", "pl": "artysta / artystka" },
+            { "fr": "le boucher / la bouchère", "pl": "rzeźnik / rzeźniczka" },
+            { "fr": "le chauffeur", "pl": "kierowca" },
+            { "fr": "le comédien / la comédienne", "pl": "aktor / aktorka" },
+            { "fr": "le danseur / la danseuse", "pl": "tancerz / tancerka" },
+            { "fr": "le / la journaliste", "pl": "dziennikarz / dziennikarka" },
+            { "fr": "le / la libraire", "pl": "księgarz / księgarka", "def": "il vend des livres" },
+            { "fr": "le / la photographe", "pl": "fotograf / fotografka" },
+            { "fr": "le policier / la policière", "pl": "policjant / policjantka" }
           ]
         },
         {
@@ -263,58 +253,37 @@
           "type": "words",
           "title": { "pl": "Narzędzia komunikacji", "fr": "Les outils de communication" },
           "items": [
-            { "fr": "un ordinateur", "pl": "komputer" },
-            { "fr": "un téléphone (portable)", "pl": "telefon (komórkowy)" },
-            { "fr": "un mail / un courriel", "pl": "e-mail" },
-            { "fr": "une visioconférence", "pl": "wideokonferencja", "def": "réunion par vidéo, sur internet" },
-            { "fr": "un message", "pl": "wiadomość" },
-            { "fr": "une réunion", "pl": "spotkanie, zebranie" }
+            { "fr": "le mail / le courriel", "pl": "e-mail" },
+            { "fr": "l'ordinateur (portable)", "pl": "komputer (laptop)" },
+            { "fr": "le téléphone / le smartphone", "pl": "telefon / smartfon" },
+            { "fr": "la visioconférence", "pl": "wideokonferencja", "def": "une réunion par vidéo, sur Internet" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Osoby", "fr": "Les personnes" },
           "items": [
-            { "fr": "un / une collègue", "pl": "współpracownik / współpracowniczka" },
-            { "fr": "un directeur / une directrice", "pl": "dyrektor / dyrektorka", "def": "la personne qui dirige l'entreprise" },
-            { "fr": "un chef / une cheffe", "pl": "szef / szefowa" },
-            { "fr": "un / une responsable", "pl": "kierownik / kierowniczka, osoba odpowiedzialna" },
-            { "fr": "l'équipe", "pl": "zespół" }
+            { "fr": "le chef / la cheffe", "pl": "szef / szefowa" },
+            { "fr": "le / la collègue", "pl": "współpracownik / współpracowniczka" },
+            { "fr": "le directeur / la directrice", "pl": "dyrektor / dyrektorka", "def": "la personne qui dirige l'entreprise" },
+            { "fr": "l'équipe", "pl": "zespół" },
+            { "fr": "le / la responsable", "pl": "kierownik / kierowniczka, osoba odpowiedzialna" }
           ]
         }
       ]
     },
     {
       "kind": "phrases",
-      "title": "Parler de ses études et de son métier",
+      "title": "Parler de ses études",
       "blocks": [
         {
           "type": "examples",
-          "title": { "pl": "Studia", "fr": "Les études" },
           "items": [
-            { "fr": "Je suis étudiant en informatique.", "pl": "Studiuję informatykę." },
-            { "fr": "Je suis en deuxième année de licence.", "pl": "Jestem na drugim roku licencjatu." },
-            { "fr": "J'étudie à l'université de Varsovie.", "pl": "Studiuję na Uniwersytecie Warszawskim." },
-            { "fr": "J'ai un examen la semaine prochaine.", "pl": "W przyszłym tygodniu mam egzamin." }
+            { "fr": "J'étudie le droit.", "pl": "Studiuję prawo." },
+            { "fr": "Je suis étudiante en master d'économie.", "pl": "Jestem studentką studiów magisterskich z ekonomii." },
+            { "fr": "Je suis en quatrième année.", "pl": "Jestem na czwartym roku." },
+            { "fr": "J'ai eu ma licence l'année dernière.", "pl": "W zeszłym roku zrobiłem / zrobiłam licencjat." }
           ]
-        },
-        {
-          "type": "examples",
-          "title": { "pl": "Praca", "fr": "Le métier" },
-          "items": [
-            { "fr": "Qu'est-ce que vous faites dans la vie ?", "pl": "Czym się pan / pani zajmuje?" },
-            { "fr": "Je suis photographe dans une entreprise de transport.", "pl": "Jestem fotografem w firmie transportowej." },
-            { "fr": "Je travaille comme libraire dans une petite librairie.", "pl": "Pracuję jako księgarka w małej księgarni." },
-            { "fr": "J'ai travaillé chez Airbus pendant quatre ans.", "pl": "Pracowałem w Airbusie przez cztery lata." },
-            { "fr": "Je fais du télétravail deux jours par semaine.", "pl": "Pracuję zdalnie dwa dni w tygodniu." }
-          ]
-        },
-        {
-          "type": "warning",
-          "text": {
-            "pl": "Przed zawodem po **être** nie ma rodzajnika: je suis **photographe** (nie « je suis un photographe »).\n**chez** + nazwa firmy: je travaille **chez** Renault.",
-            "fr": "Après **être**, pas d'article devant la profession : je suis **photographe**.\n**chez** + nom de l'entreprise : je travaille **chez** Renault."
-          }
         }
       ]
     },
@@ -324,24 +293,37 @@
       "blocks": [
         {
           "type": "examples",
-          "title": { "pl": "Umiejętności", "fr": "Les compétences" },
           "items": [
-            { "fr": "Je parle anglais couramment.", "pl": "Mówię płynnie po angielsku." },
-            { "fr": "Je sais utiliser Excel.", "pl": "Umiem obsługiwać Excela." },
-            { "fr": "Je sais travailler en équipe.", "pl": "Potrafię pracować w zespole." },
-            { "fr": "Je suis organisé(e) et sérieux (sérieuse).", "pl": "Jestem zorganizowany i poważny (zorganizowana i poważna)." },
-            { "fr": "J'ai de l'expérience dans la vente.", "pl": "Mam doświadczenie w sprzedaży." }
+            { "fr": "J'aime être avec des enfants.", "pl": "Lubię przebywać z dziećmi." },
+            { "fr": "Je suis patient(e).", "pl": "Jestem cierpliwy / cierpliwa." },
+            { "fr": "Je rêve de travailler pour une équipe de sport.", "pl": "Marzę o pracy dla drużyny sportowej." },
+            { "fr": "Je veux être utile.", "pl": "Chcę być przydatny / przydatna." },
+            { "fr": "J'espère que je vais avoir un travail intéressant.", "pl": "Mam nadzieję, że będę mieć ciekawą pracę." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Parler de son métier",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Je suis comédienne.", "pl": "Jestem aktorką." },
+            { "fr": "Je suis artiste. / Je suis informaticien.", "pl": "Jestem artystą. / Jestem informatykiem." },
+            { "fr": "C'est un métier difficile.", "pl": "To trudny zawód." },
+            { "fr": "J'ai un rythme très différent.", "pl": "Mam zupełnie inny rytm dnia." },
+            { "fr": "Je travaille comme chauffeur.", "pl": "Pracuję jako kierowca." },
+            { "fr": "J'ai créé mon entreprise.", "pl": "Założyłem / założyłam własną firmę." }
           ]
         },
         {
-          "type": "examples",
-          "title": { "pl": "Plany zawodowe", "fr": "Le projet professionnel" },
-          "items": [
-            { "fr": "Plus tard, je voudrais devenir policier.", "pl": "W przyszłości chciałbym zostać policjantem." },
-            { "fr": "Mon projet, c'est de travailler à l'étranger.", "pl": "Moim planem jest praca za granicą." },
-            { "fr": "Je vais faire un stage cet été.", "pl": "Tego lata zrobię staż." },
-            { "fr": "J'aimerais créer mon entreprise.", "pl": "Chciałbym / chciałabym założyć własną firmę." }
-          ]
+          "type": "warning",
+          "text": {
+            "pl": "Przed zawodem po **être** nie ma rodzajnika: je suis **chauffeur** (nie « je suis un chauffeur »).",
+            "fr": "Après **être**, pas d'article devant la profession : je suis **chauffeur**."
+          }
         }
       ]
     }

@@ -40,10 +40,10 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "La Grèce est **plus** chaude **que** la Norvège.", "pl": "Grecja jest cieplejsza niż Norwegia." },
+            { "fr": "L'Espagne est **plus** grande **que** la Suisse.", "pl": "Hiszpania jest większa niż Szwajcaria." },
             { "fr": "Les hôtels sont **moins** chers en mai **qu'**en août.", "pl": "Hotele są tańsze w maju niż w sierpniu." },
             { "fr": "Ce restaurant est **meilleur que** l'autre.", "pl": "Ta restauracja jest lepsza niż tamta." },
-            { "fr": "La cuisine italienne est **meilleure que** la cuisine anglaise.", "pl": "Kuchnia włoska jest lepsza niż angielska." }
+            { "fr": "La cuisine italienne est **meilleure que** la cuisine allemande.", "pl": "Kuchnia włoska jest lepsza niż niemiecka." }
           ]
         },
         {
@@ -121,7 +121,7 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "L'été dernier, je **suis allée** en Croatie.", "pl": "Zeszłego lata pojechałam do Chorwacji." },
+            { "fr": "L'été dernier, je **suis allée** en Italie.", "pl": "Zeszłego lata pojechałam do Włoch." },
             { "fr": "Nous **sommes partis** le 2 août et nous **sommes rentrés** le 20.", "pl": "Wyjechaliśmy 2 sierpnia i wróciliśmy 20." },
             { "fr": "Le train **est arrivé** à Nice à midi.", "pl": "Pociąg przyjechał do Nicei w południe." },
             { "fr": "Mes amies **sont restées** une semaine à la montagne.", "pl": "Moje przyjaciółki zostały tydzień w górach." },
@@ -152,7 +152,7 @@
           "type": "table",
           "head": ["présent", "imparfait", "+"],
           "rows": [
-            ["c'est", "**c'était**", "adjectif : c'était magnifique"],
+            ["c'est", "**c'était**", "adjectif : c'était très joli"],
             ["il y a", "**il y avait**", "nom : il y avait beaucoup de touristes"],
             ["il fait", "**il faisait**", "météo : il faisait beau / chaud / froid"]
           ]
@@ -160,8 +160,8 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "Nous sommes allés à Biarritz. **C'était** génial !", "pl": "Pojechaliśmy do Biarritz. Było świetnie!" },
-            { "fr": "**Il y avait** une piscine à l'hôtel.", "pl": "W hotelu był basen." },
+            { "fr": "Nous sommes allés à Biarritz. **C'était** très joli !", "pl": "Pojechaliśmy do Biarritz. Było bardzo ładnie!" },
+            { "fr": "**Il y avait** un parking à l'hôtel.", "pl": "Przy hotelu był parking." },
             { "fr": "**Il faisait** beau et chaud : 30 degrés !", "pl": "Była ładna pogoda i było gorąco: 30 stopni!" },
             { "fr": "Les vacances ? **C'était** trop court !", "pl": "Wakacje? Były za krótkie!" }
           ]
@@ -222,67 +222,49 @@
       "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Miejsca i cele podróży", "fr": "Les lieux et les destinations" },
+          "title": { "pl": "Miejsca i cele podróży", "fr": "Les lieux, les destinations" },
           "items": [
-            { "fr": "la mer", "pl": "morze" },
-            { "fr": "une plage", "pl": "plaża" },
-            { "fr": "la montagne", "pl": "góry", "def": "on y fait du ski" },
             { "fr": "la campagne", "pl": "wieś", "def": "loin de la ville, avec des champs" },
-            { "fr": "une île", "pl": "wyspa", "def": "terre avec de l'eau tout autour" },
-            { "fr": "l'étranger", "pl": "zagranica", "def": "un autre pays (partir à l'étranger)" }
+            { "fr": "une île", "pl": "wyspa", "def": "une terre avec de l'eau tout autour" },
+            { "fr": "la mer", "pl": "morze" },
+            { "fr": "la montagne", "pl": "góry" },
+            { "fr": "un village", "pl": "wieś, wioska", "def": "une très petite ville" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Zakwaterowanie", "fr": "L'hébergement" },
           "items": [
-            { "fr": "un hôtel", "pl": "hotel" },
             { "fr": "un camping", "pl": "kemping, pole namiotowe", "def": "on dort sous une tente" },
-            { "fr": "une tente", "pl": "namiot" },
             { "fr": "une chambre d'hôtes", "pl": "pokój gościnny (u gospodarzy)", "def": "on dort chez un habitant" },
-            { "fr": "une location", "pl": "wynajem, wynajmowane mieszkanie", "def": "un appartement qu'on loue" },
             { "fr": "l'échange d'appartements / de maisons", "pl": "zamiana mieszkań / domów", "def": "on habite chez quelqu'un, il habite chez nous" },
-            { "fr": "une ferme", "pl": "gospodarstwo, farma", "def": "une maison à la campagne, avec des animaux" }
+            { "fr": "une ferme", "pl": "gospodarstwo, farma", "def": "une maison à la campagne, avec des animaux" },
+            { "fr": "un hôtel", "pl": "hotel" },
+            { "fr": "une location", "pl": "wynajem, wynajmowane mieszkanie", "def": "un appartement qu'on loue" },
+            { "fr": "une tente", "pl": "namiot" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Rezerwacja", "fr": "La réservation" },
           "items": [
-            { "fr": "réserver", "pl": "zarezerwować" },
-            { "fr": "une chambre simple / double", "pl": "pokój jednoosobowy / dwuosobowy" },
-            { "fr": "une chambre familiale", "pl": "pokój rodzinny", "def": "pour les parents et les enfants" },
-            { "fr": "un lit simple / double / bébé", "pl": "łóżko pojedyncze / podwójne / łóżeczko dziecięce" },
-            { "fr": "l'arrivée / le départ", "pl": "przyjazd / wyjazd" },
+            { "fr": "l'arrivée ≠ le départ", "pl": "przyjazd ≠ wyjazd" },
+            { "fr": "une chambre simple / double / familiale", "pl": "pokój jednoosobowy / dwuosobowy / rodzinny" },
+            { "fr": "un lit simple / double, un lit bébé", "pl": "łóżko pojedyncze / podwójne, łóżeczko dziecięce" },
             { "fr": "un parking", "pl": "parking" },
-            { "fr": "animaux acceptés", "pl": "zwierzęta mile widziane", "def": "on peut venir avec son chien ou son chat" },
-            { "fr": "une nuit", "pl": "noc (nocleg)" },
-            { "fr": "le petit-déjeuner compris", "pl": "śniadanie wliczone w cenę", "def": "on ne paie pas en plus" },
-            { "fr": "la clé", "pl": "klucz" },
-            { "fr": "complet / complète", "pl": "pełny, brak miejsc", "def": "il n'y a plus de chambre" },
-            { "fr": "libre", "pl": "wolny" }
+            { "fr": "le petit déjeuner compris", "pl": "śniadanie wliczone w cenę", "def": "on ne paie pas en plus" },
+            { "fr": "les animaux acceptés", "pl": "zwierzęta mile widziane", "def": "on peut venir avec son chien ou son chat" },
+            { "fr": "réserver une chambre", "pl": "zarezerwować pokój" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Środki transportu", "fr": "Les moyens de transport" },
           "items": [
-            { "fr": "l'avion", "pl": "samolot" },
-            { "fr": "le train", "pl": "pociąg" },
-            { "fr": "la voiture", "pl": "samochód" },
-            { "fr": "le bateau", "pl": "statek, łódź" },
+            { "fr": "l'avion → à l'aéroport", "pl": "samolot → na lotnisku" },
             { "fr": "le van", "pl": "van, kamper", "def": "une petite maison sur roues" },
-            { "fr": "le vélo", "pl": "rower" },
-            { "fr": "un billet", "pl": "bilet (na pociąg, samolot)" },
-            { "fr": "un aéroport", "pl": "lotnisko", "def": "les avions partent et arrivent ici" }
+            { "fr": "la voiture", "pl": "samochód" }
           ]
-        },
-        {
-          "type": "rule",
-          "text": {
-            "pl": "**en** + pojazd zamknięty: en avion, en train, en voiture, en bateau, en van.\n**à** + gdy jesteś na czymś albo idziesz: à vélo, à pied.",
-            "fr": "**en** + véhicule fermé : en avion, en train, en voiture, en bateau, en van.\n**à** + quand on est dessus ou qu'on marche : à vélo, à pied."
-          }
         },
         {
           "type": "words",
@@ -290,15 +272,11 @@
           "items": [
             { "fr": "se baigner", "pl": "kąpać się (w morzu, jeziorze)", "def": "aller dans l'eau" },
             { "fr": "bronzer", "pl": "opalać się", "def": "rester au soleil" },
-            { "fr": "visiter un musée", "pl": "zwiedzać muzeum" },
-            { "fr": "visiter un village", "pl": "zwiedzać wioskę" },
-            { "fr": "prendre des photos", "pl": "robić zdjęcia" },
-            { "fr": "goûter la cuisine locale", "pl": "próbować lokalnej kuchni" },
+            { "fr": "faire de la randonnée", "pl": "chodzić na wędrówki", "def": "une longue promenade à pied" },
             { "fr": "faire du surf", "pl": "surfować" },
-            { "fr": "faire du bateau", "pl": "pływać łódką" },
-            { "fr": "faire du ski", "pl": "jeździć na nartach" },
-            { "fr": "faire de la plongée", "pl": "nurkować", "def": "nager sous l'eau" },
-            { "fr": "se reposer", "pl": "odpoczywać" }
+            { "fr": "goûter la cuisine locale", "pl": "próbować lokalnej kuchni" },
+            { "fr": "prendre des photos", "pl": "robić zdjęcia" },
+            { "fr": "visiter un musée / un village (traditionnel)", "pl": "zwiedzać muzeum / (tradycyjną) wioskę" }
           ]
         }
       ]
@@ -309,14 +287,14 @@
       "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Miejsca", "fr": "Les lieux" },
+          "title": { "pl": "Miejsca", "fr": "La nature, les lieux" },
           "items": [
+            { "fr": "un champ", "pl": "pole", "def": "un grand terrain à la campagne" },
+            { "fr": "un chemin", "pl": "ścieżka, droga", "def": "une petite route, dans la nature" },
             { "fr": "une forêt", "pl": "las", "def": "beaucoup d'arbres" },
             { "fr": "un lac", "pl": "jezioro" },
-            { "fr": "une rivière", "pl": "rzeka" },
-            { "fr": "un champ", "pl": "pole", "def": "on y cultive du blé, du maïs" },
-            { "fr": "un chemin", "pl": "ścieżka, droga", "def": "une petite route à pied, dans la nature" },
-            { "fr": "un paysage", "pl": "krajobraz", "def": "ce qu'on voit dans la nature" }
+            { "fr": "une plage", "pl": "plaża" },
+            { "fr": "une rivière", "pl": "rzeka" }
           ]
         },
         {
@@ -333,34 +311,24 @@
           "type": "words",
           "title": { "pl": "Zwierzęta", "fr": "Les animaux" },
           "items": [
+            { "fr": "un canard", "pl": "kaczka" },
+            { "fr": "un chat", "pl": "kot" },
+            { "fr": "un cheval / des chevaux", "pl": "koń / konie" },
+            { "fr": "un chien", "pl": "pies" },
+            { "fr": "un lapin", "pl": "królik" },
             { "fr": "un oiseau / des oiseaux", "pl": "ptak / ptaki" },
             { "fr": "un poisson", "pl": "ryba" },
-            { "fr": "une vache", "pl": "krowa" },
-            { "fr": "un cheval / des chevaux", "pl": "koń / konie" },
-            { "fr": "un lapin", "pl": "królik" },
-            { "fr": "un canard", "pl": "kaczka" },
             { "fr": "une poule", "pl": "kura" },
-            { "fr": "un chat", "pl": "kot" },
-            { "fr": "un chien", "pl": "pies" }
+            { "fr": "une vache", "pl": "krowa" }
           ]
         },
         {
           "type": "words",
-          "title": { "pl": "Aktywności", "fr": "Les activités" },
+          "title": { "pl": "Aktywności na łonie natury", "fr": "Les activités" },
           "items": [
-            { "fr": "se promener", "pl": "spacerować" },
-            { "fr": "faire une randonnée", "pl": "wybrać się na wędrówkę", "def": "une longue promenade à pied" },
+            { "fr": "faire du bateau", "pl": "pływać łódką" },
+            { "fr": "faire de la plongée", "pl": "nurkować", "def": "nager sous l'eau" },
             { "fr": "pique-niquer", "pl": "urządzić piknik", "def": "manger dehors, dans l'herbe" }
-          ]
-        },
-        {
-          "type": "words",
-          "title": { "pl": "Opis krajobrazu", "fr": "Décrire un paysage" },
-          "items": [
-            { "fr": "magnifique", "pl": "wspaniały", "def": "très beau" },
-            { "fr": "sauvage", "pl": "dziki", "def": "sans maisons, sans routes" },
-            { "fr": "calme", "pl": "spokojny" },
-            { "fr": "vert(e)", "pl": "zielony" }
           ]
         }
       ]
@@ -374,10 +342,10 @@
           "title": { "pl": "Klient", "fr": "Le client" },
           "items": [
             { "fr": "Bonjour, je voudrais réserver une chambre double, s'il vous plaît.", "pl": "Dzień dobry, chciałbym / chciałabym zarezerwować pokój dwuosobowy." },
-            { "fr": "Du 12 au 15 juillet, pour trois nuits.", "pl": "Od 12 do 15 lipca, na trzy noce." },
-            { "fr": "Vous avez une chambre avec vue sur la mer ?", "pl": "Czy ma pan / pani pokój z widokiem na morze?" },
-            { "fr": "C'est combien, la nuit ?", "pl": "Ile kosztuje noc?" },
-            { "fr": "Le petit-déjeuner est compris ?", "pl": "Czy śniadanie jest wliczone w cenę?" }
+            { "fr": "Du 12 au 15 juillet, pour deux personnes.", "pl": "Od 12 do 15 lipca, dla dwóch osób." },
+            { "fr": "Vous avez une chambre familiale ?", "pl": "Czy ma pan / pani pokój rodzinny?" },
+            { "fr": "Le petit déjeuner est compris ?", "pl": "Czy śniadanie jest wliczone w cenę?" },
+            { "fr": "Il y a un parking ? Les animaux sont acceptés ?", "pl": "Czy jest parking? Czy można przyjechać ze zwierzętami?" }
           ]
         },
         {
@@ -386,9 +354,9 @@
           "items": [
             { "fr": "Pour combien de personnes ?", "pl": "Dla ilu osób?" },
             { "fr": "C'est à quel nom ?", "pl": "Na jakie nazwisko?" },
-            { "fr": "La chambre coûte 90 euros, petit-déjeuner compris.", "pl": "Pokój kosztuje 90 euro ze śniadaniem." },
-            { "fr": "Désolé, l'hôtel est complet ce week-end.", "pl": "Przykro mi, w ten weekend hotel nie ma wolnych miejsc." },
-            { "fr": "Voici votre clé, chambre 24, au deuxième étage.", "pl": "Oto pana / pani klucz, pokój 24, na drugim piętrze." }
+            { "fr": "La chambre coûte 90 euros, petit déjeuner compris.", "pl": "Pokój kosztuje 90 euro ze śniadaniem." },
+            { "fr": "L'arrivée est à 15 heures et le départ à 11 heures.", "pl": "Przyjazd jest o 15, a wyjazd o 11." },
+            { "fr": "Il y a un lit bébé dans la chambre.", "pl": "W pokoju jest łóżeczko dziecięce." }
           ]
         }
       ]
@@ -400,12 +368,25 @@
         {
           "type": "examples",
           "items": [
-            { "fr": "C'est une ville ancienne et très animée.", "pl": "To stare i bardzo tętniące życiem miasto." },
-            { "fr": "Il y a beaucoup de monuments et de musées.", "pl": "Jest tam dużo zabytków i muzeów." },
+            { "fr": "Il y a une rivière et un petit village.", "pl": "Jest tam rzeka i mała wioska." },
+            { "fr": "On voit des arbres, des champs et des vaches.", "pl": "Widać drzewa, pola i krowy." },
+            { "fr": "C'est très joli !", "pl": "Jest bardzo ładnie!" },
             { "fr": "La Belgique est plus petite que la France.", "pl": "Belgia jest mniejsza niż Francja." },
-            { "fr": "En été, il fait chaud et il y a beaucoup de touristes.", "pl": "Latem jest gorąco i jest dużo turystów." },
-            { "fr": "C'est un paysage sauvage, avec des lacs et des forêts.", "pl": "To dziki krajobraz z jeziorami i lasami." },
-            { "fr": "On peut se baigner, faire du bateau et se promener.", "pl": "Można się kąpać, pływać łódką i spacerować." }
+            { "fr": "En été, il fait chaud et il y a beaucoup de touristes.", "pl": "Latem jest gorąco i jest dużo turystów." }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "phrases",
+      "title": "Exprimer la préférence",
+      "blocks": [
+        {
+          "type": "examples",
+          "items": [
+            { "fr": "Tu préfères la mer ou la montagne ?", "pl": "Wolisz morze czy góry?" },
+            { "fr": "Je préfère la campagne.", "pl": "Wolę wieś." },
+            { "fr": "J'aime mieux le camping que l'hôtel.", "pl": "Wolę kemping niż hotel." }
           ]
         }
       ]
@@ -416,28 +397,27 @@
       "blocks": [
         {
           "type": "examples",
-          "title": { "pl": "Powitanie", "fr": "Commencer" },
+          "title": { "pl": "Powitanie", "fr": "Pour commencer" },
           "items": [
-            { "fr": "Chère Julie, / Cher Marc,", "pl": "Droga Julio, / Drogi Marku," },
-            { "fr": "Salut tout le monde !", "pl": "Cześć wszystkim!" }
+            { "fr": "Salut Julie ! / Bonjour Marc !", "pl": "Cześć, Julio! / Dzień dobry, Marku!" },
+            { "fr": "Chère Julie, / Cher Marc,", "pl": "Droga Julio, / Drogi Marku," }
           ]
         },
         {
           "type": "examples",
           "title": { "pl": "Treść", "fr": "Raconter" },
           "items": [
-            { "fr": "Je suis à Biarritz depuis une semaine.", "pl": "Jestem w Biarritz od tygodnia." },
             { "fr": "Il fait beau et la mer est chaude.", "pl": "Jest ładna pogoda, a morze jest ciepłe." },
-            { "fr": "Hier, nous sommes allés à la plage. C'était super !", "pl": "Wczoraj poszliśmy na plażę. Było super!" },
-            { "fr": "L'hôtel est petit mais très agréable.", "pl": "Hotel jest mały, ale bardzo przyjemny." }
+            { "fr": "Hier, nous sommes allés à la plage. C'était très joli !", "pl": "Wczoraj poszliśmy na plażę. Było bardzo ładnie!" },
+            { "fr": "L'hôtel est petit, mais très joli.", "pl": "Hotel jest mały, ale bardzo ładny." }
           ]
         },
         {
           "type": "examples",
-          "title": { "pl": "Pożegnanie", "fr": "Terminer" },
+          "title": { "pl": "Pożegnanie", "fr": "Pour finir" },
           "items": [
             { "fr": "À bientôt !", "pl": "Do zobaczenia wkrótce!" },
-            { "fr": "Je t'embrasse. / Grosses bises !", "pl": "Ściskam cię. / Buziaki!" }
+            { "fr": "Bisous ! / Je t'embrasse.", "pl": "Buziaki! / Ściskam cię." }
           ]
         },
         {

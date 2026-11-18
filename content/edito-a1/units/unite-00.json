@@ -55,7 +55,7 @@
       "pl": "rogalik (croissant)",
       "def": "une viennoiserie en forme de lune, pour le petit déjeuner",
       "examples": [
-        { "fr": "Le matin, je mange un croissant.", "pl": "Rano jem rogalika." }
+        { "fr": "Un croissant, s'il vous plaît !", "pl": "Poproszę rogalika!" }
       ],
       "tip": {
         "pl": "rodzaj męski: le croissant; końcowe t jest nieme",
@@ -84,7 +84,7 @@
       "pl": "ja, ty, on / ona, my, wy (pan, pani), oni / one",
       "def": "les pronoms sujets remplacent le nom devant le verbe",
       "examples": [
-        { "fr": "Nadia est française. Elle habite à Lille.", "pl": "Nadia jest Francuzką. Mieszka w Lille." }
+        { "fr": "Nadia ? Elle est au cinéma.", "pl": "Nadia? Jest w kinie." }
       ],
       "tip": {
         "pl": "ils: grupa męska albo mieszana, elles: same kobiety; po francusku zaimek stoi zawsze przed czasownikiem",
@@ -127,7 +127,7 @@
       "pl": "alfabet: literowanie (Jak to się pisze?)",
       "def": "dire les lettres d'un mot une par une",
       "examples": [
-        { "fr": "– Votre nom ? – Nowak. – Ça s'écrit comment ? – N-O-W-A-K.", "pl": "– Pana nazwisko? – Nowak. – Jak to się pisze? – N-O-W-A-K." },
+        { "fr": "– Nowak, ça s'écrit comment ? – N-O-W-A-K.", "pl": "– Jak się pisze Nowak? – N-O-W-A-K." },
         { "fr": "Wolski : double vé, o, elle, esse, ka, i.", "pl": "Wolski: W-O-L-S-K-I." }
       ],
       "tip": {
@@ -142,9 +142,7 @@
       "fr": "é, è, ê, ç",
       "pl": "litery z akcentami: é, è, ê, ç",
       "def": "é = e accent aigu, è = e accent grave, ê = e accent circonflexe, ç = c cédille",
-      "audio": {
-        "text": "e accent aigu, e accent grave, e accent circonflexe, c cédille"
-      },
+      "audio": { "text": "e accent aigu, e accent grave, e accent circonflexe, c cédille" },
       "examples": [
         { "fr": "Hélène : H, e accent aigu, L, e accent grave, N, E.", "pl": "Hélène: H-É-L-È-N-E." }
       ],
@@ -152,7 +150,9 @@
         "pl": "aigu (´) – é; grave (`) – è; circonflexe (^) – ê; cédille pod c: ç czytamy jak s",
         "fr": "aigu (´) : é ; grave (`) : è ; circonflexe (^) : ê ; la cédille : ç se prononce comme s"
       },
-      "tags": ["grammaire"]
+      "tags": ["grammaire"],
+      "deprecated": true,
+      "replacedBy": "u00-alphabet"
     },
     {
       "id": "u00-nombres-0-10",
@@ -160,7 +160,7 @@
       "pl": "liczby 0–10",
       "def": "les nombres de zéro à dix",
       "examples": [
-        { "fr": "J'ai deux frères et une sœur.", "pl": "Mam dwóch braci i siostrę." }
+        { "fr": "Deux croissants, s'il vous plaît !", "pl": "Dwa rogaliki, poproszę!" }
       ],
       "tip": {
         "pl": "deux (2) ≠ douze (12), six (6) ≠ dix (10)",
@@ -175,8 +175,8 @@
       "pl": "liczby 11–19",
       "def": "de 11 à 16, des mots spéciaux ; ensuite dix + sept, dix + huit, dix + neuf",
       "examples": [
-        { "fr": "Mon frère a quinze ans.", "pl": "Mój brat ma piętnaście lat." },
-        { "fr": "J'ai dix-huit ans aujourd'hui !", "pl": "Kończę dziś osiemnaście lat!" }
+        { "fr": "Aujourd'hui, c'est le quinze mai.", "pl": "Dziś jest piętnasty maja." },
+        { "fr": "Ça fait dix-huit euros.", "pl": "To kosztuje osiemnaście euro." }
       ],
       "tip": {
         "pl": "11–16 mają własne nazwy, od 17 liczymy: dix-sept (10 + 7), z łącznikiem; treize (13) ≠ trente (30), douze (12) ≠ deux (2)",
@@ -191,7 +191,7 @@
       "pl": "liczby 20–31",
       "def": "vingt, vingt et un, vingt-deux, vingt-trois… trente, trente et un",
       "examples": [
-        { "fr": "Le mois de mai a trente et un jours.", "pl": "Maj ma trzydzieści jeden dni." }
+        { "fr": "En mai, il y a trente et un jours.", "pl": "Maj ma trzydzieści jeden dni." }
       ],
       "tip": {
         "pl": "w 21 i 31 jest « et » bez łączników: vingt et un; dalej łącznik: vingt-deux; t w vingt jest nieme, ale słychać je w 21–29",
@@ -252,8 +252,8 @@
       "pl": "poniedziałek, wtorek, środa, czwartek, piątek",
       "def": "les cinq jours de la semaine de travail",
       "examples": [
-        { "fr": "Mardi, j'ai un cours de français.", "pl": "We wtorek mam lekcję francuskiego." },
-        { "fr": "Lundi, je commence le travail à huit heures.", "pl": "W poniedziałek zaczynam pracę o ósmej." }
+        { "fr": "Mardi, je suis au cinéma.", "pl": "We wtorek jestem w kinie." },
+        { "fr": "Après lundi, il y a mardi.", "pl": "Po poniedziałku jest wtorek." }
       ],
       "tip": {
         "pl": "dni tygodnia piszemy małą literą i są rodzaju męskiego; mardi = wtorek (2.), mercredi = środa (3.): nie myl ich",
@@ -268,7 +268,7 @@
       "pl": "sobota, niedziela",
       "def": "les deux jours du week-end",
       "examples": [
-        { "fr": "Samedi, je dors jusqu'à dix heures.", "pl": "W sobotę śpię do dziesiątej." }
+        { "fr": "Dimanche, je suis au restaurant.", "pl": "W niedzielę jestem w restauracji." }
       ],
       "tip": {
         "pl": "le week-end = sobota i niedziela; małą literą, rodzaj męski",
@@ -283,7 +283,7 @@
       "pl": "styczeń, luty, marzec, kwiecień",
       "def": "les quatre premiers mois de l'année",
       "examples": [
-        { "fr": "En février, il fait froid à Varsovie.", "pl": "W lutym w Warszawie jest zimno." }
+        { "fr": "Aujourd'hui, c'est le premier avril.", "pl": "Dziś jest pierwszy kwietnia." }
       ],
       "tip": {
         "pl": "miesiące piszemy małą literą; février z é",
@@ -296,10 +296,10 @@
       "id": "u00-mois-mai-aout",
       "fr": "mai, juin, juillet, août",
       "pl": "maj, czerwiec, lipiec, sierpień",
-      "def": "les mois du printemps et de l'été",
+      "def": "les mois cinq à huit de l'année",
       "examples": [
-        { "fr": "L'été commence en juin.", "pl": "Lato zaczyna się w czerwcu." },
-        { "fr": "En juillet, je pars en vacances.", "pl": "W lipcu wyjeżdżam na wakacje." }
+        { "fr": "La fête de la Musique, c'est le 21 juin.", "pl": "Święto Muzyki jest 21 czerwca." },
+        { "fr": "La fête nationale, c'est le 14 juillet.", "pl": "Święto narodowe jest 14 lipca." }
       ],
       "tip": {
         "pl": "juin = czerwiec (6.), juillet = lipiec (7.): juin jest krótsze i wcześniejsze; août z û",
@@ -314,7 +314,7 @@
       "pl": "wrzesień, październik, listopad, grudzień",
       "def": "les quatre derniers mois de l'année",
       "examples": [
-        { "fr": "En octobre, les jours sont plus courts.", "pl": "W październiku dni są krótsze." }
+        { "fr": "Demain, c'est le premier octobre.", "pl": "Jutro jest pierwszy października." }
       ],
       "tip": {
         "pl": "miesiące piszemy małą literą; septembre to 9., a nie 7. miesiąc; décembre z é",
@@ -325,16 +325,16 @@
     },
     {
       "id": "u00-saluer",
-      "fr": "bonjour, bonsoir, salut, madame / monsieur",
-      "pl": "dzień dobry, dobry wieczór, cześć, pani / pan",
-      "def": "pour dire bonjour : le matin, le soir, entre amis, poliment",
+      "fr": "bonjour, salut, madame / monsieur",
+      "pl": "dzień dobry, cześć, pani / pan",
+      "def": "pour dire bonjour : poliment, ou entre amis",
       "examples": [
         { "fr": "– Bonjour, monsieur. – Bonjour, madame.", "pl": "– Dzień dobry panu. – Dzień dobry pani." },
         { "fr": "Salut, Théo ! Ça va ?", "pl": "Cześć, Théo! Jak leci?" }
       ],
       "tip": {
-        "pl": "bonjour w ciągu dnia, bonsoir wieczorem; salut tylko na ty; do nieznajomych « bonjour, madame / monsieur », zwykle bez nazwiska",
-        "fr": "bonjour : la journée ; bonsoir : le soir ; salut : seulement avec tu ; bonjour, madame / monsieur : plus poli"
+        "pl": "bonjour: zawsze; salut: tylko na ty; bonjour, madame / monsieur: grzeczniej",
+        "fr": "bonjour : avec tout le monde ; salut : seulement avec tu ; bonjour, madame / monsieur : plus poli"
       },
       "confusables": ["u00-prendre-conge"],
       "tags": ["vocabulaire"]
@@ -345,8 +345,8 @@
       "pl": "do widzenia, do zobaczenia, do jutra, na razie",
       "def": "pour partir : poliment, ou entre amis",
       "examples": [
-        { "fr": "Merci, au revoir, madame !", "pl": "Dziękuję, do widzenia pani!" },
-        { "fr": "Bonne soirée, à demain !", "pl": "Miłego wieczoru, do jutra!" }
+        { "fr": "Au revoir, madame !", "pl": "Do widzenia pani!" },
+        { "fr": "Bonne journée, à demain !", "pl": "Miłego dnia, do jutra!" }
       ],
       "tip": {
         "pl": "au revoir pasuje zawsze; à + kiedy się zobaczymy: à demain, à lundi, à bientôt; à plus (à plus tard) tylko na ty",
@@ -371,16 +371,16 @@
     },
     {
       "id": "u00-politesse",
-      "fr": "s'il vous plaît, merci, pardon, excusez-moi",
-      "pl": "proszę, dziękuję, przepraszam",
-      "def": "les mots pour demander, remercier et s'excuser",
+      "fr": "s'il vous plaît, pardon, excusez-moi",
+      "pl": "proszę, przepraszam",
+      "def": "les mots pour demander et pour s'excuser",
       "examples": [
-        { "fr": "Un thé, s'il vous plaît.", "pl": "Poproszę herbatę." },
-        { "fr": "Excusez-moi, monsieur, où est la banque ?", "pl": "Przepraszam pana, gdzie jest bank?" }
+        { "fr": "Un croissant, s'il vous plaît.", "pl": "Poproszę rogalika." },
+        { "fr": "Excusez-moi, monsieur, où sont les toilettes ?", "pl": "Przepraszam pana, gdzie są toalety?" }
       ],
       "tip": {
-        "pl": "s'il vous plaît / excusez-moi do osoby na vous, s'il te plaît / excuse-moi na tu; pardon ? = słucham?; odpowiedź na merci: de rien",
-        "fr": "s'il vous plaît, excusez-moi avec vous ; s'il te plaît, excuse-moi avec tu ; pardon ? pour faire répéter ; merci → de rien"
+        "pl": "s'il vous plaît, excusez-moi: do pana / pani; s'il te plaît, excuse-moi: na ty; pardon? = słucham?",
+        "fr": "s'il vous plaît, excusez-moi avec vous ; s'il te plaît, excuse-moi avec tu ; pardon ? pour faire répéter"
       },
       "tags": ["vocabulaire"]
     },
@@ -405,7 +405,7 @@
       "pl": "restauracja",
       "def": "un endroit où on mange un repas",
       "examples": [
-        { "fr": "Ce restaurant est petit, mais très bon.", "pl": "Ta restauracja jest mała, ale bardzo dobra." }
+        { "fr": "Margot et Théo sont au restaurant.", "pl": "Margot i Théo są w restauracji." }
       ],
       "tip": {
         "pl": "rodzaj męski (le restaurant), choć « restauracja » jest żeńska; końcowego t nie wymawiamy",
@@ -419,7 +419,7 @@
       "pl": "kino",
       "def": "on y regarde des films sur un grand écran",
       "examples": [
-        { "fr": "Il y a un nouveau film au cinéma.", "pl": "W kinie jest nowy film." }
+        { "fr": "Samedi, je suis au cinéma.", "pl": "W sobotę jestem w kinie." }
       ],
       "tip": {
         "pl": "rodzaj męski: le cinéma; akcent na é",
@@ -508,7 +508,7 @@
       "pl": "czekolada",
       "def": "un aliment sucré, souvent brun",
       "examples": [
-        { "fr": "Les enfants adorent le chocolat.", "pl": "Dzieci uwielbiają czekoladę." }
+        { "fr": "Un chocolat, s'il vous plaît !", "pl": "Poproszę czekoladę (do picia)!" }
       ],
       "tip": {
         "pl": "rodzaj męski (le chocolat), choć « czekolada » jest żeńska; końcowe t jest nieme",
@@ -1155,59 +1155,56 @@
   ],
   "exercises": [
     { "id": "u00-tu-1", "type": "gap-fill", "entryIds": ["u00-tu-vous"], "data": { "sentence": "Salut Karol ! ___ vas bien ?", "answers": ["Tu"], "pl": "Cześć Karol! Jak się masz?" } },
-    { "id": "u00-tu-4", "type": "translate-pl-fr", "entryIds": ["u00-tu-vous"], "data": { "pl": "jesteś studentką? (do koleżanki)", "answers": ["tu es étudiante ?", "es-tu étudiante ?"] } },
+    { "id": "u00-tu-4", "type": "translate-pl-fr", "entryIds": ["u00-tu-vous"], "data": { "pl": "dobrze się czujesz? (do koleżanki)", "answers": ["tu vas bien ?", "est-ce que tu vas bien ?", "vas-tu bien ?"] } },
     { "id": "u00-vous-1", "type": "gap-fill", "entryIds": ["u00-tu-vous"], "data": { "sentence": "Bonjour madame, ___ allez bien ?", "answers": ["vous"], "pl": "Dzień dobry pani, jak się pani miewa?" } },
-    { "id": "u00-vous-3", "type": "gap-fill", "entryIds": ["u00-tu-vous"], "data": { "sentence": "Les enfants, ___ êtes prêts ?", "answers": ["vous"], "pl": "Dzieci, jesteście gotowe?" } },
-    { "id": "u00-vous-4", "type": "translate-pl-fr", "entryIds": ["u00-tu-vous"], "data": { "pl": "czy pani jest Francuzką?", "answers": ["vous êtes française ?", "êtes-vous française ?"] } },
-    { "id": "u00-pronoms-sujets-1", "type": "gap-fill", "entryIds": ["u00-pronoms-sujets"], "data": { "sentence": "Nadia est française. ___ habite à Lille.", "answers": ["Elle"], "pl": "Nadia jest Francuzką. Mieszka w Lille." } },
+    { "id": "u00-vous-3", "type": "gap-fill", "entryIds": ["u00-tu-vous"], "data": { "sentence": "Inès et Mathis, ___ allez bien ?", "answers": ["vous"], "pl": "Inès i Mathis, dobrze się macie?" } },
+    { "id": "u00-vous-4", "type": "translate-pl-fr", "entryIds": ["u00-tu-vous"], "data": { "pl": "dobrze się pani czuje?", "answers": ["vous allez bien ?", "est-ce que vous allez bien ?", "allez-vous bien ?"] } },
+    { "id": "u00-pronoms-sujets-1", "type": "gap-fill", "entryIds": ["u00-pronoms-sujets"], "data": { "sentence": "Nadia ? ___ est en retard.", "answers": ["Elle"], "pl": "Nadia? Jest spóźniona.", "clue": "(une fille)" } },
     { "id": "u00-pronoms-sujets-2", "type": "gap-fill", "entryIds": ["u00-pronoms-sujets"], "data": { "sentence": "Inès et Mathis ? ___ sont au cinéma.", "answers": ["Ils"], "pl": "Inès i Mathis? Są w kinie.", "clue": "(une fille et un garçon)" } },
     { "id": "u00-pronoms-sujets-4", "type": "gap-fill", "entryIds": ["u00-pronoms-sujets"], "data": { "sentence": "Chloé et Margot ? ___ sont au cinéma.", "answers": ["Elles"], "pl": "Chloé i Margot? Są w kinie.", "clue": "(deux filles)" } },
-    { "id": "u00-pronoms-sujets-5", "type": "translate-pl-fr", "entryIds": ["u00-pronoms-sujets"], "data": { "pl": "one są w muzeum", "answers": ["elles sont au musée"] } },
+    { "id": "u00-pronoms-sujets-5", "type": "translate-pl-fr", "entryIds": ["u00-pronoms-sujets"], "data": { "pl": "oni są w restauracji", "answers": ["ils sont au restaurant"] } },
     { "id": "u00-pronoms-toniques-1", "type": "gap-fill", "entryIds": ["u00-pronoms-toniques"], "data": { "sentence": "___, je m'appelle Zofia. Et toi ?", "answers": ["Moi"], "pl": "Ja mam na imię Zofia. A ty?" } },
     { "id": "u00-pronoms-toniques-3", "type": "gap-fill", "entryIds": ["u00-pronoms-toniques"], "data": { "sentence": "Très bien, merci. Et ___, madame ?", "answers": ["vous"], "pl": "Bardzo dobrze, dziękuję. A pani?" } },
     { "id": "u00-pronoms-toniques-4", "type": "translate-pl-fr", "entryIds": ["u00-pronoms-toniques"], "data": { "pl": "a ty?", "answers": ["et toi ?"] } },
-    { "id": "u00-je-mappelle-1", "type": "gap-fill", "entryIds": ["u00-je-mappelle"], "data": { "sentence": "Enchantée ! Moi, je ___ Margot.", "answers": ["m'appelle"], "pl": "Miło mi! Ja mam na imię Margot." } },
+    { "id": "u00-je-mappelle-1", "type": "gap-fill", "entryIds": ["u00-je-mappelle"], "data": { "sentence": "Bonjour ! Moi, je ___ Margot.", "answers": ["m'appelle"], "pl": "Dzień dobry! Mam na imię Margot." } },
     { "id": "u00-je-mappelle-2", "type": "gap-fill", "entryIds": ["u00-je-mappelle"], "data": { "sentence": "Bonjour, ___ m'appelle Théo.", "answers": ["je"], "pl": "Dzień dobry, mam na imię Théo." } },
-    { "id": "u00-je-mappelle-4", "type": "translate-pl-fr", "entryIds": ["u00-je-mappelle"], "data": { "pl": "mam na imię Bruno", "answers": ["je m'appelle Bruno", "moi, je m'appelle Bruno", "moi je m'appelle Bruno"] } },
-    { "id": "u00-epeler-1", "type": "gap-fill", "entryIds": ["u00-alphabet"], "data": { "sentence": "Votre nom, ça ___ comment ?", "answers": ["s'écrit"], "pl": "Pana nazwisko – jak to się pisze?" } },
+    { "id": "u00-je-mappelle-4", "type": "translate-pl-fr", "entryIds": ["u00-je-mappelle"], "data": { "pl": "mam na imię Bruno", "answers": ["je m'appelle Bruno", "moi, je m'appelle Bruno"] } },
+    { "id": "u00-epeler-1", "type": "gap-fill", "entryIds": ["u00-alphabet"], "data": { "sentence": "Margot, ça ___ comment ?", "answers": ["s'écrit"], "pl": "Jak się pisze Margot?" } },
     { "id": "u00-epeler-4", "type": "translate-pl-fr", "entryIds": ["u00-alphabet"], "data": { "pl": "jak to się pisze?", "answers": ["ça s'écrit comment ?", "comment ça s'écrit ?", "comment est-ce que ça s'écrit ?"] } },
     { "id": "u00-alphabet-voyelles-1", "type": "gap-fill", "entryIds": ["u00-alphabet"], "data": { "sentence": "La lettre Y se dit « ___ ».", "answers": ["i grec"], "pl": "Jak Francuzi nazywają literę Y?" } },
     { "id": "u00-alphabet-consonnes-1", "type": "gap-fill", "entryIds": ["u00-alphabet"], "data": { "sentence": "La lettre J se dit « ___ ».", "answers": ["ji"], "pl": "Jak Francuzi nazywają literę J?" } },
     { "id": "u00-alphabet-consonnes-2", "type": "gap-fill", "entryIds": ["u00-alphabet"], "data": { "sentence": "« gé », c'est la lettre ___.", "answers": ["g"], "pl": "« gé » to która litera?" } },
-    { "id": "u00-accents-1", "type": "gap-fill", "entryIds": ["u00-accents"], "data": { "sentence": "« Café » s'écrit avec un e accent ___.", "answers": ["aigu"], "pl": "Jaki akcent ma e w « café »?" } },
-    { "id": "u00-accents-3", "type": "gap-fill", "entryIds": ["u00-accents"], "data": { "sentence": "« Fenêtre » s'écrit avec un e accent ___.", "answers": ["circonflexe"], "pl": "Jaki akcent ma e w « fenêtre »?" } },
-    { "id": "u00-accents-6", "type": "translate-pl-fr", "entryIds": ["u00-accents"], "data": { "pl": "jak, literując, nazwiesz literę « ç »?", "answers": ["c cédille"] } },
-    { "id": "u00-nombres-0-10-2", "type": "gap-fill", "entryIds": ["u00-nombres-0-10"], "data": { "sentence": "Mon fils a ___ ans. (6)", "answers": ["six"], "pl": "Mój syn ma sześć lat." } },
+    { "id": "u00-nombres-0-10-2", "type": "gap-fill", "entryIds": ["u00-nombres-0-10"], "data": { "sentence": "___ croissants, s'il vous plaît ! (6)", "answers": ["Six"], "pl": "Sześć rogalików, poproszę!" } },
     { "id": "u00-nombres-0-10-4", "type": "gap-fill", "entryIds": ["u00-nombres-0-10"], "data": { "sentence": "Sept, huit, ___, dix.", "answers": ["neuf"], "pl": "Siedem, osiem, dziewięć, dziesięć." } },
-    { "id": "u00-nombres-0-10-6", "type": "translate-pl-fr", "entryIds": ["u00-nombres-0-10"], "data": { "pl": "dziesięć", "answers": ["dix", "10"] } },
-    { "id": "u00-nombres-11-16-1", "type": "gap-fill", "entryIds": ["u00-nombres-11-19"], "data": { "sentence": "Midi, c'est ___ heures. (12)", "answers": ["douze"], "pl": "Południe to godzina dwunasta." } },
-    { "id": "u00-nombres-11-16-2", "type": "gap-fill", "entryIds": ["u00-nombres-11-19"], "data": { "sentence": "Ma sœur a ___ ans. (13)", "answers": ["treize"], "pl": "Moja siostra ma trzynaście lat." } },
-    { "id": "u00-nombres-11-16-5", "type": "translate-pl-fr", "entryIds": ["u00-nombres-11-19"], "data": { "pl": "piętnaście", "answers": ["quinze", "15"] } },
-    { "id": "u00-nombres-17-19-2", "type": "gap-fill", "entryIds": ["u00-nombres-11-19"], "data": { "sentence": "En France, on vote à ___ ans. (18)", "answers": ["dix-huit", "dix huit"], "pl": "We Francji głosuje się od osiemnastego roku życia." } },
-    { "id": "u00-nombres-17-19-3", "type": "gap-fill", "entryIds": ["u00-nombres-11-19"], "data": { "sentence": "Le magasin ferme à ___ heures. (19)", "answers": ["dix-neuf", "dix neuf"], "pl": "Sklep zamyka się o dziewiętnastej." } },
-    { "id": "u00-nombres-20-31-1", "type": "gap-fill", "entryIds": ["u00-nombres-20-31"], "data": { "sentence": "Le mois d'avril a ___ jours. (30)", "answers": ["trente"], "pl": "Kwiecień ma trzydzieści dni." } },
-    { "id": "u00-nombres-20-31-3", "type": "gap-fill", "entryIds": ["u00-nombres-20-31"], "data": { "sentence": "Margot a ___ ans. (21)", "answers": ["vingt et un", "vingt-et-un"], "pl": "Margot ma dwadzieścia jeden lat." } },
-    { "id": "u00-nombres-20-31-5", "type": "translate-pl-fr", "entryIds": ["u00-nombres-20-31"], "data": { "pl": "dwadzieścia jeden", "answers": ["vingt et un", "vingt-et-un", "21"] } },
+    { "id": "u00-nombres-0-10-6", "type": "translate-pl-fr", "entryIds": ["u00-nombres-0-10"], "data": { "pl": "dziesięć", "answers": ["dix"] } },
+    { "id": "u00-nombres-11-16-1", "type": "gap-fill", "entryIds": ["u00-nombres-11-19"], "data": { "sentence": "Aujourd'hui, c'est le ___ mars. (12)", "answers": ["douze"], "pl": "Dziś jest dwunasty marca." } },
+    { "id": "u00-nombres-11-16-2", "type": "gap-fill", "entryIds": ["u00-nombres-11-19"], "data": { "sentence": "Dix euros et trois euros : ___ euros. (13)", "answers": ["treize"], "pl": "Dziesięć euro i trzy euro: trzynaście euro." } },
+    { "id": "u00-nombres-11-16-5", "type": "translate-pl-fr", "entryIds": ["u00-nombres-11-19"], "data": { "pl": "piętnaście", "answers": ["quinze"] } },
+    { "id": "u00-nombres-17-19-2", "type": "gap-fill", "entryIds": ["u00-nombres-11-19"], "data": { "sentence": "Demain, c'est le ___ juin. (18)", "answers": ["dix-huit"], "pl": "Jutro jest osiemnasty czerwca." } },
+    { "id": "u00-nombres-17-19-3", "type": "gap-fill", "entryIds": ["u00-nombres-11-19"], "data": { "sentence": "Ça fait ___ euros. (19)", "answers": ["dix-neuf"], "pl": "To kosztuje dziewiętnaście euro." } },
+    { "id": "u00-nombres-20-31-1", "type": "gap-fill", "entryIds": ["u00-nombres-20-31"], "data": { "sentence": "En avril, il y a ___ jours. (30)", "answers": ["trente"], "pl": "Kwiecień ma trzydzieści dni." } },
+    { "id": "u00-nombres-20-31-3", "type": "gap-fill", "entryIds": ["u00-nombres-20-31"], "data": { "sentence": "La fête de la Musique, c'est le ___ juin. (21)", "answers": ["vingt et un"], "pl": "Święto Muzyki jest dwudziestego pierwszego czerwca." } },
+    { "id": "u00-nombres-20-31-5", "type": "translate-pl-fr", "entryIds": ["u00-nombres-20-31"], "data": { "pl": "dwadzieścia jeden", "answers": ["vingt et un"] } },
     { "id": "u00-liaison-1", "type": "gap-fill", "entryIds": ["u00-liaison"], "data": { "sentence": "Dans « deux euros », on entend le son [___] entre les deux mots.", "answers": ["z"], "pl": "Jaki dźwięk słychać między słowami w « deux euros »?" } },
     { "id": "u00-liaison-7", "type": "translate-pl-fr", "entryIds": ["u00-liaison"], "data": { "pl": "dwa euro", "answers": ["deux euros"] } },
     { "id": "u00-liaison-8", "type": "gap-fill", "entryIds": ["u00-liaison"], "data": { "sentence": "Dans « un euro », on entend le son [___] entre les deux mots.", "answers": ["n"], "pl": "Jaki dźwięk słychać między słowami w « un euro »?" } },
     { "id": "u00-liaison-9", "type": "gap-fill", "entryIds": ["u00-liaison"], "data": { "sentence": "Dans « dix euros », on entend le son [___] entre les deux mots.", "answers": ["z"], "pl": "Jaki dźwięk słychać między słowami w « dix euros »?" } },
     { "id": "u00-liaison-10", "type": "translate-pl-fr", "entryIds": ["u00-liaison"], "data": { "pl": "jedno euro", "answers": ["un euro"], "hint": { "pl": "przed « euro » słychać [n]", "fr": "devant « euro », on entend [n]" } } },
-    { "id": "u00-restaurant-1", "type": "gap-fill", "entryIds": ["u00-restaurant"], "data": { "sentence": "Ce soir, on mange dans un ___ italien.", "answers": ["restaurant"], "pl": "Dziś wieczorem jemy we włoskiej restauracji.", "clue": "(on y mange et on paie l'addition)" } },
-    { "id": "u00-restaurant-2", "type": "gap-fill", "entryIds": ["u00-restaurant"], "data": { "sentence": "C'est ___ restaurant très connu à Lyon.", "answers": ["un"], "pl": "To bardzo znana restauracja w Lyonie.", "clue": "(article indéfini)" } },
+    { "id": "u00-restaurant-1", "type": "gap-fill", "entryIds": ["u00-restaurant"], "data": { "sentence": "Margot et Théo sont au ___.", "answers": ["restaurant"], "pl": "Margot i Théo są w restauracji.", "clue": "(on y mange)" } },
+    { "id": "u00-restaurant-2", "type": "gap-fill", "entryIds": ["u00-restaurant"], "data": { "sentence": "Ici, c'est ___ restaurant ou un cinéma ?", "answers": ["un"], "pl": "Tu jest restauracja czy kino?", "clue": "(article indéfini)" } },
     { "id": "u00-restaurant-3", "type": "translate-pl-fr", "entryIds": ["u00-restaurant"], "data": { "pl": "restauracja", "answers": ["un restaurant", "le restaurant"] } },
-    { "id": "u00-cinema-1", "type": "gap-fill", "entryIds": ["u00-cinema"], "data": { "sentence": "Samedi soir, je vais au ___ voir un film.", "answers": ["cinéma"], "pl": "W sobotę wieczorem idę do kina na film.", "clue": "(on y regarde des films)" } },
-    { "id": "u00-cinema-2", "type": "gap-fill", "entryIds": ["u00-cinema"], "data": { "sentence": "Il y a ___ cinéma dans ton quartier ?", "answers": ["un"], "pl": "Czy w twojej dzielnicy jest kino?", "clue": "(article indéfini)" } },
+    { "id": "u00-cinema-1", "type": "gap-fill", "entryIds": ["u00-cinema"], "data": { "sentence": "Samedi, je suis au ___.", "answers": ["cinéma"], "pl": "W sobotę jestem w kinie.", "clue": "(on y voit des films)" } },
+    { "id": "u00-cinema-2", "type": "gap-fill", "entryIds": ["u00-cinema"], "data": { "sentence": "Il y a ___ cinéma à Lille ?", "answers": ["un"], "pl": "Czy w Lille jest kino?", "clue": "(article indéfini)" } },
     { "id": "u00-cinema-3", "type": "translate-pl-fr", "entryIds": ["u00-cinema"], "data": { "pl": "kino", "answers": ["un cinéma", "le cinéma"] } },
-    { "id": "u00-chocolat-1", "type": "gap-fill", "entryIds": ["u00-chocolat"], "data": { "sentence": "Pour le dessert, je prends une mousse au ___.", "answers": ["chocolat"], "pl": "Na deser biorę mus czekoladowy.", "clue": "(un dessert sucré et brun)" } },
-    { "id": "u00-chocolat-2", "type": "gap-fill", "entryIds": ["u00-chocolat"], "data": { "sentence": "J'adore ___ chocolat noir.", "answers": ["le"], "pl": "Uwielbiam gorzką czekoladę.", "clue": "(article défini)" } },
+    { "id": "u00-chocolat-1", "type": "gap-fill", "entryIds": ["u00-chocolat"], "data": { "sentence": "Un ___, s'il vous plaît !", "answers": ["chocolat"], "pl": "Poproszę czekoladę (do picia)!", "clue": "(une boisson sucrée et brune)" } },
+    { "id": "u00-chocolat-2", "type": "gap-fill", "entryIds": ["u00-chocolat"], "data": { "sentence": "Chocolat est masculin : on dit ___ chocolat.", "answers": ["le"], "pl": "Czekolada jest rodzaju męskiego: mówimy le chocolat.", "clue": "(article défini)" } },
     { "id": "u00-chocolat-3", "type": "translate-pl-fr", "entryIds": ["u00-chocolat"], "data": { "pl": "czekolada", "answers": ["le chocolat", "du chocolat", "un chocolat"] } },
-    { "id": "u00-croissant-1", "type": "gap-fill", "entryIds": ["u00-croissant"], "data": { "sentence": "Un café et un ___, s'il vous plaît !", "answers": ["croissant"], "pl": "Poproszę kawę i rogalika!", "clue": "(on le mange le matin avec un café)" } },
-    { "id": "u00-croissant-2", "type": "gap-fill", "entryIds": ["u00-croissant"], "data": { "sentence": "J'adore ___ croissants !", "answers": ["les"], "pl": "Uwielbiam rogaliki!", "clue": "(article défini, pluriel)" } },
+    { "id": "u00-croissant-1", "type": "gap-fill", "entryIds": ["u00-croissant"], "data": { "sentence": "Deux ___, s'il vous plaît !", "answers": ["croissants"], "pl": "Dwa rogaliki, poproszę!", "clue": "(on les mange le matin)" } },
+    { "id": "u00-croissant-2", "type": "gap-fill", "entryIds": ["u00-croissant"], "data": { "sentence": "– Pardon, ça s'écrit comment ? – ___ : C-R-O-I-S-S-A-N-T.", "answers": ["Croissant"], "pl": "– Przepraszam, jak to się pisze? – Croissant: C-R-O-I-S-S-A-N-T." } },
     { "id": "u00-croissant-3", "type": "translate-pl-fr", "entryIds": ["u00-croissant"], "data": { "pl": "rogalik (croissant)", "answers": ["un croissant", "le croissant"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
     { "id": "u00-date-1", "type": "gap-fill", "entryIds": ["u00-date"], "data": { "sentence": "La fête du Travail, c'est le ___ mai.", "answers": ["premier", "1er"], "pl": "Święto Pracy to pierwszy maja.", "clue": "(le jour numéro 1)" } },
     { "id": "u00-date-2", "type": "gap-fill", "entryIds": ["u00-date"], "data": { "sentence": "Aujourd'hui, c'est ___ 9 octobre.", "answers": ["le"], "pl": "Dziś jest 9 października." } },
-    { "id": "u00-date-4", "type": "translate-pl-fr", "entryIds": ["u00-date"], "data": { "pl": "12 października", "answers": ["le douze octobre", "le 12 octobre"] } },
+    { "id": "u00-date-4", "type": "translate-pl-fr", "entryIds": ["u00-date"], "data": { "pl": "12 października", "answers": ["le douze octobre"] } },
     { "id": "u00-aujourdhui-demain-1", "type": "gap-fill", "entryIds": ["u00-aujourdhui-demain"], "data": { "sentence": "___, c'est jeudi, et demain, c'est vendredi.", "answers": ["Aujourd'hui"], "pl": "Dziś jest czwartek, a jutro piątek." } },
     { "id": "u00-aujourdhui-demain-2", "type": "gap-fill", "entryIds": ["u00-aujourdhui-demain"], "data": { "sentence": "Aujourd'hui, c'est samedi, donc ___, c'est dimanche.", "answers": ["demain"], "pl": "Dziś jest sobota, więc jutro niedziela." } },
     { "id": "u00-quel-jour-1", "type": "gap-fill", "entryIds": ["u00-aujourdhui-demain"], "data": { "sentence": "On est ___ jour aujourd'hui ?", "answers": ["quel"], "pl": "Jaki jest dzisiaj dzień?" } },
@@ -1217,45 +1214,43 @@
     { "id": "u00-mardi-3", "type": "translate-pl-fr", "entryIds": ["u00-jours-semaine"], "data": { "pl": "wtorek", "answers": ["mardi", "le mardi"] } },
     { "id": "u00-mercredi-2", "type": "gap-fill", "entryIds": ["u00-jours-semaine"], "data": { "sentence": "Avant jeudi, il y a ___.", "answers": ["mercredi"], "pl": "Przed czwartkiem jest środa." } },
     { "id": "u00-mercredi-3", "type": "translate-pl-fr", "entryIds": ["u00-jours-semaine"], "data": { "pl": "środa", "answers": ["mercredi", "le mercredi"] } },
-    { "id": "u00-vendredi-2", "type": "gap-fill", "entryIds": ["u00-jours-semaine"], "data": { "sentence": "Le jour avant le week-end, c'est ___.", "answers": ["vendredi"], "pl": "Dzień przed weekendem to piątek." } },
+    { "id": "u00-vendredi-2", "type": "gap-fill", "entryIds": ["u00-jours-semaine"], "data": { "sentence": "Après jeudi, il y a ___.", "answers": ["vendredi"], "pl": "Po czwartku jest piątek." } },
     { "id": "u00-samedi-1", "type": "gap-fill", "entryIds": ["u00-jours-weekend"], "data": { "sentence": "Vendredi, ___, dimanche.", "answers": ["samedi"], "pl": "Piątek, sobota, niedziela." } },
-    { "id": "u00-samedi-2", "type": "gap-fill", "entryIds": ["u00-jours-weekend"], "data": { "sentence": "Le week-end, c'est ___ et dimanche.", "answers": ["samedi"], "pl": "Weekend to sobota i niedziela." } },
+    { "id": "u00-samedi-2", "type": "gap-fill", "entryIds": ["u00-jours-weekend"], "data": { "sentence": "Après vendredi, il y a ___.", "answers": ["samedi"], "pl": "Po piątku jest sobota." } },
     { "id": "u00-samedi-3", "type": "translate-pl-fr", "entryIds": ["u00-jours-weekend"], "data": { "pl": "sobota", "answers": ["samedi", "le samedi"] } },
-    { "id": "u00-dimanche-1", "type": "gap-fill", "entryIds": ["u00-jours-weekend"], "data": { "sentence": "Vendredi, samedi, ___ : c'est la fin de la semaine.", "answers": ["dimanche"], "pl": "Piątek, sobota, niedziela: to koniec tygodnia." } },
+    { "id": "u00-dimanche-1", "type": "gap-fill", "entryIds": ["u00-jours-weekend"], "data": { "sentence": "Vendredi, samedi, ___.", "answers": ["dimanche"], "pl": "Piątek, sobota, niedziela." } },
     { "id": "u00-dimanche-3", "type": "translate-pl-fr", "entryIds": ["u00-jours-weekend"], "data": { "pl": "niedziela", "answers": ["dimanche", "le dimanche"] } },
     { "id": "u00-janvier-2", "type": "gap-fill", "entryIds": ["u00-mois-janvier-avril"], "data": { "sentence": "Le premier mois de l'année, c'est ___.", "answers": ["janvier"], "pl": "Pierwszy miesiąc roku to styczeń." } },
-    { "id": "u00-fevrier-2", "type": "gap-fill", "entryIds": ["u00-mois-janvier-avril"], "data": { "sentence": "Le mois le plus court de l'année, c'est ___.", "answers": ["février"], "pl": "Najkrótszy miesiąc roku to luty." } },
+    { "id": "u00-fevrier-2", "type": "gap-fill", "entryIds": ["u00-mois-janvier-avril"], "data": { "sentence": "Janvier, ___, mars.", "answers": ["février"], "pl": "Styczeń, luty, marzec." } },
     { "id": "u00-fevrier-3", "type": "translate-pl-fr", "entryIds": ["u00-mois-janvier-avril"], "data": { "pl": "luty", "answers": ["février"] } },
     { "id": "u00-mars-1", "type": "gap-fill", "entryIds": ["u00-mois-janvier-avril"], "data": { "sentence": "Février, ___, avril.", "answers": ["mars"], "pl": "Luty, marzec, kwiecień." } },
-    { "id": "u00-avril-2", "type": "gap-fill", "entryIds": ["u00-mois-janvier-avril"], "data": { "sentence": "Le quatrième mois de l'année, c'est ___.", "answers": ["avril"], "pl": "Czwarty miesiąc roku to kwiecień." } },
+    { "id": "u00-avril-2", "type": "gap-fill", "entryIds": ["u00-mois-janvier-avril"], "data": { "sentence": "Mars, ___, mai.", "answers": ["avril"], "pl": "Marzec, kwiecień, maj." } },
     { "id": "u00-mai-2", "type": "gap-fill", "entryIds": ["u00-mois-mai-aout"], "data": { "sentence": "La fête du Travail, c'est le premier ___.", "answers": ["mai"], "pl": "Święto Pracy jest pierwszego maja." } },
     { "id": "u00-juin-2", "type": "gap-fill", "entryIds": ["u00-mois-mai-aout"], "data": { "sentence": "La fête de la Musique, c'est le 21 ___.", "answers": ["juin"], "pl": "Święto Muzyki jest 21 czerwca." } },
     { "id": "u00-juin-3", "type": "translate-pl-fr", "entryIds": ["u00-mois-mai-aout"], "data": { "pl": "czerwiec", "answers": ["juin"] } },
-    { "id": "u00-juillet-2", "type": "gap-fill", "entryIds": ["u00-mois-mai-aout"], "data": { "sentence": "La fête nationale française, c'est le 14 ___.", "answers": ["juillet"], "pl": "Francuskie święto narodowe jest 14 lipca." } },
+    { "id": "u00-juillet-2", "type": "gap-fill", "entryIds": ["u00-mois-mai-aout"], "data": { "sentence": "La fête nationale, c'est le 14 ___.", "answers": ["juillet"], "pl": "Święto narodowe jest 14 lipca." } },
     { "id": "u00-juillet-3", "type": "translate-pl-fr", "entryIds": ["u00-mois-mai-aout"], "data": { "pl": "lipiec", "answers": ["juillet"] } },
-    { "id": "u00-septembre-2", "type": "gap-fill", "entryIds": ["u00-mois-septembre-decembre"], "data": { "sentence": "En France, l'école recommence en ___.", "answers": ["septembre"], "pl": "We Francji szkoła zaczyna się znowu we wrześniu." } },
+    { "id": "u00-septembre-2", "type": "gap-fill", "entryIds": ["u00-mois-septembre-decembre"], "data": { "sentence": "Août, ___, octobre.", "answers": ["septembre"], "pl": "Sierpień, wrzesień, październik." } },
     { "id": "u00-septembre-3", "type": "translate-pl-fr", "entryIds": ["u00-mois-septembre-decembre"], "data": { "pl": "wrzesień", "answers": ["septembre"] } },
     { "id": "u00-octobre-1", "type": "gap-fill", "entryIds": ["u00-mois-septembre-decembre"], "data": { "sentence": "Septembre, ___, novembre.", "answers": ["octobre"], "pl": "Wrzesień, październik, listopad." } },
-    { "id": "u00-novembre-2", "type": "gap-fill", "entryIds": ["u00-mois-septembre-decembre"], "data": { "sentence": "Le onzième mois de l'année, c'est ___.", "answers": ["novembre"], "pl": "Jedenasty miesiąc roku to listopad." } },
-    { "id": "u00-decembre-2", "type": "gap-fill", "entryIds": ["u00-mois-septembre-decembre"], "data": { "sentence": "Noël, c'est le 25 ___.", "answers": ["décembre"], "pl": "Boże Narodzenie jest 25 grudnia." } },
-    { "id": "u00-bonjour-2", "type": "gap-fill", "entryIds": ["u00-saluer"], "data": { "sentence": "Le matin, à la boulangerie, je dis « ___ » à la vendeuse.", "answers": ["bonjour"], "pl": "Rano w piekarni mówię sprzedawczyni « dzień dobry »." } },
-    { "id": "u00-bonsoir-1", "type": "gap-fill", "entryIds": ["u00-saluer"], "data": { "sentence": "Il est huit heures du soir : « ___, monsieur ! »", "answers": ["Bonsoir"], "pl": "Jest ósma wieczorem: « Dobry wieczór panu! »" } },
-    { "id": "u00-salut-1", "type": "gap-fill", "entryIds": ["u00-saluer"], "data": { "sentence": "Entre amis, pour dire bonjour, on dit souvent « ___ ! ».", "answers": ["salut", "coucou"], "pl": "Między przyjaciółmi na powitanie często mówi się « cześć! »." } },
-    { "id": "u00-madame-monsieur-2", "type": "gap-fill", "entryIds": ["u00-saluer"], "data": { "sentence": "Excusez-moi, ___, où est la gare ?", "answers": ["monsieur"], "pl": "Przepraszam pana, gdzie jest dworzec?", "clue": "(à un homme)" } },
-    { "id": "u00-madame-monsieur-3", "type": "translate-pl-fr", "entryIds": ["u00-saluer"], "data": { "pl": "dzień dobry pani", "answers": ["bonjour madame", "bonjour, madame"] } },
-    { "id": "u00-au-revoir-1", "type": "gap-fill", "entryIds": ["u00-prendre-conge"], "data": { "sentence": "On arrive : « Bonjour, monsieur ! ». On part : « ___, monsieur ! »", "answers": ["Au revoir", "Bonne journée", "À bientôt", "À demain"], "pl": "Przychodzimy: « Dzień dobry panu! ». Wychodzimy: « Do widzenia panu! »", "clue": "(pour partir)" } },
+    { "id": "u00-novembre-2", "type": "gap-fill", "entryIds": ["u00-mois-septembre-decembre"], "data": { "sentence": "Octobre, ___, décembre.", "answers": ["novembre"], "pl": "Październik, listopad, grudzień." } },
+    { "id": "u00-decembre-2", "type": "gap-fill", "entryIds": ["u00-mois-septembre-decembre"], "data": { "sentence": "Octobre, novembre, ___.", "answers": ["décembre"], "pl": "Październik, listopad, grudzień." } },
+    { "id": "u00-bonjour-2", "type": "gap-fill", "entryIds": ["u00-saluer"], "data": { "sentence": "« ___, madame ! » – « Bonjour, monsieur ! »", "answers": ["Bonjour"], "pl": "„Dzień dobry pani!” – „Dzień dobry panu!”" } },
+    { "id": "u00-salut-1", "type": "gap-fill", "entryIds": ["u00-saluer"], "data": { "sentence": "« ___, Théo ! Ça va ? » – « Ça va, et toi ? »", "answers": ["Salut"], "pl": "„Cześć, Théo! Jak leci?” – „W porządku, a u ciebie?”", "clue": "(fam.)" } },
+    { "id": "u00-madame-monsieur-2", "type": "gap-fill", "entryIds": ["u00-saluer"], "data": { "sentence": "Bonjour, ___ ! Vous allez bien ?", "answers": ["madame"], "pl": "Dzień dobry pani! Jak się pani miewa?", "clue": "(une femme)" } },
+    { "id": "u00-madame-monsieur-3", "type": "translate-pl-fr", "entryIds": ["u00-saluer"], "data": { "pl": "dzień dobry pani", "answers": ["bonjour madame"] } },
+    { "id": "u00-au-revoir-1", "type": "gap-fill", "entryIds": ["u00-prendre-conge"], "data": { "sentence": "« Bonjour, monsieur ! » … « ___, monsieur ! »", "answers": ["Au revoir", "Bonne journée", "À bientôt", "À demain"], "pl": "„Dzień dobry panu!” … „Do widzenia panu!”", "clue": "(pour partir)" } },
     { "id": "u00-au-revoir-3", "type": "translate-pl-fr", "entryIds": ["u00-prendre-conge"], "data": { "pl": "do widzenia", "answers": ["au revoir"] } },
-    { "id": "u00-a-bientot-1", "type": "gap-fill", "entryIds": ["u00-prendre-conge"], "data": { "sentence": "Bonne soirée, Inès, et à ___ !", "answers": ["demain"], "pl": "Miłego wieczoru, Inès, i do jutra!", "clue": "(on se revoit le jour suivant)" } },
-    { "id": "u00-a-bientot-2", "type": "gap-fill", "entryIds": ["u00-prendre-conge"], "data": { "sentence": "Je ne sais pas quand je reviens… Au revoir et à ___ !", "answers": ["bientôt"], "pl": "Nie wiem, kiedy wrócę… Do widzenia i do zobaczenia wkrótce!", "clue": "(dans peu de temps)" } },
-    { "id": "u00-a-plus-1", "type": "gap-fill", "entryIds": ["u00-prendre-conge"], "data": { "sentence": "Allez, je file ! À ___ !", "answers": ["plus", "plus tard"], "pl": "No to lecę! Na razie!", "clue": "(familier, entre amis)" } },
+    { "id": "u00-a-bientot-1", "type": "gap-fill", "entryIds": ["u00-prendre-conge"], "data": { "sentence": "Bonne journée, Inès, et à ___ !", "answers": ["demain"], "pl": "Miłego dnia, Inès, i do jutra!", "clue": "(le jour après aujourd'hui)" } },
+    { "id": "u00-a-bientot-2", "type": "gap-fill", "entryIds": ["u00-prendre-conge"], "data": { "sentence": "Au revoir, madame, et à ___ !", "answers": ["bientôt"], "pl": "Do widzenia pani i do zobaczenia wkrótce!", "clue": "(dans peu de temps)" } },
+    { "id": "u00-a-plus-1", "type": "gap-fill", "entryIds": ["u00-prendre-conge"], "data": { "sentence": "Salut Malik, à ___ !", "answers": ["plus"], "pl": "Cześć Malik, na razie!", "clue": "(fam.)" } },
     { "id": "u00-ca-va-1", "type": "gap-fill", "entryIds": ["u00-ca-va"], "data": { "sentence": "Salut Malik ! ___ va ?", "answers": ["Ça"], "pl": "Cześć Malik! Jak leci?" } },
     { "id": "u00-ca-va-3", "type": "translate-pl-fr", "entryIds": ["u00-ca-va"], "data": { "pl": "jak leci?", "answers": ["ça va ?"] } },
     { "id": "u00-tres-bien-1", "type": "gap-fill", "entryIds": ["u00-ca-va"], "data": { "sentence": "– Vous allez bien ? – ___ bien, merci. Et vous ?", "answers": ["Très"], "pl": "– Jak się pani miewa? – Bardzo dobrze, dziękuję. A pani?" } },
     { "id": "u00-aller-bien-1", "type": "gap-fill", "entryIds": ["u00-ca-va"], "data": { "sentence": "Bonjour, madame Petit ! Vous ___ bien ?", "answers": ["allez"], "pl": "Dzień dobry, pani Petit! Jak się pani miewa?" } },
     { "id": "u00-aller-bien-2", "type": "gap-fill", "entryIds": ["u00-ca-va"], "data": { "sentence": "Salut Théo ! Tu ___ bien ?", "answers": ["vas"], "pl": "Cześć Théo! Dobrze się czujesz?" } },
-    { "id": "u00-sil-vous-plait-2", "type": "gap-fill", "entryIds": ["u00-politesse"], "data": { "sentence": "Maman, tu m'aides, s'il ___ plaît ?", "answers": ["te"], "pl": "Mamo, pomożesz mi, proszę?" } },
-    { "id": "u00-sil-vous-plait-4", "type": "translate-pl-fr", "entryIds": ["u00-politesse"], "data": { "pl": "poproszę kawę (do kelnera)", "answers": ["un café, s'il vous plaît", "un café s'il vous plaît"] } },
-    { "id": "u00-merci-2", "type": "gap-fill", "entryIds": ["u00-politesse"], "data": { "sentence": "Merci ___ ! C'est très gentil.", "answers": ["beaucoup"], "pl": "Bardzo dziękuję! To bardzo miłe." } },
+    { "id": "u00-sil-vous-plait-2", "type": "gap-fill", "entryIds": ["u00-politesse"], "data": { "sentence": "Margot, tu peux répéter, s'il ___ plaît ?", "answers": ["te"], "pl": "Margot, możesz powtórzyć, proszę?" } },
+    { "id": "u00-sil-vous-plait-4", "type": "translate-pl-fr", "entryIds": ["u00-politesse"], "data": { "pl": "poproszę rogalika (do kelnera)", "answers": ["un croissant, s'il vous plaît"] } },
     { "id": "u00-pardon-1", "type": "gap-fill", "entryIds": ["u00-politesse"], "data": { "sentence": "___ ? Vous pouvez répéter, s'il vous plaît ?", "answers": ["Pardon"], "pl": "Słucham? Może pan powtórzyć?" } },
     { "id": "u00-excusez-moi-1", "type": "gap-fill", "entryIds": ["u00-politesse"], "data": { "sentence": "___-moi, madame, où sont les toilettes ?", "answers": ["Excusez"], "pl": "Przepraszam panią, gdzie są toalety?" } }
   ],
@@ -1272,6 +1267,10 @@
   },
   "retiredExercises": {
     "gap-fill": [
+      "u00-accents-1",
+      "u00-accents-3",
+      "u00-bonsoir-1",
+      "u00-merci-2",
       "u00-cafe-1",
       "u00-cafe-2",
       "u00-musee-1",
@@ -1361,6 +1360,7 @@
       "u00-excusez-moi-2"
     ],
     "translate-pl-fr": [
+      "u00-accents-6",
       "u00-cafe-3",
       "u00-musee-3",
       "u00-banque-3",
