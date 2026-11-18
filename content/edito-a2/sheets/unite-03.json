@@ -15,8 +15,8 @@
         {
           "type": "rule",
           "text": {
-            "pl": "Zaimek względny łączy dwa zdania i zastępuje rzeczownik, żeby go nie powtarzać.\n**qui** = podmiot → po nim **czasownik**: un voisin **qui joue** du piano.\n**que / qu'** = dopełnienie → po nim **podmiot + czasownik**: la maison **que nous louons**.\n**où** = **miejsce** albo **czas**: la ville **où** j'habite, le jour **où** je suis arrivé.",
-            "fr": "Le pronom relatif relie deux phrases et remplace un nom pour éviter la répétition.\n**qui** = sujet → suivi d'un **verbe** : un voisin **qui joue** du piano.\n**que / qu'** = COD → suivi d'un **sujet + verbe** : la maison **que nous louons**.\n**où** = **lieu** ou **temps** : la ville **où** j'habite, le jour **où** je suis arrivé."
+            "pl": "Zaimek względny łączy dwa zdania i zastępuje rzeczownik, żeby go nie powtarzać.\n**qui** = podmiot → po nim **czasownik**: un voisin **qui joue** du piano.\n**que / qu'** = dopełnienie → po nim **podmiot + czasownik**: la maison **que nous louons**.\n**où** = **miejsce**: la ville **où** j'habite, la chambre **où** je dors.",
+            "fr": "Le pronom relatif relie deux phrases et remplace un nom pour éviter la répétition.\n**qui** = sujet → suivi d'un **verbe** : un voisin **qui joue** du piano.\n**que / qu'** = COD → suivi d'un **sujet + verbe** : la maison **que nous louons**.\n**où** = **lieu** : la ville **où** j'habite, la chambre **où** je dors."
           }
         },
         {
@@ -25,8 +25,7 @@
           "rows": [
             ["J'ai un appartement. **L'appartement** a un balcon.", "J'ai un appartement **qui** a un balcon."],
             ["Le canapé est confortable. Tu as acheté **le canapé**.", "Le canapé **que** tu as acheté est confortable."],
-            ["C'est un quartier calme. J'habite **dans ce quartier**.", "C'est le quartier **où** j'habite."],
-            ["Je me souviens de ce jour. Nous avons emménagé **ce jour-là**.", "Je me souviens du jour **où** nous avons emménagé."]
+            ["C'est un quartier calme. J'habite **dans ce quartier**.", "C'est le quartier **où** j'habite."]
           ]
         },
         {
@@ -40,8 +39,8 @@
         {
           "type": "warning",
           "text": {
-            "pl": "**que** → **qu'** przed samogłoską, ale **qui** nigdy się nie skraca: une maison **qui a**…\nW passé composé imiesłów zgadza się z rzeczownikiem przed **que**: la maison que j'ai visit**ée**.\nPo rzeczowniku czasu: le jour **où**, nie « le jour quand ».",
-            "fr": "**que** → **qu'** devant une voyelle, mais **qui** ne s'élide jamais : une maison **qui a**…\nAu passé composé, le participe s'accorde avec le nom placé avant **que** : la maison que j'ai visit**ée**.\nAprès un nom de temps : le jour **où**, pas « le jour quand »."
+            "pl": "**que** → **qu'** przed samogłoską, ale **qui** nigdy się nie skraca: une maison **qui a**…",
+            "fr": "**que** → **qu'** devant une voyelle, mais **qui** ne s'élide jamais : une maison **qui a**…"
           }
         }
       ]
@@ -68,26 +67,29 @@
         },
         {
           "type": "table",
-          "title": { "pl": "Lepszy / lepiej", "fr": "Meilleur / mieux" },
+          "title": { "pl": "Lepszy / lepiej / gorszy", "fr": "Meilleur / mieux / pire" },
           "head": ["", "+", "−", "="],
           "rows": [
             ["bon (adjectif)", "**meilleur(e)(s)**", "moins bon", "aussi bon"],
-            ["bien (adverbe)", "**mieux**", "moins bien", "aussi bien"]
+            ["bien (adverbe)", "**mieux**", "moins bien", "aussi bien"],
+            ["mauvais (adjectif)", "**plus mauvais** / **pire**", "moins mauvais", "aussi mauvais"],
+            ["mal (adverbe)", "**plus mal** / **pire**", "moins mal", "aussi mal"]
           ]
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "C'est une **meilleure** solution que la colocation.", "pl": "To lepsze rozwiązanie niż wspólne mieszkanie." },
+            { "fr": "Cette chambre est **meilleure** que l'autre.", "pl": "Ten pokój jest lepszy niż tamten." },
             { "fr": "Ici, on dort **mieux** qu'en ville.", "pl": "Tutaj śpi się lepiej niż w mieście." },
-            { "fr": "En banlieue, il y a **moins de** bruit **qu'**au centre.", "pl": "Na przedmieściach jest mniej hałasu niż w centrum." }
+            { "fr": "En banlieue, il y a **moins de** bruit **qu'**au centre.", "pl": "Na przedmieściach jest mniej hałasu niż w centrum." },
+            { "fr": "Le bruit est **pire** ici qu'en ville.", "pl": "Hałas jest tu gorszy niż w mieście." }
           ]
         },
         {
           "type": "warning",
           "text": {
-            "pl": "Równość: **aussi** przed przymiotnikiem i przysłówkiem, **autant** przy czasowniku, **autant de** przed rzeczownikiem. Nie mów « il travaille aussi que moi ».\nNie mów « plus bon » ani « plus bien »: **meilleur**, **mieux**.",
-            "fr": "L'égalité : **aussi** devant un adjectif ou un adverbe, **autant** avec un verbe, **autant de** devant un nom. On ne dit pas « il travaille aussi que moi ».\nOn ne dit pas « plus bon » ni « plus bien » : **meilleur**, **mieux**."
+            "pl": "Równość: **aussi** przed przymiotnikiem i przysłówkiem, **autant** przy czasowniku, **autant de** przed rzeczownikiem. Nie mów « il travaille aussi que moi ».\nNie mów « plus bon » ani « plus bien »: **meilleur**, **mieux**. Przeciwieństwo: **plus mauvais** / **plus mal** albo **pire**.",
+            "fr": "L'égalité : **aussi** devant un adjectif ou un adverbe, **autant** avec un verbe, **autant de** devant un nom. On ne dit pas « il travaille aussi que moi ».\nOn ne dit pas « plus bon » ni « plus bien » : **meilleur**, **mieux**. Le contraire : **plus mauvais** / **plus mal** ou **pire**."
           }
         }
       ]
@@ -99,23 +101,23 @@
         {
           "type": "rule",
           "text": {
-            "pl": "**si + czas teraźniejszy**, a potem:\n→ **czas teraźniejszy** (prawda ogólna): Si on chauffe trop, la facture augmente.\n→ **futur proche** (skutek w przyszłości): Si le loyer est cher, je vais chercher un colocataire.\n→ **tryb rozkazujący** (rada, polecenie): Si tu as froid, allume le chauffage !",
-            "fr": "**si + présent**, puis :\n→ **présent** (vérité générale) : Si on chauffe trop, la facture augmente.\n→ **futur proche** (conséquence future) : Si le loyer est cher, je vais chercher un colocataire.\n→ **impératif** (conseil, ordre) : Si tu as froid, allume le chauffage !"
+            "pl": "**si + czas teraźniejszy**, a potem:\n→ **czas teraźniejszy** (prawda ogólna, zwyczaj, skutek): Si on a froid, on ferme la fenêtre.\n→ **tryb rozkazujący** (rada, polecenie): Si tu as froid, ferme la fenêtre !",
+            "fr": "**si + présent**, puis :\n→ **présent** (vérité générale, habitude, conséquence) : Si on a froid, on ferme la fenêtre.\n→ **impératif** (conseil, ordre) : Si tu as froid, ferme la fenêtre !"
           }
         },
         {
           "type": "examples",
           "items": [
-            { "fr": "**S'il fait** beau demain, on **va dîner** sur la terrasse.", "pl": "Jeśli jutro będzie ładna pogoda, zjemy kolację na tarasie." },
-            { "fr": "Si vous **cherchez** un logement, **appelez** l'agence.", "pl": "Jeśli szukają Państwo mieszkania, proszę zadzwonić do agencji." },
-            { "fr": "On **va** au parc, si tu **veux**.", "pl": "Pójdziemy do parku, jeśli chcesz." }
+            { "fr": "**S'il pleut**, nous **restons** à la maison.", "pl": "Jeśli pada, zostajemy w domu." },
+            { "fr": "Si vous **cherchez** un logement, **lisez** les annonces.", "pl": "Jeśli szukają Państwo mieszkania, proszę czytać ogłoszenia." },
+            { "fr": "On **reste** ici, si tu **veux**.", "pl": "Zostaniemy tu, jeśli chcesz." }
           ]
         },
         {
           "type": "warning",
           "text": {
             "pl": "Po **si** nigdy nie ma czasu przyszłego, choć po polsku jest: jeśli **będzie** ładnie → s'il **fait** beau.\n**si + il(s)** → **s'il(s)**, ale **si elle**, **si on** (bez skrótu).",
-            "fr": "Après **si**, jamais de futur : s'il **fait** beau (pas « s'il va faire beau »).\n**si + il(s)** → **s'il(s)**, mais **si elle**, **si on** (pas d'élision)."
+            "fr": "Après **si**, jamais de futur : s'il **fait** beau demain.\n**si + il(s)** → **s'il(s)**, mais **si elle**, **si on** (pas d'élision)."
           }
         }
       ]
@@ -126,54 +128,86 @@
       "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Rodzaje i części mieszkania", "fr": "Les types et les parties d'un logement" },
+          "title": { "pl": "Types de logements", "fr": "Les types de logements" },
           "items": [
-            { "fr": "un studio / un deux-pièces (un T2)", "pl": "kawalerka / mieszkanie dwupokojowe", "def": "une seule pièce / deux pièces sans la cuisine" },
-            { "fr": "un duplex", "pl": "mieszkanie dwupoziomowe", "def": "un appartement sur deux étages" },
-            { "fr": "une maison individuelle", "pl": "dom wolnostojący", "def": "une maison pour une seule famille" },
-            { "fr": "une pièce", "pl": "pokój, pomieszczenie", "def": "une partie du logement" },
-            { "fr": "le séjour / le salon", "pl": "pokój dzienny / salon", "def": "la pièce où on reçoit" },
-            { "fr": "une cuisine équipée / ouverte", "pl": "kuchnia wyposażona / otwarta", "def": "avec les appareils / sans mur avec le salon" },
-            { "fr": "un placard", "pl": "szafa wnękowa", "def": "une armoire dans le mur" },
-            { "fr": "un grenier", "pl": "strych", "def": "la partie sous le toit" }
+            { "fr": "un appartement", "pl": "mieszkanie", "def": "un logement dans un immeuble" },
+            { "fr": "un immeuble", "pl": "budynek mieszkalny, kamienica", "def": "un bâtiment avec plusieurs appartements" },
+            { "fr": "une maison", "pl": "dom", "def": "un logement avec un jardin, pour une famille" },
+            { "fr": "un studio", "pl": "kawalerka", "def": "un logement d'une seule pièce" },
+            { "fr": "un T1 / un T2 (= un F1 / un F2)", "pl": "kawalerka / mieszkanie dwupokojowe", "def": "le chiffre dit le nombre de pièces" },
+            { "fr": "un foyer = une résidence (universitaire)", "pl": "akademik", "def": "un logement pour les étudiants" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Części mieszkania", "fr": "Les parties du logement" },
+          "items": [
+            { "fr": "un balcon", "pl": "balkon", "def": "un petit espace dehors, à un étage" },
+            { "fr": "une buanderie", "pl": "pralnia, pomieszczenie gospodarcze", "def": "la pièce pour laver le linge" },
+            { "fr": "un bureau", "pl": "gabinet, pokój do pracy", "def": "la pièce pour travailler" },
+            { "fr": "une chambre", "pl": "sypialnia", "def": "la pièce où on dort" },
+            { "fr": "un couloir", "pl": "korytarz", "def": "un passage entre les pièces" },
+            { "fr": "une cuisine", "pl": "kuchnia", "def": "la pièce où on prépare à manger" },
+            { "fr": "une salle à manger", "pl": "jadalnia", "def": "la pièce où on mange" },
+            { "fr": "une salle d'eau = une salle de bain", "pl": "łazienka", "def": "la pièce où on se lave" },
+            { "fr": "un salon = un séjour", "pl": "salon, pokój dzienny", "def": "la pièce où on reçoit les amis" },
+            { "fr": "une véranda", "pl": "weranda, oszklony ganek", "def": "une pièce avec de grandes fenêtres" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Budynek i dom", "fr": "L'immeuble et la maison" },
           "items": [
-            { "fr": "un immeuble ancien / moderne", "pl": "stara / nowoczesna kamienica, blok", "def": "un bâtiment avec plusieurs appartements" },
-            { "fr": "le dernier étage", "pl": "ostatnie piętro", "def": "l'étage le plus haut" },
-            { "fr": "un digicode / un interphone", "pl": "domofon z kodem / domofon", "def": "pour ouvrir la porte de l'immeuble" },
-            { "fr": "un parking / un garage", "pl": "parking / garaż", "def": "pour garer la voiture" },
-            { "fr": "un jardin / une terrasse", "pl": "ogród / taras", "def": "un espace à l'extérieur" }
+            { "fr": "un ascenseur", "pl": "winda", "def": "il monte et il descend entre les étages" },
+            { "fr": "une cave / un sous-sol", "pl": "piwnica", "def": "la partie sous la maison" },
+            { "fr": "un étage", "pl": "piętro", "def": "un niveau de l'immeuble" },
+            { "fr": "le rez-de-chaussée", "pl": "parter", "def": "l'étage au niveau de la rue" },
+            { "fr": "un garage", "pl": "garaż", "def": "pour garer la voiture" },
+            { "fr": "un grenier", "pl": "strych", "def": "la partie sous le toit" },
+            { "fr": "un jardin", "pl": "ogród", "def": "un espace vert autour de la maison" },
+            { "fr": "un local à vélos", "pl": "pomieszczenie na rowery", "def": "une pièce pour garer les vélos" }
           ]
         },
         {
           "type": "words",
-          "title": { "pl": "Ogłoszenie i koszty", "fr": "L'annonce, les frais et les services" },
+          "title": { "pl": "Ogłoszenie nieruchomości", "fr": "L'annonce immobilière" },
           "items": [
-            { "fr": "une annonce (immobilière)", "pl": "ogłoszenie (o nieruchomości)", "def": "un texte pour louer ou vendre" },
-            { "fr": "une agence immobilière", "pl": "biuro nieruchomości", "def": "elle aide à louer ou acheter" },
+            { "fr": "une annonce immobilière", "pl": "ogłoszenie o nieruchomości", "def": "un texte pour louer ou vendre un logement" },
             { "fr": "louer / la location", "pl": "wynajmować / wynajem", "def": "payer pour habiter un logement" },
+            { "fr": "la superficie / un mètre carré (m²)", "pl": "powierzchnia / metr kwadratowy", "def": "la surface : 45 m²" },
+            { "fr": "ancien(ne) ≠ neuf / neuve", "pl": "stary ≠ nowy", "def": "construit il y a longtemps ≠ récent" },
+            { "fr": "calme ≠ bruyant(e)", "pl": "spokojny ≠ hałaśliwy", "def": "sans bruit ≠ avec beaucoup de bruit" },
+            { "fr": "clair(e) ≠ sombre", "pl": "jasny ≠ ciemny", "def": "avec beaucoup / peu de lumière" },
+            { "fr": "confortable", "pl": "wygodny", "def": "agréable à vivre" },
+            { "fr": "disponible", "pl": "dostępny, wolny", "def": "libre à partir d'une date" },
+            { "fr": "équipé(e)", "pl": "wyposażony", "def": "avec les appareils nécessaires" },
+            { "fr": "meublé(e)", "pl": "umeblowany", "def": "avec des meubles" },
+            { "fr": "rénové(e)", "pl": "wyremontowany", "def": "refait à neuf" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Koszty i usługi", "fr": "Les frais et les services" },
+          "items": [
+            { "fr": "l'abonnement à Internet (m.)", "pl": "abonament internetowy", "def": "un contrat pour avoir Internet" },
+            { "fr": "l'assurance (f.)", "pl": "ubezpieczenie", "def": "un contrat qui protège le logement" },
+            { "fr": "les charges (f.)", "pl": "opłaty (za media)", "def": "l'eau, le chauffage… en plus du loyer" },
+            { "fr": "le chauffage", "pl": "ogrzewanie", "def": "il chauffe le logement" },
+            { "fr": "l'eau (f.) / l'électricité (f.) / le gaz", "pl": "woda / prąd / gaz", "def": "les services de la maison" },
             { "fr": "le loyer", "pl": "czynsz", "def": "la somme payée chaque mois" },
-            { "fr": "les charges (comprises)", "pl": "opłaty (wliczone)", "def": "l'eau, le chauffage, l'entretien" },
-            { "fr": "une caution", "pl": "kaucja", "def": "l'argent rendu à la fin de la location" },
-            { "fr": "les frais d'agence", "pl": "prowizja biura", "def": "l'argent payé à l'agence" },
-            { "fr": "m² (mètre carré)", "pl": "m² (metr kwadratowy)", "def": "la surface : 45 m²" },
-            { "fr": "meublé / vide", "pl": "umeblowany / nieumeblowany", "def": "avec / sans meubles" },
-            { "fr": "disponible", "pl": "dostępny, wolny", "def": "libre à partir d'une date" }
+            { "fr": "le ménage", "pl": "sprzątanie", "def": "nettoyer le logement : faire le ménage" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Mieszkańcy", "fr": "Les habitants" },
           "items": [
-            { "fr": "le / la propriétaire", "pl": "właściciel / właścicielka", "def": "la personne à qui appartient le logement" },
-            { "fr": "le / la locataire", "pl": "najemca", "def": "la personne qui paie le loyer" },
+            { "fr": "la cohabitation", "pl": "wspólne mieszkanie", "def": "vivre ensemble dans le même logement" },
             { "fr": "le / la colocataire", "pl": "współlokator / współlokatorka", "def": "la personne qui partage le logement" },
-            { "fr": "le / la gardien(ne)", "pl": "dozorca / dozorczyni", "def": "la personne qui s'occupe de l'immeuble" },
-            { "fr": "emménager / déménager", "pl": "wprowadzić się / przeprowadzić się", "def": "arriver dans / quitter un logement" }
+            { "fr": "la colocation", "pl": "wspólne wynajmowanie mieszkania", "def": "habiter à plusieurs dans un logement" },
+            { "fr": "le / la locataire", "pl": "najemca", "def": "la personne qui paie le loyer" },
+            { "fr": "le / la propriétaire", "pl": "właściciel / właścicielka", "def": "la personne à qui appartient le logement" },
+            { "fr": "vivre seul(e) / en couple / en colocation", "pl": "mieszkać samemu / we dwoje / ze współlokatorami", "def": "les façons d'habiter" }
           ]
         }
       ]
@@ -184,40 +218,75 @@
       "blocks": [
         {
           "type": "words",
-          "title": { "pl": "Meble i dekoracja", "fr": "Les meubles et la décoration" },
+          "title": { "pl": "Meble", "fr": "Les meubles" },
           "items": [
-            { "fr": "un canapé / un fauteuil", "pl": "kanapa / fotel", "def": "pour s'asseoir dans le salon" },
+            { "fr": "un bureau", "pl": "biurko", "def": "la table pour travailler" },
+            { "fr": "un canapé = un sofa = un divan", "pl": "kanapa", "def": "pour s'asseoir dans le salon" },
+            { "fr": "un canapé-lit", "pl": "kanapa rozkładana", "def": "un canapé qu'on peut transformer en lit" },
+            { "fr": "une chaise", "pl": "krzesło", "def": "pour s'asseoir à table" },
+            { "fr": "une étagère", "pl": "półka", "def": "une planche au mur pour poser des livres" },
+            { "fr": "un lit (une place / deux places)", "pl": "łóżko (jednoosobowe / dwuosobowe)", "def": "pour dormir" },
+            { "fr": "un placard", "pl": "szafa wnękowa, szafka", "def": "une armoire dans le mur" },
+            { "fr": "les rangements (m.)", "pl": "miejsca do przechowywania", "def": "les placards et les étagères" },
+            { "fr": "une table", "pl": "stół", "def": "pour manger ou travailler" },
             { "fr": "une table basse", "pl": "stolik kawowy", "def": "une petite table devant le canapé" },
-            { "fr": "une bibliothèque", "pl": "regał na książki", "def": "un meuble pour les livres" },
-            { "fr": "un tapis", "pl": "dywan", "def": "il couvre le sol" },
-            { "fr": "un rideau", "pl": "zasłona", "def": "un tissu devant la fenêtre" },
-            { "fr": "un miroir", "pl": "lustro", "def": "on s'y regarde" },
+            { "fr": "une table de chevet", "pl": "stolik nocny", "def": "une petite table à côté du lit" },
+            { "fr": "un tabouret", "pl": "taboret", "def": "un siège sans dossier" },
+            { "fr": "un téléviseur = une télé", "pl": "telewizor", "def": "on y regarde des films" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Dekoracja", "fr": "La décoration" },
+          "items": [
+            { "fr": "un cadre (photo)", "pl": "ramka (na zdjęcie)", "def": "on y met une photo" },
             { "fr": "un coussin", "pl": "poduszka (ozdobna)", "def": "petit objet doux sur le canapé" },
-            { "fr": "une plante (verte)", "pl": "roślina (doniczkowa)", "def": "elle décore et a besoin d'eau" },
-            { "fr": "un tableau / une affiche", "pl": "obraz / plakat", "def": "on l'accroche au mur" }
+            { "fr": "une horloge", "pl": "zegar ścienny", "def": "elle donne l'heure" },
+            { "fr": "une lampe", "pl": "lampa", "def": "elle donne de la lumière" },
+            { "fr": "une plante", "pl": "roślina", "def": "elle décore et a besoin d'eau" },
+            { "fr": "un rideau", "pl": "zasłona", "def": "un tissu devant la fenêtre" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Wyposażenie", "fr": "L'équipement" },
           "items": [
-            { "fr": "le chauffage (central)", "pl": "ogrzewanie (centralne)", "def": "il chauffe le logement" },
-            { "fr": "la climatisation", "pl": "klimatyzacja", "def": "elle refroidit l'air" },
-            { "fr": "le wifi / la fibre", "pl": "wifi / światłowód", "def": "internet à la maison" },
-            { "fr": "lumineux / sombre", "pl": "jasny / ciemny", "def": "avec beaucoup / peu de lumière" },
-            { "fr": "spacieux / étroit", "pl": "przestronny / ciasny", "def": "grand / petit et serré" },
-            { "fr": "rénové / à rénover", "pl": "wyremontowany / do remontu", "def": "refait à neuf / avec des travaux à faire" }
+            { "fr": "les appareils électroménagers (m.)", "pl": "sprzęt AGD", "def": "le frigo, le four, le lave-linge…" },
+            { "fr": "une couette", "pl": "kołdra", "def": "elle couvre le lit" },
+            { "fr": "une douche", "pl": "prysznic", "def": "on s'y lave debout" },
+            { "fr": "un évier", "pl": "zlew", "def": "on y lave la vaisselle" },
+            { "fr": "un four", "pl": "piekarnik", "def": "pour cuire les plats" },
+            { "fr": "un lavabo", "pl": "umywalka", "def": "on s'y lave les mains" },
+            { "fr": "un lave-linge = une machine à laver", "pl": "pralka", "def": "elle lave les vêtements" },
+            { "fr": "un lave-vaisselle", "pl": "zmywarka", "def": "il lave les assiettes" },
+            { "fr": "une machine à café", "pl": "ekspres do kawy", "def": "elle prépare le café" },
+            { "fr": "un réfrigérateur = un frigo", "pl": "lodówka", "def": "il garde les aliments au froid" }
           ]
         },
         {
           "type": "words",
           "title": { "pl": "Miasto i dzielnica", "fr": "La ville et le quartier" },
           "items": [
-            { "fr": "un espace vert", "pl": "teren zielony", "def": "un parc ou un jardin public" },
-            { "fr": "les commerces (de proximité)", "pl": "sklepy (w pobliżu)", "def": "les magasins près de chez soi" },
-            { "fr": "les transports en commun", "pl": "komunikacja miejska", "def": "le bus, le métro, le tramway" },
-            { "fr": "un quartier calme / animé / bruyant", "pl": "spokojna / tętniąca życiem / hałaśliwa dzielnica", "def": "sans bruit / avec du monde / avec du bruit" },
-            { "fr": "le cadre de vie", "pl": "otoczenie, warunki życia", "def": "l'environnement où on vit" }
+            { "fr": "une avenue", "pl": "aleja", "def": "une grande rue" },
+            { "fr": "un bâtiment", "pl": "budynek", "def": "une construction : maison, immeuble, école…" },
+            { "fr": "les bureaux (m.)", "pl": "biura", "def": "les lieux de travail" },
+            { "fr": "les espaces verts", "pl": "tereny zielone", "def": "les parcs et les jardins publics" },
+            { "fr": "un magasin", "pl": "sklep", "def": "on y achète des choses" },
+            { "fr": "une rue", "pl": "ulica", "def": "on y marche, on y roule" }
+          ]
+        },
+        {
+          "type": "words",
+          "title": { "pl": "Jaka dzielnica?", "fr": "Un quartier…" },
+          "items": [
+            { "fr": "ancien(ne)", "pl": "stary", "def": "avec beaucoup d'histoire" },
+            { "fr": "animé(e)", "pl": "tętniący życiem", "def": "avec beaucoup de monde" },
+            { "fr": "chic", "pl": "elegancki", "def": "très élégant et cher" },
+            { "fr": "commerçant(e)", "pl": "z wieloma sklepami", "def": "avec beaucoup de magasins" },
+            { "fr": "historique", "pl": "zabytkowy", "def": "avec des bâtiments très anciens" },
+            { "fr": "populaire", "pl": "ludowy, robotniczy", "def": "où habitent des gens modestes" },
+            { "fr": "tranquille", "pl": "spokojny", "def": "calme, sans bruit" },
+            { "fr": "vivant(e)", "pl": "ożywiony", "def": "avec de la vie et du mouvement" }
           ]
         }
       ]
@@ -230,21 +299,21 @@
           "type": "examples",
           "title": { "pl": "Opisać mieszkanie", "fr": "Décrire un logement" },
           "items": [
-            { "fr": "C'est un deux-pièces de 45 m² au troisième étage.", "pl": "To dwupokojowe mieszkanie o powierzchni 45 m² na trzecim piętrze." },
-            { "fr": "L'appartement est lumineux et donne sur un jardin.", "pl": "Mieszkanie jest jasne i ma okna na ogród." },
-            { "fr": "Il y a une cuisine équipée et un grand placard dans l'entrée.", "pl": "Jest wyposażona kuchnia i duża szafa wnękowa w przedpokoju." },
-            { "fr": "Le quartier est calme, près des commerces et des transports.", "pl": "Dzielnica jest spokojna, blisko sklepów i komunikacji." }
+            { "fr": "L'immeuble est situé dans un quartier calme.", "pl": "Budynek znajduje się w spokojnej dzielnicy." },
+            { "fr": "C'est un appartement deux pièces rénové.", "pl": "To wyremontowane mieszkanie dwupokojowe." },
+            { "fr": "C'est un immeuble ancien, mais l'appartement est neuf.", "pl": "To stara kamienica, ale mieszkanie jest nowe." },
+            { "fr": "L'appartement est au quatrième étage sans ascenseur.", "pl": "Mieszkanie jest na czwartym piętrze, bez windy." },
+            { "fr": "Cette maison a un grand jardin et un garage.", "pl": "Ten dom ma duży ogród i garaż." }
           ]
         },
         {
           "type": "examples",
           "title": { "pl": "Wynająć mieszkanie", "fr": "Louer un logement" },
           "items": [
-            { "fr": "Je vous appelle pour l'annonce du studio. Il est toujours disponible ?", "pl": "Dzwonię w sprawie ogłoszenia o kawalerce. Czy jest jeszcze dostępna?" },
-            { "fr": "Le loyer est de combien ? Les charges sont comprises ?", "pl": "Ile wynosi czynsz? Czy opłaty są wliczone?" },
-            { "fr": "Il faut payer une caution ?", "pl": "Trzeba zapłacić kaucję?" },
-            { "fr": "Est-ce que je peux visiter l'appartement ?", "pl": "Czy mogę obejrzeć mieszkanie?" },
-            { "fr": "Il est libre à partir de quand ?", "pl": "Od kiedy jest wolne?" }
+            { "fr": "Je suis intéressé par votre annonce.", "pl": "Interesuje mnie wasze ogłoszenie." },
+            { "fr": "Quelle est la superficie de l'appartement ?", "pl": "Jaka jest powierzchnia mieszkania?" },
+            { "fr": "Quel est le montant du loyer ?", "pl": "Ile wynosi czynsz?" },
+            { "fr": "Ça inclut les charges ?", "pl": "Czy to obejmuje opłaty?" }
           ]
         }
       ]
@@ -257,20 +326,19 @@
           "type": "examples",
           "title": { "pl": "Rozczarowanie", "fr": "Exprimer sa déception" },
           "items": [
-            { "fr": "Je suis déçu(e) : l'appartement est beaucoup plus petit que sur les photos.", "pl": "Jestem rozczarowany(-a): mieszkanie jest dużo mniejsze niż na zdjęciach." },
-            { "fr": "Quel dommage ! / C'est dommage !", "pl": "Jaka szkoda! / Szkoda!" },
-            { "fr": "Je m'attendais à mieux.", "pl": "Spodziewałem się czegoś lepszego." },
-            { "fr": "Ce n'est pas du tout ce que je voulais.", "pl": "To zupełnie nie to, czego chciałem." }
+            { "fr": "Zut ! L'appartement est déjà loué.", "pl": "Cholera! Mieszkanie jest już wynajęte." },
+            { "fr": "Mince ! Le salon est beaucoup plus petit que sur la photo.", "pl": "Ojej! Salon jest dużo mniejszy niż na zdjęciu." },
+            { "fr": "C'est dommage : l'immeuble n'a pas d'ascenseur.", "pl": "Szkoda: w budynku nie ma windy." }
           ]
         },
         {
           "type": "examples",
           "title": { "pl": "Pocieszanie", "fr": "Consoler, réconforter" },
           "items": [
-            { "fr": "Ne t'inquiète pas, tu vas trouver !", "pl": "Nie martw się, znajdziesz!" },
-            { "fr": "Ce n'est pas grave.", "pl": "To nic strasznego." },
-            { "fr": "Courage ! Tu vas voir, ça va s'arranger.", "pl": "Głowa do góry! Zobaczysz, wszystko się ułoży." },
-            { "fr": "Si tu veux, je t'aide à chercher.", "pl": "Jeśli chcesz, pomogę ci szukać." }
+            { "fr": "Ce n'est pas grave, il y a d'autres annonces.", "pl": "To nic takiego, są inne ogłoszenia." },
+            { "fr": "Ça va aller !", "pl": "Dasz radę! / Będzie dobrze!" },
+            { "fr": "Courage ! Demain, on cherche encore.", "pl": "Głowa do góry! Jutro szukamy dalej." },
+            { "fr": "Ne t'inquiète pas.", "pl": "Nie martw się." }
           ]
         }
       ]

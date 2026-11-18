@@ -29,24 +29,24 @@
         { "fr": "C'est l'appartement qu'on a visité hier.", "pl": "To mieszkanie, które oglądaliśmy wczoraj." }
       ],
       "tip": {
-        "pl": "po que stoi podmiot (que je, que tu, qu'on); przed samogłoską que → qu'; w passé composé imiesłów zgadza się z rzeczownikiem przed que: la maison que j'ai visitée",
-        "fr": "que est suivi d'un sujet (que je, que tu, qu'on) ; devant une voyelle que → qu' ; au passé composé, le participe s'accorde avec le nom placé avant : la maison que j'ai visitée"
+        "pl": "po que stoi podmiot (que je, que tu, qu'on); przed samogłoską que → qu'",
+        "fr": "que est suivi d'un sujet (que je, que tu, qu'on) ; devant une voyelle que → qu'"
       },
       "confusables": ["u03-relatif-qui", "u03-relatif-ou", "a1-connecteurs/conj-que"],
       "tags": ["grammaire"]
     },
     {
       "id": "u03-relatif-ou",
-      "fr": "où (pronom relatif de lieu et de temps)",
-      "pl": "gdzie, w którym; kiedy",
-      "def": "remplace un lieu (la ville où j'habite) ou un moment (le jour où je suis arrivé)",
+      "fr": "où (pronom relatif de lieu)",
+      "pl": "gdzie, w którym / w której (miejsce)",
+      "def": "remplace un lieu : la ville où j'habite",
       "examples": [
         { "fr": "C'est le quartier où j'ai grandi.", "pl": "To dzielnica, w której dorastałem." },
-        { "fr": "Je me souviens du jour où nous avons emménagé.", "pl": "Pamiętam dzień, w którym się wprowadziliśmy." }
+        { "fr": "Voici le balcon où nous prenons le café.", "pl": "Oto balkon, na którym pijemy kawę." }
       ],
       "tip": {
-        "pl": "où zastępuje miejsce albo moment; po rzeczowniku czasu mów le jour où, nie « le jour quand »",
-        "fr": "où remplace un lieu ou un moment ; après un nom de temps, on dit le jour où, pas « le jour quand »"
+        "pl": "où zastępuje miejsce (la ville où j'habite, la chambre où je dors); nie mylić z ou bez akcentu (lub)",
+        "fr": "où remplace un lieu (la ville où j'habite, la chambre où je dors) ; ne pas confondre avec ou sans accent (alternative)"
       },
       "confusables": ["u03-relatif-que", "a1-connecteurs/adv-ou"],
       "tags": ["grammaire"]
@@ -101,16 +101,17 @@
     },
     {
       "id": "u03-mieux-meilleur",
-      "fr": "meilleur / mieux",
-      "pl": "lepszy / lepiej",
-      "def": "meilleur = plus bon (adjectif, il s'accorde) ; mieux = plus bien (adverbe, invariable)",
+      "fr": "meilleur / mieux / pire",
+      "pl": "lepszy / lepiej / gorszy",
+      "def": "meilleur = plus bon (adjectif) ; mieux = plus bien (adverbe) ; pire = plus mauvais (adjectif) ou plus mal (adverbe)",
       "examples": [
-        { "fr": "C'est une meilleure solution.", "pl": "To lepsze rozwiązanie." },
-        { "fr": "On dort mieux ici.", "pl": "Tutaj lepiej się śpi." }
+        { "fr": "Cette chambre est meilleure que l'autre.", "pl": "Ten pokój jest lepszy niż tamten." },
+        { "fr": "On dort mieux ici.", "pl": "Tutaj lepiej się śpi." },
+        { "fr": "Le bruit est pire ici qu'en ville.", "pl": "Hałas jest tu gorszy niż w mieście." }
       ],
       "tip": {
-        "pl": "meilleur(e)(s) opisuje rzeczownik (lepszy); mieux opisuje czasownik (lepiej); nie mów « plus bon », « plus bien »",
-        "fr": "meilleur(e)(s) qualifie un nom ; mieux modifie un verbe ; on ne dit pas « plus bon » ni « plus bien »"
+        "pl": "meilleur(e)(s) opisuje rzeczownik (lepszy); mieux opisuje czasownik (lepiej); gorszy / gorzej = plus mauvais / plus mal albo pire; nie mów « plus bon », « plus bien »",
+        "fr": "meilleur(e)(s) qualifie un nom ; mieux modifie un verbe ; le contraire : plus mauvais / plus mal ou pire ; on ne dit pas « plus bon » ni « plus bien »"
       },
       "confusables": ["u03-comp-adjectif"],
       "tags": ["grammaire"]
@@ -129,6 +130,24 @@
         "fr": "après si, toujours le présent, jamais le futur ; si + il → s'il, mais si elle"
       },
       "confusables": ["u03-si-imperatif", "a1-connecteurs/conj-si"],
+      "tags": ["grammaire"],
+      "deprecated": true,
+      "replacedBy": "u03-si-present"
+    },
+    {
+      "id": "u03-si-present",
+      "fr": "si + présent → présent",
+      "pl": "jeśli + czas teraźniejszy → teraźniejszy",
+      "def": "une condition possible et sa conséquence, toutes les deux au présent",
+      "examples": [
+        { "fr": "S'il pleut, nous restons à la maison.", "pl": "Jeśli pada, zostajemy w domu." },
+        { "fr": "Si le loyer est trop cher, je cherche un colocataire.", "pl": "Jeśli czynsz jest za drogi, szukam współlokatora." }
+      ],
+      "tip": {
+        "pl": "po si zawsze czas teraźniejszy, nawet gdy po polsku jest przyszły (jeśli będzie → s'il fait); si + il → s'il, ale si elle, si on",
+        "fr": "après si, toujours le présent, jamais le futur ; si + il → s'il, mais si elle, si on"
+      },
+      "confusables": ["u03-si-imperatif", "a1-connecteurs/conj-si"],
       "tags": ["grammaire"]
     },
     {
@@ -137,26 +156,96 @@
       "pl": "jeśli + czas teraźniejszy → tryb rozkazujący",
       "def": "une condition et un conseil ou un ordre",
       "examples": [
-        { "fr": "Si tu as froid, allume le chauffage !", "pl": "Jeśli ci zimno, włącz ogrzewanie!" },
-        { "fr": "Si vous cherchez un logement, appelez l'agence.", "pl": "Jeśli szukają Państwo mieszkania, proszę zadzwonić do agencji." }
+        { "fr": "Si tu as froid, ferme la fenêtre !", "pl": "Jeśli ci zimno, zamknij okno!" },
+        { "fr": "Si vous cherchez un logement, lisez les annonces.", "pl": "Jeśli szukają Państwo mieszkania, proszę czytać ogłoszenia." }
       ],
       "tip": {
         "pl": "część z si: czas teraźniejszy; druga część: tryb rozkazujący bez podmiotu (forma tu czasowników na -er bez -s)",
         "fr": "partie avec si : présent ; autre partie : impératif sans sujet (forme tu des verbes en -er sans -s)"
       },
-      "confusables": ["u03-si-futur", "a1-connecteurs/conj-si"],
+      "confusables": ["u03-si-present", "a1-connecteurs/conj-si"],
       "tags": ["grammaire"]
     },
-    { "id": "u03-annonce", "fr": "une annonce", "pl": "ogłoszenie", "def": "un texte court pour louer ou vendre quelque chose", "examples": [{ "fr": "J'ai lu une annonce pour un deux-pièces.", "pl": "Przeczytałem ogłoszenie o mieszkaniu dwupokojowym." }], "tags": ["vocabulaire"] },
-    { "id": "u03-agence", "fr": "une agence immobilière", "pl": "biuro nieruchomości", "def": "une entreprise qui aide à louer ou à acheter un logement", "examples": [{ "fr": "L'agence immobilière organise une visite samedi.", "pl": "Biuro nieruchomości organizuje oglądanie w sobotę." }], "tags": ["vocabulaire"] },
-    { "id": "u03-caution", "fr": "une caution", "pl": "kaucja", "def": "l'argent donné au propriétaire à l'arrivée et rendu au départ", "examples": [{ "fr": "La caution est de deux mois de loyer.", "pl": "Kaucja wynosi dwa miesięczne czynsze." }], "tags": ["vocabulaire"] },
+    { "id": "u03-annonce", "fr": "une annonce immobilière", "pl": "ogłoszenie", "def": "un texte court pour louer ou vendre quelque chose", "examples": [{ "fr": "J'ai lu une annonce pour un studio.", "pl": "Przeczytałem ogłoszenie o kawalerce." }], "tags": ["vocabulaire"] },
+    { "id": "u03-agence", "fr": "une agence immobilière", "pl": "biuro nieruchomości", "def": "une entreprise qui aide à louer ou à acheter un logement", "examples": [{ "fr": "L'agence immobilière organise une visite samedi.", "pl": "Biuro nieruchomości organizuje oglądanie w sobotę." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u03-loyer" },
+    { "id": "u03-caution", "fr": "une caution", "pl": "kaucja", "def": "l'argent donné au propriétaire à l'arrivée et rendu au départ", "examples": [{ "fr": "La caution est de deux mois de loyer.", "pl": "Kaucja wynosi dwa miesięczne czynsze." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u03-charges" },
     { "id": "u03-colocataire", "fr": "un / une colocataire", "pl": "współlokator / współlokatorka", "def": "une personne qui partage le logement", "examples": [{ "fr": "Ma colocataire fait très bien la cuisine.", "pl": "Moja współlokatorka bardzo dobrze gotuje." }], "tags": ["vocabulaire"] },
-    { "id": "u03-piece", "fr": "une pièce", "pl": "pokój, pomieszczenie", "def": "une partie d'un logement : le salon, une chambre, le bureau…", "examples": [{ "fr": "Le salon est la plus grande pièce de l'appartement.", "pl": "Salon to największy pokój w mieszkaniu." }], "tags": ["vocabulaire"] },
+    { "id": "u03-piece", "fr": "une pièce", "pl": "pokój, pomieszczenie", "def": "une partie d'un logement : le salon, une chambre, le bureau…", "examples": [{ "fr": "Le salon est la plus grande pièce de l'appartement.", "pl": "Salon to największy pokój w mieszkaniu." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u03-sejour" },
     { "id": "u03-placard", "fr": "un placard", "pl": "szafa wnękowa, szafka", "def": "une armoire fixée dans le mur", "examples": [{ "fr": "Il y a un grand placard dans l'entrée.", "pl": "W przedpokoju jest duża szafa wnękowa." }], "tags": ["vocabulaire"] },
     { "id": "u03-rideau", "fr": "un rideau", "pl": "zasłona", "def": "un tissu devant la fenêtre", "examples": [{ "fr": "J'ai acheté des rideaux bleus pour la chambre.", "pl": "Kupiłam niebieskie zasłony do sypialni." }], "tags": ["vocabulaire"] },
-    { "id": "u03-tapis", "fr": "un tapis", "pl": "dywan", "def": "il couvre une partie du sol", "examples": [{ "fr": "Le chat dort sur le tapis.", "pl": "Kot śpi na dywanie." }], "tags": ["vocabulaire"] },
-    { "id": "u03-miroir", "fr": "un miroir", "pl": "lustro", "def": "on s'y regarde", "examples": [{ "fr": "Il y a un miroir au-dessus du lavabo.", "pl": "Nad umywalką jest lustro." }], "tags": ["vocabulaire"] },
-    { "id": "u03-espace-vert", "fr": "un espace vert", "pl": "teren zielony", "def": "un parc ou un jardin public en ville", "examples": [{ "fr": "Le quartier a beaucoup d'espaces verts.", "pl": "W dzielnicy jest dużo terenów zielonych." }], "tags": ["vocabulaire"] }
+    { "id": "u03-tapis", "fr": "un tapis", "pl": "dywan", "def": "il couvre une partie du sol", "examples": [{ "fr": "Le chat dort sur le tapis.", "pl": "Kot śpi na dywanie." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u03-coussin" },
+    { "id": "u03-miroir", "fr": "un miroir", "pl": "lustro", "def": "on s'y regarde", "examples": [{ "fr": "Il y a un miroir au-dessus du lavabo.", "pl": "Nad umywalką jest lustro." }], "tags": ["vocabulaire"], "deprecated": true, "replacedBy": "u03-etagere" },
+    { "id": "u03-espace-vert", "fr": "les espaces verts", "pl": "teren zielony", "def": "un parc ou un jardin public en ville", "examples": [{ "fr": "Le quartier a beaucoup d'espaces verts.", "pl": "W dzielnicy jest dużo terenów zielonych." }], "tags": ["vocabulaire"] },
+    {
+      "id": "u03-loyer",
+      "fr": "le loyer",
+      "pl": "czynsz",
+      "def": "la somme qu'on paie chaque mois pour habiter un logement",
+      "examples": [
+        { "fr": "Le loyer de ce studio est de 450 euros par mois.", "pl": "Czynsz za tę kawalerkę wynosi 450 euro miesięcznie." }
+      ],
+      "tip": {
+        "pl": "le loyer = co miesiąc za mieszkanie; les charges = woda, ogrzewanie… (osobno albo wliczone)",
+        "fr": "le loyer = ce qu'on paie chaque mois pour le logement ; les charges = l'eau, le chauffage… (en plus ou comprises)"
+      },
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u03-charges",
+      "fr": "les charges (f.)",
+      "pl": "opłaty (za media)",
+      "def": "l'eau, le chauffage, l'électricité… : les frais en plus du loyer",
+      "examples": [
+        { "fr": "Ce prix inclut les charges.", "pl": "Ta cena obejmuje opłaty." }
+      ],
+      "tip": {
+        "pl": "zwykle w liczbie mnogiej: les charges; charges comprises = opłaty wliczone w czynsz",
+        "fr": "généralement au pluriel : les charges ; charges comprises = incluses dans le loyer"
+      },
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u03-sejour",
+      "fr": "le salon = le séjour",
+      "pl": "salon, pokój dzienny",
+      "def": "la pièce où on reçoit les amis et où on regarde la télé",
+      "examples": [
+        { "fr": "Nous regardons un film dans le séjour.", "pl": "Oglądamy film w salonie." }
+      ],
+      "tip": {
+        "pl": "le salon = le séjour: to samo pomieszczenie; oba rodzaju męskiego",
+        "fr": "le salon = le séjour : la même pièce ; les deux sont masculins"
+      },
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u03-coussin",
+      "fr": "un coussin",
+      "pl": "poduszka (ozdobna)",
+      "def": "un petit objet doux sur le canapé ou sur une chaise",
+      "examples": [
+        { "fr": "Il y a trois coussins sur le canapé.", "pl": "Na kanapie leżą trzy poduszki." }
+      ],
+      "tip": {
+        "pl": "coussin = poduszka ozdobna na kanapę lub krzesło",
+        "fr": "un coussin se pose sur le canapé ou sur la chaise"
+      },
+      "tags": ["vocabulaire"]
+    },
+    {
+      "id": "u03-etagere",
+      "fr": "une étagère",
+      "pl": "półka",
+      "def": "une planche fixée au mur pour poser des livres ou des objets",
+      "examples": [
+        { "fr": "Les livres sont sur l'étagère au-dessus du bureau.", "pl": "Książki stoją na półce nad biurkiem." }
+      ],
+      "tip": {
+        "pl": "une étagère = półka na ścianie lub w regale; rodzaj żeński",
+        "fr": "une étagère sert à ranger des livres ou des objets ; elle est féminine"
+      },
+      "tags": ["vocabulaire"]
+    }
   ],
   "exercises": [
     { "id": "u03-qui-1", "type": "gap-fill", "entryIds": ["u03-relatif-qui"], "data": { "sentence": "J'ai trouvé un appartement ___ a un grand balcon.", "answers": ["qui"], "pl": "Znalazłem mieszkanie, które ma duży balkon." } },
@@ -167,85 +256,93 @@
     { "id": "u03-que-1", "type": "gap-fill", "entryIds": ["u03-relatif-que"], "data": { "sentence": "La maison ___ nous louons est près de la mer.", "answers": ["que"], "pl": "Dom, który wynajmujemy, jest blisko morza." } },
     { "id": "u03-que-2", "type": "gap-fill", "entryIds": ["u03-relatif-que"], "data": { "sentence": "Le canapé ___ tu as acheté est très confortable.", "answers": ["que"], "pl": "Kanapa, którą kupiłeś, jest bardzo wygodna." } },
     { "id": "u03-que-3", "type": "gap-fill", "entryIds": ["u03-relatif-que"], "data": { "sentence": "C'est l'appartement ___ on a visité hier.", "answers": ["qu'"], "pl": "To mieszkanie, które oglądaliśmy wczoraj.", "hint": { "pl": "przed samogłoską", "fr": "devant une voyelle" } } },
-    { "id": "u03-que-4", "type": "gap-fill", "entryIds": ["u03-relatif-que"], "data": { "sentence": "La maison ___ j'ai visitée est trop petite.", "answers": ["que"], "pl": "Dom, który obejrzałam, jest za mały." } },
+    { "id": "u03-que-4", "type": "gap-fill", "entryIds": ["u03-relatif-que"], "data": { "sentence": "Le salon ___ tu vois sur la photo est très clair.", "answers": ["que"], "pl": "Salon, który widzisz na zdjęciu, jest bardzo jasny." } },
 
     { "id": "u03-ou-1", "type": "gap-fill", "entryIds": ["u03-relatif-ou"], "data": { "sentence": "Voici la chambre ___ tu vas dormir.", "answers": ["où"], "pl": "Oto pokój, w którym będziesz spać." } },
     { "id": "u03-ou-2", "type": "gap-fill", "entryIds": ["u03-relatif-ou"], "data": { "sentence": "C'est le quartier ___ j'ai grandi.", "answers": ["où"], "pl": "To dzielnica, w której dorastałem." } },
-    { "id": "u03-ou-3", "type": "gap-fill", "entryIds": ["u03-relatif-ou"], "data": { "sentence": "Je me souviens du jour ___ nous avons emménagé.", "answers": ["où"], "pl": "Pamiętam dzień, w którym się wprowadziliśmy." } },
+    { "id": "u03-ou-3", "type": "gap-fill", "entryIds": ["u03-relatif-ou"], "data": { "sentence": "Voici le balcon ___ nous prenons le café.", "answers": ["où"], "pl": "Oto balkon, na którym pijemy kawę." } },
     { "id": "u03-ou-4", "type": "gap-fill", "entryIds": ["u03-relatif-ou"], "data": { "sentence": "La ville ___ j'habite est très calme.", "answers": ["où"], "pl": "Miasto, w którym mieszkam, jest bardzo spokojne." } },
 
     { "id": "u03-comp-adj-1", "type": "gap-fill", "entryIds": ["u03-comp-adjectif"], "data": { "sentence": "Ce studio est ___ cher que l'appartement du centre.", "answers": ["moins"], "pl": "Ta kawalerka jest tańsza niż mieszkanie w centrum.", "clue": "(−)" } },
     { "id": "u03-comp-adj-2", "type": "gap-fill", "entryIds": ["u03-comp-adjectif"], "data": { "sentence": "Ma nouvelle chambre est ___ grande que l'ancienne.", "answers": ["plus"], "pl": "Mój nowy pokój jest większy niż poprzedni.", "clue": "(+)" } },
     { "id": "u03-comp-adj-3", "type": "gap-fill", "entryIds": ["u03-comp-adjectif"], "data": { "sentence": "Le bus va ___ vite que le métro.", "answers": ["aussi"], "pl": "Autobus jedzie tak samo szybko jak metro.", "clue": "(=)" } },
-    { "id": "u03-comp-adj-4", "type": "gap-fill", "entryIds": ["u03-comp-adjectif"], "data": { "sentence": "Ici, les loyers augmentent ___ rapidement qu'à Paris.", "answers": ["moins"], "pl": "Tutaj czynsze rosną wolniej niż w Paryżu.", "clue": "(−)" } },
+    { "id": "u03-comp-adj-4", "type": "gap-fill", "entryIds": ["u03-comp-adjectif"], "data": { "sentence": "Ici, les voisins sont ___ bruyants que dans mon ancien quartier.", "answers": ["moins"], "pl": "Tutaj sąsiedzi są mniej hałaśliwi niż w mojej dawnej dzielnicy.", "clue": "(−)" } },
 
     { "id": "u03-comp-nom-1", "type": "gap-fill", "entryIds": ["u03-comp-nom"], "data": { "sentence": "Il y a ___ place dans la maison que dans l'appartement.", "answers": ["plus de"], "pl": "W domu jest więcej miejsca niż w mieszkaniu.", "clue": "(+)" } },
     { "id": "u03-comp-nom-2", "type": "gap-fill", "entryIds": ["u03-comp-nom"], "data": { "sentence": "En banlieue, il y a ___ bruit qu'au centre-ville.", "answers": ["moins de"], "pl": "Na przedmieściach jest mniej hałasu niż w centrum.", "clue": "(−)" } },
-    { "id": "u03-comp-nom-3", "type": "gap-fill", "entryIds": ["u03-comp-nom"], "data": { "sentence": "Nous avons ___ pièces que nos voisins : trois chacun.", "answers": ["autant de"], "pl": "Mamy tyle samo pokoi co nasi sąsiedzi: po trzy.", "clue": "(=)" } },
-    { "id": "u03-comp-nom-4", "type": "gap-fill", "entryIds": ["u03-comp-nom"], "data": { "sentence": "Mon quartier a ___ commerces que le quartier de Paul.", "answers": ["autant de"], "pl": "W mojej dzielnicy jest tyle samo sklepów co w dzielnicy Paula.", "clue": "(=)" } },
+    { "id": "u03-comp-nom-3", "type": "gap-fill", "entryIds": ["u03-comp-nom"], "data": { "sentence": "Nous avons ___ pièces que nos voisins : trois pour nous, trois pour eux.", "answers": ["autant de"], "pl": "Mamy tyle samo pokoi co nasi sąsiedzi: trzy my, trzy oni.", "clue": "(=)" } },
+    { "id": "u03-comp-nom-4", "type": "gap-fill", "entryIds": ["u03-comp-nom"], "data": { "sentence": "Mon quartier a ___ magasins que le quartier de Paul.", "answers": ["autant de"], "pl": "W mojej dzielnicy jest tyle samo sklepów co w dzielnicy Paula.", "clue": "(=)" } },
 
     { "id": "u03-comp-verbe-1", "type": "gap-fill", "entryIds": ["u03-comp-verbe"], "data": { "sentence": "Mon colocataire travaille ___ que moi : il rentre à 22 heures.", "answers": ["plus"], "pl": "Mój współlokator pracuje więcej niż ja: wraca o 22.", "clue": "(+)" } },
-    { "id": "u03-comp-verbe-2", "type": "gap-fill", "entryIds": ["u03-comp-verbe"], "data": { "sentence": "Depuis le déménagement, je dépense ___ qu'avant.", "answers": ["moins"], "pl": "Od przeprowadzki wydaję mniej niż wcześniej.", "clue": "(−)" } },
-    { "id": "u03-comp-verbe-3", "type": "gap-fill", "entryIds": ["u03-comp-verbe"], "data": { "sentence": "Paul cuisine ___ que Marie : chacun prépare le dîner trois soirs par semaine.", "answers": ["autant"], "pl": "Paul gotuje tyle samo co Marie: każde z nich robi kolację trzy wieczory w tygodniu.", "clue": "(=)", "hint": { "pl": "z czasownikiem: nie aussi", "fr": "avec un verbe : pas aussi" } } },
+    { "id": "u03-comp-verbe-2", "type": "gap-fill", "entryIds": ["u03-comp-verbe"], "data": { "sentence": "Depuis que je vis seul, je sors ___ qu'avant.", "answers": ["moins"], "pl": "Odkąd mieszkam sam, wychodzę rzadziej niż wcześniej.", "clue": "(−)" } },
+    { "id": "u03-comp-verbe-3", "type": "gap-fill", "entryIds": ["u03-comp-verbe"], "data": { "sentence": "Paul cuisine ___ que Marie : tous les deux font la cuisine trois soirs par semaine.", "answers": ["autant"], "pl": "Paul gotuje tyle samo co Marie: oboje gotują trzy wieczory w tygodniu.", "clue": "(=)", "hint": { "pl": "z czasownikiem: nie aussi", "fr": "avec un verbe : pas aussi" } } },
 
-    { "id": "u03-mieux-1", "type": "gap-fill", "entryIds": ["u03-mieux-meilleur"], "data": { "sentence": "Louer un studio, c'est une ___ solution que la colocation ?", "answers": ["meilleure"], "pl": "Czy wynajęcie kawalerki to lepsze rozwiązanie niż wspólne mieszkanie?", "clue": "(bon, au comparatif)" } },
+    { "id": "u03-mieux-1", "type": "gap-fill", "entryIds": ["u03-mieux-meilleur"], "data": { "sentence": "Cette chambre est ___ que l'autre : elle est plus claire.", "answers": ["meilleure"], "pl": "Ten pokój jest lepszy niż tamten: jest jaśniejszy.", "clue": "(bon, au comparatif)" } },
     { "id": "u03-mieux-2", "type": "gap-fill", "entryIds": ["u03-mieux-meilleur"], "data": { "sentence": "On dort ___ ici : la rue est calme.", "answers": ["mieux"], "pl": "Tutaj lepiej się śpi: ulica jest spokojna.", "clue": "(bien, au comparatif)" } },
-    { "id": "u03-mieux-3", "type": "gap-fill", "entryIds": ["u03-mieux-meilleur"], "data": { "sentence": "Cette agence a de ___ offres que l'autre.", "answers": ["meilleures"], "pl": "Ta agencja ma lepsze oferty niż tamta.", "clue": "(bon, au comparatif)" } },
+    { "id": "u03-mieux-3", "type": "gap-fill", "entryIds": ["u03-mieux-meilleur"], "data": { "sentence": "Dans ce quartier, il y a de ___ magasins qu'en banlieue.", "answers": ["meilleurs"], "pl": "W tej dzielnicy są lepsze sklepy niż na przedmieściach.", "clue": "(bon, au comparatif)" } },
     { "id": "u03-mieux-4", "type": "gap-fill", "entryIds": ["u03-mieux-meilleur"], "data": { "sentence": "Elle parle français ___ que moi.", "answers": ["mieux"], "pl": "Ona mówi po francusku lepiej niż ja.", "clue": "(bien, au comparatif)" } },
+    { "id": "u03-mieux-6", "type": "gap-fill", "entryIds": ["u03-mieux-meilleur"], "data": { "sentence": "Ce studio est ___ que l'autre : il est plus sombre et plus bruyant.", "answers": ["pire", "plus mauvais"], "pl": "Ta kawalerka jest gorsza niż tamta: jest ciemniejsza i głośniejsza.", "clue": "(mauvais, au comparatif)" } },
 
-    { "id": "u03-si-futur-1", "type": "gap-fill", "entryIds": ["u03-si-futur"], "data": { "sentence": "Si l'appartement est libre, nous ___ le louer. (aller)", "answers": ["allons"], "pl": "Jeśli mieszkanie jest wolne, wynajmiemy je." } },
-    { "id": "u03-si-futur-2", "type": "gap-fill", "entryIds": ["u03-si-futur"], "data": { "sentence": "S'il ___ beau demain, on va dîner sur la terrasse. (faire)", "answers": ["fait"], "pl": "Jeśli jutro będzie ładna pogoda, zjemy kolację na tarasie.", "hint": { "pl": "po si: czas teraźniejszy", "fr": "après si : le présent" } } },
-    { "id": "u03-si-futur-3", "type": "gap-fill", "entryIds": ["u03-si-futur"], "data": { "sentence": "Si tu ___ en retard, la propriétaire va partir. (être)", "answers": ["es"], "pl": "Jeśli się spóźnisz, właścicielka wyjdzie." } },
-    { "id": "u03-si-futur-4", "type": "gap-fill", "entryIds": ["u03-si-futur"], "data": { "sentence": "Si le loyer est trop cher, je ___ chercher un colocataire. (aller)", "answers": ["vais"], "pl": "Jeśli czynsz jest za drogi, poszukam współlokatora." } },
+    { "id": "u03-si-present-1", "type": "gap-fill", "entryIds": ["u03-si-present"], "data": { "sentence": "S'il ___ beau demain, nous mangeons sur le balcon. (faire)", "answers": ["fait"], "pl": "Jeśli jutro będzie ładna pogoda, jemy na balkonie.", "hint": { "pl": "po si: czas teraźniejszy", "fr": "après si : le présent" } } },
+    { "id": "u03-si-present-2", "type": "gap-fill", "entryIds": ["u03-si-present"], "data": { "sentence": "Si le loyer est trop cher, je ___ un colocataire. (chercher)", "answers": ["cherche"], "pl": "Jeśli czynsz jest za drogi, szukam współlokatora.", "hint": { "pl": "po si: czas teraźniejszy", "fr": "après si : le présent" } } },
+    { "id": "u03-si-present-3", "type": "gap-fill", "entryIds": ["u03-si-present"], "data": { "sentence": "Si nous ___ un grand salon, nous achetons un grand canapé. (avoir)", "answers": ["avons"], "pl": "Jeśli mamy duży salon, kupujemy dużą kanapę." } },
+    { "id": "u03-si-present-4", "type": "gap-fill", "entryIds": ["u03-si-present"], "data": { "sentence": "S'___ y a trop de bruit, je ferme la fenêtre.", "answers": ["il"], "pl": "Jeśli jest za dużo hałasu, zamykam okno.", "hint": { "pl": "si + il", "fr": "si + il" } } },
 
-    { "id": "u03-si-imp-1", "type": "gap-fill", "entryIds": ["u03-si-imperatif"], "data": { "sentence": "Si vous cherchez un logement, ___ l'agence du quartier. (appeler – vous)", "answers": ["appelez"], "pl": "Jeśli szukają Państwo mieszkania, proszę zadzwonić do agencji w dzielnicy." } },
-    { "id": "u03-si-imp-2", "type": "gap-fill", "entryIds": ["u03-si-imperatif"], "data": { "sentence": "Si tu as froid, ___ le chauffage ! (allumer – tu)", "answers": ["allume"], "pl": "Jeśli ci zimno, włącz ogrzewanie!", "hint": { "pl": "czasownik na -er: forma tu bez -s", "fr": "verbe en -er : forme tu sans -s" } } },
+    { "id": "u03-si-imp-1", "type": "gap-fill", "entryIds": ["u03-si-imperatif"], "data": { "sentence": "Si vous cherchez un logement, ___ les annonces. (lire – vous)", "answers": ["lisez"], "pl": "Jeśli szukają Państwo mieszkania, proszę czytać ogłoszenia." } },
+    { "id": "u03-si-imp-2", "type": "gap-fill", "entryIds": ["u03-si-imperatif"], "data": { "sentence": "Si tu as froid, ___ la fenêtre ! (fermer – tu)", "answers": ["ferme"], "pl": "Jeśli ci zimno, zamknij okno!", "hint": { "pl": "czasownik na -er: forma tu bez -s", "fr": "verbe en -er : forme tu sans -s" } } },
     { "id": "u03-si-imp-3", "type": "gap-fill", "entryIds": ["u03-si-imperatif"], "data": { "sentence": "S'il y a un problème, ___-moi un message. (envoyer – tu)", "answers": ["envoie"], "pl": "Jeśli będzie jakiś problem, wyślij mi wiadomość." } },
     { "id": "u03-si-imp-4", "type": "gap-fill", "entryIds": ["u03-si-imperatif"], "data": { "sentence": "Si vous ___ un appartement calme, choisissez le quatrième étage. (vouloir)", "answers": ["voulez"], "pl": "Jeśli chcą Państwo spokojnego mieszkania, proszę wybrać czwarte piętro." } },
 
-    { "id": "u03-annonce-1", "type": "gap-fill", "entryIds": ["u03-annonce"], "data": { "sentence": "Je lis les petites ___ pour trouver un studio.", "answers": ["annonces"], "pl": "Czytam drobne ogłoszenia, żeby znaleźć kawalerkę.", "clue": "(textes pour louer ou vendre)" } },
-    { "id": "u03-annonce-2", "type": "translate-pl-fr", "entryIds": ["u03-annonce"], "data": { "pl": "ogłoszenie", "answers": ["une annonce", "l'annonce"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u03-agence-1", "type": "gap-fill", "entryIds": ["u03-agence"], "data": { "sentence": "Nous avons trouvé notre appartement grâce à une ___ immobilière.", "answers": ["agence"], "pl": "Znaleźliśmy nasze mieszkanie dzięki biuru nieruchomości.", "clue": "(entreprise qui loue des logements)" } },
-    { "id": "u03-agence-2", "type": "translate-pl-fr", "entryIds": ["u03-agence"], "data": { "pl": "biuro nieruchomości", "answers": ["une agence immobilière", "l'agence immobilière"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u03-caution-1", "type": "gap-fill", "entryIds": ["u03-caution"], "data": { "sentence": "Pour louer l'appartement, il faut payer une ___ de 800 euros.", "answers": ["caution"], "pl": "Żeby wynająć mieszkanie, trzeba zapłacić kaucję w wysokości 800 euro.", "clue": "(argent rendu au départ)" } },
-    { "id": "u03-caution-2", "type": "translate-pl-fr", "entryIds": ["u03-caution"], "data": { "pl": "kaucja", "answers": ["une caution", "la caution"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u03-annonce-1", "type": "gap-fill", "entryIds": ["u03-annonce"], "data": { "sentence": "Je lis les petites ___ pour chercher un studio.", "answers": ["annonces"], "pl": "Czytam drobne ogłoszenia, żeby znaleźć kawalerkę.", "clue": "(textes pour louer ou vendre)" } },
+    { "id": "u03-annonce-2", "type": "translate-pl-fr", "entryIds": ["u03-annonce"], "data": { "pl": "ogłoszenie", "answers": ["une annonce", "l'annonce", "une annonce immobilière", "l'annonce immobilière"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u03-annonce-3", "type": "gap-fill", "entryIds": ["u03-annonce"], "data": { "sentence": "J'ai mis une ___ sur internet pour vendre mon vélo.", "answers": ["annonce"], "pl": "Wystawiłem ogłoszenie w internecie, żeby sprzedać rower.", "clue": "(un texte court pour vendre)" } },
     { "id": "u03-colocataire-1", "type": "gap-fill", "entryIds": ["u03-colocataire"], "data": { "sentence": "J'habite avec deux ___ : Lucie et Hugo.", "answers": ["colocataires"], "pl": "Mieszkam z dwojgiem współlokatorów: Lucie i Hugo.", "clue": "(personnes qui partagent le logement)" } },
     { "id": "u03-colocataire-2", "type": "translate-pl-fr", "entryIds": ["u03-colocataire"], "data": { "pl": "współlokator / współlokatorka", "answers": ["un colocataire", "une colocataire", "le colocataire", "la colocataire"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u03-piece-1", "type": "gap-fill", "entryIds": ["u03-piece"], "data": { "sentence": "L'appartement a quatre ___ : un salon, deux chambres et un bureau.", "answers": ["pièces"], "pl": "Mieszkanie ma cztery pokoje: salon, dwie sypialnie i gabinet.", "clue": "(parties du logement)" } },
-    { "id": "u03-piece-2", "type": "translate-pl-fr", "entryIds": ["u03-piece"], "data": { "pl": "pokój, pomieszczenie", "answers": ["une pièce", "la pièce"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u03-colocataire-3", "type": "gap-fill", "entryIds": ["u03-colocataire"], "data": { "sentence": "Mon ___ est très sympa, mais il ne fait jamais la vaisselle.", "answers": ["colocataire", "coloc"], "pl": "Mój współlokator jest bardzo sympatyczny, ale nigdy nie zmywa naczyń.", "clue": "(il partage mon appartement)" } },
     { "id": "u03-placard-1", "type": "gap-fill", "entryIds": ["u03-placard"], "data": { "sentence": "Range tes vêtements dans le ___ de l'entrée.", "answers": ["placard"], "pl": "Schowaj ubrania do szafy wnękowej w przedpokoju.", "clue": "(armoire dans le mur)" } },
     { "id": "u03-placard-2", "type": "translate-pl-fr", "entryIds": ["u03-placard"], "data": { "pl": "szafa wnękowa", "answers": ["un placard", "le placard"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u03-placard-3", "type": "gap-fill", "entryIds": ["u03-placard"], "data": { "sentence": "Les assiettes sont dans le ___ de la cuisine.", "answers": ["placard"], "pl": "Talerze są w szafce w kuchni.", "clue": "(armoire fixée au mur)" } },
     { "id": "u03-rideau-1", "type": "gap-fill", "entryIds": ["u03-rideau"], "data": { "sentence": "Ferme les ___, le soleil est trop fort.", "answers": ["rideaux"], "pl": "Zasuń zasłony, słońce jest za mocne.", "clue": "(tissus devant la fenêtre)" } },
     { "id": "u03-rideau-2", "type": "translate-pl-fr", "entryIds": ["u03-rideau"], "data": { "pl": "zasłona", "answers": ["un rideau", "le rideau"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u03-tapis-1", "type": "gap-fill", "entryIds": ["u03-tapis"], "data": { "sentence": "Il y a un grand ___ rouge sous la table du salon.", "answers": ["tapis"], "pl": "Pod stołem w salonie leży duży czerwony dywan.", "clue": "(il couvre le sol)" } },
-    { "id": "u03-tapis-2", "type": "translate-pl-fr", "entryIds": ["u03-tapis"], "data": { "pl": "dywan", "answers": ["un tapis", "le tapis"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u03-miroir-1", "type": "gap-fill", "entryIds": ["u03-miroir"], "data": { "sentence": "Dans la salle de bains, il y a un ___ au-dessus du lavabo.", "answers": ["miroir"], "pl": "W łazience nad umywalką jest lustro.", "clue": "(on s'y regarde)" } },
-    { "id": "u03-miroir-2", "type": "translate-pl-fr", "entryIds": ["u03-miroir"], "data": { "pl": "lustro", "answers": ["un miroir", "le miroir"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u03-rideau-3", "type": "gap-fill", "entryIds": ["u03-rideau"], "data": { "sentence": "Il y a un ___ blanc à la fenêtre de la chambre.", "answers": ["rideau"], "pl": "W oknie sypialni wisi biała zasłona.", "clue": "(un tissu devant la fenêtre)" } },
     { "id": "u03-espace-vert-1", "type": "gap-fill", "entryIds": ["u03-espace-vert"], "data": { "sentence": "Mon quartier est agréable : il y a beaucoup d'___ verts.", "answers": ["espaces"], "pl": "Moja dzielnica jest przyjemna: jest dużo terenów zielonych.", "clue": "(parcs et jardins publics)" } },
     { "id": "u03-espace-vert-2", "type": "translate-pl-fr", "entryIds": ["u03-espace-vert"], "data": { "pl": "teren zielony", "answers": ["un espace vert", "l'espace vert", "des espaces verts", "les espaces verts"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
-    { "id": "u03-annonce-3", "type": "gap-fill", "entryIds": ["u03-annonce"], "data": { "sentence": "J'ai mis une ___ sur internet pour vendre mon vélo.", "answers": ["annonce"], "pl": "Wystawiłem ogłoszenie w internecie, żeby sprzedać rower.", "clue": "(un texte court pour vendre)" } },
-    { "id": "u03-agence-3", "type": "gap-fill", "entryIds": ["u03-agence"], "data": { "sentence": "Je suis allé à l'___ immobilière pour visiter trois appartements.", "answers": ["agence"], "pl": "Poszedłem do biura nieruchomości, żeby obejrzeć trzy mieszkania.", "clue": "(entreprise qui loue des logements)" } },
-    { "id": "u03-caution-3", "type": "gap-fill", "entryIds": ["u03-caution"], "data": { "sentence": "Quand nous sommes partis, le propriétaire nous a rendu la ___.", "answers": ["caution"], "pl": "Kiedy się wyprowadziliśmy, właściciel oddał nam kaucję.", "clue": "(l'argent donné à l'arrivée)" } },
-    { "id": "u03-colocataire-3", "type": "gap-fill", "entryIds": ["u03-colocataire"], "data": { "sentence": "Mon ___ est très sympa, mais il ne fait jamais la vaisselle.", "answers": ["colocataire", "coloc"], "pl": "Mój współlokator jest bardzo sympatyczny, ale nigdy nie zmywa naczyń.", "clue": "(il partage mon appartement)" } },
-    { "id": "u03-piece-3", "type": "gap-fill", "entryIds": ["u03-piece"], "data": { "sentence": "C'est un appartement de trois ___ au cinquième étage.", "answers": ["pièces"], "pl": "To trzypokojowe mieszkanie na piątym piętrze.", "clue": "(le salon, les chambres…)" } },
-    { "id": "u03-placard-3", "type": "gap-fill", "entryIds": ["u03-placard"], "data": { "sentence": "Les assiettes sont dans le ___ de la cuisine.", "answers": ["placard"], "pl": "Talerze są w szafce w kuchni.", "clue": "(armoire fixée au mur)" } },
-    { "id": "u03-rideau-3", "type": "gap-fill", "entryIds": ["u03-rideau"], "data": { "sentence": "Il y a un ___ blanc à la fenêtre de la chambre.", "answers": ["rideau"], "pl": "W oknie sypialni wisi biała zasłona.", "clue": "(un tissu devant la fenêtre)" } },
-    { "id": "u03-tapis-3", "type": "gap-fill", "entryIds": ["u03-tapis"], "data": { "sentence": "Enlève tes chaussures, je viens de nettoyer le ___ !", "answers": ["tapis"], "pl": "Zdejmij buty, właśnie wyczyściłam dywan!", "clue": "(il couvre le sol)" } },
-    { "id": "u03-miroir-3", "type": "gap-fill", "entryIds": ["u03-miroir"], "data": { "sentence": "Elle se regarde dans le ___ avant de sortir.", "answers": ["miroir"], "pl": "Ona przegląda się w lustrze przed wyjściem.", "clue": "(on s'y voit)" } },
-    { "id": "u03-espace-vert-3", "type": "gap-fill", "entryIds": ["u03-espace-vert"], "data": { "sentence": "La mairie veut créer un nouvel ___ vert près de l'école.", "answers": ["espace"], "pl": "Urząd miasta chce stworzyć nowy teren zielony koło szkoły.", "clue": "(un parc, un jardin public)" } },
+    { "id": "u03-espace-vert-3", "type": "gap-fill", "entryIds": ["u03-espace-vert"], "data": { "sentence": "La mairie veut faire un nouvel ___ vert près de l'école.", "answers": ["espace"], "pl": "Urząd miasta chce zrobić nowy teren zielony koło szkoły.", "clue": "(un parc, un jardin public)" } },
+    { "id": "u03-loyer-1", "type": "gap-fill", "entryIds": ["u03-loyer"], "data": { "sentence": "Le ___ de mon studio est de 450 euros par mois.", "answers": ["loyer"], "pl": "Czynsz za moją kawalerkę wynosi 450 euro miesięcznie.", "clue": "(somme payée chaque mois)" } },
+    { "id": "u03-loyer-2", "type": "translate-pl-fr", "entryIds": ["u03-loyer"], "data": { "pl": "czynsz", "answers": ["le loyer", "un loyer"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u03-loyer-3", "type": "gap-fill", "entryIds": ["u03-loyer"], "data": { "sentence": "Je paie mon ___ le premier de chaque mois.", "answers": ["loyer"], "pl": "Płacę czynsz pierwszego dnia każdego miesiąca.", "clue": "(l'argent pour habiter le logement)" } },
+    { "id": "u03-charges-1", "type": "gap-fill", "entryIds": ["u03-charges"], "data": { "sentence": "Le loyer est de 600 euros, plus 80 euros de ___ : l'eau et le chauffage.", "answers": ["charges"], "pl": "Czynsz wynosi 600 euro, plus 80 euro opłat: woda i ogrzewanie.", "clue": "(l'eau, le chauffage…)" } },
+    { "id": "u03-charges-2", "type": "translate-pl-fr", "entryIds": ["u03-charges"], "data": { "pl": "opłaty (za wodę, ogrzewanie…)", "answers": ["les charges", "des charges", "charges"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u03-charges-3", "type": "gap-fill", "entryIds": ["u03-charges"], "data": { "sentence": "Ce prix inclut les ___ ? – Oui, tout est compris.", "answers": ["charges"], "pl": "Ta cena obejmuje opłaty? – Tak, wszystko jest wliczone.", "clue": "(l'eau, le gaz, l'électricité…)" } },
+    { "id": "u03-sejour-1", "type": "gap-fill", "entryIds": ["u03-sejour"], "data": { "sentence": "Dans le ___, il y a un canapé et une table basse.", "answers": ["séjour", "salon"], "pl": "W salonie są kanapa i stolik kawowy.", "clue": "(pièce pour recevoir ; = salon)" } },
+    { "id": "u03-sejour-2", "type": "translate-pl-fr", "entryIds": ["u03-sejour"], "data": { "pl": "salon, pokój dzienny", "answers": ["le salon", "le séjour", "un salon", "un séjour"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u03-sejour-3", "type": "gap-fill", "entryIds": ["u03-sejour"], "data": { "sentence": "Les enfants regardent la télé dans le ___.", "answers": ["salon", "séjour"], "pl": "Dzieci oglądają telewizję w salonie.", "clue": "(pièce où on reçoit)" } },
+    { "id": "u03-coussin-1", "type": "gap-fill", "entryIds": ["u03-coussin"], "data": { "sentence": "Il y a trois ___ bleus sur le canapé.", "answers": ["coussins"], "pl": "Na kanapie leżą trzy niebieskie poduszki.", "clue": "(objets doux sur le canapé)" } },
+    { "id": "u03-coussin-2", "type": "translate-pl-fr", "entryIds": ["u03-coussin"], "data": { "pl": "poduszka (ozdobna)", "answers": ["un coussin", "le coussin"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u03-coussin-3", "type": "gap-fill", "entryIds": ["u03-coussin"], "data": { "sentence": "Je mets un ___ sur ma chaise : elle est trop dure.", "answers": ["coussin"], "pl": "Kładę poduszkę na krzesło: jest za twarde.", "clue": "(petit objet doux)" } },
+    { "id": "u03-etagere-1", "type": "gap-fill", "entryIds": ["u03-etagere"], "data": { "sentence": "Les livres sont sur l'___ au-dessus du bureau.", "answers": ["étagère"], "pl": "Książki stoją na półce nad biurkiem.", "clue": "(planche au mur pour les livres)" } },
+    { "id": "u03-etagere-2", "type": "translate-pl-fr", "entryIds": ["u03-etagere"], "data": { "pl": "półka", "answers": ["une étagère", "l'étagère"], "hint": { "pl": "z rodzajnikiem", "fr": "avec l'article" } } },
+    { "id": "u03-etagere-3", "type": "gap-fill", "entryIds": ["u03-etagere"], "data": { "sentence": "J'ai acheté une ___ pour mes plantes.", "answers": ["étagère"], "pl": "Kupiłem półkę na moje rośliny.", "clue": "(meuble pour poser des objets)" } },
 
     { "id": "u03-qui-5", "type": "translate-pl-fr", "entryIds": ["u03-relatif-qui"], "data": { "pl": "kobieta, która mieszka obok", "answers": ["la femme qui habite à côté", "une femme qui habite à côté", "la dame qui habite à côté", "la femme qui vit à côté"] } },
-    { "id": "u03-que-5", "type": "translate-pl-fr", "entryIds": ["u03-relatif-que"], "data": { "pl": "dom, który kupiliśmy", "answers": ["la maison que nous avons achetée", "la maison qu'on a achetée"], "hint": { "pl": "passé composé; uwaga na uzgodnienie imiesłowu", "fr": "au passé composé ; attention à l'accord du participe" } } },
+    { "id": "u03-que-5", "type": "translate-pl-fr", "entryIds": ["u03-relatif-que"], "data": { "pl": "mieszkanie, które lubię", "answers": ["l'appartement que j'aime", "l'appartement que j'adore"] } },
     { "id": "u03-ou-5", "type": "translate-pl-fr", "entryIds": ["u03-relatif-ou"], "data": { "pl": "miasto, w którym mieszkam", "answers": ["la ville où j'habite", "la ville où je vis"] } },
     { "id": "u03-comp-adj-5", "type": "translate-pl-fr", "entryIds": ["u03-comp-adjectif"], "data": { "pl": "Paryż jest droższy niż Lyon", "answers": ["Paris est plus cher que Lyon"] } },
     { "id": "u03-comp-nom-5", "type": "translate-pl-fr", "entryIds": ["u03-comp-nom"], "data": { "pl": "mam więcej pokoi niż ty", "answers": ["j'ai plus de pièces que toi", "j'ai plus de chambres que toi"] } },
     { "id": "u03-comp-verbe-5", "type": "translate-pl-fr", "entryIds": ["u03-comp-verbe"], "data": { "pl": "pracuję tyle samo co ty", "answers": ["je travaille autant que toi"], "hint": { "pl": "z czasownikiem: nie aussi", "fr": "avec un verbe : pas aussi" } } },
-    { "id": "u03-mieux-5", "type": "translate-pl-fr", "entryIds": ["u03-mieux-meilleur"], "data": { "pl": "on śpiewa lepiej niż ja", "answers": ["il chante mieux que moi"] } },
-    { "id": "u03-si-futur-5", "type": "translate-pl-fr", "entryIds": ["u03-si-futur"], "data": { "pl": "jeśli jutro będzie ładna pogoda", "answers": ["s'il fait beau demain", "si demain il fait beau"], "hint": { "pl": "po si: czas teraźniejszy", "fr": "après si : le présent" } } },
-    { "id": "u03-si-imp-5", "type": "translate-pl-fr", "entryIds": ["u03-si-imperatif"], "data": { "pl": "idź spać, jeśli jesteś zmęczony", "answers": ["va dormir si tu es fatigué", "va te coucher si tu es fatigué", "couche-toi si tu es fatigué"], "hint": { "pl": "tryb rozkazujący (tu); bez przecinka", "fr": "impératif (tu) ; sans virgule" } } }
+    { "id": "u03-mieux-5", "type": "translate-pl-fr", "entryIds": ["u03-mieux-meilleur"], "data": { "pl": "śpiewa lepiej niż ja", "answers": ["il chante mieux que moi", "elle chante mieux que moi"] } },
+    { "id": "u03-si-imp-5", "type": "translate-pl-fr", "entryIds": ["u03-si-imperatif"], "data": { "pl": "idź spać, jeśli jesteś zmęczony", "answers": ["va dormir si tu es fatigué", "va te coucher si tu es fatigué", "couche-toi si tu es fatigué", "si tu es fatigué, va dormir", "si tu es fatigué, va te coucher", "si tu es fatigué, couche-toi"], "hint": { "pl": "tryb rozkazujący (tu)", "fr": "impératif (tu)" } } },
+    { "id": "u03-mieux-7", "type": "translate-pl-fr", "entryIds": ["u03-mieux-meilleur"], "data": { "pl": "hałas jest tu gorszy niż w mieście", "answers": ["le bruit est pire ici qu'en ville", "le bruit est plus mauvais ici qu'en ville", "ici, le bruit est pire qu'en ville", "ici, le bruit est plus mauvais qu'en ville"] } },
+    { "id": "u03-si-present-5", "type": "translate-pl-fr", "entryIds": ["u03-si-present"], "data": { "pl": "jeśli pada, zostajemy w domu", "answers": ["s'il pleut, nous restons à la maison", "s'il pleut, on reste à la maison", "s'il pleut, nous restons chez nous", "s'il pleut, on reste chez nous", "nous restons à la maison s'il pleut", "on reste à la maison s'il pleut", "nous restons chez nous s'il pleut", "on reste chez nous s'il pleut"], "hint": { "pl": "po si: czas teraźniejszy", "fr": "après si : le présent" } } },
+    { "id": "mp-lui-louis", "type": "paires-minimales", "entryIds": ["u03-relatif-qui"], "data": { "pair": ["C'est lui.", "C'est Louis."] } },
+    { "id": "mp-toit-tas", "type": "paires-minimales", "entryIds": ["u03-relatif-que"], "data": { "pair": ["Regarde le toit.", "Regarde le tas."] } }
   ],
+  "retiredExercises": {
+    "gap-fill": ["u03-si-futur-1", "u03-si-futur-2", "u03-si-futur-3", "u03-si-futur-4", "u03-agence-1", "u03-agence-3", "u03-caution-1", "u03-caution-3", "u03-piece-1", "u03-piece-3", "u03-tapis-1", "u03-tapis-3", "u03-miroir-1", "u03-miroir-3"],
+    "translate-pl-fr": ["u03-si-futur-5", "u03-agence-2", "u03-caution-2", "u03-piece-2", "u03-tapis-2", "u03-miroir-2"]
+  },
   "boss": {
-    "groups": [["u03-relatif-que", "u03-relatif-qui", "u03-relatif-ou"], ["u03-comp-nom"], ["u03-si-futur"]],
+    "groups": [["u03-relatif-que", "u03-relatif-qui", "u03-relatif-ou"], ["u03-comp-nom"], ["u03-si-present"]],
     "questions": 10,
     "lives": 3,
     "secondsPerQuestion": 12
