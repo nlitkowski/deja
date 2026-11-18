@@ -219,6 +219,8 @@ export const ui = {
   wrong: 'Pas tout à fait',
   answerWas: 'La réponse',
   correctAnswer: 'Bonne réponse :',
+  neDropped: 'C’est comme ça qu’on le dit. À l’écrit :',
+  parceQueHyphen: '« parce que » s’écrit sans trait d’union.',
   yourAnswer: 'Ta réponse :',
 
   typePlaceholder: 'Écris ta réponse…',

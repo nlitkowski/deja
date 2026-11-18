@@ -1,7 +1,7 @@
 import { audioTextOf } from '../audio/spoken';
 import type { Audio } from '../content/audio';
 import type { Entry } from '../content/schema';
-import { GAP } from './gap-fill';
+import { fillGap } from './gap-fill';
 import { gapSentences } from './gapSentences';
 import type { GenCtx } from './types';
 
@@ -25,7 +25,7 @@ export function heardSentences(entry: Entry, ctx: GenCtx): Heard[] {
   const out = new Map<string, Heard>();
   for (const s of gapSentences(entry.id, ctx)) {
     const answer = s.answers[0]!;
-    const text = usable(s.audio) && audioTextOf(s.sentence.replace(GAP, answer));
+    const text = usable(s.audio) && audioTextOf(fillGap(s.sentence, answer));
     if (text && !out.has(text)) out.set(text, { text, pl: s.pl, gap: { sentence: s.sentence, answer } });
   }
   for (const ex of entry.examples) {

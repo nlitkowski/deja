@@ -3,7 +3,7 @@ import { Icon } from '../../components/Icon';
 import { Listen } from '../../components/Listen';
 import { TypingCard } from '../../components/TypingCard';
 import { ui } from '../../i18n/ui';
-import { GAP } from '../gap-fill';
+import { afterGap, GAP } from '../gap-fill';
 import type { ViewProps } from '../types';
 import type { DicteeTrousData } from '.';
 
@@ -17,6 +17,7 @@ export function DicteeTrousView({ data, ctx, locked, onAnswer }: ViewProps<Dicte
   return (
     <TypingCard
       answers={[data.answer]}
+      literal
       ctx={ctx}
       locked={locked}
       onAnswer={(r) => onAnswer({ ...r, hintUsed: r.hintUsed || hinted, replays: replays.current })}
@@ -33,7 +34,7 @@ export function DicteeTrousView({ data, ctx, locked, onAnswer }: ViewProps<Dicte
           <p className="fr-sentence" lang="fr">
             {before}
             <span className={value ? 'gap filled' : 'gap'}>{value || empty}</span>
-            {after}
+            {afterGap(after ?? '', value)}
           </p>
           {replayed && !hinted && !locked && (
             <button type="button" className="link-button" onClick={() => setHinted(true)}>

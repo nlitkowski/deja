@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { GAP } from '../gap-fill';
+import { fillGap, GAP } from '../gap-fill';
 import { gapSentences, inSentence, labelOf, sameWord } from '../gapSentences';
 import type { ExerciseLogic, Generated } from '../types';
 
@@ -27,7 +27,7 @@ export const multipleChoice: ExerciseLogic<MultipleChoiceData> = {
   production: false,
   skill: 'written',
   // Same text as the hand-written gap-fill it comes from, so it plays that recording.
-  audioText: (d) => d.sentence.replace(GAP, d.answer),
+  audioText: (d) => fillGap(d.sentence, d.answer),
   generate(entry, ctx) {
     const candidates = [...entry.confusables, ...ctx.unitEntries.map((e) => e.id)].filter(
       (id) => id !== entry.id && !ctx.allEntries.get(id)?.deprecated,

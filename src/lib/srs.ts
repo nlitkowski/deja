@@ -1,3 +1,4 @@
+import type { AnswerNote } from './answer';
 import { addDays, type DayKey } from './date';
 
 export type Grade = 'again' | 'hard' | 'good' | 'easy';
@@ -36,6 +37,8 @@ export interface AnswerResult {
   grade?: Grade;
   given?: string;
   expected?: string;
+  /** Said as well as written differently: "j'ai pas" for "je n'ai pas" passes, "parce-que" gets a spelling tip. */
+  note?: AnswerNote;
   /** Listening: how many times the recording was played again. Recorded, never scored. */
   replays?: number;
   /**

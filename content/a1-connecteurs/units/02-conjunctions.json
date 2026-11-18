@@ -283,9 +283,9 @@
     { "id": "mais-2", "type": "gap-fill", "entryIds": ["conj-mais"], "data": { "sentence": "Il est petit, ___ il est fort.", "answers": ["mais"], "pl": "Jest mały, ale silny.", "clue": "(opposition)" } },
     { "id": "mais-3", "type": "gap-fill", "entryIds": ["conj-mais"], "data": { "sentence": "J'aime le sport, ___ je n'ai pas le temps.", "answers": ["mais"], "pl": "Lubię sport, ale nie mam czasu.", "clue": "(opposition)" } },
 
-    { "id": "donc-1", "type": "gap-fill", "entryIds": ["conj-donc"], "data": { "sentence": "Il pleut, ___ je prends un parapluie.", "answers": ["donc"], "pl": "Pada, więc biorę parasol.", "clue": "(conséquence)" } },
-    { "id": "donc-2", "type": "gap-fill", "entryIds": ["conj-donc"], "data": { "sentence": "Je suis malade, ___ je reste au lit.", "answers": ["donc"], "pl": "Jestem chory, więc zostaję w łóżku.", "clue": "(conséquence)" } },
-    { "id": "donc-3", "type": "gap-fill", "entryIds": ["conj-donc"], "data": { "sentence": "Il n'y a plus de pain, ___ je vais à la boulangerie.", "answers": ["donc"], "pl": "Nie ma już chleba, więc idę do piekarni.", "clue": "(conséquence)" } },
+    { "id": "donc-1", "type": "gap-fill", "entryIds": ["conj-donc"], "data": { "sentence": "Il pleut, ___ je prends un parapluie.", "answers": ["donc", "alors"], "pl": "Pada, więc biorę parasol.", "clue": "(conséquence)" } },
+    { "id": "donc-2", "type": "gap-fill", "entryIds": ["conj-donc"], "data": { "sentence": "Je suis malade, ___ je reste au lit.", "answers": ["donc", "alors"], "pl": "Jestem chory, więc zostaję w łóżku.", "clue": "(conséquence)" } },
+    { "id": "donc-3", "type": "gap-fill", "entryIds": ["conj-donc"], "data": { "sentence": "Il n'y a plus de pain, ___ je vais à la boulangerie.", "answers": ["donc", "alors"], "pl": "Nie ma już chleba, więc idę do piekarni.", "clue": "(conséquence)" } },
 
     { "id": "ni-1", "type": "gap-fill", "entryIds": ["conj-ni"], "data": { "sentence": "Je ne veux ni café ___ thé.", "answers": ["ni"], "pl": "Nie chcę ani kawy, ani herbaty." } },
     { "id": "ni-2", "type": "gap-fill", "entryIds": ["conj-ni"], "data": { "sentence": "Il ne parle ___ anglais ni allemand.", "answers": ["ni"], "pl": "On nie mówi ani po angielsku, ani po niemiecku." } },
@@ -316,9 +316,9 @@
     { "id": "que-3", "type": "gap-fill", "entryIds": ["conj-que"], "data": { "sentence": "Je sais ___ tu es fatigué.", "answers": ["que"], "pl": "Wiem, że jesteś zmęczony." } },
     { "id": "que-4", "type": "gap-fill", "entryIds": ["conj-que"], "data": { "sentence": "Elle pense ___ il a raison.", "answers": ["qu'"], "pl": "Ona myśli, że on ma rację." } },
 
-    { "id": "comme-1", "type": "gap-fill", "entryIds": ["conj-comme"], "data": { "sentence": "___ il pleut, je reste ici.", "answers": ["comme"], "pl": "Ponieważ pada, zostaję tutaj.", "clue": "(cause, au début de la phrase)" } },
+    { "id": "comme-1", "type": "gap-fill", "entryIds": ["conj-comme"], "data": { "sentence": "___ il pleut, je reste ici.", "answers": ["comme", "parce qu'"], "pl": "Ponieważ pada, zostaję tutaj.", "clue": "(cause, au début de la phrase)" } },
     { "id": "comme-2", "type": "gap-fill", "entryIds": ["conj-comme"], "data": { "sentence": "Elle est belle ___ le soleil.", "answers": ["comme"], "pl": "Jest piękna jak słońce.", "clue": "(comparaison)" } },
-    { "id": "comme-3", "type": "gap-fill", "entryIds": ["conj-comme"], "data": { "sentence": "___ je suis malade, je ne vais pas au travail.", "answers": ["comme"], "pl": "Ponieważ jestem chory, nie idę do pracy.", "clue": "(cause, au début de la phrase)" } },
+    { "id": "comme-3", "type": "gap-fill", "entryIds": ["conj-comme"], "data": { "sentence": "___ je suis malade, je ne vais pas au travail.", "answers": ["comme", "parce que"], "pl": "Ponieważ jestem chory, nie idę do pracy.", "clue": "(cause, au début de la phrase)" } },
     { "id": "comme-4", "type": "gap-fill", "entryIds": ["conj-comme"], "data": { "sentence": "Il parle ___ un professeur.", "answers": ["comme"], "pl": "On mówi jak nauczyciel.", "clue": "(comparaison)" } }
   ]
 }

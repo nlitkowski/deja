@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ui } from '../../i18n/ui';
 import { shuffle } from '../../lib/session';
-import { GAP } from '../gap-fill';
+import { afterGap, fillGap, GAP } from '../gap-fill';
 import type { ViewProps } from '../types';
 import type { DuelData } from '.';
 
@@ -39,7 +39,7 @@ export function DuelView({ data, ctx, locked, onAnswer }: ViewProps<DuelData>) {
       nearMiss: false,
       hintUsed: false,
       timeMs: all.reduce((sum, p) => sum + p.timeMs, 0),
-      expected: missed.map((s) => s.sentence.replace(GAP, s.answer)).join(' · '),
+      expected: missed.map((s) => fillGap(s.sentence, s.answer)).join(' · '),
       parts: all.map((p) => ({ entryIds: [p.entryId], correct: p.correct, timeMs: p.timeMs })),
     });
   }
@@ -78,7 +78,7 @@ export function DuelView({ data, ctx, locked, onAnswer }: ViewProps<DuelData>) {
       <p className="fr-sentence" lang="fr">
         {before}
         <span className={picked ? 'gap filled' : 'gap'}>{picked ?? (picked === null ? sentence.answer : '   ')}</span>
-        {after}
+        {afterGap(after ?? '', picked ?? (picked === null ? sentence.answer : ''))}
       </p>
       {aid && (
         <p className="sentence-aid" lang={ctx.helpLang}>

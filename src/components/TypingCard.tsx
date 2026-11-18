@@ -13,11 +13,13 @@ interface Props {
   onAnswer: (r: AnswerResult) => void;
   /** Replaces the usual comparison with `answers` (a dictation compares word by word). */
   check?: (given: string) => AnswerCheck;
+  /** Grade what was written, not how it is said: dictations do not accept a dropped "ne". */
+  literal?: boolean;
   /** Renders the prompt; receives the current input so a gap can show it inline. */
   prompt: (value: string) => ReactNode;
 }
 
-export function TypingCard({ answers, hint, ctx, locked, onAnswer, check: customCheck, prompt }: Props) {
+export function TypingCard({ answers, hint, ctx, locked, onAnswer, check: customCheck, literal, prompt }: Props) {
   const [value, setValue] = useState('');
   const [hintShown, setHintShown] = useState(false);
   const started = useState(() => performance.now())[0];
@@ -29,7 +31,7 @@ export function TypingCard({ answers, hint, ctx, locked, onAnswer, check: custom
 
   function submit(given: string) {
     if (locked) return;
-    const check = customCheck ? customCheck(given) : checkAnswer(given, answers, ctx.accentPairs);
+    const check = customCheck ? customCheck(given) : checkAnswer(given, answers, ctx.accentPairs, { colloquial: !literal });
     onAnswer({
       correct: check.correct,
       nearMiss: check.nearMiss,
@@ -37,6 +39,7 @@ export function TypingCard({ answers, hint, ctx, locked, onAnswer, check: custom
       timeMs: performance.now() - started,
       given,
       expected: check.expected,
+      note: check.note,
     });
   }
 

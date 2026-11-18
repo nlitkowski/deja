@@ -53,6 +53,43 @@ describe('checkAnswer', () => {
     expect(checkAnswer('sœur', ['soeur'])).toMatchObject({ correct: true, nearMiss: false });
   });
 
+  it('ignores commas, semicolons and colons inside the answer', () => {
+    expect(checkAnswer('si tu es fatigué, va dormir', ['si tu es fatigué va dormir']).correct).toBe(true);
+    expect(checkAnswer('si tu es fatigué va dormir', ['si tu es fatigué, va dormir']).correct).toBe(true);
+  });
+
+  it('accepts a negation without "ne", as it is spoken, and says how it is written', () => {
+    const spoken = (given: string, expected: string) => checkAnswer(given, [expected]);
+    expect(spoken("j'ai pas", "je n'ai pas")).toMatchObject({ correct: true, nearMiss: false, note: 'ne-dropped', expected: "je n'ai pas" });
+    expect(spoken("c'est pas", "ce n'est pas").note).toBe('ne-dropped');
+    expect(spoken('il y a personne', "il n'y a personne").correct).toBe(true);
+    expect(spoken('y a personne', "il n'y a personne").correct).toBe(true);
+    expect(spoken('je mange jamais', 'je ne mange jamais').correct).toBe(true);
+    expect(spoken('personne est venu', "personne n'est venu").correct).toBe(true);
+    expect(spoken("j'ai", "je n'ai pas").correct).toBe(false);
+    expect(spoken('je ai pas', "je n'ai pas").correct).toBe(false);
+    expect(checkAnswer("j'ai pas", ["je n'ai pas"], [], { colloquial: false }).correct).toBe(false);
+  });
+
+  it('rejects "parce-que" with a hyphen, with a note', () => {
+    expect(checkAnswer('parce-que', ['parce que'])).toMatchObject({ correct: false, note: 'hyphen' });
+    expect(checkAnswer("parce-qu'il", ["parce qu'il"])).toMatchObject({ correct: false, note: 'hyphen' });
+  });
+
+  it('accepts times and numbers in words or digits', () => {
+    expect(checkAnswer('8h30', ['huit heures et demie']).correct).toBe(true);
+    expect(checkAnswer('à 6 h', ['à six heures']).correct).toBe(true);
+    expect(checkAnswer('à 6h', ['à 6 heures']).correct).toBe(true);
+    expect(checkAnswer('9 h 15', ['neuf heures et quart']).correct).toBe(true);
+    expect(checkAnswer('1h', ['une heure']).correct).toBe(true);
+    expect(checkAnswer('22 euros', ['vingt-deux euros']).correct).toBe(true);
+    expect(checkAnswer('71', ['soixante et onze']).correct).toBe(true);
+    expect(checkAnswer('99', ['quatre-vingt-dix-neuf']).correct).toBe(true);
+    expect(checkAnswer('80', ['quatre-vingts']).correct).toBe(true);
+    expect(checkAnswer('nonante', ['quatre-vingt-dix']).correct).toBe(true);
+    expect(checkAnswer('1', ['un']).correct).toBe(false);
+  });
+
   it('rejects empty input', () => {
     expect(checkAnswer('   ', ['et'])).toMatchObject({ correct: false, expected: 'et' });
   });

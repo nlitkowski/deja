@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ChoiceList } from '../../components/ChoiceList';
 import { shuffle } from '../../lib/session';
-import { GAP } from '../gap-fill';
+import { afterGap, GAP } from '../gap-fill';
 import type { ViewProps } from '../types';
 import type { MultipleChoiceData } from '.';
 
@@ -30,7 +30,7 @@ export function MultipleChoiceView({ data, ctx, locked, onAnswer }: ViewProps<Mu
       <p className="fr-sentence" lang="fr">
         {before}
         <span className={chosen ? 'gap filled' : 'gap'}>{chosen ?? '   '}</span>
-        {after}
+        {afterGap(after ?? '', chosen ?? '')}
       </p>
       {aid && (
         <p className="sentence-aid" lang={ctx.helpLang}>

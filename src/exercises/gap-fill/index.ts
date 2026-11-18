@@ -4,6 +4,16 @@ import type { ExerciseLogic } from '../types';
 
 export const GAP = '___';
 
+const elided = (answer: string) => /['’]$/.test(answer);
+
+/** The text after the gap; an elided answer (qu', l') joins the next word: "parce qu'il", not "parce qu' il". */
+export const afterGap = (after: string, answer: string) => (elided(answer) ? after.trimStart() : after);
+
+export function fillGap(sentence: string, answer: string): string {
+  const [before = '', after = ''] = sentence.split(GAP);
+  return before + answer + afterGap(after, answer);
+}
+
 export const gapFillSchema = z.object({
   sentence: z.string().refine((s) => s.split(GAP).length === 2, `zdanie musi zawierać dokładnie jedną lukę ${GAP}`),
   answers: z.array(z.string().min(1)).min(1),
@@ -21,5 +31,5 @@ export const gapFill: ExerciseLogic<GapFillData> = {
   schema: gapFillSchema,
   production: true,
   skill: 'written',
-  audioText: (d) => d.sentence.replace(GAP, d.answers[0]!),
+  audioText: (d) => fillGap(d.sentence, d.answers[0]!),
 };

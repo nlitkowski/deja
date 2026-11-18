@@ -1,7 +1,7 @@
 import { TypingCard } from '../../components/TypingCard';
 import { localize } from '../../content/localized';
 import type { ViewProps } from '../types';
-import { GAP, type GapFillData } from '.';
+import { afterGap, GAP, type GapFillData } from '.';
 
 export function GapFillView({ data, ctx, locked, onAnswer }: ViewProps<GapFillData>) {
   const [before, after] = data.sentence.split(GAP);
@@ -18,7 +18,7 @@ export function GapFillView({ data, ctx, locked, onAnswer }: ViewProps<GapFillDa
           <p className="fr-sentence" lang="fr">
             {before}
             <span className={value ? 'gap filled' : 'gap'}>{value || '   '}</span>
-            {after}
+            {afterGap(after ?? '', value)}
           </p>
           {aid && (
             <p className="sentence-aid" lang={ctx.helpLang}>

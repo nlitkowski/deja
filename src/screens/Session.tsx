@@ -242,6 +242,11 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
       {result && (
         <section className={`feedback ${tone}`} role="status">
           {tone === 'ok' && <p className="feedback-title">{ui.correct}</p>}
+          {tone === 'ok' && result.note === 'ne-dropped' && (
+            <p>
+              {ui.neDropped} <strong lang="fr">{result.expected}</strong>
+            </p>
+          )}
           {tone === 'near' && (
             <>
               <p className="feedback-title">{ui.nearMiss}</p>
@@ -253,6 +258,7 @@ export function Session({ title, initialItems, unitKey, onExit, onFinish }: Prop
           {tone === 'bad' && (
             <>
               <p className="feedback-title">{result.given ? ui.wrong : ui.answerWas}</p>
+              {result.note === 'hyphen' && <p>{ui.parceQueHyphen}</p>}
               <p>
                 {ui.correctAnswer} <strong lang="fr">{result.expected}</strong>
                 {result.given && (
